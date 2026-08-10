@@ -22,6 +22,11 @@ from agent.runner import Runner, utc_stamp
 log = logging.getLogger("manifold-agent")
 
 
+def _short(exc: Exception) -> str:
+    """First line of an error, so the report stays readable."""
+    return str(exc).split("\n")[0][:90]
+
+
 async def check(cfg) -> int:
     """Answer the only question that matters when nothing works: which side is broken?
 
@@ -84,18 +89,30 @@ async def check(cfg) -> int:
                 print("\n  none of them work, so this is the key or the project, not the"
                       "\n  model. Try a different provider, or a key from a fresh project.")
 
-        if llm.supports_search:
-            try:
-                r = await llm.generate(
-                    "What is today's date according to search?", grounded=True, attempts=1
-                )
-                print(f"search       OK, {len(r.citations)} citation(s)")
-            except Exception as exc:  # noqa: BLE001
-                ok = False
-                print(f"search       FAILED  {exc}")
-                print("             set use_search = false in config.toml to run without it")
+        if not cfg.llm.use_search:
+            print("search       disabled in config")
         else:
-            print("search       disabled")
+            grounded_ok = False
+            if llm.supports_search:
+                try:
+                    r = await llm.generate(
+                        "What is today's date according to search?",
+                        grounded=True, attempts=1,
+                    )
+                    grounded_ok = True
+                    print(f"search       OK, native grounding, {len(r.citations)} citation(s)")
+                except Exception as exc:  # noqa: BLE001
+                    print(f"search       native grounding unavailable ({_short(exc)})")
+
+            if not grounded_ok:
+                from agent import websearch
+                hits = await websearch.search("manifold markets prediction", 3)
+                if hits:
+                    print("             keyless web search works, using that instead")
+                else:
+                    ok = False
+                    print("             and keyless web search returned nothing either, "
+                          "so the agent will forecast without research")
     finally:
         await llm.aclose()
 

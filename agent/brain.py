@@ -154,31 +154,41 @@ class Brain:
         prompt = build_research_prompt(
             question=market.question, description=market.description, today=_today()
         )
-        grounded = self.llm.supports_search
 
-        if not grounded:
-            snippets = await websearch.search(market.question, self.cfg.llm.search_results)
-            if not snippets:
-                return NO_RESEARCH
-            prompt += (
-                "\n\nSearch results follow. Use only these, and say so if they do not "
-                f"actually address the question.\n\n{snippets}"
-            )
+        # Native grounding first where it exists. Its free quota is far smaller than
+        # plain generation's and runs out long before the model does, so a failure
+        # here falls through to keyless search rather than giving up on research.
+        if self.llm.supports_search:
+            try:
+                response = await self.llm.generate(
+                    prompt, system=RESEARCH_SYSTEM, grounded=True, attempts=1
+                )
+                body = response.text.strip()
+                if len(body) >= 40:
+                    if response.citations:
+                        body += "\n\nSources:\n" + "\n".join(
+                            f"- {c}" for c in response.citations[:8]
+                        )
+                    return body
+            except Exception as exc:  # noqa: BLE001
+                log.info("Grounded search unavailable (%s), using web search", exc)
 
+        snippets = await websearch.search(market.question, self.cfg.llm.search_results)
+        if not snippets:
+            return NO_RESEARCH
         try:
             response = await self.llm.generate(
-                prompt, system=RESEARCH_SYSTEM, grounded=grounded
+                prompt
+                + "\n\nSearch results follow. Use only these, and say so plainly if they"
+                f" do not actually address the question.\n\n{snippets}",
+                system=RESEARCH_SYSTEM,
             )
         except Exception as exc:  # noqa: BLE001 - research is best effort
             log.warning("Research failed on %s: %s", market.slug, exc)
             return NO_RESEARCH
 
         body = response.text.strip()
-        if len(body) < 40:
-            return NO_RESEARCH
-        if response.citations:
-            body += "\n\nSources:\n" + "\n".join(f"- {c}" for c in response.citations[:8])
-        return body
+        return body if len(body) >= 40 else NO_RESEARCH
 
     async def _size(
         self,

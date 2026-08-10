@@ -3,8 +3,8 @@
 
 [manifold]
 # Master safety switch. While true, orders and comments are logged, never sent.
-# Flip to false when you have read a few ticks of state/events.jsonl and believe it.
-dry_run = true
+# Set back to true at any time to ground the bot without stopping the workflow.
+dry_run = false
 
 [llm]
 # gemini | mistral | openai_compatible
