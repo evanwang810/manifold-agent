@@ -55,8 +55,6 @@ Hard caps live in `[budget]`. Default is one evaluation and four LLM calls per t
    field and generate one. It looks like a UUID.
 3. That key *is* the account. Anyone holding it can spend the mana and post as it.
    It goes in a GitHub secret or a local `.env`, never in a file you commit.
-4. Set `owner_username` in `config.toml` to **your** handle, not the bot's. That is how
-   the bot recognizes you in comment threads and prioritizes your messages.
 
 ## Keys
 
@@ -142,8 +140,8 @@ Four channels, in increasing order of permanence:
   can use this, not just you.
 - **A one-off instruction.** Actions tab, Run workflow, type into the `instruction`
   box. It applies to that run only.
-- **A Manifold comment.** Reply to any of the bot's last 10 comments. Comments from
-  `owner_username` get answered first, and the bot knows they came from you.
+- **A Manifold comment.** Reply to any of the bot's last 10 comments, oldest answered
+  first.
 - **`instructions.md`.** Everything below the horizontal rule goes into the system
   prompt on every tick, forever, until you edit it. This is where behavior changes
   belong.

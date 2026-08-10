@@ -5,9 +5,6 @@
 # Master safety switch. While true, orders and comments are logged, never sent.
 # Flip to false when you have read a few ticks of state/events.jsonl and believe it.
 dry_run = true
-# Your Manifold handle, without the @. Comments from this account are treated as
-# instructions from the owner rather than as noise from a stranger.
-owner_username = ""
 
 [llm]
 provider = "gemini"           # gemini | mistral | openai_compatible

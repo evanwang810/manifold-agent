@@ -208,6 +208,32 @@ class GeminiClient(LLMClient):
 
         return LLMResponse(text=text, citations=citations, raw=data)
 
+    async def probe_model(self, model: str) -> str | None:
+        """Try the smallest possible generation. None means it worked.
+
+        Listing a model does not mean your tier may call it: newer models are often
+        billing-only and only say so at generateContent time. This is the only way to
+        find out which ones your key can actually use.
+        """
+        try:
+            resp = await self._client.post(
+                f"{self.BASE}/models/{model}:generateContent",
+                headers={"x-goog-api-key": self.cfg.api_key},
+                json={
+                    "contents": [{"role": "user", "parts": [{"text": "hi"}]}],
+                    "generationConfig": {"maxOutputTokens": 1},
+                },
+            )
+        except httpx.HTTPError as exc:
+            return str(exc)[:60]
+        if resp.status_code < 400:
+            return None
+        try:
+            status = resp.json()["error"].get("status", "")
+        except Exception:  # noqa: BLE001
+            status = ""
+        return f"{resp.status_code} {status}".strip()
+
     async def list_models(self) -> list[str]:
         """Model ids this key can actually call. The fastest way to tell a typo'd
         model name apart from a quota problem apart from a blocked project."""

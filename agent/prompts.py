@@ -228,17 +228,8 @@ def build_reply_prompt(
     memory: str,
     market_note: str,
     position: Position | None,
-    from_owner: bool = False,
 ) -> str:
-    owner_line = (
-        "\nThis person is your owner. If they are telling you to change how you "
-        "operate, acknowledge it briefly and tell them to put it in instructions.md "
-        "so it survives past this conversation.\n"
-        if from_owner
-        else ""
-    )
     return f"""Market: {market.question}
-{owner_line}
 Current price: {market.probability:.0%} YES
 {_render_position(position)}
 

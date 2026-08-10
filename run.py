@@ -47,26 +47,42 @@ async def check(cfg) -> int:
 
     llm = build_llm(cfg.llm)
     try:
-        if isinstance(llm, GeminiClient):
-            try:
-                models = await llm.list_models()
-                here = cfg.llm.model in models
-                print(f"models       {len(models)} reachable, "
-                      f"{cfg.llm.model} is {'present' if here else 'NOT in the list'}")
-                if not here:
-                    ok = False
-                    flash = [m for m in models if "flash" in m][:8]
-                    print(f"             try one of: {', '.join(flash) or 'none found'}")
-            except Exception as exc:  # noqa: BLE001
-                ok = False
-                print(f"models       FAILED  {exc}")
-
+        generate_ok = True
         try:
             r = await llm.generate("Reply with the single word: ok", attempts=1)
             print(f"generate     OK, returned {r.text.strip()[:40]!r}")
         except Exception as exc:  # noqa: BLE001
-            ok = False
+            ok = generate_ok = False
             print(f"generate     FAILED  {exc}")
+
+        # Being listed is not the same as being callable. If the configured model is
+        # refused, find out which ones this key can actually use rather than guessing.
+        if not generate_ok and isinstance(llm, GeminiClient):
+            print("\nprobing which models this key can actually call:")
+            try:
+                models = await llm.list_models()
+            except Exception as exc:  # noqa: BLE001
+                print(f"  could not list models: {exc}")
+                models = []
+
+            skip = ("embedding", "tts", "image", "audio", "live", "vision", "learnlm")
+            cands = [
+                m for m in models
+                if ("flash" in m or "lite" in m) and not any(s in m for s in skip)
+            ]
+            stable = [m for m in cands if "preview" not in m and "exp" not in m]
+            usable = []
+            for name in (stable or cands)[:10]:
+                err = await llm.probe_model(name)
+                print(f"  {'ok   ' if err is None else 'no   '} {name}"
+                      + ("" if err is None else f"   ({err})"))
+                if err is None:
+                    usable.append(name)
+            if usable:
+                print(f"\n  set  model = \"{usable[0]}\"  in config.toml")
+            else:
+                print("\n  none of them work, so this is the key or the project, not the"
+                      "\n  model. Try a different provider, or a key from a fresh project.")
 
         if llm.supports_search:
             try:

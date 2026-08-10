@@ -42,7 +42,6 @@ class Social:
         self.budget = budget
         self.user_id = user_id
         self.username = username
-        self.owner = cfg.manifold.owner_username.lstrip("@").lower()
 
     async def run(self) -> int:
         handled = 0
@@ -82,8 +81,8 @@ class Social:
         if not targets:
             return 0
 
-        # Owner first, then oldest first so conversations stay in order.
-        targets.sort(key=lambda t: (t[1].username.lower() != self.owner, t[1].created_time))
+        # Oldest first, so a conversation is answered in the order it happened.
+        targets.sort(key=lambda t: t[1].created_time)
 
         handled = 0
         for contract_id, comment, thread in targets[: self.cfg.social.max_replies_per_tick]:
@@ -103,7 +102,6 @@ class Social:
 
         positions = await self.client.positions(self.user_id)
         position = next((p for p in positions if p.contract_id == market.id), None)
-        from_owner = bool(self.owner) and comment.username.lower() == self.owner
 
         prompt = build_reply_prompt(
             market=market,
@@ -111,7 +109,6 @@ class Social:
             memory=self.memory.context_block(),
             market_note=self.memory.note_for(market.id),
             position=position,
-            from_owner=from_owner,
         )
         try:
             response = await self.llm.generate(
@@ -137,11 +134,9 @@ class Social:
         if result and result.get("id"):
             self.memory.remember_comment(result["id"], market.id)
         self.memory.log_event(
-            "reply", market=market.slug, to=comment.username,
-            owner=from_owner, text=text[:300],
+            "reply", market=market.slug, to=comment.username, text=text[:300]
         )
-        log.info("Replied to @%s%s on %s", comment.username,
-                 " (owner)" if from_owner else "", market.slug)
+        log.info("Replied to @%s on %s", comment.username, market.slug)
         return True
 
     def _render_thread(self, target: Comment, thread: list[Comment], depth: int = 4) -> str:

@@ -16,7 +16,6 @@ from typing import Any, TypeVar
 @dataclass
 class ManifoldConfig:
     dry_run: bool = True
-    owner_username: str = ""
     api_key: str = ""
     base_url: str = "https://api.manifold.markets"
 
