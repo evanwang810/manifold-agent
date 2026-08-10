@@ -96,7 +96,15 @@ news-driven questions and not much of one on questions the comments already sett
 
 ## Running it
 
-Locally, one tick, dry run:
+Check both keys before anything else. This lists the models your LLM key can actually
+reach, which separates a wrong model id from an exhausted quota from a blocked project:
+
+```bash
+python run.py --check
+```
+
+The same thing runs in CI from the Actions tab via the **check** workflow. Then, one
+tick, dry run:
 
 ```bash
 pip install -e . && python run.py
