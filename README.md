@@ -108,28 +108,30 @@ decide whether the reasoning is any good before you let it spend anything.
 
 ## Setting up the cron
 
-Create the orphan branch the agent stores its memory on:
+Fork the repo, add the two secrets, done. The workflow creates its own `state` branch
+on the first run, so there is no manual git surgery.
 
-```bash
-git switch --orphan state && git commit --allow-empty -m "init state" && git push -u origin state && git switch main
-```
+The schedule is hourly rather than every five minutes, and the job then loops
+internally, ticking every 5 minutes for most of an hour. That is deliberate. GitHub
+treats `schedule` as best effort and drops high-frequency crons first under load: a
+`*/5` cron in practice fires once every one to two hours. An hourly trigger is far more
+likely to actually run, and wall time inside a job is free on public repos, so the loop
+buys back the cadence the scheduler will not give you.
 
-Add the two secrets, then enable Actions on the repo. The schedule starts firing on its
-own. Two things to know about GitHub's scheduler:
-
-- `*/5` is best effort. Runs get delayed or skipped under load, so real cadence is
-  more like 5 to 15 minutes. Every tick is independent, so this does not matter.
-- Scheduled workflows are disabled after 60 days of repository inactivity. This one
-  commits to the `state` branch on every tick, which counts as activity, so it stays
-  alive on its own.
+Scheduled workflows are also disabled after 60 days of repository inactivity. This one
+commits to the `state` branch on every tick, which counts as activity, so it keeps
+itself alive.
 
 When you are ready to spend mana, set `dry_run = false` in `config.toml` and commit. Or
 trigger a single live run by hand from the Actions tab using the **live** input.
 
 ## Talking to it
 
-Three channels, in increasing order of permanence:
+Four channels, in increasing order of permanence:
 
+- **A question from the website.** The site's form opens a GitHub issue labelled
+  `ask-the-bot`. The agent answers it publicly on the next tick and closes it. Anyone
+  can use this, not just you.
 - **A one-off instruction.** Actions tab, Run workflow, type into the `instruction`
   box. It applies to that run only.
 - **A Manifold comment.** Reply to any of the bot's last 10 comments. Comments from
@@ -183,6 +185,9 @@ prompt size stays flat no matter how long it runs.
 - Binary YES/NO markets only. Multiple choice, numeric, and other types are skipped.
 - No notifications endpoint exists publicly, so replies are only found under the bot's
   own last 10 comments. Mention it somewhere else and it will not notice.
+- Comments cost M$1 each, so the bot only introduces itself on a position at or above
+  `comment_min_amount`, once per market. Smaller trades and every later trade in the
+  same market are silent. Replies to an existing comment are always answered.
 - Managram replies are off by default. A managram is the only way to answer a managram
   and the API minimum is M$10, so every reply costs real bankroll.
 - Nothing exits on a schedule. Positions close when a re-evaluation says `sell`, or
