@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1786390303023,
+  "generated_ms": 1786390399274,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.6-flash (screened by gemini/gemini-3.5-flash-lite)",
@@ -39,6 +39,26 @@
       "days_to_close": 21.2
     },
     {
+      "question": "Will the WTI Crude Oil Spot Price be above $78.50 on August 11, 2026?",
+      "url": "https://manifold.markets/gemini35flash/will-the-wti-crude-oil-spot-price-b-Cun2dLL5UZ",
+      "side": "NO",
+      "shares": 203.1,
+      "invested": 17.0,
+      "profit": 0.9,
+      "prob": 0.0,
+      "days_to_close": 1.2
+    },
+    {
+      "question": "Given I have been with my partner for a year, will we be together for 5?",
+      "url": "https://manifold.markets/gemini35flash/given-i-have-been-with-my-partner-f-0dde6bfd1962",
+      "side": "NO",
+      "shares": 47.7,
+      "invested": 15.0,
+      "profit": 0.2,
+      "prob": 0.0,
+      "days_to_close": 18.4
+    },
+    {
       "question": "Will Starship Ship 40 be recovered to shore?",
       "url": "https://manifold.markets/gemini35flash/will-starship-ship-40-be-recovered",
       "side": "NO",
@@ -50,6 +70,53 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1786390398994,
+      "kind": "bet",
+      "question": "Given I have been with my partner for a year, will we be together for 5?",
+      "url": "https://manifold.markets/LivInTheLookingGlass/given-i-have-been-with-my-partner-f-0dde6bfd1962",
+      "market_prob": 0.6901340271379099,
+      "model_prob": 0.62,
+      "confidence": "medium",
+      "amount": 15.0,
+      "outcome": "NO",
+      "thinking": "With a linked honeymoon market, the relationship appears past casual dating and headed toward marriage. For 1-year couples with marriage intent, 5-year survival rates are roughly 60-70% after accounting for 4-year cumulative hazard rates.",
+      "uncertainty": "Whether the couple is currently engaged/planning marriage or if their status has changed recently.",
+      "resolution_risk": "The market betting closes in ~18 days while asking about a 5-year outcome; the creator might resolve early based on current status, breakups, or subjective criteria.",
+      "evidence_for": [
+        "Couples who reach the 1-year mark have survived the highest hazard period of early breakups.",
+        "Comments reference a linked market created by the author titled 'where-will-we-honeymoon', indicating high commitment and potential marriage plans."
+      ],
+      "evidence_against": [
+        "Cumulative breakup or divorce rates over a 4-year period remain around 25-35% even for engaged or serious couples.",
+        "Trader @Eternal asked if they are still together, suggesting a lack of recent public updates on the relationship."
+      ],
+      "reason": "edge 0.070, kelly 0.10, decay 0.76, bound by kelly target"
+    },
+    {
+      "ts": 1786390383394,
+      "kind": "bet",
+      "question": "Will the WTI Crude Oil Spot Price be above $78.50 on August 11, 2026?",
+      "url": "https://manifold.markets/ShaneBo/will-the-wti-crude-oil-spot-price-b-Cun2dLL5UZ",
+      "market_prob": 0.920510956738622,
+      "model_prob": 0.84,
+      "confidence": "medium",
+      "amount": 17.0,
+      "outcome": "NO",
+      "thinking": "With WTI spot/futures trading around $80.20\u2013$82.00 today and EIA Cushing spot historically maintaining a premium in backwardation, crude would need to drop >$1.70 (>2%) in a single day to close below $78.50 tomorrow. Estimating an ~84% probability of staying above the threshold.",
+      "uncertainty": "Magnitude of crude price movement over the next 24 hours driven by geopolitical headlines.",
+      "resolution_risk": "EIA publishing lag or non-reporting requiring resolution to the preceding business day.",
+      "evidence_for": [
+        "WTI Crude Oil Spot is trading around $80.20 on August 10, 2026, $1.70 above the $78.50 threshold.",
+        "EIA Cushing spot price (DCOILWTICO) has recently been trading at a ~$1.60 premium above front-month futures, placing estimated spot near $82.00.",
+        "There is only one trading day left before the August 11 target date."
+      ],
+      "evidence_against": [
+        "Crude oil volatility is currently high (~2% per day, ~$1.60/bbl), so a sudden sell-off of >$1.70 is possible.",
+        "Market sentiment has been headline-driven, with easing US-Iran geopolitical tensions causing intraday drops."
+      ],
+      "reason": "edge 0.081, kelly 0.09, decay 1.00, bound by kelly target"
+    },
     {
       "ts": 1786389167427,
       "kind": "no_trade",
