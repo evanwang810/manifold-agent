@@ -41,11 +41,21 @@ going looking for new ones:
 4. **Scan.** New markets with 25+ traders, M$3k+ volume, resolving inside a month.
    Rate-limited to once an hour so the cron does not burn a free API tier.
 
-Each evaluation is two LLM calls: a grounded research pass, then a structured decision.
-The decision schema forces evidence for and against to be written *before* the
-probability, which cuts down the small-model habit of answering 0.7 to everything.
+Scanned markets go through a cheap screen first. The fast model forecasts each one
+blind, and only markets where its number disagrees with the price, or where it flags
+something worth reading properly, reach the deep model. Screened-out markets cost one
+small call and do not count against the tick's evaluation budget, so a tick can look at
+a dozen questions and analyse the two that looked wrong. Fills and moves skip the screen:
+they are already news.
 
-Hard caps live in `[budget]`. Default is one evaluation and four LLM calls per tick.
+A surviving evaluation is two more calls: a research pass on the fast model, then the
+structured decision on the deep one. The decision schema forces evidence for and against
+to be written *before* the probability, which cuts down the small-model habit of
+answering 0.7 to everything. Neither the screen nor the decision is shown the market
+price. Shown it, the model hands it straight back, and an estimate that agrees with the
+price by construction is worth nothing.
+
+Hard caps live in `[budget]`, separately per tier.
 
 ## Getting a Manifold account connected
 
@@ -71,26 +81,45 @@ add `MANIFOLD_API_KEY` and `LLM_API_KEY`. The workflow already references both.
 
 ## Model options
 
-Default is `gemini-3.6-flash`. Gemini is the recommended provider because its native
-Google Search grounding means research needs no second API key, and search matters more
-than model strength here: a mid model with three good articles beats a strong model
-working from a training cutoff. Check your actual free-tier quota at
-[aistudio.google.com/rate-limit](https://aistudio.google.com/rate-limit) and set
-`[budget]` so 288 ticks a day stays inside it.
-
-Alternatives, all one config change:
+Two tiers. The **fast** model screens candidates, does research, answers people, and
+rewrites memory, which is nearly every call the agent makes. The **deep** model is only
+ever asked the one question that decides money. The split exists because the free tier
+that matters is the one on the model doing the volume.
 
 ```toml
-provider = "mistral"             # model = "mistral-small-latest"
+[llm]
+provider = "gemini"        # shared defaults for both tiers
+key_env = "LLM_API_KEY"
 
+[llm.fast]
+model = "gemini-3.5-flash-lite"
+
+[llm.deep]
+model = "gemini-3.6-flash"
+```
+
+Anything under `[llm]` is a default that either tier can override, including `provider`,
+`base_url` and `key_env`, so the two tiers can be two different providers with two
+different keys:
+
+```toml
+[llm.deep]
 provider = "openai_compatible"   # Groq, Cerebras, OpenRouter, anything else
 base_url = "https://api.groq.com/openai/v1"
 model = "llama-3.3-70b-versatile"
+key_env = "DEEP_LLM_API_KEY"     # add this one to Actions secrets too
 ```
 
-None of those have native search, so the agent tells itself its knowledge is stale and
-leans harder on the market price and the comment thread. That is a real handicap on
-news-driven questions and not much of one on questions the comments already settle.
+Name the same model in both tiers and you get the old single-model behaviour; the runner
+notices and reuses one client. Set `[screen] enabled = false` to skip screening entirely
+and send everything to the deep model.
+
+Gemini is the default because its native Google Search grounding means research needs no
+second API key, and search matters more than model strength here: a mid model with three
+good articles beats a strong model working from a training cutoff. Providers other than
+Gemini have no native search, so research falls back to keyless DuckDuckGo. Check your
+free-tier quota at [aistudio.google.com/rate-limit](https://aistudio.google.com/rate-limit)
+and set `[budget]` so a day of ticking stays inside it.
 
 ## Running it
 
@@ -117,12 +146,16 @@ decide whether the reasoning is any good before you let it spend anything.
 Fork the repo, add the two secrets, done. The workflow creates its own `state` branch
 on the first run, so there is no manual git surgery.
 
-The schedule is hourly rather than every five minutes, and the job then loops
-internally, ticking every 5 minutes for most of an hour. That is deliberate. GitHub
-treats `schedule` as best effort and drops high-frequency crons first under load: a
-`*/5` cron in practice fires once every one to two hours. An hourly trigger is far more
-likely to actually run, and wall time inside a job is free on public repos, so the loop
-buys back the cadence the scheduler will not give you.
+The cadence comes from two things working together. GitHub treats `schedule` as best
+effort and drops high-frequency crons first under load, so a `*/5` cron in practice fires
+once every one to two hours and nothing happens in between. So the job itself loops for
+55 minutes, ticking every 60 seconds, which is where the actual cadence comes from. Wall
+time inside a job is free on public repos.
+
+The cron still asks every five minutes, and a `concurrency` group keeps at most one
+session running plus one queued. A trigger that lands mid-session just queues, and the
+queued session starts the moment the running one ends, so there is no dead hour waiting
+for the next scheduled slot.
 
 Scheduled workflows are also disabled after 60 days of repository inactivity. This one
 commits to the `state` branch on every tick, which counts as activity, so it keeps
@@ -146,29 +179,43 @@ Four channels, in increasing order of permanence:
   prompt on every tick, forever, until you edit it. This is where behavior changes
   belong.
 
-Instructions can change how the agent reasons. They cannot change how much it stakes:
-sizing is computed in `sizing.py` after the model has spoken, so nothing written in a
-prompt can talk it into a bigger position than the risk config allows.
+It remembers the conversations. Threads are keyed by person rather than by market, so
+someone it has argued with before is recognised the next time they turn up somewhere
+else, and the last dozen turns are in front of it when it replies.
+
+Anything either side of a conversation says that is worth carrying forward can become a
+**standing note**: a one-line rule that sits in front of every future decision. The agent
+writes most of them itself after a trade, and it can accept one from a person it is
+talking to. Notes carry their source, and the prompt says plainly that its own notes and
+advice from strangers are opinions to weigh, not orders, while an issue opened by the
+repository owner is treated as an instruction. Notes are capped at 16, oldest evicted
+first, owner ones last. All of them are visible on the website.
+
+None of this can change how much it stakes. Sizing is computed in `sizing.py` after the
+model has spoken, so no instruction, note, or persuasive stranger can talk it into a
+bigger position than the risk config allows. That is the whole reason the advice channel
+is safe to leave open to the public.
 
 ## Risk model
 
-Default trade is M$10. Size grows only when every conviction gate passes at once:
-volume over M$10k, resolving within 7 days, edge over 18 points, and the model claiming
-`high` confidence. Then the ceiling is 35% of net worth.
+An ordinary trade is capped at 10% of net worth, floored at M$10 so a small account can
+still act. Size grows past that only when every conviction gate passes at once: volume
+over M$5k, resolving within 14 days, edge over 12 points, and the model claiming at least
+`medium` confidence. Then the ceiling is 35% of net worth.
 
-Note that at the default `kelly_fraction = 0.25`, quarter-Kelly binds long before that
-ceiling does. A 25-point edge on an even-money market sizes to about 12% of bankroll,
-not 35%. If you want the big swings, raise `kelly_fraction` toward 0.7.
+Note that at `kelly_fraction = 0.4`, Kelly usually binds before either ceiling does. If
+you want bigger swings, raise it toward 0.7; for a duller bot, drop `default_max_fraction`
+back toward a flat M$10.
 
 Layered on top, in order of application:
 
-- Quarter-Kelly on the stated edge.
+- Fractional Kelly on the gap between the model's estimate and the price.
 - A time decay multiplier of `14 / days_to_close`, because mana in a market resolving
   three weeks out is mana you cannot use.
 - A cap at 5% of the market's lifetime volume.
 - A rolling daily mana budget and a minimum balance reserve.
 - A market impact check that places a `dryRun` bet, reads the resulting price, and
-  shrinks the order until it moves the market less than 3 points. Manifold markets are
+  shrinks the order until it moves the market less than 5 points. Manifold markets are
   thin enough that a large order mostly trades against itself.
 
 Non-conviction trades rest as limit orders priced to keep 60% of the estimated edge,

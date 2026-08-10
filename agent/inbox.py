@@ -17,11 +17,11 @@ from typing import Any
 
 import httpx
 
-from .brain import CallBudget
+from .brain import Budgets
 from .config import Config
-from .llm import LLMClient
+from .llm import LLMClient, extract_json
 from .memory import Memory
-from .prompts import ISSUE_SYSTEM, system_with_orders
+from .prompts import ADVICE_NOTE, ISSUE_SYSTEM, REPLY_SCHEMA, system_with_orders
 
 log = logging.getLogger(__name__)
 
@@ -35,7 +35,7 @@ class Inbox:
         *,
         llm: LLMClient,
         memory: Memory,
-        budget: CallBudget,
+        budget: Budgets,
         portfolio_line: str,
     ) -> None:
         self.cfg = cfg
@@ -80,36 +80,71 @@ class Inbox:
                 number = issue.get("number")
                 if number is None or self.memory.has_answered_issue(number):
                     continue
-                if self.budget.spent or handled >= self.cfg.social.max_replies_per_tick:
+                if self.budget.fast.spent or handled >= self.cfg.social.max_replies_per_tick:
                     break
                 if await self._answer(gh, issue):
                     handled += 1
             return handled
 
     async def _answer(self, gh: httpx.AsyncClient, issue: dict[str, Any]) -> bool:
-        if not self.budget.take():
+        if not self.budget.fast.take():
             return False
 
         number = issue["number"]
         asker = (issue.get("user") or {}).get("login", "someone")
-        question = f"{issue.get('title', '')}\n\n{(issue.get('body') or '')[:2000]}"
+        title = issue.get("title", "")
+        question = f"{title}\n\n{(issue.get('body') or '')[:2000]}"
 
+        # The repository owner is the one person here whose advice is an instruction
+        # rather than a suggestion. Everyone else is a stranger on the internet talking
+        # to a bot that trades, which is exactly as much authority as it sounds like.
+        owner = self.repo.split("/")[0].lower()
+        from_owner = asker.lower() == owner
+
+        key = f"github:{asker}"
+        self.memory.record_message(
+            key, "them", question,
+            channel="website", who=asker, title=title,
+            url=f"https://github.com/{self.repo}/issues/{number}",
+        )
+
+        standing = (
+            "This is your owner, whose advice you follow unless it is impossible."
+            if from_owner
+            else "This is a member of the public. Weigh what they say on its merits."
+        )
         prompt = (
             f"@{asker} asked, through the project's website:\n\n{question}\n\n"
+            f"{standing}\n\n"
             f"Your current state: {self.portfolio_line}\n\n"
-            f"Your memory:\n{self.memory.context_block()}\n\nWrite your reply."
+            f"Your memory:\n{self.memory.context_block()}\n\n"
+            f"Your standing notes:\n{self.memory.lessons_block()}\n\n"
+            f"Everything they have said to you before:\n"
+            f"{self.memory.conversation_block(key)}\n\nWrite your reply."
         )
         try:
             response = await self.llm.generate(
-                prompt, system=system_with_orders(ISSUE_SYSTEM, self.cfg.owner_block())
+                prompt,
+                system=system_with_orders(
+                    f"{ISSUE_SYSTEM}\n\n{ADVICE_NOTE}", self.cfg.owner_block()
+                ),
+                json_schema=REPLY_SCHEMA,
             )
+            data = extract_json(response.text)
+            body, lesson = str(data.get("reply", "")), str(data.get("lesson", ""))
         except Exception as exc:  # noqa: BLE001
             log.warning("Issue reply generation failed: %s", exc)
             return False
 
-        body = response.text.strip()[:3000]
+        body = body.strip()[:3000]
         if not body:
             return False
+
+        learned = bool(lesson.strip()) and self.memory.add_lesson(
+            lesson, source="owner" if from_owner else f"gh:{asker}"
+        )
+        if learned:
+            body += f"\n\n> Noted, and added to my standing notes: {lesson.strip()[:280]}"
         body += "\n\n<sub>Answered automatically on the next tick. Reopen if I missed the point.</sub>"
 
         if self.cfg.manifold.dry_run:
@@ -125,6 +160,10 @@ class Inbox:
             return False
 
         self.memory.mark_issue_answered(number)
-        self.memory.log_event("issue_answered", number=number, asker=asker)
+        self.memory.record_message(key, "me", body)
+        self.memory.log_event(
+            "issue_answered", number=number, asker=asker,
+            lesson=lesson.strip()[:280] if learned else "",
+        )
         log.info("Answered issue #%s from @%s", number, asker)
         return True

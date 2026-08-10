@@ -7,7 +7,10 @@
 dry_run = false
 
 [llm]
-# gemini | mistral | openai_compatible
+# Two models. Anything set here is the shared default for both; the tables below
+# override it. Point both at the same model if you would rather not think about it.
+#
+# provider is one of: gemini | mistral | openai_compatible
 #
 # Gemini is only worth it if your Google project is actually allowed to make free
 # calls, which not every account gets. Run `python run.py --check` to find out before
@@ -15,24 +18,43 @@ dry_run = false
 # not ask for a card, and the research step falls back to keyless DuckDuckGo search on
 # any provider without native grounding.
 provider = "gemini"
-model = "gemini-3.6-flash"
-
-# For provider = "openai_compatible", for example:
-#   base_url = "https://api.groq.com/openai/v1"     model = "llama-3.3-70b-versatile"
-#   base_url = "https://api.cerebras.ai/v1"         model = "llama-3.3-70b"
 base_url = ""
-
 use_search = true             # false skips the research call entirely
 search_results = 6
 temperature = 0.3
 timeout_seconds = 90
+key_env = "LLM_API_KEY"       # which environment variable holds the key
+
+# The cheap one. Screens every candidate market, does the research, answers comments
+# and questions, and rewrites memory. This is where nearly all the calls go, so it
+# wants the model with the generous rate limit rather than the clever one.
+[llm.fast]
+model = "gemini-3.5-flash-lite"
+
+# The expensive one. Only ever asked the question that decides money. To run a second
+# provider here, set its own provider/base_url/key_env and add that key to Actions
+# secrets, for example:
+#   provider = "openai_compatible"
+#   base_url = "https://api.groq.com/openai/v1"
+#   model = "llama-3.3-70b-versatile"
+#   key_env = "DEEP_LLM_API_KEY"
+[llm.deep]
+model = "gemini-3.6-flash"
+
+[screen]
+# The fast model forecasts each candidate blind, and the deep model only sees markets
+# where that quick number disagrees with the price or where the screener flagged
+# something worth reading properly.
+enabled = true
+escalate_edge = 0.03
 
 [budget]
-# Throughput is what finds edges. One evaluation an hour looked at six markets in a
-# whole day, which is nowhere near enough to find a mispricing. Raise these if your
-# provider's daily quota allows; each evaluation costs two calls.
+# Throughput is what finds edges. Screened-out markets do not count against the
+# evaluation cap, so a tick can look at a dozen questions and analyse the two that
+# looked wrong. Each analysis costs one deep call plus one fast call for research.
 max_evaluations_per_tick = 2
-max_llm_calls_per_tick = 8
+max_fast_calls_per_tick = 20
+max_deep_calls_per_tick = 3
 
 [scan]
 min_minutes_between_scans = 20
@@ -100,3 +122,8 @@ watch_last_n_comments = 10    # how far back to look for replies to the bot
 [memory]
 path = "state"
 compress_after_events = 60
+# Standing notes the agent wrote for itself or was given by someone it talked to.
+# These sit in front of every decision, so the list stays short on purpose.
+max_lessons = 16
+conversation_depth = 12       # turns of one conversation it can still see
+max_conversations = 40

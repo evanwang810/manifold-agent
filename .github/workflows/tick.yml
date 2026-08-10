@@ -1,13 +1,15 @@
 name: tick
 
-# GitHub's scheduler is best effort and drops high-frequency crons under load. A */5
-# schedule realistically fires every one to two hours, which is useless for reacting to
-# a market. So the cron fires hourly (short schedules are the first to be dropped) and
-# the job itself loops for most of an hour, ticking on a real interval. Wall time is
-# free on public repositories.
+# GitHub's scheduler is best effort and drops high-frequency crons under load, so a */5
+# schedule really fires every one to two hours. The workaround is both halves of this:
+# the job loops internally for most of an hour so ticks happen on a real interval, and
+# the cron asks every five minutes so a session starts promptly after the last one ends
+# rather than waiting for the top of the next hour. The concurrency group below keeps at
+# most one session running and one queued, and the queued one starts the moment the
+# running one finishes. Wall time is free on public repositories.
 on:
   schedule:
-    - cron: "7 * * * *"
+    - cron: "*/5 * * * *"
   workflow_dispatch:
     inputs:
       instruction:
@@ -22,7 +24,7 @@ on:
       minutes:
         description: "How long to keep ticking"
         required: false
-        default: "50"
+        default: "55"
 
 concurrency:
   group: manifold-agent
@@ -42,7 +44,7 @@ jobs:
       # The expensive work is gated separately, by max_evaluations_per_tick and by
       # min_minutes_between_scans, so checking every minute buys reactivity for free.
       TICK_INTERVAL_SECONDS: 60
-      SESSION_MINUTES: ${{ inputs.minutes || '50' }}
+      SESSION_MINUTES: ${{ inputs.minutes || '55' }}
     steps:
       - uses: actions/checkout@v4
 

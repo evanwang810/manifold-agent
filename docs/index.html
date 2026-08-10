@@ -105,6 +105,30 @@
 
   .empty{font-family:var(--mono); font-size:13px; color:var(--faint); padding:26px 0}
 
+  /* memory */
+  .recall{font-size:15px; color:var(--muted); margin:0 0 26px; max-width:64ch}
+  .sub{
+    font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--faint); margin:0 0 10px;
+  }
+  .lessons{list-style:none; margin:0 0 26px; padding:0}
+  .lessons li{
+    display:grid; grid-template-columns:auto 1fr; gap:12px; align-items:baseline;
+    font-size:14px; color:var(--muted); padding:9px 0; border-top:1px solid var(--line-2);
+  }
+  .lessons li:first-child{border-top:0}
+  .src{
+    font-family:var(--mono); font-size:10.5px; color:var(--faint);
+    border:1px solid var(--line); padding:2px 6px; white-space:nowrap;
+  }
+  .src.owner{color:var(--accent); border-color:var(--accent)}
+  .chat{border-top:1px solid var(--line-2); padding:14px 0}
+  .chat .who{font-family:var(--mono); font-size:11px; color:var(--faint); margin-bottom:8px}
+  .chat .who a{color:var(--faint)}
+  .turn{font-size:14px; color:var(--muted); margin:0 0 7px; padding-left:14px;
+        border-left:2px solid var(--line)}
+  .turn.me{border-left-color:var(--accent); color:var(--ink)}
+
   /* how */
   dl{margin:0; display:grid; grid-template-columns:132px 1fr; gap:0 22px}
   dt{font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--faint); padding:13px 0; border-top:1px solid var(--line-2)}
@@ -187,6 +211,15 @@
   </section>
 
   <section>
+    <h2>What it remembers</h2>
+    <p class="recall" id="recall">Loading…</p>
+    <p class="sub">Standing notes</p>
+    <div id="lessons"><p class="empty">Nothing learned yet.</p></div>
+    <p class="sub">Recent conversations</p>
+    <div id="chats"><p class="empty">Nobody has talked to it yet.</p></div>
+  </section>
+
+  <section>
     <h2>How it decides</h2>
     <dl>
       <dt>Each tick</dt>
@@ -195,14 +228,20 @@
       <dt>What it looks at</dt>
       <dd>Markets with 25+ traders, M$3k+ volume, resolving inside a month. Every filter is a cheap API read, so a market has earned the model's attention before the model is invoked.</dd>
 
-      <dt>Two calls</dt>
-      <dd>A grounded research pass with live search that is forbidden from stating a probability, then a structured decision that reads the market, the whole comment thread, the research, and its own memory.</dd>
+      <dt>Two models</dt>
+      <dd>A cheap model forecasts every candidate <b>blind</b>, without being shown the price. Only markets where its number disagrees with the market, or where it flags something worth reading properly, are passed to the expensive model. Most candidates die here for the price of one small call.</dd>
+
+      <dt>Then two calls</dt>
+      <dd>A research pass with live search that is forbidden from stating a probability, then a structured decision that reads the market, the whole comment thread, the research, its standing notes, and its own memory. The market price is withheld from that call too: shown the price, it hands the price back.</dd>
 
       <dt>Evidence first</dt>
       <dd>The response schema forces evidence for, evidence against, and resolution risk to be written <b>before</b> the number. Left alone, small models put every answer on 0.7 or 0.3, and a flattened distribution destroys the only signal worth measuring.</dd>
 
       <dt>Sizing</dt>
-      <dd>Quarter-Kelly on the stated edge, shrunk for distant resolution dates, capped at 5% of market volume, then trimmed until a <code>dryRun</code> bet shows it moves the price under 3 points. Default trade is M$10. Large size needs a liquid market, a near date, an 18-point edge, and high stated confidence, all at once.</dd>
+      <dd>Fractional Kelly on the gap between its estimate and the price, shrunk for distant resolution dates, capped at 10% of net worth and 5% of market volume, then trimmed until a <code>dryRun</code> bet shows it moves the price under 5 points. Nothing the model writes can raise a stake: sizing is computed in code after it has spoken, which is also why nobody can talk it into a bigger position.</dd>
+
+      <dt>What it keeps</dt>
+      <dd>A compressed narrative of what it has done, plus a short list of <b>standing notes</b> it wrote for itself after trades or picked up from people who argued with it. Those notes sit in front of every decision. They are advice, not orders, and it is told to drop one when the evidence says otherwise.</dd>
 
       <dt>The point</dt>
       <dd>Not profit. Once enough people run LLMs on the same markets the model consensus <b>is</b> the price. Every decision logs the model's probability beside the market's, which after a few hundred resolutions is a calibration score. That is the actual output.</dd>
@@ -236,7 +275,7 @@ LLM_API_KEY</code><button>copy</button></pre>
 
   <section>
     <h2>Ask it something</h2>
-    <p class="hint" style="margin-bottom:16px">This goes to the bot as a GitHub issue. It reads them on its next tick, answers publicly, and closes the thread. Ask about a position, a market, or why it did something.</p>
+    <p class="hint" style="margin-bottom:16px">This goes to the bot as a GitHub issue. It reads them on its next tick, answers publicly, and closes the thread. Ask about a position, a market, or why it did something. It remembers who it has spoken to, and if you give it advice it agrees with, it writes it into the standing notes above and you will see it there.</p>
     <form id="ask">
       <input id="q-title" maxlength="120" placeholder="Short version of your question" required>
       <textarea id="q-body" maxlength="1500" placeholder="The rest of it, if there is more"></textarea>
@@ -333,6 +372,33 @@ function renderDecisions(rows) {
   }).join('');
 }
 
+function renderMemory(data) {
+  $('recall').textContent = data.summary
+    || 'Nothing compressed yet. Its memory is written after enough events accumulate.';
+
+  const lessons = data.lessons || [];
+  if (lessons.length) {
+    $('lessons').innerHTML = `<ul class="lessons">${lessons.map(l => {
+      const owner = l.source === 'owner' ? ' owner' : '';
+      return `<li><span class="src${owner}">${esc(l.source || 'self')}</span>
+        <span>${esc(l.text)}</span></li>`;
+    }).join('')}</ul>`;
+  }
+
+  const chats = data.conversations || [];
+  if (chats.length) {
+    $('chats').innerHTML = chats.map(c => {
+      const who = esc(c.who || 'someone');
+      const head = c.url ? `<a href="${esc(c.url)}">${who}</a>` : who;
+      const turns = (c.messages || []).map(m =>
+        `<p class="turn ${m.role === 'me' ? 'me' : ''}">${esc(m.text)}</p>`).join('');
+      return `<div class="chat">
+        <div class="who">${head} · ${esc(c.channel || '')}${
+          c.updated_ms ? ' · ' + ago(c.updated_ms) : ''}</div>${turns}</div>`;
+    }).join('');
+  }
+}
+
 function esc(s) {
   return String(s == null ? '' : s).replace(/[&<>"]/g, c =>
     ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -349,6 +415,7 @@ function esc(s) {
     $('s-mode').textContent = 'not running';
     empty($('positions'), 'No data yet. The bot publishes here once it has run a tick.');
     empty($('decisions'), 'No data yet.');
+    $('recall').textContent = 'No data yet.';
     return;
   }
 
@@ -366,6 +433,7 @@ function esc(s) {
   }
   renderPositions(data.positions);
   renderDecisions(data.decisions);
+  renderMemory(data);
 })();
 
 $('ask').addEventListener('submit', e => {

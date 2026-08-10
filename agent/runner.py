@@ -18,7 +18,7 @@ import time
 from dataclasses import dataclass, field
 from typing import Any
 
-from .brain import Brain, CallBudget
+from .brain import Brain, Budgets, CallBudget
 from .config import Config
 from .inbox import Inbox
 from .llm import build_llm
@@ -40,6 +40,7 @@ class TickReport:
     net_worth: float = 0.0
     positions: int = 0
     evaluated: list[str] = field(default_factory=list)
+    screened: list[str] = field(default_factory=list)
     bets: int = 0
     replies: int = 0
     llm_calls: int = 0
@@ -50,8 +51,8 @@ class TickReport:
             f"@{self.username}  via {self.model}",
             f"balance M${self.balance:,.0f}  "
             f"net worth M${self.net_worth:,.0f}  positions {self.positions}",
-            f"evaluated {len(self.evaluated)}  bets {self.bets}  "
-            f"replies {self.replies}  llm calls {self.llm_calls}",
+            f"screened {len(self.screened)}  evaluated {len(self.evaluated)}  "
+            f"bets {self.bets}  replies {self.replies}  llm calls {self.llm_calls}",
         ]
         lines += [f"  - {n}" for n in self.notes]
         return "\n".join(lines)
@@ -61,9 +62,19 @@ class Runner:
     def __init__(self, cfg: Config) -> None:
         self.cfg = cfg
         self.client = ManifoldClient(cfg.manifold)
-        self.llm = build_llm(cfg.llm)
-        self.memory = Memory(cfg.memory, cfg.state_dir, self.llm)
-        self.budget = CallBudget(cfg.budget.max_llm_calls_per_tick)
+        self.fast = build_llm(cfg.llm.fast)
+        # One client is reused when both tiers name the same model, so the common
+        # single-model setup does not open two connection pools for no reason.
+        self.deep = (
+            self.fast
+            if cfg.llm.deep == cfg.llm.fast
+            else build_llm(cfg.llm.deep)
+        )
+        self.memory = Memory(cfg.memory, cfg.state_dir, self.fast)
+        self.budget = Budgets(
+            fast=CallBudget(cfg.budget.max_fast_calls_per_tick),
+            deep=CallBudget(cfg.budget.max_deep_calls_per_tick),
+        )
         self.risk = RiskEngine(cfg.risk)
         self.scanner = Scanner(cfg.scan, self.client, self.memory)
         self.report = TickReport()
@@ -75,7 +86,9 @@ class Runner:
 
     async def aclose(self) -> None:
         await self.client.aclose()
-        await self.llm.aclose()
+        await self.fast.aclose()
+        if self.deep is not self.fast:
+            await self.deep.aclose()
 
     async def tick(self) -> TickReport:
         me = await self.client.me()
@@ -83,18 +96,20 @@ class Runner:
         username = me.get("username", "?")
 
         self.brain = Brain(
-            self.cfg, client=self.client, llm=self.llm, memory=self.memory,
-            risk=self.risk, budget=self.budget, user_id=self.user_id,
+            self.cfg, client=self.client, fast=self.fast, deep=self.deep,
+            memory=self.memory, risk=self.risk, budget=self.budget,
+            user_id=self.user_id,
         )
         self.social = Social(
-            self.cfg, client=self.client, llm=self.llm, memory=self.memory,
+            self.cfg, client=self.client, llm=self.fast, memory=self.memory,
             budget=self.budget, user_id=self.user_id, username=username,
         )
 
         portfolio = await self.client.portfolio(self.user_id)
         positions = await self.client.positions(self.user_id)
         self.report.username = username
-        self.report.model = f"{self.cfg.llm.provider}/{self.cfg.llm.model}"
+        fast, deep = self.cfg.llm.fast.label, self.cfg.llm.deep.label
+        self.report.model = deep if fast == deep else f"{deep} (screened by {fast})"
         self.report.balance = float(portfolio.get("balance") or 0.0)
         self.report.net_worth = (
             self.report.balance
@@ -112,7 +127,7 @@ class Runner:
         await self._check_moves(positions)
         self.report.replies = await self.social.run()
         self.report.replies += await Inbox(
-            self.cfg, llm=self.llm, memory=self.memory, budget=self.budget,
+            self.cfg, llm=self.fast, memory=self.memory, budget=self.budget,
             portfolio_line=(
                 f"balance M${self.report.balance:,.0f}, net worth "
                 f"M${self.report.net_worth:,.0f}, {len(positions)} open positions"
@@ -120,7 +135,7 @@ class Runner:
         ).run()
         await self._scan()
 
-        if not self.budget.spent:
+        if not self.budget.fast.spent:
             await self.memory.maybe_compress()
 
         self.report.llm_calls = self.budget.used
@@ -150,6 +165,28 @@ class Runner:
             "balance": round(self.report.balance, 2),
             "net_worth": round(self.report.net_worth, 2),
             "summary": self.memory.state.get("summary", ""),
+            "lessons": [
+                {
+                    "text": le.get("text", ""),
+                    "source": le.get("source", ""),
+                    "ts": le.get("ts"),
+                }
+                for le in self.memory.state.get("lessons", [])
+            ],
+            "conversations": [
+                {
+                    "channel": convo.get("channel", ""),
+                    "who": convo.get("who", ""),
+                    "title": convo.get("title", ""),
+                    "url": convo.get("url", ""),
+                    "updated_ms": convo.get("updated_ms"),
+                    "messages": [
+                        {"role": m.get("role"), "text": (m.get("text") or "")[:400]}
+                        for m in (convo.get("messages") or [])[-6:]
+                    ],
+                }
+                for convo in self.memory.recent_conversations(6)
+            ],
             "positions": sorted(
                 (
                     {
@@ -199,19 +236,23 @@ class Runner:
     def _can_evaluate(self) -> bool:
         return (
             self._evaluations < self.cfg.budget.max_evaluations_per_tick
-            and not self.budget.spent
+            and not self.budget.deep.spent
         )
 
-    async def _evaluate(self, market: Market, trigger: str) -> None:
+    async def _evaluate(self, market: Market, trigger: str, *, screen: bool = False) -> None:
         assert self.brain is not None
         self._evaluations += 1
         try:
-            result = await self.brain.evaluate(market, trigger=trigger)
+            result = await self.brain.evaluate(market, trigger=trigger, screen=screen)
         except ManifoldError as exc:
             log.error("Evaluation failed on %s: %s", market.slug, exc)
             self.report.notes.append(f"error on {market.slug}: {exc}")
             return
-        self.report.evaluated.append(market.slug)
+        if result.screened_out:
+            self._evaluations -= 1
+            self.report.screened.append(market.slug)
+        else:
+            self.report.evaluated.append(market.slug)
         if result.executed:
             self.report.bets += 1
         self.report.notes.append(f"{market.slug}: {result.detail}")
@@ -310,8 +351,12 @@ class Runner:
             )
             return
 
+        # More candidates than the tick can afford to analyse: the screen throws most
+        # of them away for one cheap call each, and only survivors spend a deep call.
         candidates = await self.scanner.find_candidates(
-            limit=self.cfg.budget.max_evaluations_per_tick
+            limit=self.cfg.budget.max_evaluations_per_tick * 4
+            if self.cfg.screen.enabled
+            else self.cfg.budget.max_evaluations_per_tick
         )
         self.memory.mark_scanned()
         if not candidates:
@@ -319,12 +364,13 @@ class Runner:
             return
 
         for market in candidates:
-            if not self._can_evaluate:
+            if not self._can_evaluate or self.budget.fast.spent:
                 break
             await self._evaluate(
                 market,
                 "Routine scan. This market passed the size and timing filters and has "
                 "not been looked at recently.",
+                screen=True,
             )
 
 

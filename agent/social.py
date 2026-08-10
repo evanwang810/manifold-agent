@@ -10,13 +10,20 @@ from __future__ import annotations
 import logging
 import time
 
-from .brain import CallBudget
+from .brain import Budgets
 from .config import Config
-from .llm import LLMClient
+from .llm import LLMClient, extract_json
 from .manifold import ManifoldClient, ManifoldError
 from .memory import Memory
 from .models import Comment, Market
-from .prompts import MANAGRAM_SYSTEM, REPLY_SYSTEM, build_reply_prompt, system_with_orders
+from .prompts import (
+    ADVICE_NOTE,
+    MANAGRAM_SYSTEM,
+    REPLY_SCHEMA,
+    REPLY_SYSTEM,
+    build_reply_prompt,
+    system_with_orders,
+)
 
 log = logging.getLogger(__name__)
 
@@ -31,7 +38,7 @@ class Social:
         client: ManifoldClient,
         llm: LLMClient,
         memory: Memory,
-        budget: CallBudget,
+        budget: Budgets,
         user_id: str,
         username: str,
     ) -> None:
@@ -86,7 +93,7 @@ class Social:
 
         handled = 0
         for contract_id, comment, thread in targets[: self.cfg.social.max_replies_per_tick]:
-            if self.budget.spent:
+            if self.budget.fast.spent:
                 break
             try:
                 market = await self.client.market(contract_id)
@@ -97,11 +104,20 @@ class Social:
         return handled
 
     async def _reply(self, market: Market, comment: Comment, thread: list[Comment]) -> bool:
-        if not self.budget.take():
+        if not self.budget.fast.take():
             return False
 
         positions = await self.client.positions(self.user_id)
         position = next((p for p in positions if p.contract_id == market.id), None)
+
+        # Keyed by person, not by market, so a regular is still recognised the next
+        # time they turn up somewhere else.
+        key = f"manifold:{comment.username}"
+        self.memory.record_message(
+            key, "them", comment.text,
+            channel="manifold", who=comment.username,
+            title=market.question, url=market.url,
+        )
 
         prompt = build_reply_prompt(
             market=market,
@@ -109,16 +125,24 @@ class Social:
             memory=self.memory.context_block(),
             market_note=self.memory.note_for(market.id),
             position=position,
+            lessons=self.memory.lessons_block(),
+            history=self.memory.conversation_block(key),
         )
         try:
             response = await self.llm.generate(
-                prompt, system=system_with_orders(REPLY_SYSTEM, self.cfg.owner_block())
+                prompt,
+                system=system_with_orders(
+                    f"{REPLY_SYSTEM}\n\n{ADVICE_NOTE}", self.cfg.owner_block()
+                ),
+                json_schema=REPLY_SCHEMA,
             )
+            data = extract_json(response.text)
+            text, lesson = str(data.get("reply", "")), str(data.get("lesson", ""))
         except Exception as exc:  # noqa: BLE001
             log.warning("Reply generation failed: %s", exc)
             return False
 
-        text = response.text.strip()[:900]
+        text = text.strip()[:900]
         if not text:
             return False
 
@@ -131,10 +155,16 @@ class Social:
             return False
 
         self.memory.mark_replied(comment.id)
+        self.memory.record_message(key, "me", text)
+        learned = bool(lesson.strip()) and self.memory.add_lesson(
+            lesson, source=f"@{comment.username}"
+        )
         if result and result.get("id"):
             self.memory.remember_comment(result["id"], market.id)
         self.memory.log_event(
-            "reply", market=market.slug, to=comment.username, text=text[:300]
+            "reply",
+            market=market.slug, to=comment.username, text=text[:300],
+            lesson=lesson.strip()[:280] if learned else "",
         )
         log.info("Replied to @%s on %s", comment.username, market.slug)
         return True
@@ -173,9 +203,9 @@ class Social:
             newest = max(newest, int(txn.get("createdTime") or 0))
             from_id = txn.get("fromId")
             amount = float(txn.get("amount") or 0)
-            if not from_id or amount < MANAGRAM_REPLY_AMOUNT or self.budget.spent:
+            if not from_id or amount < MANAGRAM_REPLY_AMOUNT or self.budget.fast.spent:
                 continue
-            if not self.budget.take():
+            if not self.budget.fast.take():
                 break
 
             message = (txn.get("data") or {}).get("message") or "(no message)"

@@ -152,6 +152,7 @@ class Decision:
     resolution_risk: str
     comment: str
     memory_note: str
+    lesson: str = ""
     raw: dict[str, Any] = field(repr=False, default_factory=dict)
 
     @classmethod
@@ -172,6 +173,7 @@ class Decision:
             resolution_risk=str(data.get("resolution_risk", "")),
             comment=str(data.get("comment", "")),
             memory_note=str(data.get("memory_note", "")),
+            lesson=str(data.get("lesson", "")),
             raw=data,
         )
 

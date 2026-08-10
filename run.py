@@ -37,8 +37,6 @@ async def check(cfg) -> int:
     from agent.manifold import ManifoldClient
 
     ok = True
-    print(f"provider     {cfg.llm.provider}\nmodel        {cfg.llm.model}\n")
-
     client = ManifoldClient(cfg.manifold)
     try:
         me = await client.me()
@@ -50,7 +48,22 @@ async def check(cfg) -> int:
     finally:
         await client.aclose()
 
-    llm = build_llm(cfg.llm)
+    # Each tier is checked on its own: a working fast model and a blocked deep one
+    # looks like a healthy agent that silently never trades.
+    for tier_name, tier_cfg in cfg.llm.tiers():
+        print(f"\n--- {tier_name} model: {tier_cfg.label} (key from {tier_cfg.key_env})")
+        if not await _check_tier(tier_cfg):
+            ok = False
+
+    print("\n" + ("all good" if ok else "something above is broken"))
+    return 0 if ok else 1
+
+
+async def _check_tier(cfg) -> bool:
+    from agent.llm import GeminiClient, build_llm
+
+    ok = True
+    llm = build_llm(cfg)
     try:
         generate_ok = True
         try:
@@ -89,7 +102,7 @@ async def check(cfg) -> int:
                 print("\n  none of them work, so this is the key or the project, not the"
                       "\n  model. Try a different provider, or a key from a fresh project.")
 
-        if not cfg.llm.use_search:
+        if not cfg.use_search:
             print("search       disabled in config")
         else:
             grounded_ok = False
@@ -115,9 +128,7 @@ async def check(cfg) -> int:
                           "so the agent will forecast without research")
     finally:
         await llm.aclose()
-
-    print("\n" + ("all good" if ok else "something above is broken"))
-    return 0 if ok else 1
+    return ok
 
 
 async def amain(args: argparse.Namespace) -> int:

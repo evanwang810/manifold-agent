@@ -14,9 +14,12 @@ from .models import Comment, Decision, Market, Position, Sizing
 from .prompts import (
     DECISION_SCHEMA,
     RESEARCH_SYSTEM,
+    SCREEN_SCHEMA,
+    SCREEN_SYSTEM,
     TRADER_SYSTEM,
     build_decision_prompt,
     build_research_prompt,
+    build_screen_prompt,
     system_with_orders,
 )
 from . import websearch
@@ -49,12 +52,31 @@ class CallBudget:
 
 
 @dataclass
+class Budgets:
+    """Separate ceilings, because the two tiers do not cost the same.
+
+    The fast model can be spent freely on screening and conversation. The deep model
+    is rationed, which is the whole reason the screen exists.
+    """
+
+    fast: CallBudget
+    deep: CallBudget
+
+    @property
+    def used(self) -> int:
+        return self.fast.used + self.deep.used
+
+
+@dataclass
 class Evaluation:
     market: Market
     decision: Decision | None
     sizing: Sizing | None
     executed: bool
     detail: str
+    # Rejected by the cheap pass, so it cost no deep call and should not count against
+    # the tick's evaluation budget. Screening is meant to buy more looks, not fewer.
+    screened_out: bool = False
 
 
 class Brain:
@@ -63,27 +85,47 @@ class Brain:
         cfg: Config,
         *,
         client: ManifoldClient,
-        llm: LLMClient,
+        fast: LLMClient,
+        deep: LLMClient,
         memory: Memory,
         risk: RiskEngine,
-        budget: CallBudget,
+        budget: Budgets,
         user_id: str,
     ) -> None:
         self.cfg = cfg
         self.client = client
-        self.llm = llm
+        self.fast = fast
+        self.deep = deep
         self.memory = memory
         self.risk = risk
         self.budget = budget
         self.user_id = user_id
 
-    async def evaluate(self, market: Market, *, trigger: str) -> Evaluation:
+    async def evaluate(
+        self, market: Market, *, trigger: str, screen: bool = False
+    ) -> Evaluation:
         market = await self.client.market(market.id)
         self.memory.mark_seen(market.id)
         if market.is_resolved:
             return Evaluation(market, None, None, False, "resolved while queued")
 
         comments = await self._safe_comments(market.id)
+
+        # Screening only makes sense on markets we went looking for. A filled order or
+        # a position in freefall is already news, and gets the deep model regardless.
+        if screen and self.cfg.screen.enabled:
+            passed, detail = await self._screen(market, comments)
+            if not passed:
+                self.memory.log_event(
+                    "screened_out",
+                    market=market.slug, question=market.question, url=market.url,
+                    market_prob=market.probability, reason=detail,
+                )
+                return Evaluation(
+                    market, None, None, False, f"screened out: {detail}",
+                    screened_out=True,
+                )
+
         positions = await self.client.positions(self.user_id)
         position = next((p for p in positions if p.contract_id == market.id), None)
 
@@ -97,14 +139,15 @@ class Brain:
             position=position,
             today=_today(),
             trigger=trigger,
+            lessons=self.memory.lessons_block(),
             show_price=not self.cfg.forecast.blind,
         )
 
-        if not self.budget.take():
-            return Evaluation(market, None, None, False, "out of LLM budget for this tick")
+        if not self.budget.deep.take():
+            return Evaluation(market, None, None, False, "out of deep model budget")
 
         try:
-            response = await self.llm.generate(
+            response = await self.deep.generate(
                 prompt,
                 system=system_with_orders(TRADER_SYSTEM, self.cfg.owner_block()),
                 json_schema=DECISION_SCHEMA,
@@ -116,6 +159,8 @@ class Brain:
             return Evaluation(market, None, None, False, f"model error: {exc}")
 
         self.memory.set_note(market.id, decision.memory_note)
+        if decision.lesson.strip():
+            self.memory.add_lesson(decision.lesson, source="self")
         log.info(
             "%s | market %.0f%% | model %.0f%% (%s) | %s",
             market.question[:60], market.probability * 100,
@@ -143,13 +188,48 @@ class Brain:
 
     # -- steps ------------------------------------------------------------
 
+    async def _screen(self, market: Market, comments: list[Comment]) -> tuple[bool, str]:
+        """Cheap first pass. True means the deep model should look at this properly.
+
+        The screener forecasts blind like the trader does, so its number can be compared
+        to the price the same way. Two independent reasons to escalate: it disagrees
+        with the market, or it says the question has something in it worth reading
+        carefully. Either is enough, because the cost of a wasted deep call is one call
+        and the cost of skipping a mispriced market is the entire point of the project.
+        """
+        if not self.budget.fast.take():
+            return True, "screen skipped, no fast budget"
+
+        try:
+            response = await self.fast.generate(
+                build_screen_prompt(market=market, comments=comments, today=_today()),
+                system=SCREEN_SYSTEM,
+                json_schema=SCREEN_SCHEMA,
+                attempts=2,
+            )
+            data = extract_json(response.text)
+        except Exception as exc:  # noqa: BLE001 - never let the screen block a trade
+            log.info("Screen failed on %s (%s), escalating anyway", market.slug, exc)
+            return True, "screen failed"
+
+        rough = min(0.99, max(0.01, float(data.get("probability", 0.5))))
+        gap = abs(rough - market.probability)
+        why = str(data.get("why", ""))[:200]
+        interesting = bool(data.get("worth_a_look"))
+
+        if gap >= self.cfg.screen.escalate_edge:
+            return True, f"quick estimate {rough:.0%} vs market {market.probability:.0%}"
+        if interesting:
+            return True, f"flagged: {why}"
+        return False, f"quick estimate {rough:.0%} agrees with market. {why}"
+
     async def _research(self, market: Market) -> str:
         """Grounded generation where the provider supports it, keyless search otherwise.
 
         Either way this costs exactly one LLM call, so the budget maths does not change
         when you switch providers.
         """
-        if not self.cfg.llm.use_search or not self.budget.take():
+        if not self.cfg.llm.fast.use_search or not self.budget.fast.take():
             return NO_RESEARCH
 
         prompt = build_research_prompt(
@@ -159,9 +239,9 @@ class Brain:
         # Native grounding first where it exists. Its free quota is far smaller than
         # plain generation's and runs out long before the model does, so a failure
         # here falls through to keyless search rather than giving up on research.
-        if self.llm.supports_search:
+        if self.fast.supports_search:
             try:
-                response = await self.llm.generate(
+                response = await self.fast.generate(
                     prompt, system=RESEARCH_SYSTEM, grounded=True, attempts=1
                 )
                 body = response.text.strip()
@@ -174,11 +254,11 @@ class Brain:
             except Exception as exc:  # noqa: BLE001
                 log.info("Grounded search unavailable (%s), using web search", exc)
 
-        snippets = await websearch.search(market.question, self.cfg.llm.search_results)
+        snippets = await websearch.search(market.question, self.cfg.llm.fast.search_results)
         if not snippets:
             return NO_RESEARCH
         try:
-            response = await self.llm.generate(
+            response = await self.fast.generate(
                 prompt
                 + "\n\nSearch results follow. Use only these, and say so plainly if they"
                 f" do not actually address the question.\n\n{snippets}",

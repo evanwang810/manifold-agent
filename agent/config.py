@@ -23,7 +23,7 @@ class ManifoldConfig:
 @dataclass
 class LLMConfig:
     provider: str = "gemini"
-    model: str = "gemini-3.6-flash"
+    model: str = "gemini-3.5-flash-lite"
     # Grounded search has a separate, much smaller free quota than plain generation.
     # Turning it off keeps the agent running on the comment thread and the price alone.
     use_search: bool = True
@@ -31,13 +31,39 @@ class LLMConfig:
     temperature: float = 0.3
     timeout_seconds: int = 90
     base_url: str = ""
+    # Which environment variable holds this tier's key. Two tiers on two providers
+    # means two keys, and neither is ever read from a file.
+    key_env: str = "LLM_API_KEY"
     api_key: str = ""
+
+    @property
+    def label(self) -> str:
+        return f"{self.provider}/{self.model}"
+
+
+@dataclass
+class LLMTiers:
+    """Two models, split by what the call is worth.
+
+    `fast` does the high-volume work: research, replies, memory, and the first-pass
+    screen on every candidate market. `deep` is only asked the one question that
+    decides money. Point them at the same model if you would rather not bother.
+    """
+
+    fast: LLMConfig = field(default_factory=LLMConfig)
+    deep: LLMConfig = field(default_factory=LLMConfig)
+
+    def tiers(self) -> list[tuple[str, LLMConfig]]:
+        return [("fast", self.fast), ("deep", self.deep)]
 
 
 @dataclass
 class BudgetConfig:
-    max_evaluations_per_tick: int = 1
-    max_llm_calls_per_tick: int = 4
+    max_evaluations_per_tick: int = 2
+    # The screen exists so the deep model is only spent on markets that might be
+    # mispriced. Fast calls are the ones you have a lot of; deep calls are not.
+    max_fast_calls_per_tick: int = 20
+    max_deep_calls_per_tick: int = 3
 
 
 @dataclass
@@ -70,6 +96,21 @@ class RiskConfig:
     daily_mana_budget: float = 500
     min_balance_reserve: float = 50
     time_decay_days: float = 14
+
+
+@dataclass
+class ScreenConfig:
+    """The cheap first pass.
+
+    Every candidate gets a rough blind forecast from the fast model. Only markets
+    where that rough number disagrees with the price, or where the screener says the
+    question deserves a real look, are escalated to the deep model.
+    """
+
+    enabled: bool = True
+    # Escalate if the quick estimate is at least this far from the price. Deliberately
+    # below risk.min_edge: the screener is coarse, and a near miss is worth a look.
+    escalate_edge: float = 0.03
 
 
 @dataclass
@@ -106,14 +147,21 @@ class SocialConfig:
 class MemoryConfig:
     path: str = "state"
     compress_after_events: int = 60
+    # Standing notes the agent has written for itself or been given by someone it
+    # talked to. Kept small on purpose: this text is in front of every decision.
+    max_lessons: int = 16
+    # How many turns of one conversation it can still see when replying.
+    conversation_depth: int = 12
+    max_conversations: int = 40
 
 
 @dataclass
 class Config:
     manifold: ManifoldConfig = field(default_factory=ManifoldConfig)
-    llm: LLMConfig = field(default_factory=LLMConfig)
+    llm: LLMTiers = field(default_factory=LLMTiers)
     budget: BudgetConfig = field(default_factory=BudgetConfig)
     scan: ScanConfig = field(default_factory=ScanConfig)
+    screen: ScreenConfig = field(default_factory=ScreenConfig)
     forecast: ForecastConfig = field(default_factory=ForecastConfig)
     risk: RiskConfig = field(default_factory=RiskConfig)
     watch: WatchConfig = field(default_factory=WatchConfig)
@@ -164,6 +212,19 @@ def _read_instructions(path: Path) -> str:
     return (body if sep else text).strip()
 
 
+def _load_llm(raw: dict[str, Any]) -> LLMTiers:
+    """Build both tiers from `[llm]` plus the `[llm.fast]` / `[llm.deep]` overrides.
+
+    Anything set directly under `[llm]` is the shared default, so a config that names
+    no tiers at all still works and simply runs one model for everything.
+    """
+    shared = {k: v for k, v in raw.items() if not isinstance(v, dict)}
+    return LLMTiers(
+        fast=_build(LLMConfig, {**shared, **raw.get("fast", {})}),
+        deep=_build(LLMConfig, {**shared, **raw.get("deep", {})}),
+    )
+
+
 def _load_dotenv(path: Path) -> None:
     """Minimal .env reader for local runs. CI uses real environment variables."""
     if not path.exists():
@@ -187,9 +248,10 @@ def load_config(path: str | Path) -> Config:
 
     cfg = Config(
         manifold=_build(ManifoldConfig, raw.get("manifold", {})),
-        llm=_build(LLMConfig, raw.get("llm", {})),
+        llm=_load_llm(raw.get("llm", {})),
         budget=_build(BudgetConfig, raw.get("budget", {})),
         scan=_build(ScanConfig, raw.get("scan", {})),
+        screen=_build(ScreenConfig, raw.get("screen", {})),
         forecast=_build(ForecastConfig, raw.get("forecast", {})),
         risk=_build(RiskConfig, raw.get("risk", {})),
         watch=_build(WatchConfig, raw.get("watch", {})),
@@ -201,9 +263,11 @@ def load_config(path: str | Path) -> Config:
     )
 
     cfg.manifold.api_key = os.environ.get("MANIFOLD_API_KEY", "")
-    cfg.llm.api_key = os.environ.get("LLM_API_KEY", "")
     if not cfg.manifold.api_key:
         raise ValueError("MANIFOLD_API_KEY is not set")
-    if not cfg.llm.api_key:
-        raise ValueError("LLM_API_KEY is not set")
+
+    for name, tier in cfg.llm.tiers():
+        tier.api_key = os.environ.get(tier.key_env, "")
+        if not tier.api_key:
+            raise ValueError(f"{tier.key_env} is not set (needed by the {name} model)")
     return cfg

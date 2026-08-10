@@ -52,6 +52,8 @@ class Memory:
     def _defaults() -> dict[str, Any]:
         return {
             "summary": "",
+            "lessons": [],             # standing notes: [{text, source, ts}]
+            "conversations": {},       # key -> {channel, who, title, url, messages[]}
             "market_notes": {},        # market_id -> one line the model wrote about it
             "seen": {},                # market_id -> ms timestamp of last evaluation
             "budget": {"day": "", "spent": 0.0},
@@ -180,6 +182,90 @@ class Memory:
         replied.append(comment_id)
         self.state["replied_to"] = replied[-500:]
         self.save()
+
+    # -- conversations ----------------------------------------------------
+
+    def conversation(self, key: str) -> dict[str, Any]:
+        return self.state["conversations"].get(key, {})
+
+    def record_message(
+        self,
+        key: str,
+        role: str,
+        text: str,
+        *,
+        channel: str = "",
+        who: str = "",
+        title: str = "",
+        url: str = "",
+    ) -> None:
+        """Append one turn to a conversation. `role` is "them" or "me"."""
+        convos = self.state["conversations"]
+        entry = convos.setdefault(
+            key,
+            {"channel": channel, "who": who, "title": title, "url": url, "messages": []},
+        )
+        for field_name, value in (("channel", channel), ("who", who), ("title", title), ("url", url)):
+            if value:
+                entry[field_name] = value
+        entry["messages"].append(
+            {"role": role, "text": text.strip()[:1200], "ts": int(time.time() * 1000)}
+        )
+        entry["messages"] = entry["messages"][-self.cfg.conversation_depth :]
+        entry["updated_ms"] = int(time.time() * 1000)
+
+        # Drop the least recently touched threads rather than growing without bound.
+        if len(convos) > self.cfg.max_conversations:
+            oldest = sorted(convos.items(), key=lambda kv: kv[1].get("updated_ms", 0))
+            for stale_key, _ in oldest[: len(convos) - self.cfg.max_conversations]:
+                convos.pop(stale_key, None)
+        self.save()
+
+    def conversation_block(self, key: str) -> str:
+        entry = self.conversation(key)
+        messages = entry.get("messages") or []
+        if not messages:
+            return "(you have not spoken with them before)"
+        who = entry.get("who") or "them"
+        return "\n".join(
+            f"{'you' if m['role'] == 'me' else who}: {m['text'][:600]}" for m in messages
+        )
+
+    def recent_conversations(self, n: int) -> list[dict[str, Any]]:
+        convos = self.state["conversations"].values()
+        return sorted(convos, key=lambda c: c.get("updated_ms", 0), reverse=True)[:n]
+
+    # -- lessons ----------------------------------------------------------
+
+    def add_lesson(self, text: str, source: str) -> bool:
+        """Record a standing note. Returns False if it was empty or already known.
+
+        Lessons come from three places: the agent writing one after a trade, someone
+        giving it advice in a thread, and the owner's instructions file. Only the last
+        is authoritative, so the source travels with the text and the prompt says so.
+        """
+        text = " ".join(text.split())[:280]
+        if len(text) < 8:
+            return False
+        lessons = self.state["lessons"]
+        if any(existing["text"].lower() == text.lower() for existing in lessons):
+            return False
+
+        lessons.append({"text": text, "source": source, "ts": int(time.time() * 1000)})
+        if len(lessons) > self.cfg.max_lessons:
+            # Owner instructions outlast everything else; otherwise oldest goes first.
+            expendable = [i for i, le in enumerate(lessons) if le["source"] != "owner"]
+            lessons.pop(expendable[0] if expendable else 0)
+        self.state["lessons"] = lessons
+        self.save()
+        log.info("New lesson from %s: %s", source, text[:120])
+        return True
+
+    def lessons_block(self) -> str:
+        lessons = self.state["lessons"]
+        if not lessons:
+            return "(nothing yet)"
+        return "\n".join(f"- [{le['source']}] {le['text']}" for le in lessons)
 
     # -- order tracking ---------------------------------------------------
 
