@@ -58,6 +58,8 @@ class Memory:
             "last_scan_ms": 0,
             "last_managram_ms": 0,
             "my_comments": [],         # [{id, contract_id, ts}], newest last
+            "commented_markets": [],   # markets we have already introduced ourselves on
+            "answered_issues": [],
             "replied_to": [],
             "tracked_orders": {},      # bet_id -> {contract_id, question, outcome, amount}
             "events_since_compress": 0,
@@ -150,6 +152,25 @@ class Memory:
 
     def recent_comments(self, n: int) -> list[dict[str, Any]]:
         return self.state["my_comments"][-n:]
+
+    def has_commented_on(self, market_id: str) -> bool:
+        return market_id in self.state["commented_markets"]
+
+    def mark_commented_on(self, market_id: str) -> None:
+        markets = self.state["commented_markets"]
+        if market_id not in markets:
+            markets.append(market_id)
+            self.state["commented_markets"] = markets[-500:]
+            self.save()
+
+    def has_answered_issue(self, number: int) -> bool:
+        return number in self.state["answered_issues"]
+
+    def mark_issue_answered(self, number: int) -> None:
+        issues = self.state["answered_issues"]
+        issues.append(number)
+        self.state["answered_issues"] = issues[-200:]
+        self.save()
 
     def has_replied(self, comment_id: str) -> bool:
         return comment_id in self.state["replied_to"]

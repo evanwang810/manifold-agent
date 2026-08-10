@@ -74,9 +74,13 @@ class WatchConfig:
 
 @dataclass
 class SocialConfig:
+    # Posting a comment costs M$1, so the agent only introduces itself on a position
+    # big enough to be worth the fee, and only once per market.
     comment_decisions: bool = True
+    comment_min_amount: float = 50
     reply_to_comments: bool = True
     reply_to_managrams: bool = False
+    answer_github_issues: bool = True
     max_replies_per_tick: int = 2
     watch_last_n_comments: int = 10
 

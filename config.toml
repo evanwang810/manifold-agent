@@ -53,11 +53,17 @@ time_decay_days = 14
 move_threshold = 0.08         # pp move on a held market that forces a re-evaluation
 
 [social]
-comment_decisions = true      # explain every buy and sell in a market comment
+# Posting costs M$1, so the bot introduces itself only on a position big enough that the
+# fee is noise, and only once per market. It still answers replies to that comment for
+# free, forever, and stays quiet on every later trade in the same market.
+comment_decisions = true
+comment_min_amount = 50
 reply_to_comments = true
 # Off by default: a managram is the only way to answer a managram, and the API minimum
 # is M$10 per send, so every reply costs real bankroll.
 reply_to_managrams = false
+# Questions asked through the website arrive as labelled GitHub issues.
+answer_github_issues = true
 max_replies_per_tick = 2
 watch_last_n_comments = 10    # how far back to look for replies to the bot
 

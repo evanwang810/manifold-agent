@@ -127,9 +127,10 @@ class Brain:
         if not sizing.is_trade:
             self.memory.log_event(
                 "no_trade",
-                market=market.slug, question=market.question,
+                market=market.slug, question=market.question, url=market.url,
                 market_prob=market.probability, model_prob=decision.probability,
                 confidence=decision.confidence, reason=sizing.reason,
+                thinking=decision.comment, uncertainty=decision.key_uncertainty,
             )
             return Evaluation(market, decision, sizing, False, sizing.reason)
 
@@ -241,15 +242,15 @@ class Brain:
 
         self.memory.log_event(
             "bet",
-            market=market.slug, question=market.question, outcome=sizing.outcome,
-            amount=sizing.amount, limit_prob=sizing.limit_prob,
+            market=market.slug, question=market.question, url=market.url,
+            outcome=sizing.outcome, amount=sizing.amount, limit_prob=sizing.limit_prob,
             market_prob=market.probability, model_prob=decision.probability,
             confidence=decision.confidence, conviction=sizing.conviction,
             reason=sizing.reason, bet_id=bet_id, dry_run=self.cfg.manifold.dry_run,
+            thinking=decision.comment, uncertainty=decision.key_uncertainty,
         )
 
-        if self.cfg.social.comment_decisions:
-            await self._comment(market, decision, sizing)
+        await self._maybe_comment(market, decision, sizing)
         return Evaluation(market, decision, sizing, True, "placed")
 
     async def _sell(
@@ -268,29 +269,38 @@ class Brain:
 
         self.memory.log_event(
             "sell",
-            market=market.slug, question=market.question, side=position.side,
-            profit=position.profit, model_prob=decision.probability,
-            market_prob=market.probability, dry_run=self.cfg.manifold.dry_run,
+            market=market.slug, question=market.question, url=market.url,
+            side=position.side, profit=position.profit,
+            model_prob=decision.probability, market_prob=market.probability,
+            thinking=decision.comment, dry_run=self.cfg.manifold.dry_run,
         )
-        if self.cfg.social.comment_decisions:
-            await self._comment(market, decision, None)
         return Evaluation(market, decision, None, True, "sold")
 
-    async def _comment(
-        self, market: Market, decision: Decision, sizing: Sizing | None
+    async def _maybe_comment(
+        self, market: Market, decision: Decision, sizing: Sizing
     ) -> None:
-        """Every trade gets a public explanation. This is the point of the project."""
-        if sizing is None:
-            header = "Closed my position."
-        else:
-            kind = "limit order" if sizing.limit_prob is not None else "bought"
-            header = f"{kind.capitalize()} M${sizing.amount:.0f} {sizing.outcome}."
+        """Explain a position publicly, at most once per market.
 
+        Comments cost M$1 each, so this is reserved for positions large enough that
+        the fee is noise. Subsequent trades on the same market stay silent: the
+        original comment thread is still there, and the agent still answers replies
+        to it for free.
+        """
+        cfg = self.cfg.social
+        if not cfg.comment_decisions:
+            return
+        if sizing.amount < cfg.comment_min_amount:
+            return
+        if self.memory.has_commented_on(market.id):
+            return
+
+        kind = "Limit order" if sizing.limit_prob is not None else "Bought"
         for_side = "; ".join(decision.evidence_for[:3]) or "nothing specific"
         against = "; ".join(decision.evidence_against[:3]) or "nothing specific"
         body = (
-            f"**{header}** My estimate: **{decision.probability:.0%}** vs market "
-            f"{market.probability:.0%}, confidence {decision.confidence}.\n\n"
+            f"**{kind} M${sizing.amount:.0f} {sizing.outcome}.** My estimate: "
+            f"**{decision.probability:.0%}** vs market {market.probability:.0%}, "
+            f"confidence {decision.confidence}.\n\n"
             f"{decision.comment.strip()[:600]}\n\n"
             f"For: {for_side[:400]}\n\n"
             f"Against: {against[:400]}\n\n"
@@ -302,6 +312,7 @@ class Brain:
         except ManifoldError as exc:
             log.warning("Comment failed on %s: %s", market.slug, exc)
             return
+        self.memory.mark_commented_on(market.id)
         comment_id = (result or {}).get("id")
         if comment_id:
             self.memory.remember_comment(comment_id, market.id)

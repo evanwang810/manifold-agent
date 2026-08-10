@@ -1,11 +1,13 @@
 name: tick
 
+# GitHub's scheduler is best effort and drops high-frequency crons under load. A */5
+# schedule realistically fires every one to two hours, which is useless for reacting to
+# a market. So the cron fires hourly (short schedules are the first to be dropped) and
+# the job itself loops for most of an hour, ticking on a real interval. Wall time is
+# free on public repositories.
 on:
   schedule:
-    # Every 5 minutes. GitHub treats scheduled runs as best effort and will skip or
-    # delay them under load, so the real cadence is closer to 5-15 minutes. That is
-    # fine: every tick is independent and reads its state fresh.
-    - cron: "*/5 * * * *"
+    - cron: "7 * * * *"
   workflow_dispatch:
     inputs:
       instruction:
@@ -17,28 +19,28 @@ on:
         required: false
         type: boolean
         default: false
+      minutes:
+        description: "How long to keep ticking"
+        required: false
+        default: "50"
 
-# Never let two ticks run at once. They would both write the state branch.
 concurrency:
-  group: manifold-agent-tick
+  group: manifold-agent
   cancel-in-progress: false
 
 permissions:
   contents: write
+  issues: write
 
 jobs:
   tick:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 65
+    env:
+      TICK_INTERVAL_SECONDS: 300
+      SESSION_MINUTES: ${{ inputs.minutes || '50' }}
     steps:
-      - name: Check out code
-        uses: actions/checkout@v4
-
-      - name: Check out state branch
-        uses: actions/checkout@v4
-        with:
-          ref: state
-          path: state
+      - uses: actions/checkout@v4
 
       - uses: actions/setup-python@v5
         with:
@@ -46,8 +48,8 @@ jobs:
 
       - run: pip install --quiet -e .
 
-      # Without this the schedule would fail every 5 minutes until the secrets exist,
-      # which is a lot of email for something that is just not set up yet.
+      # Without this the schedule would fail on every fork that has not been set up
+      # yet, which is a lot of email for something that is simply not configured.
       - name: Check secrets
         id: guard
         env:
@@ -56,29 +58,60 @@ jobs:
         run: |
           if [ -z "$MANIFOLD_API_KEY" ] || [ -z "$LLM_API_KEY" ]; then
             echo "ready=false" >> "$GITHUB_OUTPUT"
-            echo "Secrets not configured yet, skipping tick." >> "$GITHUB_STEP_SUMMARY"
+            {
+              echo "### Not configured yet"
+              echo ""
+              echo "Add \`MANIFOLD_API_KEY\` and \`LLM_API_KEY\` under"
+              echo "Settings → Secrets and variables → Actions, and this starts running."
+            } >> "$GITHUB_STEP_SUMMARY"
           else
             echo "ready=true" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Run one tick
+      # The state branch holds the agent's memory. Created on first run so a fork needs
+      # no manual git surgery.
+      - name: Fetch state
+        if: steps.guard.outputs.ready == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          REMOTE="https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          if ! git clone --quiet --depth 1 --branch state "$REMOTE" state 2>/dev/null; then
+            echo "state branch does not exist yet, creating it"
+            mkdir -p state
+            git -C state init --quiet --initial-branch=state
+            git -C state remote add origin "$REMOTE"
+          fi
+          git -C state config user.name "manifold-agent"
+          git -C state config user.email "manifold-agent@users.noreply.github.com"
+
+      - name: Tick
         if: steps.guard.outputs.ready == 'true'
         env:
           MANIFOLD_API_KEY: ${{ secrets.MANIFOLD_API_KEY }}
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OWNER_INSTRUCTION: ${{ inputs.instruction }}
-        run: python run.py ${{ inputs.live && '--live' || '' }}
-
-      - name: Persist state
-        if: always() && steps.guard.outputs.ready == 'true'
-        working-directory: state
+          LIVE_FLAG: ${{ inputs.live && '--live' || '' }}
         run: |
-          git config user.name "manifold-agent"
-          git config user.email "manifold-agent@users.noreply.github.com"
-          git add -A
-          if git diff --staged --quiet; then
-            echo "no state changes"
-            exit 0
-          fi
-          git commit -m "state: $(date -u +%FT%TZ)"
-          git push origin HEAD:state
+          END=$(( $(date +%s) + SESSION_MINUTES * 60 ))
+          N=0
+          while :; do
+            N=$((N + 1))
+            echo "::group::tick $N"
+            python run.py $LIVE_FLAG || echo "tick $N failed, continuing"
+            echo "::endgroup::"
+
+            cd state
+            git add -A
+            if ! git diff --staged --quiet; then
+              git commit --quiet -m "state: $(date -u +%FT%TZ)"
+              git pull --rebase --quiet origin state 2>/dev/null || true
+              git push --quiet origin HEAD:state
+            fi
+            cd ..
+
+            [ "$(date +%s)" -ge "$END" ] && break
+            sleep "$TICK_INTERVAL_SECONDS"
+          done
+          echo "completed $N ticks" >> "$GITHUB_STEP_SUMMARY"

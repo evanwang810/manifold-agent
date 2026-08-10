@@ -12,6 +12,7 @@ things that already happened before going looking for new ones.
 
 from __future__ import annotations
 
+import json
 import logging
 import time
 from dataclasses import dataclass, field
@@ -19,6 +20,7 @@ from typing import Any
 
 from .brain import Brain, CallBudget
 from .config import Config
+from .inbox import Inbox
 from .llm import build_llm
 from .manifold import ManifoldClient, ManifoldError
 from .memory import Memory
@@ -106,13 +108,83 @@ class Runner:
         await self._check_fills()
         await self._check_moves(positions)
         self.report.replies = await self.social.run()
+        self.report.replies += await Inbox(
+            self.cfg, llm=self.llm, memory=self.memory, budget=self.budget,
+            portfolio_line=(
+                f"balance M${self.report.balance:,.0f}, net worth "
+                f"M${self.report.net_worth:,.0f}, {len(positions)} open positions"
+            ),
+        ).run()
         await self._scan()
 
         if not self.budget.spent:
             await self.memory.maybe_compress()
 
         self.report.llm_calls = self.budget.used
+        await self._write_snapshot()
         return self.report
+
+    async def _write_snapshot(self) -> None:
+        """Dump a public view of the agent for the showcase site to fetch.
+
+        The site is static and reads this straight off the state branch, so everything
+        it needs has to be in one file. Keep it small: it is fetched on every page load.
+        """
+        try:
+            positions = await self.client.positions(self.user_id)
+        except ManifoldError:
+            positions = []
+
+        kinds = ("bet", "no_trade", "sell")
+        recent = [e for e in self.memory.recent_events(300) if e.get("kind") in kinds]
+
+        snapshot = {
+            "generated_ms": int(time.time() * 1000),
+            "username": self.report.username,
+            "profile_url": f"https://manifold.markets/{self.report.username}",
+            "dry_run": self.cfg.manifold.dry_run,
+            "balance": round(self.report.balance, 2),
+            "net_worth": round(self.report.net_worth, 2),
+            "summary": self.memory.state.get("summary", ""),
+            "positions": sorted(
+                (
+                    {
+                        "question": p.question,
+                        "url": f"https://manifold.markets/{self.report.username}/{p.slug}"
+                        if p.slug else "",
+                        "side": p.side,
+                        "shares": round(p.shares, 1),
+                        "invested": round(p.invested, 1),
+                        "profit": round(p.profit, 1),
+                        "prob": round(p.last_prob, 3),
+                        "days_to_close": None
+                        if p.days_to_close == float("inf")
+                        else round(p.days_to_close, 1),
+                    }
+                    for p in positions
+                ),
+                key=lambda row: -abs(row["invested"]),
+            )[:20],
+            "decisions": [
+                {
+                    "ts": e.get("ts"),
+                    "kind": e.get("kind"),
+                    "question": e.get("question"),
+                    "url": e.get("url"),
+                    "market_prob": e.get("market_prob"),
+                    "model_prob": e.get("model_prob"),
+                    "confidence": e.get("confidence"),
+                    "amount": e.get("amount"),
+                    "outcome": e.get("outcome"),
+                    "thinking": (e.get("thinking") or "")[:700],
+                    "uncertainty": (e.get("uncertainty") or "")[:300],
+                    "reason": e.get("reason"),
+                }
+                for e in recent[-15:][::-1]
+            ],
+        }
+        path = self.cfg.state_dir / "public.json"
+        path.write_text(json.dumps(snapshot, indent=2, default=str), encoding="utf-8")
 
     # -- stages -----------------------------------------------------------
 
