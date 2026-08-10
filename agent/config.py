@@ -25,6 +25,9 @@ class ManifoldConfig:
 class LLMConfig:
     provider: str = "gemini"
     model: str = "gemini-3.6-flash"
+    # Grounded search has a separate, much smaller free quota than plain generation.
+    # Turning it off keeps the agent running on the comment thread and the price alone.
+    use_search: bool = True
     temperature: float = 0.3
     timeout_seconds: int = 90
     base_url: str = ""

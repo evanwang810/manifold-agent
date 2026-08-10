@@ -83,6 +83,10 @@ def extract_json(text: str) -> dict[str, Any]:
     raise ValueError(f"No JSON object in model output: {text[:300]}")
 
 
+class PermanentLLMError(RuntimeError):
+    """A bad key, a blocked project, a model that does not exist. Retrying will not help."""
+
+
 class LLMClient:
     """Base class. Subclasses implement `_call`."""
 
@@ -111,6 +115,8 @@ class LLMClient:
                 return await self._call(
                     prompt, system=system, json_schema=json_schema, grounded=grounded
                 )
+            except PermanentLLMError:
+                raise  # a blocked project will still be blocked in six seconds
             except (httpx.HTTPError, RuntimeError) as exc:
                 last = exc
                 if attempt < attempts - 1:
@@ -142,8 +148,13 @@ class LLMClient:
 
 
 class GeminiClient(LLMClient):
-    supports_search = True
     BASE = "https://generativelanguage.googleapis.com/v1beta"
+
+    def __init__(self, cfg: LLMConfig) -> None:
+        super().__init__(cfg)
+        # Search grounding has its own, much smaller free quota than plain generation,
+        # so it can be turned off without changing provider.
+        self.supports_search = cfg.use_search
 
     async def _call(
         self,
@@ -174,6 +185,8 @@ class GeminiClient(LLMClient):
             headers={"x-goog-api-key": self.cfg.api_key},
             json=body,
         )
+        if resp.status_code in (400, 401, 403, 404):
+            raise PermanentLLMError(f"Gemini {resp.status_code}: {resp.text[:400]}")
         if resp.status_code >= 400:
             raise RuntimeError(f"Gemini {resp.status_code}: {resp.text[:400]}")
         data = resp.json()
@@ -194,6 +207,22 @@ class GeminiClient(LLMClient):
                 citations.append(f"{web.get('title', 'source')} <{uri}>")
 
         return LLMResponse(text=text, citations=citations, raw=data)
+
+    async def list_models(self) -> list[str]:
+        """Model ids this key can actually call. The fastest way to tell a typo'd
+        model name apart from a quota problem apart from a blocked project."""
+        resp = await self._client.get(
+            f"{self.BASE}/models",
+            headers={"x-goog-api-key": self.cfg.api_key},
+            params={"pageSize": 200},
+        )
+        if resp.status_code >= 400:
+            raise PermanentLLMError(f"Gemini {resp.status_code}: {resp.text[:300]}")
+        return [
+            m["name"].removeprefix("models/")
+            for m in resp.json().get("models", [])
+            if "generateContent" in (m.get("supportedGenerationMethods") or [])
+        ]
 
 
 class OpenAICompatibleClient(LLMClient):
@@ -233,6 +262,8 @@ class OpenAICompatibleClient(LLMClient):
             headers={"Authorization": f"Bearer {self.cfg.api_key}"},
             json=body,
         )
+        if resp.status_code in (400, 401, 403, 404):
+            raise PermanentLLMError(f"LLM {resp.status_code}: {resp.text[:400]}")
         if resp.status_code >= 400:
             raise RuntimeError(f"LLM {resp.status_code}: {resp.text[:400]}")
         data = resp.json()

@@ -12,6 +12,9 @@ owner_username = ""
 [llm]
 provider = "gemini"           # gemini | mistral | openai_compatible
 model = "gemini-3.6-flash"
+# Grounded search has its own, much smaller free quota than plain generation. Set false
+# to keep trading on the comment thread and price alone when that quota runs out.
+use_search = true
 temperature = 0.3
 timeout_seconds = 90
 # Only for provider = "openai_compatible" (Groq, Cerebras, OpenRouter, and friends).
