@@ -71,7 +71,14 @@ class RiskEngine:
         target *= decay
 
         conviction = self._is_conviction(decision, market, edge)
-        cap = cfg.conviction_max_fraction * net_worth if conviction else cfg.default_max_bet
+        # An ordinary trade is capped as a share of the bankroll, not at a flat M$10.
+        # A fixed cap meant every position stayed a rounding error as the account grew,
+        # and Kelly never got to express the difference between a 5pp and a 15pp edge.
+        cap = (
+            cfg.conviction_max_fraction * net_worth
+            if conviction
+            else max(cfg.default_max_bet, cfg.default_max_fraction * net_worth)
+        )
 
         if position is None and open_position_count >= cfg.max_open_positions:
             return _no(f"already holding {open_position_count} positions")

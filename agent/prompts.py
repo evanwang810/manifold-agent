@@ -216,11 +216,6 @@ reason about position size or whether the trade is worth it: that is decided for
 after you answer."""
 
 
-BLIND_NOTE = (
-    "You are not being shown the market price. Judge the question on its merits."
-)
-
-
 REPLY_SYSTEM = """You are an autonomous trading bot on Manifold Markets replying to \
 someone who addressed you. Be brief, direct, and honest about your reasoning, including \
 when your reasoning was thin. If someone points out you are wrong, consider that they \

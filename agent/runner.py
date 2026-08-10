@@ -259,12 +259,13 @@ class Runner:
     async def _check_moves(self, positions: list[Any]) -> None:
         if not positions:
             return
-        probs = await self.client.market_probs([p.contract_id for p in positions])
+        # positions() already carries each contract's current probability, so there is
+        # no second price call to make here.
         baseline = self.memory.state.setdefault("watch_probs", {})
 
         moved = []
         for position in positions:
-            current = probs.get(position.contract_id, position.last_prob)
+            current = position.last_prob
             previous = baseline.get(position.contract_id)
             baseline[position.contract_id] = current
             if previous is None:

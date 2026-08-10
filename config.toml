@@ -49,21 +49,27 @@ skip_if_seen_within_hours = 48
 blind = true
 
 [risk]
+# Ordinary trades are capped as a share of net worth, floored at default_max_bet so a
+# small account can still do something. A flat M$10 cap made every position identical
+# regardless of how strong the edge was, which is dull and learns nothing.
 default_max_bet = 10
+default_max_fraction = 0.10
 # A 4-point disagreement is a real, if weak, opinion and deserves a small position.
 # Kelly already scales the stake with the edge, so a marginal call gets marginal money
 # rather than nothing. Lower means more trades and a much faster calibration record.
 min_edge = 0.04
-min_bet = 5                   # floor, so a thin edge is still a real position
-kelly_fraction = 0.25         # raise toward 0.7 if you want the conviction cap to bind
+min_bet = 8                   # floor, so a thin edge is still a real position
+kelly_fraction = 0.4          # raise toward 0.7 if you want the conviction cap to bind
 
+# All four gates have to pass at once for a big position. At the original settings
+# (M$10k volume, 7 days, 18pp edge, high confidence) nothing ever cleared them.
 conviction_max_fraction = 0.35
-conviction_min_volume = 10000
-conviction_max_days = 7
-conviction_min_edge = 0.18
-conviction_min_confidence = "high"
+conviction_min_volume = 5000
+conviction_max_days = 14
+conviction_min_edge = 0.12
+conviction_min_confidence = "medium"
 
-max_market_impact = 0.03      # never move the price more than 3pp with one order
+max_market_impact = 0.05      # never move the price more than 5pp with one order
 max_share_of_volume = 0.05
 max_open_positions = 40
 daily_mana_budget = 500

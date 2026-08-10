@@ -53,17 +53,18 @@ class ScanConfig:
 @dataclass
 class RiskConfig:
     default_max_bet: float = 10
+    default_max_fraction: float = 0.10
     min_edge: float = 0.04
-    min_bet: float = 5
-    kelly_fraction: float = 0.25
+    min_bet: float = 8
+    kelly_fraction: float = 0.4
 
     conviction_max_fraction: float = 0.35
-    conviction_min_volume: float = 10000
-    conviction_max_days: float = 7
-    conviction_min_edge: float = 0.18
-    conviction_min_confidence: str = "high"
+    conviction_min_volume: float = 5000
+    conviction_max_days: float = 14
+    conviction_min_edge: float = 0.12
+    conviction_min_confidence: str = "medium"
 
-    max_market_impact: float = 0.03
+    max_market_impact: float = 0.05
     max_share_of_volume: float = 0.05
     max_open_positions: int = 40
     daily_mana_budget: float = 500

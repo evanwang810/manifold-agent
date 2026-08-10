@@ -122,19 +122,6 @@ class ManifoldClient:
     async def market(self, market_id: str) -> Market:
         return Market.parse(await self._request("GET", f"/market/{market_id}"))
 
-    async def market_probs(self, ids: list[str]) -> dict[str, float]:
-        """Cheap bulk probability read, up to 100 ids per call."""
-        out: dict[str, float] = {}
-        for i in range(0, len(ids), 100):
-            chunk = ids[i : i + 100]
-            data = await self._request("GET", "/market-probs", params={"ids": ",".join(chunk)})
-            if isinstance(data, dict):
-                for key, value in data.items():
-                    prob = value.get("prob") if isinstance(value, dict) else value
-                    if prob is not None:
-                        out[key] = float(prob)
-        return out
-
     async def comments(self, contract_id: str, limit: int = 200) -> list[Comment]:
         data = await self._request(
             "GET", "/comments", params={"contractId": contract_id, "limit": limit}
