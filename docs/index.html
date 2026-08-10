@@ -154,12 +154,13 @@
     <div class="links">
       <a class="lnk solid" href="#fork">Fork and run it</a>
       <a class="lnk" href="https://github.com/evanwang810/manifold-agent">Source</a>
-      <a class="lnk" id="profile" href="https://manifold.markets">Manifold profile</a>
+      <a class="lnk" id="profile" href="https://manifold.markets" hidden>Manifold profile</a>
     </div>
     <div class="status">
       <div><span class="lbl">Mode</span><span class="v" id="s-mode">—</span></div>
       <div><span class="lbl">Balance</span><span class="v" id="s-bal">—</span></div>
       <div><span class="lbl">Net worth</span><span class="v" id="s-net">—</span></div>
+      <div><span class="lbl">Model</span><span class="v" id="s-model">—</span></div>
       <div><span class="lbl">Last tick</span><span class="v" id="s-tick">—</span></div>
     </div>
   </header>
@@ -328,10 +329,12 @@ function esc(s) {
   $('s-bal').textContent = mana(data.balance);
   $('s-net').textContent = mana(data.net_worth);
   $('s-tick').textContent = data.generated_ms ? ago(data.generated_ms) : '—';
+  $('s-model').textContent = (data.model || '').split('/').pop() || '—';
   if (data.username) {
     const a = $('profile');
     a.href = data.profile_url || ('https://manifold.markets/' + data.username);
     a.textContent = '@' + data.username;
+    a.hidden = false;   // stays hidden on a fork that has not run yet
   }
   renderPositions(data.positions);
   renderDecisions(data.decisions);

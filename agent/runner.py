@@ -35,6 +35,7 @@ log = logging.getLogger(__name__)
 @dataclass
 class TickReport:
     username: str = ""
+    model: str = ""
     balance: float = 0.0
     net_worth: float = 0.0
     positions: int = 0
@@ -46,7 +47,8 @@ class TickReport:
 
     def render(self) -> str:
         lines = [
-            f"@{self.username}  balance M${self.balance:,.0f}  "
+            f"@{self.username}  via {self.model}",
+            f"balance M${self.balance:,.0f}  "
             f"net worth M${self.net_worth:,.0f}  positions {self.positions}",
             f"evaluated {len(self.evaluated)}  bets {self.bets}  "
             f"replies {self.replies}  llm calls {self.llm_calls}",
@@ -92,6 +94,7 @@ class Runner:
         portfolio = await self.client.portfolio(self.user_id)
         positions = await self.client.positions(self.user_id)
         self.report.username = username
+        self.report.model = f"{self.cfg.llm.provider}/{self.cfg.llm.model}"
         self.report.balance = float(portfolio.get("balance") or 0.0)
         self.report.net_worth = (
             self.report.balance
@@ -142,6 +145,7 @@ class Runner:
             "generated_ms": int(time.time() * 1000),
             "username": self.report.username,
             "profile_url": f"https://manifold.markets/{self.report.username}",
+            "model": self.report.model,
             "dry_run": self.cfg.manifold.dry_run,
             "balance": round(self.report.balance, 2),
             "net_worth": round(self.report.net_worth, 2),
@@ -266,7 +270,10 @@ class Runner:
         self.memory.save()
 
         # Biggest mover first, since the tick may only afford one evaluation.
+        cooldown_hours = self.cfg.watch.reevaluate_cooldown_minutes / 60
         for _, move, previous, current, position in sorted(moved, key=lambda m: -m[0]):
+            if self.memory.seen_within(position.contract_id, cooldown_hours):
+                continue
             if not self._can_evaluate:
                 self.report.notes.append(
                     f"{position.slug} moved {move:+.0%} but the tick was out of budget"

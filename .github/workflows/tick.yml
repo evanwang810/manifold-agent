@@ -37,7 +37,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 65
     env:
-      TICK_INTERVAL_SECONDS: 300
+      # A tick with nothing to react to costs zero LLM calls: it is a handful of
+      # Manifold reads, and 8 requests a minute against a 500/minute limit is nothing.
+      # The expensive work is gated separately, by max_evaluations_per_tick and by
+      # min_minutes_between_scans, so checking every minute buys reactivity for free.
+      TICK_INTERVAL_SECONDS: 60
       SESSION_MINUTES: ${{ inputs.minutes || '50' }}
     steps:
       - uses: actions/checkout@v4

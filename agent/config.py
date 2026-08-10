@@ -70,6 +70,9 @@ class RiskConfig:
 @dataclass
 class WatchConfig:
     move_threshold: float = 0.08
+    # Ticks run every minute, so a market in freefall would otherwise burn an
+    # evaluation every tick on the way down.
+    reevaluate_cooldown_minutes: float = 45
 
 
 @dataclass

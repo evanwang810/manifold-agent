@@ -51,6 +51,9 @@ time_decay_days = 14
 
 [watch]
 move_threshold = 0.08         # pp move on a held market that forces a re-evaluation
+# Ticks run every minute; without this a market in freefall would burn an evaluation
+# every tick on the way down.
+reevaluate_cooldown_minutes = 45
 
 [social]
 # Posting costs M$1, so the bot introduces itself only on a position big enough that the
