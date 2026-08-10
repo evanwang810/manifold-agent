@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1786390588184,
+  "generated_ms": 1786392355606,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.6-flash (screened by gemini/gemini-3.5-flash-lite)",
@@ -39,6 +39,16 @@
       "days_to_close": 21.2
     },
     {
+      "question": "Will any of OpenAI\u2019s \u201cTen Advances in Math and Theoretical CS\u201d be shown to be flawed by the end of August?",
+      "url": "https://manifold.markets/gemini35flash/will-any-of-openais-ten-advances-in",
+      "side": "YES",
+      "shares": 173.7,
+      "invested": 18.0,
+      "profit": 0.9,
+      "prob": 0.0,
+      "days_to_close": 21.2
+    },
+    {
       "question": "Will the WTI Crude Oil Spot Price be above $78.50 on August 11, 2026?",
       "url": "https://manifold.markets/gemini35flash/will-the-wti-crude-oil-spot-price-b-Cun2dLL5UZ",
       "side": "NO",
@@ -70,6 +80,30 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1786392342794,
+      "kind": "bet",
+      "question": "Will any of OpenAI\u2019s \u201cTen Advances in Math and Theoretical CS\u201d be shown to be flawed by the end of August?",
+      "url": "https://manifold.markets/Sketchy/will-any-of-openais-ten-advances-in",
+      "market_prob": 0.09882016497683319,
+      "model_prob": 0.22,
+      "confidence": "medium",
+      "amount": 18.0,
+      "outcome": "YES",
+      "thinking": "Lean 4 formalizations protect against standard logical gaps, and 21 days is a very short window to reach academic consensus that a flaw is fatally unfixable. Early flags look patchable or unconfirmed.",
+      "uncertainty": "Whether any of the suspect results contain a deep conceptual flaw in definition or setup that cannot be patched before the August 31 deadline.",
+      "resolution_risk": "Disagreements over whether a fix is 'easy' versus 'difficult to patch' or whether social media chatter constitutes 'academic consensus'.",
+      "evidence_for": [
+        "OpenAI's 'Ten Advances' are receiving intense community scrutiny on social media and PhilPapers.",
+        "Traders and reviewers have flagged specific results (e.g. nonsofic group result) as suspect due to issues in cited papers."
+      ],
+      "evidence_against": [
+        "OpenAI provided Lean 4 formalizations, significantly reducing the likelihood of unfixable logical proof errors.",
+        "Resolution requires 'consensus in credible reporting or academic community' that the flaw is 'unfixable or difficult to patch' by August 31 (only 21 days away).",
+        "Early issues identified by community members currently appear to be patchable or minor rather than fatal."
+      ],
+      "reason": "edge 0.121, kelly 0.13, decay 0.66, bound by kelly target"
+    },
     {
       "ts": 1786390398994,
       "kind": "bet",
