@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import asyncio
 import logging
+import os
 import sys
 from pathlib import Path
 
@@ -37,7 +38,16 @@ async def amain(args: argparse.Namespace) -> int:
         log.info("tick %s  mode=%s", utc_stamp(),
                  "DRY RUN" if cfg.manifold.dry_run else "LIVE")
         report = await runner.tick()
-        print("\n" + report.render())
+        rendered = report.render()
+        print("\n" + rendered)
+
+        # In CI this shows up as the run's summary page, which is the closest thing
+        # to a dashboard now that there is no server.
+        summary = os.environ.get("GITHUB_STEP_SUMMARY")
+        if summary:
+            mode = "dry run" if cfg.manifold.dry_run else "live"
+            with open(summary, "a", encoding="utf-8") as fh:
+                fh.write(f"### tick {utc_stamp()} ({mode})\n\n```\n{rendered}\n```\n")
         return 0
     finally:
         await runner.aclose()
