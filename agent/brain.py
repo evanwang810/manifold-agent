@@ -19,6 +19,7 @@ from .prompts import (
     build_research_prompt,
     system_with_orders,
 )
+from . import websearch
 from .sizing import RiskEngine
 
 log = logging.getLogger(__name__)
@@ -131,6 +132,9 @@ class Brain:
                 market_prob=market.probability, model_prob=decision.probability,
                 confidence=decision.confidence, reason=sizing.reason,
                 thinking=decision.comment, uncertainty=decision.key_uncertainty,
+                evidence_for=decision.evidence_for[:4],
+                evidence_against=decision.evidence_against[:4],
+                resolution_risk=decision.resolution_risk,
             )
             return Evaluation(market, decision, sizing, False, sizing.reason)
 
@@ -139,17 +143,31 @@ class Brain:
     # -- steps ------------------------------------------------------------
 
     async def _research(self, market: Market) -> str:
-        if not self.llm.supports_search or not self.budget.take():
+        """Grounded generation where the provider supports it, keyless search otherwise.
+
+        Either way this costs exactly one LLM call, so the budget maths does not change
+        when you switch providers.
+        """
+        if not self.cfg.llm.use_search or not self.budget.take():
             return NO_RESEARCH
+
+        prompt = build_research_prompt(
+            question=market.question, description=market.description, today=_today()
+        )
+        grounded = self.llm.supports_search
+
+        if not grounded:
+            snippets = await websearch.search(market.question, self.cfg.llm.search_results)
+            if not snippets:
+                return NO_RESEARCH
+            prompt += (
+                "\n\nSearch results follow. Use only these, and say so if they do not "
+                f"actually address the question.\n\n{snippets}"
+            )
+
         try:
             response = await self.llm.generate(
-                build_research_prompt(
-                    question=market.question,
-                    description=market.description,
-                    today=_today(),
-                ),
-                system=RESEARCH_SYSTEM,
-                grounded=True,
+                prompt, system=RESEARCH_SYSTEM, grounded=grounded
             )
         except Exception as exc:  # noqa: BLE001 - research is best effort
             log.warning("Research failed on %s: %s", market.slug, exc)
@@ -248,6 +266,9 @@ class Brain:
             confidence=decision.confidence, conviction=sizing.conviction,
             reason=sizing.reason, bet_id=bet_id, dry_run=self.cfg.manifold.dry_run,
             thinking=decision.comment, uncertainty=decision.key_uncertainty,
+            evidence_for=decision.evidence_for[:4],
+            evidence_against=decision.evidence_against[:4],
+            resolution_risk=decision.resolution_risk,
         )
 
         await self._maybe_comment(market, decision, sizing)

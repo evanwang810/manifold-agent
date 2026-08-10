@@ -180,8 +180,11 @@ class Runner:
                     "confidence": e.get("confidence"),
                     "amount": e.get("amount"),
                     "outcome": e.get("outcome"),
-                    "thinking": (e.get("thinking") or "")[:700],
+                    "thinking": (e.get("thinking") or "")[:900],
                     "uncertainty": (e.get("uncertainty") or "")[:300],
+                    "resolution_risk": (e.get("resolution_risk") or "")[:300],
+                    "evidence_for": (e.get("evidence_for") or [])[:4],
+                    "evidence_against": (e.get("evidence_against") or [])[:4],
                     "reason": e.get("reason"),
                 }
                 for e in recent[-15:][::-1]

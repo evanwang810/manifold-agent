@@ -27,6 +27,7 @@ class LLMConfig:
     # Grounded search has a separate, much smaller free quota than plain generation.
     # Turning it off keeps the agent running on the comment thread and the price alone.
     use_search: bool = True
+    search_results: int = 6
     temperature: float = 0.3
     timeout_seconds: int = 90
     base_url: str = ""
@@ -52,7 +53,8 @@ class ScanConfig:
 @dataclass
 class RiskConfig:
     default_max_bet: float = 10
-    min_edge: float = 0.10
+    min_edge: float = 0.04
+    min_bet: float = 5
     kelly_fraction: float = 0.25
 
     conviction_max_fraction: float = 0.35

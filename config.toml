@@ -7,24 +7,35 @@
 dry_run = true
 
 [llm]
-provider = "gemini"           # gemini | mistral | openai_compatible
+# gemini | mistral | openai_compatible
+#
+# Gemini is only worth it if your Google project is actually allowed to make free
+# calls, which not every account gets. Run `python run.py --check` to find out before
+# committing to it. Mistral, Groq, Cerebras and OpenRouter all have free tiers that do
+# not ask for a card, and the research step falls back to keyless DuckDuckGo search on
+# any provider without native grounding.
+provider = "gemini"
 model = "gemini-3.6-flash"
-# Grounded search has its own, much smaller free quota than plain generation. Set false
-# to keep trading on the comment thread and price alone when that quota runs out.
-use_search = true
-temperature = 0.3
-timeout_seconds = 90
-# Only for provider = "openai_compatible" (Groq, Cerebras, OpenRouter, and friends).
+
+# For provider = "openai_compatible", for example:
+#   base_url = "https://api.groq.com/openai/v1"     model = "llama-3.3-70b-versatile"
+#   base_url = "https://api.cerebras.ai/v1"         model = "llama-3.3-70b"
 base_url = ""
 
+use_search = true             # false skips the research call entirely
+search_results = 6
+temperature = 0.3
+timeout_seconds = 90
+
 [budget]
-# A tick is cheap by design. These caps are what keep a 5-minute cron inside a
-# free API tier: 288 ticks a day adds up fast.
-max_evaluations_per_tick = 1
-max_llm_calls_per_tick = 4
+# Throughput is what finds edges. One evaluation an hour looked at six markets in a
+# whole day, which is nowhere near enough to find a mispricing. Raise these if your
+# provider's daily quota allows; each evaluation costs two calls.
+max_evaluations_per_tick = 2
+max_llm_calls_per_tick = 8
 
 [scan]
-min_minutes_between_scans = 60
+min_minutes_between_scans = 20
 min_unique_bettors = 25
 min_volume = 3000
 max_days_to_resolve = 30
@@ -33,7 +44,11 @@ skip_if_seen_within_hours = 48
 
 [risk]
 default_max_bet = 10
-min_edge = 0.10
+# A 4-point disagreement is a real, if weak, opinion and deserves a small position.
+# Kelly already scales the stake with the edge, so a marginal call gets marginal money
+# rather than nothing. Lower means more trades and a much faster calibration record.
+min_edge = 0.04
+min_bet = 5                   # floor, so a thin edge is still a real position
 kelly_fraction = 0.25         # raise toward 0.7 if you want the conviction cap to bind
 
 conviction_max_fraction = 0.35

@@ -90,7 +90,18 @@
   .gauge .span{position:absolute; top:0; height:3px; background:var(--accent); opacity:.45}
   .gmeta{display:flex; justify-content:space-between; font-family:var(--mono); font-size:11px; color:var(--muted); margin-bottom:12px}
   .think{font-size:14.5px; color:var(--muted); margin:0; max-width:none}
-  .verdict{font-family:var(--mono); font-size:11px; color:var(--faint); margin-top:10px}
+  .verdict{font-family:var(--mono); font-size:11px; color:var(--faint); margin-top:14px}
+  .evidence{display:grid; grid-template-columns:1fr 1fr; gap:0 24px; margin-top:14px}
+  @media(max-width:560px){.evidence{grid-template-columns:1fr; gap:14px}}
+  .evidence h4,.unknown b{
+    font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--faint); font-weight:400; margin:0 0 6px; display:block;
+  }
+  .evidence ul{margin:0; padding-left:16px}
+  .evidence li{font-size:13.5px; color:var(--muted); margin-bottom:5px}
+  .evidence .for li::marker{color:var(--accent)}
+  .evidence .against li::marker{color:var(--no)}
+  .unknown{font-size:13.5px; color:var(--muted); margin-top:14px}
 
   .empty{font-family:var(--mono); font-size:13px; color:var(--faint); padding:26px 0}
 
@@ -294,12 +305,29 @@ function renderDecisions(rows) {
     }
     const verdict = d.kind === 'bet'
       ? `Took M$${Math.round(d.amount)} ${d.outcome}`
-      : d.kind === 'sell' ? 'Closed the position' : 'No trade — ' + esc(d.reason || 'held');
+      : d.kind === 'sell' ? 'Closed the position' : 'No trade, ' + esc(d.reason || 'held');
+
+    const list = (items, cls, label) => (items && items.length)
+      ? `<div class="${cls}"><h4>${label}</h4><ul>${
+          items.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>`
+      : '';
+    const evidence = (d.evidence_for?.length || d.evidence_against?.length)
+      ? `<div class="evidence">${list(d.evidence_for, 'for', 'Evidence for')}${
+          list(d.evidence_against, 'against', 'Evidence against')}</div>`
+      : '';
+    const unknown = d.uncertainty
+      ? `<p class="unknown"><b>Biggest unknown</b>${esc(d.uncertainty)}</p>` : '';
+    const risk = d.resolution_risk
+      ? `<p class="unknown"><b>Resolution risk</b>${esc(d.resolution_risk)}</p>` : '';
+
     return `<div class="dec">
       ${d.url ? `<a class="dec-q" href="${d.url}">${esc(d.question)}</a>`
               : `<span class="dec-q">${esc(d.question)}</span>`}
       ${gauge}
       ${d.thinking ? `<p class="think">${esc(d.thinking)}</p>` : ''}
+      ${evidence}
+      ${unknown}
+      ${risk}
       <div class="verdict">${verdict}${d.ts ? ' · ' + ago(d.ts) : ''}</div>
     </div>`;
   }).join('');

@@ -3,7 +3,9 @@ name = "manifold-agent"
 version = "0.2.0"
 description = "Autonomous LLM trading agent for Manifold Markets"
 requires-python = ">=3.11"
-dependencies = ["httpx>=0.27"]
+# ddgs gives the research step a keyless web search on providers without native
+# grounding, which is most of the free ones.
+dependencies = ["httpx>=0.27", "ddgs>=9.0"]
 
 [build-system]
 requires = ["setuptools>=68"]

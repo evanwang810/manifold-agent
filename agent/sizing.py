@@ -43,19 +43,20 @@ class RiskEngine:
     ) -> Sizing:
         cfg = self.cfg
 
-        if decision.action not in ("buy_yes", "buy_no"):
-            return _no(f"action is {decision.action}")
         if not market.is_binary:
             return _no("not a cpmm binary market")
 
-        outcome = "YES" if decision.action == "buy_yes" else "NO"
         p = decision.probability
         q = market.probability
 
-        # Signed edge in our favor.
-        edge = (p - q) if outcome == "YES" else (q - p)
+        # The side follows from the forecast, not from the model's own trade call.
+        # Letting the model choose the action meant it answered "hold" on every small
+        # edge and the risk engine never got to weigh in. The model forecasts; this
+        # decides whether the forecast is worth a position and how big.
+        outcome = "YES" if p >= q else "NO"
+        edge = abs(p - q)
         if edge < cfg.min_edge:
-            return _no(f"edge {edge:+.3f} below minimum {cfg.min_edge}")
+            return _no(f"edge {edge:.3f} below minimum {cfg.min_edge}")
 
         # Kelly fraction of bankroll for a binary contract bought at the market price.
         price = q if outcome == "YES" else (1.0 - q)
@@ -72,25 +73,39 @@ class RiskEngine:
         conviction = self._is_conviction(decision, market, edge)
         cap = cfg.conviction_max_fraction * net_worth if conviction else cfg.default_max_bet
 
-        limits: list[tuple[str, float]] = [
+        if position is None and open_position_count >= cfg.max_open_positions:
+            return _no(f"already holding {open_position_count} positions")
+
+        # Soft limits express appetite and can be overridden by the min_bet floor.
+        # Hard limits protect the bankroll and the market, and never are.
+        soft: list[tuple[str, float]] = [
             ("kelly target", target),
             ("conviction cap" if conviction else "default cap", cap),
+        ]
+        hard: list[tuple[str, float]] = [
             ("share of volume", cfg.max_share_of_volume * market.volume),
             ("daily budget", cfg.daily_mana_budget - budget_spent),
             ("balance reserve", balance - cfg.min_balance_reserve),
         ]
 
-        if position is None and open_position_count >= cfg.max_open_positions:
-            return _no(f"already holding {open_position_count} positions")
+        soft_name, soft_cap = min(soft, key=lambda item: item[1])
+        hard_name, hard_cap = min(hard, key=lambda item: item[1])
 
-        binding, amount = min(limits, key=lambda item: item[1])
+        binding, amount = (
+            (soft_name, soft_cap) if soft_cap <= hard_cap else (hard_name, hard_cap)
+        )
+        if amount < cfg.min_bet:
+            # A weak edge should still take a real position, just a small one. Rounding
+            # it to zero is what left the agent flat for a whole day.
+            amount = min(cfg.min_bet, hard_cap)
+            binding = "min bet floor" if amount >= cfg.min_bet else hard_name
+
         amount = float(int(amount))  # whole mana only
-
         if amount < 1:
             return _no(f"size floored to zero by {binding}")
 
         reason = (
-            f"edge {edge:+.3f}, kelly {kelly:.2f}, decay {decay:.2f}, "
+            f"edge {edge:.3f}, kelly {kelly:.2f}, decay {decay:.2f}, "
             f"bound by {binding}"
         )
 
