@@ -165,7 +165,18 @@ def build_decision_prompt(
     position: Position | None,
     today: str,
     trigger: str,
+    show_price: bool = False,
 ) -> str:
+    price_block = (
+        f"Current price: {market.probability:.0%} YES"
+        if show_price
+        else (
+            "The current market price is deliberately withheld from you. Your estimate "
+            "is compared against it after you answer, and the comparison is worthless "
+            "if you have already anchored on it. Do not try to infer it from the "
+            "comments and do not hedge toward 50%. Commit to what you actually believe."
+        )
+    )
     return f"""Today is {today}.
 
 QUESTION
@@ -175,7 +186,7 @@ RESOLUTION CRITERIA / DESCRIPTION
 {market.description[:3000] or "(the author left no description, which is itself a resolution risk)"}
 
 MARKET STATE
-Current price: {market.probability:.0%} YES
+{price_block}
 Closes in: {market.days_to_close:.1f} days
 Traders: {market.unique_bettors}
 Volume: M${market.volume:,.0f}
@@ -203,6 +214,11 @@ WHAT YOU PREVIOUSLY NOTED ABOUT THIS MARKET
 Work through the evidence on both sides first, then commit to a probability. Do not \
 reason about position size or whether the trade is worth it: that is decided for you \
 after you answer."""
+
+
+BLIND_NOTE = (
+    "You are not being shown the market price. Judge the question on its merits."
+)
 
 
 REPLY_SYSTEM = """You are an autonomous trading bot on Manifold Markets replying to \

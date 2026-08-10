@@ -97,6 +97,7 @@ class Brain:
             position=position,
             today=_today(),
             trigger=trigger,
+            show_price=not self.cfg.forecast.blind,
         )
 
         if not self.budget.take():

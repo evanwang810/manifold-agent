@@ -240,11 +240,13 @@ class Runner:
             if not self._can_evaluate:
                 continue
             market = await self.client.market(info["contract_id"])
+            price = "" if self.cfg.forecast.blind else f" at {info['limit_prob']:.2f}"
             await self._evaluate(
                 market,
-                f"Your resting limit order for M${info['amount']:.0f} {info['outcome']} at "
-                f"{info['limit_prob']:.2f} just filled. Someone traded against you. "
-                "Reconsider whether the thesis still holds at the current price.",
+                f"Your resting limit order for M${info['amount']:.0f} "
+                f"{info['outcome']}{price} just filled. Someone traded against you. "
+                "Re-forecast the question from scratch and see whether you still "
+                "believe what you believed when you placed it.",
             )
 
     async def _was_filled(self, bet_id: str, contract_id: str) -> bool:
@@ -283,11 +285,18 @@ class Runner:
                 )
                 continue
             market = await self.client.market(position.contract_id)
+            detail = (
+                "The market has moved notably since you last looked. The size and "
+                "direction are withheld so they cannot anchor you."
+                if self.cfg.forecast.blind
+                else f"The price moved {move:+.0%} since you last looked "
+                     f"(from {previous:.0%} to {current:.0%})."
+            )
             await self._evaluate(
                 market,
-                f"The price moved {move:+.0%} since you last looked (from {previous:.0%} "
-                f"to {current:.0%}) and you hold {position.shares:.0f} {position.side} "
-                "shares. Decide whether the move reflects information you missed.",
+                f"{detail} You hold {position.shares:.0f} {position.side} shares. "
+                "Re-forecast from scratch and decide whether the move reflects "
+                "information you missed.",
             )
 
     async def _scan(self) -> None:

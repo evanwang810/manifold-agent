@@ -42,6 +42,12 @@ max_days_to_resolve = 30
 min_hours_to_resolve = 6
 skip_if_seen_within_hours = 48
 
+[forecast]
+# Hide the market price while the model is forecasting. Shown the price, it hands the
+# price back: early runs put five of six estimates within two points of market, which
+# produces no edge and no trades. Set false to let it see the price and anchor.
+blind = true
+
 [risk]
 default_max_bet = 10
 # A 4-point disagreement is a real, if weak, opinion and deserves a small position.

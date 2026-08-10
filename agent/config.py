@@ -72,6 +72,15 @@ class RiskConfig:
 
 
 @dataclass
+class ForecastConfig:
+    # Show the model the market price and it will hand the price back to you. Five of
+    # six early forecasts landed within two points of market, so the price is hidden
+    # during forecasting and only compared afterwards. Costs some absolute accuracy,
+    # buys an estimate that is actually independent of the thing it is judged against.
+    blind: bool = True
+
+
+@dataclass
 class WatchConfig:
     move_threshold: float = 0.08
     # Ticks run every minute, so a market in freefall would otherwise burn an
@@ -104,6 +113,7 @@ class Config:
     llm: LLMConfig = field(default_factory=LLMConfig)
     budget: BudgetConfig = field(default_factory=BudgetConfig)
     scan: ScanConfig = field(default_factory=ScanConfig)
+    forecast: ForecastConfig = field(default_factory=ForecastConfig)
     risk: RiskConfig = field(default_factory=RiskConfig)
     watch: WatchConfig = field(default_factory=WatchConfig)
     social: SocialConfig = field(default_factory=SocialConfig)
@@ -179,6 +189,7 @@ def load_config(path: str | Path) -> Config:
         llm=_build(LLMConfig, raw.get("llm", {})),
         budget=_build(BudgetConfig, raw.get("budget", {})),
         scan=_build(ScanConfig, raw.get("scan", {})),
+        forecast=_build(ForecastConfig, raw.get("forecast", {})),
         risk=_build(RiskConfig, raw.get("risk", {})),
         watch=_build(WatchConfig, raw.get("watch", {})),
         social=_build(SocialConfig, raw.get("social", {})),
