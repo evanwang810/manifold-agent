@@ -1,0 +1,68 @@
+name: tick
+
+on:
+  schedule:
+    # Every 5 minutes. GitHub treats scheduled runs as best effort and will skip or
+    # delay them under load, so the real cadence is closer to 5-15 minutes. That is
+    # fine: every tick is independent and reads its state fresh.
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+    inputs:
+      instruction:
+        description: "One-off instruction for this run"
+        required: false
+        type: string
+      live:
+        description: "Place real orders (overrides config.toml)"
+        required: false
+        type: boolean
+        default: false
+
+# Never let two ticks run at once. They would both write the state branch.
+concurrency:
+  group: manifold-agent-tick
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  tick:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Check out state branch
+        uses: actions/checkout@v4
+        with:
+          ref: state
+          path: state
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install --quiet -e .
+
+      - name: Run one tick
+        env:
+          MANIFOLD_API_KEY: ${{ secrets.MANIFOLD_API_KEY }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          OWNER_INSTRUCTION: ${{ inputs.instruction }}
+        run: python run.py ${{ inputs.live && '--live' || '' }}
+
+      - name: Persist state
+        if: always()
+        working-directory: state
+        run: |
+          git config user.name "manifold-agent"
+          git config user.email "manifold-agent@users.noreply.github.com"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "no state changes"
+            exit 0
+          fi
+          git commit -m "state: $(date -u +%FT%TZ)"
+          git push origin HEAD:state

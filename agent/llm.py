@@ -1,0 +1,253 @@
+"""Provider-agnostic LLM adapter.
+
+Everything downstream talks to `LLMClient.generate`, so swapping Gemini for Mistral
+(or comparing their calibration on the same markets) is a config change.
+"""
+
+from __future__ import annotations
+
+import asyncio
+import json
+import logging
+import re
+from dataclasses import dataclass, field
+from typing import Any
+
+import httpx
+
+from .config import LLMConfig
+
+log = logging.getLogger(__name__)
+
+_FENCE = re.compile(r"```(?:json)?\s*(.*?)```", re.S)
+
+
+@dataclass
+class LLMResponse:
+    text: str
+    citations: list[str] = field(default_factory=list)
+    raw: dict[str, Any] = field(repr=False, default_factory=dict)
+
+
+def extract_json(text: str) -> dict[str, Any]:
+    """Pull the first JSON object out of a model response.
+
+    Small models wrap JSON in prose or fences even when told not to, so this tries
+    fenced blocks first, then brace matching, before giving up.
+    """
+    candidates: list[str] = []
+    fenced = _FENCE.search(text)
+    if fenced:
+        candidates.append(fenced.group(1))
+    candidates.append(text)
+
+    for candidate in candidates:
+        candidate = candidate.strip()
+        try:
+            parsed = json.loads(candidate)
+            if isinstance(parsed, dict):
+                return parsed
+        except json.JSONDecodeError:
+            pass
+
+        start = candidate.find("{")
+        if start == -1:
+            continue
+        depth = 0
+        in_string = False
+        escaped = False
+        for i in range(start, len(candidate)):
+            ch = candidate[i]
+            if in_string:
+                if escaped:
+                    escaped = False
+                elif ch == "\\":
+                    escaped = True
+                elif ch == '"':
+                    in_string = False
+                continue
+            if ch == '"':
+                in_string = True
+            elif ch == "{":
+                depth += 1
+            elif ch == "}":
+                depth -= 1
+                if depth == 0:
+                    try:
+                        parsed = json.loads(candidate[start : i + 1])
+                        if isinstance(parsed, dict):
+                            return parsed
+                    except json.JSONDecodeError:
+                        break
+
+    raise ValueError(f"No JSON object in model output: {text[:300]}")
+
+
+class LLMClient:
+    """Base class. Subclasses implement `_call`."""
+
+    supports_search = False
+
+    def __init__(self, cfg: LLMConfig) -> None:
+        self.cfg = cfg
+        self._client = httpx.AsyncClient(timeout=httpx.Timeout(cfg.timeout_seconds))
+
+    async def aclose(self) -> None:
+        await self._client.aclose()
+
+    async def generate(
+        self,
+        prompt: str,
+        *,
+        system: str | None = None,
+        json_schema: dict[str, Any] | None = None,
+        grounded: bool = False,
+        attempts: int = 3,
+    ) -> LLMResponse:
+        delay = 2.0
+        last: Exception | None = None
+        for attempt in range(attempts):
+            try:
+                return await self._call(
+                    prompt, system=system, json_schema=json_schema, grounded=grounded
+                )
+            except (httpx.HTTPError, RuntimeError) as exc:
+                last = exc
+                if attempt < attempts - 1:
+                    log.warning("LLM call failed (%s), retrying in %.0fs", exc, delay)
+                    await asyncio.sleep(delay)
+                    delay *= 3  # free tiers rate limit hard, back off generously
+        assert last is not None
+        raise last
+
+    async def generate_json(
+        self,
+        prompt: str,
+        *,
+        system: str | None = None,
+        json_schema: dict[str, Any] | None = None,
+    ) -> dict[str, Any]:
+        response = await self.generate(prompt, system=system, json_schema=json_schema)
+        return extract_json(response.text)
+
+    async def _call(
+        self,
+        prompt: str,
+        *,
+        system: str | None,
+        json_schema: dict[str, Any] | None,
+        grounded: bool,
+    ) -> LLMResponse:
+        raise NotImplementedError
+
+
+class GeminiClient(LLMClient):
+    supports_search = True
+    BASE = "https://generativelanguage.googleapis.com/v1beta"
+
+    async def _call(
+        self,
+        prompt: str,
+        *,
+        system: str | None,
+        json_schema: dict[str, Any] | None,
+        grounded: bool,
+    ) -> LLMResponse:
+        generation: dict[str, Any] = {"temperature": self.cfg.temperature}
+        body: dict[str, Any] = {
+            "contents": [{"role": "user", "parts": [{"text": prompt}]}],
+            "generationConfig": generation,
+        }
+        if system:
+            body["systemInstruction"] = {"parts": [{"text": system}]}
+
+        if grounded:
+            # Search grounding and a forced response schema cannot be combined, so a
+            # grounded call returns prose and the caller parses it loosely.
+            body["tools"] = [{"google_search": {}}]
+        elif json_schema is not None:
+            generation["responseMimeType"] = "application/json"
+            generation["responseSchema"] = json_schema
+
+        resp = await self._client.post(
+            f"{self.BASE}/models/{self.cfg.model}:generateContent",
+            headers={"x-goog-api-key": self.cfg.api_key},
+            json=body,
+        )
+        if resp.status_code >= 400:
+            raise RuntimeError(f"Gemini {resp.status_code}: {resp.text[:400]}")
+        data = resp.json()
+
+        candidates = data.get("candidates") or []
+        if not candidates:
+            raise RuntimeError(f"Gemini returned no candidates: {json.dumps(data)[:400]}")
+
+        parts = candidates[0].get("content", {}).get("parts", [])
+        text = "".join(p.get("text", "") for p in parts)
+
+        citations: list[str] = []
+        grounding = candidates[0].get("groundingMetadata") or {}
+        for chunk in grounding.get("groundingChunks") or []:
+            web = chunk.get("web") or {}
+            uri = web.get("uri")
+            if uri:
+                citations.append(f"{web.get('title', 'source')} <{uri}>")
+
+        return LLMResponse(text=text, citations=citations, raw=data)
+
+
+class OpenAICompatibleClient(LLMClient):
+    """Covers Mistral, Groq, Cerebras, OpenRouter, and anything else speaking the
+    /chat/completions dialect. None of them ship native search, so research falls back
+    to whatever the model already knows, which the prompt is told to treat as stale."""
+
+    supports_search = False
+
+    def __init__(self, cfg: LLMConfig, base_url: str) -> None:
+        super().__init__(cfg)
+        self.base = base_url.rstrip("/")
+
+    async def _call(
+        self,
+        prompt: str,
+        *,
+        system: str | None,
+        json_schema: dict[str, Any] | None,
+        grounded: bool,
+    ) -> LLMResponse:
+        messages: list[dict[str, str]] = []
+        if system:
+            messages.append({"role": "system", "content": system})
+        messages.append({"role": "user", "content": prompt})
+
+        body: dict[str, Any] = {
+            "model": self.cfg.model,
+            "messages": messages,
+            "temperature": self.cfg.temperature,
+        }
+        if json_schema is not None and not grounded:
+            body["response_format"] = {"type": "json_object"}
+
+        resp = await self._client.post(
+            f"{self.base}/chat/completions",
+            headers={"Authorization": f"Bearer {self.cfg.api_key}"},
+            json=body,
+        )
+        if resp.status_code >= 400:
+            raise RuntimeError(f"LLM {resp.status_code}: {resp.text[:400]}")
+        data = resp.json()
+        text = data["choices"][0]["message"]["content"] or ""
+        return LLMResponse(text=text, raw=data)
+
+
+def build_llm(cfg: LLMConfig) -> LLMClient:
+    provider = cfg.provider.lower()
+    if provider == "gemini":
+        return GeminiClient(cfg)
+    if provider == "mistral":
+        return OpenAICompatibleClient(cfg, "https://api.mistral.ai/v1")
+    if provider == "openai_compatible":
+        if not cfg.base_url:
+            raise ValueError("llm.base_url is required for provider = openai_compatible")
+        return OpenAICompatibleClient(cfg, cfg.base_url)
+    raise ValueError(f"Unknown LLM provider: {cfg.provider}")

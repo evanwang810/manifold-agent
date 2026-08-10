@@ -1,0 +1,66 @@
+# Settings only. This file is committed, so it holds no keys.
+# Secrets come from the environment: MANIFOLD_API_KEY and LLM_API_KEY.
+
+[manifold]
+# Master safety switch. While true, orders and comments are logged, never sent.
+# Flip to false when you have read a few ticks of state/events.jsonl and believe it.
+dry_run = true
+# Your Manifold handle, without the @. Comments from this account are treated as
+# instructions from the owner rather than as noise from a stranger.
+owner_username = ""
+
+[llm]
+provider = "gemini"           # gemini | mistral | openai_compatible
+model = "gemini-3.6-flash"
+temperature = 0.3
+timeout_seconds = 90
+# Only for provider = "openai_compatible" (Groq, Cerebras, OpenRouter, and friends).
+base_url = ""
+
+[budget]
+# A tick is cheap by design. These caps are what keep a 5-minute cron inside a
+# free API tier: 288 ticks a day adds up fast.
+max_evaluations_per_tick = 1
+max_llm_calls_per_tick = 4
+
+[scan]
+min_minutes_between_scans = 60
+min_unique_bettors = 25
+min_volume = 3000
+max_days_to_resolve = 30
+min_hours_to_resolve = 6
+skip_if_seen_within_hours = 48
+
+[risk]
+default_max_bet = 10
+min_edge = 0.10
+kelly_fraction = 0.25         # raise toward 0.7 if you want the conviction cap to bind
+
+conviction_max_fraction = 0.35
+conviction_min_volume = 10000
+conviction_max_days = 7
+conviction_min_edge = 0.18
+conviction_min_confidence = "high"
+
+max_market_impact = 0.03      # never move the price more than 3pp with one order
+max_share_of_volume = 0.05
+max_open_positions = 40
+daily_mana_budget = 500
+min_balance_reserve = 50
+time_decay_days = 14
+
+[watch]
+move_threshold = 0.08         # pp move on a held market that forces a re-evaluation
+
+[social]
+comment_decisions = true      # explain every buy and sell in a market comment
+reply_to_comments = true
+# Off by default: a managram is the only way to answer a managram, and the API minimum
+# is M$10 per send, so every reply costs real bankroll.
+reply_to_managrams = false
+max_replies_per_tick = 2
+watch_last_n_comments = 10    # how far back to look for replies to the bot
+
+[memory]
+path = "state"
+compress_after_events = 60

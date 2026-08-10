@@ -1,0 +1,15 @@
+# Secrets never belong in this repo. Keys come from the environment, or from a
+# local .env that git will not see.
+.env
+.env.*
+config.local.toml
+
+# State lives on the `state` branch, and is checked out into ./state by CI.
+state/
+
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
