@@ -3,6 +3,8 @@
 An LLM that trades binary markets on [Manifold](https://manifold.markets), explains
 every trade in a market comment, and answers when you reply to it.
 
+**[Methodology and setup walkthrough →](https://evanwang810.github.io/manifold-agent/)**
+
 There is no server. One invocation is one tick, driven by a GitHub Actions cron and
 storing its memory on a `state` branch of its own repo. It is play money, and the point
 is calibration rather than profit: `state/events.jsonl` records the model's probability
