@@ -35,12 +35,14 @@ key_env = "LLM_API_KEY"       # which environment variable holds the key
 model = "gemini-3.5-flash-lite"
 fallbacks = ["gemini-3.5-flash"]
 
-# Talks to people and rewrites memory. A small conversational model is plenty here and
-# it keeps chatter off the quota the trading decisions need. Point this at a Gemma if
-# you have one, for example model = "gemma-3-27b-it".
+# Talks to people and rewrites memory. Gemma is the point of this tier: its limits are
+# generous enough that conversation costs nothing against the 20-a-day Gemini quota the
+# trading decisions have to live inside. It is served over the same endpoint but takes
+# no system instruction and no response schema, which the client handles by folding
+# both into the prompt.
 [llm.chat]
-model = "gemini-3.5-flash-lite"
-fallbacks = ["gemini-3.5-flash"]
+model = "gemma-4-31b-it"
+fallbacks = ["gemma-4-26b-a4b-it", "gemini-3.5-flash-lite"]
 
 # Only ever asked the question that decides money. To run a second provider here, set
 # its own provider/base_url/key_env and add that key to Actions secrets, for example:
@@ -72,10 +74,10 @@ escalate_edge = 0.10
 # keeping max_deep_calls_per_day under the real quota, with headroom for a retry.
 max_evaluations_per_tick = 2
 max_fast_calls_per_tick = 4
-max_chat_calls_per_tick = 2
+max_chat_calls_per_tick = 4
 max_deep_calls_per_tick = 1
 max_fast_calls_per_day = 220
-max_chat_calls_per_day = 40
+max_chat_calls_per_day = 400
 max_deep_calls_per_day = 18
 # Without pacing a daily cap is gone in the first ten minutes and the agent is dark
 # until midnight. Calls are released against the clock instead, and the burst is how

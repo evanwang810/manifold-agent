@@ -69,13 +69,13 @@ class BudgetConfig:
     # effectively a per-minute rate limit: keep the sum of these under the tightest RPM
     # your provider gives you, with room to spare for a retry.
     max_fast_calls_per_tick: int = 4
-    max_chat_calls_per_tick: int = 2
+    max_chat_calls_per_tick: int = 4
     max_deep_calls_per_tick: int = 1
     # The ceiling that actually matters on a free tier, tracked in state across ticks.
     # Set these below the provider's real daily quota, not at it: a retry or a probe
     # still costs a request.
     max_fast_calls_per_day: int = 150
-    max_chat_calls_per_day: int = 40
+    max_chat_calls_per_day: int = 400
     max_deep_calls_per_day: int = 18
     # Spend the daily allowance across the day rather than in the first ten minutes.
     # The burst is how far ahead of the clock a tier may run, so the agent can still

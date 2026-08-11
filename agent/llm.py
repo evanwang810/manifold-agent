@@ -199,19 +199,31 @@ class GeminiClient(LLMClient):
         grounded: bool,
         model: str,
     ) -> LLMResponse:
+        # Gemma is served over the same endpoint but accepts none of the extras: no
+        # system instruction, no response schema, no grounding. Rejecting those is a
+        # 400, so they are folded into the prompt instead and the JSON is parsed out of
+        # whatever comes back, which extract_json already copes with.
+        plain = "gemma" in model.lower()
+
         generation: dict[str, Any] = {"temperature": self.cfg.temperature}
+        text = prompt
+        if system and plain:
+            text = f"{system}\n\n---\n\n{prompt}"
+        if plain and json_schema is not None:
+            text += "\n\nReply with a single JSON object and nothing else."
+
         body: dict[str, Any] = {
-            "contents": [{"role": "user", "parts": [{"text": prompt}]}],
+            "contents": [{"role": "user", "parts": [{"text": text}]}],
             "generationConfig": generation,
         }
-        if system:
+        if system and not plain:
             body["systemInstruction"] = {"parts": [{"text": system}]}
 
-        if grounded:
+        if grounded and not plain:
             # Search grounding and a forced response schema cannot be combined, so a
             # grounded call returns prose and the caller parses it loosely.
             body["tools"] = [{"google_search": {}}]
-        elif json_schema is not None:
+        elif json_schema is not None and not plain:
             generation["responseMimeType"] = "application/json"
             generation["responseSchema"] = json_schema
 
