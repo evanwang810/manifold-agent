@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1786484722487,
+  "generated_ms": 1786484810509,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.6-flash",
@@ -30,7 +30,7 @@
   },
   "usage": {
     "fast": {
-      "today": 6,
+      "today": 8,
       "cap": 220
     },
     "chat": {
@@ -38,15 +38,25 @@
       "cap": 400
     },
     "deep": {
-      "today": 2,
+      "today": 3,
       "cap": 18
     }
   },
   "dry_run": false,
   "balance": 504.0,
-  "net_worth": 639.08,
+  "net_worth": 637.9,
   "summary": "Net worth has increased from M$516 to M$645, with a current cash balance of M$515. There are 6 active positions: Starship Ship 40 recovery (NO), METR 80% time horizon (NO), WTI Crude Oil price (NO), partner relationship duration (NO), OpenAI math advances flaw (YES), and next full Gemini model coding capability (YES). These positions are in early tracking stages.\n\nOperational friction persists. Gemini API 429 rate limit errors and 403 permission denials continue to interrupt analysis, necessitating more robust throttling and backoff strategies. A recent failure in output generation led to the leakage of internal JSON artifacts and prompt analysis in a public issue thread; the agent also over-responded to non-factual social engagement. Additionally, a transaction request was vetoed because no reasoning was provided for the transfer.\n\nThe agent remains well-calibrated in screening out ungrounded entertainment and geopolitical props, such as unrealistic box office targets or speculative war crime charges. It excels at identifying mispriced AI governance and benchmark horizons. It is most vulnerable to infrastructure bottlenecks and lapses in output filtering during public interactions.\n\nKey open markets include AI capability benchmarks (Gemini and METR milestones) and near-term commodity props. Future execution must prioritize strict API quota compliance, explicit documentation of market rationales, and the provision of clear reasoning for all financial transactions.",
   "journal": [
+    {
+      "ts": 1786484807253,
+      "kind": "trade",
+      "text": "Limit order M$13 YES on \"[Will Brown] Will Transformative AI look like an abundance of speciali\" at 16%, my estimate 22% (medium). Because: While real-world deployment heavily relies on specialized models, the Manifold user base generally associates Transforma"
+    },
+    {
+      "ts": 1786484789851,
+      "kind": "screen",
+      "text": "Escalated \"[Will Brown] Will Transformative AI look like an abundance of speciali\" at 16%: quick estimate 45% vs market 16%"
+    },
     {
       "ts": 1786482334653,
       "kind": "screen",
@@ -346,6 +356,12 @@
   "own_actions": [],
   "notes": [
     {
+      "note": "Will Brown TAI specialized models market resolves via Manifold poll in Aug 2026; Manifold user base favors general foundation models in TAI definitions.",
+      "question": "[Will Brown] Will Transformative AI look like an abundance of specialized models, in August 2026?",
+      "url": "https://manifold.markets/Bayesian/will-brown-will-transformative-ai-l",
+      "ts": 1786484806588
+    },
+    {
       "note": "Volume at M$34,733 / 50k threshold with 5.6 days left; estimated YES probability at 0.86.",
       "question": "Will my this market post cross 5Ok Mana mark? (THIS ONE)",
       "url": "https://manifold.markets/WasimSk/will-my-this-market-post-cross-5ok",
@@ -410,12 +426,6 @@
       "question": "",
       "url": "",
       "ts": 0
-    },
-    {
-      "note": "METR 80% time horizon target is 10h before Sept 2026; superforecasters projected 3-4h by year-end 2026.",
-      "question": "",
-      "url": "",
-      "ts": 0
     }
   ],
   "positions": [
@@ -470,12 +480,22 @@
       "days_to_close": 17.3
     },
     {
+      "question": "[Will Brown] Will Transformative AI look like an abundance of specialized models, in August 2026?",
+      "url": "https://manifold.markets/gemini35flash/will-brown-will-transformative-ai-l",
+      "side": "YES",
+      "shares": 80.7,
+      "invested": 13.0,
+      "profit": 0.3,
+      "prob": 0.0,
+      "days_to_close": 20.1
+    },
+    {
       "question": "Will my this market post cross 5Ok Mana mark? (THIS ONE)",
       "url": "https://manifold.markets/gemini35flash/will-my-this-market-post-cross-5ok",
       "side": "NO",
       "shares": 530.9,
       "invested": 11.0,
-      "profit": -5.7,
+      "profit": -6.9,
       "prob": 0.0,
       "days_to_close": 5.6
     },
@@ -491,6 +511,28 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1786484807252,
+      "kind": "bet",
+      "question": "[Will Brown] Will Transformative AI look like an abundance of specialized models, in August 2026?",
+      "url": "https://manifold.markets/Bayesian/will-brown-will-transformative-ai-l",
+      "market_prob": 0.15704394380713543,
+      "model_prob": 0.22,
+      "confidence": "medium",
+      "amount": 13.0,
+      "outcome": "YES",
+      "thinking": "While real-world deployment heavily relies on specialized models, the Manifold user base generally associates Transformative AI with general foundation systems, making a majority YES in the August 2026 poll unlikely but plausible around 20-25%.",
+      "uncertainty": "How the Manifold community poll in August 2026 frames and votes on Will Brown's specific take regarding specialized models vs general foundation models.",
+      "resolution_risk": "The market resolves entirely on a subjective user poll; community bias toward general foundation models could cause a NO resolution even if specialized models dominate real-world deployment.",
+      "evidence_for": [
+        "Significant enterprise adoption relies on specialized vertical models, fine-tunes, and domain-specific architectures (e.g. AlphaFold, operational agents) due to cost and performance advantages."
+      ],
+      "evidence_against": [
+        "The predominant consensus among Manifold AI forecasters defines Transformative AI in terms of general foundation models and AGI rather than specialized domain models.",
+        "Frontier AI progress in mid-2026 continues to be driven by general multimodal foundation models and general reasoning capabilities."
+      ],
+      "reason": "edge 0.063, kelly 0.07, decay 0.70, bound by kelly target"
+    },
     {
       "ts": 1786479875524,
       "kind": "bet",
@@ -808,23 +850,6 @@
       "outcome": null,
       "thinking": "",
       "uncertainty": "Whether an unannounced lab model or secret pipeline exists that meets the full 10-minute festival quality bar end-to-end without human intervention.",
-      "resolution_risk": "",
-      "evidence_for": [],
-      "evidence_against": [],
-      "reason": "action is hold"
-    },
-    {
-      "ts": 1786369178013,
-      "kind": "no_trade",
-      "question": "Will Abdul El Sayed and Francesca Hong both win their primaries?",
-      "url": "https://manifold.markets/Jack1/will-abdul-el-sayed-and-francesca-h",
-      "market_prob": 0.9681080641199472,
-      "model_prob": 0.95,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "",
-      "uncertainty": "The outcome of the Wisconsin Democratic gubernatorial primary and whether any late race dynamics threaten Hong's lead.",
       "resolution_risk": "",
       "evidence_for": [],
       "evidence_against": [],
