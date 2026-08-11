@@ -162,6 +162,11 @@ class SocialConfig:
     reply_to_comments: bool = True
     reply_to_managrams: bool = False
     answer_github_issues: bool = True
+    # Minimum gap between replies in the same thread. Without it a busy thread gets one
+    # reply per message: every answer draws another comment, which triggers another
+    # answer. It still only ever answers the newest message, so waiting loses nothing
+    # except the half of the conversation that was already superseded.
+    issue_reply_cooldown_minutes: float = 15
     max_replies_per_tick: int = 2
     watch_last_n_comments: int = 10
 

@@ -137,6 +137,17 @@ class Inbox:
         if author.endswith("[bot]") or int(last.get("id") or 0) <= max(mark, 0):
             return None
 
+        # One reply per thread per cooldown. Everything said in the meantime is still
+        # read, it just gets answered together by the reply to the newest message, which
+        # is the one that has usually superseded the rest anyway.
+        waited = self.memory.minutes_since_issue_reply(number)
+        if waited < self.cfg.social.issue_reply_cooldown_minutes:
+            log.info(
+                "Holding off on #%s: replied %.0fm ago, cooldown is %.0fm",
+                number, waited, self.cfg.social.issue_reply_cooldown_minutes,
+            )
+            return None
+
         turns = [opening]
         for comment in comments[-20:]:
             who = (comment.get("user") or {}).get("login", "someone")
@@ -178,7 +189,9 @@ class Inbox:
             f"it before answering, including your own earlier replies: repeating "
             f"yourself or contradicting what you already said is the thing to avoid "
             f"here.\n\n{transcript}\n\n"
-            f"You are replying to @{asker}, whose message is the last one above. "
+            f"Several messages may have arrived since you last spoke. Write one reply, "
+            f"to @{asker}, whose message is the last one above. Do not work back through "
+            f"the earlier ones answering each in turn: they have already been overtaken. "
             f"{standing}\n\n"
             f"Your current state: {self.portfolio_line}\n\n"
             f"Your memory:\n{self.memory.context_block()}\n\n"

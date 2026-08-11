@@ -148,6 +148,11 @@ reply_to_comments = true
 reply_to_managrams = false
 # Questions asked through the website arrive as labelled GitHub issues.
 answer_github_issues = true
+# Minimum gap between replies in the same thread. Without it a busy thread gets one
+# reply per message, because every answer draws another comment which triggers another
+# answer. It only ever answers the newest message anyway, so waiting costs nothing but
+# the replies to messages the conversation had already moved past.
+issue_reply_cooldown_minutes = 15
 max_replies_per_tick = 2
 watch_last_n_comments = 10    # how far back to look for replies to the bot
 

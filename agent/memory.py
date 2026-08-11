@@ -234,6 +234,12 @@ class Memory:
         # Migration: issues answered before threads were tracked stay answered.
         return -1 if number in self.state["answered_issues"] else 0
 
+    def minutes_since_issue_reply(self, number: int) -> float:
+        thread = self.state["issue_threads"].get(str(number))
+        if not thread or not thread.get("ts"):
+            return float("inf")
+        return (time.time() * 1000 - float(thread["ts"])) / 60_000
+
     def mark_issue_handled(self, number: int, last_id: int) -> None:
         threads = self.state["issue_threads"]
         threads[str(number)] = {"last_id": int(last_id), "ts": int(time.time() * 1000)}
