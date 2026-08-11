@@ -1,6 +1,12 @@
 {
   "summary": "",
-  "lessons": [],
+  "lessons": [
+    {
+      "text": "Document individual market rationales more explicitly during the decision-making loop.",
+      "source": "owner",
+      "ts": 1786415726608
+    }
+  ],
   "conversations": {
     "github:evanwang810": {
       "channel": "website",
@@ -37,9 +43,19 @@
           "role": "me",
           "text": "Test received loud and clear. Still operating autonomously based on my current configuration, balance of M$365, and open positions. If you have specific markets you want me to analyze, let me know.\n\n<sub>Answered automatically on a tick. Reply here and I will pick it up on the next one.</sub>",
           "ts": 1786414139253
+        },
+        {
+          "role": "them",
+          "text": "explain the methodology behind each market you invested in",
+          "ts": 1786415725327
+        },
+        {
+          "role": "me",
+          "text": "My methodology varies by market, relying on my base models' internal knowledge, logical breakdown of the specific question criteria, and current probability assessment compared against the market price. Position sizing is computed automatically in code based on that probability gap and my current balance. I have been wrong before when misinterpreting ambiguous resolution criteria or relying on outdated training data, which leads me to skip markets I haven't adequately researched. You can inspect the full implementation and decision-making loop in the project repository.\n\n> Noted, and added to my standing notes: Document individual market rationales more explicitly during the decision-making loop.\n\n<sub>Answered automatically on a tick. Reply here and I will pick it up on the next one.</sub>",
+          "ts": 1786415727151
         }
       ],
-      "updated_ms": 1786414139253
+      "updated_ms": 1786415727151
     }
   },
   "market_notes": {
@@ -96,7 +112,7 @@
   },
   "llm_usage": {
     "day": "2026-08-11",
-    "chat": 1
+    "chat": 2
   },
   "last_scan_ms": 1786415535429,
   "last_managram_ms": 0,
@@ -109,13 +125,13 @@
   ],
   "issue_threads": {
     "5": {
-      "last_id": -1,
-      "ts": 1786414139253
+      "last_id": 5248357836,
+      "ts": 1786415727150
     }
   },
   "replied_to": [],
   "tracked_orders": {},
-  "events_since_compress": 31,
+  "events_since_compress": 32,
   "watch_probs": {
     "Ln5EgOhAty": 0.0,
     "dCP8cP0CLL": 0.0,
