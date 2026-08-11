@@ -254,7 +254,12 @@ class GeminiClient(LLMClient):
             raise RuntimeError(f"Gemini returned no candidates: {json.dumps(data)[:400]}")
 
         parts = candidates[0].get("content", {}).get("parts", [])
-        text = "".join(p.get("text", "") for p in parts)
+        # Thinking models return their reasoning as parts flagged `thought`. Joining
+        # every part meant the answer arrived with "The user wants me to..." glued to
+        # the front of it, which then got posted as a public comment.
+        text = "".join(p.get("text", "") for p in parts if not p.get("thought"))
+        if not text.strip():
+            text = "".join(p.get("text", "") for p in parts)
 
         citations: list[str] = []
         grounding = candidates[0].get("groundingMetadata") or {}
