@@ -100,6 +100,30 @@ jobs:
           OWNER_INSTRUCTION: ${{ inputs.instruction }}
           LIVE_FLAG: ${{ inputs.live && '--live' || '' }}
         run: |
+          # The reply workflow pushes to the same branch, so a race is normal. State is a
+          # snapshot rather than a history, so the newest writer simply wins: rebasing
+          # produced conflicts in public.json, and a rejected push used to kill the whole
+          # session. Nothing here is allowed to end the loop.
+          push_state() {
+            cd state
+            git add -A
+            if git diff --staged --quiet; then cd ..; return 0; fi
+            git commit --quiet -m "state: $(date -u +%FT%TZ)"
+            for attempt in 1 2 3; do
+              if git push --quiet origin HEAD:state 2>/dev/null; then cd ..; return 0; fi
+              # Re-parent our snapshot onto whatever landed while we were working. The
+              # working tree is untouched, so our files win and the push fast-forwards.
+              git fetch --quiet origin state || true
+              git reset --soft origin/state || true
+              git add -A
+              git diff --staged --quiet && break
+              git commit --quiet -m "state: $(date -u +%FT%TZ)" || true
+              sleep 3
+            done
+            echo "could not push state, carrying on"
+            cd ..
+          }
+
           END=$(( $(date +%s) + SESSION_MINUTES * 60 ))
           N=0
           while :; do
@@ -108,14 +132,7 @@ jobs:
             python run.py $LIVE_FLAG || echo "tick $N failed, continuing"
             echo "::endgroup::"
 
-            cd state
-            git add -A
-            if ! git diff --staged --quiet; then
-              git commit --quiet -m "state: $(date -u +%FT%TZ)"
-              git pull --rebase --quiet origin state 2>/dev/null || true
-              git push --quiet origin HEAD:state
-            fi
-            cd ..
+            push_state || echo "state push failed, continuing"
 
             [ "$(date +%s)" -ge "$END" ] && break
             sleep "$TICK_INTERVAL_SECONDS"

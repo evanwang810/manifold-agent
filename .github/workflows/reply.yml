@@ -73,15 +73,20 @@ jobs:
         run: |
           python run.py
 
+          # Same race as the tick workflow, handled the same way: re-parent onto whatever
+          # landed and let the newest snapshot win, rather than rebasing into a conflict.
           cd state
           git add -A
           if ! git diff --staged --quiet; then
             git commit --quiet -m "state: reply $(date -u +%FT%TZ)"
-            # A scheduled session may be pushing at the same time, so rebase and retry
-            # rather than losing the answer to a race.
-            for i in 1 2 3; do
-              git pull --rebase --quiet origin state 2>/dev/null || true
-              git push --quiet origin HEAD:state && break
-              sleep 5
+            for attempt in 1 2 3; do
+              git push --quiet origin HEAD:state 2>/dev/null && exit 0
+              git fetch --quiet origin state || true
+              git reset --soft origin/state || true
+              git add -A
+              git diff --staged --quiet && exit 0
+              git commit --quiet -m "state: reply $(date -u +%FT%TZ)" || true
+              sleep 3
             done
+            echo "could not push state"
           fi
