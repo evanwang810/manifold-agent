@@ -392,11 +392,14 @@ Relevant memory:
 Your standing notes:
 {lessons}
 {prior}
-The conversation you are replying to (oldest first):
+The whole conversation this sits in, oldest first. Your own comments are marked, and \
+the last message is the one you are answering. Read all of it: someone may have already \
+rebutted a point, or answered it for you.
 {thread}
 
 Write your reply. If they asked why you took a position, explain the actual reason. If \
-they raised a point that changes your view, say that plainly."""
+they raised a point that changes your view, say that plainly. Do not repeat something \
+you have already said in this thread."""
 
 
 MANAGRAM_SYSTEM = """You are an autonomous trading bot on Manifold Markets. Someone sent \

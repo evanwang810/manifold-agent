@@ -172,18 +172,48 @@ class Social:
         log.info("Replied to @%s on %s", comment.username, market.slug)
         return True
 
-    def _render_thread(self, target: Comment, thread: list[Comment], depth: int = 4) -> str:
-        """Walk up the reply chain so the model sees what it is responding to."""
-        by_id = {c.id: c for c in thread}
-        chain = [target]
-        cursor = target
-        while cursor.reply_to_id and len(chain) < depth:
+    def _root_of(self, comment: Comment, by_id: dict[str, Comment]) -> str:
+        """Id of the top-level comment this one hangs off."""
+        cursor, seen = comment, {comment.id}
+        while cursor.reply_to_id:
             parent = by_id.get(cursor.reply_to_id)
-            if parent is None:
+            if parent is None or parent.id in seen:
                 break
-            chain.append(parent)
             cursor = parent
-        return "\n\n".join(f"@{c.username}: {c.text[:600]}" for c in reversed(chain))
+            seen.add(cursor.id)
+        return cursor.id
+
+    def _render_thread(self, target: Comment, thread: list[Comment], limit: int = 40) -> str:
+        """The whole conversation the target sits in, oldest first.
+
+        Walking only the ancestor chain meant the agent answered a reply without seeing
+        the sibling replies around it, which is where the argument usually is: someone
+        rebuts it, a third person corrects the rebuttal, and the agent would answer as
+        if none of that had been said. This takes every comment hanging off the same
+        top-level comment, plus the rest of the market's discussion for background.
+        """
+        by_id = {c.id: c for c in thread}
+        root = self._root_of(target, by_id)
+
+        conversation = [c for c in thread if self._root_of(c, by_id) == root]
+        conversation.sort(key=lambda c: c.created_time)
+        conversation = conversation[-limit:]
+
+        lines = [
+            f"@{c.username}{' (you)' if c.user_id == self.user_id else ''}: {c.text[:600]}"
+            for c in conversation
+        ]
+        rendered = "\n\n".join(lines)
+
+        in_thread = {c.id for c in conversation}
+        elsewhere = sorted(
+            (c for c in thread if c.id not in in_thread),
+            key=lambda c: c.created_time,
+        )[-8:]
+        if elsewhere:
+            others = "\n".join(f"@{c.username}: {c.text[:300]}" for c in elsewhere)
+            rendered += f"\n\nElsewhere on this market:\n{others}"
+        return rendered
 
     # -- managrams --------------------------------------------------------
 

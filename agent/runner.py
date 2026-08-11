@@ -148,15 +148,15 @@ class Runner:
         self._observe_portfolio(positions)
         await self._check_fills()
         await self._check_moves(positions)
-        self.report.replies = await self.social.run()
-        self.report.replies += await Inbox(
-            self.cfg, llm=self.chat, memory=self.memory, budget=self.budget,
-            portfolio_line=(
-                f"balance M${self.report.balance:,.0f}, net worth "
-                f"M${self.report.net_worth:,.0f}, {len(positions)} open positions"
-            ),
-        ).run()
+
+        # Answering happens either side of the expensive work. A single analysis can
+        # take most of a minute, so a message that arrives while the deep model is
+        # thinking would otherwise sit until the next tick for no reason. Both passes
+        # share one budget and the same already-answered bookkeeping, so the second is
+        # free when nothing new turned up.
+        self.report.replies = await self._answer_messages(len(positions))
         await self._scan()
+        self.report.replies += await self._answer_messages(len(positions))
 
         if not self.budget.chat.spent:
             await self.memory.maybe_compress()
@@ -291,6 +291,21 @@ class Runner:
         }
         path = self.cfg.state_dir / "public.json"
         path.write_text(json.dumps(snapshot, indent=2, default=str), encoding="utf-8")
+
+    async def _answer_messages(self, open_positions: int) -> int:
+        """Every channel someone can reach the agent on, checked in one pass."""
+        if self.budget.chat.spent:
+            return 0
+        assert self.social is not None
+        handled = await self.social.run()
+        handled += await Inbox(
+            self.cfg, llm=self.chat, memory=self.memory, budget=self.budget,
+            portfolio_line=(
+                f"balance M${self.report.balance:,.0f}, net worth "
+                f"M${self.report.net_worth:,.0f}, {open_positions} open positions"
+            ),
+        ).run()
+        return handled
 
     # -- observation ------------------------------------------------------
 
