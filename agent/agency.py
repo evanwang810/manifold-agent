@@ -7,9 +7,9 @@ rewrite one of its own standing notes.
 
 Two models are involved on purpose. The cheap one proposes, because proposing is mostly
 saying "nothing" and that should not cost anything scarce. The deep one reviews anything
-that moves mana and can veto it or cut the amount. Neither of them can exceed the caps in
-`[agency]`, which are applied in code afterwards, so the worst case of both models being
-talked into something stupid is still bounded by a number in a config file.
+that moves mana and can veto it or cut the amount. There is no per-action ceiling: what
+bounds it instead is the balance reserve and the daily mana budget, both applied in code
+after both models have spoken.
 """
 
 from __future__ import annotations
@@ -27,9 +27,12 @@ from .models import Position
 from .prompts import (
     AGENCY_SCHEMA,
     AGENCY_SYSTEM,
+    PORTFOLIO_SCHEMA,
+    PORTFOLIO_SYSTEM,
     REVIEW_SCHEMA,
     REVIEW_SYSTEM,
     build_agency_prompt,
+    build_portfolio_prompt,
     build_review_prompt,
     system_with_orders,
 )
@@ -214,14 +217,13 @@ class Agency:
 
         if action.action == "add":
             spendable = max(0.0, balance - self.cfg.risk.min_balance_reserve)
-            action.amount = min(action.amount, cfg.max_mana_per_action, spendable)
+            action.amount = min(action.amount, spendable)
             if action.amount < 1:
                 return None
 
         if action.action == "send_mana":
             if not cfg.allow_send_mana or not action.recipient:
                 return None
-            action.amount = min(action.amount, cfg.max_mana_per_action)
             spendable = max(0.0, balance - self.cfg.risk.min_balance_reserve)
             if action.amount > spendable or action.amount < MANAGRAM_MINIMUM:
                 log.info("Own turn wanted to send M$%.0f, which is not affordable or "
@@ -296,6 +298,91 @@ class Agency:
             amount=action.amount, reasoning=action.reasoning, dry_run=dry,
         )
         return detail
+
+    async def review_book(
+        self, positions: list[Position], balance: float, net_worth: float
+    ) -> str:
+        """Look over every open position and act on the ones whose case has changed.
+
+        Separate from the free turn above, and deliberately narrower: this may only sell
+        or add on markets already held. It runs on the cheap model, and each resulting
+        trade still goes through the deep reviewer before any mana moves.
+        """
+        cfg = self.cfg.agency
+        if not cfg.review_positions or not positions:
+            return ""
+        if self.memory.minutes_since_book_review() < cfg.min_minutes_between_book_reviews:
+            return ""
+        if not self.budget.chat.take():
+            return ""
+        self.memory.mark_book_review()
+
+        try:
+            response = await self.chat.generate(
+                build_portfolio_prompt(
+                    today=_today(),
+                    portfolio=(
+                        f"Balance M${balance:,.0f}, net worth M${net_worth:,.0f}, "
+                        f"{len(positions)} open positions."
+                    ),
+                    positions=_render_positions(positions),
+                    lessons=self.memory.lessons_block(),
+                    memory=self.memory.context_block(),
+                ),
+                system=system_with_orders(PORTFOLIO_SYSTEM, self.cfg.owner_block()),
+                json_schema=PORTFOLIO_SCHEMA,
+            )
+            data = extract_json(response.text)
+        except Exception as exc:  # noqa: BLE001
+            log.warning("Book review failed: %s", exc)
+            return ""
+
+        assessment = str(data.get("assessment", ""))[:400]
+        changes = data.get("changes") or []
+        self.memory.observe(
+            "book",
+            f"Looked over {len(positions)} positions: {assessment} "
+            f"({len(changes)} change(s) proposed)",
+        )
+        self.memory.log_event(
+            "book_review", positions=len(positions), assessment=assessment,
+            proposed=len(changes),
+        )
+        if not isinstance(changes, list) or not changes:
+            return "reviewed the book, no changes"
+
+        done = []
+        for change in changes[:2]:
+            if not isinstance(change, dict):
+                continue
+            action = Action(
+                action=str(change.get("action", "")).strip().lower(),
+                market_id=str(change.get("market_id", "")).strip(),
+                amount=float(change.get("amount") or 0),
+                reasoning=str(change.get("why", ""))[:300],
+            )
+            if action.action not in ("sell", "add"):
+                continue
+            capped = self._clamp(action, positions, balance)
+            if capped is None:
+                continue
+
+            verdict = await self._review(capped, positions, balance, net_worth)
+            if verdict is None or not verdict.get("approved"):
+                reason = (verdict or {}).get("verdict", "review unavailable")
+                self.memory.observe(
+                    "book", f"Book review wanted to {capped.action}, vetoed: {reason}"
+                )
+                continue
+            capped.amount = min(capped.amount, max(0.0, float(verdict.get("amount") or 0)))
+            capped = self._clamp(capped, positions, balance)
+            if capped is None:
+                continue
+            result = await self._execute(capped, positions)
+            if result:
+                done.append(result)
+
+        return "; ".join(done) if done else "reviewed the book, nothing survived review"
 
     async def _incoming_mana(self) -> str:
         """Who has sent it mana lately, so it can pay people back."""

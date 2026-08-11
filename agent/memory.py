@@ -62,6 +62,7 @@ class Memory:
             "last_scan_ms": 0,
             "last_compress_ms": 0,
             "last_own_action_ms": 0,
+            "last_book_review_ms": 0,
             "own_actions": [],         # what it chose to do on its own turns
             "portfolio_mark": {},      # last seen balance/net worth, to spot changes
             "position_mark": {},       # contract_id -> last seen shares/profit/prob
@@ -385,6 +386,16 @@ class Memory:
     def mark_own_action(self) -> None:
         """Claim the turn. Called before acting, so a crash cannot retry it forever."""
         self.state["last_own_action_ms"] = int(time.time() * 1000)
+        self.save()
+
+    def minutes_since_book_review(self) -> float:
+        last = float(self.state.get("last_book_review_ms") or 0)
+        if last <= 0:
+            return float("inf")
+        return (time.time() * 1000 - last) / 60_000
+
+    def mark_book_review(self) -> None:
+        self.state["last_book_review_ms"] = int(time.time() * 1000)
         self.save()
 
     def record_own_action(self, action: str, detail: str, reasoning: str) -> None:

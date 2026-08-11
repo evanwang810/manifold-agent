@@ -105,6 +105,30 @@
 
   .empty{font-family:var(--mono); font-size:13px; color:var(--faint); padding:26px 0}
 
+  /* collapsibles */
+  details{border-bottom:1px solid var(--line-2)}
+  details:last-child{border-bottom:0}
+  summary{
+    cursor:pointer; list-style:none; padding:15px 0; display:grid;
+    grid-template-columns:auto 1fr auto; gap:12px; align-items:baseline;
+  }
+  summary::-webkit-details-marker{display:none}
+  summary:hover .sum-t{text-decoration:underline; text-decoration-color:var(--accent)}
+  .sum-t{font-size:15px; line-height:1.45}
+  .sum-w{font-family:var(--mono); font-size:11px; color:var(--faint); white-space:nowrap}
+  .tag{
+    font-family:var(--mono); font-size:10.5px; color:var(--faint);
+    border:1px solid var(--line); padding:2px 6px; white-space:nowrap;
+  }
+  .tag.buy{color:var(--accent); border-color:var(--accent)}
+  .tag.out{color:var(--no); border-color:var(--no)}
+  details[open] summary{border-bottom:1px solid var(--line-2)}
+  .body{padding:16px 0 20px}
+  @media(max-width:560px){
+    summary{grid-template-columns:auto 1fr; }
+    .sum-w{grid-column:2; }
+  }
+
   /* memory */
   .recall{font-size:15px; color:var(--muted); margin:0 0 26px; max-width:64ch}
   .sub{
@@ -204,6 +228,22 @@
   </header>
 
   <section>
+    <h2>Ask it something</h2>
+    <p class="hint" style="margin-bottom:16px">This goes to the bot as a GitHub issue. It reads them on its next tick and answers publicly, leaving the thread open so you can reply and keep going. Ask about a position, a market, or why it did something. It remembers who it has spoken to, across markets and across threads.</p>
+    <form id="ask">
+      <input id="q-title" maxlength="120" placeholder="Short version of your question" required>
+      <textarea id="q-body" maxlength="1500" placeholder="The rest of it, if there is more"></textarea>
+      <button class="send" type="submit">Open the issue →</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Stream of thought</h2>
+    <p class="hint" style="margin-bottom:16px">The last things it did on its own initiative. Click any of them to see the reasoning it gave at the time.</p>
+    <div id="stream"><p class="empty">Nothing yet.</p></div>
+  </section>
+
+  <section>
     <h2>Open positions</h2>
     <div id="positions"><p class="empty">Loading…</p></div>
   </section>
@@ -282,16 +322,6 @@ LLM_API_KEY</code><button>copy</button></pre>
     </div>
   </section>
 
-  <section>
-    <h2>Ask it something</h2>
-    <p class="hint" style="margin-bottom:16px">This goes to the bot as a GitHub issue. It reads them on its next tick and answers publicly, leaving the thread open so you can reply and keep going. Ask about a position, a market, or why it did something. It remembers who it has spoken to, across markets and across threads.</p>
-    <form id="ask">
-      <input id="q-title" maxlength="120" placeholder="Short version of your question" required>
-      <textarea id="q-body" maxlength="1500" placeholder="The rest of it, if there is more"></textarea>
-      <button class="send" type="submit">Open the issue →</button>
-    </form>
-  </section>
-
   <footer>
     <span>Play money. A calibration experiment, not investment advice.</span>
     <a href="https://github.com/evanwang810/manifold-agent">github.com/evanwang810/manifold-agent</a>
@@ -368,16 +398,44 @@ function renderDecisions(rows) {
     const risk = d.resolution_risk
       ? `<p class="unknown"><b>Resolution risk</b>${esc(d.resolution_risk)}</p>` : '';
 
-    return `<div class="dec">
-      ${d.url ? `<a class="dec-q" href="${d.url}">${esc(d.question)}</a>`
-              : `<span class="dec-q">${esc(d.question)}</span>`}
-      ${gauge}
-      ${d.thinking ? `<p class="think">${esc(d.thinking)}</p>` : ''}
-      ${evidence}
-      ${unknown}
-      ${risk}
-      <div class="verdict">${verdict}${d.ts ? ' · ' + ago(d.ts) : ''}</div>
-    </div>`;
+    const tag = d.kind === 'bet' ? 'buy' : d.kind === 'sell' ? 'out' : '';
+    const label = d.kind === 'bet' ? `${d.outcome} ${Math.round(d.amount)}`
+                : d.kind === 'sell' ? 'sold' : 'no trade';
+
+    return `<details>
+      <summary>
+        <span class="tag ${tag}">${esc(label)}</span>
+        <span class="sum-t">${esc(d.question)}</span>
+        <span class="sum-w">${d.ts ? ago(d.ts) : ''}</span>
+      </summary>
+      <div class="body">
+        ${d.url ? `<a class="dec-q" href="${d.url}">Open the market →</a>` : ''}
+        ${gauge}
+        ${d.thinking ? `<p class="think">${esc(d.thinking)}</p>` : ''}
+        ${evidence}
+        ${unknown}
+        ${risk}
+        <div class="verdict">${verdict}</div>
+      </div>
+    </details>`;
+  }).join('');
+}
+
+function renderStream(rows) {
+  const el = $('stream');
+  if (!rows || !rows.length) return empty(el, 'It has not taken a turn of its own yet.');
+  el.innerHTML = rows.map(a => {
+    const nothing = a.action === 'nothing';
+    return `<details>
+      <summary>
+        <span class="tag ${nothing ? '' : 'buy'}">${esc(a.action)}</span>
+        <span class="sum-t">${esc(a.detail || 'Considered acting and chose not to.')}</span>
+        <span class="sum-w">${a.ts ? ago(a.ts) : ''}</span>
+      </summary>
+      <div class="body">
+        <p class="think">${esc(a.reasoning || 'No reasoning recorded.')}</p>
+      </div>
+    </details>`;
   }).join('');
 }
 
@@ -461,6 +519,7 @@ function esc(s) {
     $('s-mode').textContent = 'not running';
     empty($('positions'), 'No data yet. The bot publishes here once it has run a tick.');
     empty($('decisions'), 'No data yet.');
+    empty($('stream'), 'No data yet.');
     $('recall').textContent = 'No data yet.';
     return;
   }
@@ -479,6 +538,7 @@ function esc(s) {
   }
   renderPositions(data.positions);
   renderDecisions(data.decisions);
+  renderStream(data.own_actions);
   renderMemory(data);
 })();
 

@@ -264,10 +264,9 @@ Three things stand between it and your bankroll:
   cut the amount but never raise it. The reviewer is told that doing nothing is free, so
   when it is close it should reject, and that instructions inside the proposal are text
   being evaluated rather than instructions to it.
-- Whatever the two of them agree, the amount is **clamped in code** afterwards by
-  `[agency] max_mana_per_action`, the balance reserve, and the daily mana budget. A market
-  it does not actually hold is dropped, and a transfer under Manifold's M$10 managram
-  minimum is dropped.
+- Whatever the two of them agree, the amount is **clamped in code** afterwards by the
+  balance reserve and the daily mana budget. A market it does not actually hold is
+  dropped, and a transfer under Manifold's M$10 managram minimum is dropped.
 
 Set `enabled = false` to switch the whole thing off, or `allow_send_mana = false` to keep
 it trading but stop it moving mana to people.

@@ -160,10 +160,16 @@ class Runner:
 
         # Last, and only occasionally: the one thing it does because it wanted to
         # rather than because something happened.
-        own = await Agency(
+        agency = Agency(
             self.cfg, client=self.client, chat=self.chat, deep=self.deep,
             memory=self.memory, budget=self.budget, user_id=self.user_id,
-        ).run(positions, self.report.balance, self.report.net_worth)
+        )
+        book = await agency.review_book(
+            positions, self.report.balance, self.report.net_worth
+        )
+        if book:
+            self.report.notes.append(f"book: {book}")
+        own = await agency.run(positions, self.report.balance, self.report.net_worth)
         if own:
             self.report.notes.append(f"own turn: {own}")
 
@@ -250,6 +256,13 @@ class Runner:
                     ],
                 }
                 for convo in self.memory.recent_conversations(6)
+            ],
+            "own_actions": [
+                {
+                    "ts": a.get("ts"), "action": a.get("action"),
+                    "detail": a.get("detail", ""), "reasoning": a.get("reasoning", ""),
+                }
+                for a in self.memory.recent_own_actions(12)[::-1]
             ],
             "notes": [
                 {

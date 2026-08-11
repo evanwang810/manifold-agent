@@ -91,7 +91,7 @@ class ScanConfig:
     candidates_per_scan: int = 4
     min_unique_bettors: int = 12
     min_volume: float = 800
-    max_days_to_resolve: float = 45
+    max_days_to_resolve: float = 30
     min_hours_to_resolve: float = 6
     skip_if_seen_within_hours: float = 48
 
@@ -146,9 +146,11 @@ class AgencyConfig:
 
     enabled: bool = True
     min_minutes_between_actions: float = 180
-    # Ceiling on any single mana movement, whatever the models agreed between them.
-    max_mana_per_action: float = 50
     allow_send_mana: bool = True
+    # A sweep over every open position, separate from the free turn and narrower: it may
+    # only sell or add on markets already held, and each trade still goes to the reviewer.
+    review_positions: bool = True
+    min_minutes_between_book_reviews: float = 60
     # The deep model reviews anything touching mana and can veto it or cut the amount.
     # Turning this off means the cheap model moves money unsupervised.
     require_review: bool = True

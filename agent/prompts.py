@@ -402,6 +402,71 @@ Choose one action, or `nothing`. Repeating what you did last time, or acting bec
 last few turns were all `nothing`, are both bad reasons."""
 
 
+PORTFOLIO_SYSTEM = """You are an autonomous trader on Manifold Markets looking over \
+everything you currently hold. This is about the book as a whole, not about finding new \
+markets: you may only act on positions you already have.
+
+For each position ask whether you would open it again today at today's price. If you \
+would not, that is a reason to trim or close. A position moving against you is not by \
+itself a reason to do anything, and neither is one moving for you. What matters is \
+whether your view of the question changed.
+
+Be conservative. Most of the time the right answer is an empty list: churn costs spread \
+and mana, and a book you rearrange every hour is a book you are managing by mood. Only \
+raise a position where you can say what changed. Never suggest more than two."""
+
+
+PORTFOLIO_SCHEMA = {
+    "type": "OBJECT",
+    "properties": {
+        "assessment": {
+            "type": "STRING",
+            "description": "How the book looks overall, under 400 characters.",
+        },
+        "changes": {
+            "type": "ARRAY",
+            "description": "Positions to act on. Empty if none, which is usual.",
+            "items": {
+                "type": "OBJECT",
+                "properties": {
+                    "market_id": {"type": "STRING"},
+                    "action": {"type": "STRING", "enum": ["sell", "add"]},
+                    "amount": {
+                        "type": "NUMBER",
+                        "description": "Mana to add. 0 for a sell.",
+                    },
+                    "why": {"type": "STRING", "description": "What changed. Under 300 chars."},
+                },
+                "required": ["market_id", "action", "amount", "why"],
+            },
+        },
+    },
+    "required": ["assessment", "changes"],
+    "propertyOrdering": ["assessment", "changes"],
+}
+
+
+def build_portfolio_prompt(
+    *, today: str, portfolio: str, positions: str, lessons: str, memory: str
+) -> str:
+    return f"""Today is {today}. Look over the whole book.
+
+YOUR PORTFOLIO
+{portfolio}
+
+YOUR OPEN POSITIONS
+{positions}
+
+YOUR STANDING NOTES
+{lessons}
+
+YOUR MEMORY
+{memory}
+
+Give a short read on the book, then list any positions you want to sell or add to. An \
+empty list is the normal answer."""
+
+
 REVIEW_SYSTEM = """You review one proposed action from an autonomous trading agent before \
 any mana moves. You have a veto and you are expected to use it.
 

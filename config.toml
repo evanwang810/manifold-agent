@@ -95,7 +95,7 @@ candidates_per_scan = 4
 # have bothered to price than on one everybody is already staring at.
 min_unique_bettors = 12
 min_volume = 800
-max_days_to_resolve = 45
+max_days_to_resolve = 30
 min_hours_to_resolve = 6
 skip_if_seen_within_hours = 48
 
@@ -103,15 +103,20 @@ skip_if_seen_within_hours = 48
 # The agent's own turn. Everything else it does is a reaction to something; this is the
 # one place it acts unprompted, and it gets exactly one action. The cheap model proposes
 # (usually "nothing", which is the intended answer), and anything touching mana is then
-# reviewed by the deep model, which can veto it or cut the amount. The numbers below are
-# the part neither model can argue with, applied in code after both have spoken.
+# reviewed by the deep model, which can veto it or cut the amount. There is no ceiling on
+# a single action: the balance reserve and daily mana budget in [risk] are what bound it,
+# applied in code after both models have spoken.
 #
 # It can sell out of a position, add to one, send mana (returning a loan, paying someone
 # back, lending to someone who asked), or rewrite one of its own standing notes.
 enabled = true
 min_minutes_between_actions = 180
-max_mana_per_action = 50
 allow_send_mana = true
+# Separately, a sweep over the whole book: every open position looked at together, with
+# the option to trim or add. Narrower than the free turn, since it can only touch markets
+# already held, and every trade it proposes still goes through the deep reviewer.
+review_positions = true
+min_minutes_between_book_reviews = 60
 require_review = true         # false lets the cheap model move mana unsupervised
 
 [forecast]
