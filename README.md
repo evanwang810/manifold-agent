@@ -124,9 +124,18 @@ and reuses one client. Set `[screen] enabled = false` to skip screening entirely
 everything to the deep model.
 
 `[budget]` has two ceilings per tier. The per-tick one is really a rate limit, since ticks
-run 60 seconds apart, so keep each under your provider's requests-per-minute. The per-day
-one is tracked in durable state across ticks and is what keeps a small daily quota alive
-to the end of the day. Current call counts against both are on the website.
+run 60 seconds apart. The per-day one is tracked in durable state across ticks, and on a
+free tier it is the number that decides what the agent can do at all.
+
+Defaults assume 20 requests a day on the deep model, which is the binding constraint on
+everything else: 18 analyses a day means about 72 markets screened at a 25% pass rate,
+and the scan cadence and screen threshold are set to land there. If your quota is larger,
+raise `max_deep_calls_per_day` and drop `min_minutes_between_scans` together.
+
+Daily allowances are released against the clock rather than first-come, because a cap with
+no pacing is spent in the first ten minutes and then the agent is dark until midnight.
+`pace_burst` is how far ahead of the clock a tier may run so it can still react to
+something immediately. Current counts against both ceilings are on the website.
 
 Gemini is the default because its native Google Search grounding means research needs no
 second API key, and search matters more than model strength here: a mid model with three
@@ -190,6 +199,10 @@ Four channels, in increasing order of permanence:
   box. It applies to that run only.
 - **A Manifold comment.** Reply to any of the bot's last 10 comments, oldest answered
   first.
+- **A managram.** Off by default. Manifold exposes no private-message API on its public
+  v0 surface, so a managram is the only private channel there is, and the API minimum is
+  M$10 per send, meaning every reply costs real bankroll. Turn it on with
+  `reply_to_managrams` if that trade is worth it to you.
 - **`instructions.md`.** Everything below the horizontal rule goes into the system
   prompt on every tick, forever, until you edit it. This is where behavior changes
   belong.

@@ -48,19 +48,41 @@ class CallBudget:
         *,
         daily_limit: int = 0,
         used_today: int = 0,
+        day_fraction: float = 1.0,
+        pace_burst: int = 0,
         on_take: Callable[[], None] | None = None,
     ) -> None:
         self.limit = limit
         self.daily_limit = daily_limit
         self.used = 0
         self.used_today = used_today
+        self.day_fraction = day_fraction
+        self.pace_burst = pace_burst
         self._on_take = on_take
+
+    @property
+    def paced_allowance(self) -> float:
+        """How many calls the day is far enough along to justify having spent.
+
+        A daily cap with no pacing is spent in the first ten minutes and then the agent
+        is dark until midnight. This tracks the clock instead, with a small burst so it
+        can still react to two things at once rather than trickling one call an hour.
+        """
+        if not (self.daily_limit and self.pace_burst):
+            return float("inf")
+        return self.daily_limit * self.day_fraction + self.pace_burst
 
     def take(self, n: int = 1) -> bool:
         if self.used + n > self.limit:
             return False
         if self.daily_limit and self.used_today + n > self.daily_limit:
             log.warning("Daily cap of %d calls reached, holding off", self.daily_limit)
+            return False
+        if self.used_today + n > self.paced_allowance:
+            log.info(
+                "Pacing: %d of %d daily calls used and the day is %.0f%% gone, waiting",
+                self.used_today, self.daily_limit, self.day_fraction * 100,
+            )
             return False
         self.used += n
         self.used_today += n
@@ -71,9 +93,11 @@ class CallBudget:
 
     @property
     def spent(self) -> bool:
-        return self.used >= self.limit or (
-            bool(self.daily_limit) and self.used_today >= self.daily_limit
-        )
+        if self.used >= self.limit:
+            return True
+        if self.daily_limit and self.used_today >= self.daily_limit:
+            return True
+        return self.used_today >= self.paced_allowance
 
 
 @dataclass
@@ -140,13 +164,18 @@ class Brain:
         # Screening only makes sense on markets we went looking for. A filled order or
         # a position in freefall is already news, and gets the deep model regardless.
         if screen and self.cfg.screen.enabled:
-            passed, detail = await self._screen(market, comments)
+            passed, detail, quick = await self._screen(market, comments)
+            # Both outcomes are logged with the screener's own number, so the pass rate
+            # and the threshold that produced it can be measured later rather than
+            # guessed at. Calibrating this on the deep model's gaps is a proxy at best.
+            self.memory.log_event(
+                "screened_in" if passed else "screened_out",
+                market=market.slug, question=market.question, url=market.url,
+                market_prob=market.probability, quick_prob=quick,
+                gap=None if quick is None else round(abs(quick - market.probability), 3),
+                threshold=self.cfg.screen.escalate_edge, reason=detail,
+            )
             if not passed:
-                self.memory.log_event(
-                    "screened_out",
-                    market=market.slug, question=market.question, url=market.url,
-                    market_prob=market.probability, reason=detail,
-                )
                 return Evaluation(
                     market, None, None, False, f"screened out: {detail}",
                     screened_out=True,
@@ -216,7 +245,9 @@ class Brain:
 
     # -- steps ------------------------------------------------------------
 
-    async def _screen(self, market: Market, comments: list[Comment]) -> tuple[bool, str]:
+    async def _screen(
+        self, market: Market, comments: list[Comment]
+    ) -> tuple[bool, str, float | None]:
         """Cheap first pass. True means the deep model should look at this properly.
 
         The screener forecasts blind like the trader does, so its number can be compared
@@ -226,7 +257,9 @@ class Brain:
         and the cost of skipping a mispriced market is the entire point of the project.
         """
         if not self.budget.fast.take():
-            return True, "screen skipped, no fast budget"
+            # The deep model is the scarce one. If the cheap pass cannot run, skipping
+            # the market is right: escalating unscreened is how the quota disappears.
+            return False, "screen skipped, no fast budget", None
 
         try:
             response = await self.fast.generate(
@@ -236,9 +269,9 @@ class Brain:
                 attempts=2,
             )
             data = extract_json(response.text)
-        except Exception as exc:  # noqa: BLE001 - never let the screen block a trade
-            log.info("Screen failed on %s (%s), escalating anyway", market.slug, exc)
-            return True, "screen failed"
+        except Exception as exc:  # noqa: BLE001
+            log.info("Screen failed on %s (%s), skipping it", market.slug, exc)
+            return False, "screen failed", None
 
         rough = min(0.99, max(0.01, float(data.get("probability", 0.5))))
         gap = abs(rough - market.probability)
@@ -246,10 +279,10 @@ class Brain:
         interesting = bool(data.get("worth_a_look"))
 
         if gap >= self.cfg.screen.escalate_edge:
-            return True, f"quick estimate {rough:.0%} vs market {market.probability:.0%}"
+            return True, f"quick estimate {rough:.0%} vs market {market.probability:.0%}", rough
         if interesting:
-            return True, f"flagged: {why}"
-        return False, f"quick estimate {rough:.0%} agrees with market. {why}"
+            return True, f"flagged: {why}", rough
+        return False, f"quick estimate {rough:.0%} agrees with market. {why}", rough
 
     async def _research(self, market: Market) -> str:
         """Grounded generation where the provider supports it, keyless search otherwise.

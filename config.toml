@@ -59,25 +59,34 @@ fallbacks = ["gemini-3.5-flash", "gemini-3.5-flash-lite"]
 # be sizeable before it counts as evidence: at 0.03 nearly everything escalated and the
 # deep model's quota went on questions that were fairly priced all along.
 enabled = true
-escalate_edge = 0.07
+# Calibrated from the 17 forecasts on record: their market-versus-model gaps put the
+# 75th percentile at 0.081, and a 0.10 threshold passes 4 of 17. That targets roughly a
+# quarter of what gets scanned. Every screen now logs its own gap and verdict, so this
+# can be re-derived properly once there is enough screener data to beat the proxy.
+escalate_edge = 0.10
 
 [budget]
-# Sized for a small free tier. Ticks run 60 seconds apart, so the per-tick numbers are
-# effectively per-minute rate limits; keep each under the RPM your provider gives you.
-# The per-day numbers are the ones that keep a daily quota alive to the end of the day,
-# and they are tracked in state across ticks. Screened-out markets do not count against
-# the evaluation cap, so a tick can look at several questions and analyse the one that
-# looked wrong. Each analysis costs one deep call plus one fast call for research.
+# Sized for a free tier of 20 requests a day on the deep model. That is the binding
+# constraint on the whole agent: 18 analyses a day, so roughly 72 markets screened at a
+# 25% pass rate, plus one research call each. Nothing else here matters as much as
+# keeping max_deep_calls_per_day under the real quota, with headroom for a retry.
 max_evaluations_per_tick = 2
-max_fast_calls_per_tick = 6
-max_chat_calls_per_tick = 3
-max_deep_calls_per_tick = 2
-max_fast_calls_per_day = 400
-max_chat_calls_per_day = 200
-max_deep_calls_per_day = 120
+max_fast_calls_per_tick = 4
+max_chat_calls_per_tick = 2
+max_deep_calls_per_tick = 1
+max_fast_calls_per_day = 150
+max_chat_calls_per_day = 40
+max_deep_calls_per_day = 18
+# Without pacing a daily cap is gone in the first ten minutes and the agent is dark
+# until midnight. Calls are released against the clock instead, and the burst is how
+# far ahead of it a tier may run so it can still react to something immediately.
+pace_burst = 3
 
 [scan]
-min_minutes_between_scans = 20
+# 24 scans a day at 4 markets each is 96 screens, which at a 25% pass rate is about 24
+# candidates for a deep model that can afford 18. Pacing absorbs the difference.
+min_minutes_between_scans = 60
+candidates_per_scan = 4
 min_unique_bettors = 25
 min_volume = 3000
 max_days_to_resolve = 30

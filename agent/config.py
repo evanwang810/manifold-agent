@@ -68,19 +68,27 @@ class BudgetConfig:
     # Sized against a small free tier. Ticks run every 60 seconds, so a per-tick cap is
     # effectively a per-minute rate limit: keep the sum of these under the tightest RPM
     # your provider gives you, with room to spare for a retry.
-    max_fast_calls_per_tick: int = 6
-    max_chat_calls_per_tick: int = 3
-    max_deep_calls_per_tick: int = 2
-    # Rolling 24-hour ceilings, tracked in state across ticks. This is the one that
-    # matters on a free daily quota, since per-tick caps say nothing about a whole day.
-    max_fast_calls_per_day: int = 400
-    max_chat_calls_per_day: int = 200
-    max_deep_calls_per_day: int = 120
+    max_fast_calls_per_tick: int = 4
+    max_chat_calls_per_tick: int = 2
+    max_deep_calls_per_tick: int = 1
+    # The ceiling that actually matters on a free tier, tracked in state across ticks.
+    # Set these below the provider's real daily quota, not at it: a retry or a probe
+    # still costs a request.
+    max_fast_calls_per_day: int = 150
+    max_chat_calls_per_day: int = 40
+    max_deep_calls_per_day: int = 18
+    # Spend the daily allowance across the day rather than in the first ten minutes.
+    # The burst is how far ahead of the clock a tier may run, so the agent can still
+    # react to something now instead of trickling one call an hour.
+    pace_burst: int = 3
 
 
 @dataclass
 class ScanConfig:
     min_minutes_between_scans: float = 60
+    # Markets pulled per scan. Each costs one screen call, and at a 25% pass rate this
+    # is what sets the deep model's daily load: 24 scans a day times this, quartered.
+    candidates_per_scan: int = 4
     min_unique_bettors: int = 25
     min_volume: float = 3000
     max_days_to_resolve: float = 30
@@ -120,10 +128,12 @@ class ScreenConfig:
     """
 
     enabled: bool = True
-    # Escalate if the quick estimate is this far from the price. The screener is coarse,
-    # so a small gap is noise rather than evidence; set below risk.min_edge and it waves
-    # nearly everything through and the deep model's quota goes on fairly priced markets.
-    escalate_edge: float = 0.07
+    # Escalate if the quick estimate is this far from the price. Calibrated against the
+    # 17 forecasts on record: their market/model gaps put the 75th percentile at 0.081
+    # and a 0.10 threshold passes 4 of 17, so this targets roughly a quarter of what is
+    # scanned. Both screen outcomes are logged with the gap that produced them, so this
+    # can be re-derived from the screener's own numbers once there are enough.
+    escalate_edge: float = 0.10
 
 
 @dataclass

@@ -95,10 +95,14 @@ class Runner:
         self._evaluations = 0
 
     def _budget(self, tier: str, per_tick: int, per_day: int) -> CallBudget:
+        now = time.gmtime()
+        elapsed = (now.tm_hour * 3600 + now.tm_min * 60 + now.tm_sec) / 86400
         return CallBudget(
             per_tick,
             daily_limit=per_day,
             used_today=self.memory.llm_used_today(tier),
+            day_fraction=elapsed,
+            pace_burst=self.cfg.budget.pace_burst,
             on_take=lambda: self.memory.record_llm_call(tier),
         )
 
@@ -407,7 +411,7 @@ class Runner:
         # More candidates than the tick can afford to analyse: the screen throws most
         # of them away for one cheap call each, and only survivors spend a deep call.
         candidates = await self.scanner.find_candidates(
-            limit=self.cfg.budget.max_evaluations_per_tick * 4
+            limit=self.cfg.scan.candidates_per_scan
             if self.cfg.screen.enabled
             else self.cfg.budget.max_evaluations_per_tick
         )
