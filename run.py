@@ -73,6 +73,18 @@ async def _check_tier(cfg) -> bool:
             ok = generate_ok = False
             print(f"generate     FAILED  {exc}")
 
+        # Handy when picking a model: the exact ids this key can see, rather than the
+        # ones you remember existing.
+        if isinstance(llm, GeminiClient):
+            try:
+                available = await llm.list_models()
+                for family in ("gemma", "flash"):
+                    hits = [m for m in available if family in m][:14]
+                    if hits:
+                        print(f"available {family:6} {', '.join(hits)}")
+            except Exception as exc:  # noqa: BLE001
+                print(f"available     could not list models ({_short(exc)})")
+
         # Being listed is not the same as being callable. If the configured model is
         # refused, find out which ones this key can actually use rather than guessing.
         if not generate_ok and isinstance(llm, GeminiClient):
