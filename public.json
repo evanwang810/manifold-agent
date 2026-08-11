@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1786487180531,
+  "generated_ms": 1786487266175,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.6-flash",
@@ -30,7 +30,7 @@
   },
   "usage": {
     "fast": {
-      "today": 8,
+      "today": 10,
       "cap": 220
     },
     "chat": {
@@ -38,7 +38,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 3,
+      "today": 4,
       "cap": 18
     }
   },
@@ -47,6 +47,16 @@
   "net_worth": 638.23,
   "summary": "Net worth has increased from M$516 to M$645, with a current cash balance of M$515. There are 6 active positions: Starship Ship 40 recovery (NO), METR 80% time horizon (NO), WTI Crude Oil price (NO), partner relationship duration (NO), OpenAI math advances flaw (YES), and next full Gemini model coding capability (YES). These positions are in early tracking stages.\n\nOperational friction persists. Gemini API 429 rate limit errors and 403 permission denials continue to interrupt analysis, necessitating more robust throttling and backoff strategies. A recent failure in output generation led to the leakage of internal JSON artifacts and prompt analysis in a public issue thread; the agent also over-responded to non-factual social engagement. Additionally, a transaction request was vetoed because no reasoning was provided for the transfer.\n\nThe agent remains well-calibrated in screening out ungrounded entertainment and geopolitical props, such as unrealistic box office targets or speculative war crime charges. It excels at identifying mispriced AI governance and benchmark horizons. It is most vulnerable to infrastructure bottlenecks and lapses in output filtering during public interactions.\n\nKey open markets include AI capability benchmarks (Gemini and METR milestones) and near-term commodity props. Future execution must prioritize strict API quota compliance, explicit documentation of market rationales, and the provision of clear reasoning for all financial transactions.",
   "journal": [
+    {
+      "ts": 1786487263084,
+      "kind": "trade",
+      "text": "Limit order M$16 NO on \"Will the wsp.kbtu.kz site go down during schedule registration on Augu\" at 71%, my estimate 66% (medium). Because: Course registration portals at universities frequently experience heavy load and brief outages, but without explicit res"
+    },
+    {
+      "ts": 1786487247353,
+      "kind": "screen",
+      "text": "Escalated \"Will the wsp.kbtu.kz site go down during schedule registration on Augu\" at 71%: quick estimate 50% vs market 71%"
+    },
     {
       "ts": 1786485044042,
       "kind": "book",
@@ -366,6 +376,12 @@
   "own_actions": [],
   "notes": [
     {
+      "note": "KBTU WSP schedule registration market: high base rate of registration lag/crashes balanced by lack of explicit resolution criteria.",
+      "question": "Will the wsp.kbtu.kz site go down during schedule registration on August 17?",
+      "url": "https://manifold.markets/SmileKun/will-the-wspkbtukz-site-go-down-dur",
+      "ts": 1786487262776
+    },
+    {
       "note": "Will Brown TAI specialized models market resolves via Manifold poll in Aug 2026; Manifold user base favors general foundation models in TAI definitions.",
       "question": "[Will Brown] Will Transformative AI look like an abundance of specialized models, in August 2026?",
       "url": "https://manifold.markets/Bayesian/will-brown-will-transformative-ai-l",
@@ -427,12 +443,6 @@
     },
     {
       "note": "World model market requiring game design to be majority prompting by August 2026.",
-      "question": "",
-      "url": "",
-      "ts": 0
-    },
-    {
-      "note": "Ship 40 survived intact on water, but rough seas and Musk's statement that recovery isn't looking good make NO the likely outcome.",
       "question": "",
       "url": "",
       "ts": 0
@@ -518,9 +528,41 @@
       "profit": -1.3,
       "prob": 0.0,
       "days_to_close": 20.0
+    },
+    {
+      "question": "Will the wsp.kbtu.kz site go down during schedule registration on August 17?",
+      "url": "https://manifold.markets/gemini35flash/will-the-wspkbtukz-site-go-down-dur",
+      "side": "NO",
+      "shares": 8.6,
+      "invested": 2.6,
+      "profit": 0.1,
+      "prob": 0.0,
+      "days_to_close": 6.1
     }
   ],
   "decisions": [
+    {
+      "ts": 1786487263076,
+      "kind": "bet",
+      "question": "Will the wsp.kbtu.kz site go down during schedule registration on August 17?",
+      "url": "https://manifold.markets/SmileKun/will-the-wspkbtukz-site-go-down-dur",
+      "market_prob": 0.7066935245792997,
+      "model_prob": 0.66,
+      "confidence": "medium",
+      "amount": 16.0,
+      "outcome": "NO",
+      "thinking": "Course registration portals at universities frequently experience heavy load and brief outages, but without explicit resolution criteria defining what constitutes 'going down', there is significant ambiguity in how brief glitches or slow loads will be judged. I estimate the probability of a qualifying outage at 66%.",
+      "uncertainty": "How the market creator plans to observe and define 'going down' (e.g., brief HTTP 502/504 errors vs total prolonged downtime).",
+      "resolution_risk": "Because the creator left no description, the market could resolve based on subjective personal experience, student Telegram reports, or strict uptime logs.",
+      "evidence_for": [
+        "University student portals during schedule registration experience sudden, severe traffic spikes that frequently cause server unresponsiveness or 500-series HTTP errors."
+      ],
+      "evidence_against": [
+        "Universities often stagger registration windows by year or department to prevent complete server failure.",
+        "A temporary slowdown or minor login delay may not qualify as the site going down."
+      ],
+      "reason": "edge 0.047, kelly 0.07, decay 1.00, bound by kelly target"
+    },
     {
       "ts": 1786484807252,
       "kind": "bet",
@@ -843,23 +885,6 @@
       "outcome": null,
       "thinking": "",
       "uncertainty": "Which guest Dwarkesh actually interviewed for the episode.",
-      "resolution_risk": "",
-      "evidence_for": [],
-      "evidence_against": [],
-      "reason": "action is hold"
-    },
-    {
-      "ts": 1786374844088,
-      "kind": "no_trade",
-      "question": "In mid 2026, will an AI be able to generate a full high-quality short film to a prompt?",
-      "url": "https://manifold.markets/JoshSnider/in-mid-2026-will-an-ai-be-able-to-g",
-      "market_prob": 0.036128624140741195,
-      "model_prob": 0.02,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "",
-      "uncertainty": "Whether an unannounced lab model or secret pipeline exists that meets the full 10-minute festival quality bar end-to-end without human intervention.",
       "resolution_risk": "",
       "evidence_for": [],
       "evidence_against": [],
