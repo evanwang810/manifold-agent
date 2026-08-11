@@ -209,8 +209,17 @@ class GeminiClient(LLMClient):
         text = prompt
         if system and plain:
             text = f"{system}\n\n---\n\n{prompt}"
+        if plain:
+            # Without this Gemma narrates the task back at you ("The user wants me
+            # to..."). Harmless in a chat window, not harmless when the output is
+            # posted verbatim as a public comment.
+            text += (
+                "\n\nOutput only the reply itself, exactly as it should appear. Do not "
+                "restate the task, do not explain what you are about to do, and do not "
+                "wrap it in quotes."
+            )
         if plain and json_schema is not None:
-            text += "\n\nReply with a single JSON object and nothing else."
+            text += " In this case that means a single JSON object and nothing else."
 
         body: dict[str, Any] = {
             "contents": [{"role": "user", "parts": [{"text": text}]}],
