@@ -145,6 +145,7 @@ class Runner:
         if self.cfg.one_off_order:
             self.report.notes.append(f"one-off order: {self.cfg.one_off_order[:120]}")
 
+        self._observe_portfolio(positions)
         await self._check_fills()
         await self._check_moves(positions)
         self.report.replies = await self.social.run()
@@ -213,6 +214,10 @@ class Runner:
             "balance": round(self.report.balance, 2),
             "net_worth": round(self.report.net_worth, 2),
             "summary": self.memory.state.get("summary", ""),
+            "journal": [
+                {"ts": e.get("ts"), "kind": e.get("kind"), "text": e.get("text", "")}
+                for e in self.memory.recent_journal(40)[::-1]
+            ],
             "lessons": [
                 {
                     "text": le.get("text", ""),
@@ -286,6 +291,75 @@ class Runner:
         }
         path = self.cfg.state_dir / "public.json"
         path.write_text(json.dumps(snapshot, indent=2, default=str), encoding="utf-8")
+
+    # -- observation ------------------------------------------------------
+
+    def _observe_portfolio(self, positions: list[Any]) -> None:
+        """Write down what changed since the last tick. No LLM, so it is free.
+
+        Most ticks have nothing to decide, and those ticks used to leave no trace at
+        all. The agent could not tell you a position had been bleeding for an hour
+        because nothing had written it down. Thresholds are here so a market that ticks
+        one point back and forth does not fill the journal with nothing.
+        """
+        mark = self.memory.state["portfolio_mark"]
+        old_net = float(mark.get("net_worth") or 0.0)
+        if old_net and abs(self.report.net_worth - old_net) >= max(5.0, old_net * 0.02):
+            direction = "up" if self.report.net_worth > old_net else "down"
+            self.memory.observe(
+                "portfolio",
+                f"Net worth {direction} from M${old_net:,.0f} to "
+                f"M${self.report.net_worth:,.0f}, balance M${self.report.balance:,.0f}.",
+            )
+        mark["net_worth"] = self.report.net_worth
+        mark["balance"] = self.report.balance
+
+        seen = self.memory.state["position_mark"]
+        live = {p.contract_id for p in positions}
+
+        for position in positions:
+            before = seen.get(position.contract_id)
+            if before is None:
+                self.memory.observe(
+                    "position",
+                    f"Opened {position.shares:.0f} {position.side} on "
+                    f"\"{position.question[:80]}\" at {position.last_prob:.0%}, "
+                    f"M${position.invested:.0f} in.",
+                )
+            else:
+                moved = position.last_prob - float(before.get("prob") or 0.0)
+                pnl = position.profit - float(before.get("profit") or 0.0)
+                if abs(moved) >= 0.03:
+                    self.memory.observe(
+                        "move",
+                        f"\"{position.question[:70]}\" moved {moved:+.0%} to "
+                        f"{position.last_prob:.0%}. Holding {position.side}, "
+                        f"P/L M${position.profit:+.0f}.",
+                    )
+                elif abs(pnl) >= max(10.0, abs(position.invested) * 0.15):
+                    self.memory.observe(
+                        "pnl",
+                        f"\"{position.question[:70]}\" P/L moved M${pnl:+.0f} to "
+                        f"M${position.profit:+.0f} without much price change.",
+                    )
+            seen[position.contract_id] = {
+                "prob": position.last_prob,
+                "profit": position.profit,
+                "shares": position.shares,
+                "side": position.side,
+                "question": position.question[:120],
+            }
+
+        # A position that vanished either resolved or was sold. Either way it is the
+        # single most informative thing that happens to a forecaster, so say so.
+        for contract_id in [k for k in seen if k not in live]:
+            gone = seen.pop(contract_id)
+            self.memory.observe(
+                "closed",
+                f"No longer holding \"{gone.get('question', contract_id)[:70]}\". "
+                f"Last seen {gone.get('side')} at {float(gone.get('prob') or 0):.0%}, "
+                f"P/L M${float(gone.get('profit') or 0):+.0f}. Resolved or sold.",
+            )
 
     # -- stages -----------------------------------------------------------
 

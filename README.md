@@ -211,6 +211,20 @@ It remembers the conversations. Threads are keyed by person rather than by marke
 someone it has argued with before is recognised the next time they turn up somewhere
 else, and the last dozen turns are in front of it when it replies.
 
+It also keeps a **running journal**. Most ticks have nothing to decide, and those ticks
+used to leave no trace at all, so the agent could not tell you a position had been
+bleeding for an hour because nothing had written it down. Now plain code notices things
+on every tick and writes a line: a held market moving three points, a P/L swing, a
+position opening or disappearing, every screen verdict with its reasoning, every analysis
+and trade, every conversation. Recording costs nothing, so it notices everything and
+decides later what was worth keeping.
+
+The journal tail is appended to the memory the model sees, so recent hours are in front
+of it even though the compressed summary has not caught up. Compression then folds the
+whole journal into the narrative and deletes it, and fires on whichever comes first:
+enough decisions, eight hours, or a nearly full journal. Event count alone never fires on
+a quiet day, which is exactly when the journal fills with position drift.
+
 Advice worth carrying forward becomes a **standing note**: a one-line rule that sits in
 front of every future decision. Two sources can write one. The agent itself, after a
 trade taught it something general. And you, in a GitHub issue, recognised because the

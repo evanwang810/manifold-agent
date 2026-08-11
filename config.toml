@@ -74,7 +74,7 @@ max_evaluations_per_tick = 2
 max_fast_calls_per_tick = 4
 max_chat_calls_per_tick = 2
 max_deep_calls_per_tick = 1
-max_fast_calls_per_day = 150
+max_fast_calls_per_day = 220
 max_chat_calls_per_day = 40
 max_deep_calls_per_day = 18
 # Without pacing a daily cap is gone in the first ten minutes and the agent is dark
@@ -83,9 +83,10 @@ max_deep_calls_per_day = 18
 pace_burst = 3
 
 [scan]
-# 24 scans a day at 4 markets each is 96 screens, which at a 25% pass rate is about 24
-# candidates for a deep model that can afford 18. Pacing absorbs the difference.
-min_minutes_between_scans = 60
+# 36 scans a day at 4 markets each is 144 screens, which at a 25% pass rate is about 36
+# candidates for a deep model that can afford 18. Pacing absorbs the difference, and
+# screening more than the deep model can take is the cheapest way to see more markets.
+min_minutes_between_scans = 40
 candidates_per_scan = 4
 min_unique_bettors = 25
 min_volume = 3000
@@ -150,7 +151,15 @@ watch_last_n_comments = 10    # how far back to look for replies to the bot
 
 [memory]
 path = "state"
+# Compress on whichever comes first: enough decisions, enough hours, or a full journal.
+# Events alone never fires on a quiet day and the context just grows.
 compress_after_events = 60
+compress_after_hours = 8
+# Running observations, written by plain code on every tick and folded into the summary
+# when it is next rewritten. Recording is free, so it notices everything and decides
+# later what was worth keeping.
+max_journal = 300
+journal_in_context = 30
 # Standing notes the agent wrote for itself or was given by someone it talked to.
 # These sit in front of every decision, so the list stays short on purpose.
 max_lessons = 16

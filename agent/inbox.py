@@ -222,5 +222,11 @@ class Inbox:
             "issue_answered", number=number, asker=asker,
             lesson=lesson.strip()[:280] if learned else "",
         )
+        self.memory.observe(
+            "conversation",
+            f"@{asker}{' (my owner)' if from_owner else ''} asked on issue #{number}: "
+            f"\"{question[:90]}\". I answered: {body[:120]}"
+            + (f" Kept as a standing note: {lesson.strip()[:100]}" if learned else ""),
+        )
         log.info("Answered issue #%s from @%s", number, asker)
         return True

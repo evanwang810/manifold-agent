@@ -164,6 +164,11 @@ class Social:
         self.memory.log_event(
             "reply", market=market.slug, to=comment.username, text=text[:300]
         )
+        self.memory.observe(
+            "conversation",
+            f"@{comment.username} said \"{comment.text[:90]}\" on "
+            f"\"{market.question[:50]}\". I replied: {text[:120]}",
+        )
         log.info("Replied to @%s on %s", comment.username, market.slug)
         return True
 

@@ -216,6 +216,8 @@
   <section>
     <h2>What it remembers</h2>
     <p class="recall" id="recall">Loading…</p>
+    <p class="sub">Running journal</p>
+    <div id="journal"><p class="empty">Nothing noted yet.</p></div>
     <p class="sub">Standing notes</p>
     <div id="lessons"><p class="empty">Nothing learned yet.</p></div>
     <p class="sub">Notes on individual markets</p>
@@ -390,6 +392,14 @@ function renderMemory(data) {
       return `<li><span class="src${owner}">${esc(l.source || 'self')}</span>
         <span>${esc(l.text)}</span></li>`;
     }).join('')}</ul>`;
+  }
+
+  const journal = data.journal || [];
+  if (journal.length) {
+    $('journal').innerHTML = `<ul class="lessons">${journal.map(j =>
+      `<li><span class="src">${esc(j.kind || '')}</span>
+        <span>${esc(j.text)}<br><span class="on">${j.ts ? ago(j.ts) : ''}</span></span>
+      </li>`).join('')}</ul>`;
   }
 
   const notes = data.notes || [];

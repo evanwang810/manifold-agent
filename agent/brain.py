@@ -175,6 +175,11 @@ class Brain:
                 gap=None if quick is None else round(abs(quick - market.probability), 3),
                 threshold=self.cfg.screen.escalate_edge, reason=detail,
             )
+            self.memory.observe(
+                "screen",
+                f"{'Escalated' if passed else 'Passed on'} \"{market.question[:70]}\" "
+                f"at {market.probability:.0%}: {detail}",
+            )
             if not passed:
                 return Evaluation(
                     market, None, None, False, f"screened out: {detail}",
@@ -238,6 +243,12 @@ class Brain:
                 evidence_for=decision.evidence_for[:4],
                 evidence_against=decision.evidence_against[:4],
                 resolution_risk=decision.resolution_risk,
+            )
+            self.memory.observe(
+                "analysis",
+                f"Analysed \"{market.question[:70]}\": market {market.probability:.0%}, "
+                f"my {decision.probability:.0%} ({decision.confidence}). No trade, "
+                f"{sizing.reason}.",
             )
             return Evaluation(market, decision, sizing, False, sizing.reason)
 
@@ -423,6 +434,13 @@ class Brain:
             resolution_risk=decision.resolution_risk,
         )
 
+        self.memory.observe(
+            "trade",
+            f"{'Limit order' if sizing.limit_prob else 'Bought'} M${sizing.amount:.0f} "
+            f"{sizing.outcome} on \"{market.question[:70]}\" at "
+            f"{market.probability:.0%}, my estimate {decision.probability:.0%} "
+            f"({decision.confidence}). Because: {decision.comment[:120]}",
+        )
         await self._maybe_comment(market, decision, sizing)
         return Evaluation(market, decision, sizing, True, "placed")
 
@@ -446,6 +464,12 @@ class Brain:
             side=position.side, profit=position.profit,
             model_prob=decision.probability, market_prob=market.probability,
             thinking=decision.comment, dry_run=self.cfg.manifold.dry_run,
+        )
+        self.memory.observe(
+            "trade",
+            f"Sold out of \"{market.question[:70]}\" ({position.side}) for "
+            f"M${position.profit:+.0f}. Now think {decision.probability:.0%} against "
+            f"market {market.probability:.0%}.",
         )
         return Evaluation(market, decision, None, True, "sold")
 

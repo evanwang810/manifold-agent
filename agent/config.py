@@ -170,6 +170,13 @@ class SocialConfig:
 class MemoryConfig:
     path: str = "state"
     compress_after_events: int = 60
+    # Compress on time as well as on events, or a quiet day never compresses at all and
+    # the journal just grows.
+    compress_after_hours: float = 8
+    # Running observations written by code on every tick. Free to record, so the agent
+    # can afford to notice everything and decide later what was worth keeping.
+    max_journal: int = 300
+    journal_in_context: int = 30
     # Standing notes the agent has written for itself or been given by someone it
     # talked to. Kept small on purpose: this text is in front of every decision.
     max_lessons: int = 16

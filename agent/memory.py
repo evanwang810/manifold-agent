@@ -52,6 +52,7 @@ class Memory:
     def _defaults() -> dict[str, Any]:
         return {
             "summary": "",
+            "journal": [],             # cheap running observations: [{ts, kind, text}]
             "lessons": [],             # standing notes: [{text, source, ts}]
             "conversations": {},       # key -> {channel, who, title, url, messages[]}
             "market_notes": {},        # market_id -> one line the model wrote about it
@@ -59,6 +60,9 @@ class Memory:
             "budget": {"day": "", "spent": 0.0},
             "llm_usage": {"day": ""},   # day -> per-tier call counts, reset daily
             "last_scan_ms": 0,
+            "last_compress_ms": 0,
+            "portfolio_mark": {},      # last seen balance/net worth, to spot changes
+            "position_mark": {},       # contract_id -> last seen shares/profit/prob
             "last_managram_ms": 0,
             "my_comments": [],         # [{id, contract_id, ts}], newest last
             "commented_markets": [],   # markets we have already introduced ourselves on
@@ -92,6 +96,38 @@ class Memory:
             except json.JSONDecodeError:
                 continue
         return out
+
+    # -- journal ----------------------------------------------------------
+
+    def observe(self, kind: str, text: str) -> None:
+        """Write down something that happened. Costs nothing.
+
+        The narrative summary is only rewritten every so often, because rewriting it
+        costs an LLM call. Between rewrites the agent used to remember almost nothing:
+        it could not tell you that a position moved against it an hour ago, because
+        nothing wrote that down. Observations are recorded by plain code on every tick
+        and folded into the summary later, so noticing is free and only remembering
+        long-term costs anything.
+        """
+        text = " ".join(text.split())[:300]
+        if not text:
+            return
+        journal = self.state["journal"]
+        # Same observation twice in a row is noise: a price that has not moved since the
+        # last tick does not need a second line saying so.
+        if journal and journal[-1]["kind"] == kind and journal[-1]["text"] == text:
+            return
+        journal.append({"ts": int(time.time() * 1000), "kind": kind, "text": text})
+        self.state["journal"] = journal[-self.cfg.max_journal :]
+
+    def recent_journal(self, n: int) -> list[dict[str, Any]]:
+        return self.state["journal"][-n:]
+
+    def journal_block(self, n: int) -> str:
+        entries = self.recent_journal(n)
+        if not entries:
+            return "(nothing noted yet)"
+        return "\n".join(f"- {_stamp(e['ts'])} {e['text']}" for e in entries)
 
     # -- market bookkeeping -----------------------------------------------
 
@@ -334,33 +370,63 @@ class Memory:
     # -- compression ------------------------------------------------------
 
     def context_block(self) -> str:
-        """The memory the model sees on every decision."""
+        """The memory the model sees on every decision.
+
+        The compressed summary is the long term. The journal tail is the last few hours,
+        which the summary will not have absorbed yet and which is usually the part that
+        matters for what to do right now.
+        """
         summary = self.state.get("summary", "").strip()
-        return summary or "No prior history yet. This is an early trade."
+        parts = [summary or "No compressed history yet. This is still early."]
+        recent = self.journal_block(self.cfg.journal_in_context)
+        if recent != "(nothing noted yet)":
+            parts.append(f"Since that was written:\n{recent}")
+        return "\n\n".join(parts)
+
+    def _hours_since_compress(self) -> float:
+        last = float(self.state.get("last_compress_ms") or 0)
+        if last <= 0:
+            return float("inf")
+        return (time.time() * 1000 - last) / 3_600_000
 
     async def maybe_compress(self) -> None:
-        if self.state.get("events_since_compress", 0) < self.cfg.compress_after_events:
-            return
-        await self.compress()
+        """Compress on whichever comes first: enough events, or enough time.
+
+        Event count alone is the wrong trigger now that the journal fills up on quiet
+        ticks. A slow day would otherwise never compress and the context would just grow.
+        """
+        due_by_events = (
+            self.state.get("events_since_compress", 0) >= self.cfg.compress_after_events
+        )
+        due_by_time = self._hours_since_compress() >= self.cfg.compress_after_hours
+        due_by_journal = len(self.state["journal"]) >= self.cfg.max_journal * 0.8
+        if due_by_events or due_by_time or due_by_journal:
+            await self.compress()
 
     async def compress(self) -> None:
         events = self.recent_events(self.cfg.compress_after_events * 2)
-        if not events:
+        journal = self.state["journal"]
+        if not events and not journal:
             return
 
         rendered = "\n".join(
             json.dumps({k: v for k, v in e.items() if k != "raw"}, default=str)[:500]
             for e in events
         )
+        observed = "\n".join(f"{_stamp(e['ts'])} [{e['kind']}] {e['text']}" for e in journal)
         prompt = (
             f"Existing summary:\n{self.state.get('summary') or '(none)'}\n\n"
-            f"Recent events:\n{rendered}\n\n"
+            f"Decisions and actions since then:\n{rendered}\n\n"
+            f"Running observations since then:\n{observed or '(none)'}\n\n"
             "Write an updated summary under 500 words covering:\n"
             "- Running performance: how many trades, roughly how they went, current exposure.\n"
+            "- What has happened to the open positions, including which are moving against us.\n"
             "- Mistakes worth not repeating, stated concretely.\n"
             "- Categories or question styles where this agent has been well or badly calibrated.\n"
             "- Anything about specific still-open markets that matters.\n"
-            "Write plainly. No headers, no bullet decoration, just tight prose."
+            "Keep concrete details worth keeping and drop the rest: this replaces the "
+            "observations above, which are deleted once you have written it. Write "
+            "plainly. No headers, no bullet decoration, just tight prose."
         )
         try:
             response = await self.llm.generate(prompt, system=COMPRESS_SYSTEM)
@@ -370,5 +436,14 @@ class Memory:
 
         self.state["summary"] = response.text.strip()
         self.state["events_since_compress"] = 0
+        self.state["last_compress_ms"] = int(time.time() * 1000)
+        # The tail stays so the next few ticks still have immediate context; everything
+        # older is now represented in the summary.
+        self.state["journal"] = journal[-10:]
         self.save()
-        log.info("Compressed memory to %d chars", len(self.state["summary"]))
+        log.info("Compressed %d observations into %d chars of memory",
+                 len(journal), len(self.state["summary"]))
+
+
+def _stamp(ms: int) -> str:
+    return time.strftime("%m-%d %H:%MZ", time.gmtime(ms / 1000))
