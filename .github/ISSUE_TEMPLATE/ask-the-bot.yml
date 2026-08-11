@@ -1,0 +1,11 @@
+name: Ask the bot
+description: Ask the agent something. It answers on its next tick.
+labels: ["ask-the-bot"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+      description: About a position, a market, or why it did something.
+    validations:
+      required: true
