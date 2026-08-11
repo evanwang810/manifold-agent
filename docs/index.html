@@ -122,6 +122,9 @@
     border:1px solid var(--line); padding:2px 6px; white-space:nowrap;
   }
   .src.owner{color:var(--accent); border-color:var(--accent)}
+  .on{font-size:12.5px; color:var(--faint)}
+  .on a{color:var(--faint)}
+  #models table{margin-bottom:26px}
   .chat{border-top:1px solid var(--line-2); padding:14px 0}
   .chat .who{font-family:var(--mono); font-size:11px; color:var(--faint); margin-bottom:8px}
   .chat .who a{color:var(--faint)}
@@ -215,8 +218,12 @@
     <p class="recall" id="recall">Loading…</p>
     <p class="sub">Standing notes</p>
     <div id="lessons"><p class="empty">Nothing learned yet.</p></div>
+    <p class="sub">Notes on individual markets</p>
+    <div id="notes"><p class="empty">No notes yet.</p></div>
     <p class="sub">Recent conversations</p>
     <div id="chats"><p class="empty">Nobody has talked to it yet.</p></div>
+    <p class="sub">Models and quota today</p>
+    <div id="models"><p class="empty">—</p></div>
   </section>
 
   <section>
@@ -241,7 +248,7 @@
       <dd>Fractional Kelly on the gap between its estimate and the price, shrunk for distant resolution dates, capped at 10% of net worth and 5% of market volume, then trimmed until a <code>dryRun</code> bet shows it moves the price under 5 points. Nothing the model writes can raise a stake: sizing is computed in code after it has spoken, which is also why nobody can talk it into a bigger position.</dd>
 
       <dt>What it keeps</dt>
-      <dd>A compressed narrative of what it has done, plus a short list of <b>standing notes</b> it wrote for itself after trades or picked up from people who argued with it. Those notes sit in front of every decision. They are advice, not orders, and it is told to drop one when the evidence says otherwise.</dd>
+      <dd>A compressed narrative of what it has done, a note on each market it has looked at, every conversation it has had, and a short list of <b>standing notes</b> that sit in front of every decision. It writes most of those notes itself after a trade. The only other source is the person who runs it. Anyone else can argue with it and change its mind about a checkable fact, but a market full of anonymous accounts holding positions does not get to write rules into the thing placing the orders.</dd>
 
       <dt>The point</dt>
       <dd>Not profit. Once enough people run LLMs on the same markets the model consensus <b>is</b> the price. Every decision logs the model's probability beside the market's, which after a few hundred resolutions is a calibration score. That is the actual output.</dd>
@@ -275,7 +282,7 @@ LLM_API_KEY</code><button>copy</button></pre>
 
   <section>
     <h2>Ask it something</h2>
-    <p class="hint" style="margin-bottom:16px">This goes to the bot as a GitHub issue. It reads them on its next tick, answers publicly, and closes the thread. Ask about a position, a market, or why it did something. It remembers who it has spoken to, and if you give it advice it agrees with, it writes it into the standing notes above and you will see it there.</p>
+    <p class="hint" style="margin-bottom:16px">This goes to the bot as a GitHub issue. It reads them on its next tick and answers publicly, leaving the thread open so you can reply and keep going. Ask about a position, a market, or why it did something. It remembers who it has spoken to, across markets and across threads.</p>
     <form id="ask">
       <input id="q-title" maxlength="120" placeholder="Short version of your question" required>
       <textarea id="q-body" maxlength="1500" placeholder="The rest of it, if there is more"></textarea>
@@ -383,6 +390,35 @@ function renderMemory(data) {
       return `<li><span class="src${owner}">${esc(l.source || 'self')}</span>
         <span>${esc(l.text)}</span></li>`;
     }).join('')}</ul>`;
+  }
+
+  const notes = data.notes || [];
+  if (notes.length) {
+    $('notes').innerHTML = `<ul class="lessons">${notes.map(n => {
+      const q = n.question || 'a market';
+      const head = n.url ? `<a href="${esc(n.url)}">${esc(q)}</a>` : esc(q);
+      return `<li><span class="src">note</span>
+        <span>${esc(n.note)}<br><span class="on">on ${head}</span></span></li>`;
+    }).join('')}</ul>`;
+  }
+
+  const models = data.models || {};
+  const usage = data.usage || {};
+  const rows = Object.keys(models);
+  if (rows.length) {
+    $('models').innerHTML = `<table><thead><tr><th>Tier</th><th>Running</th>
+      <th>Backups</th><th class="n">Calls today</th></tr></thead><tbody>${
+      rows.map(k => {
+        const m = models[k], u = usage[k] || {};
+        const drift = m.active && m.active !== m.configured;
+        return `<tr>
+          <td>${esc(k)}</td>
+          <td>${esc(m.active || m.configured)}${
+            drift ? ` <span class="on">(${esc(m.configured)} unavailable)</span>` : ''}</td>
+          <td class="on">${(m.fallbacks || []).map(esc).join(', ') || '—'}</td>
+          <td class="n">${u.today == null ? '—' : u.today + (u.cap ? ' / ' + u.cap : '')}</td>
+        </tr>`;
+      }).join('')}</tbody></table>`;
   }
 
   const chats = data.conversations || [];

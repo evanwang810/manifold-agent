@@ -5,6 +5,7 @@ from __future__ import annotations
 import logging
 import time
 from dataclasses import dataclass
+from typing import Callable
 
 from .config import Config
 from .llm import LLMClient, extract_json
@@ -34,37 +35,62 @@ NO_RESEARCH = (
 
 
 class CallBudget:
-    """Hard cap on LLM calls per tick. A 5-minute cron makes 288 ticks a day."""
+    """Two ceilings on one tier's LLM calls: this tick, and this day.
 
-    def __init__(self, limit: int) -> None:
+    The per-tick cap is really a rate limit, since ticks run a minute apart. The daily
+    cap is the one that keeps a free tier alive to the end of the day, and it has to
+    survive across ticks, so it is read from and written back to durable state.
+    """
+
+    def __init__(
+        self,
+        limit: int,
+        *,
+        daily_limit: int = 0,
+        used_today: int = 0,
+        on_take: Callable[[], None] | None = None,
+    ) -> None:
         self.limit = limit
+        self.daily_limit = daily_limit
         self.used = 0
+        self.used_today = used_today
+        self._on_take = on_take
 
     def take(self, n: int = 1) -> bool:
         if self.used + n > self.limit:
             return False
+        if self.daily_limit and self.used_today + n > self.daily_limit:
+            log.warning("Daily cap of %d calls reached, holding off", self.daily_limit)
+            return False
         self.used += n
+        self.used_today += n
+        if self._on_take:
+            for _ in range(n):
+                self._on_take()
         return True
 
     @property
     def spent(self) -> bool:
-        return self.used >= self.limit
+        return self.used >= self.limit or (
+            bool(self.daily_limit) and self.used_today >= self.daily_limit
+        )
 
 
 @dataclass
 class Budgets:
-    """Separate ceilings, because the two tiers do not cost the same.
+    """Separate ceilings, because the tiers do not cost the same.
 
-    The fast model can be spent freely on screening and conversation. The deep model
-    is rationed, which is the whole reason the screen exists.
+    The fast model can be spent freely on screening. The deep model is rationed, which
+    is the whole reason the screen exists.
     """
 
     fast: CallBudget
+    chat: CallBudget
     deep: CallBudget
 
     @property
     def used(self) -> int:
-        return self.fast.used + self.deep.used
+        return self.fast.used + self.chat.used + self.deep.used
 
 
 @dataclass
@@ -158,7 +184,9 @@ class Brain:
             self.memory.log_event("decision_error", market=market.slug, error=str(exc))
             return Evaluation(market, None, None, False, f"model error: {exc}")
 
-        self.memory.set_note(market.id, decision.memory_note)
+        self.memory.set_note(
+            market.id, decision.memory_note, question=market.question, url=market.url
+        )
         if decision.lesson.strip():
             self.memory.add_lesson(decision.lesson, source="self")
         log.info(

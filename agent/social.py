@@ -1,8 +1,11 @@
 """Answering people who talk to the bot.
 
 Manifold has no public notifications endpoint, so this looks in the only place the bot
-is likely to be addressed: the threads under its own last few comments. Comments from
-the owner jump the queue.
+is likely to be addressed: the threads under its own last few comments.
+
+Nobody here is the owner. Manifold accounts are anonymous and every one of them holds
+positions, so this channel can argue with the agent and change its mind about a fact,
+but it cannot write anything into the standing notes that steer future trades.
 """
 
 from __future__ import annotations
@@ -12,15 +15,14 @@ import time
 
 from .brain import Budgets
 from .config import Config
-from .llm import LLMClient, extract_json
+from .llm import LLMClient
 from .manifold import ManifoldClient, ManifoldError
 from .memory import Memory
 from .models import Comment, Market
 from .prompts import (
-    ADVICE_NOTE,
     MANAGRAM_SYSTEM,
-    REPLY_SCHEMA,
     REPLY_SYSTEM,
+    STRANGER_NOTE,
     build_reply_prompt,
     system_with_orders,
 )
@@ -93,7 +95,7 @@ class Social:
 
         handled = 0
         for contract_id, comment, thread in targets[: self.cfg.social.max_replies_per_tick]:
-            if self.budget.fast.spent:
+            if self.budget.chat.spent:
                 break
             try:
                 market = await self.client.market(contract_id)
@@ -104,7 +106,7 @@ class Social:
         return handled
 
     async def _reply(self, market: Market, comment: Comment, thread: list[Comment]) -> bool:
-        if not self.budget.fast.take():
+        if not self.budget.chat.take():
             return False
 
         positions = await self.client.positions(self.user_id)
@@ -125,24 +127,25 @@ class Social:
             memory=self.memory.context_block(),
             market_note=self.memory.note_for(market.id),
             position=position,
+            who=comment.username,
             lessons=self.memory.lessons_block(),
             history=self.memory.conversation_block(key),
         )
         try:
+            # No structured lesson field on this channel at all. A Manifold account is
+            # anonymous and holds positions, so it does not get to write standing rules
+            # into something that trades. Advice worth keeping comes from the owner.
             response = await self.llm.generate(
                 prompt,
                 system=system_with_orders(
-                    f"{REPLY_SYSTEM}\n\n{ADVICE_NOTE}", self.cfg.owner_block()
+                    f"{REPLY_SYSTEM}\n\n{STRANGER_NOTE}", self.cfg.owner_block()
                 ),
-                json_schema=REPLY_SCHEMA,
             )
-            data = extract_json(response.text)
-            text, lesson = str(data.get("reply", "")), str(data.get("lesson", ""))
         except Exception as exc:  # noqa: BLE001
             log.warning("Reply generation failed: %s", exc)
             return False
 
-        text = text.strip()[:900]
+        text = response.text.strip()[:900]
         if not text:
             return False
 
@@ -156,15 +159,10 @@ class Social:
 
         self.memory.mark_replied(comment.id)
         self.memory.record_message(key, "me", text)
-        learned = bool(lesson.strip()) and self.memory.add_lesson(
-            lesson, source=f"@{comment.username}"
-        )
         if result and result.get("id"):
             self.memory.remember_comment(result["id"], market.id)
         self.memory.log_event(
-            "reply",
-            market=market.slug, to=comment.username, text=text[:300],
-            lesson=lesson.strip()[:280] if learned else "",
+            "reply", market=market.slug, to=comment.username, text=text[:300]
         )
         log.info("Replied to @%s on %s", comment.username, market.slug)
         return True
@@ -203,9 +201,9 @@ class Social:
             newest = max(newest, int(txn.get("createdTime") or 0))
             from_id = txn.get("fromId")
             amount = float(txn.get("amount") or 0)
-            if not from_id or amount < MANAGRAM_REPLY_AMOUNT or self.budget.fast.spent:
+            if not from_id or amount < MANAGRAM_REPLY_AMOUNT or self.budget.chat.spent:
                 continue
-            if not self.budget.fast.take():
+            if not self.budget.chat.take():
                 break
 
             message = (txn.get("data") or {}).get("message") or "(no message)"

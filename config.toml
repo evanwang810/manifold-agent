@@ -7,8 +7,8 @@
 dry_run = false
 
 [llm]
-# Two models. Anything set here is the shared default for both; the tables below
-# override it. Point both at the same model if you would rather not think about it.
+# Three models. Anything set here is the shared default; the tables below override it.
+# Point them all at the same model if you would rather not think about it.
 #
 # provider is one of: gemini | mistral | openai_compatible
 #
@@ -25,36 +25,56 @@ temperature = 0.3
 timeout_seconds = 90
 key_env = "LLM_API_KEY"       # which environment variable holds the key
 
-# The cheap one. Screens every candidate market, does the research, answers comments
-# and questions, and rewrites memory. This is where nearly all the calls go, so it
+# Every tier takes `fallbacks`: models tried in order when the preferred one is out of
+# quota or refuses the key. A daily free quota runs out before the day does, and a
+# lesser model is better than the agent going dark until midnight.
+
+# Screens every candidate market and does the research. Highest call volume, so it
 # wants the model with the generous rate limit rather than the clever one.
 [llm.fast]
 model = "gemini-3.5-flash-lite"
+fallbacks = ["gemini-3.5-flash"]
 
-# The expensive one. Only ever asked the question that decides money. To run a second
-# provider here, set its own provider/base_url/key_env and add that key to Actions
-# secrets, for example:
+# Talks to people and rewrites memory. A small conversational model is plenty here and
+# it keeps chatter off the quota the trading decisions need. Point this at a Gemma if
+# you have one, for example model = "gemma-3-27b-it".
+[llm.chat]
+model = "gemini-3.5-flash-lite"
+fallbacks = ["gemini-3.5-flash"]
+
+# Only ever asked the question that decides money. To run a second provider here, set
+# its own provider/base_url/key_env and add that key to Actions secrets, for example:
 #   provider = "openai_compatible"
 #   base_url = "https://api.groq.com/openai/v1"
 #   model = "llama-3.3-70b-versatile"
 #   key_env = "DEEP_LLM_API_KEY"
 [llm.deep]
 model = "gemini-3.6-flash"
+fallbacks = ["gemini-3.5-flash", "gemini-3.5-flash-lite"]
 
 [screen]
 # The fast model forecasts each candidate blind, and the deep model only sees markets
 # where that quick number disagrees with the price or where the screener flagged
-# something worth reading properly.
+# something worth reading properly. The screener is coarse, so the disagreement has to
+# be sizeable before it counts as evidence: at 0.03 nearly everything escalated and the
+# deep model's quota went on questions that were fairly priced all along.
 enabled = true
-escalate_edge = 0.03
+escalate_edge = 0.07
 
 [budget]
-# Throughput is what finds edges. Screened-out markets do not count against the
-# evaluation cap, so a tick can look at a dozen questions and analyse the two that
+# Sized for a small free tier. Ticks run 60 seconds apart, so the per-tick numbers are
+# effectively per-minute rate limits; keep each under the RPM your provider gives you.
+# The per-day numbers are the ones that keep a daily quota alive to the end of the day,
+# and they are tracked in state across ticks. Screened-out markets do not count against
+# the evaluation cap, so a tick can look at several questions and analyse the one that
 # looked wrong. Each analysis costs one deep call plus one fast call for research.
 max_evaluations_per_tick = 2
-max_fast_calls_per_tick = 20
-max_deep_calls_per_tick = 3
+max_fast_calls_per_tick = 6
+max_chat_calls_per_tick = 3
+max_deep_calls_per_tick = 2
+max_fast_calls_per_day = 400
+max_chat_calls_per_day = 200
+max_deep_calls_per_day = 120
 
 [scan]
 min_minutes_between_scans = 20

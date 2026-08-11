@@ -57,11 +57,13 @@ class Memory:
             "market_notes": {},        # market_id -> one line the model wrote about it
             "seen": {},                # market_id -> ms timestamp of last evaluation
             "budget": {"day": "", "spent": 0.0},
+            "llm_usage": {"day": ""},   # day -> per-tier call counts, reset daily
             "last_scan_ms": 0,
             "last_managram_ms": 0,
             "my_comments": [],         # [{id, contract_id, ts}], newest last
             "commented_markets": [],   # markets we have already introduced ourselves on
-            "answered_issues": [],
+            "answered_issues": [],     # legacy, superseded by issue_threads
+            "issue_threads": {},       # issue number -> {last_id} of the last reply handled
             "replied_to": [],
             "tracked_orders": {},      # bet_id -> {contract_id, question, outcome, amount}
             "events_since_compress": 0,
@@ -94,12 +96,30 @@ class Memory:
     # -- market bookkeeping -----------------------------------------------
 
     def note_for(self, market_id: str) -> str:
-        return self.state["market_notes"].get(market_id, "")
+        entry = self.state["market_notes"].get(market_id, "")
+        # Notes used to be bare strings; older state files still hold them that way.
+        return entry.get("note", "") if isinstance(entry, dict) else entry
 
-    def set_note(self, market_id: str, note: str) -> None:
-        if note.strip():
-            self.state["market_notes"][market_id] = note.strip()[:400]
-            self.save()
+    def set_note(self, market_id: str, note: str, *, question: str = "", url: str = "") -> None:
+        if not note.strip():
+            return
+        self.state["market_notes"][market_id] = {
+            "note": note.strip()[:400],
+            "question": question,
+            "url": url,
+            "ts": int(time.time() * 1000),
+        }
+        self.save()
+
+    def recent_notes(self, n: int) -> list[dict[str, Any]]:
+        """Newest market notes, for showing what it is carrying around."""
+        out = []
+        for market_id, entry in self.state["market_notes"].items():
+            if isinstance(entry, dict):
+                out.append({**entry, "id": market_id})
+            else:
+                out.append({"note": entry, "question": "", "url": "", "ts": 0, "id": market_id})
+        return sorted(out, key=lambda e: e.get("ts") or 0, reverse=True)[:n]
 
     def mark_seen(self, market_id: str) -> None:
         self.state["seen"][market_id] = int(time.time() * 1000)
@@ -165,14 +185,43 @@ class Memory:
             self.state["commented_markets"] = markets[-500:]
             self.save()
 
-    def has_answered_issue(self, number: int) -> bool:
-        return number in self.state["answered_issues"]
+    def issue_watermark(self, number: int) -> int:
+        """Id of the newest comment on this issue the agent has already answered.
 
-    def mark_issue_answered(self, number: int) -> None:
-        issues = self.state["answered_issues"]
-        issues.append(number)
-        self.state["answered_issues"] = issues[-200:]
+        Zero means the issue body itself is still unanswered. Threads are left open,
+        so this is what stops the agent from answering the same message twice while
+        still letting a follow-up comment pull it back into the conversation.
+        """
+        thread = self.state["issue_threads"].get(str(number))
+        if thread:
+            return int(thread.get("last_id") or 0)
+        # Migration: issues answered before threads were tracked stay answered.
+        return -1 if number in self.state["answered_issues"] else 0
+
+    def mark_issue_handled(self, number: int, last_id: int) -> None:
+        threads = self.state["issue_threads"]
+        threads[str(number)] = {"last_id": int(last_id), "ts": int(time.time() * 1000)}
+        if len(threads) > 200:
+            for key, _ in sorted(threads.items(), key=lambda kv: kv[1].get("ts", 0))[:50]:
+                threads.pop(key, None)
         self.save()
+
+    # -- llm usage --------------------------------------------------------
+
+    def llm_used_today(self, tier: str) -> int:
+        usage = self.state["llm_usage"]
+        if usage.get("day") != self._today():
+            return 0
+        return int(usage.get(tier) or 0)
+
+    def record_llm_call(self, tier: str) -> None:
+        usage = self.state["llm_usage"]
+        if usage.get("day") != self._today():
+            usage.clear()
+            usage["day"] = self._today()
+        usage[tier] = int(usage.get(tier) or 0) + 1
+        # Deliberately not saving here: the tick saves state on its way out, and one
+        # write per LLM call would mean a git commit's worth of churn for nothing.
 
     def has_replied(self, comment_id: str) -> bool:
         return comment_id in self.state["replied_to"]

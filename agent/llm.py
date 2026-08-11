@@ -87,6 +87,10 @@ class PermanentLLMError(RuntimeError):
     """A bad key, a blocked project, a model that does not exist. Retrying will not help."""
 
 
+class QuotaError(RuntimeError):
+    """Out of quota on this model. Waiting might help; another model helps sooner."""
+
+
 class LLMClient:
     """Base class. Subclasses implement `_call`."""
 
@@ -94,7 +98,15 @@ class LLMClient:
 
     def __init__(self, cfg: LLMConfig) -> None:
         self.cfg = cfg
+        # The model that last answered. Not always cfg.model: a quota-exhausted primary
+        # falls through to a backup, and the report should say which one actually ran.
+        self.active_model = cfg.model
         self._client = httpx.AsyncClient(timeout=httpx.Timeout(cfg.timeout_seconds))
+
+    @property
+    def chain(self) -> list[str]:
+        """Preferred model first, then the backups, in order."""
+        return [self.cfg.model, *self.cfg.fallbacks]
 
     async def aclose(self) -> None:
         await self._client.aclose()
@@ -108,21 +120,42 @@ class LLMClient:
         grounded: bool = False,
         attempts: int = 3,
     ) -> LLMResponse:
-        delay = 2.0
+        """Try each model in the chain, retrying transient failures within each.
+
+        A daily quota is the failure this is really built for: the good model runs out
+        partway through the day and the agent should keep working on a lesser one rather
+        than go dark until midnight. Quota and permanent errors move to the next model
+        immediately, since no amount of backoff fixes either.
+        """
+        chain = self.chain
         last: Exception | None = None
-        for attempt in range(attempts):
-            try:
-                return await self._call(
-                    prompt, system=system, json_schema=json_schema, grounded=grounded
-                )
-            except PermanentLLMError:
-                raise  # a blocked project will still be blocked in six seconds
-            except (httpx.HTTPError, RuntimeError) as exc:
-                last = exc
-                if attempt < attempts - 1:
-                    log.warning("LLM call failed (%s), retrying in %.0fs", exc, delay)
-                    await asyncio.sleep(delay)
-                    delay *= 3  # free tiers rate limit hard, back off generously
+
+        for index, model in enumerate(chain):
+            more_models = index < len(chain) - 1
+            delay = 2.0
+            for attempt in range(attempts):
+                try:
+                    response = await self._call(
+                        prompt, system=system, json_schema=json_schema,
+                        grounded=grounded, model=model,
+                    )
+                    if model != self.active_model:
+                        log.info("Now answering with %s", model)
+                        self.active_model = model
+                    return response
+                except (PermanentLLMError, QuotaError) as exc:
+                    last = exc
+                    break
+                except (httpx.HTTPError, RuntimeError) as exc:
+                    last = exc
+                    if attempt < attempts - 1:
+                        log.warning("LLM call failed (%s), retrying in %.0fs", exc, delay)
+                        await asyncio.sleep(delay)
+                        delay *= 3  # free tiers rate limit hard, back off generously
+            if more_models:
+                log.warning("%s unavailable (%s), falling back to %s",
+                            model, str(last)[:80], chain[index + 1])
+
         assert last is not None
         raise last
 
@@ -143,6 +176,7 @@ class LLMClient:
         system: str | None,
         json_schema: dict[str, Any] | None,
         grounded: bool,
+        model: str,
     ) -> LLMResponse:
         raise NotImplementedError
 
@@ -163,6 +197,7 @@ class GeminiClient(LLMClient):
         system: str | None,
         json_schema: dict[str, Any] | None,
         grounded: bool,
+        model: str,
     ) -> LLMResponse:
         generation: dict[str, Any] = {"temperature": self.cfg.temperature}
         body: dict[str, Any] = {
@@ -181,10 +216,12 @@ class GeminiClient(LLMClient):
             generation["responseSchema"] = json_schema
 
         resp = await self._client.post(
-            f"{self.BASE}/models/{self.cfg.model}:generateContent",
+            f"{self.BASE}/models/{model}:generateContent",
             headers={"x-goog-api-key": self.cfg.api_key},
             json=body,
         )
+        if resp.status_code == 429:
+            raise QuotaError(f"Gemini 429 on {model}: {resp.text[:200]}")
         if resp.status_code in (400, 401, 403, 404):
             raise PermanentLLMError(f"Gemini {resp.status_code}: {resp.text[:400]}")
         if resp.status_code >= 400:
@@ -269,6 +306,7 @@ class OpenAICompatibleClient(LLMClient):
         system: str | None,
         json_schema: dict[str, Any] | None,
         grounded: bool,
+        model: str,
     ) -> LLMResponse:
         messages: list[dict[str, str]] = []
         if system:
@@ -276,7 +314,7 @@ class OpenAICompatibleClient(LLMClient):
         messages.append({"role": "user", "content": prompt})
 
         body: dict[str, Any] = {
-            "model": self.cfg.model,
+            "model": model,
             "messages": messages,
             "temperature": self.cfg.temperature,
         }
@@ -288,6 +326,8 @@ class OpenAICompatibleClient(LLMClient):
             headers={"Authorization": f"Bearer {self.cfg.api_key}"},
             json=body,
         )
+        if resp.status_code == 429:
+            raise QuotaError(f"LLM 429 on {model}: {resp.text[:200]}")
         if resp.status_code in (400, 401, 403, 404):
             raise PermanentLLMError(f"LLM {resp.status_code}: {resp.text[:400]}")
         if resp.status_code >= 400:

@@ -24,6 +24,9 @@ class ManifoldConfig:
 class LLMConfig:
     provider: str = "gemini"
     model: str = "gemini-3.5-flash-lite"
+    # Tried in order when the preferred model is out of quota or refuses the key.
+    # Free daily quotas are small, and a lesser model beats going dark until midnight.
+    fallbacks: list[str] = field(default_factory=list)
     # Grounded search has a separate, much smaller free quota than plain generation.
     # Turning it off keeps the agent running on the comment thread and the price alone.
     use_search: bool = True
@@ -43,27 +46,36 @@ class LLMConfig:
 
 @dataclass
 class LLMTiers:
-    """Two models, split by what the call is worth.
+    """Three models, split by what the call is worth.
 
-    `fast` does the high-volume work: research, replies, memory, and the first-pass
-    screen on every candidate market. `deep` is only asked the one question that
-    decides money. Point them at the same model if you would rather not bother.
+    `fast` screens candidate markets and does research. `chat` talks to people and
+    rewrites memory, which is the work where a cheap conversational model is fine.
+    `deep` is only ever asked the one question that decides money. Point them all at
+    the same model if you would rather not bother.
     """
 
     fast: LLMConfig = field(default_factory=LLMConfig)
+    chat: LLMConfig = field(default_factory=LLMConfig)
     deep: LLMConfig = field(default_factory=LLMConfig)
 
     def tiers(self) -> list[tuple[str, LLMConfig]]:
-        return [("fast", self.fast), ("deep", self.deep)]
+        return [("fast", self.fast), ("chat", self.chat), ("deep", self.deep)]
 
 
 @dataclass
 class BudgetConfig:
     max_evaluations_per_tick: int = 2
-    # The screen exists so the deep model is only spent on markets that might be
-    # mispriced. Fast calls are the ones you have a lot of; deep calls are not.
-    max_fast_calls_per_tick: int = 20
-    max_deep_calls_per_tick: int = 3
+    # Sized against a small free tier. Ticks run every 60 seconds, so a per-tick cap is
+    # effectively a per-minute rate limit: keep the sum of these under the tightest RPM
+    # your provider gives you, with room to spare for a retry.
+    max_fast_calls_per_tick: int = 6
+    max_chat_calls_per_tick: int = 3
+    max_deep_calls_per_tick: int = 2
+    # Rolling 24-hour ceilings, tracked in state across ticks. This is the one that
+    # matters on a free daily quota, since per-tick caps say nothing about a whole day.
+    max_fast_calls_per_day: int = 400
+    max_chat_calls_per_day: int = 200
+    max_deep_calls_per_day: int = 120
 
 
 @dataclass
@@ -108,9 +120,10 @@ class ScreenConfig:
     """
 
     enabled: bool = True
-    # Escalate if the quick estimate is at least this far from the price. Deliberately
-    # below risk.min_edge: the screener is coarse, and a near miss is worth a look.
-    escalate_edge: float = 0.03
+    # Escalate if the quick estimate is this far from the price. The screener is coarse,
+    # so a small gap is noise rather than evidence; set below risk.min_edge and it waves
+    # nearly everything through and the deep model's quota goes on fairly priced markets.
+    escalate_edge: float = 0.07
 
 
 @dataclass
@@ -219,8 +232,11 @@ def _load_llm(raw: dict[str, Any]) -> LLMTiers:
     no tiers at all still works and simply runs one model for everything.
     """
     shared = {k: v for k, v in raw.items() if not isinstance(v, dict)}
+    # An unnamed tier falls back to `fast`, so adding `[llm.chat]` is optional.
+    fast = _build(LLMConfig, {**shared, **raw.get("fast", {})})
     return LLMTiers(
-        fast=_build(LLMConfig, {**shared, **raw.get("fast", {})}),
+        fast=fast,
+        chat=_build(LLMConfig, {**shared, **raw.get("chat", raw.get("fast", {}))}),
         deep=_build(LLMConfig, {**shared, **raw.get("deep", {})}),
     )
 

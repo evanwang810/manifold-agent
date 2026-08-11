@@ -62,18 +62,28 @@ class Runner:
     def __init__(self, cfg: Config) -> None:
         self.cfg = cfg
         self.client = ManifoldClient(cfg.manifold)
-        self.fast = build_llm(cfg.llm.fast)
-        # One client is reused when both tiers name the same model, so the common
-        # single-model setup does not open two connection pools for no reason.
-        self.deep = (
-            self.fast
-            if cfg.llm.deep == cfg.llm.fast
-            else build_llm(cfg.llm.deep)
-        )
-        self.memory = Memory(cfg.memory, cfg.state_dir, self.fast)
+        # One client per distinct tier config, so the common case of two tiers naming
+        # the same model does not open two connection pools for no reason.
+        clients: dict[tuple, Any] = {}
+
+        def client_for(tier_cfg):
+            key = (tier_cfg.provider, tier_cfg.model, tuple(tier_cfg.fallbacks),
+                   tier_cfg.base_url, tier_cfg.key_env)
+            if key not in clients:
+                clients[key] = build_llm(tier_cfg)
+            return clients[key]
+
+        self.fast = client_for(cfg.llm.fast)
+        self.chat = client_for(cfg.llm.chat)
+        self.deep = client_for(cfg.llm.deep)
+        self._clients = list(clients.values())
+
+        self.memory = Memory(cfg.memory, cfg.state_dir, self.chat)
+        b = cfg.budget
         self.budget = Budgets(
-            fast=CallBudget(cfg.budget.max_fast_calls_per_tick),
-            deep=CallBudget(cfg.budget.max_deep_calls_per_tick),
+            fast=self._budget("fast", b.max_fast_calls_per_tick, b.max_fast_calls_per_day),
+            chat=self._budget("chat", b.max_chat_calls_per_tick, b.max_chat_calls_per_day),
+            deep=self._budget("deep", b.max_deep_calls_per_tick, b.max_deep_calls_per_day),
         )
         self.risk = RiskEngine(cfg.risk)
         self.scanner = Scanner(cfg.scan, self.client, self.memory)
@@ -84,11 +94,18 @@ class Runner:
         self.social: Social | None = None
         self._evaluations = 0
 
+    def _budget(self, tier: str, per_tick: int, per_day: int) -> CallBudget:
+        return CallBudget(
+            per_tick,
+            daily_limit=per_day,
+            used_today=self.memory.llm_used_today(tier),
+            on_take=lambda: self.memory.record_llm_call(tier),
+        )
+
     async def aclose(self) -> None:
         await self.client.aclose()
-        await self.fast.aclose()
-        if self.deep is not self.fast:
-            await self.deep.aclose()
+        for client in self._clients:
+            await client.aclose()
 
     async def tick(self) -> TickReport:
         me = await self.client.me()
@@ -101,15 +118,16 @@ class Runner:
             user_id=self.user_id,
         )
         self.social = Social(
-            self.cfg, client=self.client, llm=self.fast, memory=self.memory,
+            self.cfg, client=self.client, llm=self.chat, memory=self.memory,
             budget=self.budget, user_id=self.user_id, username=username,
         )
 
         portfolio = await self.client.portfolio(self.user_id)
         positions = await self.client.positions(self.user_id)
         self.report.username = username
-        fast, deep = self.cfg.llm.fast.label, self.cfg.llm.deep.label
-        self.report.model = deep if fast == deep else f"{deep} (screened by {fast})"
+        # The headline model is the one that actually decides trades, and it is the
+        # active one rather than the configured one so a quota fallback shows up.
+        self.report.model = f"{self.cfg.llm.deep.provider}/{self.deep.active_model}"
         self.report.balance = float(portfolio.get("balance") or 0.0)
         self.report.net_worth = (
             self.report.balance
@@ -127,7 +145,7 @@ class Runner:
         await self._check_moves(positions)
         self.report.replies = await self.social.run()
         self.report.replies += await Inbox(
-            self.cfg, llm=self.fast, memory=self.memory, budget=self.budget,
+            self.cfg, llm=self.chat, memory=self.memory, budget=self.budget,
             portfolio_line=(
                 f"balance M${self.report.balance:,.0f}, net worth "
                 f"M${self.report.net_worth:,.0f}, {len(positions)} open positions"
@@ -135,11 +153,14 @@ class Runner:
         ).run()
         await self._scan()
 
-        if not self.budget.fast.spent:
+        if not self.budget.chat.spent:
             await self.memory.maybe_compress()
 
         self.report.llm_calls = self.budget.used
         await self._write_snapshot()
+        # Daily call counts are only held in memory during the tick, so the tick has to
+        # write them back or a restart would hand the quota straight back.
+        self.memory.save()
         return self.report
 
     async def _write_snapshot(self) -> None:
@@ -161,6 +182,29 @@ class Runner:
             "username": self.report.username,
             "profile_url": f"https://manifold.markets/{self.report.username}",
             "model": self.report.model,
+            "models": {
+                name: {
+                    "configured": tier.model,
+                    "active": client.active_model,
+                    "fallbacks": list(tier.fallbacks),
+                }
+                for name, tier, client in (
+                    ("fast", self.cfg.llm.fast, self.fast),
+                    ("chat", self.cfg.llm.chat, self.chat),
+                    ("deep", self.cfg.llm.deep, self.deep),
+                )
+            },
+            "usage": {
+                tier: {
+                    "today": self.memory.llm_used_today(tier),
+                    "cap": cap,
+                }
+                for tier, cap in (
+                    ("fast", self.cfg.budget.max_fast_calls_per_day),
+                    ("chat", self.cfg.budget.max_chat_calls_per_day),
+                    ("deep", self.cfg.budget.max_deep_calls_per_day),
+                )
+            },
             "dry_run": self.cfg.manifold.dry_run,
             "balance": round(self.report.balance, 2),
             "net_worth": round(self.report.net_worth, 2),
@@ -186,6 +230,15 @@ class Runner:
                     ],
                 }
                 for convo in self.memory.recent_conversations(6)
+            ],
+            "notes": [
+                {
+                    "note": n.get("note", ""),
+                    "question": n.get("question", ""),
+                    "url": n.get("url", ""),
+                    "ts": n.get("ts"),
+                }
+                for n in self.memory.recent_notes(12)
             ],
             "positions": sorted(
                 (

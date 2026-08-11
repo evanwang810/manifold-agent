@@ -81,26 +81,35 @@ add `MANIFOLD_API_KEY` and `LLM_API_KEY`. The workflow already references both.
 
 ## Model options
 
-Two tiers. The **fast** model screens candidates, does research, answers people, and
-rewrites memory, which is nearly every call the agent makes. The **deep** model is only
-ever asked the one question that decides money. The split exists because the free tier
-that matters is the one on the model doing the volume.
+Three tiers. **fast** screens candidate markets and does research. **chat** talks to
+people and rewrites memory. **deep** is only ever asked the one question that decides
+money. The split exists because the free quota that matters is the one on the model doing
+the volume, and chatter should not eat the quota the trading decisions need.
 
 ```toml
 [llm]
-provider = "gemini"        # shared defaults for both tiers
+provider = "gemini"        # shared defaults for every tier
 key_env = "LLM_API_KEY"
 
 [llm.fast]
 model = "gemini-3.5-flash-lite"
+fallbacks = ["gemini-3.5-flash"]
+
+[llm.chat]
+model = "gemini-3.5-flash-lite"    # or a Gemma, e.g. "gemma-3-27b-it"
 
 [llm.deep]
 model = "gemini-3.6-flash"
+fallbacks = ["gemini-3.5-flash", "gemini-3.5-flash-lite"]
 ```
 
-Anything under `[llm]` is a default that either tier can override, including `provider`,
-`base_url` and `key_env`, so the two tiers can be two different providers with two
-different keys:
+`fallbacks` is tried in order whenever the preferred model is out of quota or refuses the
+key. Free daily quotas run out well before the day does, and a lesser model beats going
+dark until midnight. The website shows which model is actually answering, so a fallback
+is visible rather than silent.
+
+Anything under `[llm]` is a default any tier can override, including `provider`,
+`base_url` and `key_env`, so the tiers can be different providers with different keys:
 
 ```toml
 [llm.deep]
@@ -110,9 +119,14 @@ model = "llama-3.3-70b-versatile"
 key_env = "DEEP_LLM_API_KEY"     # add this one to Actions secrets too
 ```
 
-Name the same model in both tiers and you get the old single-model behaviour; the runner
-notices and reuses one client. Set `[screen] enabled = false` to skip screening entirely
-and send everything to the deep model.
+Name the same model in every tier and you get single-model behaviour; the runner notices
+and reuses one client. Set `[screen] enabled = false` to skip screening entirely and send
+everything to the deep model.
+
+`[budget]` has two ceilings per tier. The per-tick one is really a rate limit, since ticks
+run 60 seconds apart, so keep each under your provider's requests-per-minute. The per-day
+one is tracked in durable state across ticks and is what keeps a small daily quota alive
+to the end of the day. Current call counts against both are on the website.
 
 Gemini is the default because its native Google Search grounding means research needs no
 second API key, and search matters more than model strength here: a mid model with three
@@ -169,8 +183,9 @@ trigger a single live run by hand from the Actions tab using the **live** input.
 Four channels, in increasing order of permanence:
 
 - **A question from the website.** The site's form opens a GitHub issue labelled
-  `ask-the-bot`. The agent answers it publicly on the next tick and closes it. Anyone
-  can use this, not just you.
+  `ask-the-bot`. The agent answers it publicly on the next tick and leaves the thread
+  open, so replying pulls it back into the conversation. Anyone can use this, not just
+  you.
 - **A one-off instruction.** Actions tab, Run workflow, type into the `instruction`
   box. It applies to that run only.
 - **A Manifold comment.** Reply to any of the bot's last 10 comments, oldest answered
@@ -183,13 +198,18 @@ It remembers the conversations. Threads are keyed by person rather than by marke
 someone it has argued with before is recognised the next time they turn up somewhere
 else, and the last dozen turns are in front of it when it replies.
 
-Anything either side of a conversation says that is worth carrying forward can become a
-**standing note**: a one-line rule that sits in front of every future decision. The agent
-writes most of them itself after a trade, and it can accept one from a person it is
-talking to. Notes carry their source, and the prompt says plainly that its own notes and
-advice from strangers are opinions to weigh, not orders, while an issue opened by the
-repository owner is treated as an instruction. Notes are capped at 16, oldest evicted
-first, owner ones last. All of them are visible on the website.
+Advice worth carrying forward becomes a **standing note**: a one-line rule that sits in
+front of every future decision. Two sources can write one. The agent itself, after a
+trade taught it something general. And you, in a GitHub issue, recognised because the
+issue author matches the repository owner.
+
+Nobody else can. A Manifold account is anonymous and holds positions, so anyone arguing
+with the bot in a comment thread has a motive, and that channel has no way to write a
+standing note at all. Same for a non-owner opening an issue. They can still be right, and
+the prompt tells the agent to engage properly and change its mind in public on a fact it
+can check, but their conclusion about what it should buy goes nowhere durable. Notes carry
+their source, are capped at 16 with owner ones evicted last, and are all visible on the
+website alongside the conversations they came from.
 
 None of this can change how much it stakes. Sizing is computed in `sizing.py` after the
 model has spoken, so no instruction, note, or persuasive stranger can talk it into a
