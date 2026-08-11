@@ -547,9 +547,13 @@ $('ask').addEventListener('submit', e => {
   const title = $('q-title').value.trim();
   if (!title) return;
   const body = $('q-body').value.trim();
+  // Routed through the issue form template rather than the raw issues/new endpoint.
+  // GitHub silently drops a `labels=` query param for anyone without write access to
+  // the repo, so a query-string link never actually labelled the issue for a visitor.
+  // A template's preset label applies regardless of who is filing it.
   const href = `https://github.com/${OWNER}/${REPO}/issues/new`
-    + `?labels=ask-the-bot&title=${encodeURIComponent(title)}`
-    + `&body=${encodeURIComponent(body)}`;
+    + `?template=ask-the-bot.yml&title=${encodeURIComponent(title)}`
+    + `&question=${encodeURIComponent(body || title)}`;
   window.open(href, '_blank', 'noopener');
 });
 
