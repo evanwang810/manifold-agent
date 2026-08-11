@@ -89,9 +89,9 @@ class ScanConfig:
     # Markets pulled per scan. Each costs one screen call, and at a 25% pass rate this
     # is what sets the deep model's daily load: 24 scans a day times this, quartered.
     candidates_per_scan: int = 4
-    min_unique_bettors: int = 25
-    min_volume: float = 3000
-    max_days_to_resolve: float = 30
+    min_unique_bettors: int = 12
+    min_volume: float = 800
+    max_days_to_resolve: float = 45
     min_hours_to_resolve: float = 6
     skip_if_seen_within_hours: float = 48
 
@@ -134,6 +134,24 @@ class ScreenConfig:
     # scanned. Both screen outcomes are logged with the gap that produced them, so this
     # can be re-derived from the screener's own numbers once there are enough.
     escalate_edge: float = 0.10
+
+
+@dataclass
+class AgencyConfig:
+    """The agent's own turn: one unprompted action, occasionally.
+
+    The models propose and review; these numbers are the part neither can argue with,
+    applied in code after both have spoken.
+    """
+
+    enabled: bool = True
+    min_minutes_between_actions: float = 180
+    # Ceiling on any single mana movement, whatever the models agreed between them.
+    max_mana_per_action: float = 50
+    allow_send_mana: bool = True
+    # The deep model reviews anything touching mana and can veto it or cut the amount.
+    # Turning this off means the cheap model moves money unsupervised.
+    require_review: bool = True
 
 
 @dataclass
@@ -197,6 +215,7 @@ class Config:
     budget: BudgetConfig = field(default_factory=BudgetConfig)
     scan: ScanConfig = field(default_factory=ScanConfig)
     screen: ScreenConfig = field(default_factory=ScreenConfig)
+    agency: AgencyConfig = field(default_factory=AgencyConfig)
     forecast: ForecastConfig = field(default_factory=ForecastConfig)
     risk: RiskConfig = field(default_factory=RiskConfig)
     watch: WatchConfig = field(default_factory=WatchConfig)
@@ -290,6 +309,7 @@ def load_config(path: str | Path) -> Config:
         budget=_build(BudgetConfig, raw.get("budget", {})),
         scan=_build(ScanConfig, raw.get("scan", {})),
         screen=_build(ScreenConfig, raw.get("screen", {})),
+        agency=_build(AgencyConfig, raw.get("agency", {})),
         forecast=_build(ForecastConfig, raw.get("forecast", {})),
         risk=_build(RiskConfig, raw.get("risk", {})),
         watch=_build(WatchConfig, raw.get("watch", {})),

@@ -61,6 +61,8 @@ class Memory:
             "llm_usage": {"day": ""},   # day -> per-tier call counts, reset daily
             "last_scan_ms": 0,
             "last_compress_ms": 0,
+            "last_own_action_ms": 0,
+            "own_actions": [],         # what it chose to do on its own turns
             "portfolio_mark": {},      # last seen balance/net worth, to spot changes
             "position_mark": {},       # contract_id -> last seen shares/profit/prob
             "last_managram_ms": 0,
@@ -352,11 +354,62 @@ class Memory:
         log.info("New lesson from %s: %s", source, text[:120])
         return True
 
+    def remove_lesson(self, text: str) -> bool:
+        """Drop a standing note. Matched loosely, because the agent quotes from memory."""
+        wanted = " ".join(text.split()).lower()
+        if len(wanted) < 8:
+            return False
+        for index, lesson in enumerate(self.state["lessons"]):
+            existing = lesson["text"].lower()
+            if existing == wanted or wanted in existing or existing in wanted:
+                dropped = self.state["lessons"].pop(index)
+                self.save()
+                log.info("Retired lesson: %s", dropped["text"][:120])
+                return True
+        return False
+
     def lessons_block(self) -> str:
         lessons = self.state["lessons"]
         if not lessons:
             return "(nothing yet)"
         return "\n".join(f"- [{le['source']}] {le['text']}" for le in lessons)
+
+    # -- the agent's own turns --------------------------------------------
+
+    def minutes_since_own_action(self) -> float:
+        last = float(self.state.get("last_own_action_ms") or 0)
+        if last <= 0:
+            return float("inf")
+        return (time.time() * 1000 - last) / 60_000
+
+    def mark_own_action(self) -> None:
+        """Claim the turn. Called before acting, so a crash cannot retry it forever."""
+        self.state["last_own_action_ms"] = int(time.time() * 1000)
+        self.save()
+
+    def record_own_action(self, action: str, detail: str, reasoning: str) -> None:
+        actions = self.state["own_actions"]
+        actions.append(
+            {
+                "ts": int(time.time() * 1000),
+                "action": action,
+                "detail": detail[:200],
+                "reasoning": reasoning[:300],
+            }
+        )
+        self.state["own_actions"] = actions[-40:]
+        self.save()
+
+    def recent_own_actions(self, n: int) -> list[dict[str, Any]]:
+        return self.state["own_actions"][-n:]
+
+    def own_actions_block(self, n: int) -> str:
+        actions = self.recent_own_actions(n)
+        if not actions:
+            return "(this is the first time)"
+        return "\n".join(
+            f"- {_stamp(a['ts'])} {a['action']}: {a['detail']}" for a in reversed(actions)
+        )
 
     # -- order tracking ---------------------------------------------------
 

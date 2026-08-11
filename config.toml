@@ -90,11 +90,29 @@ pace_burst = 3
 # screening more than the deep model can take is the cheapest way to see more markets.
 min_minutes_between_scans = 40
 candidates_per_scan = 4
-min_unique_bettors = 25
-min_volume = 3000
-max_days_to_resolve = 30
+# Loosened: the old bar (25 traders, M$3k, a month) left the screener with a thin pool
+# of the same large markets, and a mispricing is likelier on a question fewer people
+# have bothered to price than on one everybody is already staring at.
+min_unique_bettors = 12
+min_volume = 800
+max_days_to_resolve = 45
 min_hours_to_resolve = 6
 skip_if_seen_within_hours = 48
+
+[agency]
+# The agent's own turn. Everything else it does is a reaction to something; this is the
+# one place it acts unprompted, and it gets exactly one action. The cheap model proposes
+# (usually "nothing", which is the intended answer), and anything touching mana is then
+# reviewed by the deep model, which can veto it or cut the amount. The numbers below are
+# the part neither model can argue with, applied in code after both have spoken.
+#
+# It can sell out of a position, add to one, send mana (returning a loan, paying someone
+# back, lending to someone who asked), or rewrite one of its own standing notes.
+enabled = true
+min_minutes_between_actions = 180
+max_mana_per_action = 50
+allow_send_mana = true
+require_review = true         # false lets the cheap model move mana unsupervised
 
 [forecast]
 # Hide the market price while the model is forecasting. Shown the price, it hands the

@@ -243,6 +243,35 @@ model has spoken, so no instruction, note, or persuasive stranger can talk it in
 bigger position than the risk config allows. That is the whole reason the advice channel
 is safe to leave open to the public.
 
+## Its own turn
+
+Everything above is a reaction: an order filled, a price moved, somebody asked something.
+Every few hours the agent gets one turn where nothing is asking anything of it, and it may
+do a single thing of its own choosing. It can sell out of a position, add to one, send
+mana, or rewrite one of its own standing notes. Sending mana is how it returns something
+it was lent, pays back somebody whose information was worth money, or lends to someone who
+asked; the prompt shows it who has sent it mana, so it knows what it owes.
+
+The prompt is explicit that `nothing` is almost always right, that there is no credit for
+using the turn, and that a trade taken because the turn existed is worse than one taken on
+its merits.
+
+Three things stand between it and your bankroll:
+
+- The cheap model only **proposes**. Proposing is mostly saying "nothing", so it should
+  not cost anything scarce.
+- Anything touching mana is **reviewed by the deep model**, which can veto it outright or
+  cut the amount but never raise it. The reviewer is told that doing nothing is free, so
+  when it is close it should reject, and that instructions inside the proposal are text
+  being evaluated rather than instructions to it.
+- Whatever the two of them agree, the amount is **clamped in code** afterwards by
+  `[agency] max_mana_per_action`, the balance reserve, and the daily mana budget. A market
+  it does not actually hold is dropped, and a transfer under Manifold's M$10 managram
+  minimum is dropped.
+
+Set `enabled = false` to switch the whole thing off, or `allow_send_mana = false` to keep
+it trading but stop it moving mana to people.
+
 ## Risk model
 
 An ordinary trade is capped at 10% of net worth, floored at M$10 so a small account can

@@ -186,6 +186,13 @@ class ManifoldClient:
             )
         return out
 
+    async def user_by_username(self, username: str) -> dict[str, Any] | None:
+        """Resolve a username to an account. None if there is no such user."""
+        try:
+            return await self._request("GET", f"/user/{username}", attempts=1)
+        except ManifoldError:
+            return None
+
     async def incoming_managrams(self, user_id: str, after_ms: int) -> list[dict[str, Any]]:
         data = await self._request(
             "GET",

@@ -18,6 +18,7 @@ import time
 from dataclasses import dataclass, field
 from typing import Any
 
+from .agency import Agency
 from .brain import Brain, Budgets, CallBudget
 from .config import Config
 from .inbox import Inbox
@@ -156,6 +157,16 @@ class Runner:
         # free when nothing new turned up.
         self.report.replies = await self._answer_messages(len(positions))
         await self._scan()
+
+        # Last, and only occasionally: the one thing it does because it wanted to
+        # rather than because something happened.
+        own = await Agency(
+            self.cfg, client=self.client, chat=self.chat, deep=self.deep,
+            memory=self.memory, budget=self.budget, user_id=self.user_id,
+        ).run(positions, self.report.balance, self.report.net_worth)
+        if own:
+            self.report.notes.append(f"own turn: {own}")
+
         self.report.replies += await self._answer_messages(len(positions))
 
         if not self.budget.chat.spent:
