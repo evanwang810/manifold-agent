@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1786496889104,
+  "generated_ms": 1786496973072,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.6-flash",
@@ -30,7 +30,7 @@
   },
   "usage": {
     "fast": {
-      "today": 2,
+      "today": 4,
       "cap": 220
     },
     "chat": {
@@ -38,7 +38,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 1,
+      "today": 2,
       "cap": 18
     }
   },
@@ -47,6 +47,16 @@
   "net_worth": 642.57,
   "summary": "Net worth has increased from M$516 to M$645, with a current cash balance of M$515. There are 6 active positions: Starship Ship 40 recovery (NO), METR 80% time horizon (NO), WTI Crude Oil price (NO), partner relationship duration (NO), OpenAI math advances flaw (YES), and next full Gemini model coding capability (YES). These positions are in early tracking stages.\n\nOperational friction persists. Gemini API 429 rate limit errors and 403 permission denials continue to interrupt analysis, necessitating more robust throttling and backoff strategies. A recent failure in output generation led to the leakage of internal JSON artifacts and prompt analysis in a public issue thread; the agent also over-responded to non-factual social engagement. Additionally, a transaction request was vetoed because no reasoning was provided for the transfer.\n\nThe agent remains well-calibrated in screening out ungrounded entertainment and geopolitical props, such as unrealistic box office targets or speculative war crime charges. It excels at identifying mispriced AI governance and benchmark horizons. It is most vulnerable to infrastructure bottlenecks and lapses in output filtering during public interactions.\n\nKey open markets include AI capability benchmarks (Gemini and METR milestones) and near-term commodity props. Future execution must prioritize strict API quota compliance, explicit documentation of market rationales, and the provision of clear reasoning for all financial transactions.",
   "journal": [
+    {
+      "ts": 1786496970999,
+      "kind": "trade",
+      "text": "Limit order M$57 YES on \"Will at least 10 UK riot related prosecutions be overturned or have th\" at 20%, my estimate 38% (medium). Because: With over 1,000 convictions following the 2024 riots, standard appellate reviews and Crown Court sentence appeals natura"
+    },
+    {
+      "ts": 1786496954401,
+      "kind": "screen",
+      "text": "Escalated \"Will at least 10 UK riot related prosecutions be overturned or have th\" at 20%: quick estimate 85% vs market 20%"
+    },
     {
       "ts": 1786496030657,
       "kind": "book",
@@ -236,16 +246,6 @@
       "ts": 1786481822146,
       "kind": "conversation",
       "text": "@JasonMendoza2008 asked on issue #14: \"Will Jannik Sinner OR Taylor Fritz win the 2026 US Open men's singles title? ### Your que\". I answered: I have not researched the 2026 US Open or the probabilities regarding Jannik Sinner and Taylor Fritz. As I have stated i"
-    },
-    {
-      "ts": 1786481790027,
-      "kind": "conversation",
-      "text": "@JasonMendoza2008 asked on issue #11: \"Will Alexander Zverev OR Novak Djokovic win the 2026 US Open men's singles title? ### You\". I answered: I have not researched the 2026 US Open or the specific probabilities regarding Alexander Zverev and Novak Djokovic. As I"
-    },
-    {
-      "ts": 1786481632901,
-      "kind": "conversation",
-      "text": "@JasonMendoza2008 asked on issue #10: \"Will Alexander Zverev OR Taylor Fritz win the 2026 US Open men's singles title? https://m\". I answered: I have not researched the 2026 US Open or the specific probabilities regarding Alexander Zverev and Taylor Fritz. As sta"
     }
   ],
   "lessons": [
@@ -376,6 +376,12 @@
   "own_actions": [],
   "notes": [
     {
+      "note": "UK riot prosecution market closes August 2026; 1,000+ convictions provide high base rate for minor appeal reductions, but verification remains the primary bottleneck.",
+      "question": "Will at least 10 UK riot related prosecutions be overturned or have their sentences shortened in the next 2 years?",
+      "url": "https://manifold.markets/LukeShadwell/will-at-least-10-uk-riot-related-pr",
+      "ts": 1786496970868
+    },
+    {
       "note": "Berlin Dahlem weather station all-time record high is under 39\u00b0C; 40.0\u00b0C requires an unprecedented weather event.",
       "question": "Will temperatures in Berlin, Germany, reach 40\u00b0C this summer?",
       "url": "https://manifold.markets/CommanderKeen/will-temperatures-in-berlin-germany",
@@ -440,12 +446,6 @@
       "question": "",
       "url": "",
       "ts": 0
-    },
-    {
-      "note": "Manifold poll markets involving pedantic phrases like 'by far' face high NO pressure due to the high baseline set by Mark Zuckerberg.",
-      "question": "",
-      "url": "",
-      "ts": 0
     }
   ],
   "positions": [
@@ -468,6 +468,16 @@
       "profit": 3.5,
       "prob": 0.0,
       "days_to_close": 20.0
+    },
+    {
+      "question": "Will at least 10 UK riot related prosecutions be overturned or have their sentences shortened in the next 2 years?",
+      "url": "https://manifold.markets/gemini35flash/will-at-least-10-uk-riot-related-pr",
+      "side": "YES",
+      "shares": 261.2,
+      "invested": 57.0,
+      "profit": 5.0,
+      "prob": 0.0,
+      "days_to_close": 0.9
     },
     {
       "question": "METR 80% time horizon exceeds 10h before September",
@@ -571,6 +581,29 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1786496970999,
+      "kind": "bet",
+      "question": "Will at least 10 UK riot related prosecutions be overturned or have their sentences shortened in the next 2 years?",
+      "url": "https://manifold.markets/LukeShadwell/will-at-least-10-uk-riot-related-pr",
+      "market_prob": 0.20039513212441917,
+      "model_prob": 0.38,
+      "confidence": "medium",
+      "amount": 57.0,
+      "outcome": "YES",
+      "thinking": "With over 1,000 convictions following the 2024 riots, standard appellate reviews and Crown Court sentence appeals naturally yield some sentence adjustments. However, strict judicial guidelines on riot deterrence and the difficulty of verifying 10 individual cases keep the likelihood moderate rather than overwhelming.",
+      "uncertainty": "Whether official UK court reporting or media sources have documented at least 10 specific instances of reduced sentences or overturned convictions from the 2024 riots.",
+      "resolution_risk": "Lack of consolidated media reporting on minor sentence reductions could lead to a NO resolution even if 10 technical sentence modifications occurred across UK courts.",
+      "evidence_for": [
+        "Over 1,000 individuals were charged and sentenced in relation to the August 2024 UK riots, providing a large sample size.",
+        "Fast-tracked court processes and initial magistrate sentencings frequently lead to sentence adjustments or successful appeals in Crown Court or the Court of Appeal."
+      ],
+      "evidence_against": [
+        "UK appellate courts historically enforce strict guidance upholding deterrent sentences for public order and riot offences, limiting successful appeals.",
+        "No centralized public tracker exists documenting individual sentence reductions, creating a high verification threshold for market resolution."
+      ],
+      "reason": "edge 0.180, kelly 0.22, decay 1.00, bound by kelly target"
+    },
     {
       "ts": 1786494522705,
       "kind": "bet",
@@ -902,30 +935,6 @@
         "If towing is abandoned and the ship sinks or is scuttled, the question resolves NO."
       ],
       "reason": "edge 0.109, kelly 0.31, decay 0.66, bound by default cap"
-    },
-    {
-      "ts": 1786385931620,
-      "kind": "no_trade",
-      "question": "Will World Model AIs start being used in games in early 2026 and quickly start dominating the Game Development industry?",
-      "url": "https://manifold.markets/Bayesian/will-world-model-ais-start-being-us",
-      "market_prob": 0.04703974793442448,
-      "model_prob": 0.02,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "As of August 2026, game design remains overwhelmingly traditional, using standard engines and workflows. World models remain experimental and far from majority adoption in core design pipelines.",
-      "uncertainty": "Whether the chosen developer judge adopts an extremely broad definition of 'World Model AIs' and 'game design'.",
-      "resolution_risk": "The resolution criteria rely on the subjective judgment of an unspecified game developer or panel.",
-      "evidence_for": [
-        "50% of game studios reported using AI tools in active production by mid-2026",
-        "Rapid research developments in world models like Google DeepMind's Genie line"
-      ],
-      "evidence_against": [
-        "Game developer feedback in mid-2026 noted world models remain largely impractical for core game development pipelines",
-        "Mainstream game design in August 2026 remains centered on standard engines (Unreal/Unity), traditional coding, and traditional asset workflows rather than majority world-model prompting",
-        "No breakout commercial game based on real-time AI video generation was released before August 2026"
-      ],
-      "reason": "edge 0.027 below minimum 0.04"
     }
   ]
 }
