@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1786514175383,
+  "generated_ms": 1786514432719,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.6-flash",
@@ -30,7 +30,7 @@
   },
   "usage": {
     "fast": {
-      "today": 19,
+      "today": 21,
       "cap": 220
     },
     "chat": {
@@ -38,7 +38,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 6,
+      "today": 7,
       "cap": 18
     }
   },
@@ -47,6 +47,16 @@
   "net_worth": 552.15,
   "summary": "Net worth has decreased from M$645 to approximately M$597, with the cash balance dropping to M$108. The agent opened 10 new positions, bringing the total to 15. New bets include UK riot prosecutions (YES), Berlin temperatures (NO), US-Iran peace talks (YES), the Summer Metaculus Cup (NO), and MNX volume (NO). The position on Abdul El Sayed and Francesca Hong winning their primaries (YES) has experienced extreme P/L volatility.\n\nOperational friction remains a critical failure point. Gemini API 429 rate limit and 403 permission errors continue to disrupt analysis. A significant lapse in output filtering occurred during a public interaction, where the agent leaked internal JSON artifacts and over-responded to non-factual social engagement by replying to every message in a thread. Additionally, a mana transfer was vetoed because the agent failed to provide reasoning for the transaction.\n\nThe agent is well-calibrated in screening out ungrounded entertainment, celebrity, and geopolitical \"vibe\" props, such as unrealistic box office targets or speculative celebrity partnerships. It remains most vulnerable to infrastructure bottlenecks and lapses in public-facing output filters.\n\nKey open positions now span AI capability benchmarks, geopolitical diplomacy, and specific political primaries. Future execution must prioritize strict API quota compliance, the provision of explicit reasoning for all financial transfers, and a more disciplined approach to social interactions to avoid spamming and internal data leakage.",
   "journal": [
+    {
+      "ts": 1786514432578,
+      "kind": "analysis",
+      "text": "Analysed \"Will Starship Ship 40 be recovered to shore?\": market 43%, my 16% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1786514364373,
+      "kind": "screen",
+      "text": "Escalated \"Will Starship Ship 40 be recovered to shore?\" at 43%: quick estimate 85% vs market 43%"
+    },
     {
       "ts": 1786514109373,
       "kind": "book",
@@ -194,9 +204,9 @@
       "side": "YES",
       "shares": 299.0,
       "invested": 119.0,
-      "profit": -90.4,
+      "profit": -89.1,
       "prob": 0.0,
-      "days_to_close": 0.8
+      "days_to_close": 0.7
     },
     {
       "question": "Will temperatures in Berlin, Germany, reach 40\u00b0C this summer?",
@@ -206,7 +216,7 @@
       "invested": 64.0,
       "profit": 0.3,
       "prob": 0.0,
-      "days_to_close": 19.8
+      "days_to_close": 19.7
     },
     {
       "question": "Will a Manifolder win the Summer Metaculus Cup",
@@ -216,7 +226,7 @@
       "invested": 63.0,
       "profit": 3.5,
       "prob": 0.0,
-      "days_to_close": 19.8
+      "days_to_close": 19.7
     },
     {
       "question": "Will MNX have $1m in volume before September 2026?",
@@ -226,7 +236,7 @@
       "invested": 58.0,
       "profit": 0.1,
       "prob": 0.0,
-      "days_to_close": 19.8
+      "days_to_close": 19.7
     },
     {
       "question": "Will at least 10 UK riot related prosecutions be overturned or have their sentences shortened in the next 2 years?",
@@ -246,7 +256,7 @@
       "invested": 56.0,
       "profit": -5.0,
       "prob": 0.0,
-      "days_to_close": 19.8
+      "days_to_close": 19.7
     },
     {
       "question": "METR 80% time horizon exceeds 10h before September",
@@ -256,7 +266,7 @@
       "invested": 51.0,
       "profit": 0.1,
       "prob": 0.0,
-      "days_to_close": 19.8
+      "days_to_close": 19.7
     },
     {
       "question": "Will the next full gemini model be frontier at coding?",
@@ -276,7 +286,7 @@
       "invested": 21.0,
       "profit": 0.7,
       "prob": 0.0,
-      "days_to_close": 18.8
+      "days_to_close": 18.7
     },
     {
       "question": "Will any of OpenAI\u2019s \u201cTen Advances in Math and Theoretical CS\u201d be shown to be flawed by the end of August?",
@@ -286,7 +296,7 @@
       "invested": 18.0,
       "profit": 1.0,
       "prob": 0.0,
-      "days_to_close": 19.8
+      "days_to_close": 19.7
     },
     {
       "question": "Will the WTI Crude Oil Spot Price be above $78.50 on August 11, 2026?",
@@ -316,7 +326,7 @@
       "invested": 13.0,
       "profit": 0.3,
       "prob": 0.0,
-      "days_to_close": 19.8
+      "days_to_close": 19.7
     },
     {
       "question": "Will my this market post cross 5Ok Mana mark? (THIS ONE)",
@@ -346,10 +356,35 @@
       "invested": 2.6,
       "profit": 0.1,
       "prob": 0.0,
-      "days_to_close": 5.8
+      "days_to_close": 5.7
     }
   ],
   "decisions": [
+    {
+      "ts": 1786514432578,
+      "kind": "no_trade",
+      "question": "Will Starship Ship 40 be recovered to shore?",
+      "url": "https://manifold.markets/Mqrius/will-starship-ship-40-be-recovered",
+      "market_prob": 0.43189121885593085,
+      "model_prob": 0.16,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With rough Indian Ocean swells threatening the tow and Elon Musk publicly stating that recovery is looking improbable, the likelihood of successfully towing a major structural section (nosecone or main hull) to shore has dropped significantly.",
+      "uncertainty": "Whether the recovery fleet can stabilize and tow the main hull or nosecone to port despite rough Indian Ocean swells.",
+      "resolution_risk": "Disagreements over whether a recovered fragment qualifies as a 'major part' if the hull breaks apart during tow.",
+      "evidence_for": [
+        "SpaceX deployed a fleet of three recovery vessels (Go Australis, Normand Ranger, Skimmer Tide) that reached Ship 40 following splashdown.",
+        "SpaceX was actively attempting to tow the vehicle to land, and the market creator confirmed the close date will extend if needed."
+      ],
+      "evidence_against": [
+        "Rough Indian Ocean seas and high winds are severely obstructing towing efforts.",
+        "Elon Musk publicly acknowledged that recovery is 'not looking good right now' and 'increasingly looking improbable'.",
+        "If the vehicle sinks, breaks apart into minor pieces, or is scuttled due to weather, the market resolves NO.",
+        "Recovering just engines or small debris is explicitly insufficient to resolve YES."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1786509348701,
       "kind": "no_trade",
@@ -678,29 +713,6 @@
         "Early issues identified by community members currently appear to be patchable or minor rather than fatal."
       ],
       "reason": "edge 0.121, kelly 0.13, decay 0.66, bound by kelly target"
-    },
-    {
-      "ts": 1786390398994,
-      "kind": "bet",
-      "question": "Given I have been with my partner for a year, will we be together for 5?",
-      "url": "https://manifold.markets/LivInTheLookingGlass/given-i-have-been-with-my-partner-f-0dde6bfd1962",
-      "market_prob": 0.6901340271379099,
-      "model_prob": 0.62,
-      "confidence": "medium",
-      "amount": 15.0,
-      "outcome": "NO",
-      "thinking": "With a linked honeymoon market, the relationship appears past casual dating and headed toward marriage. For 1-year couples with marriage intent, 5-year survival rates are roughly 60-70% after accounting for 4-year cumulative hazard rates.",
-      "uncertainty": "Whether the couple is currently engaged/planning marriage or if their status has changed recently.",
-      "resolution_risk": "The market betting closes in ~18 days while asking about a 5-year outcome; the creator might resolve early based on current status, breakups, or subjective criteria.",
-      "evidence_for": [
-        "Couples who reach the 1-year mark have survived the highest hazard period of early breakups.",
-        "Comments reference a linked market created by the author titled 'where-will-we-honeymoon', indicating high commitment and potential marriage plans."
-      ],
-      "evidence_against": [
-        "Cumulative breakup or divorce rates over a 4-year period remain around 25-35% even for engaged or serious couples.",
-        "Trader @Eternal asked if they are still together, suggesting a lack of recent public updates on the relationship."
-      ],
-      "reason": "edge 0.070, kelly 0.10, decay 0.76, bound by kelly target"
     }
   ]
 }
