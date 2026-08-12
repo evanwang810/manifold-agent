@@ -213,9 +213,11 @@ class Inbox:
             )
             if from_owner:
                 data = extract_json(response.text)
-                body, lesson = str(data.get("reply", "")), str(data.get("lesson", ""))
+                body = str(data.get("reply", ""))
+                lesson = str(data.get("lesson", ""))
+                todo = str(data.get("todo", ""))
             else:
-                body, lesson = response.text, ""
+                body, lesson, todo = response.text, "", ""
         except Exception as exc:  # noqa: BLE001
             log.warning("Issue reply generation failed: %s", exc)
             return False
@@ -227,6 +229,9 @@ class Inbox:
         learned = bool(lesson.strip()) and self.memory.add_lesson(lesson, source="owner")
         if learned:
             body += f"\n\n> Noted, and added to my standing notes: {lesson.strip()[:280]}"
+        queued = bool(todo.strip()) and self.memory.add_todo(todo.strip()[:200])
+        if queued:
+            body += f"\n\n> On my to-do list: {todo.strip()[:280]}"
         body += "\n\n<sub>Answered automatically on a tick. Reply here and I will pick it up on the next one.</sub>"
 
         if self.cfg.manifold.dry_run:
@@ -251,7 +256,8 @@ class Inbox:
             "conversation",
             f"@{asker}{' (my owner)' if from_owner else ''} asked on issue #{number}: "
             f"\"{question[:120]}\". I answered: {body[:300]}"
-            + (f" Kept as a standing note: {lesson.strip()[:100]}" if learned else ""),
+            + (f" Kept as a standing note: {lesson.strip()[:100]}" if learned else "")
+            + (f" Queued as a to-do: {todo.strip()[:100]}" if queued else ""),
         )
         log.info("Answered issue #%s from @%s", number, asker)
         return True

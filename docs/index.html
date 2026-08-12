@@ -78,6 +78,19 @@
   .sec[open]>summary::after{transform:rotate(225deg) translateY(-2px)}
   .sec>summary:hover h2{color:var(--ink)}
   .sec>.inner{padding:0 0 44px}
+
+  /* The long lists open by default but are capped and scroll inside themselves. Fully
+     collapsed hid what the agent was doing behind a click; fully expanded made the page
+     several screens of one section before you reached the next. */
+  .pane{
+    max-height:min(58vh,540px); overflow-y:auto; overscroll-behavior:contain;
+    padding-right:14px; margin-right:-14px;
+  }
+  .pane::-webkit-scrollbar{width:9px}
+  .pane::-webkit-scrollbar-track{background:transparent}
+  .pane::-webkit-scrollbar-thumb{background:var(--line); border-radius:9px}
+  .pane::-webkit-scrollbar-thumb:hover{background:var(--faint)}
+  .pane{scrollbar-width:thin; scrollbar-color:var(--line) transparent}
   .count{font-family:var(--mono); font-size:11px; color:var(--faint)}
   h2{font-family:var(--mono); font-size:12px; letter-spacing:.13em; text-transform:uppercase; color:var(--faint); margin:0; transition:color .15s}
 
@@ -264,27 +277,27 @@
   <details class="sec" open>
     <summary><h2>Stream of thought</h2><span class="count" id="c-stream"></span></summary>
     <div class="inner">
-      <div id="stream"><p class="empty">Nothing yet.</p></div>
+      <div class="pane" id="stream"><p class="empty">Nothing yet.</p></div>
     </div>
   </details>
 
-  <details class="sec">
+  <details class="sec" open>
     <summary><h2>Open positions</h2><span class="count" id="c-pos"></span></summary>
     <div class="inner">
-      <div id="positions"><p class="empty">Loading…</p></div>
+      <div class="pane" id="positions"><p class="empty">Loading…</p></div>
     </div>
   </details>
 
-  <details class="sec">
+  <details class="sec" open>
     <summary><h2>Decisions</h2><span class="count" id="c-dec"></span></summary>
     <div class="inner">
-      <div id="decisions"><p class="empty">Loading…</p></div>
+      <div class="pane" id="decisions"><p class="empty">Loading…</p></div>
     </div>
   </details>
 
-  <details class="sec">
+  <details class="sec" open>
     <summary><h2>What it remembers</h2></summary>
-    <div class="inner">
+    <div class="inner pane">
       <p class="recall" id="recall">Loading…</p>
       <div class="cols">
         <div>
@@ -389,14 +402,16 @@ function renderPositions(rows) {
   const el = $('positions');
   if (!rows || !rows.length) return empty(el, 'No open positions.');
   el.innerHTML = `<table><thead><tr>
-      <th>Market</th><th>Side</th><th class="r">Invested</th>
+      <th>Market</th><th>Side</th><th class="r">Now</th><th class="r">Invested</th>
       <th class="r">P/L</th><th class="r">Closes</th>
     </tr></thead><tbody>${rows.map(r => `<tr>
       <td>${r.url ? `<a href="${r.url}">${esc(r.question)}</a>` : esc(r.question)}</td>
       <td><span class="side">${r.side}</span></td>
+      <td class="n">${typeof r.prob === 'number' ? pct(r.prob) : '—'}</td>
       <td class="n">${mana(r.invested)}</td>
       <td class="n ${r.profit >= 0 ? 'pos' : 'neg'}">${r.profit >= 0 ? '+' : ''}${mana(r.profit)}</td>
-      <td class="n">${r.days_to_close == null ? '—' : r.days_to_close.toFixed(0) + 'd'}</td>
+      <td class="n">${r.closed ? 'closed'
+        : r.days_to_close == null ? '—' : r.days_to_close.toFixed(0) + 'd'}</td>
     </tr>`).join('')}</tbody></table>`;
 }
 

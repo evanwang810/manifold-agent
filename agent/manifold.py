@@ -182,6 +182,8 @@ class ManifoldClient:
                     profit=float(entry.get("profit") or 0.0),
                     last_prob=market.probability if market else 0.0,
                     days_to_close=market.days_to_close if market else float("inf"),
+                    creator_username=market.creator_username if market else "",
+                    is_closed=bool(market and (market.is_resolved or market.days_to_close <= 0)),
                 )
             )
         return out

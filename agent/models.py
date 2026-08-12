@@ -48,6 +48,7 @@ class Market:
     question: str
     slug: str
     url: str
+    creator_username: str
     outcome_type: str
     mechanism: str
     probability: float
@@ -68,9 +69,15 @@ class Market:
             question=data.get("question", ""),
             slug=data.get("slug", ""),
             url=data.get("url", ""),
+            creator_username=data.get("creatorUsername", ""),
             outcome_type=data.get("outcomeType", ""),
             mechanism=data.get("mechanism", ""),
-            probability=float(data.get("probability") or 0.0),
+            # The markets and positions endpoints disagree on the name of the current
+            # price: /markets says `probability`, the contract-metrics payload says
+            # `prob`. Reading only the first left every held position looking like it
+            # sat at 0%, which is exactly the field the agent uses to decide whether a
+            # position has gone wrong, so it never saw one that had.
+            probability=float(data.get("probability") or data.get("prob") or 0.0),
             volume=float(data.get("volume") or 0.0),
             liquidity=float(data.get("totalLiquidity") or 0.0),
             unique_bettors=int(data.get("uniqueBettorCount") or 0),
@@ -129,6 +136,8 @@ class Position:
     profit: float
     last_prob: float
     days_to_close: float
+    creator_username: str = ""
+    is_closed: bool = False
 
     @property
     def side(self) -> str:
@@ -137,6 +146,23 @@ class Position:
     @property
     def shares(self) -> float:
         return max(self.has_yes, self.has_no)
+
+    @property
+    def url(self) -> str:
+        if not self.slug:
+            return ""
+        return f"https://manifold.markets/{self.creator_username or 'manifold'}/{self.slug}"
+
+    @property
+    def tradable(self) -> bool:
+        """Closed markets still show as positions but the API refuses to sell them."""
+        return not self.is_closed and self.days_to_close > 0
+
+    @property
+    def value(self) -> float:
+        """What the position is worth now: shares pay out 1 mana each if they land."""
+        price = self.last_prob if self.side == "YES" else 1.0 - self.last_prob
+        return self.shares * price
 
 
 @dataclass

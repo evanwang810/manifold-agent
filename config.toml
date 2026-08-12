@@ -162,7 +162,11 @@ max_market_impact = 0.05      # never move the price more than 5pp with one orde
 max_share_of_volume = 0.05
 max_open_positions = 40
 daily_mana_budget = 500
-min_balance_reserve = 50
+# Cash held back from every order. At 50 against a balance that had drifted down to
+# M$50 this silently floored every trade to zero for a day and a half: the agent kept
+# finding edges, kept sizing them at nothing, and read that as the market being fine.
+# Keep it small; it is a buffer against fees, not a risk control.
+min_balance_reserve = 10
 time_decay_days = 10
 
 [watch]

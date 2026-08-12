@@ -514,13 +514,23 @@ class Memory:
             self.state.get("events_since_compress", 0) >= self.cfg.compress_after_events
         )
         due_by_time = self._hours_since_compress() >= self.cfg.compress_after_hours
-        due_by_journal = len(self.state["journal"]) >= self.cfg.max_journal * 0.8
+        # Count only what has not been folded in yet. The journal is no longer emptied
+        # by compression, so measuring its full length would make this fire every tick
+        # forever once the log filled up.
+        since = int(self.state.get("last_compress_ms") or 0)
+        fresh = sum(1 for e in self.state["journal"] if e.get("ts", 0) > since)
+        due_by_journal = fresh >= self.cfg.journal_in_context * 2
         if due_by_events or due_by_time or due_by_journal:
             await self.compress()
 
     async def compress(self) -> None:
         events = self.recent_events(self.cfg.compress_after_events * 2)
-        journal = self.state["journal"]
+        # Only fold in what has happened since the last compression. Entries stay in
+        # the journal afterwards rather than being deleted: they are the only readable
+        # record of a quiet tick, and throwing them away made the public log restart
+        # from nearly empty every few hours.
+        since = int(self.state.get("last_compress_ms") or 0)
+        journal = [e for e in self.state["journal"] if e.get("ts", 0) > since]
         if not events and not journal:
             return
 
@@ -539,9 +549,9 @@ class Memory:
             "- Mistakes worth not repeating, stated concretely.\n"
             "- Categories or question styles where this agent has been well or badly calibrated.\n"
             "- Anything about specific still-open markets that matters.\n"
-            "Keep concrete details worth keeping and drop the rest: this replaces the "
-            "observations above, which are deleted once you have written it. Write "
-            "plainly. No headers, no bullet decoration, just tight prose."
+            "Keep concrete details worth keeping and drop the rest: this summary is "
+            "what you will still have once the observations above have scrolled out of "
+            "reach. Write plainly. No headers, no bullet decoration, just tight prose."
         )
         try:
             response = await self.llm.generate(prompt, system=COMPRESS_SYSTEM)
@@ -552,9 +562,6 @@ class Memory:
         self.state["summary"] = response.text.strip()
         self.state["events_since_compress"] = 0
         self.state["last_compress_ms"] = int(time.time() * 1000)
-        # The tail stays so the next few ticks still have immediate context; everything
-        # older is now represented in the summary.
-        self.state["journal"] = journal[-10:]
         self.save()
         log.info("Compressed %d observations into %d chars of memory",
                  len(journal), len(self.state["summary"]))

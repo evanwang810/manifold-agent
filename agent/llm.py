@@ -40,6 +40,37 @@ async def _space_out(key: str, gap: float) -> None:
         _last_call[key] = time.monotonic()
 
 
+def describe_schema(schema: dict[str, Any]) -> str:
+    """Render a response schema as instructions for a model that cannot be given one.
+
+    Providers that reject a structured-output field still follow a shape described in
+    the prompt. Without this they get told "answer in JSON" and nothing about which
+    keys, so they invent their own and every field the caller reads comes back empty.
+    """
+    def one(name: str, spec: Any, required: bool) -> str:
+        spec = spec if isinstance(spec, dict) else {}
+        kind = str(spec.get("type", "STRING")).lower()
+        note = str(spec.get("description", ""))
+        if spec.get("enum"):
+            note = f"{note} One of: {', '.join(str(v) for v in spec['enum'])}.".strip()
+        if kind == "array":
+            item = spec.get("items") or {}
+            inner = (item.get("properties") or {}) if isinstance(item, dict) else {}
+            if inner:
+                fields = "; ".join(
+                    one(k, v, True).lstrip("- ") for k, v in inner.items()
+                )
+                note = f"{note} Each entry is an object of: {fields}".strip()
+        flag = "" if required else " (optional)"
+        return f'- "{name}" ({kind}){flag}: {note}'.rstrip()
+
+    props = schema.get("properties") or {}
+    if not props:
+        return ""
+    required = set(schema.get("required") or props.keys())
+    return "\n".join(one(n, s, n in required) for n, s in props.items())
+
+
 @dataclass
 class LLMResponse:
     text: str
@@ -290,7 +321,13 @@ class GeminiClient(LLMClient):
                 f"quoting the system section above."
             )
         if plain and json_schema is not None:
-            text += " Your answer after the marker must be a single JSON object and nothing else."
+            fields = describe_schema(json_schema)
+            text += (
+                "\n\nYour answer after the marker must be a single JSON object and "
+                "nothing else: no prose around it, no code fence."
+            )
+            if fields:
+                text += f"\nUse exactly these keys:\n{fields}"
 
         body: dict[str, Any] = {
             "contents": [{"role": "user", "parts": [{"text": text}]}],
@@ -417,6 +454,16 @@ class OpenAICompatibleClient(LLMClient):
         grounded: bool,
         model: str,
     ) -> LLMResponse:
+        # json_object mode only guarantees the reply parses, never that it has the keys
+        # the caller reads, so the shape goes in the prompt the same way it does for a
+        # model with no structured-output support at all.
+        if json_schema is not None and not grounded:
+            fields = describe_schema(json_schema)
+            prompt += (
+                "\n\nAnswer with a single JSON object and nothing else."
+                + (f" Use exactly these keys:\n{fields}" if fields else "")
+            )
+
         messages: list[dict[str, str]] = []
         if system:
             messages.append({"role": "system", "content": system})

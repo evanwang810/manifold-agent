@@ -163,15 +163,36 @@ class Agency:
 
     # -- steps ------------------------------------------------------------
 
+    def _portfolio_line(
+        self, positions: list[Position], balance: float, net_worth: float
+    ) -> str:
+        """Spendable cash is stated outright because it is what actually gates buying.
+
+        Given only a balance, the agent kept proposing buys it could not afford and
+        reading the silent rejection as the market being unattractive.
+        """
+        spendable = max(0.0, balance - self.cfg.risk.min_balance_reserve)
+        stuck = sum(1 for p in positions if not p.tradable)
+        line = (
+            f"Balance M${balance:,.0f}, of which M${spendable:,.0f} is spendable after "
+            f"the M${self.cfg.risk.min_balance_reserve:,.0f} reserve. Net worth "
+            f"M${net_worth:,.0f} across {len(positions)} open positions."
+        )
+        if spendable < self.cfg.risk.min_bet:
+            line += (
+                " There is not enough free mana to open or add to anything right now, "
+                "so selling is the only way to free some up."
+            )
+        if stuck:
+            line += f" {stuck} of them are closed and cannot be traded."
+        return line
+
     async def _propose(
         self, positions: list[Position], balance: float, net_worth: float
     ) -> tuple[str, list[Action]]:
         prompt = build_agency_prompt(
             today=_today(),
-            portfolio=(
-                f"Balance M${balance:,.0f}, net worth M${net_worth:,.0f}, "
-                f"{len(positions)} open positions."
-            ),
+            portfolio=self._portfolio_line(positions, balance, net_worth),
             positions=_render_positions(positions),
             lessons=self.memory.lessons_block(),
             memory=self.memory.context_block(),
@@ -208,8 +229,7 @@ class Agency:
                 build_review_prompt(
                     proposal=action.describe(),
                     portfolio=(
-                        f"Balance M${balance:,.0f}, net worth M${net_worth:,.0f}, "
-                        f"{len(positions)} open positions."
+                        self._portfolio_line(positions, balance, net_worth)
                     ),
                     positions=_render_positions(positions),
                     owed=await self._incoming_mana(),
@@ -232,6 +252,16 @@ class Agency:
         if action.action in ("sell", "add"):
             if action.market_id not in held:
                 log.info("Own turn named a market it does not hold, dropping")
+                return None
+            # A closed market still appears in the book but the API answers 403 to any
+            # order on it. Without this the agent proposes the same doomed sell every
+            # turn, burns the turn on it, and learns nothing from the error.
+            if not held[action.market_id].tradable:
+                self.memory.observe(
+                    "agency",
+                    f"Wanted to {action.action} \"{held[action.market_id].question[:60]}\" "
+                    f"but that market is closed; it can only be waited out.",
+                )
                 return None
 
         if action.action == "add":
@@ -349,8 +379,7 @@ class Agency:
                 build_portfolio_prompt(
                     today=_today(),
                     portfolio=(
-                        f"Balance M${balance:,.0f}, net worth M${net_worth:,.0f}, "
-                        f"{len(positions)} open positions."
+                        self._portfolio_line(positions, balance, net_worth)
                     ),
                     positions=_render_positions(positions),
                     lessons=self.memory.lessons_block(),
@@ -430,14 +459,29 @@ class Agency:
 
 
 def _render_positions(positions: list[Position]) -> str:
+    """One line per position, worst first.
+
+    Ordering by loss rather than size is deliberate: the thing most likely to need a
+    decision should be the first thing read, not buried under the biggest holdings.
+    """
     if not positions:
         return "(none)"
-    rows = sorted(positions, key=lambda p: -abs(p.invested))[:15]
-    return "\n".join(
-        f"- {p.contract_id} | \"{p.question[:70]}\" | {p.shares:.0f} {p.side} at "
-        f"{p.last_prob:.0%} | invested M${p.invested:.0f}, P/L M${p.profit:+.0f}"
-        for p in rows
-    )
+    rows = sorted(positions, key=lambda p: (p.profit, -abs(p.invested)))[:20]
+    out = []
+    for p in rows:
+        pct = (p.profit / p.invested * 100) if p.invested else 0.0
+        if not p.tradable:
+            state = "CLOSED, cannot be sold, waiting on resolution"
+        elif p.days_to_close < 1:
+            state = "closes within a day"
+        else:
+            state = f"{p.days_to_close:.0f}d to close"
+        out.append(
+            f"- {p.contract_id} | \"{p.question[:70]}\" | {p.shares:.0f} {p.side} at "
+            f"{p.last_prob:.0%} | invested M${p.invested:.0f}, now worth M${p.value:.0f}, "
+            f"P/L M${p.profit:+.0f} ({pct:+.0f}%) | {state}"
+        )
+    return "\n".join(out)
 
 
 def _today() -> str:

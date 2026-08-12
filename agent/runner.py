@@ -255,13 +255,14 @@ class Runner:
                 (
                     {
                         "question": p.question,
-                        "url": f"https://manifold.markets/{self.report.username}/{p.slug}"
-                        if p.slug else "",
+                        "url": p.url,
                         "side": p.side,
                         "shares": round(p.shares, 1),
                         "invested": round(p.invested, 1),
+                        "value": round(p.value, 1),
                         "profit": round(p.profit, 1),
                         "prob": round(p.last_prob, 3),
+                        "closed": not p.tradable,
                         "days_to_close": None
                         if p.days_to_close == float("inf")
                         else round(p.days_to_close, 1),
@@ -344,7 +345,10 @@ class Runner:
                     f"M${position.invested:.0f} in.",
                 )
             else:
-                moved = position.last_prob - float(before.get("prob") or 0.0)
+                # As in _check_moves: a stored 0.0 is the old every-position-reads-0%
+                # bug rather than a real price, so it is not something to compare to.
+                prior = float(before.get("prob") or 0.0)
+                moved = (position.last_prob - prior) if prior else 0.0
                 pnl = position.profit - float(before.get("profit") or 0.0)
                 if abs(moved) >= 0.03:
                     self.memory.observe(
@@ -457,7 +461,10 @@ class Runner:
             current = position.last_prob
             previous = baseline.get(position.contract_id)
             baseline[position.contract_id] = current
-            if previous is None:
+            # A stored 0.0 is not a price, it is the old bug that read every position
+            # as 0%. Treat it as no baseline so the first tick after the fix re-seeds
+            # instead of reporting all sixteen positions as having moved at once.
+            if previous is None or not previous:
                 continue
             move = current - previous
             if abs(move) >= self.cfg.watch.move_threshold:
