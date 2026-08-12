@@ -250,7 +250,7 @@ class Inbox:
         self.memory.observe(
             "conversation",
             f"@{asker}{' (my owner)' if from_owner else ''} asked on issue #{number}: "
-            f"\"{question[:90]}\". I answered: {body[:120]}"
+            f"\"{question[:120]}\". I answered: {body[:300]}"
             + (f" Kept as a standing note: {lesson.strip()[:100]}" if learned else ""),
         )
         log.info("Answered issue #%s from @%s", number, asker)

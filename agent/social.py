@@ -167,7 +167,7 @@ class Social:
         self.memory.observe(
             "conversation",
             f"@{comment.username} said \"{comment.text[:90]}\" on "
-            f"\"{market.question[:50]}\". I replied: {text[:120]}",
+            f"\"{market.question[:50]}\". I replied: {text[:300]}",
         )
         log.info("Replied to @%s on %s", comment.username, market.slug)
         return True

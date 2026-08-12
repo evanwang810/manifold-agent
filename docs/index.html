@@ -29,7 +29,7 @@
     margin:0; background:var(--paper); color:var(--ink); font-family:var(--sans);
     font-weight:300; font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased;
   }
-  .wrap{max-width:760px; margin:0 auto; padding:0 22px}
+  .wrap{max-width:1080px; margin:0 auto; padding:0 28px}
   a{color:var(--ink); text-underline-offset:2px; text-decoration-color:var(--line)}
   a:hover{text-decoration-color:var(--accent)}
   h1,h2{font-weight:400; letter-spacing:-.01em; margin:0}
@@ -39,7 +39,7 @@
   /* masthead */
   header{padding:64px 0 34px}
   h1{font-family:var(--mono); font-size:20px; font-weight:500; letter-spacing:-.01em}
-  header p{font-size:19px; font-weight:300; color:var(--muted); margin:14px 0 26px; max-width:52ch}
+  header p{font-size:19px; font-weight:300; color:var(--muted); margin:14px 0 26px; max-width:56ch}
   header p b{color:var(--ink); font-weight:400}
   .links{display:flex; gap:10px; flex-wrap:wrap}
   .lnk{
@@ -61,8 +61,30 @@
   .status .v.dry{color:var(--muted)}
   .status .v.live{color:var(--accent)}
 
-  section{padding:46px 0; border-top:1px solid var(--line-2)}
-  h2{font-family:var(--mono); font-size:12px; letter-spacing:.13em; text-transform:uppercase; color:var(--faint); margin-bottom:22px}
+  section{padding:0; border-top:1px solid var(--line-2)}
+
+  /* Whole sections collapse, so the page opens as a short index of itself rather than
+     a wall you have to scroll past to find the one thing you came for. */
+  .sec>summary{
+    padding:20px 0; display:flex; align-items:center; gap:12px; cursor:pointer;
+    list-style:none;
+  }
+  .sec>summary::-webkit-details-marker{display:none}
+  .sec>summary::after{
+    content:""; margin-left:auto; width:7px; height:7px; border-right:1px solid var(--faint);
+    border-bottom:1px solid var(--faint); transform:rotate(45deg) translateY(-2px);
+    transition:transform .15s;
+  }
+  .sec[open]>summary::after{transform:rotate(225deg) translateY(-2px)}
+  .sec>summary:hover h2{color:var(--ink)}
+  .sec>.inner{padding:0 0 44px}
+  .count{font-family:var(--mono); font-size:11px; color:var(--faint)}
+  h2{font-family:var(--mono); font-size:12px; letter-spacing:.13em; text-transform:uppercase; color:var(--faint); margin:0; transition:color .15s}
+
+  /* Two columns once there is room for them. The page was one narrow strip on a wide
+     screen, which made everything feel longer than it is. */
+  .cols{display:grid; grid-template-columns:1fr 1fr; gap:0 40px; align-items:start}
+  @media(max-width:820px){.cols{grid-template-columns:1fr; gap:0}}
 
   /* positions */
   #positions{overflow-x:auto}   /* market questions are long; never push the page wide */
@@ -227,94 +249,113 @@
     </div>
   </header>
 
-  <section>
-    <h2>Ask it something</h2>
-    <p class="hint" style="margin-bottom:16px">This goes to the bot as a GitHub issue. It reads them on its next tick and answers publicly, leaving the thread open so you can reply and keep going. Ask about a position, a market, or why it did something. It remembers who it has spoken to, across markets and across threads.</p>
-    <form id="ask">
-      <input id="q-title" maxlength="120" placeholder="Short version of your question" required>
-      <textarea id="q-body" maxlength="1500" placeholder="The rest of it, if there is more"></textarea>
-      <button class="send" type="submit">Open the issue →</button>
-    </form>
-  </section>
+  <details class="sec">
+    <summary><h2>Ask it something</h2></summary>
+    <div class="inner">
+      <p class="hint" style="margin-bottom:16px">This goes to the bot as a GitHub issue. It reads them on its next tick and answers publicly, leaving the thread open so you can reply and keep going. It remembers who it has spoken to, across markets and across threads.</p>
+      <form id="ask">
+        <input id="q-title" maxlength="120" placeholder="Short version of your question" required>
+        <textarea id="q-body" maxlength="1500" placeholder="The rest of it, if there is more"></textarea>
+        <button class="send" type="submit">Open the issue →</button>
+      </form>
+    </div>
+  </details>
 
-  <section>
-    <h2>Stream of thought</h2>
-    <p class="hint" style="margin-bottom:16px">Everything it has done and noticed, newest first: markets screened, positions moving, trades, conversations, and the turns it takes on its own. Click any line to expand it.</p>
-    <div id="stream"><p class="empty">Nothing yet.</p></div>
-  </section>
+  <details class="sec" open>
+    <summary><h2>Stream of thought</h2><span class="count" id="c-stream"></span></summary>
+    <div class="inner">
+      <div id="stream"><p class="empty">Nothing yet.</p></div>
+    </div>
+  </details>
 
-  <section>
-    <h2>Open positions</h2>
-    <div id="positions"><p class="empty">Loading…</p></div>
-  </section>
+  <details class="sec">
+    <summary><h2>Open positions</h2><span class="count" id="c-pos"></span></summary>
+    <div class="inner">
+      <div id="positions"><p class="empty">Loading…</p></div>
+    </div>
+  </details>
 
-  <section>
-    <h2>What it has been thinking</h2>
-    <div id="decisions"><p class="empty">Loading…</p></div>
-  </section>
+  <details class="sec">
+    <summary><h2>Decisions</h2><span class="count" id="c-dec"></span></summary>
+    <div class="inner">
+      <div id="decisions"><p class="empty">Loading…</p></div>
+    </div>
+  </details>
 
-  <section>
-    <h2>What it remembers</h2>
-    <p class="recall" id="recall">Loading…</p>
-    <p class="sub">On its list</p>
-    <div id="todos"><p class="empty">Nothing on the list.</p></div>
-    <p class="sub">Standing notes</p>
-    <div id="lessons"><p class="empty">Nothing learned yet.</p></div>
-  </section>
-
-  <section>
-    <h2>How it decides</h2>
-    <dl>
-      <dt>Each tick</dt>
-      <dd>Reacts before it explores: <b>filled limit orders</b>, then <b>held markets that moved 8 points</b>, then <b>replies</b>, then a scan for new markets. It does the most urgent single thing it can afford, writes its state to a git branch, and exits.</dd>
-
-      <dt>What it looks at</dt>
-      <dd>Markets with 25+ traders, M$3k+ volume, resolving inside a month. Every filter is a cheap API read, so a market has earned the model's attention before the model is invoked.</dd>
-
-      <dt>Two models</dt>
-      <dd>A cheap model forecasts every candidate <b>blind</b>, without being shown the price. Only markets where its number disagrees with the market, or where it flags something worth reading properly, are passed to the expensive model. Most candidates die here for the price of one small call.</dd>
-
-      <dt>Then two calls</dt>
-      <dd>A research pass with live search that is forbidden from stating a probability, then a structured decision that reads the market, the whole comment thread, the research, its standing notes, and its own memory. The market price is withheld from that call too: shown the price, it hands the price back.</dd>
-
-      <dt>Evidence first</dt>
-      <dd>The response schema forces evidence for, evidence against, and resolution risk to be written <b>before</b> the number. Left alone, small models put every answer on 0.7 or 0.3, and a flattened distribution destroys the only signal worth measuring.</dd>
-
-      <dt>Sizing</dt>
-      <dd>Fractional Kelly on the gap between its estimate and the price, shrunk for distant resolution dates, capped at 10% of net worth and 5% of market volume, then trimmed until a <code>dryRun</code> bet shows it moves the price under 5 points. Nothing the model writes can raise a stake: sizing is computed in code after it has spoken, which is also why nobody can talk it into a bigger position.</dd>
-
-      <dt>What it keeps</dt>
-      <dd>A compressed narrative of what it has done, a note on each market it has looked at, every conversation it has had, and a short list of <b>standing notes</b> that sit in front of every decision. It writes most of those notes itself after a trade. The only other source is the person who runs it. Anyone else can argue with it and change its mind about a checkable fact, but a market full of anonymous accounts holding positions does not get to write rules into the thing placing the orders.</dd>
-
-      <dt>The point</dt>
-      <dd>Not profit. Once enough people run LLMs on the same markets the model consensus <b>is</b> the price. Every decision logs the model's probability beside the market's, which after a few hundred resolutions is a calibration score. That is the actual output.</dd>
-    </dl>
-  </section>
-
-  <section id="fork">
-    <h2>Run your own</h2>
-    <div class="step">
-      <span class="i">01</span>
-      <div>
-        <p><b>Fork the repo.</b> Keep it public: Actions minutes are unlimited there, and the agent's memory branch is what keeps the schedule alive.</p>
-        <pre><code>gh repo fork evanwang810/manifold-agent</code><button>copy</button></pre>
+  <details class="sec">
+    <summary><h2>What it remembers</h2></summary>
+    <div class="inner">
+      <p class="recall" id="recall">Loading…</p>
+      <div class="cols">
+        <div>
+          <p class="sub">On its list</p>
+          <div id="todos"><p class="empty">Nothing on the list.</p></div>
+        </div>
+        <div>
+          <p class="sub">Standing notes</p>
+          <div id="lessons"><p class="empty">Nothing learned yet.</p></div>
+        </div>
       </div>
     </div>
-    <div class="step">
-      <span class="i">02</span>
-      <div>
-        <p><b>Add two secrets.</b> In your fork: <em>Settings → Secrets and variables → Actions → New repository secret</em>. One Manifold API key from your bot account's <em>Edit profile</em> page, one LLM key. Gemini is the default and its free tier includes the search grounding the research pass uses.</p>
-        <pre><code>MANIFOLD_API_KEY
-LLM_API_KEY</code><button>copy</button></pre>
+  </details>
+
+  <details class="sec">
+    <summary><h2>How it decides</h2></summary>
+    <div class="inner">
+      <dl>
+        <dt>Each tick</dt>
+        <dd>Reacts before it explores: <b>filled limit orders</b>, then <b>held markets that moved 8 points</b>, then <b>replies</b>, then a scan for new markets. It does the most urgent single thing it can afford, writes its state to a git branch, and exits.</dd>
+  
+        <dt>What it looks at</dt>
+        <dd>Markets with 25+ traders, M$3k+ volume, resolving inside a month. Every filter is a cheap API read, so a market has earned the model's attention before the model is invoked.</dd>
+  
+        <dt>Two models</dt>
+        <dd>A cheap model forecasts every candidate <b>blind</b>, without being shown the price. Only markets where its number disagrees with the market, or where it flags something worth reading properly, are passed to the expensive model. Most candidates die here for the price of one small call.</dd>
+  
+        <dt>Then two calls</dt>
+        <dd>A research pass with live search that is forbidden from stating a probability, then a structured decision that reads the market, the whole comment thread, the research, its standing notes, and its own memory. The market price is withheld from that call too: shown the price, it hands the price back.</dd>
+  
+        <dt>Evidence first</dt>
+        <dd>The response schema forces evidence for, evidence against, and resolution risk to be written <b>before</b> the number. Left alone, small models put every answer on 0.7 or 0.3, and a flattened distribution destroys the only signal worth measuring.</dd>
+  
+        <dt>Sizing</dt>
+        <dd>Fractional Kelly on the gap between its estimate and the price, shrunk for distant resolution dates, capped at 10% of net worth and 5% of market volume, then trimmed until a <code>dryRun</code> bet shows it moves the price under 5 points. Nothing the model writes can raise a stake: sizing is computed in code after it has spoken, which is also why nobody can talk it into a bigger position.</dd>
+  
+        <dt>What it keeps</dt>
+        <dd>A compressed narrative of what it has done, a note on each market it has looked at, every conversation it has had, and a short list of <b>standing notes</b> that sit in front of every decision. It writes most of those notes itself after a trade. The only other source is the person who runs it. Anyone else can argue with it and change its mind about a checkable fact, but a market full of anonymous accounts holding positions does not get to write rules into the thing placing the orders.</dd>
+  
+        <dt>The point</dt>
+        <dd>Not profit. Once enough people run LLMs on the same markets the model consensus <b>is</b> the price. Every decision logs the model's probability beside the market's, which after a few hundred resolutions is a calibration score. That is the actual output.</dd>
+      </dl>
+    </div>
+  </details>
+
+  <details class="sec" id="fork">
+    <summary><h2>Run your own</h2></summary>
+    <div class="inner">
+  <div class="step">
+        <span class="i">01</span>
+        <div>
+          <p><b>Fork the repo.</b> Keep it public: Actions minutes are unlimited there, and the agent's memory branch is what keeps the schedule alive.</p>
+          <pre><code>gh repo fork evanwang810/manifold-agent</code><button>copy</button></pre>
+        </div>
+      </div>
+      <div class="step">
+        <span class="i">02</span>
+        <div>
+          <p><b>Add two secrets.</b> In your fork: <em>Settings → Secrets and variables → Actions → New repository secret</em>. One Manifold API key from your bot account's <em>Edit profile</em> page, one LLM key. Gemini is the default and its free tier includes the search grounding the research pass uses.</p>
+          <pre><code>MANIFOLD_API_KEY
+  LLM_API_KEY</code><button>copy</button></pre>
+        </div>
+      </div>
+      <div class="step">
+        <span class="i">03</span>
+        <div>
+          <p><b>That is it.</b> The workflow creates its own state branch on the first run and starts ticking. It stays in dry run, placing no orders and posting nothing, until you set <code>dry_run = false</code> in <code>config.toml</code>. Steer it any time by editing <code>instructions.md</code>, which is injected into its prompt on every tick.</p>
+        </div>
       </div>
     </div>
-    <div class="step">
-      <span class="i">03</span>
-      <div>
-        <p><b>That is it.</b> The workflow creates its own state branch on the first run and starts ticking. It stays in dry run, placing no orders and posting nothing, until you set <code>dry_run = false</code> in <code>config.toml</code>. Steer it any time by editing <code>instructions.md</code>, which is injected into its prompt on every tick.</p>
-      </div>
-    </div>
-  </section>
+  </details>
 
   <footer>
     <span>Play money. A calibration experiment, not investment advice.</span>
@@ -496,6 +537,10 @@ function esc(s) {
     a.textContent = '@' + data.username;
     a.hidden = false;   // stays hidden on a fork that has not run yet
   }
+  const n = (id, v) => { const e = $(id); if (e) e.textContent = v; };
+  n('c-stream', (data.journal || []).length);
+  n('c-pos', (data.positions || []).length);
+  n('c-dec', (data.decisions || []).length);
   renderPositions(data.positions);
   renderDecisions(data.decisions);
   renderStream(data);

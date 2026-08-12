@@ -446,7 +446,7 @@ class Brain:
             f"{'Limit order' if sizing.limit_prob else 'Bought'} M${sizing.amount:.0f} "
             f"{sizing.outcome} on \"{market.question[:70]}\" at "
             f"{market.probability:.0%}, my estimate {decision.probability:.0%} "
-            f"({decision.confidence}). Because: {decision.comment[:120]}",
+            f"({decision.confidence}). Because: {decision.comment[:450]}",
         )
         await self._maybe_comment(market, decision, sizing)
         return Evaluation(market, decision, sizing, True, "placed")

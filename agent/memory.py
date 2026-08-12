@@ -114,7 +114,9 @@ class Memory:
         and folded into the summary later, so noticing is free and only remembering
         long-term costs anything.
         """
-        text = " ".join(text.split())[:300]
+        # Generous: this is the text the site expands to show, and clipping it at
+        # storage time meant every expanded entry ended mid-sentence.
+        text = " ".join(text.split())[:700]
         if not text:
             return
         journal = self.state["journal"]
@@ -447,8 +449,8 @@ class Memory:
             {
                 "ts": int(time.time() * 1000),
                 "action": action,
-                "detail": detail[:200],
-                "reasoning": reasoning[:300],
+                "detail": detail[:300],
+                "reasoning": reasoning[:700],
             }
         )
         self.state["own_actions"] = actions[-40:]

@@ -319,7 +319,7 @@ class Agency:
 
         log.info("Own turn: %s%s", detail, " [dry-run]" if dry else "")
         self.memory.record_own_action(action.action, detail, action.reasoning)
-        self.memory.observe("agency", f"Own turn, {detail}. Because: {action.reasoning[:150]}")
+        self.memory.observe("agency", f"Own turn, {detail}. Because: {action.reasoning[:450]}")
         self.memory.log_event(
             "own_action", action=action.action, approved=True, detail=detail,
             amount=action.amount, reasoning=action.reasoning, dry_run=dry,
@@ -386,7 +386,7 @@ class Agency:
                 action=str(change.get("action", "")).strip().lower(),
                 market_id=str(change.get("market_id", "")).strip(),
                 amount=float(change.get("amount") or 0),
-                reasoning=str(change.get("why", ""))[:300],
+                reasoning=str(change.get("why", ""))[:700],
             )
             if action.action not in ("sell", "add"):
                 continue
