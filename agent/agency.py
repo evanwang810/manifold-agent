@@ -1,15 +1,14 @@
 """The agent's own turn.
 
 Everything else the agent does is a reaction: an order filled, a price moved, somebody
-asked something. This is the one place it acts unprompted, and it can do exactly one
-thing: trim a position, add to one, send mana back to somebody who sent it some, or
-rewrite one of its own standing notes.
+asked something. This is the one place it acts unprompted, and it may take several
+actions at once: trim positions, add to them, send mana back to somebody who sent it
+some, and write or retire its own standing notes.
 
-Two models are involved on purpose. The cheap one proposes, because proposing is mostly
-saying "nothing" and that should not cost anything scarce. The deep one reviews anything
-that moves mana and can veto it or cut the amount. There is no per-action ceiling: what
-bounds it instead is the balance reserve and the daily mana budget, both applied in code
-after both models have spoken.
+Only outgoing mana is reviewed by the deep model. Selling reduces exposure and notes
+touch nothing, so gating those on a scarce deep call mostly just gave the agent a reason
+to keep holding things it had stopped believing in. Amounts are clamped in code either
+way, by the balance reserve and the daily mana budget.
 """
 
 from __future__ import annotations
@@ -40,7 +39,8 @@ from .prompts import (
 log = logging.getLogger(__name__)
 
 MANAGRAM_MINIMUM = 10  # the API rejects anything smaller
-MONEY_ACTIONS = {"sell", "add", "send_mana"}
+# Only outgoing mana is reviewed. Selling reduces exposure and notes touch nothing.
+REVIEWED_ACTIONS = {"add", "send_mana"}
 
 
 @dataclass
@@ -115,19 +115,32 @@ class Agency:
         # through must not leave it retrying every tick.
         self.memory.mark_own_action()
 
-        proposal = await self._propose(positions, balance, net_worth)
-        if proposal is None:
-            return ""
-        if proposal.action in ("nothing", ""):
-            self.memory.observe("agency", f"Own turn, chose to do nothing: {proposal.reasoning}")
-            self.memory.log_event("own_action", action="nothing", reasoning=proposal.reasoning)
-            return "considered acting, chose not to"
+        thinking, proposals = await self._propose(positions, balance, net_worth)
+        if thinking:
+            self.memory.observe("agency", f"Own turn: {thinking}")
+        if not proposals:
+            self.memory.log_event("own_action", action="nothing", reasoning=thinking)
+            return "took a turn, nothing worth doing"
 
-        capped = self._clamp(proposal, positions, balance)
+        done = []
+        for action in proposals[: cfg.max_actions_per_turn]:
+            result = await self._consider(action, positions, balance, net_worth)
+            if result:
+                done.append(result)
+        return "; ".join(done) if done else "took a turn, nothing survived"
+
+    async def _consider(
+        self, action: Action, positions: list[Position], balance: float, net_worth: float
+    ) -> str:
+        """One proposed action: clamp it, review it if it moves mana, then do it."""
+        capped = self._clamp(action, positions, balance)
         if capped is None:
             return ""
 
-        if capped.action in MONEY_ACTIONS:
+        # Only outgoing mana is reviewed. Selling reduces exposure and note-keeping
+        # touches nothing, so making those wait on a scarce deep call was just a reason
+        # for the agent to sit on positions it had already stopped believing in.
+        if capped.action in REVIEWED_ACTIONS:
             verdict = await self._review(capped, positions, balance, net_worth)
             if verdict is None or not verdict.get("approved"):
                 reason = (verdict or {}).get("verdict", "review unavailable")
@@ -138,7 +151,7 @@ class Agency:
                     "own_action", action=capped.action, approved=False,
                     reasoning=capped.reasoning, verdict=reason,
                 )
-                return f"{capped.action} vetoed by review"
+                return f"{capped.action} vetoed"
             # The reviewer may cut the amount but never raise it.
             approved = float(verdict.get("amount") or capped.amount)
             capped.amount = min(capped.amount, max(0.0, approved))
@@ -152,7 +165,7 @@ class Agency:
 
     async def _propose(
         self, positions: list[Position], balance: float, net_worth: float
-    ) -> Action | None:
+    ) -> tuple[str, list[Action]]:
         prompt = build_agency_prompt(
             today=_today(),
             portfolio=(
@@ -171,10 +184,15 @@ class Agency:
                 system=system_with_orders(AGENCY_SYSTEM, self.cfg.owner_block()),
                 json_schema=AGENCY_SCHEMA,
             )
-            return Action.parse(extract_json(response.text))
+            data = extract_json(response.text)
+            raw = data.get("actions")
+            actions = [
+                Action.parse(item) for item in raw if isinstance(item, dict)
+            ] if isinstance(raw, list) else []
+            return str(data.get("thinking", ""))[:500], actions
         except Exception as exc:  # noqa: BLE001 - a bad turn must not kill the tick
             log.warning("Own-turn proposal failed: %s", exc)
-            return None
+            return "", []
 
     async def _review(
         self, action: Action, positions: list[Position], balance: float, net_worth: float

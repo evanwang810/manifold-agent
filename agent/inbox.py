@@ -23,7 +23,7 @@ import httpx
 
 from .brain import Budgets
 from .config import Config
-from .llm import LLMClient, extract_json
+from .llm import LLMClient, extract_json, strip_trailing_json
 from .memory import Memory
 from .prompts import (
     ADVICE_NOTE,
@@ -220,7 +220,7 @@ class Inbox:
             log.warning("Issue reply generation failed: %s", exc)
             return False
 
-        body = body.strip()[:3000]
+        body = strip_trailing_json(body)[:3000]
         if not body:
             return False
 

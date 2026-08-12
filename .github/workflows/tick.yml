@@ -39,11 +39,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 65
     env:
-      # A tick with nothing to react to costs zero LLM calls: it is a handful of
-      # Manifold reads, and 8 requests a minute against a 500/minute limit is nothing.
-      # The expensive work is gated separately, by max_evaluations_per_tick and by
-      # min_minutes_between_scans, so checking every minute buys reactivity for free.
-      TICK_INTERVAL_SECONDS: 60
+      # Every minute was pointless: a market does not move meaningfully in 60 seconds,
+      # and each tick still cost a round of API reads and a git commit. Three minutes is
+      # frequent enough to answer somebody promptly and to catch a filled order, which
+      # are the only two things that actually want a short interval.
+      TICK_INTERVAL_SECONDS: 180
       SESSION_MINUTES: ${{ inputs.minutes || '55' }}
     steps:
       - uses: actions/checkout@v4

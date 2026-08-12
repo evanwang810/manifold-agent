@@ -33,6 +33,9 @@ class LLMConfig:
     search_results: int = 6
     temperature: float = 0.3
     timeout_seconds: int = 90
+    # Floor on the gap between two calls to this provider, shared across every tier
+    # pointing at it. Free tiers rate limit per minute as well as per day.
+    min_seconds_between_calls: float = 20
     base_url: str = ""
     # Which environment variable holds this tier's key. Two tiers on two providers
     # means two keys, and neither is ever read from a file.
@@ -93,7 +96,7 @@ class ScanConfig:
     min_volume: float = 800
     max_days_to_resolve: float = 30
     min_hours_to_resolve: float = 6
-    skip_if_seen_within_hours: float = 48
+    skip_if_seen_within_hours: float = 24
 
 
 @dataclass
@@ -115,7 +118,7 @@ class RiskConfig:
     max_open_positions: int = 40
     daily_mana_budget: float = 500
     min_balance_reserve: float = 50
-    time_decay_days: float = 14
+    time_decay_days: float = 10
 
 
 @dataclass
@@ -133,7 +136,7 @@ class ScreenConfig:
     # and a 0.10 threshold passes 4 of 17, so this targets roughly a quarter of what is
     # scanned. Both screen outcomes are logged with the gap that produced them, so this
     # can be re-derived from the screener's own numbers once there are enough.
-    escalate_edge: float = 0.10
+    escalate_edge: float = 0.15
 
 
 @dataclass
@@ -145,12 +148,14 @@ class AgencyConfig:
     """
 
     enabled: bool = True
-    min_minutes_between_actions: float = 180
+    min_minutes_between_actions: float = 60
+    max_actions_per_turn: int = 3
     allow_send_mana: bool = True
     # A sweep over every open position, separate from the free turn and narrower: it may
     # only sell or add on markets already held, and each trade still goes to the reviewer.
     review_positions: bool = True
     min_minutes_between_book_reviews: float = 60
+    # Sell and note actions skip the deep reviewer; only outgoing mana needs it.
     # The deep model reviews anything touching mana and can veto it or cut the amount.
     # Turning this off means the cheap model moves money unsupervised.
     require_review: bool = True

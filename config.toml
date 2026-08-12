@@ -23,6 +23,9 @@ use_search = true             # false skips the research call entirely
 search_results = 6
 temperature = 0.3
 timeout_seconds = 90
+# Spacing between calls to the provider, shared across tiers. Free tiers rate limit per
+# minute as well as per day, and a burst of calls in one tick is what trips it.
+min_seconds_between_calls = 20
 key_env = "LLM_API_KEY"       # which environment variable holds the key
 
 # Every tier takes `fallbacks`: models tried in order when the preferred one is out of
@@ -65,7 +68,7 @@ enabled = true
 # 75th percentile at 0.081, and a 0.10 threshold passes 4 of 17. That targets roughly a
 # quarter of what gets scanned. Every screen now logs its own gap and verdict, so this
 # can be re-derived properly once there is enough screener data to beat the proxy.
-escalate_edge = 0.10
+escalate_edge = 0.15
 
 [budget]
 # Sized for a free tier of 20 requests a day on the deep model. That is the binding
@@ -97,7 +100,7 @@ min_unique_bettors = 12
 min_volume = 800
 max_days_to_resolve = 30
 min_hours_to_resolve = 6
-skip_if_seen_within_hours = 48
+skip_if_seen_within_hours = 24
 
 [agency]
 # The agent's own turn. Everything else it does is a reaction to something; this is the
@@ -110,7 +113,8 @@ skip_if_seen_within_hours = 48
 # It can sell out of a position, add to one, send mana (returning a loan, paying someone
 # back, lending to someone who asked), or rewrite one of its own standing notes.
 enabled = true
-min_minutes_between_actions = 180
+min_minutes_between_actions = 60
+max_actions_per_turn = 3
 allow_send_mana = true
 # Separately, a sweep over the whole book: every open position looked at together, with
 # the option to trim or add. Narrower than the free turn, since it can only touch markets
@@ -151,7 +155,7 @@ max_share_of_volume = 0.05
 max_open_positions = 40
 daily_mana_budget = 500
 min_balance_reserve = 50
-time_decay_days = 14
+time_decay_days = 10
 
 [watch]
 move_threshold = 0.08         # pp move on a held market that forces a re-evaluation

@@ -150,11 +150,9 @@ class Runner:
         await self._check_fills()
         await self._check_moves(positions)
 
-        # Answering happens either side of the expensive work. A single analysis can
-        # take most of a minute, so a message that arrives while the deep model is
-        # thinking would otherwise sit until the next tick for no reason. Both passes
-        # share one budget and the same already-answered bookkeeping, so the second is
-        # free when nothing new turned up.
+        # Once per tick, before the expensive work. It used to run again afterwards,
+        # which combined with the separate reply workflow meant two processes could be
+        # holding the same unanswered question at the same time and both answer it.
         self.report.replies = await self._answer_messages(len(positions))
         await self._scan()
 
@@ -173,7 +171,6 @@ class Runner:
         if own:
             self.report.notes.append(f"own turn: {own}")
 
-        self.report.replies += await self._answer_messages(len(positions))
 
         if not self.budget.chat.spent:
             await self.memory.maybe_compress()

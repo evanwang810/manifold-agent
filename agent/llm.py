@@ -10,6 +10,7 @@ import asyncio
 import json
 import logging
 import re
+import time
 from dataclasses import dataclass, field
 from typing import Any
 
@@ -21,6 +22,22 @@ log = logging.getLogger(__name__)
 
 _FENCE = re.compile(r"```(?:json)?\s*(.*?)```", re.S)
 _ANSWER_MARKER = "%%%ANSWER%%%"
+
+# Spacing is per provider host and shared by every tier pointing at it, since that is
+# what the rate limit is actually counted against. Three tiers each politely waiting
+# their own turn would still burst three calls at once at the provider.
+_last_call: dict[str, float] = {}
+_throttle_lock = asyncio.Lock()
+
+
+async def _space_out(key: str, gap: float) -> None:
+    if gap <= 0:
+        return
+    async with _throttle_lock:
+        waited = time.monotonic() - _last_call.get(key, 0.0)
+        if waited < gap:
+            await asyncio.sleep(gap - waited)
+        _last_call[key] = time.monotonic()
 
 
 @dataclass
@@ -82,6 +99,25 @@ def extract_json(text: str) -> dict[str, Any]:
                         break
 
     raise ValueError(f"No JSON object in model output: {text[:300]}")
+
+
+def strip_trailing_json(text: str) -> str:
+    """Drop a JSON block a chatty model tacked onto the end of a human reply.
+
+    Gemma will helpfully emit `{"lesson": ""}` after its prose whenever the prompt has
+    ever mentioned a structured field, and that was getting posted verbatim under every
+    public answer. Only a trailing block is removed, so a reply that legitimately talks
+    about JSON in the middle of a sentence survives.
+    """
+    cleaned = text.rstrip()
+    for _ in range(3):
+        match = re.search(r"\n\s*```(?:json)?\s*\{.*?\}\s*```\s*$", cleaned, re.S)
+        if not match:
+            match = re.search(r"\n\s*\{[^{}]*\}\s*$", cleaned, re.S)
+        if not match:
+            break
+        cleaned = cleaned[: match.start()].rstrip()
+    return cleaned or text.strip()
 
 
 class PermanentLLMError(RuntimeError):
@@ -241,6 +277,7 @@ class GeminiClient(LLMClient):
             generation["responseMimeType"] = "application/json"
             generation["responseSchema"] = json_schema
 
+        await _space_out(self.cfg.provider, self.cfg.min_seconds_between_calls)
         resp = await self._client.post(
             f"{self.BASE}/models/{model}:generateContent",
             headers={"x-goog-api-key": self.cfg.api_key},
@@ -363,6 +400,7 @@ class OpenAICompatibleClient(LLMClient):
         if json_schema is not None and not grounded:
             body["response_format"] = {"type": "json_object"}
 
+        await _space_out(self.base, self.cfg.min_seconds_between_calls)
         resp = await self._client.post(
             f"{self.base}/chat/completions",
             headers={"Authorization": f"Bearer {self.cfg.api_key}"},

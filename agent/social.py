@@ -15,7 +15,7 @@ import time
 
 from .brain import Budgets
 from .config import Config
-from .llm import LLMClient
+from .llm import LLMClient, strip_trailing_json
 from .manifold import ManifoldClient, ManifoldError
 from .memory import Memory
 from .models import Comment, Market
@@ -145,7 +145,7 @@ class Social:
             log.warning("Reply generation failed: %s", exc)
             return False
 
-        text = response.text.strip()[:900]
+        text = strip_trailing_json(response.text)[:900]
         if not text:
             return False
 
