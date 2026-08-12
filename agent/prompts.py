@@ -351,7 +351,10 @@ AGENCY_SCHEMA = {
         },
         "actions": {
             "type": "ARRAY",
-            "description": "The things you want to do. Empty list means do nothing.",
+            "description": (
+                "The things you want to do, usually one to three. Only empty if you "
+                "genuinely found nothing worth even a note, which should be rare."
+            ),
             "items": {
                 "type": "OBJECT",
                 "properties": {

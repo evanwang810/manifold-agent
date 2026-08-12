@@ -12,17 +12,25 @@ dry_run = false
 #
 # provider is one of: gemini | mistral | openai_compatible
 #
-# Gemini is only worth it if your Google project is actually allowed to make free
-# calls, which not every account gets. Run `python run.py --check` to find out before
-# committing to it. Mistral, Groq, Cerebras and OpenRouter all have free tiers that do
-# not ask for a card, and the research step falls back to keyless DuckDuckGo search on
-# any provider without native grounding.
+# Nothing below is Gemini-specific except the model names. If you are forking this onto
+# another provider, the three things to change are: the model in each tier, `provider`
+# (plus `base_url` for openai_compatible), and the [budget] daily caps, which are set for
+# a 20-a-day free tier and are almost certainly wrong for yours. Run
+# `python run.py --check` first; it reports each tier separately.
+#
+# Gemini is the default because its native Google Search grounding means research needs
+# no second key. Everywhere else, research falls back to keyless DuckDuckGo, which the
+# agent handles on its own. Mistral, Groq, Cerebras and OpenRouter all have free tiers
+# that do not ask for a card.
 provider = "gemini"
 base_url = ""
 use_search = true             # false skips the research call entirely
 search_results = 6
 temperature = 0.3
 timeout_seconds = 90
+# Uncomment for a model that rejects system prompts or response schemas outright and
+# answers 400 rather than ignoring them. Gemma is detected automatically.
+# prompt_only = true
 # Spacing between calls to the provider, shared across tiers. Free tiers rate limit per
 # minute as well as per day, and a burst of calls in one tick is what trips it.
 min_seconds_between_calls = 20

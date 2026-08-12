@@ -101,6 +101,26 @@ def extract_json(text: str) -> dict[str, Any]:
     raise ValueError(f"No JSON object in model output: {text[:300]}")
 
 
+_REASONING = re.compile(
+    r"<(think|thinking|reasoning|scratchpad)>.*?</\1>", re.S | re.I
+)
+
+
+def strip_reasoning(text: str) -> str:
+    """Remove inline reasoning blocks before the text is used as an answer.
+
+    Gemini returns reasoning as separate parts flagged `thought`, which is easy to drop.
+    Open models served over the OpenAI dialect inline it in the content as <think>...
+    </think> instead, and that would go straight into a public comment. An unclosed
+    opening tag means the reasoning ran to the end, so everything after it goes too.
+    """
+    cleaned = _REASONING.sub("", text)
+    opening = re.search(r"<(think|thinking|reasoning|scratchpad)>", cleaned, re.I)
+    if opening:
+        cleaned = cleaned[: opening.start()]
+    return cleaned.strip() or text.strip()
+
+
 def strip_trailing_json(text: str) -> str:
     """Drop a JSON block a chatty model tacked onto the end of a human reply.
 
@@ -243,7 +263,14 @@ class GeminiClient(LLMClient):
         # system instruction, no response schema, no grounding. Rejecting those is a
         # 400, so they are folded into the prompt instead and the JSON is parsed out of
         # whatever comes back, which extract_json already copes with.
-        plain = "gemma" in model.lower()
+        # Some models reject a system instruction, a response schema, or both, and
+        # answer 400 rather than ignoring the field. Gemma is the common case so it is
+        # detected by name, but any model can opt in with `prompt_only` in config.
+        plain = (
+            self.cfg.prompt_only
+            if self.cfg.prompt_only is not None
+            else "gemma" in model.lower()
+        )
 
         generation: dict[str, Any] = {"temperature": self.cfg.temperature}
         text = prompt
@@ -416,7 +443,9 @@ class OpenAICompatibleClient(LLMClient):
         if resp.status_code >= 400:
             raise RuntimeError(f"LLM {resp.status_code}: {resp.text[:400]}")
         data = resp.json()
-        text = data["choices"][0]["message"]["content"] or ""
+        message = data["choices"][0]["message"]
+        # Some providers put reasoning in its own field, others inline it in the content.
+        text = strip_reasoning(message.get("content") or "")
         return LLMResponse(text=text, raw=data)
 
 

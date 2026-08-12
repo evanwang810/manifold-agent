@@ -36,6 +36,10 @@ class LLMConfig:
     # Floor on the gap between two calls to this provider, shared across every tier
     # pointing at it. Free tiers rate limit per minute as well as per day.
     min_seconds_between_calls: float = 20
+    # Some models reject a system instruction or a response schema outright. Leave unset
+    # to detect the usual suspects by name; set true to fold both into the prompt for a
+    # model that needs it, false to force the normal path.
+    prompt_only: bool | None = None
     base_url: str = ""
     # Which environment variable holds this tier's key. Two tiers on two providers
     # means two keys, and neither is ever read from a file.
