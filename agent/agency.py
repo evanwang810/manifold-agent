@@ -177,6 +177,7 @@ class Agency:
             memory=self.memory.context_block(),
             recent_actions=self.memory.own_actions_block(5),
             owed=await self._incoming_mana(),
+            todos=self.memory.todos_block(),
         )
         try:
             response = await self.chat.generate(
@@ -301,6 +302,14 @@ class Agency:
                 if not self.memory.remove_lesson(action.text):
                     return ""
                 detail = f"retired a standing note: {action.text[:120]}"
+            elif action.action == "todo_add":
+                if not self.memory.add_todo(action.text):
+                    return ""
+                detail = f"added to its to-do list: {action.text[:120]}"
+            elif action.action == "todo_done":
+                if not self.memory.complete_todo(action.text):
+                    return ""
+                detail = f"ticked off: {action.text[:120]}"
             else:
                 return ""
         except ManifoldError as exc:

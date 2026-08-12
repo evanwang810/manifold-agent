@@ -239,7 +239,7 @@
 
   <section>
     <h2>Stream of thought</h2>
-    <p class="hint" style="margin-bottom:16px">The last things it did on its own initiative. Click any of them to see the reasoning it gave at the time.</p>
+    <p class="hint" style="margin-bottom:16px">Everything it has done and noticed, newest first: markets screened, positions moving, trades, conversations, and the turns it takes on its own. Click any line to expand it.</p>
     <div id="stream"><p class="empty">Nothing yet.</p></div>
   </section>
 
@@ -256,16 +256,10 @@
   <section>
     <h2>What it remembers</h2>
     <p class="recall" id="recall">Loading…</p>
-    <p class="sub">Running journal</p>
-    <div id="journal"><p class="empty">Nothing noted yet.</p></div>
+    <p class="sub">On its list</p>
+    <div id="todos"><p class="empty">Nothing on the list.</p></div>
     <p class="sub">Standing notes</p>
     <div id="lessons"><p class="empty">Nothing learned yet.</p></div>
-    <p class="sub">Notes on individual markets</p>
-    <div id="notes"><p class="empty">No notes yet.</p></div>
-    <p class="sub">Recent conversations</p>
-    <div id="chats"><p class="empty">Nobody has talked to it yet.</p></div>
-    <p class="sub">Models and quota today</p>
-    <div id="models"><p class="empty">—</p></div>
   </section>
 
   <section>
@@ -421,20 +415,31 @@ function renderDecisions(rows) {
   }).join('');
 }
 
-function renderStream(rows) {
+function renderStream(data) {
   const el = $('stream');
-  if (!rows || !rows.length) return empty(el, 'It has not taken a turn of its own yet.');
-  el.innerHTML = rows.map(a => {
-    const nothing = a.action === 'nothing';
+  const rows = data.journal || [];
+  if (!rows.length) return empty(el, 'Nothing recorded yet.');
+
+  // Own-turn reasoning is keyed by timestamp so an agency line in the journal can be
+  // expanded to show why it did it, without duplicating the entry.
+  const why = {};
+  (data.own_actions || []).forEach(a => {
+    if (a.reasoning) why[a.action + '|' + (a.detail || '').slice(0, 40)] = a.reasoning;
+  });
+
+  const shade = { trade: 'buy', agency: 'buy', book: 'buy', closed: 'out', screen: '' };
+  el.innerHTML = rows.map(j => {
+    const text = j.text || '';
+    const detail = Object.entries(why).find(([k]) => text.includes(k.split('|')[1]));
+    const head = text.length > 110 ? text.slice(0, 110) + '…' : text;
+    const more = detail ? detail[1] : (text.length > 110 ? text : '');
     return `<details>
       <summary>
-        <span class="tag ${nothing ? '' : 'buy'}">${esc(a.action)}</span>
-        <span class="sum-t">${esc(a.detail || 'Considered acting and chose not to.')}</span>
-        <span class="sum-w">${a.ts ? ago(a.ts) : ''}</span>
+        <span class="tag ${shade[j.kind] || ''}">${esc(j.kind || '')}</span>
+        <span class="sum-t">${esc(head)}</span>
+        <span class="sum-w">${j.ts ? ago(j.ts) : ''}</span>
       </summary>
-      <div class="body">
-        <p class="think">${esc(a.reasoning || 'No reasoning recorded.')}</p>
-      </div>
+      <div class="body"><p class="think">${esc(more || text)}</p></div>
     </details>`;
   }).join('');
 }
@@ -443,63 +448,18 @@ function renderMemory(data) {
   $('recall').textContent = data.summary
     || 'Nothing compressed yet. Its memory is written after enough events accumulate.';
 
+  const todos = data.todos || [];
+  if (todos.length) {
+    $('todos').innerHTML = `<ul class="lessons">${todos.map(t =>
+      `<li><span class="src${t.done ? '' : ' owner'}">${t.done ? 'done' : 'open'}</span>
+        <span${t.done ? ' class="on"' : ''}>${esc(t.text)}</span></li>`).join('')}</ul>`;
+  }
+
   const lessons = data.lessons || [];
   if (lessons.length) {
-    $('lessons').innerHTML = `<ul class="lessons">${lessons.map(l => {
-      const owner = l.source === 'owner' ? ' owner' : '';
-      return `<li><span class="src${owner}">${esc(l.source || 'self')}</span>
-        <span>${esc(l.text)}</span></li>`;
-    }).join('')}</ul>`;
-  }
-
-  const journal = data.journal || [];
-  if (journal.length) {
-    $('journal').innerHTML = `<ul class="lessons">${journal.map(j =>
-      `<li><span class="src">${esc(j.kind || '')}</span>
-        <span>${esc(j.text)}<br><span class="on">${j.ts ? ago(j.ts) : ''}</span></span>
-      </li>`).join('')}</ul>`;
-  }
-
-  const notes = data.notes || [];
-  if (notes.length) {
-    $('notes').innerHTML = `<ul class="lessons">${notes.map(n => {
-      const q = n.question || 'a market';
-      const head = n.url ? `<a href="${esc(n.url)}">${esc(q)}</a>` : esc(q);
-      return `<li><span class="src">note</span>
-        <span>${esc(n.note)}<br><span class="on">on ${head}</span></span></li>`;
-    }).join('')}</ul>`;
-  }
-
-  const models = data.models || {};
-  const usage = data.usage || {};
-  const rows = Object.keys(models);
-  if (rows.length) {
-    $('models').innerHTML = `<table><thead><tr><th>Tier</th><th>Running</th>
-      <th>Backups</th><th class="n">Calls today</th></tr></thead><tbody>${
-      rows.map(k => {
-        const m = models[k], u = usage[k] || {};
-        const drift = m.active && m.active !== m.configured;
-        return `<tr>
-          <td>${esc(k)}</td>
-          <td>${esc(m.active || m.configured)}${
-            drift ? ` <span class="on">(${esc(m.configured)} unavailable)</span>` : ''}</td>
-          <td class="on">${(m.fallbacks || []).map(esc).join(', ') || '—'}</td>
-          <td class="n">${u.today == null ? '—' : u.today + (u.cap ? ' / ' + u.cap : '')}</td>
-        </tr>`;
-      }).join('')}</tbody></table>`;
-  }
-
-  const chats = data.conversations || [];
-  if (chats.length) {
-    $('chats').innerHTML = chats.map(c => {
-      const who = esc(c.who || 'someone');
-      const head = c.url ? `<a href="${esc(c.url)}">${who}</a>` : who;
-      const turns = (c.messages || []).map(m =>
-        `<p class="turn ${m.role === 'me' ? 'me' : ''}">${esc(m.text)}</p>`).join('');
-      return `<div class="chat">
-        <div class="who">${head} · ${esc(c.channel || '')}${
-          c.updated_ms ? ' · ' + ago(c.updated_ms) : ''}</div>${turns}</div>`;
-    }).join('');
+    $('lessons').innerHTML = `<ul class="lessons">${lessons.map(l =>
+      `<li><span class="src${l.source === 'owner' ? ' owner' : ''}">${esc(l.source || 'self')}</span>
+        <span>${esc(l.text)}</span></li>`).join('')}</ul>`;
   }
 }
 
@@ -538,7 +498,7 @@ function esc(s) {
   }
   renderPositions(data.positions);
   renderDecisions(data.decisions);
-  renderStream(data.own_actions);
+  renderStream(data);
   renderMemory(data);
 })();
 

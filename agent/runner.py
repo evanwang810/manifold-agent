@@ -230,7 +230,11 @@ class Runner:
             "summary": self.memory.state.get("summary", ""),
             "journal": [
                 {"ts": e.get("ts"), "kind": e.get("kind"), "text": e.get("text", "")}
-                for e in self.memory.recent_journal(40)[::-1]
+                for e in self.memory.recent_journal(80)[::-1]
+            ],
+            "todos": [
+                {"text": t.get("text", ""), "done": bool(t.get("done")), "ts": t.get("ts")}
+                for t in self.memory.state.get("todos", [])[::-1]
             ],
             "lessons": [
                 {
@@ -240,35 +244,12 @@ class Runner:
                 }
                 for le in self.memory.state.get("lessons", [])
             ],
-            "conversations": [
-                {
-                    "channel": convo.get("channel", ""),
-                    "who": convo.get("who", ""),
-                    "title": convo.get("title", ""),
-                    "url": convo.get("url", ""),
-                    "updated_ms": convo.get("updated_ms"),
-                    "messages": [
-                        {"role": m.get("role"), "text": (m.get("text") or "")[:400]}
-                        for m in (convo.get("messages") or [])[-6:]
-                    ],
-                }
-                for convo in self.memory.recent_conversations(6)
-            ],
             "own_actions": [
                 {
                     "ts": a.get("ts"), "action": a.get("action"),
                     "detail": a.get("detail", ""), "reasoning": a.get("reasoning", ""),
                 }
                 for a in self.memory.recent_own_actions(12)[::-1]
-            ],
-            "notes": [
-                {
-                    "note": n.get("note", ""),
-                    "question": n.get("question", ""),
-                    "url": n.get("url", ""),
-                    "ts": n.get("ts"),
-                }
-                for n in self.memory.recent_notes(12)
             ],
             "positions": sorted(
                 (

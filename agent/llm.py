@@ -164,7 +164,10 @@ class LLMClient:
         than go dark until midnight. Quota and permanent errors move to the next model
         immediately, since no amount of backoff fixes either.
         """
-        chain = self.chain
+        # A grounded 429 means the search grounding quota is gone, which is an account
+        # level thing: retrying the same call on a different model 429s identically and
+        # just burns another request. Only plain generation is worth failing over.
+        chain = self.chain[:1] if grounded else self.chain
         last: Exception | None = None
 
         for index, model in enumerate(chain):

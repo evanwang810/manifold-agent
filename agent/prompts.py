@@ -357,7 +357,10 @@ AGENCY_SCHEMA = {
                 "properties": {
                     "action": {
                         "type": "STRING",
-                        "enum": ["sell", "add", "send_mana", "note_add", "note_remove"],
+                        "enum": [
+                            "sell", "add", "send_mana", "note_add",
+                            "note_remove", "todo_add", "todo_done",
+                        ],
                     },
                     "market_id": {
                         "type": "STRING",
@@ -406,6 +409,7 @@ def build_agency_prompt(
     memory: str,
     recent_actions: str,
     owed: str,
+    todos: str = "(nothing on your list)",
 ) -> str:
     return f"""Today is {today}. Nothing is asking anything of you right now.
 
@@ -420,6 +424,9 @@ MANA PEOPLE HAVE SENT YOU
 
 YOUR STANDING NOTES
 {lessons}
+
+YOUR TO-DO LIST
+{todos}
 
 YOUR MEMORY
 {memory}

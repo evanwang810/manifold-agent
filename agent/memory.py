@@ -61,6 +61,8 @@ class Memory:
             "llm_usage": {"day": ""},   # day -> per-tier call counts, reset daily
             "last_scan_ms": 0,
             "last_compress_ms": 0,
+            "grounding_out_day": "",   # UTC day grounding quota ran out
+            "todos": [],               # [{text, ts, done}]
             "last_own_action_ms": 0,
             "last_book_review_ms": 0,
             "own_actions": [],         # what it chose to do on its own turns
@@ -250,6 +252,47 @@ class Memory:
             for key, _ in sorted(threads.items(), key=lambda kv: kv[1].get("ts", 0))[:50]:
                 threads.pop(key, None)
         self.save()
+
+    # -- grounded search --------------------------------------------------
+
+    def grounding_exhausted(self) -> bool:
+        """True if search grounding already 429'd today. Resets at UTC midnight."""
+        return self.state.get("grounding_out_day") == self._today()
+
+    def mark_grounding_exhausted(self) -> None:
+        self.state["grounding_out_day"] = self._today()
+        self.save()
+
+    # -- todos ------------------------------------------------------------
+
+    def add_todo(self, text: str) -> bool:
+        text = " ".join(text.split())[:200]
+        if len(text) < 4:
+            return False
+        todos = self.state["todos"]
+        if any(t["text"].lower() == text.lower() and not t["done"] for t in todos):
+            return False
+        todos.append({"text": text, "ts": int(time.time() * 1000), "done": False})
+        self.state["todos"] = todos[-30:]
+        self.save()
+        return True
+
+    def complete_todo(self, text: str) -> bool:
+        wanted = " ".join(text.split()).lower()
+        for todo in self.state["todos"]:
+            existing = todo["text"].lower()
+            if not todo["done"] and (existing == wanted or wanted in existing or existing in wanted):
+                todo["done"] = True
+                todo["done_ts"] = int(time.time() * 1000)
+                self.save()
+                return True
+        return False
+
+    def todos_block(self) -> str:
+        open_items = [t for t in self.state["todos"] if not t["done"]]
+        if not open_items:
+            return "(nothing on your list)"
+        return "\n".join(f"- {t['text']}" for t in open_items)
 
     # -- llm usage --------------------------------------------------------
 

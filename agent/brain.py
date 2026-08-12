@@ -8,7 +8,7 @@ from dataclasses import dataclass
 from typing import Callable
 
 from .config import Config
-from .llm import LLMClient, extract_json
+from .llm import LLMClient, QuotaError, extract_json
 from .manifold import ManifoldClient, ManifoldError
 from .memory import Memory
 from .models import Comment, Decision, Market, Position, Sizing
@@ -311,7 +311,11 @@ class Brain:
         # Native grounding first where it exists. Its free quota is far smaller than
         # plain generation's and runs out long before the model does, so a failure
         # here falls through to keyless search rather than giving up on research.
-        if self.fast.supports_search:
+        # Grounding quota is separate from generation quota and much smaller. Once it is
+        # gone it is gone for the rest of the day, so remember that instead of
+        # rediscovering it on every single research call: each rediscovery cost a wasted
+        # request and a throttle wait before falling through to the search below anyway.
+        if self.fast.supports_search and not self.memory.grounding_exhausted():
             try:
                 response = await self.fast.generate(
                     prompt, system=RESEARCH_SYSTEM, grounded=True, attempts=1
@@ -323,6 +327,9 @@ class Brain:
                             f"- {c}" for c in response.citations[:8]
                         )
                     return body
+            except QuotaError as exc:
+                self.memory.mark_grounding_exhausted()
+                log.info("Grounding quota gone for today (%s), using web search", exc)
             except Exception as exc:  # noqa: BLE001
                 log.info("Grounded search unavailable (%s), using web search", exc)
 
