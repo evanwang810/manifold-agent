@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1786583658783,
+  "generated_ms": 1786585894922,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.6-flash",
@@ -30,23 +30,63 @@
   },
   "usage": {
     "fast": {
-      "today": 6,
+      "today": 9,
       "cap": 220
     },
     "chat": {
-      "today": 2,
+      "today": 4,
       "cap": 400
     },
     "deep": {
-      "today": 1,
+      "today": 2,
       "cap": 18
     }
   },
   "dry_run": false,
   "balance": 83.06,
-  "net_worth": 519.05,
+  "net_worth": 520.56,
   "summary": "Net worth is approximately M$530 with 14 open positions. Recent activity includes opening bets on the Summer Metaculus Cup (NO), US-Iran peace talks (YES), Berlin temperatures (NO), UK riot prosecutions (YES), and solving an unsolved math problem with AI (YES). The math problem bet is based on a specific multi-agent pipeline. To restore operational flexibility, the agent pruned several positions, including a failed bet on a mana mark (M$-5), an underperforming Anthropic Opus 5 patch bet (M$-17), and various trivial or personal bets.\n\nA critical failure in exit discipline previously led to a M$100 loss on a primary election bet. To prevent this and avoid \"tilt traps\"\u2014flipping positions to chase losses\u2014the agent must exit decisively when a thesis collapses and the market drops below 5%. A new standing rule is in place: prioritize liquidity over low-edge coin-flip positions whenever spendable mana falls below M$100 to prevent trade sizes from being floored to zero.\n\nThe agent is well-calibrated in screening out \"vibe\" props, celebrity memes, and unrealistic AI breakthroughs. It remains poorly calibrated regarding the timing of exits for failing theses. Operational friction persists, with Manifold 403 and 526 errors disrupting execution. Future execution must prioritize decisive exits, strict API compliance, and the provision of explicit reasoning for all financial transfers.",
   "journal": [
+    {
+      "ts": 1786585894844,
+      "kind": "agency",
+      "text": "Own turn, sold out of \"Will any of OpenAI\u2019s \u201cTen Advances in Math and Theoretical C\" (YES, P/L M$+1). Because: Low-probability moonshot; selling to recover liquidity and meet the M$100 spendable threshold."
+    },
+    {
+      "ts": 1786585894741,
+      "kind": "agency",
+      "text": "Own turn, sold out of \"Will Starship Ship 40 be recovered to shore?\" (NO, P/L M$-1). Because: Low-conviction coin-flip position; selling to recover liquidity."
+    },
+    {
+      "ts": 1786585894607,
+      "kind": "agency",
+      "text": "Own turn: Spendable mana (M$73) is below my M$100 liquidity threshold. To restore operational flexibility and adhere to my standing note on prioritizing liquidity over low-edge or coin-flip positions, I am pruning the Starship recovery bet (a coin-flip) and the OpenAI Math advances bet (a low-probability moonshot). This recovers M$28, bringing my spendable balance to M$101."
+    },
+    {
+      "ts": 1786585718376,
+      "kind": "book",
+      "text": "Book review wanted to sell, vetoed: review unavailable"
+    },
+    {
+      "ts": 1786585718374,
+      "kind": "book",
+      "text": "Looked over 13 positions: Portfolio is stable but liquidity is below the M$100 threshold (M$73 spendable). I am holding several low-probability 'moonshot' positions and a marginal Starship bet. Pruning these will restore operational flexibility and align with the standing note to prioritize liquidity over low-edge bets. (3 change(s) proposed)"
+    },
+    {
+      "ts": 1786585543377,
+      "kind": "trade",
+      "text": "Limit order M$20 YES on \"[Will Brown] Will Transformative AI look like an abundance of speciali\" at 17%, my estimate 32% (medium). Because: While current 2026 AI deployment relies heavily on specialized models and ensembles, Manifold users strictly define Transformative AI around general AGI. A poll on this take is likely to garner around 30-35% agreement, leaving YES undervalued if priced below 20%."
+    },
+    {
+      "ts": 1786585485499,
+      "kind": "screen",
+      "text": "Escalated \"[Will Brown] Will Transformative AI look like an abundance of speciali\" at 17%: quick estimate 50% vs market 17%"
+    },
+    {
+      "ts": 1786585465583,
+      "kind": "screen",
+      "text": "Passed on \"Sydney Sweeney partners with Polymarket before September?\" at 4%: quick estimate 5% agrees with market. There is no current indication or rumor of a partnership between Sydney Sweeney and Polymarket with only weeks left."
+    },
     {
       "ts": 1786583104025,
       "kind": "screen",
@@ -353,6 +393,18 @@
   ],
   "own_actions": [
     {
+      "ts": 1786585894843,
+      "action": "sell",
+      "detail": "sold out of \"Will any of OpenAI\u2019s \u201cTen Advances in Math and Theoretical C\" (YES, P/L M$+1)",
+      "reasoning": "Low-probability moonshot; selling to recover liquidity and meet the M$100 spendable threshold."
+    },
+    {
+      "ts": 1786585894740,
+      "action": "sell",
+      "detail": "sold out of \"Will Starship Ship 40 be recovered to shore?\" (NO, P/L M$-1)",
+      "reasoning": "Low-conviction coin-flip position; selling to recover liquidity."
+    },
+    {
       "ts": 1786580952114,
       "action": "sell",
       "detail": "sold out of \"Will the wsp.kbtu.kz site go down during schedule registrati\" (NO, P/L M$+0)",
@@ -426,9 +478,9 @@
       "side": "NO",
       "shares": 96.1,
       "invested": 58.0,
-      "value": 66.6,
-      "profit": 8.6,
-      "prob": 0.307,
+      "value": 66.7,
+      "profit": 8.7,
+      "prob": 0.306,
       "closed": false,
       "days_to_close": 18.9
     },
@@ -469,14 +521,26 @@
       "days_to_close": 19.1
     },
     {
+      "question": "[Will Brown] Will Transformative AI look like an abundance of specialized models, in August 2026?",
+      "url": "https://manifold.markets/Bayesian/will-brown-will-transformative-ai-l",
+      "side": "YES",
+      "shares": 197.6,
+      "invested": 33.0,
+      "value": 35.1,
+      "profit": 2.1,
+      "prob": 0.178,
+      "closed": false,
+      "days_to_close": 18.9
+    },
+    {
       "question": "Will I solve an unsolved math problem with AI in August?",
       "url": "https://manifold.markets/Bayesian/will-i-solve-an-unsolved-math-probl",
       "side": "YES",
       "shares": 171.4,
       "invested": 28.0,
-      "value": 28.4,
-      "profit": 0.4,
-      "prob": 0.166,
+      "value": 29.8,
+      "profit": 1.8,
+      "prob": 0.174,
       "closed": false,
       "days_to_close": 18.9
     },
@@ -493,18 +557,6 @@
       "days_to_close": 17.9
     },
     {
-      "question": "Will any of OpenAI\u2019s \u201cTen Advances in Math and Theoretical CS\u201d be shown to be flawed by the end of August?",
-      "url": "https://manifold.markets/Sketchy/will-any-of-openais-ten-advances-in",
-      "side": "YES",
-      "shares": 173.7,
-      "invested": 18.0,
-      "value": 19.0,
-      "profit": 1.0,
-      "prob": 0.109,
-      "closed": false,
-      "days_to_close": 18.9
-    },
-    {
       "question": "Will the WTI Crude Oil Spot Price be above $78.50 on August 11, 2026?",
       "url": "https://manifold.markets/ShaneBo/will-the-wti-crude-oil-spot-price-b-Cun2dLL5UZ",
       "side": "NO",
@@ -515,33 +567,32 @@
       "prob": 1.0,
       "closed": true,
       "days_to_close": 0.0
-    },
-    {
-      "question": "[Will Brown] Will Transformative AI look like an abundance of specialized models, in August 2026?",
-      "url": "https://manifold.markets/Bayesian/will-brown-will-transformative-ai-l",
-      "side": "YES",
-      "shares": 80.7,
-      "invested": 13.0,
-      "value": 13.3,
-      "profit": 0.3,
-      "prob": 0.165,
-      "closed": false,
-      "days_to_close": 18.9
-    },
-    {
-      "question": "Will Starship Ship 40 be recovered to shore?",
-      "url": "https://manifold.markets/Mqrius/will-starship-ship-40-be-recovered",
-      "side": "NO",
-      "shares": 15.3,
-      "invested": 10.0,
-      "value": 9.2,
-      "profit": -0.8,
-      "prob": 0.399,
-      "closed": false,
-      "days_to_close": 18.9
     }
   ],
   "decisions": [
+    {
+      "ts": 1786585543376,
+      "kind": "bet",
+      "question": "[Will Brown] Will Transformative AI look like an abundance of specialized models, in August 2026?",
+      "url": "https://manifold.markets/Bayesian/will-brown-will-transformative-ai-l",
+      "market_prob": 0.1650613227808788,
+      "model_prob": 0.32,
+      "confidence": "medium",
+      "amount": 20.0,
+      "outcome": "YES",
+      "thinking": "While current 2026 AI deployment relies heavily on specialized models and ensembles, Manifold users strictly define Transformative AI around general AGI. A poll on this take is likely to garner around 30-35% agreement, leaving YES undervalued if priced below 20%.",
+      "uncertainty": "Whether Manifold users vote in the poll based on current 2026 deployment realities or based on theoretical definitions of AGI.",
+      "resolution_risk": "The creator could resolve the market binary (0% or 100%) based on simple majority rather than resolving to the exact percentage of YES votes in the poll.",
+      "evidence_for": [
+        "In 2026, AI deployment is heavily dominated by domain-specific vertical models, specialized sub-models, and multi-model agentic ensembles.",
+        "Some forecasters agree that real-world AI capability growth is taking the form of an ecosystem of specialized tools rather than a single monolithic architecture."
+      ],
+      "evidence_against": [
+        "The Manifold user base strictly defines Transformative AI (TAI) around human-level general intelligence and radical economic transformation, standards current 2026 models do not meet.",
+        "Manifold AI forecasters strongly lean toward general foundation models as the path to AGI, making them likely to vote NO on claims that TAI is specialized."
+      ],
+      "reason": "edge 0.155, kelly 0.19, decay 0.53, bound by kelly target"
+    },
     {
       "ts": 1786580622222,
       "kind": "bet",
@@ -881,29 +932,6 @@
         "Final vote certification and formal call for the Wisconsin primary may still be ongoing as votes are counted."
       ],
       "reason": "edge 0.474, kelly 0.77, decay 1.00, bound by kelly target, trimmed from M$199 for impact"
-    },
-    {
-      "ts": 1786496970999,
-      "kind": "bet",
-      "question": "Will at least 10 UK riot related prosecutions be overturned or have their sentences shortened in the next 2 years?",
-      "url": "https://manifold.markets/LukeShadwell/will-at-least-10-uk-riot-related-pr",
-      "market_prob": 0.20039513212441917,
-      "model_prob": 0.38,
-      "confidence": "medium",
-      "amount": 57.0,
-      "outcome": "YES",
-      "thinking": "With over 1,000 convictions following the 2024 riots, standard appellate reviews and Crown Court sentence appeals naturally yield some sentence adjustments. However, strict judicial guidelines on riot deterrence and the difficulty of verifying 10 individual cases keep the likelihood moderate rather than overwhelming.",
-      "uncertainty": "Whether official UK court reporting or media sources have documented at least 10 specific instances of reduced sentences or overturned convictions from the 2024 riots.",
-      "resolution_risk": "Lack of consolidated media reporting on minor sentence reductions could lead to a NO resolution even if 10 technical sentence modifications occurred across UK courts.",
-      "evidence_for": [
-        "Over 1,000 individuals were charged and sentenced in relation to the August 2024 UK riots, providing a large sample size.",
-        "Fast-tracked court processes and initial magistrate sentencings frequently lead to sentence adjustments or successful appeals in Crown Court or the Court of Appeal."
-      ],
-      "evidence_against": [
-        "UK appellate courts historically enforce strict guidance upholding deterrent sentences for public order and riot offences, limiting successful appeals.",
-        "No centralized public tracker exists documenting individual sentence reductions, creating a high verification threshold for market resolution."
-      ],
-      "reason": "edge 0.180, kelly 0.22, decay 1.00, bound by kelly target"
     }
   ]
 }
