@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1786633031304,
+  "generated_ms": 1786633338610,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.6-flash",
@@ -30,7 +30,7 @@
   },
   "usage": {
     "fast": {
-      "today": 58,
+      "today": 62,
       "cap": 220
     },
     "chat": {
@@ -38,7 +38,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 13,
+      "today": 14,
       "cap": 18
     }
   },
@@ -47,6 +47,26 @@
   "net_worth": 525.0,
   "summary": "Net worth is approximately M$530. The portfolio has been aggressively pruned from 16 to 7 positions to restore operational flexibility and maintain a spendable mana buffer above M$100. Recent activity focused on exiting low-conviction \"moonshots,\" personal bets, and low-edge technical positions (e.g., METR, Berlin temperatures, and a personal math problem bet). Most prunes were flat or resulted in negligible losses.\n\nCurrent exposure is concentrated in high-conviction NO bets on specific timelines. Key positions include NO on \"Something happen in AI this week\" (based on Zvi\u2019s high threshold for speed premiums), NO on \"MNX volume\" (due to slow beta rollout), and NO on \"Lucy Letby CCRC referral\" (based on low historical referral rates). The agent also holds a YES position on \"Transformative AI looking like specialized models,\" betting on a gap between general AGI definitions and actual deployment.\n\nA critical recurring mistake is allowing spendable mana to drop below M$100, which floors new trade sizes to zero. To prevent this, the agent must prioritize liquidity over low-edge coin-flips. Additionally, the agent must avoid \"tilt traps\" and stubbornness; when a thesis collapses and a market drops below 5%, it must exit decisively rather than lingering.\n\nThe agent is well-calibrated in screening out \"vibe\" props, celebrity memes, and unrealistic AI breakthroughs. It remains less calibrated regarding the optimal timing for exiting failing theses. Operational friction continues with Manifold 403 and 526 errors. On 2026-08-13, the agent repaid a M$50 loan to cA1JupYR5AR8btHUs2xvkui7jA93. Future execution must prioritize strict API compliance and the maintenance of the M$100 liquidity floor.",
   "journal": [
+    {
+      "ts": 1786633338514,
+      "kind": "trade",
+      "text": "Limit order M$25 NO on \"Will the Dan Sullivan \u2018impostor\u2019 advance to the general election in th\" at 43%, my estimate 38% (medium). Because: While Alaska's top-four primary has a low barrier to entry (~2% was enough in 2022), public awareness of the name dispute and the explicit ballot listing as 'Daniel J. Sullivan Jr.' make it likely he gets out-polled if four organized candidates participate."
+    },
+    {
+      "ts": 1786633259205,
+      "kind": "screen",
+      "text": "Escalated \"Will the Dan Sullivan \u2018impostor\u2019 advance to the general election in th\" at 43%: quick estimate 25% vs market 43%"
+    },
+    {
+      "ts": 1786633239257,
+      "kind": "screen",
+      "text": "Passed on \"Will I conclude my life is better 1 year from now than it was at time \" at 68%: quick estimate 55% agrees with market. This is a purely subjective personal happiness question that resolves on the creator's private journal reflections, leaving no external data for a deep model to analyze."
+    },
+    {
+      "ts": 1786633219111,
+      "kind": "screen",
+      "text": "Passed on \"Will Kalafina appear in Puella Magi Madoka Magica: Walpurgisnacht Risi\" at 26%: quick estimate 15% agrees with market. Official confirmation states the theme is by FictionJunction, not Kalafina, making a YES outcome unlikely."
+    },
     {
       "ts": 1786630964000,
       "kind": "position",
@@ -426,26 +446,6 @@
       "ts": 1786600171955,
       "kind": "book",
       "text": "Looked over 9 positions: The book is stable with healthy liquidity (M$124 spendable). I am pruning low-probability moonshots and tight-window geopolitical bets to concentrate capital into positions with a clearer edge, specifically the Transformative AI definition bet. (3 change(s) proposed)"
-    },
-    {
-      "ts": 1786599899203,
-      "kind": "trade",
-      "text": "Limit order M$28 NO on \"Will the CCRC refer Lucy Letby's case to the Court of Appeal?\" at 30%, my estimate 22% (medium). Because: While expert criticism of the scientific and statistical evidence is significant and the CCRC is under post-Malkinson pressure, CCRC referral rates remain low overall and the legal threshold to overturn multiple convictions after prior Court of Appeal rejections is high. Estimating a 22% chance of referral."
-    },
-    {
-      "ts": 1786599845953,
-      "kind": "screen",
-      "text": "Escalated \"Will the CCRC refer Lucy Letby's case to the Court of Appeal?\" at 30%: quick estimate 15% vs market 30%"
-    },
-    {
-      "ts": 1786595960020,
-      "kind": "analysis",
-      "text": "Analysed \"Will Manifold agree that Dwarkesh's upcoming guest is \"by far [his] bi\": market 23%, my 22% (medium). No trade, edge 0.014 below minimum 0.04."
-    },
-    {
-      "ts": 1786595903304,
-      "kind": "screen",
-      "text": "Escalated \"Will Manifold agree that Dwarkesh's upcoming guest is \"by far [his] bi\" at 23%: quick estimate 50% vs market 23%"
     }
   ],
   "todos": [
@@ -652,6 +652,30 @@
       "days_to_close": 19.3
     },
     {
+      "question": "Will bitcoin rise to 85k before the Strait of Hormuz is freely open?",
+      "url": "https://manifold.markets/apol/will-bitcoin-rise-to-85k-before-the",
+      "side": "NO",
+      "shares": 55.5,
+      "invested": 27.0,
+      "value": 37.7,
+      "profit": 10.7,
+      "prob": 0.321,
+      "closed": false,
+      "days_to_close": 18.9
+    },
+    {
+      "question": "Will the Dan Sullivan \u2018impostor\u2019 advance to the general election in the Alaska senate primary on August 18 2026?",
+      "url": "https://manifold.markets/Jack1/will-the-dan-sullivan-impostor-adva",
+      "side": "NO",
+      "shares": 43.6,
+      "invested": 25.0,
+      "value": 25.2,
+      "profit": 0.2,
+      "prob": 0.422,
+      "closed": false,
+      "days_to_close": 5.4
+    },
+    {
       "question": "Will the WTI Crude Oil Spot Price be above $78.50 on August 11, 2026?",
       "url": "https://manifold.markets/ShaneBo/will-the-wti-crude-oil-spot-price-b-Cun2dLL5UZ",
       "side": "NO",
@@ -662,21 +686,34 @@
       "prob": 1.0,
       "closed": true,
       "days_to_close": 0.0
-    },
-    {
-      "question": "Will bitcoin rise to 85k before the Strait of Hormuz is freely open?",
-      "url": "https://manifold.markets/apol/will-bitcoin-rise-to-85k-before-the",
-      "side": "NO",
-      "shares": 24.8,
-      "invested": 11.6,
-      "value": 12.4,
-      "profit": 0.8,
-      "prob": 0.5,
-      "closed": false,
-      "days_to_close": 18.9
     }
   ],
   "decisions": [
+    {
+      "ts": 1786633338512,
+      "kind": "bet",
+      "question": "Will the Dan Sullivan \u2018impostor\u2019 advance to the general election in the Alaska senate primary on August 18 2026?",
+      "url": "https://manifold.markets/Jack1/will-the-dan-sullivan-impostor-adva",
+      "market_prob": 0.4320930949293858,
+      "model_prob": 0.38,
+      "confidence": "medium",
+      "amount": 25.0,
+      "outcome": "NO",
+      "thinking": "While Alaska's top-four primary has a low barrier to entry (~2% was enough in 2022), public awareness of the name dispute and the explicit ballot listing as 'Daniel J. Sullivan Jr.' make it likely he gets out-polled if four organized candidates participate.",
+      "uncertainty": "The total number of candidates on the primary ballot and whether four distinct candidates reach a >3% vote threshold.",
+      "resolution_risk": "Official primary results certification delays or post-election legal challenges regarding vote counts.",
+      "evidence_for": [
+        "Alaska uses a top-four nonpartisan primary where 4th place can advance with very low vote shares (e.g. ~2% in 2022).",
+        "Name overlap with incumbent Senator Dan Sullivan guarantees a baseline level of accidental votes from casual voters.",
+        "The Alaska Supreme Court confirmed his placement on the August 18, 2026 primary ballot."
+      ],
+      "evidence_against": [
+        "He appears as 'Daniel J. Sullivan Jr.' on the ballot, which distinguishes him from incumbent Dan Sullivan.",
+        "High-profile legal battles and local media coverage have alerted voters to the presence of the 'impostor' candidate.",
+        "If four serious or organized candidates run, the vote threshold to make the top four will exceed his accidental vote ceiling."
+      ],
+      "reason": "edge 0.052, kelly 0.12, decay 1.00, bound by kelly target"
+    },
     {
       "ts": 1786630781772,
       "kind": "bet",
@@ -1010,30 +1047,6 @@
         "Base rate of symptomatic gallstone recurrence within 1 year for young, low-risk individuals is low (~15-20%)."
       ],
       "reason": "edge 0.037 below minimum 0.04"
-    },
-    {
-      "ts": 1786543514103,
-      "kind": "no_trade",
-      "question": "Will Geometry Dash 2.21 Update Will Be Released In August 13 2026?",
-      "url": "https://manifold.markets/BetBeginner_098/will-geometry-dash-221-update-will",
-      "market_prob": 0.4399999999999999,
-      "model_prob": 0.08,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "As of Aug 12, 2026, there is no official announcement from RobTop confirming Update 2.21 for August 13 or August generally. Given RobTop's history of prolonged delays, an unannounced release in the next 19 days is unlikely (~8%).",
-      "uncertainty": "Whether RobTop unexpectedly shadows-drops Update 2.21 during the remaining days of August 2026 without advance notice.",
-      "resolution_risk": "Discrepancy between the title ('In August 13 2026') and the description ('during August 2026') could cause resolution disputes if released later in August.",
-      "evidence_for": [
-        "Community estimations following the Duality Gauntlet submission deadline in early August suggested a potential late August or September release window.",
-        "The description criteria allow resolution if released anytime during August 2026."
-      ],
-      "evidence_against": [
-        "As of August 12, 2026, there is no official release date announcement from RobTop for August 13 or any date in August 2026.",
-        "Geometry Dash updates have a long track record of multi-year delays.",
-        "If the market literally requires release on August 13 as titled, there has been no teaser or 24-hour advance release notice."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
