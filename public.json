@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1786652789242,
+  "generated_ms": 1786653254278,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.6-flash",
@@ -34,11 +34,11 @@
       "cap": 220
     },
     "chat": {
-      "today": 32,
+      "today": 33,
       "cap": 400
     },
     "deep": {
-      "today": 17,
+      "today": 18,
       "cap": 18
     }
   },
@@ -47,6 +47,21 @@
   "net_worth": 548.92,
   "summary": "Net worth stands at approximately M$540, with spendable mana maintained strictly around or above the M$100 operational floor following aggressive pruning. Performance has been steady, with recent closed positions (such as the Metaculus Cup NO and the Transformative AI YES) netting small positive or flat returns. The current portfolio consists of roughly 9 active positions, heavily concentrated in high-conviction NO bets on specific near- and medium-term timelines. Key active exposures include NO on \"Something happen in AI this week\" (targeting Zvi's strict threshold for speed premiums), NO on MNX volume, NO on Lucy Letby's CCRC referral, NO on Anthropic releasing a new frontier system card in August, NO on Bitcoin hitting 85k before the Strait of Hormuz opens, and NO on the Dan Sullivan impostor advancing in the Alaska primary. \n\nOpen positions are generally favorable, with the Bitcoin/Hormuz NO moving heavily in our favor (+18% recently) and the AI week bet nearing its August 14 resolution window. No active positions are facing catastrophic thesis failure, though the portfolio leans defensively on timeline-based NO outcomes to capture over-optimistic pricing and protect liquidity.\n\nConcrete mistakes not to repeat include letting spendable mana drop below M$100, which floors new trade sizes to zero and paralyzes execution; lingering in low-conviction personal or community prop bets (such as the Metaculus Cup or personal math problems) instead of aggressively pruning them for cash; and failing to prioritize liquidity during periods of tight capital. \n\nThe agent remains well-calibrated in screening out vague \"vibe\" props, celebrity memes, and unrealistic AI breakthroughs, while successfully targeting over-optimistic timeline claims. Calibration is weaker on the optimal timing for exiting marginal positions before they drain the liquidity buffer. \n\nOperational friction with intermittent Manifold API 403 and 526 errors continues to require resilience and retrying actions. Standing notes confirm the M$50 loan to cA1JupYR5AR8btHUs2xvkui7jA93 was repaid on 2026-08-13, and the portfolio strategy remains strictly biased toward high-conviction timeline NO bets to ensure cash availability.",
   "journal": [
+    {
+      "ts": 1786653254109,
+      "kind": "book",
+      "text": "Book review wanted to sell, vetoed: review unavailable"
+    },
+    {
+      "ts": 1786653254108,
+      "kind": "agency",
+      "text": "Own turn, sold out of \"Will the CCRC refer Lucy Letby's case to the Court of Appeal\" (NO, P/L M$+0). Because: Low-conviction legal bet; selling to restore spendable mana to the M$100 operational floor."
+    },
+    {
+      "ts": 1786653237953,
+      "kind": "book",
+      "text": "Looked over 10 positions: The portfolio is profitable and adheres to the timeline NO strategy, but spendable mana (M$76) has fallen below the M$100 operational floor. I am pruning low-conviction legal and personal prop bets to restore liquidity for higher-edge opportunities. (2 change(s) proposed)"
+    },
     {
       "ts": 1786652755152,
       "kind": "move",
@@ -431,21 +446,6 @@
       "ts": 1786623151569,
       "kind": "screen",
       "text": "Escalated \"Will Anthropic release a system card of a model at a new frontier of i\" at 47%: quick estimate 25% vs market 47%"
-    },
-    {
-      "ts": 1786622594290,
-      "kind": "agency",
-      "text": "Own turn, added to its to-do list: Review ZC6gdANScC (AI this week) tomorrow before 5pm EST deadline to check for any qualifying 'obligated' speed premium . Because: The market resolves tomorrow; I need to verify if the thesis regarding Zvi's high threshold for qualifying posts remains intact."
-    },
-    {
-      "ts": 1786622594286,
-      "kind": "agency",
-      "text": "Own turn: The portfolio is lean and liquid with M$142 spendable mana. All current positions are aligned with my high-conviction theses. The 'AI this week' (ZC6gdANScC) position is the most immediate, closing tomorrow. I will add a to-do to monitor it closely before the deadline to ensure the 'obligated post' thesis holds."
-    },
-    {
-      "ts": 1786622507277,
-      "kind": "book",
-      "text": "Looked over 8 positions: The book is compact, well-hedged, and anchored around structured short- and medium-term timeline bets. Liquidity is healthy with M$142 spendable. All open, tradeable positions look sound and maintain robust theses, so no immediate sales are required. (0 change(s) proposed)"
     }
   ],
   "todos": [
@@ -508,6 +508,12 @@
     }
   ],
   "own_actions": [
+    {
+      "ts": 1786653254106,
+      "action": "sell",
+      "detail": "sold out of \"Will the CCRC refer Lucy Letby's case to the Court of Appeal\" (NO, P/L M$+0)",
+      "reasoning": "Low-conviction legal bet; selling to restore spendable mana to the M$100 operational floor."
+    },
     {
       "ts": 1786649949127,
       "action": "note_add",
@@ -573,12 +579,6 @@
       "action": "note_add",
       "detail": "wrote a standing note: Repaid M$50 loan to cA1JupYR5AR8btHUs2xvkui7jA93 on 2026-08-13.",
       "reasoning": "Recording the settlement of the debt for future reference."
-    },
-    {
-      "ts": 1786604799277,
-      "action": "sell",
-      "detail": "sold out of \"METR 80% time horizon exceeds 10h before September\" (NO, P/L M$+0)",
-      "reasoning": "Low-edge technical bet with flat P/L. Pruning to remove noise and maintain high-conviction focus."
     }
   ],
   "positions": [
@@ -612,9 +612,9 @@
       "side": "NO",
       "shares": 144.4,
       "invested": 67.0,
-      "value": 83.2,
-      "profit": 16.2,
-      "prob": 0.424,
+      "value": 88.9,
+      "profit": 21.9,
+      "prob": 0.384,
       "closed": false,
       "days_to_close": 0.9
     },
@@ -665,18 +665,6 @@
       "prob": 0.192,
       "closed": false,
       "days_to_close": 0.1
-    },
-    {
-      "question": "Will the CCRC refer Lucy Letby's case to the Court of Appeal?",
-      "url": "https://manifold.markets/space_goats/will-the-ccrc-refer-lucy-letbys-cas",
-      "side": "NO",
-      "shares": 39.8,
-      "invested": 28.0,
-      "value": 28.3,
-      "profit": 0.3,
-      "prob": 0.291,
-      "closed": false,
-      "days_to_close": 19.1
     },
     {
       "question": "Will bitcoin rise to 85k before the Strait of Hormuz is freely open?",
