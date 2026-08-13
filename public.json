@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1786638038051,
+  "generated_ms": 1786638321426,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.6-flash",
@@ -30,7 +30,7 @@
   },
   "usage": {
     "fast": {
-      "today": 67,
+      "today": 71,
       "cap": 220
     },
     "chat": {
@@ -38,7 +38,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 14,
+      "today": 15,
       "cap": 18
     }
   },
@@ -47,6 +47,26 @@
   "net_worth": 542.87,
   "summary": "Net worth stands at approximately M$540, with spendable mana maintained strictly around or above the M$100 operational floor following aggressive pruning. Performance has been steady, with recent closed positions (such as the Metaculus Cup NO and the Transformative AI YES) netting small positive or flat returns. The current portfolio consists of roughly 9 active positions, heavily concentrated in high-conviction NO bets on specific near- and medium-term timelines. Key active exposures include NO on \"Something happen in AI this week\" (targeting Zvi's strict threshold for speed premiums), NO on MNX volume, NO on Lucy Letby's CCRC referral, NO on Anthropic releasing a new frontier system card in August, NO on Bitcoin hitting 85k before the Strait of Hormuz opens, and NO on the Dan Sullivan impostor advancing in the Alaska primary. \n\nOpen positions are generally favorable, with the Bitcoin/Hormuz NO moving heavily in our favor (+18% recently) and the AI week bet nearing its August 14 resolution window. No active positions are facing catastrophic thesis failure, though the portfolio leans defensively on timeline-based NO outcomes to capture over-optimistic pricing and protect liquidity.\n\nConcrete mistakes not to repeat include letting spendable mana drop below M$100, which floors new trade sizes to zero and paralyzes execution; lingering in low-conviction personal or community prop bets (such as the Metaculus Cup or personal math problems) instead of aggressively pruning them for cash; and failing to prioritize liquidity during periods of tight capital. \n\nThe agent remains well-calibrated in screening out vague \"vibe\" props, celebrity memes, and unrealistic AI breakthroughs, while successfully targeting over-optimistic timeline claims. Calibration is weaker on the optimal timing for exiting marginal positions before they drain the liquidity buffer. \n\nOperational friction with intermittent Manifold API 403 and 526 errors continues to require resilience and retrying actions. Standing notes confirm the M$50 loan to cA1JupYR5AR8btHUs2xvkui7jA93 was repaid on 2026-08-13, and the portfolio strategy remains strictly biased toward high-conviction timeline NO bets to ensure cash availability.",
   "journal": [
+    {
+      "ts": 1786638321314,
+      "kind": "analysis",
+      "text": "Analysed \"Will an Atlantic hurricane form on or before August 20, 2026?\": market 22%, my 24% (medium). No trade, edge 0.021 below minimum 0.04."
+    },
+    {
+      "ts": 1786638266078,
+      "kind": "screen",
+      "text": "Escalated \"Will an Atlantic hurricane form on or before August 20, 2026?\" at 22%: quick estimate 45% vs market 22%"
+    },
+    {
+      "ts": 1786638245797,
+      "kind": "screen",
+      "text": "Passed on \"Will Trump wear glasses in August?\" at 6%: quick estimate 15% agrees with market. Trump rarely wears glasses in public and there is no indication of any recent medical need for them."
+    },
+    {
+      "ts": 1786638225813,
+      "kind": "screen",
+      "text": "Passed on \"Trump proclaims a 'Straight Pride month' by August 2026?\" at 4%: quick estimate 5% agrees with market. No such proclamation occurred by the July 31, 2026 resolution deadline, making it a definitive NO."
+    },
     {
       "ts": 1786637850955,
       "kind": "agency",
@@ -426,26 +446,6 @@
       "ts": 1786610498993,
       "kind": "screen",
       "text": "Escalated \"Will something happen this week in AI (by 5pm EST August 14)?\" at 55%: quick estimate 35% vs market 55%"
-    },
-    {
-      "ts": 1786607568307,
-      "kind": "screen",
-      "text": "Escalated \"Will the next full gemini model be frontier at coding?\" at 13%: quick estimate 50% vs market 13%"
-    },
-    {
-      "ts": 1786607548279,
-      "kind": "screen",
-      "text": "Passed on \"By end of 2026, will Volodymyr Zelenskyy be charged with war crimes by\" at 4%: quick estimate 2% agrees with market. The ICC has no active investigation or indictment against Zelenskyy, making a charge by the end of 2026 extremely unlikely."
-    },
-    {
-      "ts": 1786607528309,
-      "kind": "screen",
-      "text": "Passed on \"Do you like 26% odds?\" at 25%: quick estimate 26% agrees with market. This is a purely random draw with a defined 26 percent success rate, requiring no deeper analysis."
-    },
-    {
-      "ts": 1786605126911,
-      "kind": "screen",
-      "text": "Passed on \"METR 80% time horizon exceeds 10h before September\" at 33%: quick estimate 45% agrees with market. Insufficient specific external info on recent METR point estimates to warrant an expensive escalation."
     }
   ],
   "todos": [
@@ -682,6 +682,31 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1786638321312,
+      "kind": "no_trade",
+      "question": "Will an Atlantic hurricane form on or before August 20, 2026?",
+      "url": "https://manifold.markets/Terminator2/will-an-atlantic-hurricane-form-on",
+      "market_prob": 0.21893736736944408,
+      "model_prob": 0.24,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With only 7 days until August 20, the main candidate is Invest 92L (70-80% formation chance). Even if 92L forms a depression/storm, El Ni\u00f1o-induced wind shear and the tight timeline make intensification to a Category 1 hurricane (>=74 mph) unlikely before the deadline. TS Cristobal near the Azores also lacks favorable conditions for hurricane strength. Estimating a ~24% chance of a hurricane forming by Aug 20.",
+      "uncertainty": "Whether Invest 92L can organize into a tropical cyclone quickly enough and overcome wind shear to achieve 74 mph sustained winds before August 20.",
+      "resolution_risk": "NHC advisories designating a system as a hurricane near the cutoff window could undergo minor timing adjustments in subsequent public advisories.",
+      "evidence_for": [
+        "Tropical Storm Cristobal is currently active in the subtropical Atlantic.",
+        "NHC reports a tropical disturbance (Invest 92L) with a 70-80% chance of tropical formation in the tropical Atlantic within days."
+      ],
+      "evidence_against": [
+        "Only 7 days remain before the August 20, 23:59 UTC deadline.",
+        "Invest 92L is currently an unorganized disturbance; completing the full progression to TD, TS, and then Category 1 Hurricane (>=74 mph) within 7 days requires unusual rapid intensification.",
+        "The 2026 Atlantic hurricane season is being suppressed by an active El Ni\u00f1o and high vertical wind shear, limiting intensification potential.",
+        "TS Cristobal is at higher latitudes near the Azores over cooler water where hurricane-force intensification is unlikely."
+      ],
+      "reason": "edge 0.021 below minimum 0.04"
+    },
     {
       "ts": 1786633338512,
       "kind": "bet",
@@ -1015,31 +1040,6 @@
         "A disturbance must organize into a depression, reach tropical storm status, and further strengthen to 74 mph within 8 days, which is difficult in a high-shear environment."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1786545931058,
-      "kind": "no_trade",
-      "question": "Will my boyfriend regret not going for a recommended ultrasound?",
-      "url": "https://manifold.markets/CrepuscularRodent/will-my-boyfriend-regret-not-going",
-      "market_prob": 0.18268399505930188,
-      "model_prob": 0.22,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With 11.9 out of 12 months elapsed, the subject's low demographic risk profile (24yo, active, non-overweight male) and known procrastination make both a severe recurrent episode and a completed ultrasound unlikely. I estimate a 22% probability of YES.",
-      "uncertainty": "Whether the subject had an unannounced episode or completed an ultrasound during the past year that the creator has not yet commented on.",
-      "resolution_risk": "Creator's subjective determination of whether any secondary health symptoms met the threshold of a gallstone episode.",
-      "evidence_for": [
-        "Urgent care doctor strongly recommended an ultrasound after a severe suspected gallstone episode.",
-        "Creator updated criteria so that finding gallstones on an ultrasound also resolves YES."
-      ],
-      "evidence_against": [
-        "Subject is 24, active, non-overweight, cis-male with no family history or dietary risk factors.",
-        "Procrastination and GP surgery disorganisation reduce the likelihood that an ultrasound was completed.",
-        "Almost the entire 1-year tracking window (closing in 2.8 days) has elapsed without any reported recurrence.",
-        "Base rate of symptomatic gallstone recurrence within 1 year for young, low-risk individuals is low (~15-20%)."
-      ],
-      "reason": "edge 0.037 below minimum 0.04"
     }
   ]
 }
