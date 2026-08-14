@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1786692082283,
+  "generated_ms": 1786692320220,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.6-flash",
@@ -30,7 +30,7 @@
   },
   "usage": {
     "fast": {
-      "today": 23,
+      "today": 25,
       "cap": 220
     },
     "chat": {
@@ -38,15 +38,25 @@
       "cap": 400
     },
     "deep": {
-      "today": 5,
+      "today": 6,
       "cap": 18
     }
   },
   "dry_run": false,
   "balance": 204.56,
-  "net_worth": 565.8,
+  "net_worth": 566.09,
   "summary": "Net worth stands at around M$541 with spendable cash healthy at M$205, well above the M$100 operational floor. Following recent aggressive pruning of low-conviction, vague, or marginal bets (such as the TAI specialists, Metaculus Cup, CCRC Lucy Letby, and ultrasound bets), the portfolio is lean, liquid, and strictly concentrated around high-conviction short- and medium-term timeline NO bets. \n\nOpen positions are performing exceptionally well. The AI-related weekly timeline NO bet (ZC6gdANScC) has moved heavily in our favor, trading down to 9% with a strong unrealized P/L (+M$65), and the Geometry Dash 2.21 release NO position remains extremely favorable. The problematic Bitcoin 85k / Strait of Hormuz NO bet was decisively cut for a minor loss (~M$-10) after surging to 69% probability, successfully avoiding further macro drawdown. \n\nConcrete mistakes to avoid repeating include letting spendable mana drop below the M$100 operational floor, which paralyzes execution; lingering in low-conviction personal, legal, or community prop bets instead of proactively pruning them for liquidity; holding vague technical or near-coin-flip positions that lack a robust analytical edge; and holding volatile macro positions past their thesis thresholds rather than cutting losses early.\n\nCalibration remains strong in screening out vague \"vibe\" props, celebrity memes, unrealistic AI or technical breakthroughs, and targeting over-optimistic timeline claims. Calibration has also improved regarding macro exits, evidenced by the disciplined cut of the Bitcoin/Hormuz position before a worse drawdown. \n\nKey standing notes include maintaining the strict timeline NO portfolio bias, utilizing developer patterns (such as RobTop using anniversaries for teasers rather than full releases), and keeping cash buffers high above the M$100 operational floor to capitalize on upcoming timeline opportunities. Operational friction with intermittent Manifold API errors requires continued resilience and retrying actions.",
   "journal": [
+    {
+      "ts": 1786692319817,
+      "kind": "trade",
+      "text": "Limit order M$56 NO on \"Will Starship Ship 40 be recovered to shore?\" at 36%, my estimate 18% (medium). Because: While Ship 40 survived initial splashdown and towing began, recent reports and Musk's statement ('ship recovery is not looking good right now') indicate rough Indian Ocean conditions make successful recovery of a major ship section to shore unlikely."
+    },
+    {
+      "ts": 1786692269946,
+      "kind": "screen",
+      "text": "Escalated \"Will Starship Ship 40 be recovered to shore?\" at 36%: quick estimate 85% vs market 36%"
+    },
     {
       "ts": 1786690234681,
       "kind": "closed",
@@ -436,16 +446,6 @@
       "ts": 1786649949128,
       "kind": "agency",
       "text": "Own turn, wrote a standing note: RobTop (Geometry Dash) frequently uses anniversary dates for teasers or announcements, but rarely for full content relea. Because: Capturing a specific developer behavior pattern to improve future timing bets on Geometry Dash updates."
-    },
-    {
-      "ts": 1786649949125,
-      "kind": "agency",
-      "text": "Own turn: The portfolio is lean, liquid, and currently profitable. Two positions (Geometry Dash and AI this week) are nearing resolution. The Geometry Dash bet (cSuuQQpQ9n) was based on the heuristic that RobTop uses anniversaries for teasers rather than full releases; I will record this as a standing note for future calibration on this specific developer's patterns."
-    },
-    {
-      "ts": 1786649883206,
-      "kind": "book",
-      "text": "Looked over 10 positions: Portfolio is lean and profitable, anchored by timeline NO bets. Spendable mana has recovered just above the M$100 floor following recent pruning, but positions remain healthy and consistent with our core strategies. (0 change(s) proposed)"
     }
   ],
   "todos": [
@@ -627,9 +627,9 @@
       "side": "NO",
       "shares": 144.4,
       "invested": 67.0,
-      "value": 133.2,
-      "profit": 66.2,
-      "prob": 0.078,
+      "value": 133.5,
+      "profit": 66.5,
+      "prob": 0.076,
       "closed": false,
       "days_to_close": 0.4
     },
@@ -644,6 +644,18 @@
       "prob": 0.237,
       "closed": true,
       "days_to_close": 0.0
+    },
+    {
+      "question": "Will Starship Ship 40 be recovered to shore?",
+      "url": "https://manifold.markets/Mqrius/will-starship-ship-40-be-recovered",
+      "side": "NO",
+      "shares": 86.0,
+      "invested": 56.0,
+      "value": 56.8,
+      "profit": -0.0,
+      "prob": 0.34,
+      "closed": false,
+      "days_to_close": 17.6
     },
     {
       "question": "Will Geometry Dash 2.21 Update Will Be Released In August 13 2026?",
@@ -671,6 +683,31 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1786692319815,
+      "kind": "bet",
+      "question": "Will Starship Ship 40 be recovered to shore?",
+      "url": "https://manifold.markets/Mqrius/will-starship-ship-40-be-recovered",
+      "market_prob": 0.35836562343859996,
+      "model_prob": 0.18,
+      "confidence": "medium",
+      "amount": 56.0,
+      "outcome": "NO",
+      "thinking": "While Ship 40 survived initial splashdown and towing began, recent reports and Musk's statement ('ship recovery is not looking good right now') indicate rough Indian Ocean conditions make successful recovery of a major ship section to shore unlikely.",
+      "uncertainty": "Whether support vessels can maintain structural integrity of Ship 40 through rough Indian Ocean seas to bring a major section to shore before it sinks or is scuttled.",
+      "resolution_risk": "Ambiguity over whether a partially broken or detached piece brought to shore qualifies as a 'major part' under the creator's subjective description.",
+      "evidence_for": [
+        "Ship 40 survived its initial soft splashdown in the Indian Ocean intact enough to stay afloat.",
+        "Support and towing vessels (Go Australis, Normand Ranger, Skimmer Tide) were deployed and engaged in towing operations towards shore.",
+        "Resolution criteria allow recovery of a major section (e.g. full nosecone or main body) to qualify for YES."
+      ],
+      "evidence_against": [
+        "Elon Musk stated on X that 'ship recovery is not looking good right now' and looks increasingly improbable.",
+        "Rough seas and high winds in the Indian Ocean are threatening the structural integrity and towing process.",
+        "Ocean towing of a damaged starship hull over long distances in high sea states carries a high probability of breakup, sinking, or scuttling."
+      ],
+      "reason": "edge 0.178, kelly 0.50, decay 0.57, bound by default cap"
+    },
     {
       "ts": 1786689900278,
       "kind": "no_trade",
@@ -1005,31 +1042,6 @@
         "Incremental model releases like Grok updates are typically covered in Zvi's standard weekly roundups rather than triggering speed premium posts."
       ],
       "reason": "edge 0.303, kelly 0.55, decay 1.00, bound by kelly target, trimmed from M$113 for impact"
-    },
-    {
-      "ts": 1786602496320,
-      "kind": "no_trade",
-      "question": "Will the next full gemini model be as good as opus 4.7 or gpt 5.5 at coding?",
-      "url": "https://manifold.markets/ian/will-the-next-full-gemini-model-be",
-      "market_prob": 0.7875183332894122,
-      "model_prob": 0.78,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "",
-      "uncertainty": "Whether @ian's subjective coding experience with the next full Gemini Pro matches benchmark expectations against Opus 4.7 and GPT-5.5",
-      "resolution_risk": "Subjective resolution criteria based strictly on creator impression after two weeks of testing",
-      "evidence_for": [
-        " resolution bar is frozen at Opus 4.7 / GPT-5.5 coding capability rather than moving frontier",
-        "Gemini 3.5 Flash already achieved strong coding benchmark results",
-        "Gemini Pro models historically show significant improvements over Flash variants in complex reasoning and coding",
-        "Market creator (@ian) explicitly commented that he is leaning YES"
-      ],
-      "evidence_against": [
-        "Resolver judgment is subjective based on hands-on experience which may differ from benchmark scores",
-        "Gemini models sometimes suffer from developer ergonomics or tool-use quirks in real-world coding"
-      ],
-      "reason": "edge 0.008 below minimum 0.04"
     }
   ]
 }
