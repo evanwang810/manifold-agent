@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1786670509062,
+  "generated_ms": 1786670768076,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.6-flash",
@@ -30,7 +30,7 @@
   },
   "usage": {
     "fast": {
-      "today": 3,
+      "today": 5,
       "cap": 220
     },
     "chat": {
@@ -38,7 +38,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 0,
+      "today": 1,
       "cap": 18
     }
   },
@@ -47,6 +47,16 @@
   "net_worth": 543.81,
   "summary": "Net worth stands around M$525, with spendable cash healthy at M$190, securely above the M$100 operational floor following aggressive recent pruning of marginal positions. Performance remains steady with small positive returns from closed trades. The portfolio is now lean and strictly concentrated around high-conviction timeline NO bets, such as NO on MNX reaching $1M volume before September, NO on Geometry Dash 2.21 releasing by August 13, and NO on Bitcoin hitting 85k before the Strait of Hormuz opens. \n\nMost open positions are performing well and moving in our favor, particularly the Geometry Dash NO bet which dropped significantly. However, the Bitcoin 85k/Hormuz NO position has moved against us recently, surging 25% to 69% market probability due to Bitcoin volatility, resulting in a temporary negative P/L (~M$-10) that requires close monitoring as the September 1 deadline approaches.\n\nConcrete mistakes to avoid repeating include letting spendable mana drop below the M$100 operational floor, which floors new trade sizes and paralyzes execution; lingering in low-conviction personal, legal, or community prop bets (such as the Lucy Letby CCRC referral, Dan Sullivan impostor, or ultrasound bets) instead of proactively pruning them for liquidity; and holding vague technical or near-coin-flip positions (like the Anthropic system card bet) that lack a robust analytical edge.\n\nThe agent demonstrates strong calibration in screening out vague \"vibe\" props, celebrity memes, and unrealistic AI or technical breakthroughs while targeting over-optimistic timeline claims. Calibration remains weaker on the optimal timing for exiting volatile macro positions (such as BTC) before they test our thesis thresholds. \n\nKey standing notes include closely monitoring Bitcoin volatility on the Hormuz/85k position as September approaches, maintaining the strict timeline NO portfolio bias, and noting developer patterns (like RobTop using anniversaries for teasers rather than full releases). Operational friction with intermittent Manifold API errors requires continued resilience and retrying actions.",
   "journal": [
+    {
+      "ts": 1786670767771,
+      "kind": "analysis",
+      "text": "Analysed \"Will we conclude Tesla launched level 4 robotaxis in summer 2025?\": market 7%, my 6% (high). No trade, edge 0.010 below minimum 0.04."
+    },
+    {
+      "ts": 1786670714269,
+      "kind": "screen",
+      "text": "Escalated \"Will we conclude Tesla launched level 4 robotaxis in summer 2025?\" at 7%: quick estimate 25% vs market 7%"
+    },
     {
       "ts": 1786668273946,
       "kind": "agency",
@@ -436,16 +446,6 @@
       "ts": 1786634364863,
       "kind": "move",
       "text": "\"Will bitcoin rise to 85k before the Strait of Hormuz is freely open?\" moved +9% to 41%. Holding NO, P/L M$+6."
-    },
-    {
-      "ts": 1786634138795,
-      "kind": "agency",
-      "text": "Own turn, sold out of \"Will a Manifolder win the Summer Metaculus Cup\" (NO, P/L M$+2). Because: Exiting this position to restore spendable mana to above the M$100 floor. This bet is a community-based prop and is the lowest conviction relative to my core strategy of high-conviction timeline NOs."
-    },
-    {
-      "ts": 1786634138592,
-      "kind": "agency",
-      "text": "Own turn: Spendable mana is M$72, which is below my M$100 operational floor. To restore liquidity and maintain a disciplined focus on structured timeline NO bets, I need to prune a position. The bet on a Manifolder winning the Metaculus Cup is a community-based 'who' bet rather than a high-conviction timeline bet, making it the most logical candidate for exit to regain flexibility."
     }
   ],
   "todos": [
@@ -621,7 +621,7 @@
       "profit": 44.2,
       "prob": 0.23,
       "closed": false,
-      "days_to_close": 0.7
+      "days_to_close": 0.6
     },
     {
       "question": "Will at least 10 UK riot related prosecutions be overturned or have their sentences shortened in the next 2 years?",
@@ -661,6 +661,29 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1786670767769,
+      "kind": "no_trade",
+      "question": "Will we conclude Tesla launched level 4 robotaxis in summer 2025?",
+      "url": "https://manifold.markets/dreev/will-tesla-count-as-a-waymo-competi",
+      "market_prob": 0.06967177982157696,
+      "model_prob": 0.06,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "It is August 2026 and summer 2025 is long past. Tesla did not achieve unsupervised Level 4 public robotaxi launches in summer 2025, as safety monitors remained required and operations were restricted. Creator comments confirm a YES resolution is unlikely.",
+      "uncertainty": "Whether the creator resolves directly to NO or chooses a low probability/N% resolution.",
+      "resolution_risk": "Ambiguity around safety monitor definitions led creator to delay resolution, though YES remains nearly impossible on facts.",
+      "evidence_for": [
+        "Tesla operated ride-hailing services in Austin starting around summer 2025 with driver's seat empty during certain city rides."
+      ],
+      "evidence_against": [
+        "Summer 2025 passed a year ago (now August 2026) without Tesla achieving true unsupervised Level 4 autonomy for the public.",
+        "Safety monitors remained present in passenger or driver seats throughout tests and highway routes.",
+        "Market creator dreev explicitly stated that a YES resolution is unlikely and indicated an inclination toward NO or a low-probability resolution."
+      ],
+      "reason": "edge 0.010 below minimum 0.04"
+    },
     {
       "ts": 1786648118408,
       "kind": "bet",
@@ -995,29 +1018,6 @@
         "Lack of explicit resolution criteria means minor slowness or brief error spikes might not be counted by the creator."
       ],
       "reason": "edge 0.027 below minimum 0.04"
-    },
-    {
-      "ts": 1786585543376,
-      "kind": "bet",
-      "question": "[Will Brown] Will Transformative AI look like an abundance of specialized models, in August 2026?",
-      "url": "https://manifold.markets/Bayesian/will-brown-will-transformative-ai-l",
-      "market_prob": 0.1650613227808788,
-      "model_prob": 0.32,
-      "confidence": "medium",
-      "amount": 20.0,
-      "outcome": "YES",
-      "thinking": "While current 2026 AI deployment relies heavily on specialized models and ensembles, Manifold users strictly define Transformative AI around general AGI. A poll on this take is likely to garner around 30-35% agreement, leaving YES undervalued if priced below 20%.",
-      "uncertainty": "Whether Manifold users vote in the poll based on current 2026 deployment realities or based on theoretical definitions of AGI.",
-      "resolution_risk": "The creator could resolve the market binary (0% or 100%) based on simple majority rather than resolving to the exact percentage of YES votes in the poll.",
-      "evidence_for": [
-        "In 2026, AI deployment is heavily dominated by domain-specific vertical models, specialized sub-models, and multi-model agentic ensembles.",
-        "Some forecasters agree that real-world AI capability growth is taking the form of an ecosystem of specialized tools rather than a single monolithic architecture."
-      ],
-      "evidence_against": [
-        "The Manifold user base strictly defines Transformative AI (TAI) around human-level general intelligence and radical economic transformation, standards current 2026 models do not meet.",
-        "Manifold AI forecasters strongly lean toward general foundation models as the path to AGI, making them likely to vote NO on claims that TAI is specialized."
-      ],
-      "reason": "edge 0.155, kelly 0.19, decay 0.53, bound by kelly target"
     }
   ]
 }
