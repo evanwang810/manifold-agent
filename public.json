@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1786724660979,
+  "generated_ms": 1786724906652,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.6-flash",
@@ -30,7 +30,7 @@
   },
   "usage": {
     "fast": {
-      "today": 61,
+      "today": 63,
       "cap": 220
     },
     "chat": {
@@ -38,7 +38,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 14,
+      "today": 15,
       "cap": 18
     }
   },
@@ -47,6 +47,16 @@
   "net_worth": 561.39,
   "summary": "Portfolio net worth remains solid around M$541, with spendable cash temporarily compressed to M$27 due to capital allocation into active positions while awaiting imminently resolving markets like the August 14 AI weekly NO bet. The book has been rigorously streamlined to focus exclusively on high-conviction, short- and medium-term timeline NO bets. Recent non-strategic positions\u2014such as the Starship recovery NO, Gemini coding YES, and partner timeline bets\u2014were decisively pruned to enforce strict strategic discipline, successfully keeping the portfolio aligned with core edges.\n\nOpen positions are performing exceptionally well. All active bets are current timeline NOs with strong unrealized profits and favorable pricing, including the AI weekly NO bet (ZC6gdANScC) trading near 9% probability, Geometry Dash 2.21 release NO, Summer Metaculus Cup Manifolder NO, and Anthropic system card NO. None of the current positions are moving against us; every single open position passes the \"would I open this today\" test. \n\nConcrete mistakes to avoid repeating include letting spendable mana drop below the M$100 operational floor without an imminent resolution to restore liquidity; lingering in personal, technical, or vague prop bets that dilute portfolio focus; holding volatile macro assets past their thesis invalidation point (as was successfully avoided with the previous Bitcoin/Hormuz exit); and drifting into tactical YES bets on capabilities or developer deliverables that lack structural timeline edges.\n\nCalibration remains strong in identifying and shorting over-optimistic timeline claims, speculative community props, and vague tech breakthroughs where hype outpaces delivery. We have also refined our exit discipline, cutting marginal or drifting bets early rather than hoping for mean reversion. \n\nKey standing notes include maintaining the strict timeline NO strategy across the portfolio, utilizing developer behavior patterns (such as RobTop using anniversaries for teasers rather than full updates), and relying on imminent short-term market resolutions to automatically replenish the cash buffer above the M$100 operational floor. Operational resilience with occasional Manifold API errors must be maintained.",
   "journal": [
+    {
+      "ts": 1786724906532,
+      "kind": "analysis",
+      "text": "Analysed \"Will Ukraine capture more territory than it loses to Russia in August \": market 13%, my 12% (medium). No trade, edge 0.007 below minimum 0.04."
+    },
+    {
+      "ts": 1786724848515,
+      "kind": "screen",
+      "text": "Escalated \"Will Ukraine capture more territory than it loses to Russia in August \" at 13%: quick estimate 45% vs market 13%"
+    },
     {
       "ts": 1786722988531,
       "kind": "agency",
@@ -436,16 +446,6 @@
       "ts": 1786689938849,
       "kind": "book",
       "text": "Looked over 7 positions: The portfolio is lean, liquid, and successfully executing the 'Timeline NO' strategy. Most positions are profitable and high-conviction. The only remaining outlier is a small tactical bet on TAI specialists that lacks the structural edge and strategic alignment of the core book. (1 change(s) proposed)"
-    },
-    {
-      "ts": 1786689900280,
-      "kind": "analysis",
-      "text": "Analysed \"Will the next full gemini model be as good as opus 4.7 or gpt 5.5 at c\": market 79%, my 78% (medium). No trade, edge 0.008 below minimum 0.04."
-    },
-    {
-      "ts": 1786689849593,
-      "kind": "screen",
-      "text": "Escalated \"Will the next full gemini model be as good as opus 4.7 or gpt 5.5 at c\" at 79%: quick estimate 45% vs market 79%"
     }
   ],
   "todos": [
@@ -727,6 +727,30 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1786724906529,
+      "kind": "no_trade",
+      "question": "Will Ukraine capture more territory than it loses to Russia in August 2026?",
+      "url": "https://manifold.markets/AIBear/will-ukraine-capture-more-territory-lEqEsPOzyq",
+      "market_prob": 0.1273426769172667,
+      "model_prob": 0.12,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Russia has consistently maintained net monthly territorial gains (+37.85 sq km in July 2026) in Black Bird Group tracking. Without a major unexpected Ukrainian offensive operation, Russia is likely to maintain a positive net monthly advance in August.",
+      "uncertainty": "Whether Ukraine conducts a major unexpected offensive operation in late August that nets significant territory before month end.",
+      "resolution_risk": "Black Bird Group might delay or fail to publish the August 2026 assessment by the October 1st deadline, causing an N/A resolution.",
+      "evidence_for": [
+        "Some military analysts have suggested Ukraine could attempt localized counter-offensives to regain tactical initiative.",
+        "Localized Ukrainian counterattacks continue along select sectors of the front line."
+      ],
+      "evidence_against": [
+        "Russia has recorded positive net monthly territorial gains across virtually all recent months in 2025 and 2026.",
+        "In July 2026, Black Bird Group reported a positive Russian net advance of +37.85 sq km.",
+        "Current mid-August 2026 reports indicate ongoing Russian pressure and incremental expansion in eastern Ukraine rather than a major Ukrainian land-grabbing offensive."
+      ],
+      "reason": "edge 0.007 below minimum 0.04"
+    },
     {
       "ts": 1786722404839,
       "kind": "no_trade",
@@ -1062,30 +1086,6 @@
         "No recent updates indicating a second episode or completed scan near the end of the 1-year window."
       ],
       "reason": "edge 0.149, kelly 0.18, decay 1.00, bound by share of volume"
-    },
-    {
-      "ts": 1786643252813,
-      "kind": "bet",
-      "question": "Will Geometry Dash 2.21 Update Will Be Released In August 13 2026?",
-      "url": "https://manifold.markets/BetBeginner_098/will-geometry-dash-221-update-will",
-      "market_prob": 0.4345288119353945,
-      "model_prob": 0.1,
-      "confidence": "medium",
-      "amount": 46.0,
-      "outcome": "NO",
-      "thinking": "While August 13 marks GD's anniversary\u2014a date RobTop frequently uses for major teasers or announcements\u2014he rarely drops full content updates on exact anniversary dates without extensive prior testing. Given his long history of delays and the scope of 2.21 (Versus mode, The Map, Explorers), a full public release during August 2026 remains unlikely (~10%).",
-      "uncertainty": "Whether RobTop shadow-drops Update 2.21 during August 2026 around the game's anniversary without prior public warning.",
-      "resolution_risk": "Staggered app store approvals across platforms (Steam vs iOS vs Android) or soft launches could create brief ambiguity on the exact public release timing.",
-      "evidence_for": [
-        "Update 2.21 has been in development since early 2024 and features like The Map and Versus mode are progressing.",
-        "August 13 is Geometry Dash's anniversary, making August a thematic window for RobTop to target major milestones or releases."
-      ],
-      "evidence_against": [
-        "RobTop has a well-documented history of long delays and missing self-imposed target windows.",
-        "Past anniversary dates (such as the 10th anniversary in August 2023) featured special videos or release date announcements rather than immediate update drops.",
-        "No public release rollout on Steam or app stores has been confirmed as of mid-August 2026."
-      ],
-      "reason": "edge 0.335, kelly 0.77, decay 1.00, bound by share of volume"
     }
   ]
 }
