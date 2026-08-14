@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1786699867531,
+  "generated_ms": 1786700108195,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.6-flash",
@@ -30,7 +30,7 @@
   },
   "usage": {
     "fast": {
-      "today": 31,
+      "today": 33,
       "cap": 220
     },
     "chat": {
@@ -38,7 +38,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 9,
+      "today": 10,
       "cap": 18
     }
   },
@@ -47,6 +47,16 @@
   "net_worth": 567.27,
   "summary": "Net worth stands at around M$541 with spendable cash healthy at M$205, well above the M$100 operational floor. Following recent aggressive pruning of low-conviction, vague, or marginal bets (such as the TAI specialists, Metaculus Cup, CCRC Lucy Letby, and ultrasound bets), the portfolio is lean, liquid, and strictly concentrated around high-conviction short- and medium-term timeline NO bets. \n\nOpen positions are performing exceptionally well. The AI-related weekly timeline NO bet (ZC6gdANScC) has moved heavily in our favor, trading down to 9% with a strong unrealized P/L (+M$65), and the Geometry Dash 2.21 release NO position remains extremely favorable. The problematic Bitcoin 85k / Strait of Hormuz NO bet was decisively cut for a minor loss (~M$-10) after surging to 69% probability, successfully avoiding further macro drawdown. \n\nConcrete mistakes to avoid repeating include letting spendable mana drop below the M$100 operational floor, which paralyzes execution; lingering in low-conviction personal, legal, or community prop bets instead of proactively pruning them for liquidity; holding vague technical or near-coin-flip positions that lack a robust analytical edge; and holding volatile macro positions past their thesis thresholds rather than cutting losses early.\n\nCalibration remains strong in screening out vague \"vibe\" props, celebrity memes, unrealistic AI or technical breakthroughs, and targeting over-optimistic timeline claims. Calibration has also improved regarding macro exits, evidenced by the disciplined cut of the Bitcoin/Hormuz position before a worse drawdown. \n\nKey standing notes include maintaining the strict timeline NO portfolio bias, utilizing developer patterns (such as RobTop using anniversaries for teasers rather than full releases), and keeping cash buffers high above the M$100 operational floor to capitalize on upcoming timeline opportunities. Operational friction with intermittent Manifold API errors requires continued resilience and retrying actions.",
   "journal": [
+    {
+      "ts": 1786700108100,
+      "kind": "trade",
+      "text": "Limit order M$14 NO on \"Given I have been with my partner for a year, will we be together for \" at 70%, my estimate 63% (medium). Because: While the creator's companion honeymoon market suggests strong commitment and engagement intent (boosting retention well above general dating base rates), remaining together for 4 additional years still carries notable cumulative hazard rates, placing 5-year survival near 63%."
+    },
+    {
+      "ts": 1786700054133,
+      "kind": "screen",
+      "text": "Escalated \"Given I have been with my partner for a year, will we be together for \" at 70%: quick estimate 35% vs market 70%"
+    },
     {
       "ts": 1786699864776,
       "kind": "closed",
@@ -436,16 +446,6 @@
       "ts": 1786659568239,
       "kind": "portfolio",
       "text": "Net worth down from M$539 to M$525, balance M$190."
-    },
-    {
-      "ts": 1786657526613,
-      "kind": "closed",
-      "text": "No longer holding \"Will Anthropic release a system card of a model at a new frontier of i\". Last seen NO at 45%, P/L M$+1. Resolved or sold."
-    },
-    {
-      "ts": 1786657344553,
-      "kind": "agency",
-      "text": "Own turn, sold out of \"Will Anthropic release a system card of a model at a new fro\" (NO, P/L M$+1). Because: Pruning the weakest link in the portfolio. The thesis is vague and the pricing is near a coin-flip, which does not align with the core strategy of high-conviction timeline NO bets."
     }
   ],
   "todos": [
@@ -685,9 +685,46 @@
       "prob": 1.0,
       "closed": true,
       "days_to_close": 0.0
+    },
+    {
+      "question": "Given I have been with my partner for a year, will we be together for 5?",
+      "url": "https://manifold.markets/LivInTheLookingGlass/given-i-have-been-with-my-partner-f-0dde6bfd1962",
+      "side": "NO",
+      "shares": 45.4,
+      "invested": 14.0,
+      "value": 14.2,
+      "profit": -0.1,
+      "prob": 0.687,
+      "closed": false,
+      "days_to_close": 14.8
     }
   ],
   "decisions": [
+    {
+      "ts": 1786700108098,
+      "kind": "bet",
+      "question": "Given I have been with my partner for a year, will we be together for 5?",
+      "url": "https://manifold.markets/LivInTheLookingGlass/given-i-have-been-with-my-partner-f-0dde6bfd1962",
+      "market_prob": 0.6958656191062847,
+      "model_prob": 0.63,
+      "confidence": "medium",
+      "amount": 14.0,
+      "outcome": "NO",
+      "thinking": "While the creator's companion honeymoon market suggests strong commitment and engagement intent (boosting retention well above general dating base rates), remaining together for 4 additional years still carries notable cumulative hazard rates, placing 5-year survival near 63%.",
+      "uncertainty": "Whether the couple follows through on marriage/long-term commitment and maintains stability over 4 additional years.",
+      "resolution_risk": "Long resolution horizon (4 years) creates risk of creator inactivity or unannounced breakup/resolution issues.",
+      "evidence_for": [
+        "The creator has a companion market about planning a honeymoon, indicating serious commitment or engagement.",
+        "Reaching the 1-year mark eliminates early-stage breakup hazards.",
+        "Couples advancing to marriage/engagement have significantly higher multi-year retention rates (~60-70%)."
+      ],
+      "evidence_against": [
+        "General base rate for dating couples reaching 5 years from 1 year is under 40%.",
+        "Rapid progression to honeymoon planning within the first year can sometimes reflect early relationship volatility.",
+        "Four years is a long timeframe with high cumulative life changes and breakup risks."
+      ],
+      "reason": "edge 0.066, kelly 0.09, decay 0.68, bound by kelly target"
+    },
     {
       "ts": 1786697595159,
       "kind": "bet",
@@ -1025,30 +1062,6 @@
         "Recent updates from Anthropic focus on safeguards and iterations on existing models rather than new flagship announcements"
       ],
       "reason": "edge 0.229, kelly 0.49, decay 0.57, bound by default cap"
-    },
-    {
-      "ts": 1786618243534,
-      "kind": "bet",
-      "question": "Will a Manifolder win the Summer Metaculus Cup",
-      "url": "https://manifold.markets/bens/will-a-manifolder-win-the-summer-me",
-      "market_prob": 0.6651007488548686,
-      "model_prob": 0.25,
-      "confidence": "medium",
-      "amount": 51.0,
-      "outcome": "NO",
-      "thinking": "While active Manifolders like Capital and bens are strong forecasters, winning 1st place outright in a 4-month Metaculus Cup against hundreds of top predictors and superforecasters is high variance. The strict requirement of 100+ Manifold trades in 2026 before market creation further limits qualifying winners, making ~25% a realistic estimate.",
-      "uncertainty": "How many top-10 Metaculus Cup contenders qualify under the strict 100-trade pre-creation Manifold filter.",
-      "resolution_risk": "Ambiguity over whether a winner meeting the trade count criteria was a bot or automated script.",
-      "evidence_for": [
-        "Several highly active, top-ranked Manifold users (e.g., Capital, bens) are actively participating in the Summer Metaculus Cup.",
-        "Strong forecasters who cross-participate between platforms often rank near the top in structured forecasting tournaments."
-      ],
-      "evidence_against": [
-        "Metaculus tournaments feature hundreds of competitive predictors, including dedicated superforecasters and Metaculus veterans who do not trade on Manifold.",
-        "The resolution criteria strictly require >=100 trades on Manifold in 2026 prior to market creation, excluding casual overlap users or new accounts.",
-        "Tournament variance is high, making individual win probabilities for any given participant relatively low."
-      ],
-      "reason": "edge 0.415, kelly 0.62, decay 0.54, bound by default cap"
     }
   ]
 }
