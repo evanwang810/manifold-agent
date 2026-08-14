@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1786697360040,
+  "generated_ms": 1786697595358,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.6-flash",
@@ -30,7 +30,7 @@
   },
   "usage": {
     "fast": {
-      "today": 29,
+      "today": 31,
       "cap": 220
     },
     "chat": {
@@ -38,7 +38,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 7,
+      "today": 8,
       "cap": 18
     }
   },
@@ -47,6 +47,16 @@
   "net_worth": 568.46,
   "summary": "Net worth stands at around M$541 with spendable cash healthy at M$205, well above the M$100 operational floor. Following recent aggressive pruning of low-conviction, vague, or marginal bets (such as the TAI specialists, Metaculus Cup, CCRC Lucy Letby, and ultrasound bets), the portfolio is lean, liquid, and strictly concentrated around high-conviction short- and medium-term timeline NO bets. \n\nOpen positions are performing exceptionally well. The AI-related weekly timeline NO bet (ZC6gdANScC) has moved heavily in our favor, trading down to 9% with a strong unrealized P/L (+M$65), and the Geometry Dash 2.21 release NO position remains extremely favorable. The problematic Bitcoin 85k / Strait of Hormuz NO bet was decisively cut for a minor loss (~M$-10) after surging to 69% probability, successfully avoiding further macro drawdown. \n\nConcrete mistakes to avoid repeating include letting spendable mana drop below the M$100 operational floor, which paralyzes execution; lingering in low-conviction personal, legal, or community prop bets instead of proactively pruning them for liquidity; holding vague technical or near-coin-flip positions that lack a robust analytical edge; and holding volatile macro positions past their thesis thresholds rather than cutting losses early.\n\nCalibration remains strong in screening out vague \"vibe\" props, celebrity memes, unrealistic AI or technical breakthroughs, and targeting over-optimistic timeline claims. Calibration has also improved regarding macro exits, evidenced by the disciplined cut of the Bitcoin/Hormuz position before a worse drawdown. \n\nKey standing notes include maintaining the strict timeline NO portfolio bias, utilizing developer patterns (such as RobTop using anniversaries for teasers rather than full releases), and keeping cash buffers high above the M$100 operational floor to capitalize on upcoming timeline opportunities. Operational friction with intermittent Manifold API errors requires continued resilience and retrying actions.",
   "journal": [
+    {
+      "ts": 1786697595161,
+      "kind": "trade",
+      "text": "Limit order M$56 NO on \"Will something happen this week in AI (by 5pm EST August 14)?\" at 8%, my estimate 3% (high). Because: Zvi explicitly ruled out the top candidate events this week in comments (Grok 4.6, Ryan Greenblatt interview, stolen-thoughts leak). With only a few hours remaining before the 5pm EST deadline, a YES resolution is very unlikely."
+    },
+    {
+      "ts": 1786697547158,
+      "kind": "screen",
+      "text": "Escalated \"Will something happen this week in AI (by 5pm EST August 14)?\" at 8%: quick estimate 25% vs market 8%"
+    },
     {
       "ts": 1786695315418,
       "kind": "position",
@@ -436,16 +446,6 @@
       "ts": 1786653873210,
       "kind": "closed",
       "text": "No longer holding \"Will my boyfriend regret not going for a recommended ultrasound?\". Last seen YES at 24%, P/L M$+1. Resolved or sold."
-    },
-    {
-      "ts": 1786653873210,
-      "kind": "portfolio",
-      "text": "Net worth down from M$554 to M$539, balance M$139."
-    },
-    {
-      "ts": 1786653691020,
-      "kind": "agency",
-      "text": "Own turn, sold out of \"Will my boyfriend regret not going for a recommended ultraso\" (YES, P/L M$+1). Because: Pruning low-conviction personal prop bet to increase liquidity buffer and align with the core strategy of focusing on high-conviction timeline NO bets."
     }
   ],
   "todos": [
@@ -603,6 +603,18 @@
   ],
   "positions": [
     {
+      "question": "Will something happen this week in AI (by 5pm EST August 14)?",
+      "url": "https://manifold.markets/ZviMowshowitz/will-something-happen-this-week-in-U2zhAzQOQz",
+      "side": "NO",
+      "shares": 204.9,
+      "invested": 123.0,
+      "value": 189.8,
+      "profit": 66.8,
+      "prob": 0.073,
+      "closed": false,
+      "days_to_close": 0.3
+    },
+    {
       "question": "Will Abdul El Sayed and Francesca Hong both win their primaries?",
       "url": "https://manifold.markets/Jack1/will-abdul-el-sayed-and-francesca-h",
       "side": "YES",
@@ -625,18 +637,6 @@
       "prob": 0.271,
       "closed": false,
       "days_to_close": 17.6
-    },
-    {
-      "question": "Will something happen this week in AI (by 5pm EST August 14)?",
-      "url": "https://manifold.markets/ZviMowshowitz/will-something-happen-this-week-in-U2zhAzQOQz",
-      "side": "NO",
-      "shares": 144.4,
-      "invested": 67.0,
-      "value": 133.5,
-      "profit": 66.5,
-      "prob": 0.076,
-      "closed": false,
-      "days_to_close": 0.3
     },
     {
       "question": "Will at least 10 UK riot related prosecutions be overturned or have their sentences shortened in the next 2 years?",
@@ -700,6 +700,29 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1786697595159,
+      "kind": "bet",
+      "question": "Will something happen this week in AI (by 5pm EST August 14)?",
+      "url": "https://manifold.markets/ZviMowshowitz/will-something-happen-this-week-in-U2zhAzQOQz",
+      "market_prob": 0.07564770447724314,
+      "model_prob": 0.03,
+      "confidence": "high",
+      "amount": 56.0,
+      "outcome": "NO",
+      "thinking": "Zvi explicitly ruled out the top candidate events this week in comments (Grok 4.6, Ryan Greenblatt interview, stolen-thoughts leak). With only a few hours remaining before the 5pm EST deadline, a YES resolution is very unlikely.",
+      "uncertainty": "Whether an unexpected massive AI announcement or leak occurs in the final hours before 5pm EST today",
+      "resolution_risk": "Zvi could theoretically change his mind or discover a late Friday event after close, though his comments make this unlikely",
+      "evidence_for": [
+        "Unannounced sudden major AI lab drop or severe incident occurring in the remaining hours before 5pm EST"
+      ],
+      "evidence_against": [
+        "Zvi explicitly confirmed in comments that Grok 4.6, the Ryan Greenblatt interview, and the stolen-thoughts leak do NOT qualify as Something Happening",
+        "No qualifying speed-premium post was published or triggered during the week",
+        "Only a few hours remain until the 5pm EST deadline on Friday, August 14"
+      ],
+      "reason": "edge 0.046, kelly 0.60, decay 1.00, bound by default cap"
+    },
     {
       "ts": 1786695133003,
       "kind": "bet",
@@ -1038,29 +1061,6 @@
         "Tournament variance is high, making individual win probabilities for any given participant relatively low."
       ],
       "reason": "edge 0.415, kelly 0.62, decay 0.54, bound by default cap"
-    },
-    {
-      "ts": 1786613154979,
-      "kind": "no_trade",
-      "question": "Given I have been with my partner for a year, will we be together for 5?",
-      "url": "https://manifold.markets/LivInTheLookingGlass/given-i-have-been-with-my-partner-f-0dde6bfd1962",
-      "market_prob": 0.6958656191062847,
-      "model_prob": 0.67,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Conditional survival rates for relationships that reach one year and are heading toward marriage are quite favorable, though four years is still a meaningful duration for young demographics. Estimating 67%.",
-      "uncertainty": "Whether the couple successfully transitions to marriage or long-term cohabitation over the next four years",
-      "resolution_risk": "The creator left no explicit description, meaning resolution relies entirely on self-reporting or creator activity in four years",
-      "evidence_for": [
-        "The couple has reached the 1-year milestone, filtering out the initial high-churn phase of relationships",
-        "The market creator also created a 'where will we honeymoon' market, signaling high commitment and marriage plans"
-      ],
-      "evidence_against": [
-        "A four-year remaining duration is a long window during which life changes can disrupt relationships",
-        "Manifold users skew younger, where unmarried relationship dissolution rates are higher than average married demographics"
-      ],
-      "reason": "edge 0.026 below minimum 0.04"
     }
   ]
 }
