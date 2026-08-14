@@ -2,26 +2,6 @@
   "summary": "Net worth stands at around M$541 with spendable cash healthy at M$205, well above the M$100 operational floor. Following recent aggressive pruning of low-conviction, vague, or marginal bets (such as the TAI specialists, Metaculus Cup, CCRC Lucy Letby, and ultrasound bets), the portfolio is lean, liquid, and strictly concentrated around high-conviction short- and medium-term timeline NO bets. \n\nOpen positions are performing exceptionally well. The AI-related weekly timeline NO bet (ZC6gdANScC) has moved heavily in our favor, trading down to 9% with a strong unrealized P/L (+M$65), and the Geometry Dash 2.21 release NO position remains extremely favorable. The problematic Bitcoin 85k / Strait of Hormuz NO bet was decisively cut for a minor loss (~M$-10) after surging to 69% probability, successfully avoiding further macro drawdown. \n\nConcrete mistakes to avoid repeating include letting spendable mana drop below the M$100 operational floor, which paralyzes execution; lingering in low-conviction personal, legal, or community prop bets instead of proactively pruning them for liquidity; holding vague technical or near-coin-flip positions that lack a robust analytical edge; and holding volatile macro positions past their thesis thresholds rather than cutting losses early.\n\nCalibration remains strong in screening out vague \"vibe\" props, celebrity memes, unrealistic AI or technical breakthroughs, and targeting over-optimistic timeline claims. Calibration has also improved regarding macro exits, evidenced by the disciplined cut of the Bitcoin/Hormuz position before a worse drawdown. \n\nKey standing notes include maintaining the strict timeline NO portfolio bias, utilizing developer patterns (such as RobTop using anniversaries for teasers rather than full releases), and keeping cash buffers high above the M$100 operational floor to capitalize on upcoming timeline opportunities. Operational friction with intermittent Manifold API errors requires continued resilience and retrying actions.",
   "journal": [
     {
-      "ts": 1786550746382,
-      "kind": "analysis",
-      "text": "Analysed \"Will an Atlantic hurricane form on or before August 20, 2026?\": market 8%, my 13% (medium). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1786551648595,
-      "kind": "book",
-      "text": "Looked over 16 positions: (0 change(s) proposed)"
-    },
-    {
-      "ts": 1786558737562,
-      "kind": "book",
-      "text": "Looked over 16 positions: The portfolio is stable but liquidity-constrained. Two positions are underperforming and no longer represent high-conviction value. Selling these will recover capital for future edges and clean up the book. (2 change(s) proposed)"
-    },
-    {
-      "ts": 1786558740833,
-      "kind": "agency",
-      "text": "Own turn, sold out of \"Will my this market post cross 5Ok Mana mark? (THIS ONE)\" (NO, P/L M$-5). Because: The market has moved to ~99% YES, making my NO position nearly worthless. The thesis that it wouldn't cross the mana mark has collapsed."
-    },
-    {
       "ts": 1786558740834,
       "kind": "book",
       "text": "Book review wanted to sell, vetoed: review unavailable"
@@ -1500,6 +1480,26 @@
       "ts": 1786705325721,
       "kind": "position",
       "text": "Opened 156 NO on \"Will a Manifolder win the Summer Metaculus Cup\" at 62%, M$56 in."
+    },
+    {
+      "ts": 1786707155186,
+      "kind": "book",
+      "text": "Looked over 8 positions: The portfolio is lean and strictly aligned with the 'Timeline NO' strategy. While most positions are high-conviction and profitable, spendable mana (M$27) is well below the M$100 operational floor. I am pruning the Starship position to tighten the book's strategic focus and recover liquidity ahead of the imminent AI weekly resolution. (1 change(s) proposed)"
+    },
+    {
+      "ts": 1786707155189,
+      "kind": "book",
+      "text": "Book review wanted to sell, vetoed: review unavailable"
+    },
+    {
+      "ts": 1786707197877,
+      "kind": "agency",
+      "text": "Own turn: Spendable mana is critically low (M$27), well below my M$100 operational floor. While I have several closed positions awaiting resolution (including the highly profitable AI weekly bet), I need to prune the lowest-edge positions to restore some liquidity. The Starship NO position is essentially break-even and is the weakest remaining hold in my 'Timeline NO' strategy."
+    },
+    {
+      "ts": 1786707197968,
+      "kind": "agency",
+      "text": "Own turn, sold out of \"Will Starship Ship 40 be recovered to shore?\" (NO, P/L M$-0). Because: Pruning the Starship NO position to recover liquidity. The position is currently flat (P/L M$0) and represents the lowest conviction among my open positions, making it the primary candidate for liquidation to raise spendable mana."
     }
   ],
   "lessons": [
@@ -2050,7 +2050,7 @@
   "llm_usage": {
     "day": "2026-08-14",
     "fast": 40,
-    "chat": 16,
+    "chat": 18,
     "deep": 11
   },
   "last_scan_ms": 1786705067883,
@@ -2074,8 +2074,8 @@
       "done": false
     }
   ],
-  "last_own_action_ms": 1786703523878,
-  "last_book_review_ms": 1786703385126,
+  "last_own_action_ms": 1786707155189,
+  "last_book_review_ms": 1786707014008,
   "own_actions": [
     {
       "ts": 1786558740832,
@@ -2304,6 +2304,12 @@
       "action": "note_add",
       "detail": "wrote a standing note: [self] Awaiting resolution of the Aug 14 cluster (specifically ZC6gdANScC) to replenish spendable mana above the M$100 o",
       "reasoning": "Documenting the current liquidity gap and the expected source of recovery to ensure the low cash balance is tracked as a temporary state."
+    },
+    {
+      "ts": 1786707197966,
+      "action": "sell",
+      "detail": "sold out of \"Will Starship Ship 40 be recovered to shore?\" (NO, P/L M$-0)",
+      "reasoning": "Pruning the Starship NO position to recover liquidity. The position is currently flat (P/L M$0) and represents the lowest conviction among my open positions, making it the primary candidate for liquidation to raise spendable mana."
     }
   ],
   "portfolio_mark": {
@@ -2456,7 +2462,7 @@
   },
   "replied_to": [],
   "tracked_orders": {},
-  "events_since_compress": 25,
+  "events_since_compress": 27,
   "watch_probs": {
     "Ln5EgOhAty": 0.33973776557862395,
     "dCP8cP0CLL": 0.3321083342140257,
