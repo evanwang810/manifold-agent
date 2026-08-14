@@ -2,21 +2,6 @@
   "summary": "Net worth stands at around M$541 with spendable cash healthy at M$205, well above the M$100 operational floor. Following recent aggressive pruning of low-conviction, vague, or marginal bets (such as the TAI specialists, Metaculus Cup, CCRC Lucy Letby, and ultrasound bets), the portfolio is lean, liquid, and strictly concentrated around high-conviction short- and medium-term timeline NO bets. \n\nOpen positions are performing exceptionally well. The AI-related weekly timeline NO bet (ZC6gdANScC) has moved heavily in our favor, trading down to 9% with a strong unrealized P/L (+M$65), and the Geometry Dash 2.21 release NO position remains extremely favorable. The problematic Bitcoin 85k / Strait of Hormuz NO bet was decisively cut for a minor loss (~M$-10) after surging to 69% probability, successfully avoiding further macro drawdown. \n\nConcrete mistakes to avoid repeating include letting spendable mana drop below the M$100 operational floor, which paralyzes execution; lingering in low-conviction personal, legal, or community prop bets instead of proactively pruning them for liquidity; holding vague technical or near-coin-flip positions that lack a robust analytical edge; and holding volatile macro positions past their thesis thresholds rather than cutting losses early.\n\nCalibration remains strong in screening out vague \"vibe\" props, celebrity memes, unrealistic AI or technical breakthroughs, and targeting over-optimistic timeline claims. Calibration has also improved regarding macro exits, evidenced by the disciplined cut of the Bitcoin/Hormuz position before a worse drawdown. \n\nKey standing notes include maintaining the strict timeline NO portfolio bias, utilizing developer patterns (such as RobTop using anniversaries for teasers rather than full releases), and keeping cash buffers high above the M$100 operational floor to capitalize on upcoming timeline opportunities. Operational friction with intermittent Manifold API errors requires continued resilience and retrying actions.",
   "journal": [
     {
-      "ts": 1786535999605,
-      "kind": "screen",
-      "text": "Passed on \"Will the US and Iran sign a formal end-of-war agreement by August 31, \" at 11%: quick estimate 8% agrees with market. The market correctly recognizes that current interim ceasefire agreements and deadlocked talks do not meet the strict criteria of a formal end-of-war treaty by August 31."
-    },
-    {
-      "ts": 1786536003806,
-      "kind": "screen",
-      "text": "Passed on \"Trump proclaims a 'Straight Pride month' by August 2026?\" at 4%: quick estimate 5% agrees with market. The resolution deadline was July 31, 2026, which has already passed, so the market has effectively resolved NO."
-    },
-    {
-      "ts": 1786536023817,
-      "kind": "screen",
-      "text": "Passed on \"Will Trump wear glasses in August?\" at 11%: quick estimate 5% agrees with market. Trump rarely wears glasses publicly and there is no indication of any upcoming medical need or change."
-    },
-    {
       "ts": 1786538508854,
       "kind": "screen",
       "text": "Escalated \"Anglo American & Teck Resources merge by Sep 1, 2026\" at 5%: quick estimate 35% vs market 5%"
@@ -1500,6 +1485,21 @@
       "ts": 1786697595161,
       "kind": "trade",
       "text": "Limit order M$56 NO on \"Will something happen this week in AI (by 5pm EST August 14)?\" at 8%, my estimate 3% (high). Because: Zvi explicitly ruled out the top candidate events this week in comments (Grok 4.6, Ryan Greenblatt interview, stolen-thoughts leak). With only a few hours remaining before the 5pm EST deadline, a YES resolution is very unlikely."
+    },
+    {
+      "ts": 1786699563668,
+      "kind": "book",
+      "text": "Looked over 8 positions: The book is lean and liquid, successfully executing the 'Timeline NO' strategy. Most positions are high-conviction and profitable. The Gemini coding YES position is a tactical outlier that deviates from the core strategic focus. (1 change(s) proposed)"
+    },
+    {
+      "ts": 1786699567887,
+      "kind": "agency",
+      "text": "Own turn, sold out of \"Will the next full gemini model be frontier at coding?\" (YES, P/L M$-1). Because: This is a 'YES' bet on technical capability, which is a strategic outlier compared to the current high-conviction 'Timeline NO' focus."
+    },
+    {
+      "ts": 1786699682308,
+      "kind": "agency",
+      "text": "Own turn: I noticed that CUtsh5LCE5 (Gemini coding YES) is still in my open positions despite my previous attempt to sell it. I am selling it now to maintain strict alignment with my 'Timeline NO' strategy and to recover liquidity, as my spendable mana (M$56) has fallen below my M$100 operational floor."
     }
   ],
   "lessons": [
@@ -2045,8 +2045,8 @@
   "llm_usage": {
     "day": "2026-08-14",
     "fast": 31,
-    "chat": 12,
-    "deep": 8
+    "chat": 14,
+    "deep": 9
   },
   "last_scan_ms": 1786697545952,
   "last_compress_ms": 1786690052453,
@@ -2069,8 +2069,8 @@
       "done": false
     }
   ],
-  "last_own_action_ms": 1786694749400,
-  "last_book_review_ms": 1786694662108,
+  "last_own_action_ms": 1786699567889,
+  "last_book_review_ms": 1786699091655,
   "own_actions": [
     {
       "ts": 1786558740832,
@@ -2281,6 +2281,12 @@
       "action": "note_add",
       "detail": "wrote a standing note: [self] Portfolio is currently in a 'harvesting' phase; holding M$139 in cash to maintain liquidity and avoid over-exposu",
       "reasoning": "Clarifying that the current high cash balance is a deliberate strategic pause rather than inattention, ensuring I return to scanning for opportunities once the current positions resolve."
+    },
+    {
+      "ts": 1786699567884,
+      "action": "sell",
+      "detail": "sold out of \"Will the next full gemini model be frontier at coding?\" (YES, P/L M$-1)",
+      "reasoning": "This is a 'YES' bet on technical capability, which is a strategic outlier compared to the current high-conviction 'Timeline NO' focus."
     }
   ],
   "portfolio_mark": {
@@ -2317,7 +2323,7 @@
       "question": "Will MNX have $1m in volume before September 2026?"
     },
     "ZC6gdANScC": {
-      "prob": 0.07345479997364718,
+      "prob": 0.07345479997364719,
       "profit": 66.84377530313844,
       "shares": 204.89424077501985,
       "side": "NO",
@@ -2433,7 +2439,7 @@
   },
   "replied_to": [],
   "tracked_orders": {},
-  "events_since_compress": 11,
+  "events_since_compress": 14,
   "watch_probs": {
     "Ln5EgOhAty": 0.33973776557862395,
     "dCP8cP0CLL": 0.3321083342140257,
@@ -2453,7 +2459,7 @@
     "Ec0yEIp2ty": 0.27093957270376445,
     "duZC8ZIlzS": 0.16,
     "bnm2196ttb": 0.29057560299451013,
-    "ZC6gdANScC": 0.07345479997364718,
+    "ZC6gdANScC": 0.07345479997364719,
     "uAPRyuqyq0": 0.4461621694816038,
     "czd209Q96L": 0.6852150334399993,
     "upLA0td9LC": 0.4215384394275652,
