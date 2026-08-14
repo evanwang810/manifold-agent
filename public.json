@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1786704880483,
+  "generated_ms": 1786705143651,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.6-flash",
@@ -30,7 +30,7 @@
   },
   "usage": {
     "fast": {
-      "today": 37,
+      "today": 40,
       "cap": 220
     },
     "chat": {
@@ -38,7 +38,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 10,
+      "today": 11,
       "cap": 18
     }
   },
@@ -47,6 +47,21 @@
   "net_worth": 567.39,
   "summary": "Net worth stands at around M$541 with spendable cash healthy at M$205, well above the M$100 operational floor. Following recent aggressive pruning of low-conviction, vague, or marginal bets (such as the TAI specialists, Metaculus Cup, CCRC Lucy Letby, and ultrasound bets), the portfolio is lean, liquid, and strictly concentrated around high-conviction short- and medium-term timeline NO bets. \n\nOpen positions are performing exceptionally well. The AI-related weekly timeline NO bet (ZC6gdANScC) has moved heavily in our favor, trading down to 9% with a strong unrealized P/L (+M$65), and the Geometry Dash 2.21 release NO position remains extremely favorable. The problematic Bitcoin 85k / Strait of Hormuz NO bet was decisively cut for a minor loss (~M$-10) after surging to 69% probability, successfully avoiding further macro drawdown. \n\nConcrete mistakes to avoid repeating include letting spendable mana drop below the M$100 operational floor, which paralyzes execution; lingering in low-conviction personal, legal, or community prop bets instead of proactively pruning them for liquidity; holding vague technical or near-coin-flip positions that lack a robust analytical edge; and holding volatile macro positions past their thesis thresholds rather than cutting losses early.\n\nCalibration remains strong in screening out vague \"vibe\" props, celebrity memes, unrealistic AI or technical breakthroughs, and targeting over-optimistic timeline claims. Calibration has also improved regarding macro exits, evidenced by the disciplined cut of the Bitcoin/Hormuz position before a worse drawdown. \n\nKey standing notes include maintaining the strict timeline NO portfolio bias, utilizing developer patterns (such as RobTop using anniversaries for teasers rather than full releases), and keeping cash buffers high above the M$100 operational floor to capitalize on upcoming timeline opportunities. Operational friction with intermittent Manifold API errors requires continued resilience and retrying actions.",
   "journal": [
+    {
+      "ts": 1786705143449,
+      "kind": "trade",
+      "text": "Limit order M$56 NO on \"Will a Manifolder win the Summer Metaculus Cup\" at 66%, my estimate 23% (medium). Because: While active Manifolders are participating, winning 1st place in a 4-month Metaculus Cup requires outperforming hundreds of dedicated forecasters. The strict criteria requiring 100+ Manifold trades in 2026 prior to market creation significantly narrows the eligible field relative to the entire Metaculus participant pool, making YES ~23%."
+    },
+    {
+      "ts": 1786705088956,
+      "kind": "screen",
+      "text": "Escalated \"Will a Manifolder win the Summer Metaculus Cup\" at 66%: quick estimate 15% vs market 66%"
+    },
+    {
+      "ts": 1786705069050,
+      "kind": "screen",
+      "text": "Passed on \"Will Andrew Tate be in jail through the end of August?\" at 92%: quick estimate 85% agrees with market. Extradition proceedings for severe charges like rape and trafficking routinely take months, making detention through August highly likely."
+    },
     {
       "ts": 1786703764888,
       "kind": "closed",
@@ -431,21 +446,6 @@
       "ts": 1786665941132,
       "kind": "move",
       "text": "\"Will something happen this week in AI (by 5pm EST August 14)?\" moved -7% to 25%. Holding NO, P/L M$+41."
-    },
-    {
-      "ts": 1786665941132,
-      "kind": "portfolio",
-      "text": "Net worth up from M$530 to M$541, balance M$205."
-    },
-    {
-      "ts": 1786665758680,
-      "kind": "screen",
-      "text": "Passed on \"Will July 2026 headline PCE inflation be at least 0.3% month-over-mont\" at 3%: quick estimate 15% agrees with market. The market has already drastically repriced downward following the July CPI print and Cleveland Fed nowcasts, aligning closely with fair value."
-    },
-    {
-      "ts": 1786664637772,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: Portfolio has successfully transitioned to a lean, high-conviction 'Timeline NO' strategy. Currently awaiting the resolu. Because: Documenting the strategic shift and the current state of the portfolio to ensure the transition is recorded for future performance analysis."
     }
   ],
   "todos": [
@@ -617,7 +617,7 @@
       "profit": 67.0,
       "prob": 0.073,
       "closed": false,
-      "days_to_close": 0.3
+      "days_to_close": 0.2
     },
     {
       "question": "Will Abdul El Sayed and Francesca Hong both win their primaries?",
@@ -654,6 +654,18 @@
       "prob": 0.237,
       "closed": true,
       "days_to_close": 0.0
+    },
+    {
+      "question": "Will a Manifolder win the Summer Metaculus Cup",
+      "url": "https://manifold.markets/bens/will-a-manifolder-win-the-summer-me",
+      "side": "NO",
+      "shares": 156.3,
+      "invested": 56.0,
+      "value": 58.7,
+      "profit": 2.7,
+      "prob": 0.624,
+      "closed": false,
+      "days_to_close": 17.5
     },
     {
       "question": "Will Starship Ship 40 be recovered to shore?",
@@ -693,6 +705,29 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1786705143447,
+      "kind": "bet",
+      "question": "Will a Manifolder win the Summer Metaculus Cup",
+      "url": "https://manifold.markets/bens/will-a-manifolder-win-the-summer-me",
+      "market_prob": 0.6588380878087207,
+      "model_prob": 0.23,
+      "confidence": "medium",
+      "amount": 56.0,
+      "outcome": "NO",
+      "thinking": "While active Manifolders are participating, winning 1st place in a 4-month Metaculus Cup requires outperforming hundreds of dedicated forecasters. The strict criteria requiring 100+ Manifold trades in 2026 prior to market creation significantly narrows the eligible field relative to the entire Metaculus participant pool, making YES ~23%.",
+      "uncertainty": "The proportion of top 10-20 overall contenders in the Summer Metaculus Cup who satisfy the strict pre-creation 100+ 2026 Manifold trade threshold.",
+      "resolution_risk": "Ambiguity or dispute over verifying whether the winning account had exactly 100+ trades on Manifold in 2026 prior to market creation.",
+      "evidence_for": [
+        "Several active, highly ranked Manifold forecasters (e.g., @bens, @Capital) are actively participating in the Summer Metaculus Cup.",
+        "There is non-trivial overlap between top forecasting talent on Metaculus and high-volume Manifold traders."
+      ],
+      "evidence_against": [
+        "Winning 1st place in a open Metaculus Cup requires outperforming hundreds of dedicated forecasters, many of whom are Metaculus/Superforecaster specialists with no active Manifold history.",
+        "The 100+ trades on Manifold in 2026 prior to market creation filter excludes casual cross-platform users or Metaculus specialists who only trade occasionally on Manifold."
+      ],
+      "reason": "edge 0.429, kelly 0.65, decay 0.57, bound by default cap"
+    },
     {
       "ts": 1786700108098,
       "kind": "bet",
@@ -1031,30 +1066,6 @@
         "An official announcement or news consensus confirming unencumbered maritime traffic through Hormuz before BTC hits $85k will trigger a NO resolution."
       ],
       "reason": "edge 0.141, kelly 0.25, decay 0.53, bound by kelly target"
-    },
-    {
-      "ts": 1786623199447,
-      "kind": "bet",
-      "question": "Will Anthropic release a system card of a model at a new frontier of intellegence by August 31st?",
-      "url": "https://manifold.markets/BenAybar/will-anthropic-release-the-system-c",
-      "market_prob": 0.4694185847679506,
-      "model_prob": 0.24,
-      "confidence": "medium",
-      "amount": 51.0,
-      "outcome": "NO",
-      "thinking": "With Opus 5 explicitly ruled out by the creator update and only 18 days remaining in August, the probability of Anthropic publishing a system card for a new, higher-frontier model beyond Mythos/Fable 5 is quite low (~24%).",
-      "uncertainty": "Whether Anthropic plans an unannounced non-Opus frontier model system card release before the end of August.",
-      "resolution_risk": "Disagreements over whether a newly published card meets the threshold of being 'Mythos class' or 'their new most powerful model'.",
-      "evidence_for": [
-        "Anthropic can release system cards without public model deployments (as seen with Mythos Preview in April 2026)",
-        "The criteria broadly includes any card described as Mythos class or their new most powerful model"
-      ],
-      "evidence_against": [
-        "Creator explicitly ruled that Opus 5 will not count for a YES resolution",
-        "Only 18 days remain before the August 31st deadline",
-        "Recent updates from Anthropic focus on safeguards and iterations on existing models rather than new flagship announcements"
-      ],
-      "reason": "edge 0.229, kelly 0.49, decay 0.57, bound by default cap"
     }
   ]
 }
