@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1786734456496,
+  "generated_ms": 1786734672017,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.6-flash",
@@ -30,7 +30,7 @@
   },
   "usage": {
     "fast": {
-      "today": 76,
+      "today": 77,
       "cap": 220
     },
     "chat": {
@@ -38,15 +38,30 @@
       "cap": 400
     },
     "deep": {
-      "today": 16,
+      "today": 17,
       "cap": 18
     }
   },
   "dry_run": false,
   "balance": 34.63,
-  "net_worth": 558.92,
+  "net_worth": 514.29,
   "summary": "Portfolio net worth remains solid around M$541, with spendable cash temporarily compressed to M$27 due to capital allocation into active positions while awaiting imminently resolving markets like the August 14 AI weekly NO bet. The book has been rigorously streamlined to focus exclusively on high-conviction, short- and medium-term timeline NO bets. Recent non-strategic positions\u2014such as the Starship recovery NO, Gemini coding YES, and partner timeline bets\u2014were decisively pruned to enforce strict strategic discipline, successfully keeping the portfolio aligned with core edges.\n\nOpen positions are performing exceptionally well. All active bets are current timeline NOs with strong unrealized profits and favorable pricing, including the AI weekly NO bet (ZC6gdANScC) trading near 9% probability, Geometry Dash 2.21 release NO, Summer Metaculus Cup Manifolder NO, and Anthropic system card NO. None of the current positions are moving against us; every single open position passes the \"would I open this today\" test. \n\nConcrete mistakes to avoid repeating include letting spendable mana drop below the M$100 operational floor without an imminent resolution to restore liquidity; lingering in personal, technical, or vague prop bets that dilute portfolio focus; holding volatile macro assets past their thesis invalidation point (as was successfully avoided with the previous Bitcoin/Hormuz exit); and drifting into tactical YES bets on capabilities or developer deliverables that lack structural timeline edges.\n\nCalibration remains strong in identifying and shorting over-optimistic timeline claims, speculative community props, and vague tech breakthroughs where hype outpaces delivery. We have also refined our exit discipline, cutting marginal or drifting bets early rather than hoping for mean reversion. \n\nKey standing notes include maintaining the strict timeline NO strategy across the portfolio, utilizing developer behavior patterns (such as RobTop using anniversaries for teasers rather than full updates), and relying on imminent short-term market resolutions to automatically replenish the cash buffer above the M$100 operational floor. Operational resilience with occasional Manifold API errors must be maintained.",
   "journal": [
+    {
+      "ts": 1786734669979,
+      "kind": "trade",
+      "text": "Bought M$24 NO on \"Will something happen this week in AI (by 5pm EST August 14)?\" at 34%, my estimate 3% (high). Because: Zvi explicitly disconfirmed all proposed contenders (Grok 4.6, stolen-thoughts, Dwarkesh interview) in the comments. Given his extremely high threshold for an 'obligated' speed premium post and the imminent 5pm EST close, probability of YES is minimal."
+    },
+    {
+      "ts": 1786734639175,
+      "kind": "move",
+      "text": "\"Will something happen this week in AI (by 5pm EST August 14)?\" moved +22% to 34%. Holding NO, P/L M$+13."
+    },
+    {
+      "ts": 1786734639175,
+      "kind": "portfolio",
+      "text": "Net worth down from M$559 to M$514, balance M$35."
+    },
     {
       "ts": 1786734085581,
       "kind": "agency",
@@ -431,21 +446,6 @@
       "ts": 1786703523878,
       "kind": "book",
       "text": "Book review wanted to sell, vetoed: review unavailable"
-    },
-    {
-      "ts": 1786703523876,
-      "kind": "book",
-      "text": "Looked over 8 positions: The book is lean and strictly aligned with the 'Timeline NO' strategy. Most positions are high-conviction and profitable. Spendable mana is currently below the M$100 operational floor, necessitating the pruning of any remaining non-strategic outliers to restore liquidity. (1 change(s) proposed)"
-    },
-    {
-      "ts": 1786702555023,
-      "kind": "screen",
-      "text": "Escalated \"Will the percent of Pakistanis in extreme poverty be above 5 percent i\" at 87%: quick estimate 45% vs market 87%"
-    },
-    {
-      "ts": 1786702535233,
-      "kind": "screen",
-      "text": "Passed on \"Will the US put boots on the ground in Iran before September?\" at 11%: quick estimate 3% agrees with market. A full-scale US ground invasion of Iran within two weeks is an extreme geopolitical tail risk with zero current indicators."
     }
   ],
   "todos": [
@@ -621,11 +621,11 @@
       "question": "Will something happen this week in AI (by 5pm EST August 14)?",
       "url": "https://manifold.markets/ZviMowshowitz/will-something-happen-this-week-in-U2zhAzQOQz",
       "side": "NO",
-      "shares": 204.9,
-      "invested": 123.0,
-      "value": 180.4,
-      "profit": 57.4,
-      "prob": 0.12,
+      "shares": 240.9,
+      "invested": 147.0,
+      "value": 161.4,
+      "profit": 14.4,
+      "prob": 0.33,
       "closed": false,
       "days_to_close": 0.1
     },
@@ -715,6 +715,27 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1786734669977,
+      "kind": "bet",
+      "question": "Will something happen this week in AI (by 5pm EST August 14)?",
+      "url": "https://manifold.markets/ZviMowshowitz/will-something-happen-this-week-in-U2zhAzQOQz",
+      "market_prob": 0.33748192806090305,
+      "model_prob": 0.03,
+      "confidence": "high",
+      "amount": 24.0,
+      "outcome": "NO",
+      "thinking": "Zvi explicitly disconfirmed all proposed contenders (Grok 4.6, stolen-thoughts, Dwarkesh interview) in the comments. Given his extremely high threshold for an 'obligated' speed premium post and the imminent 5pm EST close, probability of YES is minimal.",
+      "uncertainty": "Whether an unexpected, massive AI emergency or release breaks in the final hours before 5pm EST.",
+      "resolution_risk": "Zvi's entirely subjective interpretation of what obligates a post.",
+      "evidence_for": [],
+      "evidence_against": [
+        "Zvi explicitly disconfirmed Grok 4.6, stolen-thoughts.com, and the Dwarkesh interview as qualifying events in the comments.",
+        "Zvi's criteria require an event so major it 'obligates' a speed premium post, which Astra-level achievements do not meet.",
+        "No qualifying emergency or major unannounced release (like Opus 5 or lab model hacking) has occurred prior to the 5pm EST deadline today."
+      ],
+      "reason": "edge 0.307, kelly 0.91, decay 1.00, bound by balance reserve"
+    },
     {
       "ts": 1786724906529,
       "kind": "no_trade",
@@ -1049,31 +1070,6 @@
         "Market creator dreev explicitly stated that a YES resolution is unlikely and indicated an inclination toward NO or a low-probability resolution."
       ],
       "reason": "edge 0.010 below minimum 0.04"
-    },
-    {
-      "ts": 1786648118408,
-      "kind": "bet",
-      "question": "Will my boyfriend regret not going for a recommended ultrasound?",
-      "url": "https://manifold.markets/CrepuscularRodent/will-my-boyfriend-regret-not-going",
-      "market_prob": 0.18127972739612447,
-      "model_prob": 0.33,
-      "confidence": "medium",
-      "amount": 40.0,
-      "outcome": "YES",
-      "thinking": "Given a prior symptomatic episode, 1-year recurrence of biliary pain is ~25-35%. Creator updates also specify that finding stones on ultrasound resolves YES; if scanned, detection probability is high. Accounting for procrastination and recurrence, ~33% is appropriate.",
-      "uncertainty": "Whether he completed an ultrasound or experienced a second unreported symptomatic episode during the year.",
-      "resolution_risk": "Creator ambiguity regarding N/A resolution vs YES if an ultrasound was performed but results were inconclusive or minor.",
-      "evidence_for": [
-        "Prior symptomatic episode indicates high likelihood of remaining gallstones or sludge in gallbladder.",
-        "Recurrence rate of biliary colic after an initial symptomatic episode is approximately 25-35% per year without intervention.",
-        "Creator updated resolution rules so that detecting anything on ultrasound resolves YES."
-      ],
-      "evidence_against": [
-        "Patient is a young (24yo) active male with low demographic risk factors.",
-        "High procrastination and GP surgery disorganisation reduce the likelihood of completing the ultrasound.",
-        "No recent updates indicating a second episode or completed scan near the end of the 1-year window."
-      ],
-      "reason": "edge 0.149, kelly 0.18, decay 1.00, bound by share of volume"
     }
   ]
 }
