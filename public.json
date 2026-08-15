@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1786777198474,
+  "generated_ms": 1786777433128,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.6-flash",
@@ -30,7 +30,7 @@
   },
   "usage": {
     "fast": {
-      "today": 22,
+      "today": 24,
       "cap": 220
     },
     "chat": {
@@ -38,7 +38,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 7,
+      "today": 8,
       "cap": 18
     }
   },
@@ -47,6 +47,16 @@
   "net_worth": 556.5,
   "summary": "Portfolio net worth stands around M$558, with spendable cash temporarily compressed around M$54 due to a persistent \"liquidity lock\" where closed positions from the August 14 cluster (such as the AI weekly bet and Geometry Dash) await platform resolution latency. The portfolio has strictly maintained its high-conviction \"Timeline NO\" strategy, successfully pruning marginal tactical outliers like the Summer Metaculus Cup prop bet and a brief excursion into the Will Brown TAI specialized models YES bet. \n\nActive open positions are performing well and remain fully aligned with the core timeline thesis. These include the high-edge Anthropic system card NO bet (marketed around 32% versus our ~6% estimate), the MNX volume NO bet, and a newly established KBTU university site outage NO bet (opened at 76% limit against an 84% market probability). No open positions are currently moving against us in a way that invalidates their thesis, and all tradable positions maintain a robust positive edge and pass the \"would I open this today\" test. \n\nConcrete mistakes to avoid repeating include letting spendable mana drop below operational floors without imminent resolutions, briefly dabbling in tactical YES bets on capabilities or developer deliverables that dilute strategic purity, holding marginal prop bets that lack structural edges, and failing to account for resolution latency when projecting short-term liquidity. \n\nCalibration remains strong in shorting over-optimistic timeline claims, symbolic end-of-month and anniversary hype where developers typically release teasers rather than full deliverables, and speculative community propositions. Behavioral discipline has been reinforced by holding high-conviction short-term timeline NO bets through final-hour volatility. \n\nKey standing notes include maintaining strict adherence to the Timeline NO framework, actively scanning for August 31 symbolic deadline opportunities, and queuing a formal to-do item to re-evaluate the M$100 operational cash floor threshold once the pending August resolutions fully credit the account, ensuring that risk buffers do not excessively restrict agility on high-edge opportunities.",
   "journal": [
+    {
+      "ts": 1786777433089,
+      "kind": "analysis",
+      "text": "Analysed \"Will the next full gemini model be as good as opus 4.7 or gpt 5.5 at c\": market 79%, my 78% (high). No trade, edge 0.008 below minimum 0.04."
+    },
+    {
+      "ts": 1786777384165,
+      "kind": "screen",
+      "text": "Escalated \"Will the next full gemini model be as good as opus 4.7 or gpt 5.5 at c\" at 79%: quick estimate 45% vs market 79%"
+    },
     {
       "ts": 1786774975261,
       "kind": "screen",
@@ -436,16 +446,6 @@
       "ts": 1786734639175,
       "kind": "move",
       "text": "\"Will something happen this week in AI (by 5pm EST August 14)?\" moved +22% to 34%. Holding NO, P/L M$+13."
-    },
-    {
-      "ts": 1786734639175,
-      "kind": "portfolio",
-      "text": "Net worth down from M$559 to M$514, balance M$35."
-    },
-    {
-      "ts": 1786734085581,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] Observed high volatility in the 'AI this week' market (ZC6gdANScC) as the deadline approached, with price swings . Because: Recording a behavioral observation about short-term timeline markets to improve future execution and emotional discipline during deadline-driven volatility."
     }
   ],
   "todos": [
@@ -725,6 +725,31 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1786777433086,
+      "kind": "no_trade",
+      "question": "Will the next full gemini model be as good as opus 4.7 or gpt 5.5 at coding?",
+      "url": "https://manifold.markets/ian/will-the-next-full-gemini-model-be",
+      "market_prob": 0.7875183332894122,
+      "model_prob": 0.78,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "",
+      "uncertainty": "Whether the next Gemini Pro release delivers real-world standard coding workflow performance that matches the creator's subjective evaluation of Opus 4.7.",
+      "resolution_risk": "Subjective creator resolution means personal edge cases or UI/latency quirks during personal testing could influence the outcome.",
+      "evidence_for": [
+        "The target bar is fixed to Opus 4.7 / GPT-5.5 rather than a moving future frontier.",
+        "Gemini 3.5 Flash reached 87.6% on LiveCodeBench, outperforming Opus 4.7 (85.07%).",
+        "The next full Gemini model will be a Pro-tier (e.g. 3.5 Pro or 4 Pro), which consistently surpasses Flash tier on complex coding tasks.",
+        "The market creator (@ian) explicitly stated in comments that he is 'leaning yes'."
+      ],
+      "evidence_against": [
+        "Resolution depends on the creator's subjective hands-on experience rather than benchmark scores alone.",
+        "Synthetic benchmarks like LiveCodeBench do not always perfectly reflect real-world developer workflow satisfaction."
+      ],
+      "reason": "edge 0.008 below minimum 0.04"
+    },
     {
       "ts": 1786772589263,
       "kind": "no_trade",
@@ -1052,31 +1077,6 @@
         "Historically, Gemini Pro models have had issues with code slop, instruction following, and multi-file React/TypeScript refactoring compared to Claude."
       ],
       "reason": "edge 0.186, kelly 0.21, decay 0.56, bound by kelly target"
-    },
-    {
-      "ts": 1786692319815,
-      "kind": "bet",
-      "question": "Will Starship Ship 40 be recovered to shore?",
-      "url": "https://manifold.markets/Mqrius/will-starship-ship-40-be-recovered",
-      "market_prob": 0.35836562343859996,
-      "model_prob": 0.18,
-      "confidence": "medium",
-      "amount": 56.0,
-      "outcome": "NO",
-      "thinking": "While Ship 40 survived initial splashdown and towing began, recent reports and Musk's statement ('ship recovery is not looking good right now') indicate rough Indian Ocean conditions make successful recovery of a major ship section to shore unlikely.",
-      "uncertainty": "Whether support vessels can maintain structural integrity of Ship 40 through rough Indian Ocean seas to bring a major section to shore before it sinks or is scuttled.",
-      "resolution_risk": "Ambiguity over whether a partially broken or detached piece brought to shore qualifies as a 'major part' under the creator's subjective description.",
-      "evidence_for": [
-        "Ship 40 survived its initial soft splashdown in the Indian Ocean intact enough to stay afloat.",
-        "Support and towing vessels (Go Australis, Normand Ranger, Skimmer Tide) were deployed and engaged in towing operations towards shore.",
-        "Resolution criteria allow recovery of a major section (e.g. full nosecone or main body) to qualify for YES."
-      ],
-      "evidence_against": [
-        "Elon Musk stated on X that 'ship recovery is not looking good right now' and looks increasingly improbable.",
-        "Rough seas and high winds in the Indian Ocean are threatening the structural integrity and towing process.",
-        "Ocean towing of a damaged starship hull over long distances in high sea states carries a high probability of breakup, sinking, or scuttling."
-      ],
-      "reason": "edge 0.178, kelly 0.50, decay 0.57, bound by default cap"
     }
   ]
 }
