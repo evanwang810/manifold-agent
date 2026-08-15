@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1786792209367,
+  "generated_ms": 1786792481175,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.6-flash",
@@ -30,7 +30,7 @@
   },
   "usage": {
     "fast": {
-      "today": 36,
+      "today": 38,
       "cap": 220
     },
     "chat": {
@@ -38,7 +38,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 10,
+      "today": 11,
       "cap": 18
     }
   },
@@ -47,6 +47,16 @@
   "net_worth": 558.38,
   "summary": "Portfolio net worth stands around M$558, with spendable cash temporarily compressed around M$54 due to a persistent \"liquidity lock\" where closed positions from the August 14 cluster (such as the AI weekly bet and Geometry Dash) await platform resolution latency. The portfolio has strictly maintained its high-conviction \"Timeline NO\" strategy, successfully pruning marginal tactical outliers like the Summer Metaculus Cup prop bet and a brief excursion into the Will Brown TAI specialized models YES bet. \n\nActive open positions are performing well and remain fully aligned with the core timeline thesis. These include the high-edge Anthropic system card NO bet (marketed around 32% versus our ~6% estimate), the MNX volume NO bet, and a newly established KBTU university site outage NO bet (opened at 76% limit against an 84% market probability). No open positions are currently moving against us in a way that invalidates their thesis, and all tradable positions maintain a robust positive edge and pass the \"would I open this today\" test. \n\nConcrete mistakes to avoid repeating include letting spendable mana drop below operational floors without imminent resolutions, briefly dabbling in tactical YES bets on capabilities or developer deliverables that dilute strategic purity, holding marginal prop bets that lack structural edges, and failing to account for resolution latency when projecting short-term liquidity. \n\nCalibration remains strong in shorting over-optimistic timeline claims, symbolic end-of-month and anniversary hype where developers typically release teasers rather than full deliverables, and speculative community propositions. Behavioral discipline has been reinforced by holding high-conviction short-term timeline NO bets through final-hour volatility. \n\nKey standing notes include maintaining strict adherence to the Timeline NO framework, actively scanning for August 31 symbolic deadline opportunities, and queuing a formal to-do item to re-evaluate the M$100 operational cash floor threshold once the pending August resolutions fully credit the account, ensuring that risk buffers do not excessively restrict agility on high-edge opportunities.",
   "journal": [
+    {
+      "ts": 1786792481070,
+      "kind": "analysis",
+      "text": "Analysed \"Will the percent of Pakistanis in extreme poverty be above 5 percent i\": market 87%, my 85% (medium). No trade, edge 0.015 below minimum 0.04."
+    },
+    {
+      "ts": 1786792397248,
+      "kind": "screen",
+      "text": "Escalated \"Will the percent of Pakistanis in extreme poverty be above 5 percent i\" at 87%: quick estimate 45% vs market 87%"
+    },
     {
       "ts": 1786789985035,
       "kind": "screen",
@@ -436,16 +446,6 @@
       "ts": 1786754456059,
       "kind": "screen",
       "text": "Passed on \"Will July 2026 headline PCE inflation be at least 0.3% month-over-mont\" at 3%: quick estimate 15% agrees with market. Comments show the market has crashed to single digits following the July CPI release and Cleveland Fed nowcast, making deep analysis unnecessary."
-    },
-    {
-      "ts": 1786752778281,
-      "kind": "analysis",
-      "text": "Analysed \"Will Anthropic release a system card of a model at a new frontier of i\": market 32%, my 6% (high). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1786752729419,
-      "kind": "move",
-      "text": "\"Will Anthropic release a system card of a model at a new frontier of i\" moved -11% to 32%. Holding NO, P/L M$+10."
     }
   ],
   "todos": [
@@ -725,6 +725,30 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1786792481068,
+      "kind": "no_trade",
+      "question": "Will the percent of Pakistanis in extreme poverty be above 5 percent in 2023?",
+      "url": "https://manifold.markets/DismalScientist/will-the-percent-of-pakistanis-in-e",
+      "market_prob": 0.86500461790918,
+      "model_prob": 0.85,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With the 2018 extreme poverty baseline at 4.93%, even a minimal increase crosses the 5% threshold. The 2022 floods combined with historic 30%+ inflation in 2022-2023 severely eroded purchasing power at the bottom deciles, driving broad poverty metrics up across World Bank reporting.",
+      "uncertainty": "Whether the specific $2.15/day international extreme poverty metric in World Bank PIP / OWID for 2023 will capture the full real-income loss from 2022-2023 food inflation.",
+      "resolution_risk": "Data availability delay leading to market extension, or methodology shifts in OWID's default displayed line.",
+      "evidence_for": [
+        " Baseline extreme poverty ($2.15/day PPP) in 2018 was 4.93%, leaving a margin of only 0.07 percentage points below the 5% threshold.",
+        "Pakistan experienced catastrophic flooding in 2022 affecting over 33 million people, followed by hyperinflation exceeding 30-40% for basic food items in 2022-2023.",
+        "World Bank data confirms substantial poverty increases across all measured thresholds in FY23, with the $3.65 lower-middle-income line jumping from 34.2% to 39.4% and national poverty reaching 25.3%."
+      ],
+      "evidence_against": [
+        "Substantial expansions of targeted social safety net transfers (BISP) were deployed specifically to support the lowest income decile during pandemic and post-flood periods.",
+        "Pre-flood projections anticipated continuing secular declines in extreme poverty driven by remittances and rural agricultural recovery."
+      ],
+      "reason": "edge 0.015 below minimum 0.04"
+    },
     {
       "ts": 1786787460624,
       "kind": "bet",
@@ -1051,31 +1075,6 @@
         "The 100+ trades on Manifold in 2026 prior to market creation filter excludes casual cross-platform users or Metaculus specialists who only trade occasionally on Manifold."
       ],
       "reason": "edge 0.429, kelly 0.65, decay 0.57, bound by default cap"
-    },
-    {
-      "ts": 1786700108098,
-      "kind": "bet",
-      "question": "Given I have been with my partner for a year, will we be together for 5?",
-      "url": "https://manifold.markets/LivInTheLookingGlass/given-i-have-been-with-my-partner-f-0dde6bfd1962",
-      "market_prob": 0.6958656191062847,
-      "model_prob": 0.63,
-      "confidence": "medium",
-      "amount": 14.0,
-      "outcome": "NO",
-      "thinking": "While the creator's companion honeymoon market suggests strong commitment and engagement intent (boosting retention well above general dating base rates), remaining together for 4 additional years still carries notable cumulative hazard rates, placing 5-year survival near 63%.",
-      "uncertainty": "Whether the couple follows through on marriage/long-term commitment and maintains stability over 4 additional years.",
-      "resolution_risk": "Long resolution horizon (4 years) creates risk of creator inactivity or unannounced breakup/resolution issues.",
-      "evidence_for": [
-        "The creator has a companion market about planning a honeymoon, indicating serious commitment or engagement.",
-        "Reaching the 1-year mark eliminates early-stage breakup hazards.",
-        "Couples advancing to marriage/engagement have significantly higher multi-year retention rates (~60-70%)."
-      ],
-      "evidence_against": [
-        "General base rate for dating couples reaching 5 years from 1 year is under 40%.",
-        "Rapid progression to honeymoon planning within the first year can sometimes reflect early relationship volatility.",
-        "Four years is a long timeframe with high cumulative life changes and breakup risks."
-      ],
-      "reason": "edge 0.066, kelly 0.09, decay 0.68, bound by kelly target"
     }
   ]
 }
