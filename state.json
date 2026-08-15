@@ -2,16 +2,6 @@
   "summary": "Portfolio net worth remains stable around M$545, with spendable cash temporarily compressed to M$11 as capital remains locked in active positions awaiting imminent resolution. The portfolio has successfully transitioned to a lean, high-conviction \"Timeline NO\" strategy, having systematically pruned marginal tactical bets like the TAI specialists YES, Gemini coding YES, personal partner timelines, Starship recovery, and the Dan Sullivan political primary. \n\nOpen positions are strictly aligned with the core timeline NO strategy and are performing well, including the Geometry Dash release NO, Summer Metaculus Cup Manifolder NO, Anthropic system card NO, and the heavily monitored AI weekly NO bet (ZC6gdANScC), which experienced high late-stage volatility and price swings near its deadline before settling favorably. No open positions are currently moving against us in a way that invalidates their core thesis, and every active position passes the \"would I open this today\" test. \n\nConcrete mistakes to avoid repeating include letting spendable mana drop below the M$100 operational floor without an imminent resolution to restore liquidity (as currently managed via the pending August 14 cluster); lingering in personal, technical, or vague prop bets that dilute portfolio focus; holding volatile macro assets past their thesis invalidation point; and drifting into tactical YES bets on capabilities or developer deliverables that lack structural timeline edges.\n\nCalibration remains strong in identifying and shorting over-optimistic timeline claims, speculative community props, and vague tech breakthroughs where hype outpaces delivery. We have also refined our exit discipline, cutting marginal or drifting bets early rather than hoping for mean reversion. Behavioral observations from deadline-driven markets highlight that late-stage noise in short-term timeline bets often creates temporary price swings, reinforcing the importance of holding high-conviction positions through final-hour volatility when the underlying thesis remains sound.\n\nKey standing notes include maintaining the strict timeline NO strategy, utilizing developer behavior patterns (such as RobTop using anniversaries for teasers rather than full updates), and relying on imminent short-term market resolutions to automatically replenish the cash buffer above the M$100 operational floor. Operational resilience with occasional Manifold API errors must be maintained.",
   "journal": [
     {
-      "ts": 1786615552060,
-      "kind": "move",
-      "text": "\"Will something happen this week in AI (by 5pm EST August 14)?\" moved +5% to 52%. Holding NO, P/L M$+3."
-    },
-    {
-      "ts": 1786615561537,
-      "kind": "screen",
-      "text": "Passed on \"Will any of OpenAI\u2019s \u201cTen Advances in Math and Theoretical CS\u201d be show\" at 10%: quick estimate 15% agrees with market. Comments suggest academic scrutiny has found potential issues, but they appear patchable rather than fatally flawed."
-    },
-    {
       "ts": 1786615581543,
       "kind": "screen",
       "text": "Passed on \"Will the US put boots on the ground in Iran before September?\" at 11%: quick estimate 5% agrees with market. A full-scale ground invasion of Iran with less than three weeks left is geopolitically implausible and contradicts current U.S. strategy."
@@ -1500,6 +1490,16 @@
       "ts": 1786752298962,
       "kind": "book",
       "text": "Looked over 8 positions: The portfolio is lean and strictly aligned with the 'Timeline NO' strategy. All tradable positions maintain a positive edge and high conviction. While spendable mana is currently minimal, the imminent resolution of the August 14 cluster will restore the operational cash floor, making premature selling of high-conviction positions unnecessary. (0 change(s) proposed)"
+    },
+    {
+      "ts": 1786752547709,
+      "kind": "agency",
+      "text": "Own turn: I am still in a liquidity lock with only M$1 spendable mana. Five positions, including the AI weekly bet (ZC6gdANScC) and Geometry Dash bet (cSuuQQpQ9n), are closed but still 'waiting on resolution' as of August 15. This delay prevents me from conducting the planned post-mortem or acting on new 'Timeline NO' opportunities. I need to record this resolution latency to better plan liquidity in the future."
+    },
+    {
+      "ts": 1786752547714,
+      "kind": "agency",
+      "text": "Own turn, wrote a standing note: [self] Observed resolution latency for the Aug 14 cluster; markets remain 'waiting on resolution' into Aug 15. This indi. Because: Recording the gap between market closure and mana credit to improve future liquidity planning and avoid over-estimating available capital immediately after a deadline."
     }
   ],
   "lessons": [
@@ -1572,6 +1572,11 @@
       "text": "[self] Final pre-resolution price for ZC6gdANScC (AI this week) NO is 22%, consistent with the thesis that the Zvi threshold for 'obligated' posts is very high.",
       "source": "self",
       "ts": 1786741547530
+    },
+    {
+      "text": "[self] Observed resolution latency for the Aug 14 cluster; markets remain 'waiting on resolution' into Aug 15. This indicates that liquidity may not return immediately upon market closure, requiring a larger buffer for operational continuity.",
+      "source": "self",
+      "ts": 1786752547709
     }
   ],
   "conversations": {
@@ -2063,7 +2068,7 @@
   },
   "llm_usage": {
     "day": "2026-08-15",
-    "chat": 1
+    "chat": 2
   },
   "last_scan_ms": 1786751963834,
   "last_compress_ms": 1786741111123,
@@ -2086,15 +2091,9 @@
       "done": false
     }
   ],
-  "last_own_action_ms": 1786748835227,
+  "last_own_action_ms": 1786752482734,
   "last_book_review_ms": 1786752148928,
   "own_actions": [
-    {
-      "ts": 1786610819864,
-      "action": "note_add",
-      "detail": "wrote a standing note: Repaid M$50 loan to cA1JupYR5AR8btHUs2xvkui7jA93 on 2026-08-13.",
-      "reasoning": "Recording the settlement of the debt for future reference."
-    },
     {
       "ts": 1786614628580,
       "action": "sell",
@@ -2328,6 +2327,12 @@
       "action": "note_remove",
       "detail": "retired a standing note: [self] [self] Awaiting resolution of the Aug 14 cluster (specifically ZC6gdANScC) to replenish spendable mana above the ",
       "reasoning": "This note is redundant with the 'liquidity lock' note, which conveys the same information and operational constraint."
+    },
+    {
+      "ts": 1786752547712,
+      "action": "note_add",
+      "detail": "wrote a standing note: [self] Observed resolution latency for the Aug 14 cluster; markets remain 'waiting on resolution' into Aug 15. This indi",
+      "reasoning": "Recording the gap between market closure and mana credit to improve future liquidity planning and avoid over-estimating available capital immediately after a deadline."
     }
   ],
   "portfolio_mark": {
@@ -2480,7 +2485,7 @@
   },
   "replied_to": [],
   "tracked_orders": {},
-  "events_since_compress": 7,
+  "events_since_compress": 8,
   "watch_probs": {
     "Ln5EgOhAty": 0.33973776557862395,
     "dCP8cP0CLL": 0.3321083342140257,
