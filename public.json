@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1786756432727,
+  "generated_ms": 1786757340862,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.6-flash",
@@ -30,7 +30,7 @@
   },
   "usage": {
     "fast": {
-      "today": 2,
+      "today": 4,
       "cap": 220
     },
     "chat": {
@@ -38,15 +38,25 @@
       "cap": 400
     },
     "deep": {
-      "today": 2,
+      "today": 3,
       "cap": 18
     }
   },
   "dry_run": false,
   "balance": 63.96,
-  "net_worth": 555.33,
+  "net_worth": 554.04,
   "summary": "Portfolio net worth remains stable around M$545, with spendable cash temporarily compressed to M$11 as capital remains locked in active positions awaiting imminent resolution. The portfolio has successfully transitioned to a lean, high-conviction \"Timeline NO\" strategy, having systematically pruned marginal tactical bets like the TAI specialists YES, Gemini coding YES, personal partner timelines, Starship recovery, and the Dan Sullivan political primary. \n\nOpen positions are strictly aligned with the core timeline NO strategy and are performing well, including the Geometry Dash release NO, Summer Metaculus Cup Manifolder NO, Anthropic system card NO, and the heavily monitored AI weekly NO bet (ZC6gdANScC), which experienced high late-stage volatility and price swings near its deadline before settling favorably. No open positions are currently moving against us in a way that invalidates their core thesis, and every active position passes the \"would I open this today\" test. \n\nConcrete mistakes to avoid repeating include letting spendable mana drop below the M$100 operational floor without an imminent resolution to restore liquidity (as currently managed via the pending August 14 cluster); lingering in personal, technical, or vague prop bets that dilute portfolio focus; holding volatile macro assets past their thesis invalidation point; and drifting into tactical YES bets on capabilities or developer deliverables that lack structural timeline edges.\n\nCalibration remains strong in identifying and shorting over-optimistic timeline claims, speculative community props, and vague tech breakthroughs where hype outpaces delivery. We have also refined our exit discipline, cutting marginal or drifting bets early rather than hoping for mean reversion. Behavioral observations from deadline-driven markets highlight that late-stage noise in short-term timeline bets often creates temporary price swings, reinforcing the importance of holding high-conviction positions through final-hour volatility when the underlying thesis remains sound.\n\nKey standing notes include maintaining the strict timeline NO strategy, utilizing developer behavior patterns (such as RobTop using anniversaries for teasers rather than full updates), and relying on imminent short-term market resolutions to automatically replenish the cash buffer above the M$100 operational floor. Operational resilience with occasional Manifold API errors must be maintained.",
   "journal": [
+    {
+      "ts": 1786757340829,
+      "kind": "analysis",
+      "text": "Analysed \"Will we conclude Tesla launched level 4 robotaxis in summer 2025?\": market 7%, my 9% (medium). No trade, edge 0.017 below minimum 0.04."
+    },
+    {
+      "ts": 1786757287960,
+      "kind": "screen",
+      "text": "Escalated \"Will we conclude Tesla launched level 4 robotaxis in summer 2025?\" at 7%: quick estimate 45% vs market 7%"
+    },
     {
       "ts": 1786756248480,
       "kind": "agency",
@@ -436,16 +446,6 @@
       "ts": 1786719810918,
       "kind": "screen",
       "text": "Escalated \"Will the Dan Sullivan \u2018impostor\u2019 advance to the general election in th\" at 44%: quick estimate 15% vs market 44%"
-    },
-    {
-      "ts": 1786719791282,
-      "kind": "screen",
-      "text": "Passed on \"Will Kalafina appear in Puella Magi Madoka Magica: Walpurgisnacht Risi\" at 26%: quick estimate 15% agrees with market. Comments confirm FictionJunction is doing the theme song, not Kalafina, making a reunion unlikely."
-    },
-    {
-      "ts": 1786719231880,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] Portfolio is currently in a 'liquidity lock' state; no new positions will be opened until the Aug 14 cluster reso. Because: Formalizing the decision to pause capital deployment until the current high-conviction bets resolve and restore the operational cash floor, preventing impulsive use of the remaining M$27."
     }
   ],
   "todos": [
@@ -480,11 +480,6 @@
       "text": "Act more decisively when a market drops below 5% and the thesis has collapsed, rather than lingering out of stubbornness.",
       "source": "owner",
       "ts": 1786519006300
-    },
-    {
-      "text": "Repaid M$50 loan to cA1JupYR5AR8btHUs2xvkui7jA93 on 2026-08-13.",
-      "source": "self",
-      "ts": 1786610819862
     },
     {
       "text": "AI this week (ZC6gdANScC) NO bet is a test of the thesis that Zvi's threshold for 'obligated' speed premium posts is extremely high, making most AI news non-qualifying.",
@@ -545,6 +540,11 @@
       "text": "[self] Prioritizing liquidity restoration over adding to uAPRyuqyq0 (Anthropic NO) despite the strong edge (32% vs 6%), until the Aug 14 cluster resolves and spendable mana exceeds M$100.",
       "source": "self",
       "ts": 1786756248475
+    },
+    {
+      "text": "When a market creator explicitly discusses their likely resolution percentage range in comments, update probability directly toward that creator estimate.",
+      "source": "self",
+      "ts": 1786757340772
     }
   ],
   "own_actions": [
@@ -676,9 +676,9 @@
       "side": "NO",
       "shares": 97.2,
       "invested": 56.0,
-      "value": 66.1,
-      "profit": 10.1,
-      "prob": 0.32,
+      "value": 64.8,
+      "profit": 8.8,
+      "prob": 0.333,
       "closed": false,
       "days_to_close": 15.9
     },
@@ -708,6 +708,29 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1786757340826,
+      "kind": "no_trade",
+      "question": "Will we conclude Tesla launched level 4 robotaxis in summer 2025?",
+      "url": "https://manifold.markets/dreev/will-tesla-count-as-a-waymo-competi",
+      "market_prob": 0.07340377276841376,
+      "model_prob": 0.09,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With the summer 2025 window long past, Tesla's Austin deployment relied on safety monitors in the vehicle and faced regulatory scrutiny. Market creator dreev explicitly indicated that if forced to resolve now, he would resolve to NO or a low probability. Estimating ~9% chance of a YES outcome.",
+      "uncertainty": "Whether dreev chooses to resolve the market to NO outright or to a low percentage probability resolution.",
+      "resolution_risk": "Creator could delay resolution further to observe multi-year scaling trajectory, though low-probability/NO resolution is currently favoured.",
+      "evidence_for": [
+        "Tesla operated limited rides in Austin in summer 2025 with the driver's seat empty, using passenger-seat safety monitors."
+      ],
+      "evidence_against": [
+        "Safety monitors were required inside the vehicles (moving to the driver's seat for highway segments), failing strict unsupervised/L4 criteria.",
+        "NHTSA opened investigations in late 2025 into robotaxi safety issues including swerving and speeding.",
+        "Market creator dreev stated in comments that if forced to resolve now, he would resolve to NO or a low probability (e.g., 5-10%)."
+      ],
+      "reason": "edge 0.017 below minimum 0.04"
+    },
     {
       "ts": 1786752778278,
       "kind": "no_trade",
@@ -1039,30 +1062,6 @@
         "Community polls on AI definitions historically favor generalist AGI frameworks over domain-specific tools."
       ],
       "reason": "edge 0.063, kelly 0.07, decay 0.56, bound by kelly target"
-    },
-    {
-      "ts": 1786673189804,
-      "kind": "no_trade",
-      "question": "Will Jason Arday's 'Great and Unfortunate Things' be available for purchase in the UK on or before August 27, 2026?",
-      "url": "https://manifold.markets/vitamind/will-jason-ardays-great-and-unfortu",
-      "market_prob": 0.9016598248128783,
-      "model_prob": 0.89,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With the US edition already released on August 11 and recent news confirming Simon & Schuster UK is keeping the August 27 release date despite controversies, probability of release on or before August 27 is very high (~89%).",
-      "uncertainty": "Whether Simon & Schuster UK halts distribution in the next 13 days due to legal or reputational pressure.",
-      "resolution_risk": "Vague resolution criteria regarding what constitutes 'available for purchase' (e.g. pre-order vs shipped physical copy), though official release on August 27 covers standard retail availability.",
-      "evidence_for": [
-        "Published in the US by Simon & Schuster on August 11, 2026.",
-        "Official UK publication date is August 27, 2026, which satisfies 'on or before August 27'.",
-        "August 2026 reporting explicitly confirms UK release schedule remains set for August 27 despite author controversies.",
-        "Pre-orders and audio listings are already active on Amazon UK."
-      ],
-      "evidence_against": [
-        "Author controversies involving false biographical claims and plagiarism could theoretically cause a last-minute publisher recall or delay."
-      ],
-      "reason": "edge 0.012 below minimum 0.04"
     }
   ]
 }
