@@ -1,8 +1,8 @@
 {
-  "generated_ms": 1786916344120,
+  "generated_ms": 1786916409286,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
-  "model": "gemini/gemini-3.6-flash",
+  "model": "gemini/gemini-3.7-flash",
   "models": {
     "fast": {
       "configured": "gemini-3.5-flash-lite",
@@ -20,9 +20,10 @@
       ]
     },
     "deep": {
-      "configured": "gemini-3.6-flash",
-      "active": "gemini-3.6-flash",
+      "configured": "gemini-3.7-flash",
+      "active": "gemini-3.7-flash",
       "fallbacks": [
+        "gemini-3.6-flash",
         "gemini-3.5-flash",
         "gemini-3.5-flash-lite"
       ]
@@ -30,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 81,
+      "today": 83,
       "cap": 220
     },
     "chat": {
@@ -38,8 +39,8 @@
       "cap": 400
     },
     "deep": {
-      "today": 18,
-      "cap": 18
+      "today": 19,
+      "cap": 34
     }
   },
   "dry_run": false,
@@ -47,6 +48,16 @@
   "net_worth": 617.22,
   "summary": "Portfolio net worth stands around M$604 with spendable balance pinned near the M$10 operational floor due to ongoing resolution latency. The portfolio holds 11 active positions, anchored by core Timeline NO frameworks (such as Anthropic system card NO), site-outage bets (like KBTU closing August 17), and a high-conviction personal YES bet on a 5-year partner milestone. The long-awaited resolution cluster from August 11-14 (covering WTI, Geometry Dash, and AI weekly bets) continues to experience latency and remains unresolved, locking approximately M$345 in value and delaying fresh capital deployment. \n\nOpen positions remain sound and pass the re-open test. The Starship Ship 40 recovery NO position is underwater (priced around 34%, generating a M$-9 unrealized loss) as the market drifts higher, but our thesis\u2014grounded in Elon Musk's statement that the vehicle is likely lost at sea\u2014remains dominant, and a concrete exit trigger is logged to sell if official recovery is confirmed. A standing note and to-do item prioritize settling our M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 and performing a fresh market scan rather than blindly executing stale watchlist items when the pending liquidity cluster finally releases. Watchlist edges for Anglo American/Teck and US-Iran peace talks have compressed, reinforcing the need for a post-liquidity re-evaluation.\n\nMistakes worth avoiding include letting spendable mana drop near operational floors without accounting for multi-day resolution latency (distinguishing between a market closing and funds actually releasing), falling into the stale execution trap by blindly deploying capital into pre-computed watchlists after edges compress, and dabbling in vague \"something happen\" sentiment markets or marginal tactical YES bets that dilute strategic focus. Calibration remains strong in shorting over-optimistic timeline claims, symbolic end-of-month and anniversary hype where developers release teasers rather than full deliverables, and speculative community propositions, while personal relationship markets require strict carve-outs from core strategic purity rules.",
   "journal": [
+    {
+      "ts": 1786916409213,
+      "kind": "analysis",
+      "text": "Analysed \"Will the AfD win an absolute majority in the state election in Saxony-\": market 36%, my 24% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1786916362072,
+      "kind": "screen",
+      "text": "Escalated \"Will the AfD win an absolute majority in the state election in Saxony-\" at 36%: quick estimate 15% vs market 36%"
+    },
     {
       "ts": 1786916343879,
       "kind": "agency",
@@ -436,16 +447,6 @@
       "ts": 1786876475646,
       "kind": "position",
       "text": "Opened 153 YES on \"Given I have been with my partner for a year, will we be together for 5?\" at 73%, M$110 in."
-    },
-    {
-      "ts": 1786876293134,
-      "kind": "trade",
-      "text": "Bought M$110 YES on \"Given I have been with my partner for a year, will we be together for \" at 71%, my estimate 88% (medium). Because: With the 5-year milestone arriving in late August 2026 and strong signals of marriage commitment (including the honeymoon market), survival of the relationship to the 5-year mark is highly likely."
-    },
-    {
-      "ts": 1786876249690,
-      "kind": "screen",
-      "text": "Escalated \"Given I have been with my partner for a year, will we be together for \" at 71%: quick estimate 45% vs market 71%"
     }
   ],
   "todos": [
@@ -792,6 +793,29 @@
   ],
   "decisions": [
     {
+      "ts": 1786916409210,
+      "kind": "no_trade",
+      "question": "Will the AfD win an absolute majority in the state election in Saxony-Anhalt in 2026",
+      "url": "https://manifold.markets/NFNL2zc/will-the-afd-win-an-absolute-majori",
+      "market_prob": 0.3577677583735496,
+      "model_prob": 0.24,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "While AfD's 42% polling lead puts an outright seat majority within mathematical reach if several small parties miss the 5% threshold, tactical voting and standard polling variance make reaching a strict >50% seat majority less likely than not (~24%).",
+      "uncertainty": "Whether minor parties (especially Greens and BSW) clear the 5% hurdle, which dictates the total effective vote pool and compensatory seat allocations.",
+      "resolution_risk": "Complex overhang and compensatory mandate calculations (\u00dcberhang- und Ausgleichsmandate) can shift the final seat count by 1-2 seats even if vote share calculations are near 50%.",
+      "evidence_for": [
+        "AfD currently leads state polling in Saxony-Anhalt at approximately 42.1%, establishing a commanding 20-point lead over the CDU.",
+        "Multiple minor parties (Greens at 4.6%, BSW at 4.3%, FDP at 3.0%) are hovering just below the 5% electoral threshold; if they fail to enter parliament, the resulting wasted vote (12-16%+) significantly lowers the nominal vote percentage needed for an absolute majority of seats."
+      ],
+      "evidence_against": [
+        "Winning an outright single-party absolute parliamentary majority under German proportional representation is historically rare.",
+        "If either BSW or the Greens cross the 5% threshold, or if tactical anti-AfD voting mobilizes turnout for mainstream parties, the AfD's seat share will likely fall short of the required >50% threshold."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1786913423170,
       "kind": "no_trade",
       "question": "Will bitcoin rise to 85k before the Strait of Hormuz is freely open?",
@@ -1125,29 +1149,6 @@
         "Market creator dreev noted the scaling back and stated he would resolve to a low probability if forced to resolve now."
       ],
       "reason": "edge 0.003 below minimum 0.04"
-    },
-    {
-      "ts": 1786838949159,
-      "kind": "bet",
-      "question": "Will the WTI Crude Oil Spot Price be above $82 on August 20, 2026?",
-      "url": "https://manifold.markets/ShaneBo/will-the-wti-crude-oil-spot-price-b-C22zR92ICs",
-      "market_prob": 0.6626401082685446,
-      "model_prob": 0.44,
-      "confidence": "medium",
-      "amount": 60.0,
-      "outcome": "NO",
-      "thinking": "With only 4 days until resolution (August 20), WTI Spot at Cushing must print strictly above $82.00 on the EIA report. Given typical spot variance and standard summer trading ranges around $75-$80, I estimate a 44% probability.",
-      "uncertainty": "Short-term supply headlines or geopolitical shocks occurring over the next 4 trading days.",
-      "resolution_risk": "EIA publication delays or fallback to preceding business day if an unforeseen reporting gap occurs.",
-      "evidence_for": [
-        "Peak summer demand season in August typically supports crude demand.",
-        "Ongoing geopolitical risk premiums in major producing regions maintain an upward price bias."
-      ],
-      "evidence_against": [
-        "High US domestic crude output and Cushing inventory levels cap short-term spot upside.",
-        "Historical baseline spot prices in mid-August frequently trade in the $74-$80 range, making >$82 a strict hurdle for a single daily reading in 4 days."
-      ],
-      "reason": "edge 0.223, kelly 0.34, decay 1.00, bound by default cap"
     }
   ]
 }
