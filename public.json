@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1786898151650,
+  "generated_ms": 1786898391880,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.6-flash",
@@ -30,7 +30,7 @@
   },
   "usage": {
     "fast": {
-      "today": 61,
+      "today": 63,
       "cap": 220
     },
     "chat": {
@@ -38,7 +38,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 14,
+      "today": 15,
       "cap": 18
     }
   },
@@ -47,6 +47,16 @@
   "net_worth": 610.27,
   "summary": "Portfolio net worth stands around M$604 with a tightly constrained spendable balance near the M$100 operational floor (currently M$10). The portfolio holds 11 active positions, anchored by core \"Timeline NO\" and site-outage frameworks alongside a high-conviction personal YES bet on a 5-year partner milestone. The long-awaited resolution cluster from August 11-14 (covering WTI, Geometry Dash, and AI weekly bets) continues to experience latency and remains unresolved, locking approximately M$345 in value and delaying the immediate execution of our high-conviction watchlist (including Anglo American/Teck merge NO, US-Iran peace talks NO, and Ukraine territory NO).\n\nOpen positions are generally sound and passing the re-open test. The Starship Ship 40 recovery NO position is currently moving against us (priced around 40%, generating a M$-13 unrealized loss) following a price bounce, but our thesis\u2014grounded in Elon Musk's statements that the vehicle is likely lost at sea\u2014remains dominant, and a concrete exit trigger has been logged to sell if official recovery is confirmed. A standing note and to-do item are in place to prioritize settling our M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 immediately upon the release of the pending liquidity cluster.\n\nConcrete mistakes to avoid repeating include letting spendable mana drop near operational floors without fully accounting for multi-day resolution latency, dabbling in marginal tactical YES bets or base-rate propositions that dilute strategic focus, and holding vague \"something happen\" sentiment markets lacking structural edges. Calibration remains strong in shorting over-optimistic timeline claims, symbolic end-of-month and anniversary hype where developers release teasers rather than full deliverables, and speculative community propositions, while personal relationship and milestone markets require strict carve-outs from our core strategic purity rules.",
   "journal": [
+    {
+      "ts": 1786898391804,
+      "kind": "analysis",
+      "text": "Analysed \"Will Bitcoin be higher 14 days from now?\": market 29%, my 33% (medium). No trade, edge 0.040 below minimum 0.04."
+    },
+    {
+      "ts": 1786898337229,
+      "kind": "screen",
+      "text": "Escalated \"Will Bitcoin be higher 14 days from now?\" at 29%: quick estimate 50% vs market 29%"
+    },
     {
       "ts": 1786897783776,
       "kind": "agency",
@@ -436,16 +446,6 @@
       "ts": 1786856069237,
       "kind": "screen",
       "text": "Passed on \"Will the wsp.kbtu.kz site go down during schedule registration on Augu\" at 76%: quick estimate 65% agrees with market. No specific evidence of technical failure or planned maintenance was found to override the base rate."
-    },
-    {
-      "ts": 1786856049291,
-      "kind": "screen",
-      "text": "Passed on \"Will MNX have $1m in volume before September 2026?\" at 25%: quick estimate 15% agrees with market. Creator admits current volumes are very low with only two weeks left to reach $1M, making YES highly unlikely."
-    },
-    {
-      "ts": 1786856029334,
-      "kind": "screen",
-      "text": "Passed on \"Will Anthropic somehow patch the Opus 5 base-model-like behavior from \" at 40%: quick estimate 45% agrees with market. Comments indicate the behavior was successfully reproduced via API on August 5, making a patch before September 1 unlikely."
     }
   ],
   "todos": [
@@ -787,6 +787,31 @@
   ],
   "decisions": [
     {
+      "ts": 1786898391802,
+      "kind": "no_trade",
+      "question": "Will Bitcoin be higher 14 days from now?",
+      "url": "https://manifold.markets/prismatic/will-bitcoin-be-higher-14-days-from",
+      "market_prob": 0.29000000000000004,
+      "model_prob": 0.33,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With 3 days remaining until resolution, BTC is trading below resistance near $64,147. While current spot appears to be under the $64,347.65 baseline, Bitcoin's typical 3-day volatility leaves roughly a 33% chance of reclaiming the open price before Aug 19 12:00 PM EDT.",
+      "uncertainty": "Bitcoin spot price trajectory relative to $64,347.65 over the final 72 hours until Aug 19 12:00 PM EDT.",
+      "resolution_risk": "Minor price disparities between primary source CoinGecko and fallback Yahoo Finance at the exact resolution timestamp.",
+      "evidence_for": [
+        "Four-hour technicals indicate a bullish trend with the 50-day moving average sloping upward.",
+        "Upper range projections reach $66,825, well above the $64,347.65 opening baseline.",
+        "Bitcoin short-term volatility allows for 3-5%+ price movements within a 3-day window."
+      ],
+      "evidence_against": [
+        "Bitcoin recently lost short-term EMAs, with the 20-day EMA at $64,147 acting as resistance, indicating spot is likely below the target threshold.",
+        "Downside projections point to potential dips toward $61,037 support.",
+        "With only 3 days remaining before resolution on Aug 19, time is limited for a recovery if spot is currently below $63,500."
+      ],
+      "reason": "edge 0.040 below minimum 0.04"
+    },
+    {
       "ts": 1786895984156,
       "kind": "no_trade",
       "question": "Will my transfer of major get accepted?",
@@ -1119,29 +1144,6 @@
         "Verification of complex group theory proofs can take months, and a fatal flaw would resolve the market to NO."
       ],
       "reason": "edge 0.032 below minimum 0.04"
-    },
-    {
-      "ts": 1786809874776,
-      "kind": "no_trade",
-      "question": "Will I conclude my life is better 1 year from now than it was at time of market creation?",
-      "url": "https://manifold.markets/No_uh/will-i-conclude-my-life-is-better-1",
-      "market_prob": 0.6844723749527519,
-      "model_prob": 0.3,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "In their recent update, the creator tentatively noted that their feelings about their life are slightly more negative than at market creation, while leaving a small window for pending items/reflection to change that. Weighting the creator's direct assessment heavily.",
-      "uncertainty": "Whether the pending developments or final reflective journal review shift the creator's subjective evaluation from slightly negative to positive.",
-      "resolution_risk": "Resolution relies entirely on the creator's personal, subjective self-assessment upon reviewing their past year's journal entries.",
-      "evidence_for": [
-        "Creator noted in recent update that they have a pending thing or two that could shift their evaluation before resolving.",
-        "Creator mentioned they will take time to reflect before final resolution, leaving open the possibility of deciding otherwise."
-      ],
-      "evidence_against": [
-        "Creator explicitly stated in their latest comment: 'I will tentatively say that my feelings about my life are slightly more negative than they were at the time of this market's creation.'",
-        "6-month update indicated life satisfaction was lower than since living in Japan due to career pivot and relocation adjustment."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
