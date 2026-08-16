@@ -62,8 +62,10 @@ fallbacks = ["gemma-4-26b-a4b-it", "gemini-3.5-flash-lite"]
 #   model = "llama-3.3-70b-versatile"
 #   key_env = "DEEP_LLM_API_KEY"
 [llm.deep]
-model = "gemini-3.6-flash"
-fallbacks = ["gemini-3.5-flash", "gemini-3.5-flash-lite"]
+# Each of these carries its own daily quota, so the chain is also what the agent falls
+# back onto once the day's 20 on the newest model are gone rather than going dark.
+model = "gemini-3.7-flash"
+fallbacks = ["gemini-3.6-flash", "gemini-3.5-flash", "gemini-3.5-flash-lite"]
 
 [screen]
 # The fast model forecasts each candidate blind, and the deep model only sees markets
@@ -79,17 +81,19 @@ enabled = true
 escalate_edge = 0.15
 
 [budget]
-# Sized for a free tier of 20 requests a day on the deep model. That is the binding
-# constraint on the whole agent: 18 analyses a day, so roughly 72 markets screened at a
-# 25% pass rate, plus one research call each. Nothing else here matters as much as
-# keeping max_deep_calls_per_day under the real quota, with headroom for a retry.
+# The deep tier is the binding constraint on the whole agent, and this cap is what
+# stops it before the provider does. Count the quota of every model in the deep chain,
+# not just the first: each has its own 20 a day, and the chain only advances once a
+# model actually answers 429. Two models means about 40, so 34 leaves headroom for
+# retries and for the reviewer calls the agency turn makes. At 34 analyses a day that
+# is roughly 130 markets screened at a 25% pass rate.
 max_evaluations_per_tick = 2
 max_fast_calls_per_tick = 4
 max_chat_calls_per_tick = 4
 max_deep_calls_per_tick = 1
 max_fast_calls_per_day = 220
 max_chat_calls_per_day = 400
-max_deep_calls_per_day = 18
+max_deep_calls_per_day = 34
 # Without pacing a daily cap is gone in the first ten minutes and the agent is dark
 # until midnight. Calls are released against the clock instead, and the burst is how
 # far ahead of it a tier may run so it can still react to something immediately.

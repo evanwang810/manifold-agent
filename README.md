@@ -99,8 +99,8 @@ fallbacks = ["gemini-3.5-flash"]
 model = "gemini-3.5-flash-lite"    # or a Gemma, e.g. "gemma-3-27b-it"
 
 [llm.deep]
-model = "gemini-3.6-flash"
-fallbacks = ["gemini-3.5-flash", "gemini-3.5-flash-lite"]
+model = "gemini-3.7-flash"
+fallbacks = ["gemini-3.6-flash", "gemini-3.5-flash", "gemini-3.5-flash-lite"]
 ```
 
 `fallbacks` is tried in order whenever the preferred model is out of quota or refuses the
