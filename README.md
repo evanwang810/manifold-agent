@@ -21,7 +21,7 @@ agent/
   config.py      typed settings, .env loading, owner instruction assembly
   models.py      Market, Comment, Position, Decision, Sizing, TipTap flattening
   manifold.py    the API client, the only thing that touches manifold.markets
-  llm.py         provider adapter: Gemini, Mistral, any OpenAI-compatible endpoint
+  llm.py         provider adapter: Gemini, Anthropic, any OpenAI-compatible endpoint
   prompts.py     system prompts and the decision JSON schema
   scanner.py     which markets are worth an LLM call, all filters pre-model
   brain.py       research, decide, size, execute, explain
@@ -113,11 +113,13 @@ Anything under `[llm]` is a default any tier can override, including `provider`,
 
 ```toml
 [llm.deep]
-provider = "openai_compatible"   # Groq, Cerebras, OpenRouter, anything else
-base_url = "https://api.groq.com/openai/v1"
-model = "llama-3.3-70b-versatile"
+provider = "anthropic"           # or openai, openrouter, groq, cerebras, deepseek…
+model = "claude-sonnet-4-5"
 key_env = "DEEP_LLM_API_KEY"     # add this one to Actions secrets too
 ```
+
+Named providers need only a key and a model. Anything else speaking `/chat/completions`
+works as `provider = "openai_compatible"` with a `base_url`.
 
 Name the same model in every tier and you get single-model behaviour; the runner notices
 and reuses one client. Set `[screen] enabled = false` to skip screening entirely and send
@@ -137,12 +139,23 @@ no pacing is spent in the first ten minutes and then the agent is dark until mid
 `pace_burst` is how far ahead of the clock a tier may run so it can still react to
 something immediately. Current counts against both ceilings are on the website.
 
-Gemini is the default because its native Google Search grounding means research needs no
-second API key, and search matters more than model strength here: a mid model with three
-good articles beats a strong model working from a training cutoff. Providers other than
-Gemini have no native search, so research falls back to keyless DuckDuckGo. Check your
-free-tier quota at [aistudio.google.com/rate-limit](https://aistudio.google.com/rate-limit)
-and set `[budget]` so a day of ticking stays inside it.
+Search matters more than model strength here: a mid model with three good articles beats
+a strong model working from a training cutoff. Research uses the provider's own web
+search where there is one, and only falls back to keyless DuckDuckGo where there is not.
+
+| provider | native search |
+| --- | --- |
+| `gemini` | Google Search grounding |
+| `anthropic` | server-side `web_search` tool |
+| `openai` | hosted `web_search` tool |
+| `openrouter` | the `web` plugin, in front of any model it serves |
+| `deepseek`, `mistral`, `groq`, `cerebras` | none, falls back to DuckDuckGo |
+
+Either way research costs exactly one call, so the budget numbers do not change when you
+switch. `run.py --check` probes search on each tier and says which path it got. Gemini is
+the default for its free tier; check your quota at
+[aistudio.google.com/rate-limit](https://aistudio.google.com/rate-limit) and set
+`[budget]` so a day of ticking stays inside it.
 
 ## Running it
 

@@ -41,6 +41,10 @@ class LLMConfig:
     # model that needs it, false to force the normal path.
     prompt_only: bool | None = None
     base_url: str = ""
+    # Only read for provider = openai_compatible, where there is no way to know what is
+    # behind the base_url. "plugin" for an OpenRouter-shaped endpoint, "responses" for
+    # an OpenAI-shaped one, empty for no native search.
+    search_style: str = ""
     # Which environment variable holds this tier's key. Two tiers on two providers
     # means two keys, and neither is ever read from a file.
     key_env: str = "LLM_API_KEY"

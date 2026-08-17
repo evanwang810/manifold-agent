@@ -1,8 +1,8 @@
-"""Keyless web search, for providers without native grounding.
+"""Keyless web search, for providers with no search of their own.
 
-Gemini's grounded generation is the nicer path when it is available, but it needs a
-Google project that is allowed to make free calls, which not every account gets. This
-uses DuckDuckGo through the `ddgs` package: no key, no signup, no card. It is scrapier
+The provider's own search is the better path wherever it exists, and llm.py uses it
+first; see the table in the README for which ones have one. This is the floor under
+that: DuckDuckGo through the `ddgs` package, no key, no signup, no card. It is scrapier
 and less current than a real search API, and that is the tradeoff for costing nothing.
 """
 

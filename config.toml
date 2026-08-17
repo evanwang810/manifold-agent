@@ -10,7 +10,15 @@ dry_run = false
 # Three models. Anything set here is the shared default; the tables below override it.
 # Point them all at the same model if you would rather not think about it.
 #
-# provider is one of: gemini | mistral | openai_compatible
+# provider is one of:
+#   gemini | anthropic | openai | openrouter | deepseek | mistral | groq | cerebras
+#   openai_compatible  (anything else speaking /chat/completions; needs base_url)
+#
+# Research uses the provider's own web search where it has one, and falls back to
+# keyless DuckDuckGo where it does not. gemini, anthropic, openai and openrouter search
+# natively. deepseek, mistral, groq and cerebras do not expose search on the endpoint
+# this talks to, so those fall back. Either way research costs exactly one call, so the
+# budget numbers below do not change when you switch.
 #
 # Nothing below is Gemini-specific except the model names. If you are forking this onto
 # another provider, the three things to change are: the model in each tier, `provider`
@@ -18,10 +26,9 @@ dry_run = false
 # a 20-a-day free tier and are almost certainly wrong for yours. Run
 # `python run.py --check` first; it reports each tier separately.
 #
-# Gemini is the default because its native Google Search grounding means research needs
-# no second key. Everywhere else, research falls back to keyless DuckDuckGo, which the
-# agent handles on its own. Mistral, Groq, Cerebras and OpenRouter all have free tiers
-# that do not ask for a card.
+# Gemini is the default because its free tier is generous and its search needs no
+# second key. Mistral, Groq, Cerebras and OpenRouter all have free tiers that do not
+# ask for a card; of those only OpenRouter can search.
 provider = "gemini"
 base_url = ""
 use_search = true             # false skips the research call entirely
@@ -56,10 +63,9 @@ model = "gemma-4-31b-it"
 fallbacks = ["gemma-4-26b-a4b-it", "gemini-3.5-flash-lite"]
 
 # Only ever asked the question that decides money. To run a second provider here, set
-# its own provider/base_url/key_env and add that key to Actions secrets, for example:
-#   provider = "openai_compatible"
-#   base_url = "https://api.groq.com/openai/v1"
-#   model = "llama-3.3-70b-versatile"
+# its own provider/key_env and add that key to Actions secrets, for example:
+#   provider = "anthropic"
+#   model = "claude-sonnet-4-5"
 #   key_env = "DEEP_LLM_API_KEY"
 [llm.deep]
 # Each of these carries its own daily quota, so the chain is also what the agent falls

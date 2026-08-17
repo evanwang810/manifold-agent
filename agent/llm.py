@@ -435,15 +435,19 @@ class GeminiClient(LLMClient):
 
 
 class OpenAICompatibleClient(LLMClient):
-    """Covers Mistral, Groq, Cerebras, OpenRouter, and anything else speaking the
-    /chat/completions dialect. None of them ship native search, so research falls back
-    to whatever the model already knows, which the prompt is told to treat as stale."""
+    """Covers OpenAI, OpenRouter, Mistral, Groq, Cerebras, DeepSeek and anything else
+    speaking the /chat/completions dialect.
 
-    supports_search = False
+    Some of them have a first-party web search and each asks for it differently, which
+    is what `search_style` selects. Where there is none, research falls back to the
+    keyless search in websearch.py rather than to whatever the model remembers.
+    """
 
-    def __init__(self, cfg: LLMConfig, base_url: str) -> None:
+    def __init__(self, cfg: LLMConfig, base_url: str, search_style: str = "") -> None:
         super().__init__(cfg)
         self.base = base_url.rstrip("/")
+        self.search_style = search_style
+        self.supports_search = bool(search_style) and cfg.use_search
 
     async def _call(
         self,
@@ -454,6 +458,9 @@ class OpenAICompatibleClient(LLMClient):
         grounded: bool,
         model: str,
     ) -> LLMResponse:
+        if grounded and self.search_style == "responses":
+            return await self._call_responses(prompt, system=system, model=model)
+
         # json_object mode only guarantees the reply parses, never that it has the keys
         # the caller reads, so the shape goes in the prompt the same way it does for a
         # model with no structured-output support at all.
@@ -476,10 +483,57 @@ class OpenAICompatibleClient(LLMClient):
         }
         if json_schema is not None and not grounded:
             body["response_format"] = {"type": "json_object"}
+        if grounded and self.search_style == "plugin":
+            # OpenRouter runs search as a plugin in front of any model it serves, so
+            # this works whatever `model` happens to be, including the fallbacks.
+            body["plugins"] = [
+                {"id": "web", "max_results": self.cfg.search_results}
+            ]
 
+        data = await self._post("/chat/completions", body, model)
+        message = data["choices"][0]["message"]
+        # Some providers put reasoning in its own field, others inline it in the content.
+        text = strip_reasoning(message.get("content") or "")
+        return LLMResponse(text=text, citations=_annotated_urls(message), raw=data)
+
+    async def _call_responses(
+        self, prompt: str, *, system: str | None, model: str
+    ) -> LLMResponse:
+        """OpenAI's hosted web search, which lives on /responses rather than on chat.
+
+        Only grounded calls come here. Everything else stays on /chat/completions so a
+        base_url pointed at some other implementation of that dialect keeps working.
+        """
+        body: dict[str, Any] = {
+            "model": model,
+            "input": prompt,
+            "tools": [{"type": "web_search"}],
+        }
+        if system:
+            body["instructions"] = system
+
+        data = await self._post("/responses", body, model)
+        chunks, citations = [], []
+        for item in data.get("output") or []:
+            if item.get("type") != "message":
+                continue
+            for part in item.get("content") or []:
+                if part.get("type") != "output_text":
+                    continue
+                chunks.append(part.get("text") or "")
+                for note in part.get("annotations") or []:
+                    if note.get("url"):
+                        citations.append(note["url"])
+        return LLMResponse(
+            text=strip_reasoning("".join(chunks)),
+            citations=citations[:8],
+            raw=data,
+        )
+
+    async def _post(self, path: str, body: dict[str, Any], model: str) -> dict[str, Any]:
         await _space_out(self.base, self.cfg.min_seconds_between_calls)
         resp = await self._client.post(
-            f"{self.base}/chat/completions",
+            f"{self.base}{path}",
             headers={"Authorization": f"Bearer {self.cfg.api_key}"},
             json=body,
         )
@@ -489,21 +543,134 @@ class OpenAICompatibleClient(LLMClient):
             raise PermanentLLMError(f"LLM {resp.status_code}: {resp.text[:400]}")
         if resp.status_code >= 400:
             raise RuntimeError(f"LLM {resp.status_code}: {resp.text[:400]}")
+        return resp.json()
+
+
+def _annotated_urls(message: dict[str, Any]) -> list[str]:
+    """Pull citation URLs out of a chat-completions message, if the provider adds any."""
+    urls = []
+    for note in message.get("annotations") or []:
+        url = (note.get("url_citation") or {}).get("url") or note.get("url")
+        if url:
+            urls.append(url)
+    return urls[:8]
+
+
+class AnthropicClient(LLMClient):
+    """Anthropic's Messages API, which is its own dialect: a different auth header, a
+    required max_tokens, system as a top-level field, and search as a server-side tool
+    the model calls on its own during the turn."""
+
+    BASE = "https://api.anthropic.com/v1"
+    MAX_TOKENS = 4096
+
+    def __init__(self, cfg: LLMConfig) -> None:
+        super().__init__(cfg)
+        self.supports_search = cfg.use_search
+
+    async def _call(
+        self,
+        prompt: str,
+        *,
+        system: str | None,
+        json_schema: dict[str, Any] | None,
+        grounded: bool,
+        model: str,
+    ) -> LLMResponse:
+        # No response-schema field on this API, so the shape goes in the prompt exactly
+        # as it does for any other model that cannot be handed one.
+        if json_schema is not None and not grounded:
+            fields = describe_schema(json_schema)
+            prompt += (
+                "\n\nAnswer with a single JSON object and nothing else."
+                + (f" Use exactly these keys:\n{fields}" if fields else "")
+            )
+
+        body: dict[str, Any] = {
+            "model": model,
+            "max_tokens": self.MAX_TOKENS,
+            "temperature": self.cfg.temperature,
+            "messages": [{"role": "user", "content": prompt}],
+        }
+        if system:
+            body["system"] = system
+        if grounded:
+            body["tools"] = [{
+                "type": "web_search_20250305",
+                "name": "web_search",
+                "max_uses": self.cfg.search_results,
+            }]
+
+        await _space_out("anthropic", self.cfg.min_seconds_between_calls)
+        resp = await self._client.post(
+            f"{self.BASE}/messages",
+            headers={
+                "x-api-key": self.cfg.api_key or "",
+                "anthropic-version": "2023-06-01",
+                "content-type": "application/json",
+            },
+            json=body,
+        )
+        if resp.status_code == 429:
+            raise QuotaError(f"Anthropic 429 on {model}: {resp.text[:200]}")
+        if resp.status_code in (400, 401, 403, 404):
+            raise PermanentLLMError(f"Anthropic {resp.status_code}: {resp.text[:400]}")
+        if resp.status_code >= 400:
+            raise RuntimeError(f"Anthropic {resp.status_code}: {resp.text[:400]}")
         data = resp.json()
-        message = data["choices"][0]["message"]
-        # Some providers put reasoning in its own field, others inline it in the content.
-        text = strip_reasoning(message.get("content") or "")
-        return LLMResponse(text=text, raw=data)
+
+        # Content is a list of blocks. Only the text ones are the answer: a grounded
+        # turn also carries the model's search calls and their raw results, and joining
+        # those in would put a wall of scraped page text into a public comment.
+        chunks, citations = [], []
+        for block in data.get("content") or []:
+            if block.get("type") != "text":
+                continue
+            chunks.append(block.get("text") or "")
+            for note in block.get("citations") or []:
+                if note.get("url"):
+                    citations.append(note["url"])
+        return LLMResponse(
+            text=strip_reasoning("".join(chunks)),
+            citations=citations[:8],
+            raw=data,
+        )
+
+
+# Named providers, so the common ones need only a key and a model name. The third
+# field is how that provider exposes web search, empty where it has none on the plain
+# completions API: those fall through to the keyless search in websearch.py.
+#
+#   "plugin"    search runs in front of the model, requested in the request body
+#   "responses" search is a hosted tool on a separate endpoint
+#
+# DeepSeek, Mistral, Groq and Cerebras are listed with no style on purpose. Search on
+# their platforms either does not exist on this endpoint or lives behind a separate
+# agents API, and claiming otherwise would just mean silently unresearched trades.
+PROVIDERS: dict[str, tuple[str, str]] = {
+    "openai": ("https://api.openai.com/v1", "responses"),
+    "openrouter": ("https://openrouter.ai/api/v1", "plugin"),
+    "deepseek": ("https://api.deepseek.com/v1", ""),
+    "mistral": ("https://api.mistral.ai/v1", ""),
+    "groq": ("https://api.groq.com/openai/v1", ""),
+    "cerebras": ("https://api.cerebras.ai/v1", ""),
+}
 
 
 def build_llm(cfg: LLMConfig) -> LLMClient:
     provider = cfg.provider.lower()
     if provider == "gemini":
         return GeminiClient(cfg)
-    if provider == "mistral":
-        return OpenAICompatibleClient(cfg, "https://api.mistral.ai/v1")
+    if provider == "anthropic":
+        return AnthropicClient(cfg)
+    if provider in PROVIDERS:
+        base, style = PROVIDERS[provider]
+        return OpenAICompatibleClient(cfg, cfg.base_url or base, style)
     if provider == "openai_compatible":
         if not cfg.base_url:
             raise ValueError("llm.base_url is required for provider = openai_compatible")
-        return OpenAICompatibleClient(cfg, cfg.base_url)
-    raise ValueError(f"Unknown LLM provider: {cfg.provider}")
+        # An unknown endpoint speaking this dialect. `search_style` can still be set in
+        # config for something that is OpenRouter-shaped behind a different host.
+        return OpenAICompatibleClient(cfg, cfg.base_url, cfg.search_style)
+    known = ", ".join(["gemini", "anthropic", *PROVIDERS, "openai_compatible"])
+    raise ValueError(f"Unknown LLM provider: {cfg.provider}. Known: {known}")
