@@ -6,11 +6,14 @@ environment, so there is no path by which a key ends up in git history.
 
 from __future__ import annotations
 
+import logging
 import os
 import tomllib
 from dataclasses import dataclass, field, fields
 from pathlib import Path
 from typing import Any, TypeVar
+
+log = logging.getLogger(__name__)
 
 
 @dataclass
@@ -224,9 +227,32 @@ class MemoryConfig:
 
 
 @dataclass
+class SearchConfig:
+    """The fallback used when the LLM provider has no search of its own.
+
+    Prediction markets turn on what happened this week, so recency matters more here
+    than result count. A keyless DuckDuckGo scrape is the floor; any of the keyed
+    backends is a real index with a real freshness filter.
+    """
+
+    backend: str = "duckduckgo"   # duckduckgo | tavily | brave | serper
+    key_env: str = "SEARCH_API_KEY"
+    api_key: str = ""
+    max_results: int = 6
+    # Drop anything older than this many days. 0 disables the filter, which is how the
+    # agent ended up reading last season's preview for a question about this one.
+    recency_days: int = 30
+    # How many search queries the model writes for itself, 0 to search the market
+    # question verbatim. Market questions are written for humans and resolution bots,
+    # not search engines, so verbatim is usually the worst possible query.
+    plan_queries: int = 3
+
+
+@dataclass
 class Config:
     manifold: ManifoldConfig = field(default_factory=ManifoldConfig)
     llm: LLMTiers = field(default_factory=LLMTiers)
+    search: SearchConfig = field(default_factory=SearchConfig)
     budget: BudgetConfig = field(default_factory=BudgetConfig)
     scan: ScanConfig = field(default_factory=ScanConfig)
     screen: ScreenConfig = field(default_factory=ScreenConfig)
@@ -321,6 +347,7 @@ def load_config(path: str | Path) -> Config:
     cfg = Config(
         manifold=_build(ManifoldConfig, raw.get("manifold", {})),
         llm=_load_llm(raw.get("llm", {})),
+        search=_build(SearchConfig, raw.get("search", {})),
         budget=_build(BudgetConfig, raw.get("budget", {})),
         scan=_build(ScanConfig, raw.get("scan", {})),
         screen=_build(ScreenConfig, raw.get("screen", {})),
@@ -343,4 +370,13 @@ def load_config(path: str | Path) -> Config:
         tier.api_key = os.environ.get(tier.key_env, "")
         if not tier.api_key:
             raise ValueError(f"{tier.key_env} is not set (needed by the {name} model)")
+
+    # A keyed search backend is optional, so a missing key is a warning rather than a
+    # failure: websearch falls back to keyless DuckDuckGo and the agent keeps running.
+    cfg.search.api_key = os.environ.get(cfg.search.key_env, "")
+    if cfg.search.backend != "duckduckgo" and not cfg.search.api_key:
+        log.warning(
+            "[search] backend is %s but %s is not set, so search falls back to "
+            "DuckDuckGo", cfg.search.backend, cfg.search.key_env,
+        )
     return cfg

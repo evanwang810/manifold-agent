@@ -646,6 +646,47 @@ REPLY_SCHEMA = {
 }
 
 
+QUERY_SYSTEM = """You turn a forecasting question into web search queries.
+
+A market question is written for humans and for whoever resolves it, which makes it a \
+bad search query: it carries the resolution criteria, the date, the conditional, and \
+often a joke. Strip all of that and write what someone reporting on this would have \
+put in the headline.
+
+Write short keyword queries, not sentences and not questions. Name the specific people, \
+organisations, places and events involved, because those are what the index actually \
+matches on. Make the queries different from each other: one for the current state of \
+the story, one for the most recent development, one for the underlying base rate or \
+whatever would have to happen first. Do not include the year unless the question is \
+genuinely about a past year, since a stale year is the fastest way to get stale \
+results."""
+
+
+QUERY_SCHEMA = {
+    "type": "OBJECT",
+    "properties": {
+        "queries": {
+            "type": "ARRAY",
+            "description": "Search queries, best first. Each under 12 words.",
+            "items": {"type": "STRING"},
+        },
+    },
+    "required": ["queries"],
+}
+
+
+def build_query_prompt(*, question: str, description: str, today: str, count: int) -> str:
+    return f"""Today is {today}.
+
+Write {count} web search queries for this forecasting question:
+{question}
+
+Context the question's author gave:
+{description[:800]}
+
+Return the queries only."""
+
+
 def build_research_prompt(*, question: str, description: str, today: str) -> str:
     return f"""Today is {today}.
 

@@ -14,11 +14,14 @@ from .memory import Memory
 from .models import Comment, Decision, Market, Position, Sizing
 from .prompts import (
     DECISION_SCHEMA,
+    QUERY_SCHEMA,
+    QUERY_SYSTEM,
     RESEARCH_SYSTEM,
     SCREEN_SCHEMA,
     SCREEN_SYSTEM,
     TRADER_SYSTEM,
     build_decision_prompt,
+    build_query_prompt,
     build_research_prompt,
     build_screen_prompt,
     system_with_orders,
@@ -333,7 +336,8 @@ class Brain:
             except Exception as exc:  # noqa: BLE001
                 log.info("Grounded search unavailable (%s), using web search", exc)
 
-        snippets = await websearch.search(market.question, self.cfg.llm.fast.search_results)
+        queries = await self._plan_queries(market)
+        snippets = await websearch.search_many(queries, self.cfg.search)
         if not snippets:
             return NO_RESEARCH
         try:
@@ -349,6 +353,43 @@ class Brain:
 
         body = response.text.strip()
         return body if len(body) >= 40 else NO_RESEARCH
+
+    async def _plan_queries(self, market: Market) -> list[str]:
+        """Let the model write its own search queries.
+
+        Only the fallback path needs this. A provider with native search already picks
+        its own queries inside the grounded call, so doing it here as well would spend
+        a request to duplicate work that already happened.
+
+        The market question is kept as the last query regardless. The planner sometimes
+        drops the one detail that actually identified the event, and a bad extra query
+        costs nothing next to missing the obvious one.
+        """
+        plan = self.cfg.search.plan_queries
+        if plan < 1 or not self.budget.fast.take():
+            return [market.question]
+        try:
+            response = await self.fast.generate(
+                build_query_prompt(
+                    question=market.question,
+                    description=market.description,
+                    today=_today(),
+                    count=plan,
+                ),
+                system=QUERY_SYSTEM,
+                json_schema=QUERY_SCHEMA,
+                attempts=1,
+            )
+            raw = extract_json(response.text).get("queries")
+            queries = [str(q).strip() for q in raw if str(q).strip()][:plan] \
+                if isinstance(raw, list) else []
+        except Exception as exc:  # noqa: BLE001 - fall back to the question itself
+            log.info("Query planning failed (%s), searching the question as written", exc)
+            return [market.question]
+
+        if queries:
+            log.info("Searching %s for: %s", market.slug, "; ".join(queries))
+        return [*queries, market.question]
 
     async def _size(
         self,

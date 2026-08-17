@@ -460,6 +460,8 @@ class OpenAICompatibleClient(LLMClient):
     ) -> LLMResponse:
         if grounded and self.search_style == "responses":
             return await self._call_responses(prompt, system=system, model=model)
+        if grounded and self.search_style == "conversations":
+            return await self._call_conversations(prompt, system=system, model=model)
 
         # json_object mode only guarantees the reply parses, never that it has the keys
         # the caller reads, so the shape goes in the prompt the same way it does for a
@@ -524,6 +526,41 @@ class OpenAICompatibleClient(LLMClient):
                 for note in part.get("annotations") or []:
                     if note.get("url"):
                         citations.append(note["url"])
+        return LLMResponse(
+            text=strip_reasoning("".join(chunks)),
+            citations=citations[:8],
+            raw=data,
+        )
+
+    async def _call_conversations(
+        self, prompt: str, *, system: str | None, model: str
+    ) -> LLMResponse:
+        """Mistral's web search, which is a connector on the conversations API.
+
+        Their /chat/completions has no search at all, so grounded calls detour here and
+        everything else stays on the normal endpoint.
+        """
+        body: dict[str, Any] = {
+            "model": model,
+            "inputs": prompt if not system else f"{system}\n\n{prompt}",
+            "tools": [{"type": "web_search"}],
+            "store": False,
+        }
+
+        data = await self._post("/conversations", body, model)
+        chunks, citations = [], []
+        for item in data.get("outputs") or []:
+            if item.get("type") not in (None, "message.output"):
+                continue
+            content = item.get("content")
+            if isinstance(content, str):
+                chunks.append(content)
+                continue
+            for part in content or []:
+                if part.get("type") == "text":
+                    chunks.append(part.get("text") or "")
+                elif part.get("type") == "tool_reference" and part.get("url"):
+                    citations.append(part["url"])
         return LLMResponse(
             text=strip_reasoning("".join(chunks)),
             citations=citations[:8],
@@ -641,17 +678,18 @@ class AnthropicClient(LLMClient):
 # field is how that provider exposes web search, empty where it has none on the plain
 # completions API: those fall through to the keyless search in websearch.py.
 #
-#   "plugin"    search runs in front of the model, requested in the request body
-#   "responses" search is a hosted tool on a separate endpoint
+#   "plugin"        search runs in front of the model, asked for in the request body
+#   "responses"     hosted search tool, on OpenAI's /responses endpoint
+#   "conversations" hosted search connector, on Mistral's /conversations endpoint
 #
-# DeepSeek, Mistral, Groq and Cerebras are listed with no style on purpose. Search on
-# their platforms either does not exist on this endpoint or lives behind a separate
-# agents API, and claiming otherwise would just mean silently unresearched trades.
+# DeepSeek, Groq and Cerebras have no first-party search to call. They are named here
+# anyway so they need only a key and a model, and their research goes through the
+# search backend in websearch.py instead.
 PROVIDERS: dict[str, tuple[str, str]] = {
     "openai": ("https://api.openai.com/v1", "responses"),
     "openrouter": ("https://openrouter.ai/api/v1", "plugin"),
+    "mistral": ("https://api.mistral.ai/v1", "conversations"),
     "deepseek": ("https://api.deepseek.com/v1", ""),
-    "mistral": ("https://api.mistral.ai/v1", ""),
     "groq": ("https://api.groq.com/openai/v1", ""),
     "cerebras": ("https://api.cerebras.ai/v1", ""),
 }

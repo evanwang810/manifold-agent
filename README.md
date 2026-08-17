@@ -149,13 +149,27 @@ search where there is one, and only falls back to keyless DuckDuckGo where there
 | `anthropic` | server-side `web_search` tool |
 | `openai` | hosted `web_search` tool |
 | `openrouter` | the `web` plugin, in front of any model it serves |
-| `deepseek`, `mistral`, `groq`, `cerebras` | none, falls back to DuckDuckGo |
+| `mistral` | `web_search` connector, on the conversations API |
+| `deepseek`, `groq`, `cerebras` | none, falls through to `[search]` |
 
-Either way research costs exactly one call, so the budget numbers do not change when you
-switch. `run.py --check` probes search on each tier and says which path it got. Gemini is
-the default for its free tier; check your quota at
+`run.py --check` probes search on each tier and says which path it got. Gemini is the
+default for its free tier; check your quota at
 [aistudio.google.com/rate-limit](https://aistudio.google.com/rate-limit) and set
 `[budget]` so a day of ticking stays inside it.
+
+Where the provider has no search, `[search]` decides what happens instead. `duckduckgo`
+is the keyless default; `tavily`, `brave` and `serper` each want one key and are much
+better at returning something written this week. Research only runs on markets that
+clear the screener, roughly 34 searches a day, which fits inside all of their free
+tiers.
+
+Two settings there matter more than the backend. `recency_days` filters out anything
+older, because an unfiltered query returns the best-ranked page of all time and for
+anything with history that is a year-old article that reads as current. `plan_queries`
+has the model write its own queries first: a market question is written for humans and
+for whoever resolves it, so it carries the resolution criteria, the date and often a
+joke, which makes it close to the worst possible search string. The question is searched
+as well, in case the planner drops the detail that identified the event.
 
 ## Running it
 

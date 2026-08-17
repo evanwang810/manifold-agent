@@ -73,6 +73,31 @@ fallbacks = ["gemma-4-26b-a4b-it", "gemini-3.5-flash-lite"]
 model = "gemini-3.7-flash"
 fallbacks = ["gemini-3.6-flash", "gemini-3.5-flash", "gemini-3.5-flash-lite"]
 
+[search]
+# The fallback used when the LLM provider has no search of its own. Providers that do
+# (gemini, anthropic, openai, openrouter, mistral) never reach this: their own search
+# picks its own queries inside the call, so none of the settings below apply to them.
+#
+# backend is one of: duckduckgo | tavily | brave | serper
+# duckduckgo needs no key and is scraped, so it is rate limited by whoever feels like
+# it that day. The other three want one key in the environment and are markedly better
+# at returning something written this week. Free tiers as of writing: Brave ~2k/month,
+# Serper 2.5k once, Tavily ~1k/month. Research runs only on markets that clear the
+# screener, so this is about 34 searches a day, which fits any of them.
+backend = "duckduckgo"
+key_env = "SEARCH_API_KEY"    # add to Actions secrets if you set a keyed backend
+max_results = 6
+# Drop results older than this. Prediction markets turn on what happened this week and
+# an unfiltered query returns the best-ranked page of all time, which for anything with
+# history is a year-old article that reads as current. 0 disables the filter.
+recency_days = 30
+# How many queries the model writes for itself before searching. A market question is
+# written for humans and for whoever resolves it, so searching it verbatim is close to
+# the worst possible query: it carries the resolution criteria, the date and often a
+# joke. The question is always searched as well, in case the planner drops the one
+# detail that identified the event. 0 turns planning off and saves one fast call.
+plan_queries = 3
+
 [screen]
 # The fast model forecasts each candidate blind, and the deep model only sees markets
 # where that quick number disagrees with the price or where the screener flagged
