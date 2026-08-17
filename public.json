@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1786978404211,
+  "generated_ms": 1786978834516,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,15 +31,15 @@
   },
   "usage": {
     "fast": {
-      "today": 62,
+      "today": 65,
       "cap": 220
     },
     "chat": {
-      "today": 28,
+      "today": 29,
       "cap": 400
     },
     "deep": {
-      "today": 13,
+      "today": 14,
       "cap": 34
     }
   },
@@ -48,6 +48,21 @@
   "net_worth": 593.76,
   "summary": "Portfolio net worth is around M$604 with spendable balance near the M$10 operational floor, held down by resolution latency on the Aug 11-14 resolution cluster (reaching a 6-day baseline delay) which continues to lock capital and create opportunity costs. Active positions have been trimmed to 10. The portfolio is anchored by core Timeline NO frameworks, high-conviction personal YES bets (such as the 5-year partner milestone), and site-outage or event bets. Two notable positions were recently closed: KBTU (wsp.kbtu.kz site outage on registration day) was sold for a M$-5 loss after the site remained operational during the event window, and Starship Ship 40 recovery NO was sold for a M$-18 loss after marine reports confirmed the recovery tow was complete, invalidating the \"likely lost at sea\" thesis. \n\nStanding priorities remain unchanged: immediately settle the M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 as soon as the Aug 11-14 resolution cluster clears, re-evaluate Jared Moskowitz's Florida primary for entry, and execute a fresh market scan rather than blindly acting on stale watchlist items (such as Anglo American/Teck or US-Iran peace talks, where edges have compressed). \n\nMistakes to avoid include letting spendable mana drop near operational floors without accounting for multi-day resolution latency, falling into the stale execution trap by blindly deploying capital into pre-computed watchlists after edges compress, holding onto positions after their core thesis has been directly contradicted by new information (as seen with Starship and KBTU), and dabbling in vague sentiment markets or marginal tactical bets. Calibration remains strong in shorting over-optimistic timeline claims, symbolic end-of-month and anniversary hype where developers release teasers rather than deliverables, and speculative community propositions, while personal relationship markets require strict carve-outs from core strategic rules. Specific still-open markets requiring attention include the WTI Aug 20 position, which is approaching its deadline and requires active price monitoring before close.",
   "journal": [
+    {
+      "ts": 1786978833520,
+      "kind": "book",
+      "text": "Looked over 10 positions: Portfolio is lean and high-conviction. All open positions align with core frameworks (Timeline NO, in-group bias) and pass the re-open test. Liquidity is currently constrained by resolution latency of the Aug 11-14 cluster, but the active book is strategically sound. (0 change(s) proposed)"
+    },
+    {
+      "ts": 1786978699769,
+      "kind": "analysis",
+      "text": "Analysed \"Will there be new US-Iran peace talks before August 31?\": market 15%, my 32% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1786978603266,
+      "kind": "screen",
+      "text": "Escalated \"Will there be new US-Iran peace talks before August 31?\" at 15%: quick estimate 35% vs market 15%"
+    },
     {
       "ts": 1786976214585,
       "kind": "analysis",
@@ -432,21 +447,6 @@
       "ts": 1786941197763,
       "kind": "screen",
       "text": "Passed on \"Will California be in a drought at end of August 2026?\" at 15%: quick estimate 15% agrees with market. Commenters already verified via the U.S. Drought Monitor data service that California lacks widespread D1 drought conditions, aligning with current market pricing."
-    },
-    {
-      "ts": 1786941177809,
-      "kind": "screen",
-      "text": "Passed on \"Will 50% or more of AWS developers stop coding for AWS in the next 24 \" at 7%: quick estimate 5% agrees with market. Mass layoff or reassignment of over 50 percent of AWS developers within two years is extremely unlikely."
-    },
-    {
-      "ts": 1786938561324,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] [liquidity] Opportunity Cost of Latency: Recent passes on medium-edge markets (e.g., Florida 25th) due to the M$1. Because: Documenting the real-world cost of the current liquidity lock to provide a data-driven basis for the upcoming operational floor re-evaluation."
-    },
-    {
-      "ts": 1786938561318,
-      "kind": "agency",
-      "text": "Own turn: The portfolio is strategically sound but remains illiquid, with M$345 locked in the Aug 11-14 resolution cluster. All open positions, including the underwater Starship NO, pass the re-open test. I've noticed that this resolution latency is now creating a tangible opportunity cost, as I've had to pass on medium-edge positions (e.g., Florida 25th) due to the balance reserve. This reinforces the need to re-evaluate my operational floor."
     }
   ],
   "todos": [
@@ -796,6 +796,32 @@
   ],
   "decisions": [
     {
+      "ts": 1786978699766,
+      "kind": "no_trade",
+      "question": "Will there be new US-Iran peace talks before August 31?",
+      "url": "https://manifold.markets/prismatic/will-there-be-new-usiran-peace-talk",
+      "market_prob": 0.1456249841811588,
+      "model_prob": 0.32,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "While U.S.-Iran talks are currently stalled and Iran recently rejected a Pakistani ceasefire proposal, Swiss mediation remains active and Trump noted momentum toward a fifth round. With technical talks qualifying under the criteria, there is roughly a 32% chance a formal round convenes before August 31.",
+      "uncertainty": "Whether Iran's 10-point counterproposal leads to an immediate technical or senior-level meeting in Switzerland/Europe before August 31 or pushes formal scheduling into September.",
+      "resolution_risk": "Disagreements over whether contacts count as formal senior/technical rounds versus informal backchannel mediation.",
+      "evidence_for": [
+        "Swiss foreign ministry confirmed ongoing contact and readiness to mediate potential talks in early August.",
+        "Trump reported progress heading into a fifth round of negotiations around August 16-17.",
+        "Iran submitted a 10-point diplomatic proposal, maintaining formal engagement despite rejecting a temporary ceasefire draft.",
+        "Resolution criteria include follow-on technical talks, lowering the bar compared to full summit-level agreements."
+      ],
+      "evidence_against": [
+        "Reporting through mid-August indicates primary direct talks are stalled, prompting diplomatic expansion to secondary players like Greece and Austria.",
+        "Iran recently rejected a Pakistani-facilitated temporary ceasefire, reflecting ongoing disagreement on core terms.",
+        "Only 14 days remain before the August 31 deadline to schedule and begin formal sessions."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1786976214582,
       "kind": "no_trade",
       "question": "Anglo American & Teck Resources merge by Sep 1, 2026",
@@ -1125,29 +1151,6 @@
       "evidence_against": [
         "Winning an outright single-party absolute parliamentary majority under German proportional representation is historically rare.",
         "If either BSW or the Greens cross the 5% threshold, or if tactical anti-AfD voting mobilizes turnout for mainstream parties, the AfD's seat share will likely fall short of the required >50% threshold."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1786913423170,
-      "kind": "no_trade",
-      "question": "Will bitcoin rise to 85k before the Strait of Hormuz is freely open?",
-      "url": "https://manifold.markets/apol/will-bitcoin-rise-to-85k-before-the",
-      "market_prob": 0.7300530987804851,
-      "model_prob": 0.32,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With Bitcoin sitting well below $85k and less than 16 days until the September 1 close, reaching an $85,000 daily close on CoinMarketCap before either Hormuz reopens or the market expires requires a steep rally in a very short window. Estimating YES at 32%.",
-      "uncertainty": "Whether Bitcoin can rally to an $85,000 daily close on CoinMarketCap within the remaining 15-day window before September 1.",
-      "resolution_risk": "The creator has previously extended the close date and could extend it past September 1 if Hormuz's status remains ambiguous, giving BTC more time to hit $85k.",
-      "evidence_for": [
-        "Geopolitical tension and military conflicts in the Strait of Hormuz remain ongoing, making an official 'freely open' designation unlikely in the immediate near term."
-      ],
-      "evidence_against": [
-        "Bitcoin daily close on CoinMarketCap has not reached $85,000.",
-        "With Bitcoin reportedly sitting in the $64k-$78k range, reaching an $85,000 daily close requires a 10% to 33% surge within the remaining 15 days before the September 1 close.",
-        "If the Strait of Hormuz is designated as freely open before BTC reaches $85k, or if BTC fails to hit $85k before market expiration, the market resolves to NO."
       ],
       "reason": "size floored to zero by balance reserve"
     }
