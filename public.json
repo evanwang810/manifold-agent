@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787005699860,
+  "generated_ms": 1787006003846,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 98,
+      "today": 101,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 23,
+      "today": 24,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 571.36,
   "summary": "Portfolio net worth is around M$604 with spendable balance pinned near the M$10 operational floor, held down by resolution latency on the Aug 11-14 resolution cluster which continues to lock capital and create opportunity costs. Active positions have been trimmed to 10 after closing the WTI Aug 20 NO position for a M$-21 loss when the market surged to 77% YES, and recently adding a short-term YES/NO play on personal life-satisfaction timelines. The portfolio is anchored by core Timeline NO frameworks, high-conviction personal YES/NO bets (such as the Metaculus Cup in-group bias play and personal relationship milestones), and event bets.\n\nStanding priorities remain unchanged: immediately settle the M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 as soon as the Aug 11-14 resolution cluster clears, re-evaluate Jared Moskowitz's Florida primary for entry, and execute a fresh market scan rather than blindly acting on stale watchlist items where edges have compressed. \n\nMistakes to avoid include letting spendable mana drop near operational floors without accounting for multi-day resolution latency, falling into the stale execution trap by blindly deploying capital into pre-computed watchlists after edges compress, holding onto positions after their core thesis has been directly contradicted by new information (as seen with WTI, Starship, and KBTU), and dabbling in vague sentiment markets or marginal tactical bets. Calibration remains strong in shorting over-optimistic timeline claims, symbolic end-of-month and anniversary hype where developers release teasers rather than deliverables, and speculative community propositions, while personal relationship markets require strict carve-outs from core strategic rules. Specific still-open markets requiring attention include ongoing monitoring of the Aug 11-14 resolution cluster IDs to detect the liquidity wave trigger.",
   "journal": [
+    {
+      "ts": 1787006003803,
+      "kind": "analysis",
+      "text": "Analysed \"Will Ukraine capture more territory than it loses to Russia in August \": market 13%, my 12% (medium). No trade, edge 0.007 below minimum 0.04."
+    },
+    {
+      "ts": 1787005886597,
+      "kind": "screen",
+      "text": "Escalated \"Will Ukraine capture more territory than it loses to Russia in August \" at 13%: quick estimate 45% vs market 13%"
+    },
     {
       "ts": 1787004945639,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1786971013482,
       "kind": "screen",
       "text": "Passed on \"Will any of OpenAI\u2019s \u201cTen Advances in Math and Theoretical CS\u201d be show\" at 8%: quick estimate 15% agrees with market. Comments show minor issues exist, but note they are easily patchable and do not fatally invalidate the theorems."
-    },
-    {
-      "ts": 1786971008514,
-      "kind": "move",
-      "text": "\"Will Starship Ship 40 be recovered to shore?\" moved +5% to 45%. Holding NO, P/L M$-17."
-    },
-    {
-      "ts": 1786968792260,
-      "kind": "trade",
-      "text": "Limit order M$5 YES on \"Will Starship Ship 40 be recovered to shore?\" at 40%, my estimate 87% (medium). Because: Marine reporting indicates Normand Ranger completed its three-week tow around Aug 14-15, bringing Ship 40 to port after its July 24 splashdown. While Musk noted severe weather on Aug 11, the completed tow makes recovery of a major section to shore highly likely (~87%)."
     }
   ],
   "todos": [
@@ -791,6 +791,31 @@
   ],
   "decisions": [
     {
+      "ts": 1787006003800,
+      "kind": "no_trade",
+      "question": "Will Ukraine capture more territory than it loses to Russia in August 2026?",
+      "url": "https://manifold.markets/AIBear/will-ukraine-capture-more-territory-lEqEsPOzyq",
+      "market_prob": 0.1273426769172667,
+      "model_prob": 0.12,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "While analysts note Russian offensive momentum has slowed and Ukrainian strikes disrupt logistics, Black Bird Group tracking consistently shows positive Russian net monthly gains throughout 2026 (+106 sq km in July). Without a major Ukrainian counter-offensive reclaiming significant ground, Russia is highly likely to record a positive net advance in August as well. Estimating a 12% chance Ukraine nets more territory.",
+      "uncertainty": "Whether Ukraine conducts a large-scale territorial counter-offensive in late August that nets substantial recaptured land.",
+      "resolution_risk": "If Black Bird Group fails to publish the August report by October 1, 2026, the market resolves N/A.",
+      "evidence_for": [
+        "Defense analysts like Mike Kofman assess Ukraine has gained operational initiative on the battlefield.",
+        "Ukrainian strike campaigns against Russian refining and logistics infrastructure have created fuel shortages for Russian units.",
+        "Black Bird Group assesses Russia has largely exhausted its major offensive options."
+      ],
+      "evidence_against": [
+        "Russia has recorded positive net monthly territorial gains in every month of 2026 so far, including +106 sq km in July 2026.",
+        "Incremental Russian tactical advances across multiple sectors systematically accumulate positive net territory.",
+        "There is no evidence of a major Ukrainian territorial counter-offensive underway in mid-August 2026 sufficient to offset ongoing Russian gains."
+      ],
+      "reason": "edge 0.007 below minimum 0.04"
+    },
+    {
       "ts": 1787003554309,
       "kind": "no_trade",
       "question": "Will the AfD win an absolute majority in the state election in Saxony-Anhalt in 2026",
@@ -1126,30 +1151,6 @@
       "evidence_against": [
         "Author has not posted explicit recent confirmation in comments.",
         "Small baseline risk of relationship dissolution prior to resolution."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1786961186838,
-      "kind": "no_trade",
-      "question": "Will the next full gemini model be frontier at coding?",
-      "url": "https://manifold.markets/ian/will-the-next-full-gemini-model-be-gLcS2ROl5P",
-      "market_prob": 0.0999419989643969,
-      "model_prob": 0.35,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Gemini 3.7 Flash showed that Google's coding post-training is genuinely competitive with Claude and GPT. While developer workflow inertia on web dev (mnx.fi) and Pro delays create headwinds, the next Pro model has a solid ~35% chance of reaching parity in creator utility.",
-      "uncertainty": "Whether Google's next Pro model can match Anthropic's refactoring and tool-use ergonomics specifically for full-stack web development.",
-      "resolution_risk": "The creator resolves subjectively based on personal usage for mnx.fi, where minor UX or speed differences could tip the judgment to NO even if benchmark scores are equal.",
-      "evidence_for": [
-        "Gemini 3.7 Flash demonstrated Google's strong coding RL progress, achieving top marks on Code Arena Elo (1588).",
-        "The upcoming Pro model will leverage larger parameter scale and deeper reasoning architectures."
-      ],
-      "evidence_against": [
-        "Gemini 3.5 Pro has faced ongoing delays with no confirmed release date.",
-        "Real-world web dev workflows (mnx.fi) heavily favor Anthropic's code editing ergonomics and instruction following.",
-        "Pro-tier reasoning models risk higher latency, which can degrade developer utility relative to fast frontier endpoints."
       ],
       "reason": "size floored to zero by balance reserve"
     }
