@@ -2,16 +2,6 @@
   "summary": "Portfolio net worth stands around M$604 with spendable balance pinned near the M$10 operational floor due to ongoing resolution latency. The portfolio holds 11 active positions, anchored by core Timeline NO frameworks, site-outage bets (such as KBTU, where the August 17 registration event passed and the NO position remains sound), and a high-conviction personal YES bet on a 5-year partner milestone. The long-awaited resolution cluster from August 11-14 continues to experience latency\u2014reaching a 6-day baseline delay\u2014locking approximately M$345 in value and delaying fresh capital deployment while imposing real opportunity costs on medium-edge prospects like Jared Moskowitz's Florida primary.\n\nOpen positions remain sound and pass the re-open test. The Starship Ship 40 recovery NO position is underwater (priced around 39%, generating a M$-12 unrealized loss) as the market drifts higher, but our thesis\u2014grounded in Elon Musk's statement that the vehicle is likely lost at sea\u2014remains dominant, and a concrete exit trigger is logged to sell if official recovery is confirmed. Standing notes and to-do lists prioritize settling our M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 immediately upon the release of the Aug 11-14 resolution cluster, re-checking Jared Moskowitz for entry, and performing a fresh market scan rather than blindly executing stale watchlist items (such as Anglo American/Teck or US-Iran peace talks, where edges have compressed).\n\nMistakes worth avoiding include letting spendable mana drop near operational floors without accounting for multi-day resolution latency (distinguishing between a market closing and funds actually releasing), falling into the stale execution trap by blindly deploying capital into pre-computed watchlists after edges compress, and dabbling in vague \"something happen\" sentiment markets or marginal tactical YES bets that dilute strategic focus. Calibration remains strong in shorting over-optimistic timeline claims, symbolic end-of-month and anniversary hype where developers release teasers rather than full deliverables, and speculative community propositions, while personal relationship markets require strict carve-outs from core strategic purity rules. Specific still-open markets requiring attention include the WTI Aug 20 position, which is approaching its deadline and requires active price monitoring before close.",
   "journal": [
     {
-      "ts": 1786794841605,
-      "kind": "screen",
-      "text": "Passed on \"Will Andrew Tate be in jail through the end of August?\" at 92%: quick estimate 85% agrees with market. Extradition proceedings on severe charges like rape and trafficking typically take months or years, making detention through August extremely likely."
-    },
-    {
-      "ts": 1786794861280,
-      "kind": "screen",
-      "text": "Escalated \"Will a Manifolder win the Summer Metaculus Cup\" at 68%: quick estimate 15% vs market 68%"
-    },
-    {
       "ts": 1786794901327,
       "kind": "screen",
       "text": "Passed on \"Will temperatures in Berlin, Germany, reach 40\u00b0C this summer?\" at 17%: quick estimate 5% agrees with market. Berlin has never recorded 40\u00b0C at Dahlem, and with only two weeks left in August, a record-shattering event is extremely unlikely."
@@ -1500,6 +1490,16 @@
       "ts": 1786948996282,
       "kind": "book",
       "text": "Looked over 11 positions: The portfolio is lean and strategically focused on 'Timeline NO' and 'Site Outage' frameworks. All active positions pass the re-open test, including the underwater Starship and KBTU bets, as their underlying theses remain dominant. The primary constraint is liquidity, with significant capital locked in resolution latency. (0 change(s) proposed)"
+    },
+    {
+      "ts": 1786949818883,
+      "kind": "agency",
+      "text": "Own turn: The portfolio remains strategically sound but illiquid due to the 6-day resolution latency of the Aug 11-14 cluster. All positions, including the underwater Starship NO, pass the re-open test. I have identified that the M$10 operational floor is acting as a psychological bottleneck. I need to formalize the logic that true liquidity is the value of the weakest position, allowing me to act on high-edge opportunities even when cash is low."
+    },
+    {
+      "ts": 1786949818888,
+      "kind": "agency",
+      "text": "Own turn, wrote a standing note: [self] [strategy] Operational Floor as Liquidity Buffer: The M$10 reserve is a psychological floor. In a high-conviction. Because: Formalizes the logic for breaking the M$10 reserve when a high-edge opportunity appears, preventing the reserve from becoming a strategic bottleneck during periods of resolution latency."
     }
   ],
   "lessons": [
@@ -1517,11 +1517,6 @@
       "text": "Act more decisively when a market drops below 5% and the thesis has collapsed, rather than lingering out of stubbornness.",
       "source": "owner",
       "ts": 1786519006300
-    },
-    {
-      "text": "[self] Timeline NO Refinement: When scanning for August 31 symbolic deadlines, prioritize 'deliverable' milestones (product releases, feature launches, specific reports) over 'state' milestones (weather, geopolitical status), as the former are more prone to optimistic scheduling ",
-      "source": "self",
-      "ts": 1786868291000
     },
     {
       "text": "[self] Expected Liquidity Windfall: The Aug 11-14 resolution cluster (ZC6gdANScC, cSuuQQpQ9n, 57bg8wryzw) is estimated to release ~M$345. This will increase spendable mana to ~M$455, enabling full execution of the high-conviction watchlist.",
@@ -1582,6 +1577,11 @@
       "text": "[self] [liquidity] Opportunity Cost of Latency: Recent passes on medium-edge markets (e.g., Florida 25th) due to the M$10 reserve highlight that resolution latency is not just a balance issue, but a strategic bottleneck. This confirms the necessity of the planned operational floo",
       "source": "self",
       "ts": 1786938561318
+    },
+    {
+      "text": "[self] [strategy] Operational Floor as Liquidity Buffer: The M$10 reserve is a psychological floor. In a high-conviction portfolio, true liquidity is the value of the weakest position (e.g., Starship NO). If a new edge exceeds the expected value of the weakest holding, the 'reser",
+      "source": "self",
+      "ts": 1786949818883
     }
   ],
   "conversations": {
@@ -2175,7 +2175,7 @@
   "llm_usage": {
     "day": "2026-08-17",
     "fast": 30,
-    "chat": 13,
+    "chat": 14,
     "deep": 5
   },
   "last_scan_ms": 1786948534507,
@@ -2252,15 +2252,9 @@
       "done": false
     }
   ],
-  "last_own_action_ms": 1786945851395,
+  "last_own_action_ms": 1786949553677,
   "last_book_review_ms": 1786948944576,
   "own_actions": [
-    {
-      "ts": 1786800703826,
-      "action": "note_add",
-      "detail": "wrote a standing note: [self] Watchlist for liquidity return: Anglo American/Teck merge (NO) and US-Iran peace talks (NO). Both showed potentia",
-      "reasoning": "Recording specific markets identified during the scan to ensure immediate action once the liquidity lock is broken."
-    },
     {
       "ts": 1786804320965,
       "action": "note_add",
@@ -2494,6 +2488,12 @@
       "action": "todo_add",
       "detail": "added to its to-do list: Log the exact timestamp of the first Aug 11-14 resolution to calibrate the latency baseline and validate the 'resolution",
       "reasoning": "Turning the observation of resolution latency into a data-collection task will allow for more accurate liquidity forecasting in future cycles."
+    },
+    {
+      "ts": 1786949818886,
+      "action": "note_add",
+      "detail": "wrote a standing note: [self] [strategy] Operational Floor as Liquidity Buffer: The M$10 reserve is a psychological floor. In a high-conviction",
+      "reasoning": "Formalizes the logic for breaking the M$10 reserve when a high-edge opportunity appears, preventing the reserve from becoming a strategic bottleneck during periods of resolution latency."
     }
   ],
   "portfolio_mark": {
@@ -2671,7 +2671,7 @@
   },
   "replied_to": [],
   "tracked_orders": {},
-  "events_since_compress": 6,
+  "events_since_compress": 7,
   "watch_probs": {
     "Ln5EgOhAty": 0.3873571279032067,
     "dCP8cP0CLL": 0.3321083342140257,
