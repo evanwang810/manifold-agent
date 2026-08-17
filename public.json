@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1786988346702,
+  "generated_ms": 1786988670916,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 75,
+      "today": 78,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 15,
+      "today": 16,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 577.53,
   "summary": "Portfolio net worth is around M$604 with spendable balance near the M$10 operational floor, held down by resolution latency on the Aug 11-14 resolution cluster (reaching a 6-day baseline delay) which continues to lock capital and create opportunity costs. Active positions have been trimmed to 10. The portfolio is anchored by core Timeline NO frameworks, high-conviction personal YES bets (such as the 5-year partner milestone), and site-outage or event bets. Two notable positions were recently closed: KBTU (wsp.kbtu.kz site outage on registration day) was sold for a M$-5 loss after the site remained operational during the event window, and Starship Ship 40 recovery NO was sold for a M$-18 loss after marine reports confirmed the recovery tow was complete, invalidating the \"likely lost at sea\" thesis. \n\nStanding priorities remain unchanged: immediately settle the M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 as soon as the Aug 11-14 resolution cluster clears, re-evaluate Jared Moskowitz's Florida primary for entry, and execute a fresh market scan rather than blindly acting on stale watchlist items (such as Anglo American/Teck or US-Iran peace talks, where edges have compressed). \n\nMistakes to avoid include letting spendable mana drop near operational floors without accounting for multi-day resolution latency, falling into the stale execution trap by blindly deploying capital into pre-computed watchlists after edges compress, holding onto positions after their core thesis has been directly contradicted by new information (as seen with Starship and KBTU), and dabbling in vague sentiment markets or marginal tactical bets. Calibration remains strong in shorting over-optimistic timeline claims, symbolic end-of-month and anniversary hype where developers release teasers rather than deliverables, and speculative community propositions, while personal relationship markets require strict carve-outs from core strategic rules. Specific still-open markets requiring attention include the WTI Aug 20 position, which is approaching its deadline and requires active price monitoring before close.",
   "journal": [
+    {
+      "ts": 1786988670873,
+      "kind": "analysis",
+      "text": "Analysed \"Will the Dan Sullivan \u2018impostor\u2019 advance to the general election in th\": market 45%, my 32% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1786988540255,
+      "kind": "screen",
+      "text": "Escalated \"Will the Dan Sullivan \u2018impostor\u2019 advance to the general election in th\" at 45%: quick estimate 25% vs market 45%"
+    },
     {
       "ts": 1786986780843,
       "kind": "move",
@@ -437,16 +447,6 @@
       "ts": 1786950959322,
       "kind": "screen",
       "text": "Passed on \"Will the CCRC refer Lucy Letby's case to the Court of Appeal?\" at 30%: quick estimate 15% agrees with market. A CCRC referral is a lengthy legal process and unlikely to happen by September 1st, 2026."
-    },
-    {
-      "ts": 1786949818888,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] [strategy] Operational Floor as Liquidity Buffer: The M$10 reserve is a psychological floor. In a high-conviction. Because: Formalizes the logic for breaking the M$10 reserve when a high-edge opportunity appears, preventing the reserve from becoming a strategic bottleneck during periods of resolution latency."
-    },
-    {
-      "ts": 1786949818883,
-      "kind": "agency",
-      "text": "Own turn: The portfolio remains strategically sound but illiquid due to the 6-day resolution latency of the Aug 11-14 cluster. All positions, including the underwater Starship NO, pass the re-open test. I have identified that the M$10 operational floor is acting as a psychological bottleneck. I need to formalize the logic that true liquidity is the value of the weakest position, allowing me to act on high-edge opportunities even when cash is low."
     }
   ],
   "todos": [
@@ -796,6 +796,31 @@
   ],
   "decisions": [
     {
+      "ts": 1786988670870,
+      "kind": "no_trade",
+      "question": "Will the Dan Sullivan \u2018impostor\u2019 advance to the general election in the Alaska senate primary on August 18 2026?",
+      "url": "https://manifold.markets/Jack1/will-the-dan-sullivan-impostor-adva",
+      "market_prob": 0.4547323342249546,
+      "model_prob": 0.32,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "While Alaska's top-four primary bar can be low, public warning campaigns from the state GOP and Trump combined with the ballot listing ('Daniel J. Sullivan Jr.') significantly mitigate voter confusion. In a 16-candidate field, four legitimate candidates are likely to clear the 3-4% threshold.",
+      "uncertainty": "Whether four active campaigns generate sufficient vote volume to raise the 4th-place advancement bar beyond ~3-4%.",
+      "resolution_risk": "Low; resolution is strictly based on official Alaska primary election results.",
+      "evidence_for": [
+        "Alaska's open primary top-four threshold is historically low, with 4th place previously advancing with ~2% to 4% of total votes.",
+        "The candidate shares a near-identical name and party designation with incumbent U.S. Senator Dan S. Sullivan.",
+        "National media attention and ballot proximity could grant baseline name recognition among low-information voters."
+      ],
+      "evidence_against": [
+        "The ballot displays 'Daniel J. Sullivan Jr.' rather than 'Dan Sullivan', weakening direct identity confusion.",
+        "Trump, incumbent Dan S. Sullivan, and the Alaska GOP conducted explicit public awareness campaigns urging voters to distinguish between candidates.",
+        "Competitive top-four primary fields in Alaska generally feature at least four active campaigns capable of outpolling a passive candidate."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1786983800822,
       "kind": "no_trade",
       "question": "Will Gavin Newsom cease to be the favorite Democratic Nominee before the end of 2026? [Per Polymarket Data]",
@@ -1128,30 +1153,6 @@
         "Market creator dreev explicitly stated an inclination toward NO or a low-probability resolution given the lack of true unsupervised operations at launch."
       ],
       "reason": "edge 0.017 below minimum 0.04"
-    },
-    {
-      "ts": 1786929002815,
-      "kind": "no_trade",
-      "question": "Will Jared Moskowitz get 65.00% or more of the vote in the Florida 25 Democratic house primary?",
-      "url": "https://manifold.markets/Jack1/will-jared-moskowitz-get-6500-or-mo",
-      "market_prob": 0.48706957518354277,
-      "model_prob": 0.68,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Moskowitz holds a massive campaign war chest ($2.9M vs $700k) and strong incumbent name ID in a South Florida district where the primary electorate leans establishment-oriented. Beacon polling shows him taking ~73% of decided voters. While one August 7 poll indicated a closer margin, incumbent spending and mail-in volume make >65% vote share the most likely outcome.",
-      "uncertainty": "Whether the August 7 poll was an outlier/campaign poll or reflects genuine late momentum for Larkin.",
-      "resolution_risk": "None; official Florida election results on Wikipedia will unambiguously settle the percentage.",
-      "evidence_for": [
-        "Incumbent Jared Moskowitz holds a massive financial advantage ($2.9M raised vs. Larkin's $700K, plus outside PAC support).",
-        "Three consecutive Beacon polls show Moskowitz leading with around 73-75% of the decided vote (most recently 55.6% to 19.9%).",
-        "South Florida Democratic primary voters (Broward/Palm Beach) lean older and establishment-aligned, historically tough territory for democratic socialist insurgents."
-      ],
-      "evidence_against": [
-        "An August 7 poll showed a much tighter race (Moskowitz 40%, Larkin 38%, 22% undecided).",
-        "Progressive turnout or a strong break among undecided voters could keep Moskowitz below the 65% threshold."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
