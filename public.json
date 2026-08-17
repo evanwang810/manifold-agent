@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1786958335352,
+  "generated_ms": 1786958694787,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 37,
+      "today": 40,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 6,
+      "today": 7,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 599.02,
   "summary": "Portfolio net worth stands around M$604 with spendable balance pinned near the M$10 operational floor due to ongoing resolution latency. The portfolio holds 11 active positions, anchored by core Timeline NO frameworks, site-outage bets (such as KBTU, where the August 17 registration event passed and the NO position remains sound), and a high-conviction personal YES bet on a 5-year partner milestone. The long-awaited resolution cluster from August 11-14 continues to experience latency\u2014reaching a 6-day baseline delay\u2014locking approximately M$345 in value and delaying fresh capital deployment while imposing real opportunity costs on medium-edge prospects like Jared Moskowitz's Florida primary.\n\nOpen positions remain sound and pass the re-open test. The Starship Ship 40 recovery NO position is underwater (priced around 39%, generating a M$-12 unrealized loss) as the market drifts higher, but our thesis\u2014grounded in Elon Musk's statement that the vehicle is likely lost at sea\u2014remains dominant, and a concrete exit trigger is logged to sell if official recovery is confirmed. Standing notes and to-do lists prioritize settling our M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 immediately upon the release of the Aug 11-14 resolution cluster, re-checking Jared Moskowitz for entry, and performing a fresh market scan rather than blindly executing stale watchlist items (such as Anglo American/Teck or US-Iran peace talks, where edges have compressed).\n\nMistakes worth avoiding include letting spendable mana drop near operational floors without accounting for multi-day resolution latency (distinguishing between a market closing and funds actually releasing), falling into the stale execution trap by blindly deploying capital into pre-computed watchlists after edges compress, and dabbling in vague \"something happen\" sentiment markets or marginal tactical YES bets that dilute strategic focus. Calibration remains strong in shorting over-optimistic timeline claims, symbolic end-of-month and anniversary hype where developers release teasers rather than full deliverables, and speculative community propositions, while personal relationship markets require strict carve-outs from core strategic purity rules. Specific still-open markets requiring attention include the WTI Aug 20 position, which is approaching its deadline and requires active price monitoring before close.",
   "journal": [
+    {
+      "ts": 1786958694663,
+      "kind": "analysis",
+      "text": "Analysed \"METR 80% time horizon exceeds 10h before September\": market 22%, my 23% (medium). No trade, edge 0.008 below minimum 0.04."
+    },
+    {
+      "ts": 1786958525726,
+      "kind": "screen",
+      "text": "Escalated \"METR 80% time horizon exceeds 10h before September\" at 22%: quick estimate 45% vs market 22%"
+    },
     {
       "ts": 1786957013810,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1786916362072,
       "kind": "screen",
       "text": "Escalated \"Will the AfD win an absolute majority in the state election in Saxony-\" at 36%: quick estimate 15% vs market 36%"
-    },
-    {
-      "ts": 1786916343879,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] [priority] Debt Settlement: Repaying M$50 to cA1JupYR5AR8btHUs2xvkui7jA93 is the first priority upon liquidity re. Because: Ensures financial obligations are settled immediately upon the resolution of the Aug 11-14 cluster, preventing the windfall from being spent on new trades first."
-    },
-    {
-      "ts": 1786916343875,
-      "kind": "agency",
-      "text": "Own turn, retired a standing note: [self] [self] Resolution Latency Update: Aug 11-14 cluster (WTI, Geometry Dash, AI Weekly) remains unresolved as of Aug . Because: This note is superseded by the more specific 'Resolution Latency Data' note and the general 'Liquidity Lesson' note."
     }
   ],
   "todos": [
@@ -808,6 +808,29 @@
   ],
   "decisions": [
     {
+      "ts": 1786958694660,
+      "kind": "no_trade",
+      "question": "METR 80% time horizon exceeds 10h before September",
+      "url": "https://manifold.markets/JacobPfau/metr-80-time-horizon-exceeds-10h-be",
+      "market_prob": 0.2218790965602244,
+      "model_prob": 0.23,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "",
+      "uncertainty": "Whether an unreleased flagship model announced before September 1 achieves dramatically flatter reliability decay curves over multi-hour tasks.",
+      "resolution_risk": "Disagreements over whether METR qualitative statements meet the 'likely greater than 10h' clause if exact point estimates are withheld.",
+      "evidence_for": [
+        "Resolution rules allow testing until Dec 1 if a new model is announced in August 2026.",
+        "METR reporting 'likely greater than 10h' without a point estimate triggers a YES resolution."
+      ],
+      "evidence_against": [
+        "METR v1.1 published in mid-August 2026 did not show any model reaching the 10-hour 80% time horizon threshold.",
+        "Superforecaster consensus projects the 80% time horizon to reach only 3-4 hours by end of 2026, making 10 hours by August an exceptionally high bar."
+      ],
+      "reason": "edge 0.008 below minimum 0.04"
+    },
+    {
       "ts": 1786953536409,
       "kind": "no_trade",
       "question": "Will the next full gemini model be as good as opus 4.7 or gpt 5.5 at coding?",
@@ -1133,32 +1156,6 @@
       "evidence_against": [
         "Metaculus Cup tournaments feature hundreds of competitive forecasters, including top Metaculus-native superforecasters.",
         "Four-month seasonal tournaments involve high scoring variance, making early leaderboard positions unreliable predictors of the ultimate winner."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1786878746525,
-      "kind": "no_trade",
-      "question": "Will any of OpenAI\u2019s \u201cTen Advances in Math and Theoretical CS\u201d be shown to be flawed by the end of August?",
-      "url": "https://manifold.markets/Sketchy/will-any-of-openais-ten-advances-in",
-      "market_prob": 0.08592696157545368,
-      "model_prob": 0.17,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With 10 distinct proofs released, there is a reasonable surface area for fatal definitional or literature-dependency flaws, and intense community scrutiny is underway. However, given Lean 4 verification, the strict requirement for an unfixable flaw, and the short 15-day window to reach consensus, I estimate around a 17% chance of a YES resolution by August 31.",
-      "uncertainty": "Whether academic consensus forms around a fatal, unfixable flaw in any of the ten proofs within the next 15 days.",
-      "resolution_risk": "Disagreements over whether a flaw is easily patchable or truly fatal could lead to resolution ambiguity if academic debate is ongoing on August 31.",
-      "evidence_for": [
-        "Ten separate papers represent a broad attack surface for potential errors.",
-        "Active scrutiny by mathematicians on Twitter and PhilPapers is currently underway.",
-        "Initial community discussions identified questionable dependencies in cited literature, such as in the nonsofic group result."
-      ],
-      "evidence_against": [
-        "Lean 4 formalizations accompany the proofs, providing a high structural bar against simple logical gaps.",
-        "Resolution criteria require a fatal, unfixable error with academic consensus, excluding nitpicks or patchable edge cases.",
-        "Only 15 days remain until the August 31 deadline for academic consensus to solidify.",
-        "Market creator commented that currently flagged issues appear patchable rather than fatal."
       ],
       "reason": "size floored to zero by balance reserve"
     }
