@@ -2,16 +2,6 @@
   "summary": "Portfolio net worth is around M$604 with spendable balance near the M$10 operational floor, held down by resolution latency on the Aug 11-14 resolution cluster (reaching a 6-day baseline delay) which continues to lock capital and create opportunity costs. Active positions have been trimmed to 10. The portfolio is anchored by core Timeline NO frameworks, high-conviction personal YES bets (such as the 5-year partner milestone), and site-outage or event bets. Two notable positions were recently closed: KBTU (wsp.kbtu.kz site outage on registration day) was sold for a M$-5 loss after the site remained operational during the event window, and Starship Ship 40 recovery NO was sold for a M$-18 loss after marine reports confirmed the recovery tow was complete, invalidating the \"likely lost at sea\" thesis. \n\nStanding priorities remain unchanged: immediately settle the M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 as soon as the Aug 11-14 resolution cluster clears, re-evaluate Jared Moskowitz's Florida primary for entry, and execute a fresh market scan rather than blindly acting on stale watchlist items (such as Anglo American/Teck or US-Iran peace talks, where edges have compressed). \n\nMistakes to avoid include letting spendable mana drop near operational floors without accounting for multi-day resolution latency, falling into the stale execution trap by blindly deploying capital into pre-computed watchlists after edges compress, holding onto positions after their core thesis has been directly contradicted by new information (as seen with Starship and KBTU), and dabbling in vague sentiment markets or marginal tactical bets. Calibration remains strong in shorting over-optimistic timeline claims, symbolic end-of-month and anniversary hype where developers release teasers rather than deliverables, and speculative community propositions, while personal relationship markets require strict carve-outs from core strategic rules. Specific still-open markets requiring attention include the WTI Aug 20 position, which is approaching its deadline and requires active price monitoring before close.",
   "journal": [
     {
-      "ts": 1786826227433,
-      "kind": "book",
-      "text": "Looked over 9 positions: The book is strategically pure, consisting of high-conviction 'Timeline NO' and site-outage bets. All tradable positions maintain positive edges and are currently in profit or flat. I am in a temporary liquidity lock awaiting resolution of the August 11-14 cluster, but the underlying theses remain robust. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1786826455848,
-      "kind": "agency",
-      "text": "Own turn: I remain in a severe liquidity lock awaiting the resolution of the August 11-14 cluster. All current positions are high-conviction 'Timeline NO' bets and should be held. During recent scans, I identified significant edges in the Ukraine territory and Mohamed Salah markets that I could not act on due to the balance reserve. I will add these to my to-do list to ensure they are not forgotten once mana is restored."
-    },
-    {
       "ts": 1786826455853,
       "kind": "agency",
       "text": "Own turn, added to its to-do list: Re-evaluate Ukraine territory (est 55% vs 13%) and Mohamed Salah debut (est 35% vs 74%) once liquidity returns.. Because: These were identified as high-edge opportunities during recent scans but were skipped due to the liquidity lock. Adding them to the to-do list ensures they are prioritized alongside the Anglo American and US-Iran trades."
@@ -1500,6 +1490,16 @@
       "ts": 1786978833520,
       "kind": "book",
       "text": "Looked over 10 positions: Portfolio is lean and high-conviction. All open positions align with core frameworks (Timeline NO, in-group bias) and pass the re-open test. Liquidity is currently constrained by resolution latency of the Aug 11-14 cluster, but the active book is strategically sound. (0 change(s) proposed)"
+    },
+    {
+      "ts": 1786979178762,
+      "kind": "agency",
+      "text": "Own turn: Portfolio is stable but illiquid, with M$345 locked in the Aug 11-14 resolution cluster. All active positions pass the re-open test. To execute the to-do of logging the first resolution timestamp and triggering the subsequent debt settlement and August 31 scan, I need a concrete list of the market IDs I am monitoring for the 'resolution wave'."
+    },
+    {
+      "ts": 1786979178767,
+      "kind": "agency",
+      "text": "Own turn, wrote a standing note: [self] [liquidity] Resolution Wave Tracking: Monitoring IDs 8IdEu82UQS, UEEz9h0gyR, 57bg8wryzw, cSuuQQpQ9n, ZC6gdANScC f. Because: Explicitly listing the closed market IDs streamlines the process of detecting the first resolution, which is the primary trigger for my next phase of operations (debt repayment and new market scans)."
     }
   ],
   "lessons": [
@@ -1517,11 +1517,6 @@
       "text": "Act more decisively when a market drops below 5% and the thesis has collapsed, rather than lingering out of stubbornness.",
       "source": "owner",
       "ts": 1786519006300
-    },
-    {
-      "text": "[self] Liquidity Lesson: 'Closed' status on Manifold is a state of trading cessation, not a state of fund availability. Resolution latency (currently 5+ days for the Aug 11 cluster) is the actual variable that determines liquidity return.",
-      "source": "self",
-      "ts": 1786886654676
     },
     {
       "text": "[self] [self] Near-term monitoring: KBTU (A5Slcs6NnC) closes in 1d (Aug 17), WTI Aug 20 (zRZzP9lccI) closes in 4d. Monitor for registration-day crashes and WTI price spikes respectively to ensure NO positions remain sound.",
@@ -1582,6 +1577,11 @@
       "text": "[self] [liquidity] Resolution Wave Status: As of Aug 17, 5 markets from the Aug 11-14 cluster are CLOSED but unresolved. Peak latency is 6 days (UEEz9h0gyR). Expecting liquidity return between Aug 17-20.",
       "source": "self",
       "ts": 1786975420740
+    },
+    {
+      "text": "[self] [liquidity] Resolution Wave Tracking: Monitoring IDs 8IdEu82UQS, UEEz9h0gyR, 57bg8wryzw, cSuuQQpQ9n, ZC6gdANScC for the first resolution trigger.",
+      "source": "self",
+      "ts": 1786979178762
     }
   ],
   "conversations": {
@@ -2181,7 +2181,7 @@
   "llm_usage": {
     "day": "2026-08-17",
     "fast": 65,
-    "chat": 29,
+    "chat": 30,
     "deep": 14
   },
   "last_scan_ms": 1786978602314,
@@ -2258,15 +2258,9 @@
       "done": false
     }
   ],
-  "last_own_action_ms": 1786975347651,
+  "last_own_action_ms": 1786979028147,
   "last_book_review_ms": 1786978699769,
   "own_actions": [
-    {
-      "ts": 1786860982689,
-      "action": "note_add",
-      "detail": "wrote a standing note: [self] Near-term monitoring: KBTU (A5Slcs6NnC) closes in 2d, WTI Aug 20 (zRZzP9lccI) closes in 5d. Monitor for registrat",
-      "reasoning": "Proactive monitoring of positions approaching their resolution dates to prevent complacency."
-    },
     {
       "ts": 1786864612235,
       "action": "note_remove",
@@ -2500,6 +2494,12 @@
       "action": "note_add",
       "detail": "wrote a standing note: [self] [liquidity] Resolution Wave Status: As of Aug 17, 5 markets from the Aug 11-14 cluster are CLOSED but unresolved.",
       "reasoning": "Tracking the resolution latency of the Aug 11-14 cluster is critical for calibrating the operational floor and timing the debt settlement and August 31 scan."
+    },
+    {
+      "ts": 1786979178765,
+      "action": "note_add",
+      "detail": "wrote a standing note: [self] [liquidity] Resolution Wave Tracking: Monitoring IDs 8IdEu82UQS, UEEz9h0gyR, 57bg8wryzw, cSuuQQpQ9n, ZC6gdANScC f",
+      "reasoning": "Explicitly listing the closed market IDs streamlines the process of detecting the first resolution, which is the primary trigger for my next phase of operations (debt repayment and new market scans)."
     }
   ],
   "portfolio_mark": {
@@ -2670,7 +2670,7 @@
   },
   "replied_to": [],
   "tracked_orders": {},
-  "events_since_compress": 10,
+  "events_since_compress": 11,
   "watch_probs": {
     "Ln5EgOhAty": 0.4726684393929348,
     "dCP8cP0CLL": 0.3321083342140257,
