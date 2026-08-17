@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1786975808837,
+  "generated_ms": 1786976214700,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 59,
+      "today": 62,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 12,
+      "today": 13,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 593.69,
   "summary": "Portfolio net worth is around M$604 with spendable balance near the M$10 operational floor, held down by resolution latency on the Aug 11-14 resolution cluster (reaching a 6-day baseline delay) which continues to lock capital and create opportunity costs. Active positions have been trimmed to 10. The portfolio is anchored by core Timeline NO frameworks, high-conviction personal YES bets (such as the 5-year partner milestone), and site-outage or event bets. Two notable positions were recently closed: KBTU (wsp.kbtu.kz site outage on registration day) was sold for a M$-5 loss after the site remained operational during the event window, and Starship Ship 40 recovery NO was sold for a M$-18 loss after marine reports confirmed the recovery tow was complete, invalidating the \"likely lost at sea\" thesis. \n\nStanding priorities remain unchanged: immediately settle the M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 as soon as the Aug 11-14 resolution cluster clears, re-evaluate Jared Moskowitz's Florida primary for entry, and execute a fresh market scan rather than blindly acting on stale watchlist items (such as Anglo American/Teck or US-Iran peace talks, where edges have compressed). \n\nMistakes to avoid include letting spendable mana drop near operational floors without accounting for multi-day resolution latency, falling into the stale execution trap by blindly deploying capital into pre-computed watchlists after edges compress, holding onto positions after their core thesis has been directly contradicted by new information (as seen with Starship and KBTU), and dabbling in vague sentiment markets or marginal tactical bets. Calibration remains strong in shorting over-optimistic timeline claims, symbolic end-of-month and anniversary hype where developers release teasers rather than deliverables, and speculative community propositions, while personal relationship markets require strict carve-outs from core strategic rules. Specific still-open markets requiring attention include the WTI Aug 20 position, which is approaching its deadline and requires active price monitoring before close.",
   "journal": [
+    {
+      "ts": 1786976214585,
+      "kind": "analysis",
+      "text": "Analysed \"Anglo American & Teck Resources merge by Sep 1, 2026\": market 5%, my 5% (high). No trade, edge 0.003 below minimum 0.04."
+    },
+    {
+      "ts": 1786976005687,
+      "kind": "screen",
+      "text": "Escalated \"Anglo American & Teck Resources merge by Sep 1, 2026\" at 5%: quick estimate 35% vs market 5%"
+    },
     {
       "ts": 1786975420746,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1786938561318,
       "kind": "agency",
       "text": "Own turn: The portfolio is strategically sound but remains illiquid, with M$345 locked in the Aug 11-14 resolution cluster. All open positions, including the underwater Starship NO, pass the re-open test. I've noticed that this resolution latency is now creating a tangible opportunity cost, as I've had to pass on medium-edge positions (e.g., Florida 25th) due to the balance reserve. This reinforces the need to re-evaluate my operational floor."
-    },
-    {
-      "ts": 1786937957775,
-      "kind": "book",
-      "text": "Looked over 11 positions: The portfolio is lean and strategically sound, anchored by 'Timeline NO' and 'Site Outage' frameworks. All open positions pass the re-open test. The Starship NO position is underwater but remains a value entry based on the 'likely lost' thesis. Liquidity is currently constrained by resolution latency of the Aug 11-14 cluster. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1786936399212,
-      "kind": "analysis",
-      "text": "Analysed \"Will James Fishback get second in the Florida Republican primary for g\": market 32%, my 5% (medium). No trade, size floored to zero by balance reserve."
     }
   ],
   "todos": [
@@ -796,6 +796,32 @@
   ],
   "decisions": [
     {
+      "ts": 1786976214582,
+      "kind": "no_trade",
+      "question": "Anglo American & Teck Resources merge by Sep 1, 2026",
+      "url": "https://manifold.markets/MikhailTal/anglo-american-teck-resources-merge-y5ssRzUcR5",
+      "market_prob": 0.053259597871995024,
+      "model_prob": 0.05,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With only 15 days until the September 1 deadline, legal completion by then is very unlikely. Although Teck obtained final court approval on August 14 and bond consents are done, regulatory reviews (notably China SAMR) remain pending and official closing guidance spans September 2026 to March 2027. Completing all final legal filings in under two weeks is a narrow window, putting probability at ~5%.",
+      "uncertainty": "Whether China SAMR and remaining antitrust regulators grant sudden, unconditional clearance in time for an expedited legal closing before September 1.",
+      "resolution_risk": "The merger could be fully cleared and announced as imminent prior to September 1, but if formal legal completion occurs after 11:59 pm ET on Sep 1, 2026, the market resolves NO.",
+      "evidence_for": [
+        "Shareholder approvals (>99%) and final court approval (obtained ~Aug 14, 2026) are complete.",
+        "Bondholder consent solicitations were completed on August 12, 2026.",
+        "Executive leadership team was announced on July 30, 2026."
+      ],
+      "evidence_against": [
+        "Only 15 days remain before the September 1, 2026 resolution deadline.",
+        "Public guidance projects closing between September 2026 and March 2027.",
+        "China's SAMR regulatory review remains in a slower, normal procedure track and has not granted final clearance.",
+        "Multi-jurisdictional legal completion procedures and filings typically require weeks after final clearances."
+      ],
+      "reason": "edge 0.003 below minimum 0.04"
+    },
+    {
       "ts": 1786973694304,
       "kind": "bet",
       "question": "Will a Manifolder win the Summer Metaculus Cup",
@@ -1122,29 +1148,6 @@
         "Bitcoin daily close on CoinMarketCap has not reached $85,000.",
         "With Bitcoin reportedly sitting in the $64k-$78k range, reaching an $85,000 daily close requires a 10% to 33% surge within the remaining 15 days before the September 1 close.",
         "If the Strait of Hormuz is designated as freely open before BTC reaches $85k, or if BTC fails to hit $85k before market expiration, the market resolves to NO."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1786908267642,
-      "kind": "no_trade",
-      "question": "Will the existence of a non-MF group be proved this month?",
-      "url": "https://manifold.markets/SCS/will-the-existence-of-a-nonmf-group",
-      "market_prob": 0.9093584520475179,
-      "model_prob": 0.86,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With Fournier-Facio's Aug 4 arXiv preprint ('A torsion-free non-sofic group') following OpenAI's Aug 1 announcement, a candidate proof was published in August 2026. Accounting for standard peer verification error rates in major breakthrough preprints, I estimate an 86% chance of YES resolution.",
-      "uncertainty": "Whether Fournier-Facio's August 2026 preprint passes peer verification and specifically proves the non-MF property.",
-      "resolution_risk": "The resolution criteria cite non-MF while recent preprints focus on non-sofic groups, creating potential technical ambiguity if non-sofic does not strictly yield non-MF under the creator's interpretation.",
-      "evidence_for": [
-        "August 1, 2026 OpenAI announcement claiming proofs for open problems including a non-sofic group",
-        "August 4, 2026 arXiv paper by Francesco Fournier-Facio titled 'A torsion-free non-sofic group'"
-      ],
-      "evidence_against": [
-        "MathOverflow discussions actively scrutinizing the new proof techniques for potential gaps or errors",
-        "Distinction between non-sofic and non-MF definitions if the paper does not fully resolve operator norm unitary approximation"
       ],
       "reason": "size floored to zero by balance reserve"
     }
