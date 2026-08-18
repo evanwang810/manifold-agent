@@ -2,16 +2,6 @@
   "summary": "Portfolio net worth sits around M$604. Spendable balance has been deliberately drawn down below the operational floor because the M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 was successfully settled by selling out of the Summer Metaculus Cup NO position at a minor M$-1 loss. Active exposure remains at 10 positions, anchored by Timeline NO frameworks, structural biases, and personal milestone bets. Most recently, a fresh position was established in \"Will the next full gemini model be frontier at coding?\" (YES, M$47 committed at 10% vs. 36% model estimate). Earlier closed-out trades include the WTI Aug 20 NO position (M$-21 loss after surging to 77% YES), the Starship NO position (M$-18 loss following recovery tow completion), and the KBTU site-down NO position (M$-5 loss).\n\nResolution latency on the Aug 11-14 market cluster (IDs 8IdEu82UQS, UEEz9h0gyR, 57bg8wryzw, cSuuQQpQ9n, ZC6gdANScC) continues to constrain true liquidity beyond the standard baseline, though debt settlement is now complete. \n\nMistakes to avoid include letting spendable mana drop near operational floors without accounting for multi-day resolution latency, falling into the stale execution trap by blindly deploying capital into pre-computed watchlists after edges compress, holding onto positions after their core thesis has been directly contradicted by new information (as seen with WTI, Starship, and KBTU), dabbling in vague sentiment markets or marginal tactical bets, and succumbing to \"activity bias\"\u2014the temptation to make suboptimal trades just to feel productive during periods of forced inactivity.\n\nCalibration remains strong in shorting over-optimistic timeline claims, symbolic end-of-month and anniversary hype where developers release teasers rather than deliverables, and speculative community propositions, while personal relationship markets require strict carve-outs from core strategic rules. Standing priorities are to maintain discipline during forced inactivity while awaiting the resolution wave cluster to clear and to perform a comprehensive fresh scan rather than acting on stale watchlist items.",
   "journal": [
     {
-      "ts": 1786905799024,
-      "kind": "screen",
-      "text": "Passed on \"Will there be widespread political unrest in the US in the summer of 2\" at 4%: quick estimate 15% agrees with market. Resolution is explicitly subjective to the creator's personal judgment, making deeper analysis futile."
-    },
-    {
-      "ts": 1786908210016,
-      "kind": "screen",
-      "text": "Escalated \"Will the existence of a non-MF group be proved this month?\" at 91%: quick estimate 5% vs market 91%"
-    },
-    {
       "ts": 1786908267644,
       "kind": "analysis",
       "text": "Analysed \"Will the existence of a non-MF group be proved this month?\": market 91%, my 86% (medium). No trade, size floored to zero by balance reserve."
@@ -1500,6 +1490,16 @@
       "ts": 1787060488781,
       "kind": "screen",
       "text": "Passed on \"Will Andrew Tate be in jail through the end of August?\" at 92%: quick estimate 85% agrees with market. Extradition cases involving serious charges like rape and trafficking routinely take months or years, making detention through August highly likely."
+    },
+    {
+      "ts": 1787060751355,
+      "kind": "book",
+      "text": "Looked over 10 positions: The book is lean and high-conviction, anchored by Timeline NO frameworks and personal milestones. Liquidity is severely constrained by resolution latency of the Aug 11-14 cluster. All structural positions pass the re-open test, but the book requires more free mana to avoid strategic bottlenecks. (1 change(s) proposed)"
+    },
+    {
+      "ts": 1787060794155,
+      "kind": "agency",
+      "text": "Own turn, sold out of \"Will I conclude my life is better 1 year from now than it wa\" (NO, P/L M$+1). Because: Low-edge personal sentiment bet. While not fundamentally broken, it is the weakest tradable position in the book and selling it frees up necessary liquidity."
     }
   ],
   "lessons": [
@@ -2233,9 +2233,9 @@
   },
   "llm_usage": {
     "day": "2026-08-18",
-    "chat": 26,
+    "chat": 27,
     "fast": 59,
-    "deep": 14
+    "deep": 15
   },
   "last_scan_ms": 1787060487521,
   "last_compress_ms": 1787059004447,
@@ -2314,14 +2314,8 @@
     }
   ],
   "last_own_action_ms": 1787057341010,
-  "last_book_review_ms": 1787056924140,
+  "last_book_review_ms": 1787060674789,
   "own_actions": [
-    {
-      "ts": 1786923750838,
-      "action": "todo_add",
-      "detail": "added to its to-do list: Monitor WTI Crude Oil Spot Price on Aug 19-20 to confirm NO position (zRZzP9lccI) remains sound before close.",
-      "reasoning": "Ensures active monitoring of the WTI position as it approaches its August 20 deadline, preventing passive loss if price action shifts."
-    },
     {
       "ts": 1786927541179,
       "action": "todo_done",
@@ -2555,6 +2549,12 @@
       "action": "todo_done",
       "detail": "ticked off: Settle M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 upon resolution of the Aug 11-14 cluster.",
       "reasoning": "Debt has been repaid."
+    },
+    {
+      "ts": 1787060794153,
+      "action": "sell",
+      "detail": "sold out of \"Will I conclude my life is better 1 year from now than it wa\" (NO, P/L M$+1)",
+      "reasoning": "Low-edge personal sentiment bet. While not fundamentally broken, it is the weakest tradable position in the book and selling it frees up necessary liquidity."
     }
   ],
   "portfolio_mark": {
@@ -2725,7 +2725,7 @@
   },
   "replied_to": [],
   "tracked_orders": {},
-  "events_since_compress": 1,
+  "events_since_compress": 3,
   "watch_probs": {
     "Ln5EgOhAty": 0.4726684393929348,
     "dCP8cP0CLL": 0.3321083342140257,
