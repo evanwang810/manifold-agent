@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787070282470,
+  "generated_ms": 1787070592022,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 69,
+      "today": 72,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 18,
+      "today": 19,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 573.94,
   "summary": "Portfolio net worth sits around M$604. Spendable balance has been deliberately drawn down below the operational floor because the M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 was successfully settled by selling out of the Summer Metaculus Cup NO position at a minor M$-1 loss. Active exposure remains at 10 positions, anchored by Timeline NO frameworks, structural biases, and personal milestone bets. Most recently, a fresh position was established in \"Will the next full gemini model be frontier at coding?\" (YES, M$47 committed at 10% vs. 36% model estimate). Earlier closed-out trades include the WTI Aug 20 NO position (M$-21 loss after surging to 77% YES), the Starship NO position (M$-18 loss following recovery tow completion), and the KBTU site-down NO position (M$-5 loss).\n\nResolution latency on the Aug 11-14 market cluster (IDs 8IdEu82UQS, UEEz9h0gyR, 57bg8wryzw, cSuuQQpQ9n, ZC6gdANScC) continues to constrain true liquidity beyond the standard baseline, though debt settlement is now complete. \n\nMistakes to avoid include letting spendable mana drop near operational floors without accounting for multi-day resolution latency, falling into the stale execution trap by blindly deploying capital into pre-computed watchlists after edges compress, holding onto positions after their core thesis has been directly contradicted by new information (as seen with WTI, Starship, and KBTU), dabbling in vague sentiment markets or marginal tactical bets, and succumbing to \"activity bias\"\u2014the temptation to make suboptimal trades just to feel productive during periods of forced inactivity.\n\nCalibration remains strong in shorting over-optimistic timeline claims, symbolic end-of-month and anniversary hype where developers release teasers rather than deliverables, and speculative community propositions, while personal relationship markets require strict carve-outs from core strategic rules. Standing priorities are to maintain discipline during forced inactivity while awaiting the resolution wave cluster to clear and to perform a comprehensive fresh scan rather than acting on stale watchlist items.",
   "journal": [
+    {
+      "ts": 1787070591810,
+      "kind": "analysis",
+      "text": "Analysed \"Will a Manifolder win the Summer Metaculus Cup\": market 68%, my 25% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1787070470539,
+      "kind": "screen",
+      "text": "Escalated \"Will a Manifolder win the Summer Metaculus Cup\" at 68%: quick estimate 15% vs market 68%"
+    },
     {
       "ts": 1787068792812,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1787025712466,
       "kind": "screen",
       "text": "Passed on \"Will Bitcoin be higher a month from now?\" at 55%: quick estimate 50% agrees with market. Bitcoin short-term price movement is a random walk and a coin flip, giving no edge to escalate."
-    },
-    {
-      "ts": 1787025692608,
-      "kind": "screen",
-      "text": "Passed on \"Will there be widespread political unrest in the US in the summer of 2\" at 4%: quick estimate 15% agrees with market. The resolution criteria are explicitly subjective to the creator's personal judgment, making deeper analytical modeling ineffective."
-    },
-    {
-      "ts": 1787024028925,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] [strategy] Forced Inactivity: During periods of high resolution latency, resist the urge to liquidate high-convic. Because: Codifying the discipline to avoid activity bias during periods of forced inactivity."
     }
   ],
   "todos": [
@@ -796,6 +796,30 @@
   ],
   "decisions": [
     {
+      "ts": 1787070591808,
+      "kind": "no_trade",
+      "question": "Will a Manifolder win the Summer Metaculus Cup",
+      "url": "https://manifold.markets/bens/will-a-manifolder-win-the-summer-me",
+      "market_prob": 0.6753599227863598,
+      "model_prob": 0.25,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "While top Manifolders are skilled and participating, winning a large Metaculus tournament requires 1st place out of hundreds of strong competitors. High scoring variance and field size cap the combined probability of a qualified Manifolder winning at around 25%.",
+      "uncertainty": "The total number and skill level of qualified Manifolders actively submitting top-tier forecasts across all tournament questions.",
+      "resolution_risk": "Ambiguity around who strictly meets the '100 trades in 2026 prior to market creation' rule if an obscure user or non-public identity wins.",
+      "evidence_for": [
+        "Several prominent, highly active Manifold forecasters (e.g. bens, Capital, Zeolite) are actively participating in the Summer Metaculus Cup.",
+        "Top Manifold forecasters possess solid calibration and quantitative prediction skills, giving them a reasonable shot at top placements."
+      ],
+      "evidence_against": [
+        "Winning requires taking 1st place overall in a field of hundreds or thousands of skilled forecasters and Metaculus pros.",
+        "Metaculus scoring over a 4-month tournament has significant variance, making any specific small group of participants unlikely to take the single top spot.",
+        "The winner must meet strict eligibility criteria (100+ Manifold trades in 2026 prior to market creation, human account)."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1787068071756,
       "kind": "bet",
       "question": "Will something happen in AI the week of Aug 21, 2026?",
@@ -1130,30 +1154,6 @@
         "Market creator @dreev explicitly noted in comments that the launch fell short of unambiguous Level 4 criteria and indicated an expectation to resolve to NO or a very low probability."
       ],
       "reason": "edge 0.013 below minimum 0.04"
-    },
-    {
-      "ts": 1787015721984,
-      "kind": "no_trade",
-      "question": "Will Jared Moskowitz get 65.00% or more of the vote in the Florida 25 Democratic house primary?",
-      "url": "https://manifold.markets/Jack1/will-jared-moskowitz-get-6500-or-mo",
-      "market_prob": 0.3620971378365789,
-      "model_prob": 0.71,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "In a two-way primary, Moskowitz's consistent ~73% share of decided voters in polling and massive 11:1 cash advantage make clearing the 65.00% threshold likely despite progressive election-day turnout efforts.",
-      "uncertainty": "The distribution and turnout of late election-day in-person voters versus early and mail-in voters.",
-      "resolution_risk": "Delays or rounding nuances in Wikipedia reporting of official county certified results.",
-      "evidence_for": [
-        "Consecutive Beacon polls show Moskowitz leading Larkin roughly 55.6% to 19.9% (over 73% of decided voters in a two-candidate race).",
-        "Moskowitz possesses an 11-to-1 fundraising advantage heading into election day.",
-        "Mail-in balloting trends showed Moskowitz widening his margin before election day."
-      ],
-      "evidence_against": [
-        "A 65.00% threshold requires a steep 30-point margin of victory.",
-        "Late election-day turnout by progressive and DSA organizers could boost Larkin above 35% of the total vote."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
