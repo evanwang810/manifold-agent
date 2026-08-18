@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787042838997,
+  "generated_ms": 1787043230215,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 39,
+      "today": 42,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 9,
+      "today": 10,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 571.33,
   "summary": "Portfolio net worth sits around M$604 with spendable balance pinned near the M$10 operational floor due to severe resolution latency in the Aug 11-14 market cluster, which has now exceeded a 7-day delay. Active positions are held at 10 after closing out the WTI Aug 20 NO position for a M$-21 loss when the market surged to 77% YES, cutting the Starship NO position for M$-18 when the recovery tow completed, and selling the KBTU site-down NO position for M$-5 as it failed during the event window. The portfolio is now lean and high-conviction, anchored by Timeline NO frameworks, structural biases such as the Metaculus Cup in-group visibility play, and personal milestone bets. \n\nStanding priorities remain unchanged: immediately settle the M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 as soon as the Aug 11-14 resolution cluster clears, re-evaluate Jared Moskowitz's Florida primary for entry, and execute a fresh market scan rather than blindly acting on stale watchlist items where edges have compressed. \n\nMistakes to avoid include letting spendable mana drop near operational floors without accounting for multi-day resolution latency, falling into the stale execution trap by blindly deploying capital into pre-computed watchlists after edges compress, holding onto positions after their core thesis has been directly contradicted by new information (as seen with WTI, Starship, and KBTU), dabbling in vague sentiment markets or marginal tactical bets, and falling for \"activity bias\"\u2014the temptation to make suboptimal trades just to feel productive during periods of forced inactivity. Calibration remains strong in shorting over-optimistic timeline claims, symbolic end-of-month and anniversary hype where developers release teasers rather than deliverables, and speculative community propositions, while personal relationship markets require strict carve-outs from core strategic rules. Specific still-open markets requiring attention include ongoing monitoring of the Aug 11-14 resolution cluster IDs (8IdEu82UQS, UEEz9h0gyR, 57bg8wryzw, cSuuQQpQ9n, ZC6gdANScC) to detect the liquidity wave trigger.",
   "journal": [
+    {
+      "ts": 1787043230110,
+      "kind": "analysis",
+      "text": "Analysed \"Will Bitcoin be higher 7 days from now?\": market 69%, my 62% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1787043027580,
+      "kind": "screen",
+      "text": "Escalated \"Will Bitcoin be higher 7 days from now?\" at 69%: quick estimate 50% vs market 69%"
+    },
     {
       "ts": 1787042653655,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1787001046976,
       "kind": "analysis",
       "text": "Analysed \"Will bitcoin rise to 85k before the Strait of Hormuz is freely open?\": market 73%, my 18% (medium). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1787000946899,
-      "kind": "screen",
-      "text": "Escalated \"Will bitcoin rise to 85k before the Strait of Hormuz is freely open?\" at 73%: quick estimate 35% vs market 73%"
-    },
-    {
-      "ts": 1786998538026,
-      "kind": "position",
-      "text": "Opened 113 NO on \"Will I conclude my life is better 1 year from now than it was at time of market \" at 66%, M$37 in."
     }
   ],
   "todos": [
@@ -796,6 +796,30 @@
   ],
   "decisions": [
     {
+      "ts": 1787043230107,
+      "kind": "no_trade",
+      "question": "Will Bitcoin be higher 7 days from now?",
+      "url": "https://manifold.markets/OnlySlides/will-bitcoin-be-higher-7-days-from-UIqhpuqItz",
+      "market_prob": 0.6916047146512259,
+      "model_prob": 0.62,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "BTC open price was $63,559.43 and current spot is ~$64,150 (+0.92%) with ~36 hours left. Given typical 1.5-day volatility of ~3%, the probability of remaining above the open is around 62%.",
+      "uncertainty": "Whether BTC holds above its $64,000 support level over the remaining 36 hours.",
+      "resolution_risk": "Discrepancies between CoinGecko spot pricing and fallback Yahoo Finance data, or exact hourly snapshot timing.",
+      "evidence_for": [
+        "BTC spot price is currently around $64,150, which is $590 (+0.92%) above the $63,559.43 creation baseline.",
+        "Only ~36 hours remain out of the 168-hour resolution period.",
+        "Realized volatility over the past 7 days has been low with flat consolidation."
+      ],
+      "evidence_against": [
+        "BTC is trading close to the $64,000 local support level, leaving a thin margin of safety.",
+        "Short-term technical momentum remains weak, making a pull-back below $63,559 plausible."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1787040697761,
       "kind": "no_trade",
       "question": "Will the next full gemini model be as good as opus 4.7 or gpt 5.5 at coding?",
@@ -1128,30 +1152,6 @@
         "Potential ambiguity in reaching a clear consensus on whether the proof is 'generally considered valid'."
       ],
       "reason": "edge 0.007 below minimum 0.04"
-    },
-    {
-      "ts": 1786993623091,
-      "kind": "no_trade",
-      "question": "Will Byron Donalds get 50.000% or more of the vote in the Florida Republican Primary for Governor?",
-      "url": "https://manifold.markets/Jack1/will-byron-donalds-get-50000-or-mor",
-      "market_prob": 0.8649252744716452,
-      "model_prob": 0.83,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Donalds leads polling averages near 45.7% in a multi-way field with ~25-30% undecided. Backed by Trump and TPUSA endorsements, he needs under a fifth of undecided voters to clear the 50.000% threshold.",
-      "uncertainty": "The distribution of late-deciding voters and potential polling non-response error among primary voters.",
-      "resolution_risk": "Official vote certification including minor/write-in candidates that marginally shifts the precise denominator for Donalds' vote share.",
-      "evidence_for": [
-        "Donalds leads polling averages at ~45.7% while his nearest competitor Collins is in the mid-teens (~14.1%).",
-        "Donalds holds endorsements from Donald Trump and Turning Point USA, which strongly influence late-deciding Republican primary voters.",
-        "With ~25-30% undecided, Donalds needs only about 14-17% of remaining undecided voters to cross 50.000%."
-      ],
-      "evidence_against": [
-        "Polling leaves ~25-30% of voters uncommitted, leaving room for election-day polling error or consolidation behind an alternative.",
-        "In a multi-candidate primary without a runoff requirement, non-Donalds candidates could collectively hold him just below 50.000%."
-      ],
-      "reason": "edge 0.035 below minimum 0.04"
     }
   ]
 }
