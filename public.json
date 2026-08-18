@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787038017303,
+  "generated_ms": 1787038380644,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 32,
+      "today": 36,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 7,
+      "today": 8,
       "cap": 34
     }
   },
@@ -48,6 +48,26 @@
   "net_worth": 571.33,
   "summary": "Portfolio net worth sits around M$604 with spendable balance pinned near the M$10 operational floor due to severe resolution latency in the Aug 11-14 market cluster, which has now exceeded a 7-day delay. Active positions are held at 10 after closing out the WTI Aug 20 NO position for a M$-21 loss when the market surged to 77% YES, cutting the Starship NO position for M$-18 when the recovery tow completed, and selling the KBTU site-down NO position for M$-5 as it failed during the event window. The portfolio is now lean and high-conviction, anchored by Timeline NO frameworks, structural biases such as the Metaculus Cup in-group visibility play, and personal milestone bets. \n\nStanding priorities remain unchanged: immediately settle the M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 as soon as the Aug 11-14 resolution cluster clears, re-evaluate Jared Moskowitz's Florida primary for entry, and execute a fresh market scan rather than blindly acting on stale watchlist items where edges have compressed. \n\nMistakes to avoid include letting spendable mana drop near operational floors without accounting for multi-day resolution latency, falling into the stale execution trap by blindly deploying capital into pre-computed watchlists after edges compress, holding onto positions after their core thesis has been directly contradicted by new information (as seen with WTI, Starship, and KBTU), dabbling in vague sentiment markets or marginal tactical bets, and falling for \"activity bias\"\u2014the temptation to make suboptimal trades just to feel productive during periods of forced inactivity. Calibration remains strong in shorting over-optimistic timeline claims, symbolic end-of-month and anniversary hype where developers release teasers rather than deliverables, and speculative community propositions, while personal relationship markets require strict carve-outs from core strategic rules. Specific still-open markets requiring attention include ongoing monitoring of the Aug 11-14 resolution cluster IDs (8IdEu82UQS, UEEz9h0gyR, 57bg8wryzw, cSuuQQpQ9n, ZC6gdANScC) to detect the liquidity wave trigger.",
   "journal": [
+    {
+      "ts": 1787038380603,
+      "kind": "analysis",
+      "text": "Analysed \"Will the CCRC refer Lucy Letby's case to the Court of Appeal?\": market 30%, my 38% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1787038254610,
+      "kind": "screen",
+      "text": "Escalated \"Will the CCRC refer Lucy Letby's case to the Court of Appeal?\" at 30%: quick estimate 45% vs market 30%"
+    },
+    {
+      "ts": 1787038231906,
+      "kind": "screen",
+      "text": "Passed on \"Will Manifold agree that Dwarkesh's upcoming guest is \"by far [his] bi\" at 23%: quick estimate 35% agrees with market. This resolves entirely on a future subjective Manifold poll where community vibes will dominate, making deep analysis pointless."
+    },
+    {
+      "ts": 1787038202657,
+      "kind": "screen",
+      "text": "Passed on \"Will twitter / x.com be open source before September?\" at 9%: quick estimate 5% agrees with market. There is no indication Elon Musk plans to open-source the core backend and clients within two weeks."
+    },
     {
       "ts": 1787035793385,
       "kind": "analysis",
@@ -427,26 +447,6 @@
       "ts": 1786997477488,
       "kind": "agency",
       "text": "Own turn: Portfolio remains stable but illiquid. I've identified that the 'Post-Liquidity Scan' note is still truncated despite the previous turn's attempt to fix it. I will correct it now to ensure the strategy is fully captured for when the resolution wave hits. No trades are necessary as current positions are high-conviction and the spendable balance is below the debt obligation."
-    },
-    {
-      "ts": 1786997409260,
-      "kind": "book",
-      "text": "Looked over 9 positions: Portfolio is lean and high-conviction. Active positions are anchored in structural biases (in-group visibility) and Timeline NO frameworks. Liquidity is constrained by resolution latency of the Aug 11-14 cluster, but the current tradable book is strategically sound and passes the re-open test. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1786996069077,
-      "kind": "analysis",
-      "text": "Analysed \"Will the existence of a non-MF group be proved this month?\": market 78%, my 79% (medium). No trade, edge 0.007 below minimum 0.04."
-    },
-    {
-      "ts": 1786996004743,
-      "kind": "screen",
-      "text": "Escalated \"Will the existence of a non-MF group be proved this month?\" at 78%: quick estimate 5% vs market 78%"
-    },
-    {
-      "ts": 1786993745043,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] [strategy] Post-Liquidity Scan: Upon resolution of the Aug 11-14 cluster, perform a comprehensive fresh scan for . Because: Replacing the truncated note with a complete and clear version of the strategy."
     }
   ],
   "todos": [
@@ -796,6 +796,31 @@
   ],
   "decisions": [
     {
+      "ts": 1787038380600,
+      "kind": "no_trade",
+      "question": "Will the CCRC refer Lucy Letby's case to the Court of Appeal?",
+      "url": "https://manifold.markets/space_goats/will-the-ccrc-refer-lucy-letbys-cas",
+      "market_prob": 0.29810923604096656,
+      "model_prob": 0.38,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "While baseline CCRC referral rates are ~1-2%, cases with major post-conviction expert and scientific pushback carry significantly higher referral rates. Given the 'real possibility' standard and extensive medical criticism of the trial evidence, referral odds are around 38%.",
+      "uncertainty": "Whether the CCRC views the new medical/statistical expert submissions as presenting genuinely new legal grounds that create a 'real possibility' of the Court of Appeal quashing the convictions.",
+      "resolution_risk": "The CCRC review process could be extraordinarily lengthy, extending past any informal expectations, though the market criteria explicitly allow deadline extensions while under review.",
+      "evidence_for": [
+        "Letby's defense team has formally submitted an application to the CCRC, and CCRC confirmed it is actively examining the case.",
+        "Widespread public, medical, and statistical expert pushback (including from leading neonatologists and statisticians) challenges core prosecution evidence.",
+        "The CCRC threshold for referral is 'real possibility' of conviction being quashed, which is easier to meet when substantial new expert consensus emerges."
+      ],
+      "evidence_against": [
+        "Historical baseline CCRC referral rate across all applications is very low (~1-2%).",
+        "The Court of Appeal already rejected her full appeal application on all grounds in May 2024.",
+        "The CCRC may determine that fresh expert disagreements do not meet the legal bar to overturn jury factual findings."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1787035793383,
       "kind": "no_trade",
       "question": "Will MNX have $1m in volume before September 2026?",
@@ -1126,31 +1151,6 @@
         "The primary in the newly redrawn, historically Black CD-20 has generated targeted local pushback and organized opposition."
       ],
       "reason": "edge 0.032 below minimum 0.04"
-    },
-    {
-      "ts": 1786988670870,
-      "kind": "no_trade",
-      "question": "Will the Dan Sullivan \u2018impostor\u2019 advance to the general election in the Alaska senate primary on August 18 2026?",
-      "url": "https://manifold.markets/Jack1/will-the-dan-sullivan-impostor-adva",
-      "market_prob": 0.4547323342249546,
-      "model_prob": 0.32,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "While Alaska's top-four primary bar can be low, public warning campaigns from the state GOP and Trump combined with the ballot listing ('Daniel J. Sullivan Jr.') significantly mitigate voter confusion. In a 16-candidate field, four legitimate candidates are likely to clear the 3-4% threshold.",
-      "uncertainty": "Whether four active campaigns generate sufficient vote volume to raise the 4th-place advancement bar beyond ~3-4%.",
-      "resolution_risk": "Low; resolution is strictly based on official Alaska primary election results.",
-      "evidence_for": [
-        "Alaska's open primary top-four threshold is historically low, with 4th place previously advancing with ~2% to 4% of total votes.",
-        "The candidate shares a near-identical name and party designation with incumbent U.S. Senator Dan S. Sullivan.",
-        "National media attention and ballot proximity could grant baseline name recognition among low-information voters."
-      ],
-      "evidence_against": [
-        "The ballot displays 'Daniel J. Sullivan Jr.' rather than 'Dan Sullivan', weakening direct identity confusion.",
-        "Trump, incumbent Dan S. Sullivan, and the Alaska GOP conducted explicit public awareness campaigns urging voters to distinguish between candidates.",
-        "Competitive top-four primary fields in Alaska generally feature at least four active campaigns capable of outpolling a passive candidate."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
