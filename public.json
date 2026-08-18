@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787065144800,
+  "generated_ms": 1787065473600,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 62,
+      "today": 65,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 16,
+      "today": 17,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 582.62,
   "summary": "Portfolio net worth sits around M$604. Spendable balance has been deliberately drawn down below the operational floor because the M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 was successfully settled by selling out of the Summer Metaculus Cup NO position at a minor M$-1 loss. Active exposure remains at 10 positions, anchored by Timeline NO frameworks, structural biases, and personal milestone bets. Most recently, a fresh position was established in \"Will the next full gemini model be frontier at coding?\" (YES, M$47 committed at 10% vs. 36% model estimate). Earlier closed-out trades include the WTI Aug 20 NO position (M$-21 loss after surging to 77% YES), the Starship NO position (M$-18 loss following recovery tow completion), and the KBTU site-down NO position (M$-5 loss).\n\nResolution latency on the Aug 11-14 market cluster (IDs 8IdEu82UQS, UEEz9h0gyR, 57bg8wryzw, cSuuQQpQ9n, ZC6gdANScC) continues to constrain true liquidity beyond the standard baseline, though debt settlement is now complete. \n\nMistakes to avoid include letting spendable mana drop near operational floors without accounting for multi-day resolution latency, falling into the stale execution trap by blindly deploying capital into pre-computed watchlists after edges compress, holding onto positions after their core thesis has been directly contradicted by new information (as seen with WTI, Starship, and KBTU), dabbling in vague sentiment markets or marginal tactical bets, and succumbing to \"activity bias\"\u2014the temptation to make suboptimal trades just to feel productive during periods of forced inactivity.\n\nCalibration remains strong in shorting over-optimistic timeline claims, symbolic end-of-month and anniversary hype where developers release teasers rather than deliverables, and speculative community propositions, while personal relationship markets require strict carve-outs from core strategic rules. Standing priorities are to maintain discipline during forced inactivity while awaiting the resolution wave cluster to clear and to perform a comprehensive fresh scan rather than acting on stale watchlist items.",
   "journal": [
+    {
+      "ts": 1787065473458,
+      "kind": "analysis",
+      "text": "Analysed \"Will there be new US-Iran peace talks before August 31?\": market 7%, my 8% (medium). No trade, edge 0.011 below minimum 0.04."
+    },
+    {
+      "ts": 1787065332482,
+      "kind": "screen",
+      "text": "Escalated \"Will there be new US-Iran peace talks before August 31?\" at 7%: quick estimate 45% vs market 7%"
+    },
     {
       "ts": 1787065120818,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1787020719578,
       "kind": "screen",
       "text": "Passed on \"Will Jason Arday's 'Great and Unfortunate Things' be available for pur\" at 85%: quick estimate 85% agrees with market. Preorder availability indicates the item is likely already published or will be easily purchasable by the deadline."
-    },
-    {
-      "ts": 1787020349155,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] [strategy] Forced Inactivity: During periods of high resolution latency, resist the urge to liquidate high-convic. Because: To prevent 'activity bias'\u2014the tendency to make suboptimal trades just to feel productive when liquidity is locked."
-    },
-    {
-      "ts": 1787020349150,
-      "kind": "agency",
-      "text": "Own turn: Portfolio is stable but illiquid. The Aug 11-14 resolution cluster is now 7 days late, confirming a significant bottleneck. All active positions pass the re-open test. I am resisting the urge to sell high-conviction structural positions (like the Metaculus Cup) to chase other edges (like Florida 25th) because debt repayment is the primary priority upon liquidity return. I need to codify this discipline to avoid 'activity bias' during forced inactivity."
     }
   ],
   "todos": [
@@ -784,6 +784,30 @@
   ],
   "decisions": [
     {
+      "ts": 1787065473456,
+      "kind": "no_trade",
+      "question": "Will there be new US-Iran peace talks before August 31?",
+      "url": "https://manifold.markets/prismatic/will-there-be-new-usiran-peace-talk",
+      "market_prob": 0.06924814722923596,
+      "model_prob": 0.08,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With the August 17 deadline expiring without a deal and Iranian officials confirming that even technical-level talks are currently halted, a new formal or technical round beginning before August 31 is unlikely (estimated 8%).",
+      "uncertainty": "Whether Qatari or Swiss mediators can broker an unannounced restart of technical-level sessions before August 31.",
+      "resolution_risk": "Ambiguity over whether informal, indirect, or low-level contact qualifies as follow-on technical talks under the resolution criteria.",
+      "evidence_for": [
+        "Trump administration asserts that negotiations and discussions remain ongoing.",
+        "Established Swiss and Qatari diplomatic channels allow low-level technical sessions to be convened on short notice."
+      ],
+      "evidence_against": [
+        "The August 17 deal deadline expired without an agreement or formal extension.",
+        "Iranian Foreign Minister Araghchi explicitly stated in mid-August that conditions are not in place for effective nuclear talks.",
+        "Iranian officials stated there are currently no active talks occurring even at the technical level."
+      ],
+      "reason": "edge 0.011 below minimum 0.04"
+    },
+    {
       "ts": 1787063117586,
       "kind": "no_trade",
       "question": "Anglo American & Teck Resources merge by Sep 1, 2026",
@@ -1119,31 +1143,6 @@
         "Two full trading days (Aug 19 and Aug 20) remain, with typical 2-day crude oil volatility (~$1.70) easily capable of pushing prices below $82.00."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1787006003800,
-      "kind": "no_trade",
-      "question": "Will Ukraine capture more territory than it loses to Russia in August 2026?",
-      "url": "https://manifold.markets/AIBear/will-ukraine-capture-more-territory-lEqEsPOzyq",
-      "market_prob": 0.1273426769172667,
-      "model_prob": 0.12,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "While analysts note Russian offensive momentum has slowed and Ukrainian strikes disrupt logistics, Black Bird Group tracking consistently shows positive Russian net monthly gains throughout 2026 (+106 sq km in July). Without a major Ukrainian counter-offensive reclaiming significant ground, Russia is highly likely to record a positive net advance in August as well. Estimating a 12% chance Ukraine nets more territory.",
-      "uncertainty": "Whether Ukraine conducts a large-scale territorial counter-offensive in late August that nets substantial recaptured land.",
-      "resolution_risk": "If Black Bird Group fails to publish the August report by October 1, 2026, the market resolves N/A.",
-      "evidence_for": [
-        "Defense analysts like Mike Kofman assess Ukraine has gained operational initiative on the battlefield.",
-        "Ukrainian strike campaigns against Russian refining and logistics infrastructure have created fuel shortages for Russian units.",
-        "Black Bird Group assesses Russia has largely exhausted its major offensive options."
-      ],
-      "evidence_against": [
-        "Russia has recorded positive net monthly territorial gains in every month of 2026 so far, including +106 sq km in July 2026.",
-        "Incremental Russian tactical advances across multiple sectors systematically accumulate positive net territory.",
-        "There is no evidence of a major Ukrainian territorial counter-offensive underway in mid-August 2026 sufficient to offset ongoing Russian gains."
-      ],
-      "reason": "edge 0.007 below minimum 0.04"
     }
   ]
 }
