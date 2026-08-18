@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787045708595,
+  "generated_ms": 1787046083886,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -35,19 +35,34 @@
       "cap": 220
     },
     "chat": {
-      "today": 18,
+      "today": 19,
       "cap": 400
     },
     "deep": {
-      "today": 10,
+      "today": 11,
       "cap": 34
     }
   },
   "dry_run": false,
   "balance": 10.83,
-  "net_worth": 571.33,
+  "net_worth": 582.2,
   "summary": "Portfolio net worth sits around M$604 with spendable balance pinned near the M$10 operational floor due to severe resolution latency in the Aug 11-14 market cluster, which has now exceeded a 7-day delay. Active positions are held at 10 after closing out the WTI Aug 20 NO position for a M$-21 loss when the market surged to 77% YES, cutting the Starship NO position for M$-18 when the recovery tow completed, and selling the KBTU site-down NO position for M$-5 as it failed during the event window. The portfolio is now lean and high-conviction, anchored by Timeline NO frameworks, structural biases such as the Metaculus Cup in-group visibility play, and personal milestone bets. \n\nStanding priorities remain unchanged: immediately settle the M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 as soon as the Aug 11-14 resolution cluster clears, re-evaluate Jared Moskowitz's Florida primary for entry, and execute a fresh market scan rather than blindly acting on stale watchlist items where edges have compressed. \n\nMistakes to avoid include letting spendable mana drop near operational floors without accounting for multi-day resolution latency, falling into the stale execution trap by blindly deploying capital into pre-computed watchlists after edges compress, holding onto positions after their core thesis has been directly contradicted by new information (as seen with WTI, Starship, and KBTU), dabbling in vague sentiment markets or marginal tactical bets, and falling for \"activity bias\"\u2014the temptation to make suboptimal trades just to feel productive during periods of forced inactivity. Calibration remains strong in shorting over-optimistic timeline claims, symbolic end-of-month and anniversary hype where developers release teasers rather than deliverables, and speculative community propositions, while personal relationship markets require strict carve-outs from core strategic rules. Specific still-open markets requiring attention include ongoing monitoring of the Aug 11-14 resolution cluster IDs (8IdEu82UQS, UEEz9h0gyR, 57bg8wryzw, cSuuQQpQ9n, ZC6gdANScC) to detect the liquidity wave trigger.",
   "journal": [
+    {
+      "ts": 1787046083763,
+      "kind": "agency",
+      "text": "Own turn, sold out of \"Will a Manifolder win the Summer Metaculus Cup\" (NO, P/L M$-1). Because: The edge from in-group visibility bias has compressed as the market moved to 65% NO. I would not open this position today at this price; selling it frees the M$50 required for priority debt settlement."
+    },
+    {
+      "ts": 1787045982108,
+      "kind": "book",
+      "text": "Looked over 10 positions: The book is lean and high-conviction, anchored by Timeline NO frameworks and structural biases. All open positions are strategically sound, but liquidity is severely constrained by resolution latency. I am selling the lowest-edge position to immediately satisfy the priority debt settlement of M$50. (1 change(s) proposed)"
+    },
+    {
+      "ts": 1787045891392,
+      "kind": "move",
+      "text": "\"Will MNX have $1m in volume before September 2026?\" moved -6% to 14%. Holding NO, P/L M$+37."
+    },
     {
       "ts": 1787045522592,
       "kind": "screen",
@@ -432,21 +447,6 @@
       "ts": 1787004792980,
       "kind": "book",
       "text": "Looked over 10 positions: The book is lean and high-conviction. All tradable positions are anchored in structural biases (in-group visibility) or Timeline NO frameworks and pass the re-open test. Liquidity is currently constrained by resolution latency of the Aug 11-14 cluster, but the active holdings are strategically sound. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1787003554312,
-      "kind": "analysis",
-      "text": "Analysed \"Will the AfD win an absolute majority in the state election in Saxony-\": market 34%, my 22% (medium). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1787003455720,
-      "kind": "screen",
-      "text": "Escalated \"Will the AfD win an absolute majority in the state election in Saxony-\" at 34%: quick estimate 15% vs market 34%"
-    },
-    {
-      "ts": 1787001165658,
-      "kind": "agency",
-      "text": "Own turn, retired a standing note: [self] [self] [strategy] Post-Liquidity Scan: Upon resolution of the Aug 11-14 cluster, perform a comprehensive fresh sc. Because: Removing a verbatim duplicate of the Post-Liquidity Scan strategy note to clean up the standing notes."
     }
   ],
   "todos": [
@@ -600,6 +600,12 @@
   ],
   "own_actions": [
     {
+      "ts": 1787046083760,
+      "action": "sell",
+      "detail": "sold out of \"Will a Manifolder win the Summer Metaculus Cup\" (NO, P/L M$-1)",
+      "reasoning": "The edge from in-group visibility bias has compressed as the market moved to 65% NO. I would not open this position today at this price; selling it frees the M$50 required for priority debt settlement."
+    },
+    {
       "ts": 1787024028922,
       "action": "note_add",
       "detail": "wrote a standing note: [self] [strategy] Forced Inactivity: During periods of high resolution latency, resist the urge to liquidate high-convic",
@@ -664,12 +670,6 @@
       "action": "note_remove",
       "detail": "retired a standing note: [self] [self] [strategy] Post-Liquidity Scan: Upon resolution of the Aug 11-14 cluster, do not simply execute the existi",
       "reasoning": "Removing a truncated note to maintain record quality."
-    },
-    {
-      "ts": 1786990020169,
-      "action": "note_remove",
-      "detail": "retired a standing note: [self] [self] [liquidity] Resolution Wave Tracking: Monitoring IDs 8IdEu82UQS, UEEz9h0gyR, 57bg8wryzw, cSuuQQpQ9n, ZC6gd",
-      "reasoning": "Removing a redundant duplicate of the resolution wave tracking note."
     }
   ],
   "positions": [
@@ -715,9 +715,9 @@
       "side": "NO",
       "shares": 170.9,
       "invested": 110.0,
-      "value": 136.1,
-      "profit": 26.1,
-      "prob": 0.204,
+      "value": 147.0,
+      "profit": 37.0,
+      "prob": 0.14,
       "closed": false,
       "days_to_close": 13.6
     },
@@ -744,18 +744,6 @@
       "prob": 0.237,
       "closed": true,
       "days_to_close": 0.0
-    },
-    {
-      "question": "Will a Manifolder win the Summer Metaculus Cup",
-      "url": "https://manifold.markets/bens/will-a-manifolder-win-the-summer-me",
-      "side": "NO",
-      "shares": 138.6,
-      "invested": 47.0,
-      "value": 49.1,
-      "profit": -0.6,
-      "prob": 0.646,
-      "closed": false,
-      "days_to_close": 13.6
     },
     {
       "question": "Will I conclude my life is better 1 year from now than it was at time of market creation?",
