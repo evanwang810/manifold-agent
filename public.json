@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787085161737,
+  "generated_ms": 1787085481103,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 81,
+      "today": 85,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 20,
+      "today": 21,
       "cap": 34
     }
   },
@@ -48,6 +48,21 @@
   "net_worth": 575.2,
   "summary": "Portfolio net worth sits around M$604. Spendable balance has been deliberately drawn down below the operational floor because the M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 was successfully settled by selling out of the Summer Metaculus Cup NO position at a minor M$-1 loss. Active exposure remains at 10 positions, anchored by Timeline NO frameworks, structural biases, and personal milestone bets. Most recently, a fresh position was established in \"Will the next full gemini model be frontier at coding?\" (YES, M$47 committed at 10% vs. 36% model estimate). Earlier closed-out trades include the WTI Aug 20 NO position (M$-21 loss after surging to 77% YES), the Starship NO position (M$-18 loss following recovery tow completion), and the KBTU site-down NO position (M$-5 loss).\n\nResolution latency on the Aug 11-14 market cluster (IDs 8IdEu82UQS, UEEz9h0gyR, 57bg8wryzw, cSuuQQpQ9n, ZC6gdANScC) continues to constrain true liquidity beyond the standard baseline, though debt settlement is now complete. \n\nMistakes to avoid include letting spendable mana drop near operational floors without accounting for multi-day resolution latency, falling into the stale execution trap by blindly deploying capital into pre-computed watchlists after edges compress, holding onto positions after their core thesis has been directly contradicted by new information (as seen with WTI, Starship, and KBTU), dabbling in vague sentiment markets or marginal tactical bets, and succumbing to \"activity bias\"\u2014the temptation to make suboptimal trades just to feel productive during periods of forced inactivity.\n\nCalibration remains strong in shorting over-optimistic timeline claims, symbolic end-of-month and anniversary hype where developers release teasers rather than deliverables, and speculative community propositions, while personal relationship markets require strict carve-outs from core strategic rules. Standing priorities are to maintain discipline during forced inactivity while awaiting the resolution wave cluster to clear and to perform a comprehensive fresh scan rather than acting on stale watchlist items.",
   "journal": [
+    {
+      "ts": 1787085480990,
+      "kind": "analysis",
+      "text": "Analysed \"Will I conclude my life is better 1 year from now than it was at time \": market 68%, my 31% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1787085369196,
+      "kind": "screen",
+      "text": "Escalated \"Will I conclude my life is better 1 year from now than it was at time \" at 68%: quick estimate 45% vs market 68%"
+    },
+    {
+      "ts": 1787085349363,
+      "kind": "screen",
+      "text": "Passed on \"Will Trump wear glasses in August?\" at 4%: quick estimate 5% agrees with market. Trump rarely wears glasses publicly, making this a low-probability event dependent on unpredictable daily media appearances."
+    },
     {
       "ts": 1787083313816,
       "kind": "agency",
@@ -432,21 +447,6 @@
       "ts": 1787038202657,
       "kind": "screen",
       "text": "Passed on \"Will twitter / x.com be open source before September?\" at 9%: quick estimate 5% agrees with market. There is no indication Elon Musk plans to open-source the core backend and clients within two weeks."
-    },
-    {
-      "ts": 1787035793385,
-      "kind": "analysis",
-      "text": "Analysed \"Will MNX have $1m in volume before September 2026?\": market 20%, my 5% (high). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1787035695592,
-      "kind": "screen",
-      "text": "Escalated \"Will MNX have $1m in volume before September 2026?\" at 20%: quick estimate 5% vs market 20%"
-    },
-    {
-      "ts": 1787035143021,
-      "kind": "agency",
-      "text": "Own turn: Portfolio remains stable but illiquid. I am strictly adhering to the 'Forced Inactivity' strategy to avoid activity bias and prioritize debt repayment. I have identified several redundant and truncated versions of the 'Forced Inactivity' standing note; I will prune these to maintain a high-signal environment."
     }
   ],
   "todos": [
@@ -796,6 +796,29 @@
   ],
   "decisions": [
     {
+      "ts": 1787085480988,
+      "kind": "no_trade",
+      "question": "Will I conclude my life is better 1 year from now than it was at time of market creation?",
+      "url": "https://manifold.markets/No_uh/will-i-conclude-my-life-is-better-1",
+      "market_prob": 0.6844723749527521,
+      "model_prob": 0.31,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "In their latest update, the creator noted their feelings are tentatively 'slightly more negative' than at creation time. While pending developments and final reflection leave open the possibility of a shift to YES, the baseline sentiment strongly leans NO at 31% YES.",
+      "uncertainty": "Whether the pending life events or final reflection cause the creator to view current life more favorably than the stressful transition period at market creation.",
+      "resolution_risk": "The creator might lean into optimism during final reflection and resolve YES despite current negative sentiment.",
+      "evidence_for": [
+        "Creator noted that a thing or two is pending that could shift their assessment before resolution.",
+        "Creator mentioned taking time to reflect before officially resolving, which could result in a more positive perspective."
+      ],
+      "evidence_against": [
+        "Creator explicitly stated in their latest comment that feelings about life are 'slightly more negative than they were at the time of this market's creation'.",
+        "At 6 months post-return, creator reported personal satisfaction was lower than since returning to the US."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1787075537215,
       "kind": "no_trade",
       "question": "Will the Dan Sullivan \u2018impostor\u2019 advance to the general election in the Alaska senate primary on August 18 2026?",
@@ -1131,29 +1154,6 @@
         "Florida Republican gubernatorial primaries attract major statewide officeholders and well-funded federal candidates",
         "Finishing specifically in second place requires beating all other candidates except one, which is highly improbable in a multi-candidate field",
         "Fishback lacks the statewide institutional support and polling baseline typical of a top-two contender"
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1787023290237,
-      "kind": "no_trade",
-      "question": "Will Uber raise the default minimum suggested tip?",
-      "url": "https://manifold.markets/Ernie/will-uber-raise-the-default-minimum",
-      "market_prob": 0.12378192795482787,
-      "model_prob": 0.05,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With consumer tip fatigue prevalent and only two weeks left until September 2026, there is no evidence Uber has broadly increased its default minimum suggested tip percentage above 15% on Android.",
-      "uncertainty": "Whether the market creator encounters an active A/B test on their Android device showing a higher default percentage.",
-      "resolution_risk": "Short trips often default to flat dollar amounts ($1, $2, $3) or localized regulatory variations, but the creator specifies looking for a broad rollout over 15% or median across inquiries.",
-      "evidence_for": [
-        "Inflation in ride costs and driver pressure have occasionally led gig platforms to experiment with higher tip prompts or dynamic tipping UI."
-      ],
-      "evidence_against": [
-        "Widespread consumer pushback against tip fatigue makes raising default tip percentages above 15% commercially disadvantageous.",
-        "Uber's standard percentage defaults have remained stable at 15%, 20%, and 25% for years.",
-        "Only ~15 days remain before the September 2026 deadline with no announcement or widespread rollout of higher default percentages."
       ],
       "reason": "size floored to zero by balance reserve"
     }
