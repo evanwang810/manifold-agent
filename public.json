@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787015613546,
+  "generated_ms": 1787015722028,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 4,
+      "today": 7,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 1,
+      "today": 2,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 571.33,
   "summary": "Portfolio net worth is around M$604 with spendable balance pinned near the M$10 operational floor, held down by resolution latency on the Aug 11-14 resolution cluster which continues to lock capital and create opportunity costs. Active positions have been trimmed to 10 after closing the WTI Aug 20 NO position for a M$-21 loss when the market surged to 77% YES, and recently adding a short-term YES/NO play on personal life-satisfaction timelines. The portfolio is anchored by core Timeline NO frameworks, high-conviction personal YES/NO bets (such as the Metaculus Cup in-group bias play and personal relationship milestones), and event bets.\n\nStanding priorities remain unchanged: immediately settle the M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 as soon as the Aug 11-14 resolution cluster clears, re-evaluate Jared Moskowitz's Florida primary for entry, and execute a fresh market scan rather than blindly acting on stale watchlist items where edges have compressed. \n\nMistakes to avoid include letting spendable mana drop near operational floors without accounting for multi-day resolution latency, falling into the stale execution trap by blindly deploying capital into pre-computed watchlists after edges compress, holding onto positions after their core thesis has been directly contradicted by new information (as seen with WTI, Starship, and KBTU), and dabbling in vague sentiment markets or marginal tactical bets. Calibration remains strong in shorting over-optimistic timeline claims, symbolic end-of-month and anniversary hype where developers release teasers rather than deliverables, and speculative community propositions, while personal relationship markets require strict carve-outs from core strategic rules. Specific still-open markets requiring attention include ongoing monitoring of the Aug 11-14 resolution cluster IDs to detect the liquidity wave trigger.",
   "journal": [
+    {
+      "ts": 1787015721987,
+      "kind": "analysis",
+      "text": "Analysed \"Will Jared Moskowitz get 65.00% or more of the vote in the Florida 25 \": market 36%, my 71% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1787015658460,
+      "kind": "screen",
+      "text": "Escalated \"Will Jared Moskowitz get 65.00% or more of the vote in the Florida 25 \" at 36%: quick estimate 75% vs market 36%"
+    },
     {
       "ts": 1787013398819,
       "kind": "analysis",
@@ -437,16 +447,6 @@
       "ts": 1786978603266,
       "kind": "screen",
       "text": "Escalated \"Will there be new US-Iran peace talks before August 31?\" at 15%: quick estimate 35% vs market 15%"
-    },
-    {
-      "ts": 1786976214585,
-      "kind": "analysis",
-      "text": "Analysed \"Anglo American & Teck Resources merge by Sep 1, 2026\": market 5%, my 5% (high). No trade, edge 0.003 below minimum 0.04."
-    },
-    {
-      "ts": 1786976005687,
-      "kind": "screen",
-      "text": "Escalated \"Anglo American & Teck Resources merge by Sep 1, 2026\" at 5%: quick estimate 35% vs market 5%"
     }
   ],
   "todos": [
@@ -791,6 +791,30 @@
   ],
   "decisions": [
     {
+      "ts": 1787015721984,
+      "kind": "no_trade",
+      "question": "Will Jared Moskowitz get 65.00% or more of the vote in the Florida 25 Democratic house primary?",
+      "url": "https://manifold.markets/Jack1/will-jared-moskowitz-get-6500-or-mo",
+      "market_prob": 0.3620971378365789,
+      "model_prob": 0.71,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "In a two-way primary, Moskowitz's consistent ~73% share of decided voters in polling and massive 11:1 cash advantage make clearing the 65.00% threshold likely despite progressive election-day turnout efforts.",
+      "uncertainty": "The distribution and turnout of late election-day in-person voters versus early and mail-in voters.",
+      "resolution_risk": "Delays or rounding nuances in Wikipedia reporting of official county certified results.",
+      "evidence_for": [
+        "Consecutive Beacon polls show Moskowitz leading Larkin roughly 55.6% to 19.9% (over 73% of decided voters in a two-candidate race).",
+        "Moskowitz possesses an 11-to-1 fundraising advantage heading into election day.",
+        "Mail-in balloting trends showed Moskowitz widening his margin before election day."
+      ],
+      "evidence_against": [
+        "A 65.00% threshold requires a steep 30-point margin of victory.",
+        "Late election-day turnout by progressive and DSA organizers could boost Larkin above 35% of the total vote."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1787013398817,
       "kind": "no_trade",
       "question": "Will the WTI Crude Oil Spot Price be above $82 on August 20, 2026?",
@@ -1128,30 +1152,6 @@
         "Government cash transfers were expanded substantially during the flood response to support the poorest quintile."
       ],
       "reason": "edge 0.035 below minimum 0.04"
-    },
-    {
-      "ts": 1786968792258,
-      "kind": "bet",
-      "question": "Will Starship Ship 40 be recovered to shore?",
-      "url": "https://manifold.markets/Mqrius/will-starship-ship-40-be-recovered",
-      "market_prob": 0.40189820511935404,
-      "model_prob": 0.87,
-      "confidence": "medium",
-      "amount": 5.0,
-      "outcome": "YES",
-      "thinking": "Marine reporting indicates Normand Ranger completed its three-week tow around Aug 14-15, bringing Ship 40 to port after its July 24 splashdown. While Musk noted severe weather on Aug 11, the completed tow makes recovery of a major section to shore highly likely (~87%).",
-      "uncertainty": "Whether the towed structure brought into port retained a major section (full nosecone or main body) vs disintegrating into minor fragments.",
-      "resolution_risk": "If only the engine section or fragmented scrap reached shore, criteria explicitly state 'Just the engine section is not enough', resolving NO.",
-      "evidence_for": [
-        "Marine reporting from MarineRadar indicates Normand Ranger completed a 3-week tow around Aug 14-15, successfully bringing Ship 40 to port after floating since its July 24 splashdown.",
-        "SpaceX committed significant resources including offshore supply vessels specifically to track and tow the floating upper stage.",
-        "Market creator explicitly noted close date would be extended for recovery efforts and defined major section recovery (full nosecone or full body) as resolving YES."
-      ],
-      "evidence_against": [
-        "Elon Musk stated around Aug 11 that rough weather made recovery difficult and the vehicle might be lost at sea.",
-        "Official SpaceX photo verification of exact structural integrity upon port arrival is still pending."
-      ],
-      "reason": "edge 0.468, kelly 0.78, decay 0.69, bound by balance reserve"
     }
   ]
 }
