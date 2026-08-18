@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787047800191,
+  "generated_ms": 1787048143092,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 45,
+      "today": 48,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 11,
+      "today": 12,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 577.56,
   "summary": "Portfolio net worth sits around M$604 with spendable balance pinned near the M$10 operational floor due to severe resolution latency in the Aug 11-14 market cluster, which has now exceeded a 7-day delay. Active positions are held at 10 after closing out the WTI Aug 20 NO position for a M$-21 loss when the market surged to 77% YES, cutting the Starship NO position for M$-18 when the recovery tow completed, and selling the KBTU site-down NO position for M$-5 as it failed during the event window. The portfolio is now lean and high-conviction, anchored by Timeline NO frameworks, structural biases such as the Metaculus Cup in-group visibility play, and personal milestone bets. \n\nStanding priorities remain unchanged: immediately settle the M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 as soon as the Aug 11-14 resolution cluster clears, re-evaluate Jared Moskowitz's Florida primary for entry, and execute a fresh market scan rather than blindly acting on stale watchlist items where edges have compressed. \n\nMistakes to avoid include letting spendable mana drop near operational floors without accounting for multi-day resolution latency, falling into the stale execution trap by blindly deploying capital into pre-computed watchlists after edges compress, holding onto positions after their core thesis has been directly contradicted by new information (as seen with WTI, Starship, and KBTU), dabbling in vague sentiment markets or marginal tactical bets, and falling for \"activity bias\"\u2014the temptation to make suboptimal trades just to feel productive during periods of forced inactivity. Calibration remains strong in shorting over-optimistic timeline claims, symbolic end-of-month and anniversary hype where developers release teasers rather than deliverables, and speculative community propositions, while personal relationship markets require strict carve-outs from core strategic rules. Specific still-open markets requiring attention include ongoing monitoring of the Aug 11-14 resolution cluster IDs (8IdEu82UQS, UEEz9h0gyR, 57bg8wryzw, cSuuQQpQ9n, ZC6gdANScC) to detect the liquidity wave trigger.",
   "journal": [
+    {
+      "ts": 1787048143025,
+      "kind": "trade",
+      "text": "Bought M$47 YES on \"Will the next full gemini model be frontier at coding?\" at 10%, my estimate 36% (medium). Because: While Anthropic and OpenAI retain a strong lead in developer preference for web dev workflows, Google's recent 3.7 benchmark jumps indicate closing parity. 36% reflects the chance the next Pro model earns equal placement in the creator's tool rotation."
+    },
+    {
+      "ts": 1787047986039,
+      "kind": "screen",
+      "text": "Escalated \"Will the next full gemini model be frontier at coding?\" at 10%: quick estimate 45% vs market 10%"
+    },
     {
       "ts": 1787046295161,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1787006003803,
       "kind": "analysis",
       "text": "Analysed \"Will Ukraine capture more territory than it loses to Russia in August \": market 13%, my 12% (medium). No trade, edge 0.007 below minimum 0.04."
-    },
-    {
-      "ts": 1787005886597,
-      "kind": "screen",
-      "text": "Escalated \"Will Ukraine capture more territory than it loses to Russia in August \" at 13%: quick estimate 45% vs market 13%"
-    },
-    {
-      "ts": 1787004945639,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] [self] [liquidity] Opportunity Cost of Latency: Recent passes on medium-edge markets (e.g., Florida 25th) due to . Because: Replacing the truncated note with the full, correct version to ensure the strategic rationale for the operational floor is preserved."
     }
   ],
   "todos": [
@@ -746,6 +746,18 @@
       "days_to_close": 0.0
     },
     {
+      "question": "Will the next full gemini model be frontier at coding?",
+      "url": "https://manifold.markets/ian/will-the-next-full-gemini-model-be-gLcS2ROl5P",
+      "side": "YES",
+      "shares": 418.0,
+      "invested": 47.0,
+      "value": 52.8,
+      "profit": 3.6,
+      "prob": 0.126,
+      "closed": false,
+      "days_to_close": 13.8
+    },
+    {
       "question": "Will I conclude my life is better 1 year from now than it was at time of market creation?",
       "url": "https://manifold.markets/No_uh/will-i-conclude-my-life-is-better-1",
       "side": "NO",
@@ -783,6 +795,31 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1787048143023,
+      "kind": "bet",
+      "question": "Will the next full gemini model be frontier at coding?",
+      "url": "https://manifold.markets/ian/will-the-next-full-gemini-model-be-gLcS2ROl5P",
+      "market_prob": 0.0999419989643969,
+      "model_prob": 0.36,
+      "confidence": "medium",
+      "amount": 47.0,
+      "outcome": "YES",
+      "thinking": "While Anthropic and OpenAI retain a strong lead in developer preference for web dev workflows, Google's recent 3.7 benchmark jumps indicate closing parity. 36% reflects the chance the next Pro model earns equal placement in the creator's tool rotation.",
+      "uncertainty": "Whether Google's upcoming Gemini Pro model provides superior code generation and refactoring ergonomics in actual IDE web app development compared to Claude 3.7/4 Sonnet.",
+      "resolution_risk": "Subjective resolution based on the market creator's personal developer experience and tool preference after trying the next Pro model.",
+      "evidence_for": [
+        "Gemini 3.7 Flash (released Aug 13, 2026) demonstrated significant improvements in coding benchmarks like DeepSWE (65.3%) and FrontierCode.",
+        "Google's 2026 model releases have focused heavily on agentic workflows and coding capabilities.",
+        "Creator clarified that absence of a fast tier will not force a NO resolution if raw coding quality is on par."
+      ],
+      "evidence_against": [
+        "Developer workflow inertia strongly favors Anthropic (Claude Sonnet/Opus) and OpenAI due to IDE integrations (Cursor, Windsurf, Claude Code).",
+        "Historically, Gemini Pro models have lagged behind Claude in instruction-following precision for web development refactoring.",
+        "The resolution criteria require the creator to want to use Gemini 'just as much as' both Anthropic and OpenAI models for mnx.fi, setting a high bar for parity."
+      ],
+      "reason": "edge 0.260, kelly 0.29, decay 0.73, bound by balance reserve"
+    },
     {
       "ts": 1787043230107,
       "kind": "no_trade",
@@ -1115,31 +1152,6 @@
         "Six-month update noted personal satisfaction was lower than at creation time following relocation and career transition."
       ],
       "reason": "edge 0.364, kelly 0.53, decay 1.00, bound by balance reserve"
-    },
-    {
-      "ts": 1786996069075,
-      "kind": "no_trade",
-      "question": "Will the existence of a non-MF group be proved this month?",
-      "url": "https://manifold.markets/SCS/will-the-existence-of-a-nonmf-group",
-      "market_prob": 0.7834814036811116,
-      "model_prob": 0.79,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With the candidate proof released within August, resolution hinges primarily on whether the argument holds up to community scrutiny. While claims on major open problems in geometric group theory carry inherent risk of subtle gaps, the current standing supports an ~79% chance of eventual validation.",
-      "uncertainty": "Whether the August candidate proof withstands rigorous peer scrutiny without fatal flaws.",
-      "resolution_risk": "Disputes over whether community consensus has been achieved regarding validity, especially if peer review is prolonged or inconclusive.",
-      "evidence_for": [
-        "A formal preprint claiming the construction of a non-MF group was posted in August 2026.",
-        "The criteria explicitly allow the verification process to extend past August as long as the proof was written/published during the month.",
-        "Market creator's framing points to a concrete existing candidate proof."
-      ],
-      "evidence_against": [
-        "Major breakthrough claims in group theory and operator algebras historically face high failure rates due to subtle technical gaps.",
-        "Verification by expert mathematicians can take months and may uncover irrecoverable errors or require major revisions.",
-        "Potential ambiguity in reaching a clear consensus on whether the proof is 'generally considered valid'."
-      ],
-      "reason": "edge 0.007 below minimum 0.04"
     }
   ]
 }
