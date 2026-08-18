@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787092571284,
+  "generated_ms": 1787092856283,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 94,
+      "today": 97,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 24,
+      "today": 25,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 556.6,
   "summary": "Portfolio net worth is stable around M$604, with spendable balance intentionally near the operational floor due to resolution latency and the recent debt settlement. The Summer Metaculus Cup NO position was sold at a minor M$-1 loss to successfully settle the M$50 debt, and a low-edge personal sentiment bet was also pruned for liquidity. A new position was established in \"Will something happen in AI the week of Aug 21, 2026?\" (NO, M$37 committed at 55%), which has experienced some short-term movement against us (shifting to 63% YES, unrealized P/L M$-9). Active exposure stands anchored by structural Timeline NO frameworks, tech bets, and personal milestone positions.\n\nResolution latency on historical clusters continues to constrain true liquidity and prevents scaling into medium-edge opportunities discovered during screenings. \n\nConcrete mistakes to avoid include letting spendable mana drop near operational floors without accounting for resolution latency, falling into the stale execution trap by deploying capital into pre-computed watchlists after edges compress, holding positions after their core thesis is contradicted, dabbling in vague sentiment markets or marginal tactical bets, and succumbing to \"activity bias\"\u2014the temptation to make suboptimal trades just to feel productive during periods of forced inactivity.\n\nCalibration remains strong in shorting over-optimistic timeline claims, symbolic developer hype and teasers, and speculative community propositions, while personal relationship markets and ambiguous sentiment bets require strict discipline. \n\nStanding priorities are to maintain operational discipline during forced inactivity while awaiting the resolution wave cluster to clear, avoid activity bias, and maintain a clean, high-signal decision-making environment without redundant notes.",
   "journal": [
+    {
+      "ts": 1787092856184,
+      "kind": "analysis",
+      "text": "Analysed \"Will Ukraine capture more territory than it loses to Russia in August \": market 13%, my 12% (medium). No trade, edge 0.007 below minimum 0.04."
+    },
+    {
+      "ts": 1787092759012,
+      "kind": "screen",
+      "text": "Escalated \"Will Ukraine capture more territory than it loses to Russia in August \" at 13%: quick estimate 45% vs market 13%"
+    },
     {
       "ts": 1787090723907,
       "kind": "move",
@@ -437,16 +447,6 @@
       "ts": 1787045891392,
       "kind": "move",
       "text": "\"Will MNX have $1m in volume before September 2026?\" moved -6% to 14%. Holding NO, P/L M$+37."
-    },
-    {
-      "ts": 1787045522592,
-      "kind": "screen",
-      "text": "Passed on \"Will Bitcoin be higher 30 days from now?\" at 56%: quick estimate 52% agrees with market. Bitcoin price direction over a 30-day horizon is a pure coin flip with no specific mispricing edge."
-    },
-    {
-      "ts": 1787045502355,
-      "kind": "screen",
-      "text": "Passed on \"Will James Fishback win the Florida Republican Primary?\" at 4%: quick estimate 5% agrees with market. Dominant frontrunner Byron Donalds holds a massive polling and funding lead plus Trump's endorsement, making Fishback's chance negligible."
     }
   ],
   "todos": [
@@ -796,6 +796,29 @@
   ],
   "decisions": [
     {
+      "ts": 1787092856182,
+      "kind": "no_trade",
+      "question": "Will Ukraine capture more territory than it loses to Russia in August 2026?",
+      "url": "https://manifold.markets/AIBear/will-ukraine-capture-more-territory-lEqEsPOzyq",
+      "market_prob": 0.1273426769172667,
+      "model_prob": 0.12,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "",
+      "uncertainty": "Whether Ukraine can execute a sudden localized counter-offensive before August ends that exceeds Russia's continuous territorial gains in Donetsk.",
+      "resolution_risk": "If Black Bird Group does not publish its August report by October 1, 2026, the market resolves NA.",
+      "evidence_for": [
+        "Mike Kofman and select analysts suggest Ukraine has regained local battlefield initiative in mid-2026.",
+        "General Syrskyi reported in mid-August 2026 that Russian advances have slowed relative to early 2026."
+      ],
+      "evidence_against": [
+        "Black Bird Group reported a net Russian advance of +106 sq km in July 2026 and positive gains every month in 2026.",
+        "DeepState OSINT data through early August 2026 shows continuous Russian net gains across Donetsk sectors."
+      ],
+      "reason": "edge 0.007 below minimum 0.04"
+    },
+    {
       "ts": 1787090356444,
       "kind": "no_trade",
       "question": "Will I pass my GCE Advanced Level?",
@@ -1129,31 +1152,6 @@
         "Resolution hinges on the subjective personal impression and hands-on testing of the creator rather than an objective benchmark suite.",
         "Gemini models have occasionally faced user criticism regarding developer ergonomics, subtle hallucination patterns, or verbosity compared to Claude and OpenAI offerings even when benchmarks match.",
         "There is slight ambiguity in product naming and timeline, though the creator clarified preview/pro models qualify."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1787038380600,
-      "kind": "no_trade",
-      "question": "Will the CCRC refer Lucy Letby's case to the Court of Appeal?",
-      "url": "https://manifold.markets/space_goats/will-the-ccrc-refer-lucy-letbys-cas",
-      "market_prob": 0.29810923604096656,
-      "model_prob": 0.38,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "While baseline CCRC referral rates are ~1-2%, cases with major post-conviction expert and scientific pushback carry significantly higher referral rates. Given the 'real possibility' standard and extensive medical criticism of the trial evidence, referral odds are around 38%.",
-      "uncertainty": "Whether the CCRC views the new medical/statistical expert submissions as presenting genuinely new legal grounds that create a 'real possibility' of the Court of Appeal quashing the convictions.",
-      "resolution_risk": "The CCRC review process could be extraordinarily lengthy, extending past any informal expectations, though the market criteria explicitly allow deadline extensions while under review.",
-      "evidence_for": [
-        "Letby's defense team has formally submitted an application to the CCRC, and CCRC confirmed it is actively examining the case.",
-        "Widespread public, medical, and statistical expert pushback (including from leading neonatologists and statisticians) challenges core prosecution evidence.",
-        "The CCRC threshold for referral is 'real possibility' of conviction being quashed, which is easier to meet when substantial new expert consensus emerges."
-      ],
-      "evidence_against": [
-        "Historical baseline CCRC referral rate across all applications is very low (~1-2%).",
-        "The Court of Appeal already rejected her full appeal application on all grounds in May 2024.",
-        "The CCRC may determine that fresh expert disagreements do not meet the legal bar to overturn jury factual findings."
       ],
       "reason": "size floored to zero by balance reserve"
     }
