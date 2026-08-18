@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787013051533,
+  "generated_ms": 1787013398911,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 0,
+      "today": 4,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 0,
+      "today": 1,
       "cap": 34
     }
   },
@@ -48,6 +48,21 @@
   "net_worth": 571.36,
   "summary": "Portfolio net worth is around M$604 with spendable balance pinned near the M$10 operational floor, held down by resolution latency on the Aug 11-14 resolution cluster which continues to lock capital and create opportunity costs. Active positions have been trimmed to 10 after closing the WTI Aug 20 NO position for a M$-21 loss when the market surged to 77% YES, and recently adding a short-term YES/NO play on personal life-satisfaction timelines. The portfolio is anchored by core Timeline NO frameworks, high-conviction personal YES/NO bets (such as the Metaculus Cup in-group bias play and personal relationship milestones), and event bets.\n\nStanding priorities remain unchanged: immediately settle the M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 as soon as the Aug 11-14 resolution cluster clears, re-evaluate Jared Moskowitz's Florida primary for entry, and execute a fresh market scan rather than blindly acting on stale watchlist items where edges have compressed. \n\nMistakes to avoid include letting spendable mana drop near operational floors without accounting for multi-day resolution latency, falling into the stale execution trap by blindly deploying capital into pre-computed watchlists after edges compress, holding onto positions after their core thesis has been directly contradicted by new information (as seen with WTI, Starship, and KBTU), and dabbling in vague sentiment markets or marginal tactical bets. Calibration remains strong in shorting over-optimistic timeline claims, symbolic end-of-month and anniversary hype where developers release teasers rather than deliverables, and speculative community propositions, while personal relationship markets require strict carve-outs from core strategic rules. Specific still-open markets requiring attention include ongoing monitoring of the Aug 11-14 resolution cluster IDs to detect the liquidity wave trigger.",
   "journal": [
+    {
+      "ts": 1787013398819,
+      "kind": "analysis",
+      "text": "Analysed \"Will the WTI Crude Oil Spot Price be above $82 on August 20, 2026?\": market 83%, my 58% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1787013257446,
+      "kind": "screen",
+      "text": "Escalated \"Will the WTI Crude Oil Spot Price be above $82 on August 20, 2026?\" at 83%: quick estimate 48% vs market 83%"
+    },
+    {
+      "ts": 1787013237450,
+      "kind": "screen",
+      "text": "Passed on \"In a true free market. Prices would naturally fall . In other words de\" at 55%: quick estimate 50% agrees with market. This is a purely philosophical and economically ambiguous debate with no objective resolution criteria."
+    },
     {
       "ts": 1787012291626,
       "kind": "agency",
@@ -432,21 +447,6 @@
       "ts": 1786976005687,
       "kind": "screen",
       "text": "Escalated \"Anglo American & Teck Resources merge by Sep 1, 2026\" at 5%: quick estimate 35% vs market 5%"
-    },
-    {
-      "ts": 1786975420746,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] [liquidity] Resolution Wave Status: As of Aug 17, 5 markets from the Aug 11-14 cluster are CLOSED but unresolved.. Because: Tracking the resolution latency of the Aug 11-14 cluster is critical for calibrating the operational floor and timing the debt settlement and August 31 scan."
-    },
-    {
-      "ts": 1786975420740,
-      "kind": "agency",
-      "text": "Own turn: Portfolio is lean and high-conviction. Liquidity is currently locked in the Aug 11-14 resolution cluster (M$345 pending). Active positions (WTI Aug 20, Metaculus Cup, Anthropic, MNX) all pass the re-open test and align with core frameworks. No immediate trades are possible due to the M$10 reserve. I will record the current status of the resolution cluster to track latency and calibrate future liquidity expectations."
-    },
-    {
-      "ts": 1786974956742,
-      "kind": "book",
-      "text": "Looked over 10 positions: The portfolio is lean and high-conviction. All open positions pass the re-open test, with the Metaculus Cup position offering significant edge based on in-group visibility bias. Liquidity remains constrained by resolution latency of the Aug 11-14 cluster, but the current holdings are strategically sound and align with core frameworks. (0 change(s) proposed)"
     }
   ],
   "todos": [
@@ -791,6 +791,29 @@
   ],
   "decisions": [
     {
+      "ts": 1787013398817,
+      "kind": "no_trade",
+      "question": "Will the WTI Crude Oil Spot Price be above $82 on August 20, 2026?",
+      "url": "https://manifold.markets/ShaneBo/will-the-wti-crude-oil-spot-price-b-C22zR92ICs",
+      "market_prob": 0.8277684382405613,
+      "model_prob": 0.58,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "WTI live benchmark is currently around $82.40, providing a narrow $0.40 buffer above the $82.00 threshold. With 2 trading days remaining until Aug 20 and typical daily volatility of ~1.5%, there is approximately a 58% chance WTI Cushing spot closes strictly above $82.00.",
+      "uncertainty": "Crude oil market price movements over the next two trading sessions leading up to August 20.",
+      "resolution_risk": "EIA Cushing spot prices (DCOILWTICO) can occasionally diverge slightly from prompt NYMEX futures due to localized physical supply/demand differentials.",
+      "evidence_for": [
+        "WTI live futures benchmark is currently trading around $82.40 per barrel, above the $82.00 threshold.",
+        "Cushing storage levels are moderate at 29.7% capacity."
+      ],
+      "evidence_against": [
+        "The $0.40 cushion above $82.00 is thin, representing less than a 0.5% price buffer.",
+        "Two full trading days (Aug 19 and Aug 20) remain, with typical 2-day crude oil volatility (~$1.70) easily capable of pushing prices below $82.00."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1787006003800,
       "kind": "no_trade",
       "question": "Will Ukraine capture more territory than it loses to Russia in August 2026?",
@@ -1129,30 +1152,6 @@
         "Official SpaceX photo verification of exact structural integrity upon port arrival is still pending."
       ],
       "reason": "edge 0.468, kelly 0.78, decay 0.69, bound by balance reserve"
-    },
-    {
-      "ts": 1786963753461,
-      "kind": "no_trade",
-      "question": "Given I have been with my partner for a year, will we be together for 5?",
-      "url": "https://manifold.markets/LivInTheLookingGlass/given-i-have-been-with-my-partner-f-0dde6bfd1962",
-      "market_prob": 0.7342116457667096,
-      "model_prob": 0.86,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With the market closing at the 5-year mark in late August 2026 and prior signals indicating engagement and honeymoon planning, probability of remaining together through resolution is high (~86%).",
-      "uncertainty": "Whether Liv and her partner remain together through the final 11 days until market close.",
-      "resolution_risk": "Lack of explicit description, though closing date aligns with the 5-year mark from initiation.",
-      "evidence_for": [
-        "Market closes in late August 2026, marking the 5-year milestone.",
-        "Author created related markets indicating engagement and honeymoon planning ('where-will-we-honeymoon').",
-        "No evidence or announcements suggesting a breakup has occurred."
-      ],
-      "evidence_against": [
-        "Author has not posted explicit recent confirmation in comments.",
-        "Small baseline risk of relationship dissolution prior to resolution."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
