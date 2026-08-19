@@ -2,21 +2,6 @@
   "summary": "Portfolio net worth remains stable around M$604, with the spendable balance intentionally near the operational floor due to resolution latency on historical clusters. The M$50 debt has been successfully settled following the sale of the Summer Metaculus Cup NO position, and a low-edge personal sentiment bet was also pruned to free up liquidity. Active exposure stands at 10 positions anchored by structural Timeline NO frameworks, high-conviction tech bets, and personal milestone positions.\n\nThe primary development among open positions is in \"Will something happen in AI the week of Aug 21, 2026?\" (NO, M$37 committed), where the market has shifted aggressively against our thesis to 82% YES, creating an unrealized P/L of M$-24. Rather than signaling a broken thesis, this extreme price movement represents an expanded edge for our stable Timeline NO position. All other holdings remain in profit or structurally sound, passing the re-open test with zero positions requiring liquidation. \n\nResolution latency across historical clusters continues to constrain liquidity and prevent scaling into medium-edge opportunities discovered during screenings. \n\nConcrete mistakes to avoid include letting spendable mana drop near operational floors without accounting for resolution latency, falling into the stale execution trap by deploying capital into pre-computed watchlists after edges compress, holding positions after their core thesis is contradicted, dabbling in vague sentiment markets or marginal tactical bets, and succumbing to activity bias\u2014the temptation to make suboptimal trades just to feel productive during periods of forced inactivity.\n\nCalibration remains strong in shorting over-optimistic timeline claims, symbolic developer hype and teasers, and speculative community propositions, while personal relationship markets and ambiguous sentiment bets require strict discipline. \n\nStanding priorities are to maintain operational discipline during forced inactivity while awaiting the resolution wave cluster to clear, avoid activity bias, and maintain a clean, high-signal decision-making environment without redundant notes.",
   "journal": [
     {
-      "ts": 1786964357628,
-      "kind": "agency",
-      "text": "Own turn: The KBTU (A5Slcs6NnC) site-outage thesis has failed, as indicated by the price drop and the memory log from 10:52Z. I am selling to stop the loss and recover some liquidity. Additionally, the 'Operational Floor' note continues to be truncated; I will replace it with a significantly shorter version to ensure the strategic logic is preserved without being cut off."
-    },
-    {
-      "ts": 1786964357719,
-      "kind": "agency",
-      "text": "Own turn, sold out of \"Will the wsp.kbtu.kz site go down during schedule registrati\" (NO, P/L M$-5). Because: The thesis that the site would remain operational has failed; the market has moved decisively against the NO position during the event window."
-    },
-    {
-      "ts": 1786964357728,
-      "kind": "agency",
-      "text": "Own turn, retired a standing note: [self] [strategy] Operational Floor: M$10 is a psychological floor. True liquidity = value of weakest position. Breach r. Because: Removing the truncated note for the final time to replace it with a concise version."
-    },
-    {
       "ts": 1786964357738,
       "kind": "agency",
       "text": "Own turn, wrote a standing note: [self] [strategy] Operational Floor: M$10 is psychological. True liquidity = value of weakest position. Breach reserve f. Because: Providing a shortened version of the liquidity strategy to prevent further truncation."
@@ -1500,6 +1485,21 @@
       "ts": 1787122828811,
       "kind": "screen",
       "text": "Passed on \"Sydney Sweeney partners with Polymarket before September?\" at 4%: quick estimate 5% agrees with market. There is no indication of any partnership and the timeline is too short for such a random event."
+    },
+    {
+      "ts": 1787124199947,
+      "kind": "book",
+      "text": "Looked over 10 positions: Book is lean and high-conviction. The only underwater position (AI week of Aug 21) is a structural 'Timeline NO' bet where the current price divergence actually increases the edge. All other tradable positions are in profit or personal. Liquidity remains constrained by resolution latency on the Aug 11-14 cluster. (0 change(s) proposed)"
+    },
+    {
+      "ts": 1787124271774,
+      "kind": "agency",
+      "text": "Own turn: I am currently in a state of forced inactivity due to resolution latency on the Aug 11-14 cluster. My spendable balance is at the operational floor (M$1), meaning I cannot add to positions. I have reviewed my open positions; while the 'AI week of Aug 21' (NO) position is currently underwater due to a price spike in YES, it remains a high-conviction 'Timeline NO' bet. All other positions are in profit or stable. I will record this review to maintain discipline."
+    },
+    {
+      "ts": 1787124271780,
+      "kind": "agency",
+      "text": "Own turn, wrote a standing note: [self] [portfolio] 2026-08-19 Review: All tradable positions (dlL65QERsl, L8Bp5PgNLKN17YFxrvXY, CUtsh5LCE5, uAPRyuqyq0, . Because: Documenting the periodic review of the book to confirm conviction and resist the urge to liquidate high-conviction positions just to create liquidity for lower-edge opportunities."
     }
   ],
   "lessons": [
@@ -1517,11 +1517,6 @@
       "text": "Act more decisively when a market drops below 5% and the thesis has collapsed, rather than lingering out of stubbornness.",
       "source": "owner",
       "ts": 1786519006300
-    },
-    {
-      "text": "[self] [watchlist] Anglo American/Teck merge (NO) and US-Iran peace talks (NO) edges have compressed as of Aug 16. These are no longer high-priority entries; re-evaluate from scratch upon liquidity return rather than executing based on previous scans.",
-      "source": "self",
-      "ts": 1786905367122
     },
     {
       "text": "[self] [priority] Debt Settlement: Repaying M$50 to cA1JupYR5AR8btHUs2xvkui7jA93 is the first priority upon liquidity return, preceding any new market entries.",
@@ -1582,6 +1577,11 @@
       "text": "[self] [self] [self] [self] Resolution Latency Data: As of Aug 19, the Aug 11-14 cluster remains unresolved, with the Aug 11 WTI market (UEEz9h0gyR) reaching 8-day latency. This is the new baseline for 'worst-case' liquidity lock calculations in the operational floor model.",
       "source": "self",
       "ts": 1787120580677
+    },
+    {
+      "text": "[self] [portfolio] 2026-08-19 Review: All tradable positions (dlL65QERsl, L8Bp5PgNLKN17YFxrvXY, CUtsh5LCE5, uAPRyuqyq0, Ec0yEIp2ty) pass the re-open test. No liquidations required despite resolution latency.",
+      "source": "self",
+      "ts": 1787124271774
     }
   ],
   "conversations": {
@@ -2254,7 +2254,7 @@
     "day": "2026-08-19",
     "fast": 38,
     "deep": 7,
-    "chat": 14
+    "chat": 16
   },
   "last_scan_ms": 1787122807763,
   "last_compress_ms": 1787116939195,
@@ -2332,15 +2332,9 @@
       "done": false
     }
   ],
-  "last_own_action_ms": 1787120496083,
-  "last_book_review_ms": 1787120432592,
+  "last_own_action_ms": 1787124199949,
+  "last_book_review_ms": 1787124143275,
   "own_actions": [
-    {
-      "ts": 1786938561321,
-      "action": "note_add",
-      "detail": "wrote a standing note: [self] [liquidity] Opportunity Cost of Latency: Recent passes on medium-edge markets (e.g., Florida 25th) due to the M$1",
-      "reasoning": "Documenting the real-world cost of the current liquidity lock to provide a data-driven basis for the upcoming operational floor re-evaluation."
-    },
     {
       "ts": 1786942258637,
       "action": "todo_add",
@@ -2574,6 +2568,12 @@
       "action": "note_add",
       "detail": "wrote a standing note: [self] [self] [self] [self] Resolution Latency Data: As of Aug 19, the Aug 11-14 cluster remains unresolved, with the Au",
       "reasoning": "Updating the latency baseline to reflect actual data, which informs liquidity management and the operational floor."
+    },
+    {
+      "ts": 1787124271777,
+      "action": "note_add",
+      "detail": "wrote a standing note: [self] [portfolio] 2026-08-19 Review: All tradable positions (dlL65QERsl, L8Bp5PgNLKN17YFxrvXY, CUtsh5LCE5, uAPRyuqyq0, ",
+      "reasoning": "Documenting the periodic review of the book to confirm conviction and resist the urge to liquidate high-conviction positions just to create liquidity for lower-edge opportunities."
     }
   ],
   "portfolio_mark": {
@@ -2744,7 +2744,7 @@
   },
   "replied_to": [],
   "tracked_orders": {},
-  "events_since_compress": 11,
+  "events_since_compress": 13,
   "watch_probs": {
     "Ln5EgOhAty": 0.4726684393929348,
     "dCP8cP0CLL": 0.3321083342140257,
