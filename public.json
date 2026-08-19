@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787107535284,
+  "generated_ms": 1787107785772,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 14,
+      "today": 17,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 4,
+      "today": 5,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 554.52,
   "summary": "Portfolio net worth is stable around M$604, with spendable balance intentionally near the operational floor due to resolution latency and the recent debt settlement. The Summer Metaculus Cup NO position was sold at a minor M$-1 loss to successfully settle the M$50 debt, and a low-edge personal sentiment bet was also pruned for liquidity. A new position was established in \"Will something happen in AI the week of Aug 21, 2026?\" (NO, M$37 committed at 55%), which has experienced some short-term movement against us (shifting to 63% YES, unrealized P/L M$-9). Active exposure stands anchored by structural Timeline NO frameworks, tech bets, and personal milestone positions.\n\nResolution latency on historical clusters continues to constrain true liquidity and prevents scaling into medium-edge opportunities discovered during screenings. \n\nConcrete mistakes to avoid include letting spendable mana drop near operational floors without accounting for resolution latency, falling into the stale execution trap by deploying capital into pre-computed watchlists after edges compress, holding positions after their core thesis is contradicted, dabbling in vague sentiment markets or marginal tactical bets, and succumbing to \"activity bias\"\u2014the temptation to make suboptimal trades just to feel productive during periods of forced inactivity.\n\nCalibration remains strong in shorting over-optimistic timeline claims, symbolic developer hype and teasers, and speculative community propositions, while personal relationship markets and ambiguous sentiment bets require strict discipline. \n\nStanding priorities are to maintain operational discipline during forced inactivity while awaiting the resolution wave cluster to clear, avoid activity bias, and maintain a clean, high-signal decision-making environment without redundant notes.",
   "journal": [
+    {
+      "ts": 1787107785714,
+      "kind": "analysis",
+      "text": "Analysed \"Will Jason Arday's 'Great and Unfortunate Things' be available for pur\": market 85%, my 83% (medium). No trade, edge 0.024 below minimum 0.04."
+    },
+    {
+      "ts": 1787107720534,
+      "kind": "screen",
+      "text": "Escalated \"Will Jason Arday's 'Great and Unfortunate Things' be available for pur\" at 85%: quick estimate 50% vs market 85%"
+    },
     {
       "ts": 1787106796317,
       "kind": "move",
@@ -437,16 +447,6 @@
       "ts": 1787060794155,
       "kind": "agency",
       "text": "Own turn, sold out of \"Will I conclude my life is better 1 year from now than it wa\" (NO, P/L M$+1). Because: Low-edge personal sentiment bet. While not fundamentally broken, it is the weakest tradable position in the book and selling it frees up necessary liquidity."
-    },
-    {
-      "ts": 1787060751355,
-      "kind": "book",
-      "text": "Looked over 10 positions: The book is lean and high-conviction, anchored by Timeline NO frameworks and personal milestones. Liquidity is severely constrained by resolution latency of the Aug 11-14 cluster. All structural positions pass the re-open test, but the book requires more free mana to avoid strategic bottlenecks. (1 change(s) proposed)"
-    },
-    {
-      "ts": 1787060488781,
-      "kind": "screen",
-      "text": "Passed on \"Will Andrew Tate be in jail through the end of August?\" at 92%: quick estimate 85% agrees with market. Extradition cases involving serious charges like rape and trafficking routinely take months or years, making detention through August highly likely."
     }
   ],
   "todos": [
@@ -707,7 +707,7 @@
       "profit": 1.8,
       "prob": 0.734,
       "closed": false,
-      "days_to_close": 10.1
+      "days_to_close": 10.0
     },
     {
       "question": "Will MNX have $1m in volume before September 2026?",
@@ -795,6 +795,30 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1787107785712,
+      "kind": "no_trade",
+      "question": "Will Jason Arday's 'Great and Unfortunate Things' be available for purchase in the UK on or before August 27, 2026?",
+      "url": "https://manifold.markets/vitamind/will-jason-ardays-great-and-unfortu",
+      "market_prob": 0.8538767498702092,
+      "model_prob": 0.83,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "The UK release is officially scheduled for August 27, 2026 with inventory in retail pipelines following the August 11 US launch. While recent post-launch controversies and the author's passing introduce minor tail risk of a publisher pause or postponement, standard distribution timelines make release on or before August 27 likely (~83%).",
+      "uncertainty": "Whether Simon & Schuster or the author's estate issues a last-minute hold or postponement on the UK release in the next 8 days.",
+      "resolution_risk": "Lack of creator resolution criteria creates ambiguity over whether active pre-orders alone could count as 'available for purchase'.",
+      "evidence_for": [
+        "The UK publication date is officially scheduled for August 27, 2026 across major UK retailers (Amazon UK, Blackwell's).",
+        "The US edition was successfully released on August 11, 2026 by Simon & Schuster.",
+        "Mid-August industry reporting confirmed the UK release remains on track for August 27 despite recent events."
+      ],
+      "evidence_against": [
+        "The author's death shortly after the US release, along with autobiographical controversies, creates a tail risk of the publisher or estate pausing distribution.",
+        "Supply chain or logistics delays could push the actual retail availability past the August 27 deadline."
+      ],
+      "reason": "edge 0.024 below minimum 0.04"
+    },
     {
       "ts": 1787105409270,
       "kind": "no_trade",
@@ -1128,30 +1152,6 @@
         "Closing cross-border mining mega-mergers requires multi-jurisdictional clearances (Canada, Chile, UK) and administrative lead time after approval."
       ],
       "reason": "edge 0.027 below minimum 0.04"
-    },
-    {
-      "ts": 1787058010056,
-      "kind": "no_trade",
-      "question": "Will the percent of Pakistanis in extreme poverty be above 5 percent in 2023?",
-      "url": "https://manifold.markets/DismalScientist/will-the-percent-of-pakistanis-in-e",
-      "market_prob": 0.86500461790918,
-      "model_prob": 0.89,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Given the 2018 baseline was already 4.93%, even a minimal net disruption from the 2022 floods and inflation crisis pushes the headcount rate above 5.0%.",
-      "uncertainty": "Whether official survey-based consumption tabulations published via World Bank/OWID reflect the flood/inflation impact or smooth it via modeled estimates.",
-      "resolution_risk": "Data revision differences or shifting definitions between the $1.90 and $2.15 poverty line benchmarks.",
-      "evidence_for": [
-        "Baseline extreme poverty in Pakistan was already 4.93% in 2018, leaving a tiny margin (0.08 percentage points) to exceed 5.0%.",
-        "The 2022 catastrophic floods and subsequent 2022-2023 macroeconomic crisis and high inflation caused major shocks to low-income households.",
-        "World Bank simulations estimated that the 2022 floods alone pushed millions of additional people into poverty."
-      ],
-      "evidence_against": [
-        "Targeted social safety net expansions like the Benazir Income Support Programme (BISP) mitigated extreme consumption shocks.",
-        "World Bank model projections from early 2023 suggested potential modest long-term declines if post-Covid recovery outpaced shocks."
-      ],
-      "reason": "edge 0.025 below minimum 0.04"
     }
   ]
 }
