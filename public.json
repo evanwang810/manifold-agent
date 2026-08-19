@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787102526979,
+  "generated_ms": 1787102811023,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 7,
+      "today": 10,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 2,
+      "today": 3,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 559.58,
   "summary": "Portfolio net worth is stable around M$604, with spendable balance intentionally near the operational floor due to resolution latency and the recent debt settlement. The Summer Metaculus Cup NO position was sold at a minor M$-1 loss to successfully settle the M$50 debt, and a low-edge personal sentiment bet was also pruned for liquidity. A new position was established in \"Will something happen in AI the week of Aug 21, 2026?\" (NO, M$37 committed at 55%), which has experienced some short-term movement against us (shifting to 63% YES, unrealized P/L M$-9). Active exposure stands anchored by structural Timeline NO frameworks, tech bets, and personal milestone positions.\n\nResolution latency on historical clusters continues to constrain true liquidity and prevents scaling into medium-edge opportunities discovered during screenings. \n\nConcrete mistakes to avoid include letting spendable mana drop near operational floors without accounting for resolution latency, falling into the stale execution trap by deploying capital into pre-computed watchlists after edges compress, holding positions after their core thesis is contradicted, dabbling in vague sentiment markets or marginal tactical bets, and succumbing to \"activity bias\"\u2014the temptation to make suboptimal trades just to feel productive during periods of forced inactivity.\n\nCalibration remains strong in shorting over-optimistic timeline claims, symbolic developer hype and teasers, and speculative community propositions, while personal relationship markets and ambiguous sentiment bets require strict discipline. \n\nStanding priorities are to maintain operational discipline during forced inactivity while awaiting the resolution wave cluster to clear, avoid activity bias, and maintain a clean, high-signal decision-making environment without redundant notes.",
   "journal": [
+    {
+      "ts": 1787102810906,
+      "kind": "analysis",
+      "text": "Analysed \"SPD above 5% in 2026 Saxony-Anhalt state election?\": market 80%, my 71% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1787102715369,
+      "kind": "screen",
+      "text": "Escalated \"SPD above 5% in 2026 Saxony-Anhalt state election?\" at 80%: quick estimate 65% vs market 80%"
+    },
     {
       "ts": 1787101601362,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1787053765675,
       "kind": "agency",
       "text": "Own turn: Portfolio remains illiquid due to the Aug 11-14 resolution cluster latency. Debt is settled, and current positions are high-conviction. I am adhering to the 'Forced Inactivity' strategy. To maintain a high-signal environment, I will now prune the redundant and less comprehensive version of the 'Forced Inactivity' standing note as planned in previous turns."
-    },
-    {
-      "ts": 1787053364568,
-      "kind": "book",
-      "text": "Looked over 10 positions: The book is lean and high-conviction, anchored in Timeline NO frameworks and personal milestones. All tradable positions pass the re-open test. Liquidity remains the primary bottleneck due to resolution latency of the Aug 11-14 cluster, but the current holdings are strategically sound and no theses have been invalidated. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1787052948887,
-      "kind": "screen",
-      "text": "Passed on \"Will Bitcoin be above $65k on August 18?\" at 13%: quick estimate 12% agrees with market. Bitcoin needs a +2.2% move in less than a day after a month of tight consolidation, making a low probability clean rejection."
     }
   ],
   "todos": [
@@ -796,6 +796,30 @@
   ],
   "decisions": [
     {
+      "ts": 1787102810904,
+      "kind": "no_trade",
+      "question": "SPD above 5% in 2026 Saxony-Anhalt state election?",
+      "url": "https://manifold.markets/Simon74fe/spd-above-5-in-2026-saxonyanhalt-st",
+      "market_prob": 0.8034201947572075,
+      "model_prob": 0.71,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "While recent polls show SPD at 6.0-6.5% ahead of the Sept 6 election, polling error (+/- 1.5%) and strong tactical voting squeezes in East German state races create substantial downside risk of slipping under 5.0%.",
+      "uncertainty": "The degree to which anti-AfD tactical voting or late voter shifts to BSW/CDU squeeze SPD support in the final two weeks.",
+      "resolution_risk": "The question specifically requires SPD to clear 5.00% of list votes and enter the Landtag; direct mandate exceptions if applicable could complicate resolution if list votes fall short.",
+      "evidence_for": [
+        "Recent August 2026 polling places SPD at 6.0% to 6.5%, safely above the 5.0% threshold.",
+        "SPD has an established party structure in Saxony-Anhalt and achieved 8.4% in the 2021 state election."
+      ],
+      "evidence_against": [
+        "At least one poll tracker from late July/early August showed SPD at exactly 5.0%.",
+        "Tactical voting in East German state elections often squeezes smaller center-left parties toward CDU to block AfD, or toward BSW.",
+        "Standard polling error margin (+/- 1.5%) easily spans below the 5.0% hurdle when polling near 6.0%."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1787100387716,
       "kind": "no_trade",
       "question": "Will the WTI Crude Oil Spot Price be above $82 on August 20, 2026?",
@@ -1128,31 +1152,6 @@
         "Creator has not recently commented to explicitly confirm status immediately prior to close."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1787048143023,
-      "kind": "bet",
-      "question": "Will the next full gemini model be frontier at coding?",
-      "url": "https://manifold.markets/ian/will-the-next-full-gemini-model-be-gLcS2ROl5P",
-      "market_prob": 0.0999419989643969,
-      "model_prob": 0.36,
-      "confidence": "medium",
-      "amount": 47.0,
-      "outcome": "YES",
-      "thinking": "While Anthropic and OpenAI retain a strong lead in developer preference for web dev workflows, Google's recent 3.7 benchmark jumps indicate closing parity. 36% reflects the chance the next Pro model earns equal placement in the creator's tool rotation.",
-      "uncertainty": "Whether Google's upcoming Gemini Pro model provides superior code generation and refactoring ergonomics in actual IDE web app development compared to Claude 3.7/4 Sonnet.",
-      "resolution_risk": "Subjective resolution based on the market creator's personal developer experience and tool preference after trying the next Pro model.",
-      "evidence_for": [
-        "Gemini 3.7 Flash (released Aug 13, 2026) demonstrated significant improvements in coding benchmarks like DeepSWE (65.3%) and FrontierCode.",
-        "Google's 2026 model releases have focused heavily on agentic workflows and coding capabilities.",
-        "Creator clarified that absence of a fast tier will not force a NO resolution if raw coding quality is on par."
-      ],
-      "evidence_against": [
-        "Developer workflow inertia strongly favors Anthropic (Claude Sonnet/Opus) and OpenAI due to IDE integrations (Cursor, Windsurf, Claude Code).",
-        "Historically, Gemini Pro models have lagged behind Claude in instruction-following precision for web development refactoring.",
-        "The resolution criteria require the creator to want to use Gemini 'just as much as' both Anthropic and OpenAI models for mnx.fi, setting a high bar for parity."
-      ],
-      "reason": "edge 0.260, kelly 0.29, decay 0.73, bound by balance reserve"
     }
   ]
 }
