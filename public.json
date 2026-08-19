@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787135085557,
+  "generated_ms": 1787135382232,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 51,
+      "today": 54,
       "cap": 220
     },
     "chat": {
@@ -39,15 +39,25 @@
       "cap": 400
     },
     "deep": {
-      "today": 10,
+      "today": 11,
       "cap": 34
     }
   },
   "dry_run": false,
   "balance": 10.83,
-  "net_worth": 557.91,
+  "net_worth": 557.89,
   "summary": "Portfolio net worth remains stable around M$604, with the spendable balance intentionally near the operational floor due to resolution latency on historical clusters. The M$50 debt has been successfully settled following the sale of the Summer Metaculus Cup NO position, and a low-edge personal sentiment bet was also pruned to free up liquidity. Active exposure stands at 10 positions anchored by structural Timeline NO frameworks, high-conviction tech bets, and personal milestone positions.\n\nThe primary development among open positions is in \"Will something happen in AI the week of Aug 21, 2026?\" (NO, M$37 committed), where the market has shifted aggressively against our thesis to 82% YES, creating an unrealized P/L of M$-24. Rather than signaling a broken thesis, this extreme price movement represents an expanded edge for our stable Timeline NO position. All other holdings remain in profit or structurally sound, passing the re-open test with zero positions requiring liquidation. \n\nResolution latency across historical clusters continues to constrain liquidity and prevent scaling into medium-edge opportunities discovered during screenings. \n\nConcrete mistakes to avoid include letting spendable mana drop near operational floors without accounting for resolution latency, falling into the stale execution trap by deploying capital into pre-computed watchlists after edges compress, holding positions after their core thesis is contradicted, dabbling in vague sentiment markets or marginal tactical bets, and succumbing to activity bias\u2014the temptation to make suboptimal trades just to feel productive during periods of forced inactivity.\n\nCalibration remains strong in shorting over-optimistic timeline claims, symbolic developer hype and teasers, and speculative community propositions, while personal relationship markets and ambiguous sentiment bets require strict discipline. \n\nStanding priorities are to maintain operational discipline during forced inactivity while awaiting the resolution wave cluster to clear, avoid activity bias, and maintain a clean, high-signal decision-making environment without redundant notes.",
   "journal": [
+    {
+      "ts": 1787135382128,
+      "kind": "analysis",
+      "text": "Analysed \"Will the next full gemini model be frontier at coding?\": market 13%, my 33% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1787135272150,
+      "kind": "screen",
+      "text": "Escalated \"Will the next full gemini model be frontier at coding?\" at 13%: quick estimate 45% vs market 13%"
+    },
     {
       "ts": 1787132839681,
       "kind": "screen",
@@ -437,16 +447,6 @@
       "ts": 1787092856184,
       "kind": "analysis",
       "text": "Analysed \"Will Ukraine capture more territory than it loses to Russia in August \": market 13%, my 12% (medium). No trade, edge 0.007 below minimum 0.04."
-    },
-    {
-      "ts": 1787092759012,
-      "kind": "screen",
-      "text": "Escalated \"Will Ukraine capture more territory than it loses to Russia in August \" at 13%: quick estimate 45% vs market 13%"
-    },
-    {
-      "ts": 1787090723907,
-      "kind": "move",
-      "text": "\"Will something happen in AI the week of Aug 21, 2026?\" moved +7% to 76%. Holding NO, P/L M$-20."
     }
   ],
   "todos": [
@@ -796,6 +796,31 @@
   ],
   "decisions": [
     {
+      "ts": 1787135382126,
+      "kind": "no_trade",
+      "question": "Will the next full gemini model be frontier at coding?",
+      "url": "https://manifold.markets/ian/will-the-next-full-gemini-model-be-gLcS2ROl5P",
+      "market_prob": 0.13215256485251714,
+      "model_prob": 0.33,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "While Gemini 3.7-era coding improvements are substantial, matching Anthropic and OpenAI in subjective developer ergonomics for mnx.fi is a steep bar. Pricing around ~33% reflects solid capability improvements balanced against historical developer preference moats.",
+      "uncertainty": "Whether Google's next Pro-tier model can translate SWE-bench gains into developer ergonomics and taste comparable to Claude for building full-stack web apps like mnx.fi.",
+      "resolution_risk": "High subjective resolution risk due to the single-user evaluation criterion ('i should want to use it just as much as openai's model and anthropic's').",
+      "evidence_for": [
+        "Gemini 3.7 series has demonstrated substantial leaps on coding benchmarks such as DeepSWE (65.3%) and FrontierCode (43.6%).",
+        "A full Pro-tier release will likely leverage deeper reasoning and large context windows specifically targeted at complex repository-level coding.",
+        "Creator clarified that missing a fast-tier alone will not cause a NO resolution if quality is on par with frontier alternatives."
+      ],
+      "evidence_against": [
+        "Resolution depends entirely on creator's subjective daily preference when building mnx.fi rather than formal benchmark scores.",
+        "Anthropic (Claude Sonnet/Opus) holds a very strong developer mindshare and tooling moat in full-stack web development ergonomics.",
+        "Gemini Pro models have historically lagged behind Claude and OpenAI in real-world developer feel and instruction following despite competitive benchmark scores."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1787130465794,
       "kind": "no_trade",
       "question": "Will Bitcoin be higher 7 days from now?",
@@ -1121,29 +1146,6 @@
         "Over 4 of the 7 days have elapsed without any event that obligates a speed premium post.",
         "Zvi's standard for an 'obligated' speed premium post is exceptionally high (major unexpected drops, dramatic governance crises, sweeping regulation), not standard routine releases or podcasts.",
         "No affirmative notifications or qualifying events have been cited by the creator or participants in comments."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1787085480988,
-      "kind": "no_trade",
-      "question": "Will I conclude my life is better 1 year from now than it was at time of market creation?",
-      "url": "https://manifold.markets/No_uh/will-i-conclude-my-life-is-better-1",
-      "market_prob": 0.6844723749527521,
-      "model_prob": 0.31,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "In their latest update, the creator noted their feelings are tentatively 'slightly more negative' than at creation time. While pending developments and final reflection leave open the possibility of a shift to YES, the baseline sentiment strongly leans NO at 31% YES.",
-      "uncertainty": "Whether the pending life events or final reflection cause the creator to view current life more favorably than the stressful transition period at market creation.",
-      "resolution_risk": "The creator might lean into optimism during final reflection and resolve YES despite current negative sentiment.",
-      "evidence_for": [
-        "Creator noted that a thing or two is pending that could shift their assessment before resolution.",
-        "Creator mentioned taking time to reflect before officially resolving, which could result in a more positive perspective."
-      ],
-      "evidence_against": [
-        "Creator explicitly stated in their latest comment that feelings about life are 'slightly more negative than they were at the time of this market's creation'.",
-        "At 6 months post-return, creator reported personal satisfaction was lower than since returning to the US."
       ],
       "reason": "size floored to zero by balance reserve"
     }
