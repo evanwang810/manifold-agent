@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787137548192,
+  "generated_ms": 1787137888508,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 54,
+      "today": 58,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 11,
+      "today": 12,
       "cap": 34
     }
   },
@@ -48,6 +48,21 @@
   "net_worth": 565.16,
   "summary": "Portfolio net worth remains stable around M$604, with the spendable balance intentionally near the operational floor due to resolution latency on historical clusters. The M$50 debt has been successfully settled following the sale of the Summer Metaculus Cup NO position, and a low-edge personal sentiment bet was also pruned to free up liquidity. Active exposure stands at 10 positions anchored by structural Timeline NO frameworks, high-conviction tech bets, and personal milestone positions.\n\nThe primary development among open positions is in \"Will something happen in AI the week of Aug 21, 2026?\" (NO, M$37 committed), where the market has shifted aggressively against our thesis to 82% YES, creating an unrealized P/L of M$-24. Rather than signaling a broken thesis, this extreme price movement represents an expanded edge for our stable Timeline NO position. All other holdings remain in profit or structurally sound, passing the re-open test with zero positions requiring liquidation. \n\nResolution latency across historical clusters continues to constrain liquidity and prevent scaling into medium-edge opportunities discovered during screenings. \n\nConcrete mistakes to avoid include letting spendable mana drop near operational floors without accounting for resolution latency, falling into the stale execution trap by deploying capital into pre-computed watchlists after edges compress, holding positions after their core thesis is contradicted, dabbling in vague sentiment markets or marginal tactical bets, and succumbing to activity bias\u2014the temptation to make suboptimal trades just to feel productive during periods of forced inactivity.\n\nCalibration remains strong in shorting over-optimistic timeline claims, symbolic developer hype and teasers, and speculative community propositions, while personal relationship markets and ambiguous sentiment bets require strict discipline. \n\nStanding priorities are to maintain operational discipline during forced inactivity while awaiting the resolution wave cluster to clear, avoid activity bias, and maintain a clean, high-signal decision-making environment without redundant notes.",
   "journal": [
+    {
+      "ts": 1787137888468,
+      "kind": "analysis",
+      "text": "Analysed \"Given I have been with my partner for a year, will we be together for \": market 73%, my 80% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1787137754455,
+      "kind": "screen",
+      "text": "Escalated \"Given I have been with my partner for a year, will we be together for \" at 73%: quick estimate 45% vs market 73%"
+    },
+    {
+      "ts": 1787137734045,
+      "kind": "screen",
+      "text": "Passed on \"By end of 2026, will Volodymyr Zelenskyy be charged with war crimes by\" at 4%: quick estimate 2% agrees with market. The ICC has no active investigation or indictment against Zelenskyy, making a charge before end of 2026 extremely unlikely."
+    },
     {
       "ts": 1787136047062,
       "kind": "move",
@@ -432,21 +447,6 @@
       "ts": 1787097804958,
       "kind": "analysis",
       "text": "Analysed \"Will the AfD win an absolute majority in the state election in Saxony-\": market 34%, my 21% (medium). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1787097679010,
-      "kind": "screen",
-      "text": "Escalated \"Will the AfD win an absolute majority in the state election in Saxony-\" at 34%: quick estimate 12% vs market 34%"
-    },
-    {
-      "ts": 1787095258317,
-      "kind": "screen",
-      "text": "Passed on \"On 27th August, will the in/out price for Kimi K3 on Openrouter be bel\" at 19%: quick estimate 15% agrees with market. Commenters point out current OpenRouter price is $2.80/$14, well above the $2/$10 threshold with only 9 days left."
-    },
-    {
-      "ts": 1787095238351,
-      "kind": "screen",
-      "text": "Passed on \"Trump proclaims a 'Straight Pride month' by August 2026?\" at 4%: quick estimate 5% agrees with market. The resolution deadline of 7/31/2026 has already passed as of today's date of 8/18/2026."
     }
   ],
   "todos": [
@@ -796,6 +796,30 @@
   ],
   "decisions": [
     {
+      "ts": 1787137888465,
+      "kind": "no_trade",
+      "question": "Given I have been with my partner for a year, will we be together for 5?",
+      "url": "https://manifold.markets/LivInTheLookingGlass/given-i-have-been-with-my-partner-f-0dde6bfd1962",
+      "market_prob": 0.7342116457667096,
+      "model_prob": 0.8,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With Liv planning a honeymoon in a companion market, the couple has progressed toward marriage. For engaged couples, the 5-year survival rate is substantially higher than broad dating baselines, making YES likely around 80%.",
+      "uncertainty": "Whether the creator resolves this market upon close based on current commitment level or keeps it open for the full 5-year timeline.",
+      "resolution_risk": "Ambiguity in resolution timing if the market closes in late August 2026 while the 5-year mark falls years later.",
+      "evidence_for": [
+        "Creator posted a companion market titled 'where-will-we-honeymoon', indicating engagement or marriage plans.",
+        "Couples entering engagement/marriage have significantly higher 5-year retention rates (around 80%+) than general dating couples.",
+        "Creator sentiment and context support strong long-term alignment."
+      ],
+      "evidence_against": [
+        "General base rates for 1-year dating relationships reaching 5 years are under 50%.",
+        "Engagements and early marriages still face a 15-20% risk of dissolution over a 4-year window."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1787135382126,
       "kind": "no_trade",
       "question": "Will the next full gemini model be frontier at coding?",
@@ -1122,30 +1146,6 @@
         "Bitcoin is currently trading near $64,500, requiring a massive +31.8% surge to reach $85,000 within the remaining 13.6 days before the September 1 close.",
         "The market criteria explicitly state that if BTC does not reach $85,000 before Hormuz reopens or before the close, it resolves to NO.",
         "Historical base rates for a +32% move in Bitcoin over a 14-day window during non-parabolic regimes are well below 10%."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1787086886706,
-      "kind": "no_trade",
-      "question": "Will something happen in AI the week of Aug 21, 2026?",
-      "url": "https://manifold.markets/ZviMowshowitz/will-something-happen-in-ai-the-wee",
-      "market_prob": 0.6312692911548515,
-      "model_prob": 0.19,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Over 4 of the 7 days in the target window have passed without an event triggering an obligated speed premium post. With only 3 days remaining and a strict threshold that excludes routine model updates, 19% reflects the baseline probability of an emergency-tier AI event occurring before Friday 5pm EST.",
-      "uncertainty": "Whether a surprise major frontier model release or unexpected regulatory/corporate event occurs between August 18 and August 21 5pm EST.",
-      "resolution_risk": "Resolution is 100% subjective to Zvi's determination of what constitutes an obligated speed premium post.",
-      "evidence_for": [
-        "AI development pace in August remains rapid with frequent model updates and corporate shifts.",
-        "Three days remain in the target window (Aug 18 to Aug 21 5pm EST), during which an unexpected frontier model release, policy breakthrough, or scandal could still occur."
-      ],
-      "evidence_against": [
-        "Over 4 of the 7 days have elapsed without any event that obligates a speed premium post.",
-        "Zvi's standard for an 'obligated' speed premium post is exceptionally high (major unexpected drops, dramatic governance crises, sweeping regulation), not standard routine releases or podcasts.",
-        "No affirmative notifications or qualifying events have been cited by the creator or participants in comments."
       ],
       "reason": "size floored to zero by balance reserve"
     }
