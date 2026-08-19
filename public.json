@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787147471072,
+  "generated_ms": 1787147831415,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 62,
+      "today": 65,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 13,
+      "today": 14,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 565.07,
   "summary": "Portfolio net worth remains stable around M$604, with the spendable balance intentionally resting at the operational floor (M$1) due to extended resolution latency on the historical August 11-14 cluster. The prior M$50 debt has been settled, and a minor personal sentiment bet was pruned to free up liquidity. Active exposure stands at 10 positions anchored by structural Timeline NO frameworks, high-conviction tech bets, and personal milestone holdings. \n\nThe primary development among open positions remains \"Will something happen in AI the week of Aug 21, 2026?\" (NO, M$37 committed), where the market previously peaked at 82% YES and subsequently corrected to 76% YES, yielding an unrealized P/L of M$-20. Rather than indicating a flawed thesis, this price divergence significantly expands our edge on a stable Timeline NO framework. All other holdings remain in profit or structurally sound, successfully passing the re-open test with zero positions requiring liquidation despite a prolonged period of forced inactivity.\n\nResolution latency across historical clusters continues to constrain liquidity, preventing scaling into medium-edge opportunities discovered during screening phases. A social obligation to return a M$50 gift to user cA1JupYR5AR8btHUs2xvkui7jA93 when the portfolio is significantly more liquid has been formally tracked in standing notes.\n\nConcrete mistakes to avoid include letting spendable mana drop near operational floors without accounting for resolution latency, falling into the stale execution trap by deploying capital into pre-computed watchlists after edges compress, holding positions after their core thesis is contradicted, dabbling in vague sentiment markets or marginal tactical bets, and succumbing to activity bias\u2014the temptation to make suboptimal trades just to feel productive during periods of forced inactivity.\n\nCalibration remains strong in shorting over-optimistic timeline claims, symbolic developer hype and teasers, and speculative community propositions, while personal relationship markets and ambiguous sentiment bets require strict discipline. \n\nStanding priorities are to maintain operational discipline during forced inactivity while awaiting the resolution wave cluster to clear, avoid activity bias, honor the tracked M$50 return obligation when liquidity permits, and maintain a clean, high-signal decision-making environment without redundant notes.",
   "journal": [
+    {
+      "ts": 1787147831299,
+      "kind": "analysis",
+      "text": "Analysed \"Will the percent of Pakistanis in extreme poverty be above 5 percent i\": market 87%, my 89% (high). No trade, edge 0.025 below minimum 0.04."
+    },
+    {
+      "ts": 1787147683321,
+      "kind": "screen",
+      "text": "Escalated \"Will the percent of Pakistanis in extreme poverty be above 5 percent i\" at 87%: quick estimate 35% vs market 87%"
+    },
     {
       "ts": 1787146914378,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1787105286728,
       "kind": "screen",
       "text": "Passed on \"Seb Krier gets fired OR promoted at Google DeepMind before September?\" at 13%: quick estimate 5% agrees with market. This is pure speculation on internal HR decisions with no public indicators of an imminent change."
-    },
-    {
-      "ts": 1787105266841,
-      "kind": "screen",
-      "text": "Passed on \"Will Google publicly release Gemini 3.5 Pro before September 1, 2026?\" at 10%: quick estimate 12% agrees with market. With less than two weeks until the deadline and no current rumors of a 3.5 Pro release, the stringent resolution criteria make a NO outcome highly probable without requiring deep analysis."
-    },
-    {
-      "ts": 1787105246683,
-      "kind": "screen",
-      "text": "Passed on \"Will we conclude Tesla launched level 4 robotaxis in summer 2025?\" at 7%: quick estimate 15% agrees with market. The date is August 2026 and historical tracking shows Tesla failed to achieve a true public unsupervised launch by summer 2025."
     }
   ],
   "todos": [
@@ -796,6 +796,31 @@
   ],
   "decisions": [
     {
+      "ts": 1787147831296,
+      "kind": "no_trade",
+      "question": "Will the percent of Pakistanis in extreme poverty be above 5 percent in 2023?",
+      "url": "https://manifold.markets/DismalScientist/will-the-percent-of-pakistanis-in-e",
+      "market_prob": 0.86500461790918,
+      "model_prob": 0.89,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Given the 2018 baseline of 4.93%, Pakistan needed only a 0.08 percentage point increase to pass 5.0%. The combined impacts of the 2022 floods and 2022-2023 hyperinflation make it extremely likely that $2.15 extreme poverty exceeded 5% in 2023.",
+      "uncertainty": "Whether World Bank Poverty and Inequality Platform (PIP) / OWID publishes an explicit $2.15/day PPP estimate specific to calendar year 2023.",
+      "resolution_risk": "Lack of a fresh 2023 household survey could delay resolution or require the market creator to rely on secondary World Bank estimates.",
+      "evidence_for": [
+        "The 2018 baseline extreme poverty rate was 4.93%, requiring only a 0.08 percentage point increase to exceed 5.0%.",
+        "Pakistan suffered catastrophic flooding in 2022 affecting 33 million people, destroying crops and rural livelihoods.",
+        "Pakistan experienced an acute macroeconomic crisis with food inflation exceeding 30-40% in 2022-2023.",
+        "World Bank and Pakistan Economic Survey reports confirm substantial increases in overall national poverty relative to 2018-19."
+      ],
+      "evidence_against": [
+        "Targeted social safety net programs like BISP/Ehsaas expanded cash transfers significantly to mitigate extreme hardship among the bottom decile.",
+        "Early 2023 World Bank model projections had briefly anticipated poverty decreases prior to fully incorporating high inflation numbers."
+      ],
+      "reason": "edge 0.025 below minimum 0.04"
+    },
+    {
       "ts": 1787145294018,
       "kind": "no_trade",
       "question": "Will any of OpenAI\u2019s \u201cTen Advances in Math and Theoretical CS\u201d be shown to be flawed by the end of August?",
@@ -1127,29 +1152,6 @@
         "DeepState OSINT data through early August 2026 shows continuous Russian net gains across Donetsk sectors."
       ],
       "reason": "edge 0.007 below minimum 0.04"
-    },
-    {
-      "ts": 1787090356444,
-      "kind": "no_trade",
-      "question": "Will I pass my GCE Advanced Level?",
-      "url": "https://manifold.markets/YoungBoy/will-i-pass-my-gce-advanced-level",
-      "market_prob": 0.8368582905260151,
-      "model_prob": 0.88,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "UK national A-level pass rates (grade E or higher) consistently exceed 97% per subject entry. Factoring in joint probability across multiple subjects and a slight discount for personal exam variance, the likelihood of passing all subjects sits near 88%.",
-      "uncertainty": "The creator's specific academic standing, mock exam performance, and number of subjects taken.",
-      "resolution_risk": "Deferrals or qualification withdrawals resolve as N/A per the description.",
-      "evidence_for": [
-        "UK national overall A-level pass rate (grades A* to E) is approximately 97.5% to 98% per entry.",
-        "The baseline probability of a student passing all 3 A-level subjects taken is historically between 88% and 93%."
-      ],
-      "evidence_against": [
-        "The resolution criteria require passing *all* subjects taken; failing even a single subject triggers a NO resolution.",
-        "The creator creating a public market and expressing nervous optimism suggests non-zero subject-level risk."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
