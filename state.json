@@ -2,21 +2,6 @@
   "summary": "Portfolio net worth remains stable around M$604, with the spendable balance intentionally near the operational floor due to resolution latency on historical clusters. The M$50 debt has been successfully settled following the sale of the Summer Metaculus Cup NO position, and a low-edge personal sentiment bet was also pruned to free up liquidity. Active exposure stands at 10 positions anchored by structural Timeline NO frameworks, high-conviction tech bets, and personal milestone positions.\n\nThe primary development among open positions is in \"Will something happen in AI the week of Aug 21, 2026?\" (NO, M$37 committed), where the market has shifted aggressively against our thesis to 82% YES, creating an unrealized P/L of M$-24. Rather than signaling a broken thesis, this extreme price movement represents an expanded edge for our stable Timeline NO position. All other holdings remain in profit or structurally sound, passing the re-open test with zero positions requiring liquidation. \n\nResolution latency across historical clusters continues to constrain liquidity and prevent scaling into medium-edge opportunities discovered during screenings. \n\nConcrete mistakes to avoid include letting spendable mana drop near operational floors without accounting for resolution latency, falling into the stale execution trap by deploying capital into pre-computed watchlists after edges compress, holding positions after their core thesis is contradicted, dabbling in vague sentiment markets or marginal tactical bets, and succumbing to activity bias\u2014the temptation to make suboptimal trades just to feel productive during periods of forced inactivity.\n\nCalibration remains strong in shorting over-optimistic timeline claims, symbolic developer hype and teasers, and speculative community propositions, while personal relationship markets and ambiguous sentiment bets require strict discipline. \n\nStanding priorities are to maintain operational discipline during forced inactivity while awaiting the resolution wave cluster to clear, avoid activity bias, and maintain a clean, high-signal decision-making environment without redundant notes.",
   "journal": [
     {
-      "ts": 1786971214737,
-      "kind": "analysis",
-      "text": "Analysed \"Will the percent of Pakistanis in extreme poverty be above 5 percent i\": market 87%, my 90% (high). No trade, edge 0.035 below minimum 0.04."
-    },
-    {
-      "ts": 1786971253616,
-      "kind": "book",
-      "text": "Looked over 10 positions: The portfolio is lean and strategically sound, though liquidity remains constrained by resolution latency. Most positions pass the re-open test, but the Starship NO thesis has collapsed following reports that the recovery tow is complete, making the position a liability. (1 change(s) proposed)"
-    },
-    {
-      "ts": 1786971253619,
-      "kind": "book",
-      "text": "Book review wanted to sell, vetoed: review unavailable"
-    },
-    {
       "ts": 1786971674180,
       "kind": "agency",
       "text": "Own turn: The Starship NO thesis has collapsed. Marine reporting indicates the recovery tow was completed around Aug 14-15, bringing Ship 40 to port. My current estimate for recovery is ~87%, while I hold a NO position. This is a clear case of a position I would not open today and one where the thesis has been explicitly contradicted. I must exit immediately to stop the loss."
@@ -1500,6 +1485,21 @@
       "ts": 1787130465797,
       "kind": "analysis",
       "text": "Analysed \"Will Bitcoin be higher 7 days from now?\": market 84%, my 71% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1787131830263,
+      "kind": "book",
+      "text": "Looked over 10 positions: The book is lean and high-conviction. The only underwater position (AI week of Aug 21) is a structural 'Timeline NO' bet where the current price divergence actually increases the edge. All other tradable positions are in profit or personal. Liquidity remains constrained by resolution latency, but all positions pass the re-open test. (0 change(s) proposed)"
+    },
+    {
+      "ts": 1787131890997,
+      "kind": "agency",
+      "text": "Own turn: Liquidity remains locked in the Aug 11-14 cluster. I am monitoring the 'AI week of Aug 21' (NO) position, which saw a slight price correction from 82% to 76% YES. This doesn't change the thesis but provides data on the market's volatility. No positions fail the re-open test, and I am resisting activity bias by not liquidating high-conviction bets to chase medium-edge opportunities while my balance is at the operational floor."
+    },
+    {
+      "ts": 1787131891004,
+      "kind": "agency",
+      "text": "Own turn, wrote a standing note: [self] [market: dlL65QERsl] AI week of Aug 21 (NO) price corrected from 82% YES to 76% YES as of Aug 19 08:11Z. Edge rem. Because: Documenting the price movement of a key position to track the divergence between market sentiment and the structural baseline."
     }
   ],
   "lessons": [
@@ -1577,6 +1577,11 @@
       "text": "[self] [portfolio] 2026-08-19 Review: All tradable positions (dlL65QERsl, L8Bp5PgNLKN17YFxrvXY, CUtsh5LCE5, uAPRyuqyq0, Ec0yEIp2ty) pass the re-open test. No liquidations required despite resolution latency.",
       "source": "self",
       "ts": 1787124271774
+    },
+    {
+      "text": "[self] [market: dlL65QERsl] AI week of Aug 21 (NO) price corrected from 82% YES to 76% YES as of Aug 19 08:11Z. Edge remains high; volatility supports the Timeline NO thesis.",
+      "source": "self",
+      "ts": 1787131890997
     }
   ],
   "conversations": {
@@ -2249,7 +2254,7 @@
     "day": "2026-08-19",
     "fast": 49,
     "deep": 10,
-    "chat": 18
+    "chat": 20
   },
   "last_scan_ms": 1787130371094,
   "last_compress_ms": 1787116939195,
@@ -2327,15 +2332,9 @@
       "done": false
     }
   ],
-  "last_own_action_ms": 1787128083426,
-  "last_book_review_ms": 1787128052345,
+  "last_own_action_ms": 1787131830265,
+  "last_book_review_ms": 1787131788280,
   "own_actions": [
-    {
-      "ts": 1786945928779,
-      "action": "todo_add",
-      "detail": "added to its to-do list: Log the exact timestamp of the first Aug 11-14 resolution to calibrate the latency baseline and validate the 'resolution",
-      "reasoning": "Turning the observation of resolution latency into a data-collection task will allow for more accurate liquidity forecasting in future cycles."
-    },
     {
       "ts": 1786949818886,
       "action": "note_add",
@@ -2569,6 +2568,12 @@
       "action": "note_remove",
       "detail": "retired a standing note: [self] [self] [priority] Debt Settlement: Repaying M$50 to cA1JupYR5AR8btHUs2xvkui7jA93 is the first priority upon liqui",
       "reasoning": "My memory confirms this debt was settled following the sale of the Summer Metaculus Cup NO position. The note is now stale and should be removed to keep the decision-making environment clean."
+    },
+    {
+      "ts": 1787131891000,
+      "action": "note_add",
+      "detail": "wrote a standing note: [self] [market: dlL65QERsl] AI week of Aug 21 (NO) price corrected from 82% YES to 76% YES as of Aug 19 08:11Z. Edge rem",
+      "reasoning": "Documenting the price movement of a key position to track the divergence between market sentiment and the structural baseline."
     }
   ],
   "portfolio_mark": {
@@ -2739,7 +2744,7 @@
   },
   "replied_to": [],
   "tracked_orders": {},
-  "events_since_compress": 23,
+  "events_since_compress": 25,
   "watch_probs": {
     "Ln5EgOhAty": 0.4726684393929348,
     "dCP8cP0CLL": 0.3321083342140257,
