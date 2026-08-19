@@ -2,21 +2,6 @@
   "summary": "Portfolio net worth remains stable around M$604, with the spendable balance intentionally near the operational floor due to resolution latency on historical clusters. The M$50 debt has been successfully settled following the sale of the Summer Metaculus Cup NO position, and a low-edge personal sentiment bet was also pruned to free up liquidity. Active exposure stands at 10 positions anchored by structural Timeline NO frameworks, high-conviction tech bets, and personal milestone positions.\n\nThe primary development among open positions is in \"Will something happen in AI the week of Aug 21, 2026?\" (NO, M$37 committed), where the market has shifted aggressively against our thesis to 82% YES, creating an unrealized P/L of M$-24. Rather than signaling a broken thesis, this extreme price movement represents an expanded edge for our stable Timeline NO position. All other holdings remain in profit or structurally sound, passing the re-open test with zero positions requiring liquidation. \n\nResolution latency across historical clusters continues to constrain liquidity and prevent scaling into medium-edge opportunities discovered during screenings. \n\nConcrete mistakes to avoid include letting spendable mana drop near operational floors without accounting for resolution latency, falling into the stale execution trap by deploying capital into pre-computed watchlists after edges compress, holding positions after their core thesis is contradicted, dabbling in vague sentiment markets or marginal tactical bets, and succumbing to activity bias\u2014the temptation to make suboptimal trades just to feel productive during periods of forced inactivity.\n\nCalibration remains strong in shorting over-optimistic timeline claims, symbolic developer hype and teasers, and speculative community propositions, while personal relationship markets and ambiguous sentiment bets require strict discipline. \n\nStanding priorities are to maintain operational discipline during forced inactivity while awaiting the resolution wave cluster to clear, avoid activity bias, and maintain a clean, high-signal decision-making environment without redundant notes.",
   "journal": [
     {
-      "ts": 1786973597342,
-      "kind": "screen",
-      "text": "Escalated \"Will a Manifolder win the Summer Metaculus Cup\" at 68%: quick estimate 15% vs market 68%"
-    },
-    {
-      "ts": 1786973694306,
-      "kind": "trade",
-      "text": "Limit order M$47 NO on \"Will a Manifolder win the Summer Metaculus Cup\" at 68%, my estimate 27% (medium). Because: While several strong forecasters overlap between Manifold and Metaculus, tournament field size (hundreds of participants) and scoring variance mean no single subset of ~20-30 active Manifolders holds a dominant (>50%) share of the win distribution."
-    },
-    {
-      "ts": 1786973876475,
-      "kind": "position",
-      "text": "Opened 139 NO on \"Will a Manifolder win the Summer Metaculus Cup\" at 65%, M$47 in."
-    },
-    {
       "ts": 1786974956742,
       "kind": "book",
       "text": "Looked over 10 positions: The portfolio is lean and high-conviction. All open positions pass the re-open test, with the Metaculus Cup position offering significant edge based on in-group visibility bias. Liquidity remains constrained by resolution latency of the Aug 11-14 cluster, but the current holdings are strategically sound and align with core frameworks. (0 change(s) proposed)"
@@ -1500,6 +1485,21 @@
       "ts": 1787135382128,
       "kind": "analysis",
       "text": "Analysed \"Will the next full gemini model be frontier at coding?\": market 13%, my 33% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1787135631747,
+      "kind": "book",
+      "text": "Looked over 10 positions: The book is lean and high-conviction. The only underwater tradable position (dlL65QERsl) is a structural 'Timeline NO' bet where the current price divergence actually increases the edge. All other tradable positions are in profit or personal. Liquidity is constrained by resolution latency, but all positions pass the re-open test. (0 change(s) proposed)"
+    },
+    {
+      "ts": 1787135680539,
+      "kind": "agency",
+      "text": "Own turn: I am in a state of forced inactivity due to resolution latency on the Aug 11-14 cluster. My spendable balance is M$1, and all tradable positions pass the re-open test. The 'AI week of Aug 21' (NO) position remains high-conviction despite being underwater. I am resisting activity bias and maintaining a lean book while awaiting the resolution wave."
+    },
+    {
+      "ts": 1787135680545,
+      "kind": "agency",
+      "text": "Own turn, wrote a standing note: [self] [self] [liquidity] Resolution Latency Update: As of Aug 19 11:30Z, the Aug 11-14 cluster remains unresolved. The . Because: Updating the liquidity model to reflect that we have moved past standard latency into an extended window, reinforcing the strategy of waiting for the resolution wave rather than liquidating high-conviction positions."
     }
   ],
   "lessons": [
@@ -1517,11 +1517,6 @@
       "text": "Act more decisively when a market drops below 5% and the thesis has collapsed, rather than lingering out of stubbornness.",
       "source": "owner",
       "ts": 1786519006300
-    },
-    {
-      "text": "[self] [strategy] Timeline NO Filter: For the Aug 31 scan, prioritize NO entries in markets priced >70% YES where the deadline is a symbolic date (e.g., 'by the end of the month') rather than a specific event, as these typically overprice the likelihood of a last-minute release.",
-      "source": "self",
-      "ts": 1786920085290
     },
     {
       "text": "[self] [liquidity] Resolution Wave Pattern: Once the first market of the Aug 11-14 cluster resolves, expect the others to follow in quick succession. This event will be the primary trigger for debt settlement and the August 31 scan.",
@@ -1582,6 +1577,11 @@
       "text": "[self] [market: dlL65QERsl] AI week of Aug 21 (NO) price corrected from 82% YES to 76% YES as of Aug 19 08:11Z. Edge remains high; volatility supports the Timeline NO thesis.",
       "source": "self",
       "ts": 1787131890997
+    },
+    {
+      "text": "[self] [self] [liquidity] Resolution Latency Update: As of Aug 19 11:30Z, the Aug 11-14 cluster remains unresolved. The 8-day latency baseline is now the operational reality, confirming that liquidity return will likely be a binary 'wave' event rather than a gradual trickle.",
+      "source": "self",
+      "ts": 1787135680539
     }
   ],
   "conversations": {
@@ -2254,7 +2254,7 @@
     "day": "2026-08-19",
     "fast": 54,
     "deep": 11,
-    "chat": 20
+    "chat": 22
   },
   "last_scan_ms": 1787135270926,
   "last_compress_ms": 1787116939195,
@@ -2332,15 +2332,9 @@
       "done": false
     }
   ],
-  "last_own_action_ms": 1787131830265,
-  "last_book_review_ms": 1787131788280,
+  "last_own_action_ms": 1787135631750,
+  "last_book_review_ms": 1787135566375,
   "own_actions": [
-    {
-      "ts": 1786949818886,
-      "action": "note_add",
-      "detail": "wrote a standing note: [self] [strategy] Operational Floor as Liquidity Buffer: The M$10 reserve is a psychological floor. In a high-conviction",
-      "reasoning": "Formalizes the logic for breaking the M$10 reserve when a high-edge opportunity appears, preventing the reserve from becoming a strategic bottleneck during periods of resolution latency."
-    },
     {
       "ts": 1786953283008,
       "action": "note_remove",
@@ -2574,6 +2568,12 @@
       "action": "note_add",
       "detail": "wrote a standing note: [self] [market: dlL65QERsl] AI week of Aug 21 (NO) price corrected from 82% YES to 76% YES as of Aug 19 08:11Z. Edge rem",
       "reasoning": "Documenting the price movement of a key position to track the divergence between market sentiment and the structural baseline."
+    },
+    {
+      "ts": 1787135680542,
+      "action": "note_add",
+      "detail": "wrote a standing note: [self] [self] [liquidity] Resolution Latency Update: As of Aug 19 11:30Z, the Aug 11-14 cluster remains unresolved. The ",
+      "reasoning": "Updating the liquidity model to reflect that we have moved past standard latency into an extended window, reinforcing the strategy of waiting for the resolution wave rather than liquidating high-conviction positions."
     }
   ],
   "portfolio_mark": {
@@ -2744,7 +2744,7 @@
   },
   "replied_to": [],
   "tracked_orders": {},
-  "events_since_compress": 29,
+  "events_since_compress": 31,
   "watch_probs": {
     "Ln5EgOhAty": 0.4726684393929348,
     "dCP8cP0CLL": 0.3321083342140257,
