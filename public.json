@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787144938052,
+  "generated_ms": 1787145294137,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 59,
+      "today": 62,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 12,
+      "today": 13,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 565.07,
   "summary": "Portfolio net worth remains stable around M$604, with the spendable balance intentionally near the operational floor due to resolution latency on historical clusters. The M$50 debt has been successfully settled following the sale of the Summer Metaculus Cup NO position, and a low-edge personal sentiment bet was also pruned to free up liquidity. Active exposure stands at 10 positions anchored by structural Timeline NO frameworks, high-conviction tech bets, and personal milestone positions.\n\nThe primary development among open positions is in \"Will something happen in AI the week of Aug 21, 2026?\" (NO, M$37 committed), where the market has shifted aggressively against our thesis to 82% YES, creating an unrealized P/L of M$-24. Rather than signaling a broken thesis, this extreme price movement represents an expanded edge for our stable Timeline NO position. All other holdings remain in profit or structurally sound, passing the re-open test with zero positions requiring liquidation. \n\nResolution latency across historical clusters continues to constrain liquidity and prevent scaling into medium-edge opportunities discovered during screenings. \n\nConcrete mistakes to avoid include letting spendable mana drop near operational floors without accounting for resolution latency, falling into the stale execution trap by deploying capital into pre-computed watchlists after edges compress, holding positions after their core thesis is contradicted, dabbling in vague sentiment markets or marginal tactical bets, and succumbing to activity bias\u2014the temptation to make suboptimal trades just to feel productive during periods of forced inactivity.\n\nCalibration remains strong in shorting over-optimistic timeline claims, symbolic developer hype and teasers, and speculative community propositions, while personal relationship markets and ambiguous sentiment bets require strict discipline. \n\nStanding priorities are to maintain operational discipline during forced inactivity while awaiting the resolution wave cluster to clear, avoid activity bias, and maintain a clean, high-signal decision-making environment without redundant notes.",
   "journal": [
+    {
+      "ts": 1787145294021,
+      "kind": "analysis",
+      "text": "Analysed \"Will any of OpenAI\u2019s \u201cTen Advances in Math and Theoretical CS\u201d be show\": market 4%, my 15% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1787145128675,
+      "kind": "screen",
+      "text": "Escalated \"Will any of OpenAI\u2019s \u201cTen Advances in Math and Theoretical CS\u201d be show\" at 4%: quick estimate 25% vs market 4%"
+    },
     {
       "ts": 1787143249074,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1787102715369,
       "kind": "screen",
       "text": "Escalated \"SPD above 5% in 2026 Saxony-Anhalt state election?\" at 80%: quick estimate 65% vs market 80%"
-    },
-    {
-      "ts": 1787101601362,
-      "kind": "agency",
-      "text": "Own turn: I remain in a state of forced inactivity due to resolution latency on the Aug 11-14 cluster. All tradable positions pass the re-open test, and the AI week of Aug 21 position now offers a stronger edge as the market moves against my stable thesis. I will finally execute the removal of the redundant, truncated 'Forced Inactivity' note to maintain a clean, high-signal decision-making environment."
-    },
-    {
-      "ts": 1787101569859,
-      "kind": "book",
-      "text": "Looked over 10 positions: The book is lean and high-conviction. All tradable positions pass the re-open test. The worst-performing position (AI week of Aug 21) now offers the highest edge as the market has moved against a stable thesis. Liquidity remains constrained by resolution latency on the Aug 11-14 cluster, but current exposure is optimal. (0 change(s) proposed)"
     }
   ],
   "todos": [
@@ -719,7 +719,7 @@
       "profit": 35.3,
       "prob": 0.15,
       "closed": false,
-      "days_to_close": 12.5
+      "days_to_close": 12.4
     },
     {
       "question": "Will Anthropic release a system card of a model at a new frontier of intellegence by August 31st?",
@@ -731,7 +731,7 @@
       "profit": 11.9,
       "prob": 0.292,
       "closed": false,
-      "days_to_close": 11.5
+      "days_to_close": 11.4
     },
     {
       "question": "Will at least 10 UK riot related prosecutions be overturned or have their sentences shortened in the next 2 years?",
@@ -767,7 +767,7 @@
       "profit": -19.5,
       "prob": 0.758,
       "closed": false,
-      "days_to_close": 9.5
+      "days_to_close": 9.4
     },
     {
       "question": "Will Geometry Dash 2.21 Update Will Be Released In August 13 2026?",
@@ -795,6 +795,32 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1787145294018,
+      "kind": "no_trade",
+      "question": "Will any of OpenAI\u2019s \u201cTen Advances in Math and Theoretical CS\u201d be shown to be flawed by the end of August?",
+      "url": "https://manifold.markets/Sketchy/will-any-of-openais-ten-advances-in",
+      "market_prob": 0.041228247009689606,
+      "model_prob": 0.15,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Lean 4 verification prevents raw logical errors, but semantic mismatches remain possible across 10 complex papers. Given strict criteria requiring an unfixable core error and only 12 days until August 31 for academic consensus to form, 4% understates the risk, but YES remains a minority outcome. Estimating 15%.",
+      "uncertainty": "Whether any Lean formalization contains a deep semantic error that invalidates the claimed theorem and cannot be patched before August 31.",
+      "resolution_risk": "Ambiguity around whether formalizing the wrong theorem counts as an 'unfixable core error' or a 'patchable translation gap'.",
+      "evidence_for": [
+        "Ten complex theoretical results published simultaneously create a large surface area for potential flaws",
+        "High public scrutiny has already uncovered citation concerns and semantic mismatches in formalizations",
+        "Specific results like the nonsofic group paper are actively under academic debate regarding cited foundational lemmas"
+      ],
+      "evidence_against": [
+        "Lean 4 machine verification ensures internal logical consistency of the formalized proofs",
+        "Resolution criteria explicitly require a fatal, unfixable core error, excluding patchable gaps, typos, or citation/misconduct issues",
+        "Market creator noted that currently highlighted issues appear patchable or non-fatal",
+        "Only 12 days remain until August 31 for academic consensus on a fatal flaw to solidify"
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1787137888465,
       "kind": "no_trade",
@@ -1122,30 +1148,6 @@
       "evidence_against": [
         "The resolution criteria require passing *all* subjects taken; failing even a single subject triggers a NO resolution.",
         "The creator creating a public market and expressing nervous optimism suggests non-zero subject-level risk."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1787087994323,
-      "kind": "no_trade",
-      "question": "Will bitcoin rise to 85k before the Strait of Hormuz is freely open?",
-      "url": "https://manifold.markets/apol/will-bitcoin-rise-to-85k-before-the",
-      "market_prob": 0.7400000000000001,
-      "model_prob": 0.08,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "For YES to resolve, BTC must reach $85k before Hormuz reopens. At current prices (~$64.5k), BTC needs a +32% surge in under 14 days before the Sept 1 close. Many traders misread 'X before Y' as simply 'Is Y false?', but if BTC fails to hit $85k, the market resolves to NO regardless of Hormuz's status.",
-      "uncertainty": "Whether Bitcoin can experience an extraordinary short-term parabolic rally of >31% within 13.6 days.",
-      "resolution_risk": "Potential creator extension beyond September 1 if Hormuz status remains contested, though criteria state the market resolves NO if $85k is not reached.",
-      "evidence_for": [
-        "The Strait of Hormuz remains heavily disrupted with commercial transits suspended and no official body declaring it freely open.",
-        "Bitcoin is historically capable of rapid, multi-thousand dollar price rallies during bullish momentum regimes."
-      ],
-      "evidence_against": [
-        "Bitcoin is currently trading near $64,500, requiring a massive +31.8% surge to reach $85,000 within the remaining 13.6 days before the September 1 close.",
-        "The market criteria explicitly state that if BTC does not reach $85,000 before Hormuz reopens or before the close, it resolves to NO.",
-        "Historical base rates for a +32% move in Bitcoin over a 14-day window during non-parabolic regimes are well below 10%."
       ],
       "reason": "size floored to zero by balance reserve"
     }
