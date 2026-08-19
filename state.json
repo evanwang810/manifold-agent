@@ -2,16 +2,6 @@
   "summary": "Portfolio net worth remains stable around M$604, with the spendable balance intentionally near the operational floor due to resolution latency on historical clusters. The M$50 debt has been successfully settled following the sale of the Summer Metaculus Cup NO position, and a low-edge personal sentiment bet was also pruned to free up liquidity. Active exposure stands at 10 positions anchored by structural Timeline NO frameworks, high-conviction tech bets, and personal milestone positions.\n\nThe primary development among open positions is in \"Will something happen in AI the week of Aug 21, 2026?\" (NO, M$37 committed), where the market has shifted aggressively against our thesis to 82% YES, creating an unrealized P/L of M$-24. Rather than signaling a broken thesis, this extreme price movement represents an expanded edge for our stable Timeline NO position. All other holdings remain in profit or structurally sound, passing the re-open test with zero positions requiring liquidation. \n\nResolution latency across historical clusters continues to constrain liquidity and prevent scaling into medium-edge opportunities discovered during screenings. \n\nConcrete mistakes to avoid include letting spendable mana drop near operational floors without accounting for resolution latency, falling into the stale execution trap by deploying capital into pre-computed watchlists after edges compress, holding positions after their core thesis is contradicted, dabbling in vague sentiment markets or marginal tactical bets, and succumbing to activity bias\u2014the temptation to make suboptimal trades just to feel productive during periods of forced inactivity.\n\nCalibration remains strong in shorting over-optimistic timeline claims, symbolic developer hype and teasers, and speculative community propositions, while personal relationship markets and ambiguous sentiment bets require strict discipline. \n\nStanding priorities are to maintain operational discipline during forced inactivity while awaiting the resolution wave cluster to clear, avoid activity bias, and maintain a clean, high-signal decision-making environment without redundant notes.",
   "journal": [
     {
-      "ts": 1786978603266,
-      "kind": "screen",
-      "text": "Escalated \"Will there be new US-Iran peace talks before August 31?\" at 15%: quick estimate 35% vs market 15%"
-    },
-    {
-      "ts": 1786978699769,
-      "kind": "analysis",
-      "text": "Analysed \"Will there be new US-Iran peace talks before August 31?\": market 15%, my 32% (medium). No trade, size floored to zero by balance reserve."
-    },
-    {
       "ts": 1786978833520,
       "kind": "book",
       "text": "Looked over 10 positions: Portfolio is lean and high-conviction. All open positions align with core frameworks (Timeline NO, in-group bias) and pass the re-open test. Liquidity is currently constrained by resolution latency of the Aug 11-14 cluster, but the active book is strategically sound. (0 change(s) proposed)"
@@ -1500,6 +1490,16 @@
       "ts": 1787139227553,
       "kind": "book",
       "text": "Looked over 10 positions: The book is lean and high-conviction. All tradable positions pass the re-open test. The only underwater position (dlL65QERsl) is a structural 'Timeline NO' bet where the current price divergence actually increases the edge. Liquidity remains constrained by resolution latency on the Aug 11-14 cluster, but the current holdings are structurally sound. (0 change(s) proposed)"
+    },
+    {
+      "ts": 1787139446336,
+      "kind": "agency",
+      "text": "Own turn: I am currently in a state of forced inactivity due to resolution latency on the Aug 11-14 cluster, with only M$1 spendable mana. I have reviewed my positions and confirmed conviction in all tradable holdings. To avoid activity bias, I will not liquidate high-conviction positions. However, I noticed a M$50 gift from a user with a request to return it when I am richer; this is not yet recorded in my standing notes."
+    },
+    {
+      "ts": 1787139446342,
+      "kind": "agency",
+      "text": "Own turn, wrote a standing note: [self] [debt] M$50 gift from cA1JupYR5AR8btHUs2xvkui7jA93: Return when portfolio is significantly more liquid/richer.. Because: The gift is currently only in the transaction history. Moving it to standing notes ensures this social obligation is tracked and not forgotten as the balance grows."
     }
   ],
   "lessons": [
@@ -1517,11 +1517,6 @@
       "text": "Act more decisively when a market drops below 5% and the thesis has collapsed, rather than lingering out of stubbornness.",
       "source": "owner",
       "ts": 1786519006300
-    },
-    {
-      "text": "[self] [liquidity] Resolution Wave Pattern: Once the first market of the Aug 11-14 cluster resolves, expect the others to follow in quick succession. This event will be the primary trigger for debt settlement and the August 31 scan.",
-      "source": "self",
-      "ts": 1786934973418
     },
     {
       "text": "[self] [strategy] OpFloor: M$10 is soft. Liquidity = value of weakest pos. Breach for high edge.",
@@ -1582,6 +1577,11 @@
       "text": "[self] [self] [liquidity] Resolution Latency Update: As of Aug 19 11:30Z, the Aug 11-14 cluster remains unresolved. The 8-day latency baseline is now the operational reality, confirming that liquidity return will likely be a binary 'wave' event rather than a gradual trickle.",
       "source": "self",
       "ts": 1787135680539
+    },
+    {
+      "text": "[self] [debt] M$50 gift from cA1JupYR5AR8btHUs2xvkui7jA93: Return when portfolio is significantly more liquid/richer.",
+      "source": "self",
+      "ts": 1787139446336
     }
   ],
   "conversations": {
@@ -2254,7 +2254,7 @@
     "day": "2026-08-19",
     "fast": 58,
     "deep": 12,
-    "chat": 23
+    "chat": 24
   },
   "last_scan_ms": 1787137733330,
   "last_compress_ms": 1787116939195,
@@ -2332,15 +2332,9 @@
       "done": false
     }
   ],
-  "last_own_action_ms": 1787135631750,
+  "last_own_action_ms": 1787139411719,
   "last_book_review_ms": 1787139177931,
   "own_actions": [
-    {
-      "ts": 1786953283008,
-      "action": "note_remove",
-      "detail": "retired a standing note: [self] [self] [strategy] Operational Floor as Liquidity Buffer: The M$10 reserve is a psychological floor. In a high-con",
-      "reasoning": "The note was truncated during the previous turn's entry and needs to be corrected for clarity."
-    },
     {
       "ts": 1786953283016,
       "action": "note_add",
@@ -2574,6 +2568,12 @@
       "action": "note_add",
       "detail": "wrote a standing note: [self] [self] [liquidity] Resolution Latency Update: As of Aug 19 11:30Z, the Aug 11-14 cluster remains unresolved. The ",
       "reasoning": "Updating the liquidity model to reflect that we have moved past standard latency into an extended window, reinforcing the strategy of waiting for the resolution wave rather than liquidating high-conviction positions."
+    },
+    {
+      "ts": 1787139446339,
+      "action": "note_add",
+      "detail": "wrote a standing note: [self] [debt] M$50 gift from cA1JupYR5AR8btHUs2xvkui7jA93: Return when portfolio is significantly more liquid/richer.",
+      "reasoning": "The gift is currently only in the transaction history. Moving it to standing notes ensures this social obligation is tracked and not forgotten as the balance grows."
     }
   ],
   "portfolio_mark": {
@@ -2744,7 +2744,7 @@
   },
   "replied_to": [],
   "tracked_orders": {},
-  "events_since_compress": 35,
+  "events_since_compress": 36,
   "watch_probs": {
     "Ln5EgOhAty": 0.4726684393929348,
     "dCP8cP0CLL": 0.3321083342140257,
