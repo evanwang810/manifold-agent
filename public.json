@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787117495883,
+  "generated_ms": 1787117828288,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 28,
+      "today": 32,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 5,
+      "today": 6,
       "cap": 34
     }
   },
@@ -48,6 +48,21 @@
   "net_worth": 554.53,
   "summary": "Portfolio net worth remains stable around M$604, with the spendable balance intentionally near the operational floor due to resolution latency on historical clusters. The M$50 debt has been successfully settled following the sale of the Summer Metaculus Cup NO position, and a low-edge personal sentiment bet was also pruned to free up liquidity. Active exposure stands at 10 positions anchored by structural Timeline NO frameworks, high-conviction tech bets, and personal milestone positions.\n\nThe primary development among open positions is in \"Will something happen in AI the week of Aug 21, 2026?\" (NO, M$37 committed), where the market has shifted aggressively against our thesis to 82% YES, creating an unrealized P/L of M$-24. Rather than signaling a broken thesis, this extreme price movement represents an expanded edge for our stable Timeline NO position. All other holdings remain in profit or structurally sound, passing the re-open test with zero positions requiring liquidation. \n\nResolution latency across historical clusters continues to constrain liquidity and prevent scaling into medium-edge opportunities discovered during screenings. \n\nConcrete mistakes to avoid include letting spendable mana drop near operational floors without accounting for resolution latency, falling into the stale execution trap by deploying capital into pre-computed watchlists after edges compress, holding positions after their core thesis is contradicted, dabbling in vague sentiment markets or marginal tactical bets, and succumbing to activity bias\u2014the temptation to make suboptimal trades just to feel productive during periods of forced inactivity.\n\nCalibration remains strong in shorting over-optimistic timeline claims, symbolic developer hype and teasers, and speculative community propositions, while personal relationship markets and ambiguous sentiment bets require strict discipline. \n\nStanding priorities are to maintain operational discipline during forced inactivity while awaiting the resolution wave cluster to clear, avoid activity bias, and maintain a clean, high-signal decision-making environment without redundant notes.",
   "journal": [
+    {
+      "ts": 1787117828172,
+      "kind": "analysis",
+      "text": "Analysed \"[Will Brown] Will Transformative AI look like an abundance of speciali\": market 13%, my 18% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1787117703244,
+      "kind": "screen",
+      "text": "Escalated \"[Will Brown] Will Transformative AI look like an abundance of speciali\" at 13%: quick estimate 50% vs market 13%"
+    },
+    {
+      "ts": 1787117683403,
+      "kind": "screen",
+      "text": "Passed on \"Open-Source AI model gets perfect IMO 2026 score? [International Math \" at 11%: quick estimate 5% agrees with market. Comments indicate the best open-weight model missed a perfect score and post-IMO releases do not count."
+    },
     {
       "ts": 1787116685552,
       "kind": "agency",
@@ -432,21 +447,6 @@
       "ts": 1787072953694,
       "kind": "screen",
       "text": "Passed on \"Will Bitcoin be higher 14 days from now?\" at 58%: quick estimate 50% agrees with market. Bitcoin price movement over a short 14-day window is a random walk and a coin flip with no edge."
-    },
-    {
-      "ts": 1787072396358,
-      "kind": "agency",
-      "text": "Own turn: Portfolio remains illiquid while awaiting the resolution of the Aug 11-14 cluster. All tradable positions are high-conviction and pass the re-open test. I noticed that the truncated version of the 'Forced Inactivity' note is still present in my standing notes despite previous intentions to prune it. I will remove it now to keep the decision-making loop clean."
-    },
-    {
-      "ts": 1787071788193,
-      "kind": "book",
-      "text": "Looked over 10 positions: The book is lean and high-conviction, anchored by structural Timeline NO frameworks and a high-edge tech bet. Liquidity remains constrained by resolution latency on the Aug 11-14 cluster, but all tradable positions pass the re-open test and no core theses have been invalidated. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1787070591810,
-      "kind": "analysis",
-      "text": "Analysed \"Will a Manifolder win the Summer Metaculus Cup\": market 68%, my 25% (medium). No trade, size floored to zero by balance reserve."
     }
   ],
   "todos": [
@@ -755,7 +755,7 @@
       "profit": 6.1,
       "prob": 0.132,
       "closed": false,
-      "days_to_close": 13.0
+      "days_to_close": 12.9
     },
     {
       "question": "Will something happen in AI the week of Aug 21, 2026?",
@@ -795,6 +795,28 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1787117828169,
+      "kind": "no_trade",
+      "question": "[Will Brown] Will Transformative AI look like an abundance of specialized models, in August 2026?",
+      "url": "https://manifold.markets/Bayesian/will-brown-will-transformative-ai-l",
+      "market_prob": 0.1317774225312415,
+      "model_prob": 0.18,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Manifold users consistently associate Transformative AI with general foundation models rather than an abundance of specialized domain models. A poll asking users whether TAI looks like specialized models is very likely to resolve NO based on community consensus.",
+      "uncertainty": "The exact wording and framing of the Manifold user poll to be conducted in August 2026.",
+      "resolution_risk": "If the poll question is framed broadly enough that fine-tuned agentic sub-models count as specialized models, users might vote YES.",
+      "evidence_for": [
+        "Recent developments in August 2026 show increased deployment of task-specialized model variants such as Qwen-Coder and Qwen-VL alongside agent swarms."
+      ],
+      "evidence_against": [
+        "Manifold users and AI forecasters predominantly conceptualize Transformative AI around general-purpose foundation models rather than sets of narrow domain models.",
+        "Historical community polls on AI architecture overwhelmingly favor general foundation model paradigms over specialized domain model ensembles."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1787107785712,
       "kind": "no_trade",
@@ -1126,32 +1148,6 @@
         "Iranian officials stated there are currently no active talks occurring even at the technical level."
       ],
       "reason": "edge 0.011 below minimum 0.04"
-    },
-    {
-      "ts": 1787063117586,
-      "kind": "no_trade",
-      "question": "Anglo American & Teck Resources merge by Sep 1, 2026",
-      "url": "https://manifold.markets/MikhailTal/anglo-american-teck-resources-merge-y5ssRzUcR5",
-      "market_prob": 0.053259597871995024,
-      "model_prob": 0.08,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With company guidance pointing toward late 2026 to March 2027 and regulatory reviews like China SAMR still in progress, a legally completed closing within the next 14 days is highly unlikely. I estimate an 8% chance of legal completion by Sep 1, 2026.",
-      "uncertainty": "Whether all remaining antitrust regulatory clearances (especially China SAMR) are unexpectedly granted immediately, enabling an expedited legal close within two weeks.",
-      "resolution_risk": "Deals that are fully approved or scheduled to close shortly after September 1, 2026 resolve strictly NO if legal effectiveness is not achieved before the cutoff.",
-      "evidence_for": [
-        "Executive leadership team and regional structure were announced on July 30, 2026.",
-        "Teck successfully completed bond consent solicitations in mid-August 2026 to align debt structures ahead of combination.",
-        "Shareholder and court approvals are reported to be secured."
-      ],
-      "evidence_against": [
-        "Official company target closing window is late 2026 to March 2027.",
-        "Only 14 days remain before the September 1, 2026 deadline.",
-        "China SAMR antitrust review remains in progress without final clearance.",
-        "Closing cross-border mining mega-mergers requires multi-jurisdictional clearances (Canada, Chile, UK) and administrative lead time after approval."
-      ],
-      "reason": "edge 0.027 below minimum 0.04"
     }
   ]
 }
