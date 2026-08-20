@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787185095030,
+  "generated_ms": 1787185452704,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 0,
+      "today": 3,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 0,
+      "today": 1,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 546.7,
   "summary": "Portfolio net worth is around M$545 with a spendable balance resting at M$1 due to extended resolution latency across historical clusters, though liquidity has briefly flickered with minor unfreezes (balance M$11). Active exposure remains anchored by 10 positions comprising structural Timeline NO frameworks, high-conviction tech bets, and personal milestone holdings. \n\nThe primary development was the complete failure of the high-conviction \"Will something happen in AI the week of Aug 21, 2026?\" (dlL65QERsl) position. After a deceptive correction from 82% down to 69% YES that initially appeared to validate our structural Timeline NO thesis, the market sharply reversed and hit 100% YES, resulting in a total loss of M$37 and a drop in net worth. All other open positions currently pass the re-open test and remain in profit or structurally sound, requiring zero liquidations. \n\nConcrete mistakes to avoid include letting spendable mana drop near operational floors without accounting for resolution latency, falling into the stale execution trap by deploying capital into pre-computed watchlists after edges compress, treating temporary price corrections in timeline markets as definitive validation without real-world falsification, holding positions after their core thesis is contradicted, dabbling in vague sentiment markets or marginal tactical bets, and succumbing to activity bias\u2014making suboptimal trades or misinterpreting false price signals just to feel productive during periods of forced inactivity.\n\nCalibration remains strong in shorting over-optimistic timeline claims, symbolic developer hype, and speculative community propositions, while personal relationship markets and ambiguous sentiment bets require strict discipline. The primary takeaway from recent events is that downward price drift in hype markets can be a deceptive false signal rather than a structural correction, requiring tighter invalidation criteria.\n\nStanding priorities are to maintain operational discipline during forced inactivity while awaiting the resolution wave cluster to clear, avoid activity bias, honor the tracked M$50 return gift to user cA1JupYR5AR8btHUs2xvkui7jA93 when liquidity permits, and maintain a clean, high-signal decision-making environment without redundant notes.",
   "journal": [
+    {
+      "ts": 1787185452662,
+      "kind": "analysis",
+      "text": "Analysed \"Will the AfD win an absolute majority in the state election in Saxony-\": market 30%, my 12% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1787185283428,
+      "kind": "screen",
+      "text": "Escalated \"Will the AfD win an absolute majority in the state election in Saxony-\" at 30%: quick estimate 8% vs market 30%"
+    },
     {
       "ts": 1787183622933,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1787139227553,
       "kind": "book",
       "text": "Looked over 10 positions: The book is lean and high-conviction. All tradable positions pass the re-open test. The only underwater position (dlL65QERsl) is a structural 'Timeline NO' bet where the current price divergence actually increases the edge. Liquidity remains constrained by resolution latency on the Aug 11-14 cluster, but the current holdings are structurally sound. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1787137888468,
-      "kind": "analysis",
-      "text": "Analysed \"Given I have been with my partner for a year, will we be together for \": market 73%, my 80% (medium). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1787137754455,
-      "kind": "screen",
-      "text": "Escalated \"Given I have been with my partner for a year, will we be together for \" at 73%: quick estimate 45% vs market 73%"
     }
   ],
   "todos": [
@@ -707,7 +707,7 @@
       "profit": 1.8,
       "prob": 0.734,
       "closed": false,
-      "days_to_close": 9.2
+      "days_to_close": 9.1
     },
     {
       "question": "Will MNX have $1m in volume before September 2026?",
@@ -795,6 +795,30 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1787185452660,
+      "kind": "no_trade",
+      "question": "Will the AfD win an absolute majority in the state election in Saxony-Anhalt in 2026",
+      "url": "https://manifold.markets/NFNL2zc/will-the-afd-win-an-absolute-majori",
+      "market_prob": 0.30000000000000004,
+      "model_prob": 0.12,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With AfD polling around 42-43% two weeks out, securing an absolute seat majority requires either a strong late polling swing (>45%) or high vote wastage from multiple parties failing the 5% threshold. While plausible, anti-AfD tactical voting and threshold dynamics make an outright majority unlikely (~12%).",
+      "uncertainty": "Whether minor parties (Greens, BSW, SPD) cross the 5% threshold, directly controlling the wasted vote proportion.",
+      "resolution_risk": "Calculations involving overhang and compensatory mandates altering the final seat count required for a majority.",
+      "evidence_for": [
+        "AfD is polling strongly at 42% to 43% in Saxony-Anhalt two weeks ahead of the election.",
+        "If smaller parties like Greens (4.6%), BSW (4.3%), and FDP (2.9%) fail to clear the 5% threshold, wasted vote share could approach or exceed 16%, lowering the required vote share for an absolute seat majority."
+      ],
+      "evidence_against": [
+        "Baseline polling of 42% maps to ~44 out of 97 seats, short of the 49 seats required for an absolute majority.",
+        "Tactical voting in German state elections historically mobilizes late against AfD, boosting border parties like SPD or Greens over the 5% threshold.",
+        "No far-right party has ever achieved an absolute majority in a postwar German state election."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1787182797745,
       "kind": "no_trade",
@@ -1131,30 +1155,6 @@
         "Bitcoin recently edged lower toward its 50-day EMA near $64,370, showing minor consolidation pressure."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1787128052342,
-      "kind": "no_trade",
-      "question": "Will the next full gemini model be as good as opus 4.7 or gpt 5.5 at coding?",
-      "url": "https://manifold.markets/ian/will-the-next-full-gemini-model-be",
-      "market_prob": 0.83,
-      "model_prob": 0.82,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "",
-      "uncertainty": "Whether the creator's hands-on experience with the next Gemini Pro model finds qualitative flaws in coding performance despite strong benchmark numbers.",
-      "resolution_risk": "The market depends entirely on the subjective impression of creator @ian after 1-2 weeks of personal testing.",
-      "evidence_for": [
-        "The bar is frozen at Opus 4.7 and GPT-5.5 rather than a moving target at the time of Gemini Pro's release.",
-        "Gemini 3.7 Flash already showed strong coding gains on benchmark suites, and Pro models consistently outperform Flash on complex repo-level coding.",
-        "The market creator (@ian) explicitly confirmed in comments that the bar is fixed to Opus 4.7/GPT-5.5 and indicated he is leaning YES."
-      ],
-      "evidence_against": [
-        "Subjective resolution criteria based on creator's personal coding workflow leaves room for Gemini to fail on specific preferences (e.g. style, instruction-following, or context quirks).",
-        "Release timeline for the next full Pro model remains unannounced and could slip or undergo unexpected structural rebrands."
-      ],
-      "reason": "edge 0.010 below minimum 0.04"
     }
   ]
 }
