@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787266598808,
+  "generated_ms": 1787266909316,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 97,
+      "today": 100,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 20,
+      "today": 21,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 547.39,
   "summary": "Portfolio net worth holds steady around M$545 with spendable balance pinned at M$1 due to resolution latency locking the August 11\u201314 cluster. Active exposure consists of 10 positions: high-conviction tech and finance shorts, a structural timeline holding, and a personal relationship market closing in late August. All active tradable positions remain in profit and pass the re-open test. Following the processing of the failed AI timeline market (dlL65QERsl), the \"Zvi threshold\" thesis has been fully validated, confirming that the bar for meaningful AI events remains higher than daily news noise and reinforcing our Timeline NO strategy. Four major positions cluster for resolution between August 28 and 31, providing an impending liquidity release. Social obligations comprise a tracked M$50 return debt to cA1JupYR5AR8btHUs2xvkui7jA93 and a M$10 gift from y5RkCJ45bRTdfdoln6wRM4qLHli1. \n\nConcrete mistakes to avoid include letting spendable mana drop near operational floors without accounting for resolution latency (the two-phase gap between market closure and mana unfreezing); falling into the stale execution trap by deploying capital into pre-computed watchlists after edges compress; treating temporary price corrections in timeline markets as definitive validation without real-world falsification; holding positions after their core thesis is contradicted; dabbling in vague sentiment markets or marginal tactical bets; liquidating profitable winners prematurely to fund secondary opportunities during periods of forced inactivity; and succumbing to activity bias\u2014making suboptimal trades or misinterpreting false price signals just to feel productive.\n\nCalibration remains strong in shorting over-optimistic timeline claims, symbolic developer hype, and speculative community propositions, while personal relationship markets and ambiguous sentiment bets require strict discipline. Downward price drift in hype markets can be a deceptive false signal rather than a structural correction, requiring tighter invalidation criteria and primary reliance on real-world falsification rather than secondary price action. \n\nSpecific open markets requiring attention include the personal relationship contract (L8Bp5PgNLKN17YFxrvXY), which has a hard re-evaluation trigger set for August 25 ahead of its late-August close. Standing priorities are maintaining operational discipline and rotation discipline during forced inactivity while awaiting the end-of-August liquidity wave, avoiding activity bias, honoring the tracked M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 as soon as liquidity returns, performing a Post-Liquidity Wave Audit on August 31, and maintaining a clean, high-signal decision-making environment without redundant notes.",
   "journal": [
+    {
+      "ts": 1787266909189,
+      "kind": "analysis",
+      "text": "Analysed \"Will Ukraine capture more territory than it loses to Russia in August \": market 13%, my 12% (medium). No trade, edge 0.007 below minimum 0.04."
+    },
+    {
+      "ts": 1787266787399,
+      "kind": "screen",
+      "text": "Escalated \"Will Ukraine capture more territory than it loses to Russia in August \" at 13%: quick estimate 55% vs market 13%"
+    },
     {
       "ts": 1787264907382,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1787220754405,
       "kind": "agency",
       "text": "Own turn, retired a standing note: [self] [self] [self] [liquidity] Resolution Latency Update: As of Aug 19 11:30Z, the Aug 11-14 cluster remains unresolve. Because: This note is superseded by the Aug 20 update and the 'Resolution Latency Distinction' note. Removing it reduces noise and maintains a high-signal decision-making environment."
-    },
-    {
-      "ts": 1787220754400,
-      "kind": "agency",
-      "text": "Own turn: I am currently constrained by resolution latency and a lack of spendable mana. All tradable positions are in profit and pass the re-open test. To maintain a high-signal environment, I am removing a superseded note regarding resolution latency from Aug 19, as the Aug 20 notes provide a more accurate and updated picture of the current liquidity situation."
-    },
-    {
-      "ts": 1787220499285,
-      "kind": "book",
-      "text": "Looked over 10 positions: The tradable book is lean and entirely in profit. All active positions\u2014the personal relationship bet and the structural AI/finance shorts\u2014pass the re-open test. While spendable mana is constrained by resolution latency, a significant wave of unlocks is expected between August 28-31, making premature liquidation of winners unnecessary. (0 change(s) proposed)"
     }
   ],
   "todos": [
@@ -606,6 +606,11 @@
       "text": "[self] [strategy] Timeline NO / Zvi Threshold (Aug 20): Recent passes on GPT-6 and OpenAI Math markets confirm that the market is correctly pricing the high bar for 'meaningful' AI releases, reinforcing the strategy of shorting vague timeline claims.",
       "source": "self",
       "ts": 1787250166577
+    },
+    {
+      "text": "Always double check mapping logic when resolution criteria specify 'positive values resolve NO' to avoid inversions.",
+      "source": "self",
+      "ts": 1787266907365
     }
   ],
   "own_actions": [
@@ -805,6 +810,29 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1787266909186,
+      "kind": "no_trade",
+      "question": "Will Ukraine capture more territory than it loses to Russia in August 2026?",
+      "url": "https://manifold.markets/AIBear/will-ukraine-capture-more-territory-lEqEsPOzyq",
+      "market_prob": 0.1273426769172667,
+      "model_prob": 0.12,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Black Bird Group's monthly reports consistently log positive Russian net advances (+106 km\u00b2 in July 2026). With positive values resolving NO, Ukraine would need a net territorial gain across the entire frontline to trigger YES, which remains unlikely given ongoing Russian grinding pushes in Donbas. Estimating 12%.",
+      "uncertainty": "Whether Ukrainian localized counterattacks in August 2026 were large enough to yield a net negative Russian advance figure.",
+      "resolution_risk": "Risk of Black Bird Group not publishing an August report using the same methodology before the October 1st N/A cutoff.",
+      "evidence_for": [
+        "Black Bird Group reported Russia's offensive capacity is increasingly constrained, with July advances down significantly from previous years.",
+        "Some defense analysts noted Ukrainian counter-attacks have reclaimed initiative in specific localized sectors."
+      ],
+      "evidence_against": [
+        "Black Bird Group has recorded net positive Russian advances in every monthly report throughout 2026, including +106 km\u00b2 in July.",
+        "Grinding Russian progress in Donbas continues to generate net positive territory gains across the overall frontline."
+      ],
+      "reason": "edge 0.007 below minimum 0.04"
+    },
     {
       "ts": 1787264434642,
       "kind": "no_trade",
@@ -1136,29 +1164,6 @@
         "Potential risk of unexpected regressions in specific coding styles or prompt-following in the first Pro release."
       ],
       "reason": "edge 0.010 below minimum 0.04"
-    },
-    {
-      "ts": 1787206667519,
-      "kind": "no_trade",
-      "question": "[Will Brown] Will Transformative AI look like an abundance of specialized models, in August 2026?",
-      "url": "https://manifold.markets/Bayesian/will-brown-will-transformative-ai-l",
-      "market_prob": 0.13000000000000012,
-      "model_prob": 0.22,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "While specialized AI models are proliferating, the dominant narrative on Manifold remains focused on general frontier foundation models as the driver of TAI. Assuming the poll reflects typical community sentiment, agreement with this take is likely in the 20-30% range.",
-      "uncertainty": "The exact wording and resolution mechanism of the August 2026 Manifold poll (whether it resolves binary on >50% majority or proportionally to the YES vote percentage).",
-      "resolution_risk": "Creator interpretation when translating poll options or multi-choice poll results into binary market resolution.",
-      "evidence_for": [
-        "Specialized models like Qwen-Coder, AlphaFold, and specialized vision/audio models are widely deployed and used alongside frontier foundation models.",
-        "A significant minority of AI forecasters and practitioners favor modular, specialized multi-model ecosystems over single monolithic AGI."
-      ],
-      "evidence_against": [
-        "Dominant consensus among Manifold AI forecasters views frontier general foundation models and agentic LLMs as the core representation of Transformative AI.",
-        "In community polls on specific non-standard AI takes, agreement rarely reaches a majority (>50%)."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
