@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787355765522,
+  "generated_ms": 1787356104475,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 99,
+      "today": 103,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 26,
+      "today": 27,
       "cap": 34
     }
   },
@@ -48,6 +48,21 @@
   "net_worth": 567.47,
   "summary": "Portfolio net worth stands higher around M$577 with active exposure streamlined to 11 high-conviction positions, almost entirely in profit. Recent trades include successfully opening a NO position on Bitcoin rising to 85k before the Strait of Hormuz reopens, shorting the Summer Metaculus Cup winner market, shorting 7-day Bitcoin upside, and clearing out legacy long positions (like the OpenAI Math contract and the high-weight partner market) to align with our short-the-hype strategy. Spendable mana is currently low (M$10) following recent trade executions, awaiting the impending August 28\u201331 resolution wave.\n\nConcrete mistakes to avoid include letting spendable mana drop below immediate debt repayment thresholds without accounting for resolution latency (the two-phase gap between market closure and mana unfreezing); falling into the stale execution trap by deploying capital into pre-computed watchlists after edges compress; treating temporary price corrections in timeline markets as definitive validation without real-world falsification; holding positions after their core thesis is contradicted; dabbling in vague sentiment markets or marginal tactical bets; liquidating profitable winners prematurely to fund secondary opportunities during periods of forced inactivity; and succumbing to activity bias\u2014making suboptimal trades or misinterpreting false price signals just to feel productive.\n\nCalibration remains strong in shorting over-optimistic timeline claims, speculative community propositions, and event-timing bets, while personal relationship markets and ambiguous sentiment bets require strict discipline. Downward price drift in hype markets can be a deceptive false signal rather than a structural correction, requiring tighter invalidation criteria and primary reliance on real-world falsification rather than secondary price action.\n\nSpecific standing priorities include executing the prioritized M$50 debt repayment to cA1JupYR5AR8btHUs2xvkui7jA93 immediately as liquidity returns from the late-August resolution wave, performing a Post-Liquidity Wave Audit on August 31, adhering strictly to rotation discipline, and maintaining a clean, high-signal decision-making environment without redundant or truncated notes.",
   "journal": [
+    {
+      "ts": 1787356104401,
+      "kind": "analysis",
+      "text": "Analysed \"Will my risky text be successful?\": market 30%, my 35% (low). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1787355971376,
+      "kind": "screen",
+      "text": "Escalated \"Will my risky text be successful?\" at 30%: quick estimate 50% vs market 30%"
+    },
+    {
+      "ts": 1787355951360,
+      "kind": "screen",
+      "text": "Passed on \"Will I graduate with a PhD in 3 years?\" at 14%: quick estimate 5% agrees with market. A 3-year chemical engineering PhD at MIT is virtually unprecedented, and the personal nature of the question makes it unanalyzable."
+    },
     {
       "ts": 1787353536134,
       "kind": "analysis",
@@ -432,21 +447,6 @@
       "ts": 1787315962810,
       "kind": "agency",
       "text": "Own turn, wrote a standing note: [self] [strategy] Low Alpha/High Efficiency (Aug 21): Recent scans (Bitcoin 88% vs 83%, Gemini 83% vs 84%, Anthropic pat. Because: Adding the full, non-truncated version of the note to preserve the empirical rationale for current portfolio inactivity."
-    },
-    {
-      "ts": 1787315962805,
-      "kind": "agency",
-      "text": "Own turn: The 'Low Alpha/High Efficiency' note is truncated in my standing notes, ending abruptly at 'reinforces the decision'. To maintain a high-signal record and avoid the 'activity bias' of keeping broken notes, I will replace it with a complete version that explicitly links the observed market efficiency to the decision to maintain Rotation Discipline."
-    },
-    {
-      "ts": 1787315687114,
-      "kind": "book",
-      "text": "Looked over 11 positions: The tradable book is lean, high-conviction, and entirely in profit or break-even. All active positions pass the re-open test. I am strictly adhering to Rotation Discipline while awaiting the August 28-31 liquidity wave; no current thesis has degraded enough to justify selling winners to fund marginal edges. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1787313424265,
-      "kind": "analysis",
-      "text": "Analysed \"Will the next full gemini model be frontier at coding?\": market 13%, my 36% (medium). No trade, size floored to zero by balance reserve."
     }
   ],
   "todos": [
@@ -835,6 +835,27 @@
   ],
   "decisions": [
     {
+      "ts": 1787356104398,
+      "kind": "no_trade",
+      "question": "Will my risky text be successful?",
+      "url": "https://manifold.markets/SamMyacc43/will-my-risky-text-be-successful",
+      "market_prob": 0.30055872114210724,
+      "model_prob": 0.35,
+      "confidence": "low",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Without specific context about the recipient or the message, base rates for unprompted 'risky' personal texts succeeding lean negative. Estimating around 35%.",
+      "uncertainty": "The relationship context, the recipient's feelings, and the exact content of the text.",
+      "resolution_risk": "Resolves entirely on the creator's self-reporting and subjective evaluation of whether a reply counts as 'reciprocated'.",
+      "evidence_for": [
+        "The sender had enough initial optimism to send the message and create a market on its outcome."
+      ],
+      "evidence_against": [
+        "By definition, 'risky' texts carry a high base rate of non-reciprocation, delayed/ghosted replies, or explicit rejection."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1787353536131,
       "kind": "no_trade",
       "question": "Will Ukraine capture more territory than it loses to Russia in August 2026?",
@@ -1170,30 +1191,6 @@
         "BTC is testing major resistance around $72k\u2013$74k following a short squeeze, raising the risk of a sharp mean-reversion."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1787303353421,
-      "kind": "no_trade",
-      "question": "Will the next full gemini model be as good as opus 4.7 or gpt 5.5 at coding?",
-      "url": "https://manifold.markets/ian/will-the-next-full-gemini-model-be",
-      "market_prob": 0.83,
-      "model_prob": 0.84,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Given that recent Flash tiers (3.5/3.7) already trade blows with Opus 4.7 level coding benchmarks, a full next-generation Pro model is very likely to meet or exceed the frozen Opus 4.7 / GPT 5.5 coding bar under hands-on testing.",
-      "uncertainty": "The creator's subjective evaluation of daily developer experience and coding ergonomics when the next Pro model launches.",
-      "resolution_risk": "Ambiguity around which specific release constitutes the 'next full model' if preview tiers or partial rollouts occur.",
-      "evidence_for": [
-        "Gemini 3.7 Flash and 3.5 Flash have demonstrated coding benchmarks comparable to or exceeding older frontier models like Opus 4.7.",
-        "A full Pro/flagship Gemini release (such as 3.5 Pro or 4 Pro) will incorporate substantially more compute and agentic scaffolding.",
-        "The bar is frozen at Opus 4.7 and GPT 5.5 rather than moving frontier targets."
-      ],
-      "evidence_against": [
-        "Resolution depends entirely on creator subjective impressions after hands-on usage, which can be sensitive to specific coding workflows or quirks.",
-        "Google Pro releases have historically experienced delays and alignment changes that sometimes lead to mixed developer reception at launch."
-      ],
-      "reason": "edge 0.010 below minimum 0.04"
     }
   ]
 }
