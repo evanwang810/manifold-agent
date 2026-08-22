@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787398092739,
+  "generated_ms": 1787398462205,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 55,
+      "today": 58,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 16,
+      "today": 17,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 535.85,
   "summary": "Portfolio net worth stands around M$534 with a spendable balance of M$44, following recent portfolio streamlining. Active exposure has been reduced to a leaner, higher-conviction set of core positions. Recent trading activity focused on trimming noisy, short-term tactical bets\u2014successfully closing out the marginal Bitcoin/Hormuz NO position and short-term 7-day Bitcoin upside shorts to eliminate low-signal volatility and consolidate capital. Spendable liquidity has recovered slightly, keeping us on track to execute the prioritized M$50 debt repayment to y5RkCJ45bRTdfdoln6wRM4qLHli1 immediately as the late-August resolution wave unfreezes capital.\n\nConcrete mistakes to avoid include letting spendable mana drop below immediate debt repayment thresholds without accounting for resolution latency; falling into the stale execution trap by deploying capital into pre-computed watchlists after edges compress; treating temporary price corrections in timeline markets as definitive validation without real-world falsification; holding positions after their core thesis is contradicted; dabbling in vague sentiment markets, short-term noisy crypto directional bets, or marginal tactical trades; liquidating profitable winners prematurely to fund secondary opportunities during periods of forced inactivity; and succumbing to activity bias\u2014making suboptimal trades or misinterpreting false price signals just to feel productive.\n\nCalibration remains strong in shorting over-optimistic timeline claims, speculative community propositions, and event-timing bets, while personal relationship markets, ambiguous sentiment bets, and short-term crypto noise require strict discipline and complete avoidance. Downward price drift in hype markets can be a deceptive false signal rather than a structural correction, requiring tighter invalidation criteria and primary reliance on real-world falsification rather than secondary price action.\n\nSpecific standing priorities include executing the prioritized M$50 debt repayment to y5RkCJ45bRTdfdoln6wRM4qLHli1 immediately as liquidity returns from the late-August resolution wave (August 28\u201331), performing a Post-Liquidity Wave Audit on August 31, adhering strictly to rotation discipline, and maintaining a clean, high-signal decision-making environment without redundant or truncated notes.",
   "journal": [
+    {
+      "ts": 1787398462163,
+      "kind": "trade",
+      "text": "Limit order M$18 NO on \"METR 80% time horizon exceeds 10h before September\" at 20%, my estimate 12% (medium). Because: An 80% time horizon of 10 hours is a very high reliability bar\u2014current 50% horizons remain under a few hours, meaning 80% horizons are under 1 hour. With only 9 days left in August and no unmeasured announcements reported, 12% reflects the low probability of a surprise METR release."
+    },
+    {
+      "ts": 1787398278087,
+      "kind": "screen",
+      "text": "Escalated \"METR 80% time horizon exceeds 10h before September\" at 20%: quick estimate 45% vs market 20%"
+    },
     {
       "ts": 1787397908950,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1787370851403,
       "kind": "screen",
       "text": "Escalated \"Will Jason Arday's 'Great and Unfortunate Things' be available for pur\" at 88%: flagged: Needs verification on whether 'available for purchase' includes preorders or requires actual physical release by August 27."
-    },
-    {
-      "ts": 1787368420413,
-      "kind": "analysis",
-      "text": "Analysed \"Will we conclude Tesla launched level 4 robotaxis in summer 2025?\": market 9%, my 5% (high). No trade, edge 0.039 below minimum 0.04."
-    },
-    {
-      "ts": 1787368304517,
-      "kind": "screen",
-      "text": "Escalated \"Will we conclude Tesla launched level 4 robotaxis in summer 2025?\" at 9%: quick estimate 25% vs market 9%"
     }
   ],
   "todos": [
@@ -809,6 +809,18 @@
       "days_to_close": 9.5
     },
     {
+      "question": "METR 80% time horizon exceeds 10h before September",
+      "url": "https://manifold.markets/JacobPfau/metr-80-time-horizon-exceeds-10h-be",
+      "side": "NO",
+      "shares": 22.5,
+      "invested": 18.0,
+      "value": 18.0,
+      "profit": -0.0,
+      "prob": 0.198,
+      "closed": false,
+      "days_to_close": 9.5
+    },
+    {
       "question": "Will the WTI Crude Oil Spot Price be above $78.50 on August 11, 2026?",
       "url": "https://manifold.markets/ShaneBo/will-the-wti-crude-oil-spot-price-b-Cun2dLL5UZ",
       "side": "NO",
@@ -822,6 +834,30 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1787398462160,
+      "kind": "bet",
+      "question": "METR 80% time horizon exceeds 10h before September",
+      "url": "https://manifold.markets/JacobPfau/metr-80-time-horizon-exceeds-10h-be",
+      "market_prob": 0.19862474220957368,
+      "model_prob": 0.12,
+      "confidence": "medium",
+      "amount": 18.0,
+      "outcome": "NO",
+      "thinking": "An 80% time horizon of 10 hours is a very high reliability bar\u2014current 50% horizons remain under a few hours, meaning 80% horizons are under 1 hour. With only 9 days left in August and no unmeasured announcements reported, 12% reflects the low probability of a surprise METR release.",
+      "uncertainty": "Whether METR evaluated a new, unreleased frontier model in August 2026 that achieved a step-change in task execution reliability.",
+      "resolution_risk": "METR releasing a non-point-estimate statement like 'likely greater than 10h' would trigger a YES resolution under the creator's specific criteria.",
+      "evidence_for": [
+        "Resolution criteria allows waiting until Dec 1 if an August model announcement was made but not yet measured.",
+        "METR could release an updated benchmark suite (e.g., TH1.2) or report a threshold estimate ('likely > 10h') which would trigger YES."
+      ],
+      "evidence_against": [
+        "An 80% time horizon of 10 hours requires extraordinary reliability over long task sequences, whereas current frontier models in mid-2026 have 50% time horizons under 2\u20133 hours and 80% horizons well under 1 hour.",
+        "No METR report or point estimate exceeding 10h for 80% time horizon has been released as of August 22, 2026.",
+        "Only 9 days remain in August 2026 for a qualifying model announcement or METR update."
+      ],
+      "reason": "edge 0.079, kelly 0.40, decay 1.00, bound by balance reserve"
+    },
     {
       "ts": 1787395963404,
       "kind": "no_trade",
@@ -1148,29 +1184,6 @@
         "Two-thirds of August 2026 has elapsed with no evidence of an operational-level Ukrainian counteroffensive capable of reversing cumulative monthly net losses"
       ],
       "reason": "edge 0.017 below minimum 0.04"
-    },
-    {
-      "ts": 1787351122056,
-      "kind": "no_trade",
-      "question": "Will I pass my GCE Advanced Level?",
-      "url": "https://manifold.markets/YoungBoy/will-i-pass-my-gce-advanced-level",
-      "market_prob": 0.8368582905260151,
-      "model_prob": 0.81,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Base rate for passing all UK A-Level subjects is ~88-90%. However, 8 days after the August 13 results release, the creator has not responded to inquiries or resolved the market, slightly shading the probability downward to ~81%.",
-      "uncertainty": "Whether the creator's delay in resolving the market is due to routine inactivity post-results or receiving failing grades.",
-      "resolution_risk": "If the creator deferred exams or withdrew from qualifications, the market resolves N/A rather than YES/NO.",
-      "evidence_for": [
-        "UK A-Level pass rate per subject entry (grade E or above) is historically high at ~97.5%.",
-        "Candidate-level base rate for passing all attempted A-Levels is approximately 88-90%."
-      ],
-      "evidence_against": [
-        "UK A-Level results were released on August 13, 2026, yet the creator has not resolved the market or replied to user queries 8 days later.",
-        "A single subject failure (grade U) triggers a NO resolution."
-      ],
-      "reason": "edge 0.027 below minimum 0.04"
     }
   ]
 }
