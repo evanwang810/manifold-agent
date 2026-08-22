@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787440699093,
+  "generated_ms": 1787441047117,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 103,
+      "today": 106,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 26,
+      "today": 27,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 535.86,
   "summary": "Portfolio net worth remains stable around M$534 with spendable liquidity tight (M$1), as capital is fully committed to a lean, high-conviction book of 12 active positions. Recent trading successfully purged low-signal noise, including speculative crypto bets and community propositions, while the M$50 debt to y5RkCJ45bRTdfdoln6wRM4qLHli1 was repaid in full. All open positions are currently performing well, with every tradable position in profit or break-even, underlying theses intact, and zero structural falsifications. Recent continuous screening confirms a low-alpha environment where market prices efficiently reflect our models, validating a patient holding pattern rather than forced activity.\n\nObserved resolution latency (8\u201311 days for clusters like the Aug 11-14 group) underscores that liquidity will remain constrained until the anticipated late-August resolution wave (August 28\u201331) unlocks capital. Ongoing portfolio reviews confirm all open positions pass re-open tests, anchored by strong AI timeline shorts, hype corrections, and specialized propositions. \n\nMistakes to avoid include letting spendable mana drop to zero without factoring in resolution latency; falling into the stale execution trap by deploying into pre-computed watchlists after edges compress; holding positions once their core thesis is contradicted; dabbling in vague sentiment markets, short-term crypto directional noise, or marginal tactical trades; liquidating profitable winners prematurely to fund secondary opportunities during forced inactivity; and succumbing to activity bias\u2014executing suboptimal trades or misinterpreting false price signals simply to feel productive. Downward price drift in hype markets can be deceptive rather than structural, demanding tight invalidation criteria and reliance on real-world falsification.\n\nCalibration remains strong in shorting over-optimistic timeline claims, speculative community propositions, and event-timing bets. Personal relationship markets, ambiguous sentiment bets, and short-term crypto noise require complete avoidance. Standing priorities remain maintaining rotation discipline, managing through the low-liquidity window ahead of the August 28\u201331 resolution wave, executing a Post-Liquidity Wave Audit on August 31, and preserving a clean, high-signal decision-making environment.",
   "journal": [
+    {
+      "ts": 1787441046574,
+      "kind": "analysis",
+      "text": "Analysed \"Will Ukraine capture more territory than it loses to Russia in August \": market 13%, my 14% (medium). No trade, edge 0.013 below minimum 0.04."
+    },
+    {
+      "ts": 1787440885453,
+      "kind": "screen",
+      "text": "Escalated \"Will Ukraine capture more territory than it loses to Russia in August \" at 13%: quick estimate 45% vs market 13%"
+    },
     {
       "ts": 1787438860001,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1787393536892,
       "kind": "book",
       "text": "Looked over 11 positions: The book is lean, high-conviction, and all active positions are currently in profit. Every tradable position passes the re-open test based on current market prices and the underlying theses. I am in a holding pattern awaiting the late-August resolution wave to replenish spendable liquidity. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1787393475231,
-      "kind": "screen",
-      "text": "Passed on \"\ud83d\udea2 Will Iran and Oman reach an agreement to reopen shipping through the\" at 14%: quick estimate 12% agrees with market. With Iran attacking tankers and the US threatening Oman, an official bilateral agreement in nine days is vanishingly unlikely."
-    },
-    {
-      "ts": 1787393455108,
-      "kind": "screen",
-      "text": "Passed on \"Seb Krier gets fired OR promoted at Google DeepMind before September?\" at 13%: quick estimate 15% agrees with market. Internal employment changes within a short nine-day window are unlikely and lack public signals."
     }
   ],
   "todos": [
@@ -835,6 +835,30 @@
   ],
   "decisions": [
     {
+      "ts": 1787441046571,
+      "kind": "no_trade",
+      "question": "Will Ukraine capture more territory than it loses to Russia in August 2026?",
+      "url": "https://manifold.markets/AIBear/will-ukraine-capture-more-territory-lEqEsPOzyq",
+      "market_prob": 0.1273426769172667,
+      "model_prob": 0.14,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "",
+      "uncertainty": "Whether Black Bird Group's final August assessment will deviate significantly from DeepState OSINT trends.",
+      "resolution_risk": "Positive Russian advance values resolve NO; negative values resolve YES. Non-publication by October 1 resolves NA.",
+      "evidence_for": [
+        "Some analysts noted localized Ukrainian counter-initiatives during summer 2026.",
+        "Black Bird Group data showed brief periods of net Russian losses earlier in 2026."
+      ],
+      "evidence_against": [
+        "DeepState OSINT data indicates Russian net gains of 33 square miles (~85 km\u00b2) for the four weeks ending August 11, 2026.",
+        "Black Bird Group recorded a net Russian advance of +106 km\u00b2 in July 2026, demonstrating sustained momentum in Donetsk.",
+        "There are no reports of a major Ukrainian counter-offensive reclaiming substantial territory in late August to reverse earlier gains."
+      ],
+      "reason": "edge 0.013 below minimum 0.04"
+    },
+    {
       "ts": 1787431046260,
       "kind": "no_trade",
       "question": "Will there be a new White House press secretary by the end of August?",
@@ -1169,28 +1193,6 @@
         "In polls asking whether TAI takes the form of specialized models versus general foundation models, Manifold users historically lean heavily toward general models."
       ],
       "reason": "edge 0.131, kelly 0.15, decay 1.00, bound by kelly target"
-    },
-    {
-      "ts": 1787378464193,
-      "kind": "bet",
-      "question": "Will Bitcoin be higher 14 days from now?",
-      "url": "https://manifold.markets/prismatic/will-bitcoin-be-higher-14-days-from-RzSNIly8IP",
-      "market_prob": 0.9422254429695239,
-      "model_prob": 0.9,
-      "confidence": "medium",
-      "amount": 9.0,
-      "outcome": "NO",
-      "thinking": "BTC currently trades around $77,500-$78,300, giving a ~13.8% cushion above the $68,506.41 creation baseline with 11 days remaining. Accounting for crypto's fat-tailed short-term volatility, I place the probability of remaining above baseline at 90%.",
-      "uncertainty": "Whether crypto liquidations or broader macro risk-off shocks trigger a >13% retracement over the next 11 days.",
-      "resolution_risk": "Minor potential discrepancy between CoinGecko and Yahoo Finance pricing at 12:00 PM EDT on September 2, though the ~$9,000 current buffer minimizes source divergence risk.",
-      "evidence_for": [
-        "BTC is currently trading around $77,100-$78,500, approximately 13-14% above the $68,506.41 baseline price set at market creation.",
-        "Recent 7-day momentum has been strong (+22.8% over the past week leading up to Aug 20) driven by broader risk-on flows and bond buybacks."
-      ],
-      "evidence_against": [
-        "Crypto asset volatility is high; a >13% downward correction over the remaining 11 days is within historical fat-tail drawdown distributions."
-      ],
-      "reason": "edge 0.042, kelly 0.04, decay 1.00, bound by kelly target"
     }
   ]
 }
