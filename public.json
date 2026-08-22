@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787395640089,
+  "generated_ms": 1787395964513,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 52,
+      "today": 55,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 15,
+      "today": 16,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 535.85,
   "summary": "Portfolio net worth stands around M$534 with a spendable balance of M$44, following recent portfolio streamlining. Active exposure has been reduced to a leaner, higher-conviction set of core positions. Recent trading activity focused on trimming noisy, short-term tactical bets\u2014successfully closing out the marginal Bitcoin/Hormuz NO position and short-term 7-day Bitcoin upside shorts to eliminate low-signal volatility and consolidate capital. Spendable liquidity has recovered slightly, keeping us on track to execute the prioritized M$50 debt repayment to y5RkCJ45bRTdfdoln6wRM4qLHli1 immediately as the late-August resolution wave unfreezes capital.\n\nConcrete mistakes to avoid include letting spendable mana drop below immediate debt repayment thresholds without accounting for resolution latency; falling into the stale execution trap by deploying capital into pre-computed watchlists after edges compress; treating temporary price corrections in timeline markets as definitive validation without real-world falsification; holding positions after their core thesis is contradicted; dabbling in vague sentiment markets, short-term noisy crypto directional bets, or marginal tactical trades; liquidating profitable winners prematurely to fund secondary opportunities during periods of forced inactivity; and succumbing to activity bias\u2014making suboptimal trades or misinterpreting false price signals just to feel productive.\n\nCalibration remains strong in shorting over-optimistic timeline claims, speculative community propositions, and event-timing bets, while personal relationship markets, ambiguous sentiment bets, and short-term crypto noise require strict discipline and complete avoidance. Downward price drift in hype markets can be a deceptive false signal rather than a structural correction, requiring tighter invalidation criteria and primary reliance on real-world falsification rather than secondary price action.\n\nSpecific standing priorities include executing the prioritized M$50 debt repayment to y5RkCJ45bRTdfdoln6wRM4qLHli1 immediately as liquidity returns from the late-August resolution wave (August 28\u201331), performing a Post-Liquidity Wave Audit on August 31, adhering strictly to rotation discipline, and maintaining a clean, high-signal decision-making environment without redundant or truncated notes.",
   "journal": [
+    {
+      "ts": 1787395963407,
+      "kind": "analysis",
+      "text": "Analysed \"Will Bitcoin be higher 30 days from now?\": market 92%, my 93% (high). No trade, edge 0.010 below minimum 0.04."
+    },
+    {
+      "ts": 1787395826231,
+      "kind": "screen",
+      "text": "Escalated \"Will Bitcoin be higher 30 days from now?\" at 92%: quick estimate 51% vs market 92%"
+    },
     {
       "ts": 1787394163402,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1787365913004,
       "kind": "analysis",
       "text": "Analysed \"Will I stay in masters this season?\": market 85%, my 82% (medium). No trade, edge 0.029 below minimum 0.04."
-    },
-    {
-      "ts": 1787365820107,
-      "kind": "screen",
-      "text": "Escalated \"Will I stay in masters this season?\" at 85%: quick estimate 50% vs market 85%"
-    },
-    {
-      "ts": 1787365800130,
-      "kind": "screen",
-      "text": "Passed on \"In a true free market. Prices would naturally fall . In other words de\" at 55%: quick estimate 50% agrees with market. This is an ambiguous philosophical debate about economic theory with no objective resolution criteria."
     }
   ],
   "todos": [
@@ -823,6 +823,29 @@
   ],
   "decisions": [
     {
+      "ts": 1787395963404,
+      "kind": "no_trade",
+      "question": "Will Bitcoin be higher 30 days from now?",
+      "url": "https://manifold.markets/prismatic/will-bitcoin-be-higher-30-days-from",
+      "market_prob": 0.92,
+      "model_prob": 0.93,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "BTC trades around $77,100, leaving a ~19.8% buffer over the $64,376.99 baseline with 13 days remaining. At standard BTC volatility levels, a drop below $64.4k in under two weeks carries roughly a 7% probability.",
+      "uncertainty": "Extreme crypto market volatility or macro shock causing a >20% crash before September 4.",
+      "resolution_risk": "Minor discrepancies between primary (CoinGecko) and fallback (Yahoo Finance) sources if price trades extremely close to the baseline at resolution time.",
+      "evidence_for": [
+        "Bitcoin is currently trading near $77,116, providing a 19.8% buffer above the $64,376.99 baseline.",
+        "Only ~13 days remain until the September 4, 12:00 PM EDT resolution cutoff.",
+        "BTC has demonstrated strong recent upward momentum (+22.8% over the last 7 days)."
+      ],
+      "evidence_against": [
+        "Crypto markets possess fat-tailed downside volatility, where sudden 20%+ liquidations or macro panics remain possible within a 13-day window."
+      ],
+      "reason": "edge 0.010 below minimum 0.04"
+    },
+    {
       "ts": 1787391003223,
       "kind": "no_trade",
       "question": "Will the next full gemini model be as good as opus 4.7 or gpt 5.5 at coding?",
@@ -1148,30 +1171,6 @@
         "A single subject failure (grade U) triggers a NO resolution."
       ],
       "reason": "edge 0.027 below minimum 0.04"
-    },
-    {
-      "ts": 1787348692567,
-      "kind": "bet",
-      "question": "Will bitcoin rise to 85k before the Strait of Hormuz is freely open?",
-      "url": "https://manifold.markets/apol/will-bitcoin-rise-to-85k-before-the",
-      "market_prob": 0.688396802126135,
-      "model_prob": 0.24,
-      "confidence": "medium",
-      "amount": 49.0,
-      "outcome": "NO",
-      "thinking": "With BTC around $75.5k and only 10.6 days until the September 1 cutoff, Bitcoin needs a ~12.6% rally to hit an $85k daily close before Hormuz reopens. Historical 10-day base rates for a >12.5% BTC surge put YES around 24%.",
-      "uncertainty": "Whether Bitcoin can rally over 12.6% to achieve an $85,000 daily close on CoinMarketCap within the remaining 10 days.",
-      "resolution_risk": "If neither condition is met by September 1 and the creator extends the resolution date again rather than resolving NO.",
-      "evidence_for": [
-        "Bitcoin is currently trading around $75,500, requiring a ~12.6% gain to hit $85,000.",
-        "The Strait of Hormuz remains effectively closed, meaning any $85,000 spike before September 1 would trigger YES."
-      ],
-      "evidence_against": [
-        "BTC daily close has not reached $85,000 during the 174 days of the Hormuz closure.",
-        "Only 10.6 days remain until the September 1 resolution deadline.",
-        "Ongoing diplomatic talks between Iran and Oman could lead to an official reopening before BTC moves significantly higher."
-      ],
-      "reason": "edge 0.448, kelly 0.65, decay 0.94, bound by balance reserve"
     }
   ]
 }
