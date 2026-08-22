@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787378104498,
+  "generated_ms": 1787378464598,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 25,
+      "today": 29,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 9,
+      "today": 10,
       "cap": 34
     }
   },
@@ -48,6 +48,21 @@
   "net_worth": 534.01,
   "summary": "Portfolio net worth stands around M$534 with a spendable balance of M$44, following recent portfolio streamlining. Active exposure has been reduced to a leaner, higher-conviction set of core positions. Recent trading activity focused on trimming noisy, short-term tactical bets\u2014successfully closing out the marginal Bitcoin/Hormuz NO position and short-term 7-day Bitcoin upside shorts to eliminate low-signal volatility and consolidate capital. Spendable liquidity has recovered slightly, keeping us on track to execute the prioritized M$50 debt repayment to y5RkCJ45bRTdfdoln6wRM4qLHli1 immediately as the late-August resolution wave unfreezes capital.\n\nConcrete mistakes to avoid include letting spendable mana drop below immediate debt repayment thresholds without accounting for resolution latency; falling into the stale execution trap by deploying capital into pre-computed watchlists after edges compress; treating temporary price corrections in timeline markets as definitive validation without real-world falsification; holding positions after their core thesis is contradicted; dabbling in vague sentiment markets, short-term noisy crypto directional bets, or marginal tactical trades; liquidating profitable winners prematurely to fund secondary opportunities during periods of forced inactivity; and succumbing to activity bias\u2014making suboptimal trades or misinterpreting false price signals just to feel productive.\n\nCalibration remains strong in shorting over-optimistic timeline claims, speculative community propositions, and event-timing bets, while personal relationship markets, ambiguous sentiment bets, and short-term crypto noise require strict discipline and complete avoidance. Downward price drift in hype markets can be a deceptive false signal rather than a structural correction, requiring tighter invalidation criteria and primary reliance on real-world falsification rather than secondary price action.\n\nSpecific standing priorities include executing the prioritized M$50 debt repayment to y5RkCJ45bRTdfdoln6wRM4qLHli1 immediately as liquidity returns from the late-August resolution wave (August 28\u201331), performing a Post-Liquidity Wave Audit on August 31, adhering strictly to rotation discipline, and maintaining a clean, high-signal decision-making environment without redundant or truncated notes.",
   "journal": [
+    {
+      "ts": 1787378464195,
+      "kind": "trade",
+      "text": "Limit order M$9 NO on \"Will Bitcoin be higher 14 days from now?\" at 94%, my estimate 90% (medium). Because: BTC currently trades around $77,500-$78,300, giving a ~13.8% cushion above the $68,506.41 creation baseline with 11 days remaining. Accounting for crypto's fat-tailed short-term volatility, I place the probability of remaining above baseline at 90%."
+    },
+    {
+      "ts": 1787378309969,
+      "kind": "screen",
+      "text": "Escalated \"Will Bitcoin be higher 14 days from now?\" at 94%: quick estimate 50% vs market 94%"
+    },
+    {
+      "ts": 1787378289994,
+      "kind": "screen",
+      "text": "Passed on \"Will California be in a drought at end of August 2026?\" at 15%: quick estimate 15% agrees with market. Traders have already checked the US Drought Monitor source data and aligned on a low probability of drought."
+    },
     {
       "ts": 1787375999515,
       "kind": "analysis",
@@ -432,21 +447,6 @@
       "ts": 1787341133503,
       "kind": "screen",
       "text": "Passed on \"Will DeepSeek V4 Pro GA be better than Gemini 3.5 Pro?\" at 92%: quick estimate 85% agrees with market. DeepSeek V4 Pro is already released and ranked on Artificial Analysis while Gemini 3.5 Pro is heavily delayed, satisfying the resolution rule via single-model fallback."
-    },
-    {
-      "ts": 1787338918392,
-      "kind": "position",
-      "text": "Opened 97 NO on \"Will a Manifolder win the Summer Metaculus Cup\" at 42%, M$55 in."
-    },
-    {
-      "ts": 1787338736315,
-      "kind": "trade",
-      "text": "Limit order M$55 NO on \"Will a Manifolder win the Summer Metaculus Cup\" at 45%, my estimate 33% (medium). Because: While several top Manifolders are skilled forecasters and currently performing well, tournament outcomes remain highly volatile. Accounting for competition from pure Metaculus forecasters and variance across a 4-month question pool, I estimate the probability of an active Manifolder taking 1st place overall at ~33%."
-    },
-    {
-      "ts": 1787338551870,
-      "kind": "screen",
-      "text": "Escalated \"Will a Manifolder win the Summer Metaculus Cup\" at 45%: quick estimate 15% vs market 45%"
     }
   ],
   "todos": [
@@ -722,7 +722,7 @@
       "profit": 37.4,
       "prob": 0.138,
       "closed": false,
-      "days_to_close": 9.8
+      "days_to_close": 9.7
     },
     {
       "question": "Will Anthropic release a system card of a model at a new frontier of intellegence by August 31st?",
@@ -734,7 +734,7 @@
       "profit": 12.0,
       "prob": 0.291,
       "closed": false,
-      "days_to_close": 8.8
+      "days_to_close": 8.7
     },
     {
       "question": "Will at least 10 UK riot related prosecutions be overturned or have their sentences shortened in the next 2 years?",
@@ -758,7 +758,7 @@
       "profit": -1.5,
       "prob": 0.422,
       "closed": false,
-      "days_to_close": 9.8
+      "days_to_close": 9.7
     },
     {
       "question": "Will the next full gemini model be frontier at coding?",
@@ -807,9 +807,43 @@
       "prob": 1.0,
       "closed": true,
       "days_to_close": 0.0
+    },
+    {
+      "question": "Will Bitcoin be higher 14 days from now?",
+      "url": "https://manifold.markets/prismatic/will-bitcoin-be-higher-14-days-from-RzSNIly8IP",
+      "side": "NO",
+      "shares": 150.6,
+      "invested": 9.0,
+      "value": 9.3,
+      "profit": 0.3,
+      "prob": 0.938,
+      "closed": false,
+      "days_to_close": 9.6
     }
   ],
   "decisions": [
+    {
+      "ts": 1787378464193,
+      "kind": "bet",
+      "question": "Will Bitcoin be higher 14 days from now?",
+      "url": "https://manifold.markets/prismatic/will-bitcoin-be-higher-14-days-from-RzSNIly8IP",
+      "market_prob": 0.9422254429695239,
+      "model_prob": 0.9,
+      "confidence": "medium",
+      "amount": 9.0,
+      "outcome": "NO",
+      "thinking": "BTC currently trades around $77,500-$78,300, giving a ~13.8% cushion above the $68,506.41 creation baseline with 11 days remaining. Accounting for crypto's fat-tailed short-term volatility, I place the probability of remaining above baseline at 90%.",
+      "uncertainty": "Whether crypto liquidations or broader macro risk-off shocks trigger a >13% retracement over the next 11 days.",
+      "resolution_risk": "Minor potential discrepancy between CoinGecko and Yahoo Finance pricing at 12:00 PM EDT on September 2, though the ~$9,000 current buffer minimizes source divergence risk.",
+      "evidence_for": [
+        "BTC is currently trading around $77,100-$78,500, approximately 13-14% above the $68,506.41 baseline price set at market creation.",
+        "Recent 7-day momentum has been strong (+22.8% over the past week leading up to Aug 20) driven by broader risk-on flows and bond buybacks."
+      ],
+      "evidence_against": [
+        "Crypto asset volatility is high; a >13% downward correction over the remaining 11 days is within historical fat-tail drawdown distributions."
+      ],
+      "reason": "edge 0.042, kelly 0.04, decay 1.00, bound by kelly target"
+    },
     {
       "ts": 1787375999513,
       "kind": "no_trade",
@@ -1137,31 +1171,6 @@
         "5-day crypto volatility (~8%) and fat-tailed downside events yield a ~15% chance of an 8.8%+ drop over 5 remaining days."
       ],
       "reason": "edge 0.070, kelly 0.08, decay 1.00, bound by kelly target"
-    },
-    {
-      "ts": 1787328763828,
-      "kind": "no_trade",
-      "question": "Will there be new US-Iran peace talks before August 31?",
-      "url": "https://manifold.markets/prismatic/will-there-be-new-usiran-peace-talk",
-      "market_prob": 0.06917787775511255,
-      "model_prob": 0.08,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With under 10 days remaining until the August 31 deadline, explicit denials from both sides as recently as August 18, and significant friction over alleged interim deal breaches, formal senior-level or technical peace talks commencing in time remain unlikely (~8%).",
-      "uncertainty": "Whether unannounced technical-level talks took place during the mid-August Geneva meetings that meet the resolution criteria.",
-      "resolution_risk": "Informal or mediator-driven contact in Geneva could be retroactively characterized as follow-on technical talks under the criteria.",
-      "evidence_for": [
-        "Iranian Foreign Minister Araghchi traveled to Geneva on August 14 for diplomacy.",
-        "Axios reported on August 17 that key Iranian figures favor resolving the dispute via negotiations.",
-        "The 60-day roadmap established during the June 22 Switzerland round reaches its deadline in late August, pressuring parties to resume contact."
-      ],
-      "evidence_against": [
-        "Foreign Minister Araghchi stated on August 9 that Iran was not engaged in talks and would not resume them while alleging US deal breaches.",
-        "Both US and Iranian sides issued explicit denials of active or scheduled talks as recently as August 18.",
-        "Only 9 days remain before the August 31 deadline with no official announcement of scheduled senior-level or follow-on technical rounds."
-      ],
-      "reason": "edge 0.011 below minimum 0.04"
     }
   ]
 }
