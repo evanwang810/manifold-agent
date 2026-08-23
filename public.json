@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787483081815,
+  "generated_ms": 1787483354772,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 55,
+      "today": 58,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 16,
+      "today": 17,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 534.88,
   "summary": "Portfolio net worth is stable around M$534. Spendable liquidity is currently constrained to M$1 due to a severe liquidity bottleneck, awaiting the late-August resolution wave (August 28\u201331) to unlock capital from closed clusters. The portfolio is lean, high-conviction, and entirely in profit or break-even, with zero structural falsifications. Recent trading activity includes opening a YES position on the Anthropic Opus 5 prompt-patch market and a NO position on the HMIC 2027 market, while strategically purging low-signal personal and conceptual bets like Transformative AI abundance questions. \n\nA critical operational lesson learned is that internal transaction logs can record debt repayments or transfers that do not actually execute in reality (ghost transactions). Moving forward, net worth audits must take precedence over internal logs, and debt settlement claims must be verified against actual balances. Furthermore, structural execution errors\u2014such as holding NO positions on Bitcoin while maintaining a YES thesis\u2014must be avoided immediately through strict post-trade validation.\n\nCalibration remains exceptionally strong in shorting over-optimistic AI timeline claims, hype corrections, and speculative event-timing bets, while avoiding personal relationship markets, ambiguous sentiment bets, and short-term crypto directional noise. Resolution latency (8\u201311 days) continues to dictate patience, and forced activity must be avoided to prevent activity bias. \n\nKey open positions remain fundamentally sound and pass the re-open test: high-conviction AI milestone bets (Anthropic patch, Gemini coding milestones, MNX volume) and specialized competition entries (HMIC). Standing priorities are maintaining rotation discipline, preserving the high-signal book, and preparing for the August 28\u201331 resolution wave and subsequent audit.",
   "journal": [
+    {
+      "ts": 1787483354661,
+      "kind": "analysis",
+      "text": "Analysed \"Will Bitcoin be higher 30 days from now?\": market 95%, my 92% (high). No trade, edge 0.030 below minimum 0.04."
+    },
+    {
+      "ts": 1787483268399,
+      "kind": "screen",
+      "text": "Escalated \"Will Bitcoin be higher 30 days from now?\" at 95%: quick estimate 52% vs market 95%"
+    },
     {
       "ts": 1787480989658,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1787453233434,
       "kind": "trade",
       "text": "Limit order M$17 NO on \"Will I stay in masters this season?\" at 85%, my estimate 78% (medium). Because: Late-month league rank inertia favors staying in Masters, though reduced recent activity increases demotion risk if competitors rally in the final 9 days. Estimating retention at ~78%."
-    },
-    {
-      "ts": 1787453142057,
-      "kind": "screen",
-      "text": "Escalated \"Will I stay in masters this season?\" at 85%: quick estimate 50% vs market 85%"
-    },
-    {
-      "ts": 1787453122014,
-      "kind": "screen",
-      "text": "Passed on \"In a true free market. Prices would naturally fall . In other words de\" at 55%: quick estimate 50% agrees with market. This is a purely philosophical and economic debate with no clear resolution criteria or concrete event to forecast."
     }
   ],
   "todos": [
@@ -833,6 +833,29 @@
   ],
   "decisions": [
     {
+      "ts": 1787483354658,
+      "kind": "no_trade",
+      "question": "Will Bitcoin be higher 30 days from now?",
+      "url": "https://manifold.markets/prismatic/will-bitcoin-be-higher-30-days-from",
+      "market_prob": 0.95,
+      "model_prob": 0.92,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Bitcoin is currently trading near $77,000 against the $64,376.99 baseline (+19.5% buffer). With only 12 days left until the September 4 resolution, BTC would need a sharp >16.3% drop to resolve NO. Given 12-day crypto volatility and fat tails, YES is roughly ~92%.",
+      "uncertainty": "Whether extreme market-wide volatility or a major macro shock triggers a >16.3% sell-off in BTC over the next 12 days.",
+      "resolution_risk": "The creator adjusted the starting price in the description and noted the market closes early to prevent last-minute trading, but confirmed resolution will use the 30-day END date (Sept 4) against the baseline price.",
+      "evidence_for": [
+        "The baseline price at market open (Aug 5) is $64,376.99, while CoinGecko currently prices Bitcoin at ~$76,960, representing a ~19.5% cushion.",
+        "Only 12 days remain until the September 4 resolution date.",
+        "Recent momentum is strong, with Bitcoin up over 22% in the past week following positive crypto policy developments."
+      ],
+      "evidence_against": [
+        "Crypto markets have fat-tailed volatility; a 16.3% drawdown in 12 days is possible under severe macroeconomic shocks or regulatory crackdowns."
+      ],
+      "reason": "edge 0.030 below minimum 0.04"
+    },
+    {
       "ts": 1787478348052,
       "kind": "no_trade",
       "question": "Will the next full gemini model be as good as opus 4.7 or gpt 5.5 at coding?",
@@ -1164,30 +1187,6 @@
         "NBC News, The Hill, and The Independent report White House officials stating Trump is in 'no rush' and does not plan to name an immediate successor before Leavitt leaves.",
         "The reported strategy is to use rotating surrogates (e.g., Vance, Rubio, Bessent) at the podium without assigning an official 'acting' or 'interim' Press Secretary title.",
         "Only 9 days remain before the August 31 deadline."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1787428695132,
-      "kind": "no_trade",
-      "question": "Will the WTI Crude Oil Spot Price be above $86.50 on August 27, 2026?",
-      "url": "https://manifold.markets/ShaneBo/will-the-wti-crude-oil-spot-price-b-IRZC9y0ZNQ",
-      "market_prob": 0.7071845254994286,
-      "model_prob": 0.53,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With live WTI futures near $86.54 and 5 days remaining, the expected spot price on August 27 is centered right at the $86.50 strike. Standard 5-day oil volatility makes this effectively symmetric around current levels, putting the probability of resolving above $86.50 near 53%.",
-      "uncertainty": "Oil price movements over the next 5 days and the exact Cushing spot-futures basis differential on August 27.",
-      "resolution_risk": "Discrepancy between NYMEX CL=F futures closing price and the EIA Cushing spot publication, or roll-over date adjustments.",
-      "evidence_for": [
-        "Live NYMEX WTI futures are quoted near $86.54, slightly above the $86.50 strike.",
-        "EIA Cushing spot prices recently traded near or slightly above front-month futures prices."
-      ],
-      "evidence_against": [
-        "EIA Cushing spot printed $86.48 on August 18, below the $86.50 strike.",
-        "5-day oil price volatility (typically 3-4%) means normal price fluctuations could easily move spot below $86.50.",
-        "EIA Q3 STEO forecasts average Brent crude around $85/bbl, pointing to moderate macro downside risk."
       ],
       "reason": "size floored to zero by balance reserve"
     }
