@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787448035225,
+  "generated_ms": 1787448336792,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 5,
+      "today": 8,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 1,
+      "today": 2,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 535.87,
   "summary": "Portfolio net worth remains stable around M$534 with spendable liquidity tight (M$1), as capital is fully committed to a lean, high-conviction book of 12 active positions. Recent trading successfully purged low-signal noise, including speculative crypto bets and community propositions, while the M$50 debt to y5RkCJ45bRTdfdoln6wRM4qLHli1 was repaid in full. All open positions are currently performing well, with every tradable position in profit or break-even, underlying theses intact, and zero structural falsifications. Recent continuous screening confirms a low-alpha environment where market prices efficiently reflect our models, validating a patient holding pattern rather than forced activity.\n\nObserved resolution latency (8\u201311 days for clusters like the Aug 11-14 group) underscores that liquidity will remain constrained until the anticipated late-August resolution wave (August 28\u201331) unlocks capital. Ongoing portfolio reviews confirm all open positions pass re-open tests, anchored by strong AI timeline shorts, hype corrections, and specialized propositions. \n\nMistakes to avoid include letting spendable mana drop to zero without factoring in resolution latency; falling into the stale execution trap by deploying into pre-computed watchlists after edges compress; holding positions once their core thesis is contradicted; dabbling in vague sentiment markets, short-term crypto directional noise, or marginal tactical trades; liquidating profitable winners prematurely to fund secondary opportunities during forced inactivity; and succumbing to activity bias\u2014executing suboptimal trades or misinterpreting false price signals simply to feel productive. Downward price drift in hype markets can be deceptive rather than structural, demanding tight invalidation criteria and reliance on real-world falsification.\n\nCalibration remains strong in shorting over-optimistic timeline claims, speculative community propositions, and event-timing bets. Personal relationship markets, ambiguous sentiment bets, and short-term crypto noise require complete avoidance. Standing priorities remain maintaining rotation discipline, managing through the low-liquidity window ahead of the August 28\u201331 resolution wave, executing a Post-Liquidity Wave Audit on August 31, and preserving a clean, high-signal decision-making environment.",
   "journal": [
+    {
+      "ts": 1787448336358,
+      "kind": "analysis",
+      "text": "Analysed \"Will the AfD win an absolute majority in the state election in Saxony-\": market 33%, my 17% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1787448221061,
+      "kind": "screen",
+      "text": "Escalated \"Will the AfD win an absolute majority in the state election in Saxony-\" at 33%: quick estimate 15% vs market 33%"
+    },
     {
       "ts": 1787446380224,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1787398462163,
       "kind": "trade",
       "text": "Limit order M$18 NO on \"METR 80% time horizon exceeds 10h before September\" at 20%, my estimate 12% (medium). Because: An 80% time horizon of 10 hours is a very high reliability bar\u2014current 50% horizons remain under a few hours, meaning 80% horizons are under 1 hour. With only 9 days left in August and no unmeasured announcements reported, 12% reflects the low probability of a surprise METR release."
-    },
-    {
-      "ts": 1787398278087,
-      "kind": "screen",
-      "text": "Escalated \"METR 80% time horizon exceeds 10h before September\" at 20%: quick estimate 45% vs market 20%"
-    },
-    {
-      "ts": 1787397908950,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] [self] [self] [liquidity] Resolution Latency Observation (Aug 22): The Aug 11-14 cluster remains 'CLOSED' as of A. Because: Adding the corrected, full version of the latency observation."
     }
   ],
   "todos": [
@@ -835,6 +835,31 @@
   ],
   "decisions": [
     {
+      "ts": 1787448336355,
+      "kind": "no_trade",
+      "question": "Will the AfD win an absolute majority in the state election in Saxony-Anhalt in 2026",
+      "url": "https://manifold.markets/NFNL2zc/will-the-afd-win-an-absolute-majori",
+      "market_prob": 0.33144968105528255,
+      "model_prob": 0.17,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With two weeks to the Sept 6 election, AfD polling at 41% would only yield an absolute seat majority if wasted votes exceed ~18-19% (requiring SPD, Greens, and Left to all fall below 5%). With SPD polling around 7-8% and tactical voting efforts active, an absolute seat majority remains unlikely (~17%).",
+      "uncertainty": "Whether the SPD and/or Greens cross the 5% threshold, which directly determines the percentage of wasted votes needed for 41% to equal a seat majority.",
+      "resolution_risk": "Overhang and compensatory mandates could slightly alter final seat counts relative to second-vote percentages.",
+      "evidence_for": [
+        "INSA polling shows AfD at 41% in Saxony-Anhalt leading up to the September 6, 2026 election.",
+        "If multiple small parties (SPD, Greens, Left, FDP) fail the 5% threshold, wasted votes could allow a 41% vote share to translate into >50% of seats."
+      ],
+      "evidence_against": [
+        "SPD is currently polling around 7-8%, making it likely to cross the 5% threshold and suppress wasted votes.",
+        "Tactical voting campaigns are actively mobilizing to ensure smaller parties clear 5% specifically to prevent an AfD absolute majority.",
+        "Single-party absolute majorities in modern German state parliaments are exceptionally rare.",
+        "INSA polls historically lean slightly higher for AfD than final official results."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1787445872624,
       "kind": "no_trade",
       "question": "SPD above 5% in 2026 Saxony-Anhalt state election?",
@@ -1168,30 +1193,6 @@
         "Potential risk of subjective prompt regressions, tool-use quirks, or release delays for a full Pro tier model."
       ],
       "reason": "edge 0.000 below minimum 0.04"
-    },
-    {
-      "ts": 1787388456523,
-      "kind": "bet",
-      "question": "Will I make HMIC 2027?",
-      "url": "https://manifold.markets/JiaheLiu/will-i-make-hmic-2027",
-      "market_prob": 0.35272981662779485,
-      "model_prob": 0.15,
-      "confidence": "medium",
-      "amount": 49.0,
-      "outcome": "NO",
-      "thinking": "HMIC features only 5 problems per year. Even for active math competition problem composers, getting a problem selected specifically for HMIC (as opposed to HMMT Nov/Feb tests) faces steep competition against dozens of submissions, placing the base rate around 15%.",
-      "uncertainty": "Jiahe's role in 2027 (organizer/staff vs competitor) and whether any proposed problem survives the competitive selection filter for HMIC's 5-problem set.",
-      "resolution_risk": "None significant; criteria clearly state YES iff a proposed problem appears on HMIC 2027.",
-      "evidence_for": [
-        "Jiahe Liu qualified for HMIC in 2025 and 2026, indicating strong familiarity with high-level competition math problems.",
-        "Active problem writers often submit multiple candidate problems to HMMT/HMIC problem selection committees."
-      ],
-      "evidence_against": [
-        "HMIC is an elite 5-problem exam, meaning the total number of accepted problems is extremely small.",
-        "HMMT/HMIC problem committees receive dozens of submissions, making acceptance onto HMIC specifically highly competitive.",
-        "If Jiahe competes in HMIC 2027 as a high school senior, they would be ineligible to have a problem selected for that test."
-      ],
-      "reason": "edge 0.203, kelly 0.57, decay 0.94, bound by share of volume"
     }
   ]
 }
