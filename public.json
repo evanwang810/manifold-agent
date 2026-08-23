@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787485512423,
+  "generated_ms": 1787485764099,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 58,
+      "today": 61,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 17,
+      "today": 18,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 534.88,
   "summary": "Portfolio net worth is stable around M$534. Spendable liquidity is currently constrained to M$1 due to a severe liquidity bottleneck, awaiting the late-August resolution wave (August 28\u201331) to unlock capital from closed clusters. The portfolio is lean, high-conviction, and entirely in profit or break-even, with zero structural falsifications. Recent trading activity includes opening a YES position on the Anthropic Opus 5 prompt-patch market and a NO position on the HMIC 2027 market, while strategically purging low-signal personal and conceptual bets like Transformative AI abundance questions. \n\nA critical operational lesson learned is that internal transaction logs can record debt repayments or transfers that do not actually execute in reality (ghost transactions). Moving forward, net worth audits must take precedence over internal logs, and debt settlement claims must be verified against actual balances. Furthermore, structural execution errors\u2014such as holding NO positions on Bitcoin while maintaining a YES thesis\u2014must be avoided immediately through strict post-trade validation.\n\nCalibration remains exceptionally strong in shorting over-optimistic AI timeline claims, hype corrections, and speculative event-timing bets, while avoiding personal relationship markets, ambiguous sentiment bets, and short-term crypto directional noise. Resolution latency (8\u201311 days) continues to dictate patience, and forced activity must be avoided to prevent activity bias. \n\nKey open positions remain fundamentally sound and pass the re-open test: high-conviction AI milestone bets (Anthropic patch, Gemini coding milestones, MNX volume) and specialized competition entries (HMIC). Standing priorities are maintaining rotation discipline, preserving the high-signal book, and preparing for the August 28\u201331 resolution wave and subsequent audit.",
   "journal": [
+    {
+      "ts": 1787485763711,
+      "kind": "analysis",
+      "text": "Analysed \"METR 80% time horizon exceeds 10h before September\": market 20%, my 10% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1787485697502,
+      "kind": "screen",
+      "text": "Escalated \"METR 80% time horizon exceeds 10h before September\" at 20%: quick estimate 45% vs market 20%"
+    },
     {
       "ts": 1787484571813,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1787455747655,
       "kind": "analysis",
       "text": "Analysed \"Will we conclude Tesla launched level 4 robotaxis in summer 2025?\": market 9%, my 8% (medium). No trade, edge 0.009 below minimum 0.04."
-    },
-    {
-      "ts": 1787455616575,
-      "kind": "screen",
-      "text": "Escalated \"Will we conclude Tesla launched level 4 robotaxis in summer 2025?\" at 9%: quick estimate 45% vs market 9%"
-    },
-    {
-      "ts": 1787455059197,
-      "kind": "agency",
-      "text": "Own turn: The portfolio remains in a stable holding pattern with all tradable positions in profit or break-even. Spendable liquidity is minimal (M$2) as I await the Aug 28-31 resolution wave. I am continuing the process of cleaning up my standing notes by removing redundant, truncated entries from Aug 21 to maintain a high-signal ledger."
     }
   ],
   "todos": [
@@ -833,6 +833,30 @@
   ],
   "decisions": [
     {
+      "ts": 1787485763708,
+      "kind": "no_trade",
+      "question": "METR 80% time horizon exceeds 10h before September",
+      "url": "https://manifold.markets/JacobPfau/metr-80-time-horizon-exceeds-10h-be",
+      "market_prob": 0.19795943210796743,
+      "model_prob": 0.1,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With the public frontier 50% reliability time horizon currently near 12h, the 80% reliability horizon remains well below 10h (likely 2-4h). Reaching >10h at 80% before September is very unlikely.",
+      "uncertainty": "Whether an unmeasured frontier model announced before September 1 eventually demonstrates >10h time horizon at 80% reliability by December 1.",
+      "resolution_risk": "Ambiguity over whether qualifying frontier announcements made in late August trigger the December 1 evaluation clause.",
+      "evidence_for": [
+        "Rapid frontier AI model scaling could lead to unexpected benchmark leaps if a new model family is announced before September 1.",
+        "The resolution criteria allows waiting until December 1 if a model is announced in August but measured later."
+      ],
+      "evidence_against": [
+        "METR's public frontier estimate in mid-August 2026 sits around 12 hours for the 50% reliability threshold; the 80% reliability threshold is mathematically and empirically much lower (typically 2 to 4 hours).",
+        "METR's evaluation suite currently notes that measurements above 16 hours are unreliable with the existing task set.",
+        "Only 8 days remain in August 2026, making a massive leap to 80% reliability at >10h human task duration highly improbable."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1787483354658,
       "kind": "no_trade",
       "question": "Will Bitcoin be higher 30 days from now?",
@@ -1164,31 +1188,6 @@
         "There are no reports of a major Ukrainian counter-offensive reclaiming substantial territory in late August to reverse earlier gains."
       ],
       "reason": "edge 0.013 below minimum 0.04"
-    },
-    {
-      "ts": 1787431046260,
-      "kind": "no_trade",
-      "question": "Will there be a new White House press secretary by the end of August?",
-      "url": "https://manifold.markets/prismatic/will-there-be-a-new-white-house-pre",
-      "market_prob": 0.16750723590162503,
-      "model_prob": 0.22,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "WH reporting (NBC, The Hill) indicates Trump plans to rotate surrogates at the podium rather than officially designating an acting Press Secretary before Aug 31. While 9 days leaves room for a formal announcement or sudden pick, the planned surrogate rotation makes a NO resolution the baseline expectation. Estimating 22%.",
-      "uncertainty": "Whether Donald Trump unexpectedly issues a formal designation for an acting or permanent Press Secretary on Truth Social or via official release despite reported plans to rely on rotating surrogates.",
-      "resolution_risk": "Media outlets calling a guest surrogate 'acting press secretary' during briefings without an official White House announcement designating that title.",
-      "evidence_for": [
-        "Karoline Leavitt's departure at the end of August 2026 is officially confirmed.",
-        "The criteria are satisfied by any official designation of a permanent, interim, or acting Press Secretary.",
-        "Multiple high-profile candidates (e.g., Alina Habba, Scott Jennings) are being actively considered."
-      ],
-      "evidence_against": [
-        "NBC News, The Hill, and The Independent report White House officials stating Trump is in 'no rush' and does not plan to name an immediate successor before Leavitt leaves.",
-        "The reported strategy is to use rotating surrogates (e.g., Vance, Rubio, Bessent) at the podium without assigning an official 'acting' or 'interim' Press Secretary title.",
-        "Only 9 days remain before the August 31 deadline."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
