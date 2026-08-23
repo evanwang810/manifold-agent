@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787498023760,
+  "generated_ms": 1787498294659,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 74,
+      "today": 78,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 21,
+      "today": 22,
       "cap": 34
     }
   },
@@ -48,6 +48,26 @@
   "net_worth": 534.88,
   "summary": "Portfolio net worth is stable around M$534. Spendable liquidity is currently constrained to M$1 due to a severe liquidity bottleneck, awaiting the late-August resolution wave (August 28\u201331) to unlock capital from closed clusters. The portfolio is lean, high-conviction, and entirely in profit or break-even, with zero structural falsifications. Recent trading activity includes opening a YES position on the Anthropic Opus 5 prompt-patch market and a NO position on the HMIC 2027 market, while strategically purging low-signal personal and conceptual bets like Transformative AI abundance questions. \n\nA critical operational lesson learned is that internal transaction logs can record debt repayments or transfers that do not actually execute in reality (ghost transactions). Moving forward, net worth audits must take precedence over internal logs, and debt settlement claims must be verified against actual balances. Furthermore, structural execution errors\u2014such as holding NO positions on Bitcoin while maintaining a YES thesis\u2014must be avoided immediately through strict post-trade validation.\n\nCalibration remains exceptionally strong in shorting over-optimistic AI timeline claims, hype corrections, and speculative event-timing bets, while avoiding personal relationship markets, ambiguous sentiment bets, and short-term crypto directional noise. Resolution latency (8\u201311 days) continues to dictate patience, and forced activity must be avoided to prevent activity bias. \n\nKey open positions remain fundamentally sound and pass the re-open test: high-conviction AI milestone bets (Anthropic patch, Gemini coding milestones, MNX volume) and specialized competition entries (HMIC). Standing priorities are maintaining rotation discipline, preserving the high-signal book, and preparing for the August 28\u201331 resolution wave and subsequent audit.",
   "journal": [
+    {
+      "ts": 1787498294592,
+      "kind": "analysis",
+      "text": "Analysed \"Will the percent of Pakistanis in extreme poverty be above 5 percent i\": market 87%, my 89% (high). No trade, edge 0.025 below minimum 0.04."
+    },
+    {
+      "ts": 1787498250825,
+      "kind": "screen",
+      "text": "Escalated \"Will the percent of Pakistanis in extreme poverty be above 5 percent i\" at 87%: quick estimate 35% vs market 87%"
+    },
+    {
+      "ts": 1787498230866,
+      "kind": "screen",
+      "text": "Passed on \"Will 50% or more of AWS developers stop coding for AWS in the next 24 \" at 7%: quick estimate 2% agrees with market. It is virtually impossible for 50 percent of AWS developers to be laid off or reassigned due to AI in this timeframe."
+    },
+    {
+      "ts": 1787498210851,
+      "kind": "screen",
+      "text": "Passed on \"Will any of OpenAI\u2019s \u201cTen Advances in Math and Theoretical CS\u201d be show\" at 4%: quick estimate 15% agrees with market. Commenters note that while some papers have minor issues, they appear easily patchable, falling short of a fatal flaw by August end."
+    },
     {
       "ts": 1787495815041,
       "kind": "agency",
@@ -427,26 +447,6 @@
       "ts": 1787465857296,
       "kind": "book",
       "text": "Looked over 10 positions: The book is lean and primarily in profit, with high-conviction AI positions performing well. However, the Bitcoin position is a structural execution error: the position held (NO) is the direct opposite of the stated thesis (YES 90%). All other tradable positions pass the re-open test. (1 change(s) proposed)"
-    },
-    {
-      "ts": 1787465798549,
-      "kind": "trade",
-      "text": "Limit order M$17 NO on \"Will Bitcoin be higher 14 days from now?\" at 95%, my estimate 87% (high). Because: BTC is trading at ~$76,178, holding a ~10.1% buffer above the $68,506.41 baseline with 10 days remaining to resolution. A >10.1% drawdown over 10 days represents a ~13-14% tail risk in crypto distributions, supporting an 87% probability for YES."
-    },
-    {
-      "ts": 1787465751507,
-      "kind": "screen",
-      "text": "Escalated \"Will Bitcoin be higher 14 days from now?\" at 95%: quick estimate 50% vs market 95%"
-    },
-    {
-      "ts": 1787465731781,
-      "kind": "screen",
-      "text": "Passed on \"USMV at least \u1e401000/share for at least 48 continuous hours before Sept\" at 4%: quick estimate 5% agrees with market. With only 7 days until market close and a 48-hour continuous duration requirement, achieving the target now is mathematically nearly impossible."
-    },
-    {
-      "ts": 1787465711502,
-      "kind": "screen",
-      "text": "Passed on \"Will California be in a drought at end of August 2026?\" at 15%: quick estimate 15% agrees with market. Commentators have already checked the US Drought Monitor state statistics and confirmed current conditions point strongly to NO."
     }
   ],
   "todos": [
@@ -833,6 +833,30 @@
   ],
   "decisions": [
     {
+      "ts": 1787498294589,
+      "kind": "no_trade",
+      "question": "Will the percent of Pakistanis in extreme poverty be above 5 percent in 2023?",
+      "url": "https://manifold.markets/DismalScientist/will-the-percent-of-pakistanis-in-e",
+      "market_prob": 0.86500461790918,
+      "model_prob": 0.89,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Given the razor-thin 2018 baseline of 4.93%, the severe 2022 floods, and the 2023 inflation crisis, extreme poverty almost certainly exceeded 5.0% in 2023.",
+      "uncertainty": "The exact release date and final calculated percentage for Pakistan 2023 under the World Bank / OWID extreme poverty metric.",
+      "resolution_risk": "Creator relying on an alternative poverty threshold or delayed dataset publication prolonging resolution.",
+      "evidence_for": [
+        "The 2018 baseline extreme poverty rate in Pakistan was already 4.93%, meaning an increase of just 0.08 percentage points is sufficient to cross 5.0%.",
+        "Pakistan suffered catastrophic floods in late 2022 followed by acute macroeconomic crisis and high inflation throughout 2023, which World Bank reporting confirms pushed millions into poverty.",
+        "World Bank and Our World in Data updates reflect rising poverty metrics for Pakistan during the FY22\u2013FY23 period."
+      ],
+      "evidence_against": [
+        "Expanded social safety net transfers (e.g. BISP / Ehsaas emergency cash) mitigated extreme consumption shocks for some lowest-decile households.",
+        "Potential data lags or method changes in international extreme poverty line adjustments ($2.15 vs $3.00/day)."
+      ],
+      "reason": "edge 0.025 below minimum 0.04"
+    },
+    {
       "ts": 1787495754658,
       "kind": "no_trade",
       "question": "Will Bitcoin be above $70,000 on September 1, 2026?",
@@ -1164,29 +1188,6 @@
         "Market creator dreev noted in comments that a NO resolution or a low-probability resolution is the most likely outcome given the presence of safety monitors."
       ],
       "reason": "edge 0.009 below minimum 0.04"
-    },
-    {
-      "ts": 1787453233432,
-      "kind": "bet",
-      "question": "Will I stay in masters this season?",
-      "url": "https://manifold.markets/ZandaZhu/will-i-stay-in-masters-this-season-zcpsNLEz9I",
-      "market_prob": 0.8492433059058827,
-      "model_prob": 0.78,
-      "confidence": "medium",
-      "amount": 17.0,
-      "outcome": "NO",
-      "thinking": "Late-month league rank inertia favors staying in Masters, though reduced recent activity increases demotion risk if competitors rally in the final 9 days. Estimating retention at ~78%.",
-      "uncertainty": "ZandaZhu's current league division rank and profit margin above the demotion line.",
-      "resolution_risk": "Ambiguous league season boundary or unexpected platform-level league structure adjustments.",
-      "evidence_for": [
-        "ZandaZhu has attained Masters status on Manifold, reflecting established platform performance",
-        "With only ~9 days remaining in the monthly season, rank inertia from earlier profit provides a cushion against demotion"
-      ],
-      "evidence_against": [
-        "The creator explicitly noted declining activity, which reduces their ability to generate profit or react to shifts in division standings",
-        "Active traders in the division can overtake stagnant balances during the final week of the season"
-      ],
-      "reason": "edge 0.069, kelly 0.08, decay 1.00, bound by kelly target"
     }
   ]
 }
