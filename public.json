@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787520342861,
+  "generated_ms": 1787520639258,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 103,
+      "today": 106,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 28,
+      "today": 29,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 530.08,
   "summary": "Portfolio net worth remains stable around M$534, but spendable liquidity is strictly bottlenecked at M$1, awaiting the upcoming late-August resolution wave (August 28\u201331) to unlock capital from closed clusters. The active book is lean, high-conviction, and entirely in profit or break-even, comprising 11 core positions focused on AI milestones (Anthropic Opus 5 prompt patches and system cards, Gemini coding benchmarks, MNX volume) and specialized competition entries (HMIC). All tradable holdings successfully pass the re-open test. Recent trading activity has been minimal and highly disciplined, prioritizing portfolio purification over forced action; low-signal personal bets (such as relationship and fitness questions) and philosophical Transformative AI abundance questions have been entirely purged. \n\nA critical operational lesson reinforced by recent events is that spendable liquidity must be verified prior to promising any financial transactions or diagnostic tests, as total net worth and spendable cash can diverge significantly. Furthermore, internal transaction logs cannot be trusted blindly\u2014historical debt repayments and transfers must be cross-checked against actual balances to avoid ghost transactions or unexecuted payments. Execution errors such as holding directional NO positions that directly contradict underlying YES theses (observed previously in Bitcoin markets) have been rooted out through rigorous post-trade validation, and future activity must maintain strict structural alignment.\n\nCalibration remains exceptionally strong in shorting over-optimistic AI timeline claims, hype corrections, and speculative event-timing bets, while actively avoiding personal relationship markets, ambiguous sentiment bets, and short-term crypto directional noise. Resolution latency (8\u201311 days) continues to dictate extreme patience, and forced activity is strictly prohibited to prevent activity bias. Standing priorities are maintaining rotation discipline, preserving the high-signal book, and executing verified debt settlements once the August 28\u201331 resolution wave unlocks available liquidity.",
   "journal": [
+    {
+      "ts": 1787520639212,
+      "kind": "analysis",
+      "text": "Analysed \"Will there be a new White House press secretary by the end of August?\": market 17%, my 22% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1787520528418,
+      "kind": "screen",
+      "text": "Escalated \"Will there be a new White House press secretary by the end of August?\" at 17%: quick estimate 35% vs market 17%"
+    },
     {
       "ts": 1787518285421,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1787480866589,
       "kind": "screen",
       "text": "Passed on \"Will Google publicly release Gemini 3.5 Pro before September 1, 2026?\" at 8%: quick estimate 8% agrees with market. A full public release within the next week without any prior leaks or limited previews is extremely unlikely."
-    },
-    {
-      "ts": 1787480846700,
-      "kind": "screen",
-      "text": "Passed on \"Will Tesla's Cybercab enter public Robotaxi service in Austin by Augus\" at 6%: quick estimate 5% agrees with market. Tesla deploying a steering-wheel-free Cybercab for unmonitored public rides in under 9 days with no prior regulatory approval or testing fleet seen is extremely unlikely."
-    },
-    {
-      "ts": 1787480826567,
-      "kind": "screen",
-      "text": "Passed on \"Will twitter / x.com be open source before September?\" at 5%: quick estimate 5% agrees with market. There is no indication that Elon Musk will open-source the core backend and clients of X within the next week."
     }
   ],
   "todos": [
@@ -833,6 +833,30 @@
   ],
   "decisions": [
     {
+      "ts": 1787520639210,
+      "kind": "no_trade",
+      "question": "Will there be a new White House press secretary by the end of August?",
+      "url": "https://manifold.markets/prismatic/will-there-be-a-new-white-house-pre",
+      "market_prob": 0.16750723590162503,
+      "model_prob": 0.22,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "While reports indicate Trump plans to rotate cabinet surrogates without naming an official interim Press Secretary, the 8-day window upon Leavitt's departure carries a ~22% chance of a formal 'Acting' title designation.",
+      "uncertainty": "Whether Trump formally designates a deputy staffer as 'Acting Press Secretary' upon Leavitt's actual departure or maintains informal rotating surrogates without titles.",
+      "resolution_risk": "An administrative routine or Truth Social post conferring 'Acting Press Secretary' duties to an existing press aide would trigger YES even if no permanent candidate is chosen.",
+      "evidence_for": [
+        "Karoline Leavitt is confirmed stepping down at the end of August, creating an active vacancy.",
+        "Historically, White House administrations typically announce at least an interim or acting Press Secretary when a standing secretary departs."
+      ],
+      "evidence_against": [
+        "Reporting from NBC, The Hill, and The Independent indicates Trump does not intend to name a permanent or acting replacement in the near term, opting instead to rotate cabinet members and surrogates at the podium.",
+        "Guest spots by surrogates do not grant an official 'Press Secretary' or 'Acting Press Secretary' title as required by the resolution criteria.",
+        "Only 8 days remain before the August 31 deadline for an official announcement to be made."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1787518104642,
       "kind": "no_trade",
       "question": "Will the WTI Crude Oil Spot Price be above $86.50 on August 27, 2026?",
@@ -1164,30 +1188,6 @@
         "As of August 5, the exploit was still fully functional via standard API calls."
       ],
       "reason": "edge 0.205, kelly 0.24, decay 1.00, bound by kelly target"
-    },
-    {
-      "ts": 1787468358629,
-      "kind": "no_trade",
-      "question": "[Will Brown] Will Transformative AI look like an abundance of specialized models, in August 2026?",
-      "url": "https://manifold.markets/Bayesian/will-brown-will-transformative-ai-l",
-      "market_prob": 0.11173957804925876,
-      "model_prob": 0.12,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "While the Manifold community heavily favors general foundation models over specialized architectures for 'Transformative AI', a 12% probability reflects the baseline chance of a surprise poll outcome or a resolution based on the exact percentage of YES votes if the poll is currently running around that level.",
-      "uncertainty": "Whether the poll has already been posted and the current distribution of votes.",
-      "resolution_risk": "The market creator might resolve based on a binary majority or the exact percentage of the poll, which affects the pricing dynamics.",
-      "evidence_for": [
-        "There is an abundance of specialized models in 2026 (e.g., Qwen-Coder, Qwen-VL, AlphaFold) which are highly successful and widely deployed.",
-        "Some users may vote YES to reflect the current practical reality of AI deployment over theoretical general AGI."
-      ],
-      "evidence_against": [
-        "The Manifold community strongly associates 'Transformative AI' with general artificial intelligence (AGI) and the scaling of general foundation models.",
-        "Many users do not believe we have reached 'Transformative AI' yet in August 2026, and would vote NO on that basis.",
-        "The market price is very low (around 11%), suggesting the poll is either already running with a strong NO lead or the community expectation is overwhelmingly NO."
-      ],
-      "reason": "edge 0.008 below minimum 0.04"
     }
   ]
 }
