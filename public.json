@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787515279936,
+  "generated_ms": 1787515677452,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 96,
+      "today": 99,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 26,
+      "today": 27,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 529.28,
   "summary": "Portfolio net worth remains stable around M$534, but spendable liquidity is strictly bottlenecked at M$1, awaiting the upcoming late-August resolution wave (August 28\u201331) to unlock capital from closed clusters. The active book is lean, high-conviction, and entirely in profit or break-even, comprising 11 core positions focused on AI milestones (Anthropic Opus 5 prompt patches and system cards, Gemini coding benchmarks, MNX volume) and specialized competition entries (HMIC). All tradable holdings successfully pass the re-open test. Recent trading activity has been minimal and highly disciplined, prioritizing portfolio purification over forced action; low-signal personal bets (such as relationship and fitness questions) and philosophical Transformative AI abundance questions have been entirely purged. \n\nA critical operational lesson reinforced by recent events is that spendable liquidity must be verified prior to promising any financial transactions or diagnostic tests, as total net worth and spendable cash can diverge significantly. Furthermore, internal transaction logs cannot be trusted blindly\u2014historical debt repayments and transfers must be cross-checked against actual balances to avoid ghost transactions or unexecuted payments. Execution errors such as holding directional NO positions that directly contradict underlying YES theses (observed previously in Bitcoin markets) have been rooted out through rigorous post-trade validation, and future activity must maintain strict structural alignment.\n\nCalibration remains exceptionally strong in shorting over-optimistic AI timeline claims, hype corrections, and speculative event-timing bets, while actively avoiding personal relationship markets, ambiguous sentiment bets, and short-term crypto directional noise. Resolution latency (8\u201311 days) continues to dictate extreme patience, and forced activity is strictly prohibited to prevent activity bias. Standing priorities are maintaining rotation discipline, preserving the high-signal book, and executing verified debt settlements once the August 28\u201331 resolution wave unlocks available liquidity.",
   "journal": [
+    {
+      "ts": 1787515677285,
+      "kind": "trade",
+      "text": "Limit order M$46 NO on \"Will a Manifolder win the Summer Metaculus Cup\" at 45%, my estimate 22% (medium). Because: While several capable Manifolders are participating, taking 1st place in a Metaculus tournament carries high variance against a broad field of elite forecasters, and the 100-trade qualification threshold excludes many top Metaculus specialists."
+    },
+    {
+      "ts": 1787515467485,
+      "kind": "screen",
+      "text": "Escalated \"Will a Manifolder win the Summer Metaculus Cup\" at 45%: quick estimate 15% vs market 45%"
+    },
     {
       "ts": 1787514909518,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1787475873678,
       "kind": "position",
       "text": "Opened 73 NO on \"Will I make HMIC 2027?\" at 34%, M$48 in."
-    },
-    {
-      "ts": 1787475691340,
-      "kind": "trade",
-      "text": "Limit order M$48 NO on \"Will I make HMIC 2027?\" at 35%, my estimate 16% (medium). Because: HMIC features only 5 problems total each year. Despite strong math credentials from qualifying in 2025/2026, the base rate of getting any specific author's problem selected against the entire submission pool is low (typically under 20%)."
-    },
-    {
-      "ts": 1787475670989,
-      "kind": "screen",
-      "text": "Escalated \"Will I make HMIC 2027?\" at 35%: quick estimate 15% vs market 35%"
     }
   ],
   "todos": [
@@ -783,6 +783,18 @@
       "days_to_close": 8.3
     },
     {
+      "question": "Will a Manifolder win the Summer Metaculus Cup",
+      "url": "https://manifold.markets/bens/will-a-manifolder-win-the-summer-me",
+      "side": "NO",
+      "shares": 81.6,
+      "invested": 46.0,
+      "value": 46.8,
+      "profit": -1.9,
+      "prob": 0.426,
+      "closed": false,
+      "days_to_close": 8.2
+    },
+    {
       "question": "Will something happen in AI the week of Aug 21, 2026?",
       "url": "https://manifold.markets/ZviMowshowitz/will-something-happen-in-ai-the-wee",
       "side": "NO",
@@ -820,6 +832,29 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1787515677282,
+      "kind": "bet",
+      "question": "Will a Manifolder win the Summer Metaculus Cup",
+      "url": "https://manifold.markets/bens/will-a-manifolder-win-the-summer-me",
+      "market_prob": 0.44601759086661424,
+      "model_prob": 0.22,
+      "confidence": "medium",
+      "amount": 46.0,
+      "outcome": "NO",
+      "thinking": "While several capable Manifolders are participating, taking 1st place in a Metaculus tournament carries high variance against a broad field of elite forecasters, and the 100-trade qualification threshold excludes many top Metaculus specialists.",
+      "uncertainty": "Whether the eventual 1st place winner is among the subset of forecasters who meet the strict 100-trade Manifold qualification criteria.",
+      "resolution_risk": "Disputes regarding exact trade counts prior to market creation or ambiguities around bot vs. human collaboration accounts.",
+      "evidence_for": [
+        "Several active Manifold forecasters (e.g., bens, Capital, Zeolite) are actively participating in the Summer Metaculus Cup.",
+        "Cross-platform participation means some top Metaculus competitors also hold active Manifold accounts."
+      ],
+      "evidence_against": [
+        "Winning 1st place in a major Metaculus Cup requires beating hundreds of elite forecasters, creating high competitive variance.",
+        "The strict threshold of at least 100 trades on Manifold in 2026 prior to market creation excludes many top Metaculus specialists who do not trade frequently on Manifold."
+      ],
+      "reason": "edge 0.226, kelly 0.51, decay 1.00, bound by balance reserve"
+    },
     {
       "ts": 1787508173688,
       "kind": "no_trade",
@@ -1154,29 +1189,6 @@
         "BTC has experienced recent short-term pullbacks (down ~2% in the last 24 hours)."
       ],
       "reason": "edge 0.076, kelly 0.08, decay 1.00, bound by kelly target"
-    },
-    {
-      "ts": 1787463285688,
-      "kind": "bet",
-      "question": "Will Bitcoin be higher a month from now?",
-      "url": "https://manifold.markets/OnlySlides/will-bitcoin-be-higher-a-month-from",
-      "market_prob": 0.9400569571220797,
-      "model_prob": 0.9,
-      "confidence": "high",
-      "amount": 8.0,
-      "outcome": "NO",
-      "thinking": "Bitcoin is trading around $77,000, maintaining a ~20% buffer over the $64,090 starting price with 13.5 days remaining until resolution. A drop below the baseline requires a >16.8% decline, which represents a ~1.6-sigma move under normal crypto volatility (~10% tail probability). Estimating YES at 90%.",
-      "uncertainty": "Whether extreme market volatility or sudden macro headwinds trigger a >16.8% drawdown before September 5.",
-      "resolution_risk": "Discrepancies between CoinGecko minute-by-minute candles and Yahoo Finance BTC-USD feeds if price falls back close to $64,090.",
-      "evidence_for": [
-        "Bitcoin is currently trading near $77,000 (up ~20% from the $64,090 starting baseline).",
-        "Only ~13.5 days remain until the September 5 resolution timestamp, compressing the time window for a major reversal."
-      ],
-      "evidence_against": [
-        "Crypto asset volatility and leverage liquidation cascades can produce double-digit drawdowns over a two-week period.",
-        "A broader macroeconomic risk-off shock could compress recent ETF-driven gains."
-      ],
-      "reason": "edge 0.040, kelly 0.04, decay 0.73, bound by min bet floor"
     }
   ]
 }
