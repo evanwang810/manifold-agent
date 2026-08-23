@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787522865806,
+  "generated_ms": 1787523141660,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 106,
+      "today": 109,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 29,
+      "today": 30,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 530.49,
   "summary": "Portfolio net worth remains stable around M$534, but spendable liquidity is strictly bottlenecked at M$1, awaiting the upcoming late-August resolution wave (August 28\u201331) to unlock capital from closed clusters. The active book is lean, high-conviction, and entirely in profit or break-even, comprising 11 core positions focused on AI milestones (Anthropic Opus 5 prompt patches and system cards, Gemini coding benchmarks, MNX volume) and specialized competition entries (HMIC). All tradable holdings successfully pass the re-open test. Recent trading activity has been minimal and highly disciplined, prioritizing portfolio purification over forced action; low-signal personal bets (such as relationship and fitness questions) and philosophical Transformative AI abundance questions have been entirely purged. \n\nA critical operational lesson reinforced by recent events is that spendable liquidity must be verified prior to promising any financial transactions or diagnostic tests, as total net worth and spendable cash can diverge significantly. Furthermore, internal transaction logs cannot be trusted blindly\u2014historical debt repayments and transfers must be cross-checked against actual balances to avoid ghost transactions or unexecuted payments. Execution errors such as holding directional NO positions that directly contradict underlying YES theses (observed previously in Bitcoin markets) have been rooted out through rigorous post-trade validation, and future activity must maintain strict structural alignment.\n\nCalibration remains exceptionally strong in shorting over-optimistic AI timeline claims, hype corrections, and speculative event-timing bets, while actively avoiding personal relationship markets, ambiguous sentiment bets, and short-term crypto directional noise. Resolution latency (8\u201311 days) continues to dictate extreme patience, and forced activity is strictly prohibited to prevent activity bias. Standing priorities are maintaining rotation discipline, preserving the high-signal book, and executing verified debt settlements once the August 28\u201331 resolution wave unlocks available liquidity.",
   "journal": [
+    {
+      "ts": 1787523141557,
+      "kind": "analysis",
+      "text": "Analysed \"Will bitcoin rise to 85k before the Strait of Hormuz is freely open?\": market 84%, my 46% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1787523051676,
+      "kind": "screen",
+      "text": "Escalated \"Will bitcoin rise to 85k before the Strait of Hormuz is freely open?\" at 84%: quick estimate 45% vs market 84%"
+    },
     {
       "ts": 1787521928764,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1787483354661,
       "kind": "analysis",
       "text": "Analysed \"Will Bitcoin be higher 30 days from now?\": market 95%, my 92% (high). No trade, edge 0.030 below minimum 0.04."
-    },
-    {
-      "ts": 1787483268399,
-      "kind": "screen",
-      "text": "Escalated \"Will Bitcoin be higher 30 days from now?\" at 95%: quick estimate 52% vs market 95%"
-    },
-    {
-      "ts": 1787480989658,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] [liquidity] Resolution Latency Confirmation (Aug 23): The Aug 11-14 cluster (including ZC6gdANScC) remains 'CLOSE. Because: Documenting the observed latency to validate the liquidity strategy and prevent activity bias."
     }
   ],
   "todos": [
@@ -838,6 +838,31 @@
   ],
   "decisions": [
     {
+      "ts": 1787523141554,
+      "kind": "no_trade",
+      "question": "Will bitcoin rise to 85k before the Strait of Hormuz is freely open?",
+      "url": "https://manifold.markets/apol/will-bitcoin-rise-to-85k-before-the",
+      "market_prob": 0.8425091542201099,
+      "model_prob": 0.46,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "BTC at ~$77.3k needs a ~10% gain to reach $85k. While Hormuz remains encumbered by military tensions, the market has a stated close date of September 1 and resolution rules state 'otherwise NO'. Even in an open race, peace talks could unblock the strait before BTC rallies.",
+      "uncertainty": "Whether the market creator will continue extending the resolution deadline indefinitely until one event occurs, or resolve NO on September 1.",
+      "resolution_risk": "Ambiguity over whether the creator resolves NO upon expiry if neither condition is met, versus extending until a definitive event.",
+      "evidence_for": [
+        "The Strait of Hormuz remains effectively closed to unescorted commercial traffic as of late August 2026 due to mines, IRGC operations, and ongoing military blockades.",
+        "Bitcoin is currently trading around $77,300 USD, requiring only a ~10% appreciation to cross the $85,000 threshold.",
+        "Official designation of the strait as 'freely open' by international bodies requires substantial post-conflict verification latency even after hostilities subside."
+      ],
+      "evidence_against": [
+        "The market has an active close date of September 1, 2026; if neither condition is met and the creator resolves per the 'otherwise NO' clause, YES fails.",
+        "Ongoing peace negotiations could lead to a ceasefire and maritime opening before Bitcoin rallies to $85,000.",
+        "Bitcoin daily close on CoinMarketCap has not yet crossed $85,000 during this window."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1787520639210,
       "kind": "no_trade",
       "question": "Will there be a new White House press secretary by the end of August?",
@@ -1168,31 +1193,6 @@
         "Selection involves a large pool of submissions from the entire HMMT problem-writing committee and external contributors."
       ],
       "reason": "edge 0.193, kelly 0.55, decay 1.00, bound by balance reserve"
-    },
-    {
-      "ts": 1787470819583,
-      "kind": "bet",
-      "question": "Will Anthropic somehow patch the Opus 5 base-model-like behavior from \"---\" prompts (or pull the model) by September 1?",
-      "url": "https://manifold.markets/KeenanPepper/will-anthropic-somehow-patch-the-op",
-      "market_prob": 0.14472022279622918,
-      "model_prob": 0.35,
-      "confidence": "medium",
-      "amount": 51.0,
-      "outcome": "YES",
-      "thinking": "While Anthropic actively mitigates prompt leaks, the strict resolution criteria requiring near-complete elimination or a hard output classifier mean partial rate reductions resolve NO. Estimating a 35% chance of a full fix/classifier by Sept 1.",
-      "uncertainty": "Whether Anthropic deploys a hard output classifier or template fix before September 1, or merely applies partial rate-reducing mitigations.",
-      "resolution_risk": "Anthropic could reduce the occurrence rate significantly (e.g. down to 10%), which would feel like a fix but strictly resolves NO under the creator's explicit clarification.",
-      "evidence_for": [
-        "Anthropic actively monitors and deploys output classifiers or chat template updates to address formatting and role-injection leaks.",
-        "The vulnerability was demonstrated via a reproducible API script by early August, giving Anthropic several weeks before September 1 to implement a patch.",
-        "Anthropic has a precedent of quickly deploying output classifiers for similar model leaks (e.g. Fable 5)."
-      ],
-      "evidence_against": [
-        "The resolution criteria strictly require near-total elimination (or hard output classifier cutoff); partial mitigations that merely lower the success rate resolve as NO.",
-        "Fixing markdown-based chat template injection without disrupting normal markdown formatting can be complex and may be de-prioritized compared to critical security flaws.",
-        "As of August 5, the exploit was still fully functional via standard API calls."
-      ],
-      "reason": "edge 0.205, kelly 0.24, decay 1.00, bound by kelly target"
     }
   ]
 }
