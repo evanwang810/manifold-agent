@@ -2,16 +2,6 @@
   "summary": "Portfolio net worth sits near M$464 with spendable liquidity strictly bottlenecked at M$1, keeping us in a tight defensive holding pattern. Recent activity successfully cut a failing Anthropic Opus 5 patch position (YES, P/L M$-21) and a UK riot prosecution bet (YES, P/L M$-57), reducing total net worth from M$534. All remaining active positions (11 total) are lean, high-conviction, currently in profit or near break-even, and pass the re-open test. These core positions cluster around AI milestones (Anthropic system cards, Gemini coding benchmarks, MNX volume) and specialized competition entries like HMIC 2027 (evaluated at 15% YES vs 34% market). \n\nResolution latency has stretched to 10\u201313 days, with the Aug 11\u201314 cluster awaiting resolution. Updated calculations place the expected liquidity unlock from closed positions at M$283 during the upcoming August 28\u201331 resolution wave. We have explicitly documented this as \"Liquidity Gap Risk,\" prioritizing position quality over immediate capital availability and rejecting forced liquidations. Standing notes maintain a verified Debt Ledger (recording M$10 to y5RkCJ45bRTdfdoln6wR) and formalize a \"Timeline NO Watchlist\" to ensure immediate capital deployment once liquidity returns.\n\nOperational lessons reinforced include verifying actual *spendable* liquidity before promising transactions, avoiding truncated standing notes by ensuring complete ledger entries, and maintaining discipline against activity bias during liquidity squeezes. Calibration remains strong in shorting over-optimistic AI timeline claims, hype corrections, and speculative event-timing bets, while strictly avoiding personal relationship markets, ambiguous sentiment bets, and short-term crypto directional noise. Patience remains absolute as we await the late-August resolution wave.",
   "journal": [
     {
-      "ts": 1787458763691,
-      "kind": "agency",
-      "text": "Own turn, sold out of \"Will I make HMIC 2027?\" (NO, P/L M$+1). Because: Personal noise market. Does not fit the high-signal strategy. Exiting to reclaim liquidity."
-    },
-    {
-      "ts": 1787458763777,
-      "kind": "agency",
-      "text": "Own turn, sold out of \"Will I stay in masters this season?\" (NO, P/L M$+1). Because: Personal noise market. Despite recent entry, it is low-signal and contradicts the core strategy."
-    },
-    {
       "ts": 1787458947004,
       "kind": "closed",
       "text": "No longer holding \"Will I make HMIC 2027?\". Last seen NO at 34%, P/L M$+1. Resolved or sold."
@@ -1500,6 +1490,16 @@
       "ts": 1787599209213,
       "kind": "position",
       "text": "Opened 67 NO on \"Will my company make a sale today?\" at 30%, M$46 in."
+    },
+    {
+      "ts": 1787600471184,
+      "kind": "agency",
+      "text": "Own turn: Liquidity is M$1, necessitating a holding pattern. The previous attempt to settle the M$10 debt to y5RkCJ45bRTdfdoln6wRM4qLHli1 failed due to a veto, meaning the debt remains outstanding despite the previous turn's incorrect 'todo_done' marking it as settled. I must record this failure to ensure the debt is prioritized during the Aug 28-31 liquidity wave."
+    },
+    {
+      "ts": 1787600471190,
+      "kind": "agency",
+      "text": "Own turn, wrote a standing note: [self] [social] Debt Settlement Failure (Aug 24): The M$10 test debt to y5RkCJ45bRTdfdoln6wRM4qLHli1 remains outstanding. Because: Correcting the false assumption from the previous turn. The debt was not actually settled and must be tracked for the next liquidity wave."
     }
   ],
   "lessons": [
@@ -1532,11 +1532,6 @@
       "text": "Before promising a financial transaction or diagnostic test, verify the current *spendable* liquidity, not just the total balance or net worth.",
       "source": "owner",
       "ts": 1787503584649
-    },
-    {
-      "text": "[self] [social] Debt Ledger (Aug 24): Outstanding debts for settlement post-liquidity wave: M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 (test) and M$50 to cA1JupYR5AR8btHUs2xvkui7jA93 (gift). Total: M$60.",
-      "source": "self",
-      "ts": 1787544392318
     },
     {
       "text": "[self] [social] Debt Ledger Verification (Aug 24): Confirmed that the Debt Ledger note is now complete and accurate in standing notes, including both the M$10 test debt and M$50 gift. Truncation cycle resolved.",
@@ -1582,6 +1577,11 @@
       "text": "[self] [strategy] Timeline NO Watchlist (Aug 24): Specifically monitoring for Aug 31 deadlines: 1. New frontier AI model releases (OpenAI/Anthropic/Google). 2. White House Press Secretary changes. 3. High-profile political appointments. Ready to deploy M$283 unlock into these if ",
       "source": "self",
       "ts": 1787592887610
+    },
+    {
+      "text": "[self] [social] Debt Settlement Failure (Aug 24): The M$10 test debt to y5RkCJ45bRTdfdoln6wRM4qLHli1 remains outstanding; the previous attempt to send mana was vetoed. Settlement is deferred to the Aug 28-31 liquidity wave.",
+      "source": "self",
+      "ts": 1787600471184
     }
   ],
   "conversations": {
@@ -2368,7 +2368,7 @@
     "day": "2026-08-24",
     "fast": 97,
     "deep": 24,
-    "chat": 37
+    "chat": 38
   },
   "last_scan_ms": 1787598865030,
   "last_compress_ms": 1787593933057,
@@ -2479,15 +2479,9 @@
       "done": false
     }
   ],
-  "last_own_action_ms": 1787596529845,
+  "last_own_action_ms": 1787600142449,
   "last_book_review_ms": 1787598981388,
   "own_actions": [
-    {
-      "ts": 1787466390631,
-      "action": "note_remove",
-      "detail": "retired a standing note: [self] [portfolio] Post-Purge State (Aug 23): Portfolio purified of low-signal personal/conceptual bets. Spendable liqui",
-      "reasoning": "Removing truncated and incomplete note."
-    },
     {
       "ts": 1787473724088,
       "action": "note_add",
@@ -2721,6 +2715,12 @@
       "action": "todo_done",
       "detail": "ticked off: Verify the total amount owed to y5RkCJ45bRTdfdoln6wRM4qLHli1 and settle any remaining balance.",
       "reasoning": "The debt has been settled."
+    },
+    {
+      "ts": 1787600471187,
+      "action": "note_add",
+      "detail": "wrote a standing note: [self] [social] Debt Settlement Failure (Aug 24): The M$10 test debt to y5RkCJ45bRTdfdoln6wRM4qLHli1 remains outstanding",
+      "reasoning": "Correcting the false assumption from the previous turn. The debt was not actually settled and must be tracked for the next liquidity wave."
     }
   ],
   "portfolio_mark": {
@@ -2902,7 +2902,7 @@
   },
   "replied_to": [],
   "tracked_orders": {},
-  "events_since_compress": 12,
+  "events_since_compress": 13,
   "watch_probs": {
     "Ln5EgOhAty": 0.4726684393929348,
     "dCP8cP0CLL": 0.1974882220016723,

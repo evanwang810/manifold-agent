@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787599955638,
+  "generated_ms": 1787600472279,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemma-4-31b-it",
+      "active": "gemma-4-26b-a4b-it",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -35,7 +35,7 @@
       "cap": 220
     },
     "chat": {
-      "today": 37,
+      "today": 38,
       "cap": 400
     },
     "deep": {
@@ -48,6 +48,16 @@
   "net_worth": 464.31,
   "summary": "Portfolio net worth sits near M$464 with spendable liquidity strictly bottlenecked at M$1, keeping us in a tight defensive holding pattern. Recent activity successfully cut a failing Anthropic Opus 5 patch position (YES, P/L M$-21) and a UK riot prosecution bet (YES, P/L M$-57), reducing total net worth from M$534. All remaining active positions (11 total) are lean, high-conviction, currently in profit or near break-even, and pass the re-open test. These core positions cluster around AI milestones (Anthropic system cards, Gemini coding benchmarks, MNX volume) and specialized competition entries like HMIC 2027 (evaluated at 15% YES vs 34% market). \n\nResolution latency has stretched to 10\u201313 days, with the Aug 11\u201314 cluster awaiting resolution. Updated calculations place the expected liquidity unlock from closed positions at M$283 during the upcoming August 28\u201331 resolution wave. We have explicitly documented this as \"Liquidity Gap Risk,\" prioritizing position quality over immediate capital availability and rejecting forced liquidations. Standing notes maintain a verified Debt Ledger (recording M$10 to y5RkCJ45bRTdfdoln6wR) and formalize a \"Timeline NO Watchlist\" to ensure immediate capital deployment once liquidity returns.\n\nOperational lessons reinforced include verifying actual *spendable* liquidity before promising transactions, avoiding truncated standing notes by ensuring complete ledger entries, and maintaining discipline against activity bias during liquidity squeezes. Calibration remains strong in shorting over-optimistic AI timeline claims, hype corrections, and speculative event-timing bets, while strictly avoiding personal relationship markets, ambiguous sentiment bets, and short-term crypto directional noise. Patience remains absolute as we await the late-August resolution wave.",
   "journal": [
+    {
+      "ts": 1787600471190,
+      "kind": "agency",
+      "text": "Own turn, wrote a standing note: [self] [social] Debt Settlement Failure (Aug 24): The M$10 test debt to y5RkCJ45bRTdfdoln6wRM4qLHli1 remains outstanding. Because: Correcting the false assumption from the previous turn. The debt was not actually settled and must be tracked for the next liquidity wave."
+    },
+    {
+      "ts": 1787600471184,
+      "kind": "agency",
+      "text": "Own turn: Liquidity is M$1, necessitating a holding pattern. The previous attempt to settle the M$10 debt to y5RkCJ45bRTdfdoln6wRM4qLHli1 failed due to a veto, meaning the debt remains outstanding despite the previous turn's incorrect 'todo_done' marking it as settled. I must record this failure to ensure the debt is prioritized during the Aug 28-31 liquidity wave."
+    },
     {
       "ts": 1787599209213,
       "kind": "position",
@@ -437,16 +447,6 @@
       "ts": 1787566805294,
       "kind": "analysis",
       "text": "Analysed \"Will the next full gemini model be as good as opus 4.7 or gpt 5.5 at c\": market 83%, my 84% (high). No trade, edge 0.010 below minimum 0.04."
-    },
-    {
-      "ts": 1787566558561,
-      "kind": "screen",
-      "text": "Escalated \"Will the next full gemini model be as good as opus 4.7 or gpt 5.5 at c\" at 83%: quick estimate 35% vs market 83%"
-    },
-    {
-      "ts": 1787566509247,
-      "kind": "screen",
-      "text": "Passed on \"Will the CCRC refer Lucy Letby's case to the Court of Appeal?\" at 30%: quick estimate 35% agrees with market. The CCRC review process is complex and slow, making a formal referral decision unlikely by the September deadline."
     }
   ],
   "todos": [
@@ -578,11 +578,6 @@
       "ts": 1787503584649
     },
     {
-      "text": "[self] [social] Debt Ledger (Aug 24): Outstanding debts for settlement post-liquidity wave: M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 (test) and M$50 to cA1JupYR5AR8btHUs2xvkui7jA93 (gift). Total: M$60.",
-      "source": "self",
-      "ts": 1787544392318
-    },
-    {
       "text": "[self] [social] Debt Ledger Verification (Aug 24): Confirmed that the Debt Ledger note is now complete and accurate in standing notes, including both the M$10 test debt and M$50 gift. Truncation cycle resolved.",
       "source": "self",
       "ts": 1787555692285
@@ -626,9 +621,20 @@
       "text": "[self] [strategy] Timeline NO Watchlist (Aug 24): Specifically monitoring for Aug 31 deadlines: 1. New frontier AI model releases (OpenAI/Anthropic/Google). 2. White House Press Secretary changes. 3. High-profile political appointments. Ready to deploy M$283 unlock into these if ",
       "source": "self",
       "ts": 1787592887610
+    },
+    {
+      "text": "[self] [social] Debt Settlement Failure (Aug 24): The M$10 test debt to y5RkCJ45bRTdfdoln6wRM4qLHli1 remains outstanding; the previous attempt to send mana was vetoed. Settlement is deferred to the Aug 28-31 liquidity wave.",
+      "source": "self",
+      "ts": 1787600471184
     }
   ],
   "own_actions": [
+    {
+      "ts": 1787600471187,
+      "action": "note_add",
+      "detail": "wrote a standing note: [self] [social] Debt Settlement Failure (Aug 24): The M$10 test debt to y5RkCJ45bRTdfdoln6wRM4qLHli1 remains outstanding",
+      "reasoning": "Correcting the false assumption from the previous turn. The debt was not actually settled and must be tracked for the next liquidity wave."
+    },
     {
       "ts": 1787596797660,
       "action": "todo_done",
@@ -694,12 +700,6 @@
       "action": "note_add",
       "detail": "wrote a standing note: [self] [strategy] Aug 31 Timeline Scan (Aug 24): Actively monitoring for markets with Aug 31 deadlines to identify 'Time",
       "reasoning": "This transforms the current waiting period into a proactive preparation phase, ensuring that unlocked capital is immediately directed toward high-probability timing bets rather than being deployed reactively."
-    },
-    {
-      "ts": 1787566853089,
-      "action": "note_add",
-      "detail": "wrote a standing note: [self] [liquidity] Expected Resolution Unlock (Aug 24): Estimated M$345 to be unlocked from the Aug 11-14 cluster (ZC6gd",
-      "reasoning": "Quantifying the expected unlock provides a concrete target for post-wave deployment and debt settlement, moving the 'resolution wave' from a general observation to a specific financial expectation."
     }
   ],
   "positions": [
@@ -797,7 +797,7 @@
       "profit": 1.0,
       "prob": 0.3,
       "closed": false,
-      "days_to_close": 0.4
+      "days_to_close": 0.3
     },
     {
       "question": "Will something happen in AI the week of Aug 21, 2026?",
