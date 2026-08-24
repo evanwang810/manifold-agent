@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787556453040,
+  "generated_ms": 1787556835039,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 34,
+      "today": 37,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 9,
+      "today": 10,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 530.64,
   "summary": "Portfolio net worth remains stable near M$534, but spendable liquidity is strictly bottlenecked at M$1, keeping us in a defensive holding pattern awaiting the late-August resolution wave (August 28\u201331) to unlock capital from closed clusters. Recent trading activity has been highly disciplined and minimal, prioritizing portfolio purification over forced action. We successfully sold out of a failing Anthropic Opus 5 patch position (YES, P/L M$-21) after its re-open test failed as the deadline approached with dwindling odds. Conversely, we opened a new high-conviction position in the Metaculus tournament market (NO on a Manifolder winning the Summer Metaculus Cup). The active book is lean, entirely in profit or break-even, and focused on core AI milestones (Gemini coding benchmarks, Anthropic system cards, MNX volume) and specialized competition entries (HMIC, Metaculus).\n\nCritical operational lessons reinforced by recent events include verifying spendable liquidity (which can diverge drastically from net worth) prior to any financial promises, and avoiding blind trust in internal transaction logs without cross-checking against actual balances. Furthermore, we must maintain strict structural alignment, avoiding directional NO positions that contradict underlying theses. \n\nCalibration remains exceptionally strong in shorting over-optimistic AI timeline claims, hype corrections, and speculative event-timing bets, while actively avoiding personal relationship markets, ambiguous sentiment bets, and short-term crypto directional noise. Resolution latency (8\u201311 days) continues to dictate extreme patience, and forced activity is strictly prohibited to prevent activity bias. Standing priorities are maintaining rotation discipline, preserving the high-signal book, and executing verified debt settlements once the August 28\u201331 resolution wave unlocks available liquidity.",
   "journal": [
+    {
+      "ts": 1787556834990,
+      "kind": "analysis",
+      "text": "Analysed \"[Will Brown] Will Transformative AI look like an abundance of speciali\": market 11%, my 13% (medium). No trade, edge 0.018 below minimum 0.04."
+    },
+    {
+      "ts": 1787556651681,
+      "kind": "screen",
+      "text": "Escalated \"[Will Brown] Will Transformative AI look like an abundance of speciali\" at 11%: quick estimate 45% vs market 11%"
+    },
     {
       "ts": 1787555692290,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1787510775911,
       "kind": "agency",
       "text": "Own turn: Liquidity remains critically constrained at M$1. All tradable positions pass the re-open test, so the holding pattern is optimal while awaiting the Aug 28-31 resolution wave. However, the Debt Ledger standing note is still truncated and missing the M$50 debt. I must replace it with a comprehensive record to ensure precise settlement once capital is unlocked."
-    },
-    {
-      "ts": 1787510555888,
-      "kind": "screen",
-      "text": "Passed on \"Will the US and Iran sign a formal end-of-war agreement by August 31, \" at 3%: quick estimate 5% agrees with market. Detailed trader notes confirm negotiations are stalled on an interim ceasefire extension rather than a formal end-of-war treaty with just days remaining."
-    },
-    {
-      "ts": 1787510535862,
-      "kind": "screen",
-      "text": "Passed on \"Will OpenAI release a model marketed as GPT-6 by August 31, 2026?\" at 9%: quick estimate 15% agrees with market. Detailed cross-market pricing from Polymarket and recent 5.x releases make an August 2026 GPT-6 branding event highly unlikely."
     }
   ],
   "todos": [
@@ -838,6 +838,30 @@
   ],
   "decisions": [
     {
+      "ts": 1787556834987,
+      "kind": "no_trade",
+      "question": "[Will Brown] Will Transformative AI look like an abundance of specialized models, in August 2026?",
+      "url": "https://manifold.markets/Bayesian/will-brown-will-transformative-ai-l",
+      "market_prob": 0.11173957804925876,
+      "model_prob": 0.13,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "",
+      "uncertainty": "Whether the poll phrasing and voter turnout on Manifold in August 2026 lean toward broad AI tool adoption or strict generalist AGI definitions.",
+      "resolution_risk": "The poll outcome depends entirely on user sentiment at the time the poll is posted, and poll options/thresholds could be interpreted strictly (>50%) or relatively.",
+      "evidence_for": [
+        "In August 2026, the AI ecosystem heavily features specialized domain models (e.g., Qwen-Coder, AlphaFold 3, Nemotron 3 Nano) alongside general foundation models.",
+        "Some voters may interpret current AI progress as being driven by specialized tools rather than a single monolithic general intelligence."
+      ],
+      "evidence_against": [
+        "Manifold users heavily favor generalist scaling / AGI definitions for Transformative AI (TAI) over narrow specialized models.",
+        "Will Brown's contrarian takes on TAI architecture typically fail to win a majority (>50%) vote in community polls on Manifold.",
+        "Previous assessment recorded a 12% estimate reflecting strong community consensus against specialized models being equivalent to TAI."
+      ],
+      "reason": "edge 0.018 below minimum 0.04"
+    },
+    {
       "ts": 1787554302636,
       "kind": "no_trade",
       "question": "Will Bitcoin be higher 14 days from now?",
@@ -1164,30 +1188,6 @@
         "A sharp macroeconomic risk-off event or sudden regulatory news could trigger a rapid pullback."
       ],
       "reason": "edge 0.040 below minimum 0.04"
-    },
-    {
-      "ts": 1787503209589,
-      "kind": "no_trade",
-      "question": "Will Darline Graham get 60.00% or more in the SC Senate primary Runoff?",
-      "url": "https://manifold.markets/Jack1/will-darline-graham-get-6000-or-mor",
-      "market_prob": 0.1888344426127572,
-      "model_prob": 0.15,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Reaching 60.00% in a head-to-head runoff against a sitting U.S. Representative is a steep hurdle. While Graham led the initial primary (33% to 24%), the 43% scattered among other candidates makes a blowout (60%+) unlikely in a competitive Republican primary. Estimating 15%.",
-      "uncertainty": "The consolidation pattern of the 43% of voters who backed defeated first-round candidates.",
-      "resolution_risk": "Official state election results will determine the exact percentage; resolution criteria are clear and quantitative.",
-      "evidence_for": [
-        "Graham finished first in the initial primary round on August 11 with 33% of the vote compared to Norman's 24%.",
-        "As the appointed incumbent Senator and sister of the late Senator Lindsey Graham, she holds strong statewide establishment support and brand recognition."
-      ],
-      "evidence_against": [
-        "Reaching a 60.00% threshold in a head-to-head runoff against a prominent multi-term U.S. Representative (Ralph Norman) is a very high bar.",
-        "First-round results showed 43% of the electorate supported other candidates; conservative runoffs in SC usually feature competitive consolidation rather than 20+ point blowouts.",
-        "Norman retains a solid conservative base and funding, making a sub-40% floor for him unlikely."
-      ],
-      "reason": "edge 0.039 below minimum 0.04"
     }
   ]
 }
