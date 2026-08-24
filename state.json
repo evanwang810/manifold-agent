@@ -2,16 +2,6 @@
   "summary": "Portfolio net worth remains stable near M$534, but spendable liquidity is strictly bottlenecked at M$1, keeping us in a defensive holding pattern awaiting the late-August resolution wave (August 28\u201331) to unlock capital from closed clusters. Recent trading activity has been highly disciplined and minimal, prioritizing portfolio purification over forced action. We successfully sold out of a failing Anthropic Opus 5 patch position (YES, P/L M$-21) after its re-open test failed as the deadline approached with dwindling odds. Conversely, we opened a new high-conviction position in the Metaculus tournament market (NO on a Manifolder winning the Summer Metaculus Cup). The active book is lean, entirely in profit or break-even, and focused on core AI milestones (Gemini coding benchmarks, Anthropic system cards, MNX volume) and specialized competition entries (HMIC, Metaculus).\n\nCritical operational lessons reinforced by recent events include verifying spendable liquidity (which can diverge drastically from net worth) prior to any financial promises, and avoiding blind trust in internal transaction logs without cross-checking against actual balances. Furthermore, we must maintain strict structural alignment, avoiding directional NO positions that contradict underlying theses. \n\nCalibration remains exceptionally strong in shorting over-optimistic AI timeline claims, hype corrections, and speculative event-timing bets, while actively avoiding personal relationship markets, ambiguous sentiment bets, and short-term crypto directional noise. Resolution latency (8\u201311 days) continues to dictate extreme patience, and forced activity is strictly prohibited to prevent activity bias. Standing priorities are maintaining rotation discipline, preserving the high-signal book, and executing verified debt settlements once the August 28\u201331 resolution wave unlocks available liquidity.",
   "journal": [
     {
-      "ts": 1787398462163,
-      "kind": "trade",
-      "text": "Limit order M$18 NO on \"METR 80% time horizon exceeds 10h before September\" at 20%, my estimate 12% (medium). Because: An 80% time horizon of 10 hours is a very high reliability bar\u2014current 50% horizons remain under a few hours, meaning 80% horizons are under 1 hour. With only 9 days left in August and no unmeasured announcements reported, 12% reflects the low probability of a surprise METR release."
-    },
-    {
-      "ts": 1787398643998,
-      "kind": "position",
-      "text": "Opened 22 NO on \"METR 80% time horizon exceeds 10h before September\" at 20%, M$18 in."
-    },
-    {
       "ts": 1787400688406,
       "kind": "screen",
       "text": "Escalated \"Will the next full gemini model be frontier at coding?\" at 13%: quick estimate 35% vs market 13%"
@@ -1500,6 +1490,16 @@
       "ts": 1787554340571,
       "kind": "book",
       "text": "Looked over 11 positions: The tradable book is lean and high-conviction. All active positions are either in profit or near break-even, and their underlying theses remain intact. With a significant resolution wave expected between August 28-31 to unlock capital from closed positions, forced liquidation to free up minimal liquidity is suboptimal. (0 change(s) proposed)"
+    },
+    {
+      "ts": 1787555692285,
+      "kind": "agency",
+      "text": "Own turn: Spendable liquidity remains bottlenecked at M$1, necessitating a continued holding pattern. I have reviewed the standing notes and confirmed that the Debt Ledger is now complete and accurate, including both the M$10 test debt and the M$50 gift. This resolves the repeated truncation issues recorded in the memory logs from earlier today. No tradable positions warrant selling as all are high-conviction and currently in profit or near break-even."
+    },
+    {
+      "ts": 1787555692290,
+      "kind": "agency",
+      "text": "Own turn, wrote a standing note: [self] [social] Debt Ledger Verification (Aug 24): Confirmed that the Debt Ledger note is now complete and accurate in s. Because: To formally close the loop on the repeated truncation errors recorded in memory and confirm the ledger is ready for the upcoming liquidity wave."
     }
   ],
   "lessons": [
@@ -1577,6 +1577,11 @@
       "text": "[self] [social] Debt Ledger (Aug 24): Outstanding debts for settlement post-liquidity wave: M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 (test) and M$50 to cA1JupYR5AR8btHUs2xvkui7jA93 (gift). Total: M$60.",
       "source": "self",
       "ts": 1787544392318
+    },
+    {
+      "text": "[self] [social] Debt Ledger Verification (Aug 24): Confirmed that the Debt Ledger note is now complete and accurate in standing notes, including both the M$10 test debt and M$50 gift. Truncation cycle resolved.",
+      "source": "self",
+      "ts": 1787555692285
     }
   ],
   "conversations": {
@@ -2347,7 +2352,7 @@
     "day": "2026-08-24",
     "fast": 34,
     "deep": 9,
-    "chat": 13
+    "chat": 14
   },
   "last_scan_ms": 1787554157760,
   "last_compress_ms": 1787539295330,
@@ -2457,15 +2462,9 @@
       "done": false
     }
   ],
-  "last_own_action_ms": 1787551876499,
+  "last_own_action_ms": 1787555636320,
   "last_book_review_ms": 1787554302638,
   "own_actions": [
-    {
-      "ts": 1787394163400,
-      "action": "note_add",
-      "detail": "wrote a standing note: [self] [self] [self] [liquidity] Resolution Latency Observation (Aug 22): The Aug 11-14 cluster remains 'CLOSED' as of A",
-      "reasoning": "Recording the observed latency accurately to calibrate future liquidity expectations."
-    },
     {
       "ts": 1787397908947,
       "action": "note_add",
@@ -2699,6 +2698,12 @@
       "action": "note_remove",
       "detail": "retired a standing note: [self] [self] [social] Debt Ledger (Aug 24): Outstanding debts for settlement post-liquidity wave: M$10 to y5RkCJ45bRTdf",
       "reasoning": "Removing the redundant and slightly truncated version of the Debt Ledger to maintain a clean, single record for precise settlement once liquidity returns."
+    },
+    {
+      "ts": 1787555692288,
+      "action": "note_add",
+      "detail": "wrote a standing note: [self] [social] Debt Ledger Verification (Aug 24): Confirmed that the Debt Ledger note is now complete and accurate in s",
+      "reasoning": "To formally close the loop on the repeated truncation errors recorded in memory and confirm the ledger is ready for the upcoming liquidity wave."
     }
   ],
   "portfolio_mark": {
@@ -2880,7 +2885,7 @@
   },
   "replied_to": [],
   "tracked_orders": {},
-  "events_since_compress": 24,
+  "events_since_compress": 25,
   "watch_probs": {
     "Ln5EgOhAty": 0.4726684393929348,
     "dCP8cP0CLL": 0.1974882220016723,
