@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787546439925,
+  "generated_ms": 1787546810338,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,15 +31,15 @@
   },
   "usage": {
     "fast": {
-      "today": 20,
+      "today": 23,
       "cap": 220
     },
     "chat": {
-      "today": 8,
+      "today": 9,
       "cap": 400
     },
     "deep": {
-      "today": 5,
+      "today": 6,
       "cap": 34
     }
   },
@@ -48,6 +48,21 @@
   "net_worth": 530.64,
   "summary": "Portfolio net worth remains stable near M$534, but spendable liquidity is strictly bottlenecked at M$1, keeping us in a defensive holding pattern awaiting the late-August resolution wave (August 28\u201331) to unlock capital from closed clusters. Recent trading activity has been highly disciplined and minimal, prioritizing portfolio purification over forced action. We successfully sold out of a failing Anthropic Opus 5 patch position (YES, P/L M$-21) after its re-open test failed as the deadline approached with dwindling odds. Conversely, we opened a new high-conviction position in the Metaculus tournament market (NO on a Manifolder winning the Summer Metaculus Cup). The active book is lean, entirely in profit or break-even, and focused on core AI milestones (Gemini coding benchmarks, Anthropic system cards, MNX volume) and specialized competition entries (HMIC, Metaculus).\n\nCritical operational lessons reinforced by recent events include verifying spendable liquidity (which can diverge drastically from net worth) prior to any financial promises, and avoiding blind trust in internal transaction logs without cross-checking against actual balances. Furthermore, we must maintain strict structural alignment, avoiding directional NO positions that contradict underlying theses. \n\nCalibration remains exceptionally strong in shorting over-optimistic AI timeline claims, hype corrections, and speculative event-timing bets, while actively avoiding personal relationship markets, ambiguous sentiment bets, and short-term crypto directional noise. Resolution latency (8\u201311 days) continues to dictate extreme patience, and forced activity is strictly prohibited to prevent activity bias. Standing priorities are maintaining rotation discipline, preserving the high-signal book, and executing verified debt settlements once the August 28\u201331 resolution wave unlocks available liquidity.",
   "journal": [
+    {
+      "ts": 1787546810283,
+      "kind": "book",
+      "text": "Looked over 11 positions: The tradable book is lean and high-conviction, with all positions in profit or near break-even. All active positions pass the re-open test. Given the imminent August 28-31 resolution wave, forced selling to free up minimal liquidity is suboptimal as no theses have collapsed. (0 change(s) proposed)"
+    },
+    {
+      "ts": 1787546763674,
+      "kind": "analysis",
+      "text": "Analysed \"Will Jason Arday's 'Great and Unfortunate Things' be available for pur\": market 89%, my 86% (medium). No trade, edge 0.032 below minimum 0.04."
+    },
+    {
+      "ts": 1787546625302,
+      "kind": "screen",
+      "text": "Escalated \"Will Jason Arday's 'Great and Unfortunate Things' be available for pur\" at 89%: flagged: Preorders exist but availability for purchase by August 27 needs verification against the exact release date."
+    },
     {
       "ts": 1787544392323,
       "kind": "agency",
@@ -432,21 +447,6 @@
       "ts": 1787503209592,
       "kind": "analysis",
       "text": "Analysed \"Will Darline Graham get 60.00% or more in the SC Senate primary Runoff\": market 19%, my 15% (medium). No trade, edge 0.039 below minimum 0.04."
-    },
-    {
-      "ts": 1787503090132,
-      "kind": "screen",
-      "text": "Escalated \"Will Darline Graham get 60.00% or more in the SC Senate primary Runoff\" at 19%: quick estimate 50% vs market 19%"
-    },
-    {
-      "ts": 1787503070237,
-      "kind": "screen",
-      "text": "Passed on \"Will there be new US-Iran peace talks before August 31?\" at 7%: quick estimate 15% agrees with market. With only eight days remaining and no announcements of senior-level or follow-on technical talks scheduled, a new round is unlikely."
-    },
-    {
-      "ts": 1787502884387,
-      "kind": "book",
-      "text": "Looked over 11 positions: The tradable book is lean and high-conviction. All active positions (Anthropic, Gemini, MNX, HMIC) pass the re-open test and align with the core strategy of shorting hype or betting on technical milestones. Liquidity is critically low (M$1), but the holding pattern is optimal pending the late-August resolution wave to unlock capital from closed positions. (0 change(s) proposed)"
     }
   ],
   "todos": [
@@ -838,6 +838,30 @@
   ],
   "decisions": [
     {
+      "ts": 1787546763671,
+      "kind": "no_trade",
+      "question": "Will Jason Arday's 'Great and Unfortunate Things' be available for purchase in the UK on or before August 27, 2026?",
+      "url": "https://manifold.markets/vitamind/will-jason-ardays-great-and-unfortu",
+      "market_prob": 0.8915594761980845,
+      "model_prob": 0.86,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With the UK release scheduled for August 27, 2026 by Simon & Schuster and pre-orders actively live across major UK booksellers, publication distribution is already underway. While Jason Arday's recent passing on August 14 and academic claims controversies introduce minor publisher risk, no delay or cancellation has been announced, making an on-schedule release highly probable.",
+      "uncertainty": "Whether Simon & Schuster or the author's estate issues an unannounced last-minute freeze on publication prior to August 27.",
+      "resolution_risk": "Lack of creator description leaves ambiguity around whether digital/online sales on August 27 strictly satisfy 'available for purchase'.",
+      "evidence_for": [
+        "Simon & Schuster scheduled UK publication date is August 27, 2026.",
+        "Pre-orders are currently live on Amazon UK and major retailers.",
+        "Recent mid-August coverage continues to cite the August 27 release date with no announcement of publisher withdrawal."
+      ],
+      "evidence_against": [
+        "Author Jason Arday passed away on August 14, 2026.",
+        "Controversies in early August regarding investigations into Arday's academic and autobiographical claims could theoretically cause the publisher to delay or halt publication."
+      ],
+      "reason": "edge 0.032 below minimum 0.04"
+    },
+    {
       "ts": 1787544254957,
       "kind": "no_trade",
       "question": "Will we conclude Tesla launched level 4 robotaxis in summer 2025?",
@@ -1169,29 +1193,6 @@
         "A 9-10% drawdown over an 8-day window is well within crypto's historical volatility distribution."
       ],
       "reason": "edge 0.040 below minimum 0.04"
-    },
-    {
-      "ts": 1787490766916,
-      "kind": "no_trade",
-      "question": "Given I have been with my partner for a year, will we be together for 5?",
-      "url": "https://manifold.markets/LivInTheLookingGlass/given-i-have-been-with-my-partner-f-0dde6bfd1962",
-      "market_prob": 0.7105830223847407,
-      "model_prob": 0.62,
-      "confidence": "low",
-      "amount": null,
-      "outcome": null,
-      "thinking": "While active honeymoon planning signals strong commitment and lowers near-term breakup risk, surviving 4 additional years from year 1 still carries significant attrition hazard based on longitudinal relationship data.",
-      "uncertainty": "Whether the couple follows through on marriage and maintains stability through early major relationship transitions over the next 4 years.",
-      "resolution_risk": "Ambiguity over whether brief separations or breaks would count as breaking the continuous 5-year duration.",
-      "evidence_for": [
-        "The couple has already survived the first year, which filters out initial short-term mismatches.",
-        "The creator opened a market about planning their honeymoon, indicating strong mutual commitment and serious intention toward marriage."
-      ],
-      "evidence_against": [
-        "Reaching a total duration of 5 years requires remaining together for 4 additional years, during which general base rates for unmarried/early-stage relationships indicate substantial attrition (30-45%).",
-        "No specific resolution criteria were provided, leaving minor ambiguity on how temporary breaks or informal splits would be judged."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
