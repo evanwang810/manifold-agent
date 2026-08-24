@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787576214972,
+  "generated_ms": 1787576673603,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,15 +31,15 @@
   },
   "usage": {
     "fast": {
-      "today": 62,
+      "today": 65,
       "cap": 220
     },
     "chat": {
-      "today": 24,
+      "today": 25,
       "cap": 400
     },
     "deep": {
-      "today": 15,
+      "today": 16,
       "cap": 34
     }
   },
@@ -48,6 +48,21 @@
   "net_worth": 474.86,
   "summary": "Portfolio net worth remains stable near M$534, but spendable liquidity is strictly bottlenecked at M$1. This liquidity squeeze has kept us in a defensive holding pattern, though recent activity successfully purified the book by cutting a failing Anthropic Opus 5 patch position (YES, P/L M$-21) and opening a high-conviction NO on a Manifolder winning the Summer Metaculus Cup. All remaining active positions are lean, high-conviction, currently in profit or near break-even, and pass the re-open test. These core positions cluster around AI milestones (Gemini coding benchmarks, Anthropic system cards, MNX volume) and specialized competition entries. \n\nObserved resolution latency has stretched to 10\u201313 days (with the Aug 11\u201314 cluster awaiting resolution), establishing a concrete expectation of M$345 to be unlocked during the upcoming August 28\u201331 resolution wave. We have explicitly documented this trade-off as \"Liquidity Gap Risk,\" prioritizing position quality over immediate capital availability and explicitly rejecting forced liquidations. Standing notes also maintain a clean, verified Debt Ledger (recording M$10 in test debt plus the M$50 gift to y5RkCJ45bRTdfdoln6wR) to ensure precise settlement the moment liquidity returns.\n\nOperational lessons reinforced by recent events include always verifying actual *spendable* liquidity rather than relying on net worth or internal transaction logs before promising financial transactions, and avoiding truncated standing notes by maintaining single, complete ledger entries. \n\nCalibration remains strong in shorting over-optimistic AI timeline claims, hype corrections, and speculative event-timing bets, while strictly avoiding personal relationship markets, ambiguous sentiment bets, and short-term crypto directional noise. Patience remains absolute: forced activity is prohibited to prevent activity bias, and we are fully prepped to deploy capital and settle debts once the late-August resolution wave hits.",
   "journal": [
+    {
+      "ts": 1787576673356,
+      "kind": "book",
+      "text": "Looked over 11 positions: The tradable book is lean and high-conviction. All active positions are currently in profit or near break-even and pass the re-open test. Given the expected M$345 liquidity unlock from closed positions between August 28-31, forced liquidation of these high-conviction holdings to free up minimal mana is suboptimal. (0 change(s) proposed)"
+    },
+    {
+      "ts": 1787576542476,
+      "kind": "analysis",
+      "text": "Analysed \"Will the next full gemini model be frontier at coding?\": market 13%, my 33% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1787576402727,
+      "kind": "screen",
+      "text": "Escalated \"Will the next full gemini model be frontier at coding?\" at 13%: quick estimate 45% vs market 13%"
+    },
     {
       "ts": 1787576028121,
       "kind": "move",
@@ -432,21 +447,6 @@
       "ts": 1787535494978,
       "kind": "analysis",
       "text": "Analysed \"Will the AfD win an absolute majority in the state election in Saxony-\": market 33%, my 17% (medium). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1787535356675,
-      "kind": "screen",
-      "text": "Escalated \"Will the AfD win an absolute majority in the state election in Saxony-\" at 33%: quick estimate 15% vs market 33%"
-    },
-    {
-      "ts": 1787533192708,
-      "kind": "agency",
-      "text": "Own turn, retired a standing note: [self] [self] [social] Debt Ledger (Aug 23): Outstanding debts for settlement post-liquidity wave: M$10 to y5RkCJ45bRTdf. Because: Removing the redundant, truncated version of the debt ledger to ensure only the complete record remains."
-    },
-    {
-      "ts": 1787533192703,
-      "kind": "agency",
-      "text": "Own turn: Liquidity remains critically low at M$1, necessitating a continued holding pattern for all tradable positions. I have noticed that my standing notes contain two versions of the Debt Ledger; one is complete and the other is truncated. To prevent future settlement errors and maintain a clean record for the August 28-31 resolution wave, I will remove the truncated entry."
     }
   ],
   "todos": [
@@ -838,6 +838,31 @@
   ],
   "decisions": [
     {
+      "ts": 1787576542473,
+      "kind": "no_trade",
+      "question": "Will the next full gemini model be frontier at coding?",
+      "url": "https://manifold.markets/ian/will-the-next-full-gemini-model-be-gLcS2ROl5P",
+      "market_prob": 0.13215256485251714,
+      "model_prob": 0.33,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "While Anthropic and OpenAI maintain strong workflow dominance for web app dev, Gemini 3.x iterations show sharp improvements in coding benchmarks. Accounting for the creator's clarification that speed alone won't trigger NO if code output is frontier quality, there is a reasonable ~33% chance the next full Gemini Pro model reaches parity for coding mnx.fi.",
+      "uncertainty": "Whether the full Gemini Pro flagship release achieves sufficient code quality and reasoning to match Anthropic/OpenAI on web app codebases like mnx.fi.",
+      "resolution_risk": "Subjective developer evaluation means tooling integration (IDE plugins, API latency) could influence creator opinion despite raw LLM capability.",
+      "evidence_for": [
+        "Gemini 3.x line (including 3.7 Flash and 3-pro-preview) shows significant progress on coding benchmarks like Code Arena (1588 Elo) and FrontierCode 1.1.",
+        "Creator clarified that model speed alone won't force a NO resolution if output quality equals or exceeds Anthropic/OpenAI models.",
+        "Google is heavily prioritizing reasoning and coding capabilities in upcoming Pro tier flagship models."
+      ],
+      "evidence_against": [
+        "Anthropic (Claude Sonnet/Opus) and OpenAI hold a dominant market share and user workflow preference for web application development (TypeScript/React as used in mnx.fi).",
+        "Resolution depends on creator's subjective personal preference to use it equally for real-world coding, which requires overcoming existing tooling habits (Cursor/Claude Code integrations).",
+        "Historically Gemini Pro models have lagged behind Claude in real-world IDE context and subtle frontend/fullstack code generation quality."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1787574107592,
       "kind": "no_trade",
       "question": "METR 80% time horizon exceeds 10h before September",
@@ -1164,29 +1189,6 @@
         "Polling error in German state elections routinely reaches 1.5 to 2.0 percentage points."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1787530639402,
-      "kind": "no_trade",
-      "question": "Will my risky text be successful?",
-      "url": "https://manifold.markets/SamMyacc43/will-my-risky-text-be-successful",
-      "market_prob": 0.3354355470669853,
-      "model_prob": 0.36,
-      "confidence": "low",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Without context on the recipient or content, base rates for risky text reciprocation typically center around 35% to 40%. Estimating 36%.",
-      "uncertainty": "The recipient identity, relationship dynamic, and exact content of the text",
-      "resolution_risk": "Subjective self-resolution by the creator regarding what constitutes sufficient reciprocation",
-      "evidence_for": [
-        "Sender had enough perceived positive signals to send the message",
-        "Commentary indicates an optimistic mindset from the sender"
-      ],
-      "evidence_against": [
-        "The designation risky implies a substantial probability of non-reciprocation",
-        "Lack of follow-up details or early resolution indicating immediate success"
-      ],
-      "reason": "edge 0.025 below minimum 0.04"
     }
   ]
 }

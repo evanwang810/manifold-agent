@@ -2,21 +2,6 @@
   "summary": "Portfolio net worth remains stable near M$534, but spendable liquidity is strictly bottlenecked at M$1. This liquidity squeeze has kept us in a defensive holding pattern, though recent activity successfully purified the book by cutting a failing Anthropic Opus 5 patch position (YES, P/L M$-21) and opening a high-conviction NO on a Manifolder winning the Summer Metaculus Cup. All remaining active positions are lean, high-conviction, currently in profit or near break-even, and pass the re-open test. These core positions cluster around AI milestones (Gemini coding benchmarks, Anthropic system cards, MNX volume) and specialized competition entries. \n\nObserved resolution latency has stretched to 10\u201313 days (with the Aug 11\u201314 cluster awaiting resolution), establishing a concrete expectation of M$345 to be unlocked during the upcoming August 28\u201331 resolution wave. We have explicitly documented this trade-off as \"Liquidity Gap Risk,\" prioritizing position quality over immediate capital availability and explicitly rejecting forced liquidations. Standing notes also maintain a clean, verified Debt Ledger (recording M$10 in test debt plus the M$50 gift to y5RkCJ45bRTdfdoln6wR) to ensure precise settlement the moment liquidity returns.\n\nOperational lessons reinforced by recent events include always verifying actual *spendable* liquidity rather than relying on net worth or internal transaction logs before promising financial transactions, and avoiding truncated standing notes by maintaining single, complete ledger entries. \n\nCalibration remains strong in shorting over-optimistic AI timeline claims, hype corrections, and speculative event-timing bets, while strictly avoiding personal relationship markets, ambiguous sentiment bets, and short-term crypto directional noise. Patience remains absolute: forced activity is prohibited to prevent activity bias, and we are fully prepped to deploy capital and settle debts once the late-August resolution wave hits.",
   "journal": [
     {
-      "ts": 1787421066444,
-      "kind": "analysis",
-      "text": "Analysed \"Will Bitcoin be higher 7 days from now?\": market 89%, my 86% (medium). No trade, edge 0.029 below minimum 0.04."
-    },
-    {
-      "ts": 1787423177223,
-      "kind": "book",
-      "text": "Looked over 12 positions: The portfolio is lean and high-conviction. All tradable positions are currently in profit or break-even, and their underlying theses remain structurally sound. I am maintaining a holding pattern awaiting the late-August resolution wave (Aug 28-31) to replenish spendable liquidity, as all active positions pass the re-open test at current prices. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1787423365850,
-      "kind": "screen",
-      "text": "Passed on \"Will Jair Bolsonaro run for the Senate in 2026?\" at 4%: quick estimate 5% agrees with market. Bolsonaro is currently ineligible to run for office due to court rulings, making a Senate run legally blocked."
-    },
-    {
       "ts": 1787423385907,
       "kind": "screen",
       "text": "Passed on \"US regain control over Bagram air base in Afghanistan by August 2026?\" at 9%: quick estimate 5% agrees with market. Regaining a major base in Afghanistan requires an invasion or massive shift that is geopolitically implausible within a few days."
@@ -1500,6 +1485,21 @@
       "ts": 1787576028121,
       "kind": "move",
       "text": "\"Will at least 10 UK riot related prosecutions be overturned or have th\" moved -24% to 0%. Holding YES, P/L M$-57."
+    },
+    {
+      "ts": 1787576402727,
+      "kind": "screen",
+      "text": "Escalated \"Will the next full gemini model be frontier at coding?\" at 13%: quick estimate 45% vs market 13%"
+    },
+    {
+      "ts": 1787576542476,
+      "kind": "analysis",
+      "text": "Analysed \"Will the next full gemini model be frontier at coding?\": market 13%, my 33% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1787576673356,
+      "kind": "book",
+      "text": "Looked over 11 positions: The tradable book is lean and high-conviction. All active positions are currently in profit or near break-even and pass the re-open test. Given the expected M$345 liquidity unlock from closed positions between August 28-31, forced liquidation of these high-conviction holdings to free up minimal mana is suboptimal. (0 change(s) proposed)"
     }
   ],
   "lessons": [
@@ -1892,10 +1892,10 @@
       "ts": 1787321192272
     },
     "CUtsh5LCE5": {
-      "note": "Creator subjective preference on mnx.fi coding sets a strict threshold; holding ~40% probability on Gemini full Pro reaching parity.",
+      "note": "Gemini 3.x benchmark gains give it a ~33% chance of matching Anthropic/OpenAI for web dev, though subjective preference sets a high bar.",
       "question": "Will the next full gemini model be frontier at coding?",
       "url": "https://manifold.markets/ian/will-the-next-full-gemini-model-be-gLcS2ROl5P",
-      "ts": 1787488305465
+      "ts": 1787576542101
     },
     "QS02yLOZy0": "ClaudeOpus46 has ~4,213 cash vs 2,500 threshold; primary risks are bet sweeps and Bayesian loan repayment.",
     "cSIClsAgzp": {
@@ -2243,7 +2243,7 @@
     "L8Bp5PgNLKN17YFxrvXY": 1787490699875,
     "Slqq0n6SA5": 1787498210084,
     "uuhpU2ngnn": 1787241384873,
-    "CUtsh5LCE5": 1787488239789,
+    "CUtsh5LCE5": 1787576401351,
     "ZC6gdANScC": 1786734639220,
     "hnC5dO8EZ5": 1786560465194,
     "QS02yLOZy0": 1786618147484,
@@ -2357,11 +2357,11 @@
   },
   "llm_usage": {
     "day": "2026-08-24",
-    "fast": 62,
-    "deep": 15,
-    "chat": 24
+    "fast": 65,
+    "deep": 16,
+    "chat": 25
   },
-  "last_scan_ms": 1787573846860,
+  "last_scan_ms": 1787576401151,
   "last_compress_ms": 1787568214191,
   "grounding_out_day": "2026-08-24",
   "todos": [
@@ -2470,7 +2470,7 @@
     }
   ],
   "last_own_action_ms": 1787574107594,
-  "last_book_review_ms": 1787572676890,
+  "last_book_review_ms": 1787576542476,
   "own_actions": [
     {
       "ts": 1787413106933,
@@ -2892,7 +2892,7 @@
   },
   "replied_to": [],
   "tracked_orders": {},
-  "events_since_compress": 12,
+  "events_since_compress": 15,
   "watch_probs": {
     "Ln5EgOhAty": 0.4726684393929348,
     "dCP8cP0CLL": 0.1974882220016723,
