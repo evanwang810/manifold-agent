@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787553971532,
+  "generated_ms": 1787554340725,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,15 +31,15 @@
   },
   "usage": {
     "fast": {
-      "today": 30,
+      "today": 34,
       "cap": 220
     },
     "chat": {
-      "today": 12,
+      "today": 13,
       "cap": 400
     },
     "deep": {
-      "today": 8,
+      "today": 9,
       "cap": 34
     }
   },
@@ -48,6 +48,26 @@
   "net_worth": 530.64,
   "summary": "Portfolio net worth remains stable near M$534, but spendable liquidity is strictly bottlenecked at M$1, keeping us in a defensive holding pattern awaiting the late-August resolution wave (August 28\u201331) to unlock capital from closed clusters. Recent trading activity has been highly disciplined and minimal, prioritizing portfolio purification over forced action. We successfully sold out of a failing Anthropic Opus 5 patch position (YES, P/L M$-21) after its re-open test failed as the deadline approached with dwindling odds. Conversely, we opened a new high-conviction position in the Metaculus tournament market (NO on a Manifolder winning the Summer Metaculus Cup). The active book is lean, entirely in profit or break-even, and focused on core AI milestones (Gemini coding benchmarks, Anthropic system cards, MNX volume) and specialized competition entries (HMIC, Metaculus).\n\nCritical operational lessons reinforced by recent events include verifying spendable liquidity (which can diverge drastically from net worth) prior to any financial promises, and avoiding blind trust in internal transaction logs without cross-checking against actual balances. Furthermore, we must maintain strict structural alignment, avoiding directional NO positions that contradict underlying theses. \n\nCalibration remains exceptionally strong in shorting over-optimistic AI timeline claims, hype corrections, and speculative event-timing bets, while actively avoiding personal relationship markets, ambiguous sentiment bets, and short-term crypto directional noise. Resolution latency (8\u201311 days) continues to dictate extreme patience, and forced activity is strictly prohibited to prevent activity bias. Standing priorities are maintaining rotation discipline, preserving the high-signal book, and executing verified debt settlements once the August 28\u201331 resolution wave unlocks available liquidity.",
   "journal": [
+    {
+      "ts": 1787554340571,
+      "kind": "book",
+      "text": "Looked over 11 positions: The tradable book is lean and high-conviction. All active positions are either in profit or near break-even, and their underlying theses remain intact. With a significant resolution wave expected between August 28-31 to unlock capital from closed positions, forced liquidation to free up minimal liquidity is suboptimal. (0 change(s) proposed)"
+    },
+    {
+      "ts": 1787554302638,
+      "kind": "analysis",
+      "text": "Analysed \"Will Bitcoin be higher 14 days from now?\": market 95%, my 92% (high). No trade, edge 0.027 below minimum 0.04."
+    },
+    {
+      "ts": 1787554178878,
+      "kind": "screen",
+      "text": "Escalated \"Will Bitcoin be higher 14 days from now?\" at 95%: quick estimate 50% vs market 95%"
+    },
+    {
+      "ts": 1787554158711,
+      "kind": "screen",
+      "text": "Passed on \"Will California be in a drought at end of August 2026?\" at 11%: quick estimate 15% agrees with market. Commenters already pulled the US Drought Monitor data showing only 7.39% D1+ coverage with 8 days left, making a YES resolution nearly impossible."
+    },
     {
       "ts": 1787551918093,
       "kind": "agency",
@@ -427,26 +447,6 @@
       "ts": 1787510495726,
       "kind": "screen",
       "text": "Passed on \"Will Jair Bolsonaro run for the Senate in 2026?\" at 4%: quick estimate 5% agrees with market. He is currently ineligible to run for office due to court rulings, making a Senate run legally impossible."
-    },
-    {
-      "ts": 1787510126449,
-      "kind": "book",
-      "text": "Looked over 11 positions: The tradable book is lean and high-conviction. All active positions (Anthropic, Gemini, MNX, HMIC) pass the re-open test and align with the core strategy of shorting hype or betting on technical milestones. Liquidity is critically low (M$1), but the holding pattern is optimal while awaiting the Aug 28-31 resolution wave to unlock capital from closed positions. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1787508173691,
-      "kind": "analysis",
-      "text": "Analysed \"Will Bitcoin be higher 7 days from now?\": market 95%, my 91% (medium). No trade, edge 0.040 below minimum 0.04."
-    },
-    {
-      "ts": 1787508030286,
-      "kind": "screen",
-      "text": "Escalated \"Will Bitcoin be higher 7 days from now?\" at 95%: quick estimate 50% vs market 95%"
-    },
-    {
-      "ts": 1787507108976,
-      "kind": "agency",
-      "text": "Own turn: Spendable mana remains M$1; the holding pattern is optimal as all active positions pass the re-open test. However, the debt ledger note is still truncated and missing the M$50 gift. I must replace it with a comprehensive record to ensure precise settlement once the August 28-31 resolution wave unlocks liquidity."
     }
   ],
   "todos": [
@@ -833,6 +833,28 @@
   ],
   "decisions": [
     {
+      "ts": 1787554302636,
+      "kind": "no_trade",
+      "question": "Will Bitcoin be higher 14 days from now?",
+      "url": "https://manifold.markets/prismatic/will-bitcoin-be-higher-14-days-from-RzSNIly8IP",
+      "market_prob": 0.9472153500371694,
+      "model_prob": 0.92,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Bitcoin currently trades near $77,300, providing a ~12.8% cushion over the $68,506.41 baseline. With 9 days remaining until resolution, standard volatility models imply a ~92% probability of BTC staying above the creation price.",
+      "uncertainty": "Macroeconomic announcements or crypto market shocks over the next 9 days that could trigger a sudden sharp drop >12.8%.",
+      "resolution_risk": "Discrepancies between CoinGecko spot pricing at 12:00 PM EDT on September 2 and other exchange prices during high-volatility spikes.",
+      "evidence_for": [
+        "Bitcoin's current spot price (~$77,300) is approximately 12.8% ($8,794) above the $68,506.41 baseline set on August 19.",
+        "There are only 9 days remaining until the September 2 resolution date."
+      ],
+      "evidence_against": [
+        "Crypto markets exhibit high short-term volatility, and an 11-13% drawdown in 9 days is well within historical tail-risk possibilities."
+      ],
+      "reason": "edge 0.027 below minimum 0.04"
+    },
+    {
       "ts": 1787551876496,
       "kind": "no_trade",
       "question": "Will Bitcoin be higher a month from now?",
@@ -1161,30 +1183,6 @@
         "Norman retains a solid conservative base and funding, making a sub-40% floor for him unlikely."
       ],
       "reason": "edge 0.039 below minimum 0.04"
-    },
-    {
-      "ts": 1787500792043,
-      "kind": "no_trade",
-      "question": "Anglo American & Teck Resources merge by Sep 1, 2026",
-      "url": "https://manifold.markets/MikhailTal/anglo-american-teck-resources-merge-y5ssRzUcR5",
-      "market_prob": 0.053259597871995024,
-      "model_prob": 0.03,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With the Sep 1, 2026 deadline just 9 days away and major regulatory clearances (such as China SAMR) still pending, legal completion within this timeframe is extremely unlikely. Target guidance remains late 2026 to early 2027.",
-      "uncertainty": "Whether all multi-jurisdictional regulatory approvals can somehow be granted and legally finalized within 9 days.",
-      "resolution_risk": "None significant; criteria strictly require legal completion by 11:59 pm ET on Sep 1, 2026.",
-      "evidence_for": [
-        "Shareholder approvals and B.C. Supreme Court approval have been secured.",
-        "Company guidance targets completion starting from September 2026."
-      ],
-      "evidence_against": [
-        "Today is August 23, 2026, leaving only 9 days until the September 1, 2026 deadline.",
-        "Major international regulatory approvals, including China SAMR review, remain pending and in normal procedure.",
-        "Company timeline guidance explicitly targets closing between late 2026 and early 2027."
-      ],
-      "reason": "edge 0.023 below minimum 0.04"
     }
   ]
 }
