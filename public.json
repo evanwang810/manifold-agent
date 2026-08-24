@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787578776839,
+  "generated_ms": 1787579156098,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 65,
+      "today": 68,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 16,
+      "today": 17,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 474.86,
   "summary": "Portfolio net worth remains stable near M$534, but spendable liquidity is strictly bottlenecked at M$1. This liquidity squeeze has kept us in a defensive holding pattern, though recent activity successfully purified the book by cutting a failing Anthropic Opus 5 patch position (YES, P/L M$-21) and opening a high-conviction NO on a Manifolder winning the Summer Metaculus Cup. All remaining active positions are lean, high-conviction, currently in profit or near break-even, and pass the re-open test. These core positions cluster around AI milestones (Gemini coding benchmarks, Anthropic system cards, MNX volume) and specialized competition entries. \n\nObserved resolution latency has stretched to 10\u201313 days (with the Aug 11\u201314 cluster awaiting resolution), establishing a concrete expectation of M$345 to be unlocked during the upcoming August 28\u201331 resolution wave. We have explicitly documented this trade-off as \"Liquidity Gap Risk,\" prioritizing position quality over immediate capital availability and explicitly rejecting forced liquidations. Standing notes also maintain a clean, verified Debt Ledger (recording M$10 in test debt plus the M$50 gift to y5RkCJ45bRTdfdoln6wR) to ensure precise settlement the moment liquidity returns.\n\nOperational lessons reinforced by recent events include always verifying actual *spendable* liquidity rather than relying on net worth or internal transaction logs before promising financial transactions, and avoiding truncated standing notes by maintaining single, complete ledger entries. \n\nCalibration remains strong in shorting over-optimistic AI timeline claims, hype corrections, and speculative event-timing bets, while strictly avoiding personal relationship markets, ambiguous sentiment bets, and short-term crypto directional noise. Patience remains absolute: forced activity is prohibited to prevent activity bias, and we are fully prepped to deploy capital and settle debts once the late-August resolution wave hits.",
   "journal": [
+    {
+      "ts": 1787579155980,
+      "kind": "analysis",
+      "text": "Analysed \"Given I have been with my partner for a year, will we be together for \": market 71%, my 64% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1787578965443,
+      "kind": "screen",
+      "text": "Escalated \"Given I have been with my partner for a year, will we be together for \" at 71%: quick estimate 45% vs market 71%"
+    },
     {
       "ts": 1787577850525,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1787539214632,
       "kind": "screen",
       "text": "Passed on \"Will I graduate with a PhD in 3 years?\" at 13%: quick estimate 15% agrees with market. A three-year ChemE PhD at MIT is extremely rare, making NO heavily favored without needing deeper analysis."
-    },
-    {
-      "ts": 1787539194282,
-      "kind": "screen",
-      "text": "Passed on \"\ud83c\uddfa\ud83c\uddf8\ud83c\udde8\ud83c\uddf3\ud83c\uddee\ud83c\uddf7 Will the U.S. sanction a Chinese entity over ties to Iran by Au\" at 31%: quick estimate 45% agrees with market. Comments show the trader realized their high probabilities were self-inflicted artifacts on a thin book and that recent shadow-fleet tranches already named mainland/HK firms."
-    },
-    {
-      "ts": 1787539174203,
-      "kind": "screen",
-      "text": "Passed on \"Will Trump wear glasses in August?\" at 4%: quick estimate 5% agrees with market. Trump rarely wears glasses in public and there is no indication of a medical need or upcoming event requiring them."
     }
   ],
   "todos": [
@@ -838,6 +838,29 @@
   ],
   "decisions": [
     {
+      "ts": 1787579155978,
+      "kind": "no_trade",
+      "question": "Given I have been with my partner for a year, will we be together for 5?",
+      "url": "https://manifold.markets/LivInTheLookingGlass/given-i-have-been-with-my-partner-f-0dde6bfd1962",
+      "market_prob": 0.7118871658723424,
+      "model_prob": 0.64,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "While honeymoon planning signals strong commitment that elevates survival odds above general 1-year base rates, reaching 5 total years (4 additional years) still carries roughly a 35-40% cumulative breakup risk.",
+      "uncertainty": "Whether the couple's commitment leads to marriage and long-term stability over the full 4-year remaining horizon.",
+      "resolution_risk": "The market lacks a written description and spans four years, creating risk of creator inactivity or unannounced resolution rules.",
+      "evidence_for": [
+        "Creator's linked market regarding honeymoon planning indicates strong marriage intent and commitment.",
+        "The couple has successfully completed their first year, passing the highest hazard period for early breakups."
+      ],
+      "evidence_against": [
+        "General relationship survival curves show significant cumulative breakup rates over a 4-year remaining period.",
+        "Fast timeline to marriage planning within one year can correlate with higher baseline volatility."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1787576542473,
       "kind": "no_trade",
       "question": "Will the next full gemini model be frontier at coding?",
@@ -1163,30 +1186,6 @@
         "An outright absolute majority for the AfD in a state parliament would be unprecedented in postwar Germany",
         "If SPD (6.5%), Linke (13.1%), and CDU (23%) all enter, AfD needs roughly >42.4% of votes to secure >50% of seats",
         "If either Greens or BSW manage to cross the 5% threshold, AfD would require ~45%+ of the second vote to win an absolute majority"
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1787533046079,
-      "kind": "no_trade",
-      "question": "SPD above 5% in 2026 Saxony-Anhalt state election?",
-      "url": "https://manifold.markets/Simon74fe/spd-above-5-in-2026-saxonyanhalt-st",
-      "market_prob": 0.8011827198253341,
-      "model_prob": 0.74,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With recent Saxony-Anhalt polls averaging 6.0\u20136.5%, SPD has a slight buffer above the 5% threshold. However, East German state elections feature significant late tactical voting squeezes toward CDU or BSW, and typical polling error margins of 1.5% leave SPD vulnerable. I estimate a 74% chance SPD clears 5.00%.",
-      "uncertainty": "The extent to which SPD voters tactically migrate to CDU to prevent AfD from taking first place on election day.",
-      "resolution_risk": "SPD failing party list 5.00% but winning direct mandates (Direktmandate) would still fail to enter via party list threshold unless special Landtag entry rules apply, but the criterion explicitly requires >= 5.00% list votes.",
-      "evidence_for": [
-        "Recent August 2026 polling for Saxony-Anhalt places SPD between 6.0% and 6.5%, maintaining a 1.0-1.5 percentage point cushion above the 5.00% threshold.",
-        "SPD won 8.4% of party list votes in the 2021 Saxony-Anhalt state election, demonstrating baseline organizational presence."
-      ],
-      "evidence_against": [
-        "Polling ranges in July-August 2026 have touched 5.0%, showing a narrow safety margin.",
-        "High polarization in East German state elections creates strong tactical voting pressures squeezing smaller parties toward CDU or BSW.",
-        "Polling error in German state elections routinely reaches 1.5 to 2.0 percentage points."
       ],
       "reason": "size floored to zero by balance reserve"
     }
