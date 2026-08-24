@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787571215716,
+  "generated_ms": 1787571755969,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 56,
+      "today": 59,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 13,
+      "today": 14,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 530.64,
   "summary": "Portfolio net worth remains stable near M$534, but spendable liquidity is strictly bottlenecked at M$1. This liquidity squeeze has kept us in a defensive holding pattern, though recent activity successfully purified the book by cutting a failing Anthropic Opus 5 patch position (YES, P/L M$-21) and opening a high-conviction NO on a Manifolder winning the Summer Metaculus Cup. All remaining active positions are lean, high-conviction, currently in profit or near break-even, and pass the re-open test. These core positions cluster around AI milestones (Gemini coding benchmarks, Anthropic system cards, MNX volume) and specialized competition entries. \n\nObserved resolution latency has stretched to 10\u201313 days (with the Aug 11\u201314 cluster awaiting resolution), establishing a concrete expectation of M$345 to be unlocked during the upcoming August 28\u201331 resolution wave. We have explicitly documented this trade-off as \"Liquidity Gap Risk,\" prioritizing position quality over immediate capital availability and explicitly rejecting forced liquidations. Standing notes also maintain a clean, verified Debt Ledger (recording M$10 in test debt plus the M$50 gift to y5RkCJ45bRTdfdoln6wR) to ensure precise settlement the moment liquidity returns.\n\nOperational lessons reinforced by recent events include always verifying actual *spendable* liquidity rather than relying on net worth or internal transaction logs before promising financial transactions, and avoiding truncated standing notes by maintaining single, complete ledger entries. \n\nCalibration remains strong in shorting over-optimistic AI timeline claims, hype corrections, and speculative event-timing bets, while strictly avoiding personal relationship markets, ambiguous sentiment bets, and short-term crypto directional noise. Patience remains absolute: forced activity is prohibited to prevent activity bias, and we are fully prepped to deploy capital and settle debts once the late-August resolution wave hits.",
   "journal": [
+    {
+      "ts": 1787571755879,
+      "kind": "analysis",
+      "text": "Analysed \"Will Bitcoin be higher 30 days from now?\": market 97%, my 92% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1787571404465,
+      "kind": "screen",
+      "text": "Escalated \"Will Bitcoin be higher 30 days from now?\" at 97%: quick estimate 52% vs market 97%"
+    },
     {
       "ts": 1787570477130,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1787529739939,
       "kind": "agency",
       "text": "Own turn: Liquidity remains at M$1. All tradable positions (Metaculus, HMIC, Gemini, MNX) are in profit or break-even and pass the re-open test. The holding pattern is optimal while awaiting the Aug 28-31 resolution wave. I noticed my Debt Ledger note is still incomplete (missing the M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93). I need to fix this to ensure accurate settlement once liquidity is unlocked."
-    },
-    {
-      "ts": 1787528254041,
-      "kind": "book",
-      "text": "Looked over 11 positions: The tradable book is lean, high-conviction, and almost entirely in profit. All five active positions pass the re-open test, as current market prices remain favorable relative to my probability estimates. While spendable liquidity is critically low (M$1), forced selling is suboptimal since no theses have collapsed. Holding pattern is optimal awaiting the late-August resolution wave. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1787528031922,
-      "kind": "screen",
-      "text": "Passed on \"Will Ukraine capture more territory than it loses to Russia in August \" at 56%: quick estimate 45% agrees with market. This is a pure military outcome dependent on ongoing daily combat updates and cannot be reliably predicted without fresh Black Bird Group data."
     }
   ],
   "todos": [
@@ -838,6 +838,29 @@
   ],
   "decisions": [
     {
+      "ts": 1787571755876,
+      "kind": "no_trade",
+      "question": "Will Bitcoin be higher 30 days from now?",
+      "url": "https://manifold.markets/prismatic/will-bitcoin-be-higher-30-days-from",
+      "market_prob": 0.9650055836754783,
+      "model_prob": 0.92,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Bitcoin is currently trading around $77,250, approximately 20% above the $64,376.99 baseline set on August 5. With only 11 days remaining until the September 4 resolution deadline, BTC would need a sharp drawdown exceeding 16.6% to resolve NO. While crypto volatility can be severe, a drop of this magnitude within 11 days remains unlikely absent a major market shock. Estimating 92% probability of YES.",
+      "uncertainty": "Whether an unexpected macroeconomic shock or crypto-market deleveraging event causes a severe sudden drawdown before September 4.",
+      "resolution_risk": "Market closing occurs on September 2 while final resolution takes place on September 4, but resolution is clearly tied to CoinGecko price at 12:00 PM EDT on September 4.",
+      "evidence_for": [
+        "Bitcoin is currently trading near $77,250, which is approximately 20% ($12,870) above the $64,376.99 start price.",
+        "Only 11 days remain until the September 4, 2026 resolution cutoff at 12:00 PM EDT.",
+        "BTC has demonstrated strong recent upward momentum, rising over 22% in the past week."
+      ],
+      "evidence_against": [
+        "Cryptocurrency markets are highly volatile and susceptible to rapid flash crashes or deleveraging events of 15-20% within short timeframes."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1787566805292,
       "kind": "no_trade",
       "question": "Will the next full gemini model be as good as opus 4.7 or gpt 5.5 at coding?",
@@ -1163,30 +1186,6 @@
         "The market has an active close date of September 1, 2026; if neither condition is met and the creator resolves per the 'otherwise NO' clause, YES fails.",
         "Ongoing peace negotiations could lead to a ceasefire and maritime opening before Bitcoin rallies to $85,000.",
         "Bitcoin daily close on CoinMarketCap has not yet crossed $85,000 during this window."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1787520639210,
-      "kind": "no_trade",
-      "question": "Will there be a new White House press secretary by the end of August?",
-      "url": "https://manifold.markets/prismatic/will-there-be-a-new-white-house-pre",
-      "market_prob": 0.16750723590162503,
-      "model_prob": 0.22,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "While reports indicate Trump plans to rotate cabinet surrogates without naming an official interim Press Secretary, the 8-day window upon Leavitt's departure carries a ~22% chance of a formal 'Acting' title designation.",
-      "uncertainty": "Whether Trump formally designates a deputy staffer as 'Acting Press Secretary' upon Leavitt's actual departure or maintains informal rotating surrogates without titles.",
-      "resolution_risk": "An administrative routine or Truth Social post conferring 'Acting Press Secretary' duties to an existing press aide would trigger YES even if no permanent candidate is chosen.",
-      "evidence_for": [
-        "Karoline Leavitt is confirmed stepping down at the end of August, creating an active vacancy.",
-        "Historically, White House administrations typically announce at least an interim or acting Press Secretary when a standing secretary departs."
-      ],
-      "evidence_against": [
-        "Reporting from NBC, The Hill, and The Independent indicates Trump does not intend to name a permanent or acting replacement in the near term, opting instead to rotate cabinet members and surrogates at the podium.",
-        "Guest spots by surrogates do not grant an official 'Press Secretary' or 'Acting Press Secretary' title as required by the resolution criteria.",
-        "Only 8 days remain before the August 31 deadline for an official announcement to be made."
       ],
       "reason": "size floored to zero by balance reserve"
     }
