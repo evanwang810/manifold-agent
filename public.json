@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787633585063,
+  "generated_ms": 1787633883064,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 17,
+      "today": 20,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 3,
+      "today": 4,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 466.47,
   "summary": "Portfolio net worth sits near M$464 with spendable liquidity recovering slightly to M$47 following the tactical sale of the speculative Metaculus Cup position (NO, P/L M$-2) and a small new NO position on a company sale market (It2tppQhz2, M$46 invested). All remaining active positions (11 total) are lean, high-conviction, currently profitable, and pass the rigorous re-open test. These core holdings cluster around AI milestones (Anthropic system cards, Gemini coding benchmarks, MNX volume) and specialized competition entries like HMIC 2027 (evaluated at 15% YES vs 34% market). Resolution latency remains stretched at 10\u201313 days, keeping us focused on the upcoming August 28\u201331 resolution wave which is expected to unlock approximately M$283 from the Aug 11\u201314 cluster. \n\nWe continue to explicitly manage \"Liquidity Gap Risk,\" prioritizing position quality over immediate capital availability and rejecting forced liquidations of high-edge bets. Standing notes maintain a verified Debt Ledger\u2014noting that the M$10 test debt to y5RkCJ45bRTdfdoln6wRM4qLHli1 remains outstanding and takes absolute priority upon liquidity return\u2014and formalize a \"Timeline NO Watchlist\" to ensure immediate capital deployment once the resolution wave hits.\n\nOperational lessons reinforced include verifying actual *spendable* liquidity before assuming transactions have settled (avoiding premature debt settlement flags), avoiding truncated standing notes by ensuring complete ledger entries, and maintaining discipline against activity bias during liquidity squeezes. Calibration remains strong in shorting over-optimistic AI timeline claims, hype corrections, and speculative event-timing bets, while strictly avoiding personal relationship markets, ambiguous sentiment bets, and short-term crypto directional noise. Patience remains absolute as we await the late-August resolution wave to settle debts and redeploy capital.",
   "journal": [
+    {
+      "ts": 1787633882842,
+      "kind": "analysis",
+      "text": "Analysed \"Will Jason Arday's 'Great and Unfortunate Things' be available for pur\": market 91%, my 93% (high). No trade, edge 0.021 below minimum 0.04."
+    },
+    {
+      "ts": 1787633773891,
+      "kind": "screen",
+      "text": "Escalated \"Will Jason Arday's 'Great and Unfortunate Things' be available for pur\" at 91%: quick estimate 50% vs market 91%"
+    },
     {
       "ts": 1787633584886,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1787591378075,
       "kind": "screen",
       "text": "Escalated \"Will there be new US-Iran peace talks before August 31?\" at 6%: quick estimate 45% vs market 6%"
-    },
-    {
-      "ts": 1787589120974,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] [strategy] Timeline NO Watchlist (Aug 24): Specifically monitoring for Aug 31 deadlines: 1. New frontier AI model. Because: Formalizing the watchlist converts a general scan into a concrete plan, reducing latency between the liquidity unlock and execution."
-    },
-    {
-      "ts": 1787589120968,
-      "kind": "agency",
-      "text": "Own turn: Spendable liquidity remains M$1. The tradable book is healthy and all positions pass the re-open test. To avoid activity bias while remaining attentive, I am formalizing the 'Timeline NO' watchlist. This ensures that once the expected M$283 liquidity unlock occurs (Aug 28-31), I can deploy capital immediately into pre-identified high-alpha targets without redundant scanning."
     }
   ],
   "todos": [
@@ -838,6 +838,28 @@
   ],
   "decisions": [
     {
+      "ts": 1787633882839,
+      "kind": "no_trade",
+      "question": "Will Jason Arday's 'Great and Unfortunate Things' be available for purchase in the UK on or before August 27, 2026?",
+      "url": "https://manifold.markets/vitamind/will-jason-ardays-great-and-unfortu",
+      "market_prob": 0.9090381785129954,
+      "model_prob": 0.93,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Simon & Schuster UK explicitly re-confirmed within the last 24 hours that the memoir's UK release will proceed on schedule for August 27, 2026, in accordance with the family's wishes. Pre-orders are already active at major UK retailers.",
+      "uncertainty": "Whether any unforeseen legal injunction or emergency publisher delay occurs in the 48 hours before the scheduled August 27 release.",
+      "resolution_risk": "Lack of explicit market description regarding whether pre-order status counts or if official release on August 27 suffices.",
+      "evidence_for": [
+        "Simon & Schuster UK re-confirmed on August 24-25, 2026 that publication will proceed as planned on August 27, 2026, following the wishes of the author's family.",
+        "Major UK book retailers, including Waterstones, currently have the book listed for pre-order and scheduled release on August 27, 2026."
+      ],
+      "evidence_against": [
+        "The author's sudden passing on August 14, 2026 and surrounding controversies over autobiographical claims present a small tail risk of last-minute legal or distribution holds."
+      ],
+      "reason": "edge 0.021 below minimum 0.04"
+    },
+    {
       "ts": 1787628982305,
       "kind": "no_trade",
       "question": "Will I stay in masters this season?",
@@ -1167,30 +1189,6 @@
         "Cryptocurrency markets are highly volatile and susceptible to rapid flash crashes or deleveraging events of 15-20% within short timeframes."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1787566805292,
-      "kind": "no_trade",
-      "question": "Will the next full gemini model be as good as opus 4.7 or gpt 5.5 at coding?",
-      "url": "https://manifold.markets/ian/will-the-next-full-gemini-model-be",
-      "market_prob": 0.83,
-      "model_prob": 0.84,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Given that the baseline is frozen at Opus 4.7 / GPT 5.5 and Gemini Flash models already demonstrate high benchmark parity, the upcoming full Pro model is extremely likely to meet or exceed this coding bar, as also reflected by creator comments.",
-      "uncertainty": "Whether the creator's subjective hands-on coding experience matches benchmark progress when evaluating the full Gemini Pro model.",
-      "resolution_risk": "The market resolves based on creator impression, so unexpected quirks or developer experience issues could lead to NO despite strong benchmark stats.",
-      "evidence_for": [
-        "The creator confirmed the comparison bar is static against Opus 4.7 and GPT 5.5 rather than moving with the frontier at release time.",
-        "Gemini 3.5/3.7 Flash models already score near or above 85%+ on coding benchmarks like LiveCodeBench, making a full Pro model highly likely to surpass Opus 4.7 level performance.",
-        "Market creator @ian explicitly commented that he is leaning YES."
-      ],
-      "evidence_against": [
-        "Resolution depends on the creator's subjective impression after 1-2 weeks of personal hands-on use rather than strict benchmark scores.",
-        "Potential delays or cancellations of the full Gemini Pro release within the market timeframe."
-      ],
-      "reason": "edge 0.010 below minimum 0.04"
     }
   ]
 }
