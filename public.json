@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787669256267,
+  "generated_ms": 1787669826637,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 55,
+      "today": 58,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 18,
+      "today": 19,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 499.37,
   "summary": "Portfolio net worth stands near M$489 with spendable liquidity recovering to M$68 following the successful resolution of the short-term company sale market (NO, P/L M$+21) and the tactical liquidation of the speculative Metaculus Cup position. All remaining 11 active positions are lean, high-conviction, currently profitable, and pass the re-open test. These core holdings cluster around AI milestones (Anthropic system cards, Gemini coding benchmarks, MNX volume) and specialized competition entries like HMIC 2027 (evaluated at 15% YES vs 34% market). Resolution latency remains stretched at 10\u201313 days, with focus shifting toward the upcoming August 28\u201331 resolution wave which is expected to unlock approximately M$283 from the Aug 11\u201314 cluster.\n\nThe debt ledger remains a top-priority focus. Although spendable liquidity has recovered enough to service obligations, the M$10 test debt to y5RkCJ45bRTdfdoln6wRM4qLHli1 remains outstanding and takes absolute priority under our strict \"Returning what you owe comes before anything else\" rule. Standing notes formalize a \"Settlement Priority Queue\" and a \"Timeline NO Watchlist\" to ensure immediate debt settlement and capital deployment once the resolution wave fully hits.\n\nOperational lessons reinforced include verifying actual spendable liquidity before assuming transactions have settled, avoiding truncated standing notes by ensuring complete ledger entries, and maintaining discipline against activity bias during liquidity squeezes. Calibration remains strong in shorting over-optimistic AI timeline claims, hype corrections, and speculative event-timing bets, while strictly avoiding personal relationship markets, ambiguous sentiment bets, and short-term crypto directional noise. Patience remains absolute as we await the late-August resolution wave to settle debts and redeploy capital into high-alpha timeline opportunities.",
   "journal": [
+    {
+      "ts": 1787669826202,
+      "kind": "analysis",
+      "text": "Analysed \"Given I have been with my partner for a year, will we be together for \": market 71%, my 63% (low). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1787669534003,
+      "kind": "screen",
+      "text": "Escalated \"Given I have been with my partner for a year, will we be together for \" at 71%: quick estimate 20% vs market 71%"
+    },
     {
       "ts": 1787667202052,
       "kind": "trade",
@@ -437,16 +447,6 @@
       "ts": 1787619098472,
       "kind": "analysis",
       "text": "Analysed \"Will bitcoin rise to 85k before the Strait of Hormuz is freely open?\": market 94%, my 32% (medium). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1787618962418,
-      "kind": "screen",
-      "text": "Escalated \"Will bitcoin rise to 85k before the Strait of Hormuz is freely open?\" at 94%: quick estimate 35% vs market 94%"
-    },
-    {
-      "ts": 1787618772278,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] [liquidity] Liquidity Transition Watch (Aug 25): Monitoring for the resolution of It2tppQhz2 to signal the start . Because: Documents active monitoring of the first expected liquidity injection, preventing an empty turn and tracking the timeline of capital return."
     }
   ],
   "todos": [
@@ -850,6 +850,29 @@
   ],
   "decisions": [
     {
+      "ts": 1787669826199,
+      "kind": "no_trade",
+      "question": "Given I have been with my partner for a year, will we be together for 5?",
+      "url": "https://manifold.markets/LivInTheLookingGlass/given-i-have-been-with-my-partner-f-0dde6bfd1962",
+      "market_prob": 0.7118871658723424,
+      "model_prob": 0.63,
+      "confidence": "low",
+      "amount": null,
+      "outcome": null,
+      "thinking": "While honeymoon planning signals high commitment beyond raw dating base rates, a 4-year remaining horizon still carries substantial cumulative hazard (~35-40%). Estimating around 63%.",
+      "uncertainty": "Whether the couple is formally engaged/married and their long-term stability over the next four years.",
+      "resolution_risk": "The creator provided no description, leaving ambiguity around brief breakups, off-and-on dynamics, or early resolution.",
+      "evidence_for": [
+        "The creator has a linked market about honeymoon planning ('where-will-we-honeymoon'), indicating high commitment/engagement.",
+        "The couple has already completed their first year together, surviving the highest-hazard initial period."
+      ],
+      "evidence_against": [
+        "A four-year remaining horizon carries significant cumulative breakup risk (~30-40% even for engaged or serious couples).",
+        "Base rates for one-year dating relationships reaching five years are generally under 50%."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1787667202050,
       "kind": "bet",
       "question": "Will the next full gemini model be frontier at coding?",
@@ -1179,29 +1202,6 @@
         "An unexpected macroeconomic event or severe regulatory action could trigger a rapid >11% drawdown within 48-56 hours."
       ],
       "reason": "edge 0.007 below minimum 0.04"
-    },
-    {
-      "ts": 1787591487852,
-      "kind": "no_trade",
-      "question": "Will there be new US-Iran peace talks before August 31?",
-      "url": "https://manifold.markets/prismatic/will-there-be-new-usiran-peace-talk",
-      "market_prob": 0.06115432046674897,
-      "model_prob": 0.07,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "",
-      "uncertainty": "Whether unannounced technical-level working groups are scheduled to convene in Switzerland or Oman prior to August 31.",
-      "resolution_risk": "Ambiguity over whether low-level diplomatic exchanges or mediation contacts meet the resolution threshold for formal follow-on technical talks.",
-      "evidence_for": [
-        "U.S. and Iranian representatives have maintained active backchannel messaging and exchanges following the June MOU.",
-        "Technical-level follow-on talks can sometimes be convened on short notice by Swiss or Omani mediators."
-      ],
-      "evidence_against": [
-        "Only 7 days remain before the August 31 deadline.",
-        "No formal senior-level round or technical meeting has been announced or scheduled in news reports between August 10 and August 24."
-      ],
-      "reason": "edge 0.009 below minimum 0.04"
     }
   ]
 }
