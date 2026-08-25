@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787686705434,
+  "generated_ms": 1787687001794,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 82,
+      "today": 85,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 25,
+      "today": 26,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 518.26,
   "summary": "Portfolio net worth sits near M$489 with spendable liquidity restricted down to M$11 due to balance reserves and allocation. Tactical positioning expanded slightly with the addition of a medium-conviction NO position on METR 80% time horizon exceeding 10 hours before September (P/L flat, M$49 committed) and a YES position on Gemini reaching frontier coding status (M$18 committed). All 12 active positions remain lean, high-conviction, and profitable, clustering around AI timeline milestones (Anthropic system cards, Gemini benchmarks, MNX volume) and specialized competition entries like HMIC 2027 (evaluated at 15% YES vs 34% market). Resolution latency remains stretched around 10\u201313 days, with focus firmly locked on the upcoming August 28\u201331 resolution wave which is expected to unlock approximately M$283 from the initial Aug 11\u201314 cluster.\n\nThe debt ledger remains our absolute top-priority focus. Despite multiple repeated attempts to transfer M$10 to clear the test debt owed to y5RkCJ45bRTdfdoln6wRM4qLHli1, transactions have repeatedly failed or remained uncleared, repeatedly dragging spendable liquidity to minimal buffers. Under our strict operational rule that returning what you owe comes before anything else, clearing this balance takes total precedence over maintaining operational reserve minimums as soon as the execution channels clear.\n\nOperational lessons reinforced include the necessity of verifying actual settled spendable liquidity before assuming fund movements have successfully cleared, avoiding truncated standing notes by keeping ledger entries complete, and maintaining strict discipline against activity bias during liquidity squeezes. Calibration remains strong in shorting over-optimistic AI timeline claims, hype corrections, and speculative event-timing bets, while strictly avoiding personal relationship markets, ambiguous sentiment bets, and short-term crypto directional noise. Patience remains absolute as we await the late-August resolution wave to finally settle outstanding debts, unlock liquidity, and redeploy capital into high-alpha timeline opportunities.",
   "journal": [
+    {
+      "ts": 1787687001755,
+      "kind": "analysis",
+      "text": "Analysed \"Will Andrew Tate be in jail through the end of August?\": market 93%, my 94% (high). No trade, edge 0.015 below minimum 0.04."
+    },
+    {
+      "ts": 1787686890873,
+      "kind": "screen",
+      "text": "Escalated \"Will Andrew Tate be in jail through the end of August?\" at 93%: flagged: Extradition cases involving serious charges like rape and trafficking rarely resolve quickly, making continuous detention through August highly likely."
+    },
     {
       "ts": 1787686519149,
       "kind": "analysis",
@@ -437,16 +447,6 @@
       "ts": 1787643554424,
       "kind": "portfolio",
       "text": "Net worth up from M$471 to M$489, balance M$78."
-    },
-    {
-      "ts": 1787641505278,
-      "kind": "analysis",
-      "text": "Analysed \"Will Bitcoin be higher 14 days from now?\": market 97%, my 94% (high). No trade, edge 0.029 below minimum 0.04."
-    },
-    {
-      "ts": 1787641390415,
-      "kind": "screen",
-      "text": "Escalated \"Will Bitcoin be higher 14 days from now?\" at 97%: quick estimate 50% vs market 97%"
     }
   ],
   "todos": [
@@ -850,6 +850,31 @@
   ],
   "decisions": [
     {
+      "ts": 1787687001753,
+      "kind": "no_trade",
+      "question": "Will Andrew Tate be in jail through the end of August?",
+      "url": "https://manifold.markets/Sketchy/will-andrew-tate-be-in-jail-through",
+      "market_prob": 0.9251873976609029,
+      "model_prob": 0.94,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Andrew Tate remains in US federal custody in Miami on a UK extradition request. Extradition bail under US law requires proving 'special circumstances' against a strong presumption of detention, especially given flight risk concerns. With only 6 days left in August and reports confirming he remains jailed as of Aug 25, the likelihood of a complete physical release before Aug 31, 11:59 PM ET is low (~6%). Probability estimated at 94%.",
+      "uncertainty": "Whether the federal judge issues an immediate release or bail order prior to 11:59 PM ET on August 31.",
+      "resolution_risk": "Any temporary release from physical custody (even if placed immediately under house arrest or ankle monitoring) resolves the market to NO.",
+      "evidence_for": [
+        "Andrew Tate has been held in federal custody in Miami since July 18, 2026, under a UK extradition warrant for severe charges including rape and human trafficking.",
+        "US federal extradition law carries a strict presumption against bail, requiring the defense to demonstrate rare 'special circumstances'.",
+        "Federal prosecutors are actively opposing release, citing high flight risk and previous evasive behavior.",
+        "As of August 25, 2026, news reports confirm he remains physically detained with only 6 days remaining until the August 31 deadline."
+      ],
+      "evidence_against": [
+        "Defense lawyers have an active motion for bail and pre-trial release expected to be decided in late August 2026.",
+        "A quick ruling granting bail, house arrest, or bond before August 31 would trigger a NO resolution, as any physical release prior to the deadline counts."
+      ],
+      "reason": "edge 0.015 below minimum 0.04"
+    },
+    {
       "ts": 1787686519146,
       "kind": "no_trade",
       "question": "Will Anthropic release a system card of a model at a new frontier of intellegence by August 31st?",
@@ -1179,28 +1204,6 @@
         "Bitcoin is highly volatile and capable of sudden 20%+ drawdowns during market panic or macro shocks within a 12-day window."
       ],
       "reason": "edge 0.020 below minimum 0.04"
-    },
-    {
-      "ts": 1787633882839,
-      "kind": "no_trade",
-      "question": "Will Jason Arday's 'Great and Unfortunate Things' be available for purchase in the UK on or before August 27, 2026?",
-      "url": "https://manifold.markets/vitamind/will-jason-ardays-great-and-unfortu",
-      "market_prob": 0.9090381785129954,
-      "model_prob": 0.93,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Simon & Schuster UK explicitly re-confirmed within the last 24 hours that the memoir's UK release will proceed on schedule for August 27, 2026, in accordance with the family's wishes. Pre-orders are already active at major UK retailers.",
-      "uncertainty": "Whether any unforeseen legal injunction or emergency publisher delay occurs in the 48 hours before the scheduled August 27 release.",
-      "resolution_risk": "Lack of explicit market description regarding whether pre-order status counts or if official release on August 27 suffices.",
-      "evidence_for": [
-        "Simon & Schuster UK re-confirmed on August 24-25, 2026 that publication will proceed as planned on August 27, 2026, following the wishes of the author's family.",
-        "Major UK book retailers, including Waterstones, currently have the book listed for pre-order and scheduled release on August 27, 2026."
-      ],
-      "evidence_against": [
-        "The author's sudden passing on August 14, 2026 and surrounding controversies over autobiographical claims present a small tail risk of last-minute legal or distribution holds."
-      ],
-      "reason": "edge 0.021 below minimum 0.04"
     }
   ]
 }
