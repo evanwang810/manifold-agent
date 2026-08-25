@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787638634754,
+  "generated_ms": 1787638955432,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 21,
+      "today": 24,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 4,
+      "today": 5,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 471.33,
   "summary": "Portfolio net worth sits near M$464 with spendable liquidity recovering slightly to M$47 following the tactical sale of the speculative Metaculus Cup position (NO, P/L M$-2) and a small new NO position on a company sale market (It2tppQhz2, M$46 invested). All remaining active positions (11 total) are lean, high-conviction, currently profitable, and pass the rigorous re-open test. These core holdings cluster around AI milestones (Anthropic system cards, Gemini coding benchmarks, MNX volume) and specialized competition entries like HMIC 2027 (evaluated at 15% YES vs 34% market). Resolution latency remains stretched at 10\u201313 days, keeping us focused on the upcoming August 28\u201331 resolution wave which is expected to unlock approximately M$283 from the Aug 11\u201314 cluster. \n\nWe continue to explicitly manage \"Liquidity Gap Risk,\" prioritizing position quality over immediate capital availability and rejecting forced liquidations of high-edge bets. Standing notes maintain a verified Debt Ledger\u2014noting that the M$10 test debt to y5RkCJ45bRTdfdoln6wRM4qLHli1 remains outstanding and takes absolute priority upon liquidity return\u2014and formalize a \"Timeline NO Watchlist\" to ensure immediate capital deployment once the resolution wave hits.\n\nOperational lessons reinforced include verifying actual *spendable* liquidity before assuming transactions have settled (avoiding premature debt settlement flags), avoiding truncated standing notes by ensuring complete ledger entries, and maintaining discipline against activity bias during liquidity squeezes. Calibration remains strong in shorting over-optimistic AI timeline claims, hype corrections, and speculative event-timing bets, while strictly avoiding personal relationship markets, ambiguous sentiment bets, and short-term crypto directional noise. Patience remains absolute as we await the late-August resolution wave to settle debts and redeploy capital.",
   "journal": [
+    {
+      "ts": 1787638955327,
+      "kind": "analysis",
+      "text": "Analysed \"Will Bitcoin be higher a month from now?\": market 96%, my 94% (high). No trade, edge 0.020 below minimum 0.04."
+    },
+    {
+      "ts": 1787638822578,
+      "kind": "screen",
+      "text": "Escalated \"Will Bitcoin be higher a month from now?\" at 96%: quick estimate 51% vs market 96%"
+    },
     {
       "ts": 1787637342332,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1787593811856,
       "kind": "screen",
       "text": "Passed on \"Will temperatures in Berlin, Germany, reach 40\u00b0C this summer?\" at 5%: quick estimate 5% agrees with market. Berlin has never reached 40C at Dahlem, and with only a week left in August, a record-shattering heatwave is extremely unlikely."
-    },
-    {
-      "ts": 1787592887615,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] [strategy] Timeline NO Watchlist (Aug 24): Specifically monitoring for Aug 31 deadlines: 1. New frontier AI model. Because: Correcting the truncation to fully document the deployment plan for the expected liquidity unlock."
-    },
-    {
-      "ts": 1787592887607,
-      "kind": "agency",
-      "text": "Own turn, retired a standing note: [self] [strategy] Timeline NO Watchlist (Aug 24): Specifically monitoring for Aug 31 deadlines: 1. New frontier AI model. Because: Removing the truncated note to replace it with a complete version."
     }
   ],
   "todos": [
@@ -838,6 +838,30 @@
   ],
   "decisions": [
     {
+      "ts": 1787638955325,
+      "kind": "no_trade",
+      "question": "Will Bitcoin be higher a month from now?",
+      "url": "https://manifold.markets/OnlySlides/will-bitcoin-be-higher-a-month-from",
+      "market_prob": 0.9600156721915074,
+      "model_prob": 0.94,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Bitcoin opened at $64,090 on August 5 and is currently trading around $79,500 (+24% above baseline) with 11.6 days remaining until resolution on September 5. For the market to resolve NO, BTC would need to suffer a >19.4% drawdown in under 12 days. While crypto volatility leaves a tail risk (~6%) of a severe crash, the likelihood of remaining above $64,090 is around 94%.",
+      "uncertainty": "Whether a sudden market-wide liquidation or macroeconomic shock triggers a >19.4% drop in BTC price before September 5.",
+      "resolution_risk": "Discrepancies in minute-by-minute CoinGecko data relative to spot exchange quotes at the exact 744-hour mark.",
+      "evidence_for": [
+        "Opening price on August 5, 2026 was $64,090.",
+        "Current BTC price as of August 25, 2026 is between $78,900 and $80,700, approximately 23-26% above the baseline.",
+        "Only 11.6 days remain until the resolution timestamp on September 5, 2026.",
+        "Trading volume and market momentum remain strong following recent institutional inflows."
+      ],
+      "evidence_against": [
+        "Bitcoin is highly volatile and capable of sudden 20%+ drawdowns during market panic or macro shocks within a 12-day window."
+      ],
+      "reason": "edge 0.020 below minimum 0.04"
+    },
+    {
       "ts": 1787633882839,
       "kind": "no_trade",
       "question": "Will Jason Arday's 'Great and Unfortunate Things' be available for purchase in the UK on or before August 27, 2026?",
@@ -1166,29 +1190,6 @@
         "No METR report published through August 24 confirms an 80% horizon exceeding 10 hours."
       ],
       "reason": "edge 0.038 below minimum 0.04"
-    },
-    {
-      "ts": 1787571755876,
-      "kind": "no_trade",
-      "question": "Will Bitcoin be higher 30 days from now?",
-      "url": "https://manifold.markets/prismatic/will-bitcoin-be-higher-30-days-from",
-      "market_prob": 0.9650055836754783,
-      "model_prob": 0.92,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Bitcoin is currently trading around $77,250, approximately 20% above the $64,376.99 baseline set on August 5. With only 11 days remaining until the September 4 resolution deadline, BTC would need a sharp drawdown exceeding 16.6% to resolve NO. While crypto volatility can be severe, a drop of this magnitude within 11 days remains unlikely absent a major market shock. Estimating 92% probability of YES.",
-      "uncertainty": "Whether an unexpected macroeconomic shock or crypto-market deleveraging event causes a severe sudden drawdown before September 4.",
-      "resolution_risk": "Market closing occurs on September 2 while final resolution takes place on September 4, but resolution is clearly tied to CoinGecko price at 12:00 PM EDT on September 4.",
-      "evidence_for": [
-        "Bitcoin is currently trading near $77,250, which is approximately 20% ($12,870) above the $64,376.99 start price.",
-        "Only 11 days remain until the September 4, 2026 resolution cutoff at 12:00 PM EDT.",
-        "BTC has demonstrated strong recent upward momentum, rising over 22% in the past week."
-      ],
-      "evidence_against": [
-        "Cryptocurrency markets are highly volatile and susceptible to rapid flash crashes or deleveraging events of 15-20% within short timeframes."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
