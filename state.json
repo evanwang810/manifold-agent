@@ -2,16 +2,6 @@
   "summary": "Portfolio net worth sits near M$464 with spendable liquidity recovering slightly to M$47 following the tactical sale of the speculative Metaculus Cup position (NO, P/L M$-2) and a small new NO position on a company sale market (It2tppQhz2, M$46 invested). All remaining active positions (11 total) are lean, high-conviction, currently profitable, and pass the rigorous re-open test. These core holdings cluster around AI milestones (Anthropic system cards, Gemini coding benchmarks, MNX volume) and specialized competition entries like HMIC 2027 (evaluated at 15% YES vs 34% market). Resolution latency remains stretched at 10\u201313 days, keeping us focused on the upcoming August 28\u201331 resolution wave which is expected to unlock approximately M$283 from the Aug 11\u201314 cluster. \n\nWe continue to explicitly manage \"Liquidity Gap Risk,\" prioritizing position quality over immediate capital availability and rejecting forced liquidations of high-edge bets. Standing notes maintain a verified Debt Ledger\u2014noting that the M$10 test debt to y5RkCJ45bRTdfdoln6wRM4qLHli1 remains outstanding and takes absolute priority upon liquidity return\u2014and formalize a \"Timeline NO Watchlist\" to ensure immediate capital deployment once the resolution wave hits.\n\nOperational lessons reinforced include verifying actual *spendable* liquidity before assuming transactions have settled (avoiding premature debt settlement flags), avoiding truncated standing notes by ensuring complete ledger entries, and maintaining discipline against activity bias during liquidity squeezes. Calibration remains strong in shorting over-optimistic AI timeline claims, hype corrections, and speculative event-timing bets, while strictly avoiding personal relationship markets, ambiguous sentiment bets, and short-term crypto directional noise. Patience remains absolute as we await the late-August resolution wave to settle debts and redeploy capital.",
   "journal": [
     {
-      "ts": 1787470819585,
-      "kind": "trade",
-      "text": "Bought M$51 YES on \"Will Anthropic somehow patch the Opus 5 base-model-like behavior from \" at 14%, my estimate 35% (medium). Because: While Anthropic actively mitigates prompt leaks, the strict resolution criteria requiring near-complete elimination or a hard output classifier mean partial rate reductions resolve NO. Estimating a 35% chance of a full fix/classifier by Sept 1."
-    },
-    {
-      "ts": 1787471002184,
-      "kind": "position",
-      "text": "Opened 349 YES on \"Will Anthropic somehow patch the Opus 5 base-model-like behavior from \"---\" prom\" at 15%, M$51 in."
-    },
-    {
       "ts": 1787473076591,
       "kind": "screen",
       "text": "Passed on \"Will MNX have $1m in volume before September 2026?\" at 14%: quick estimate 5% agrees with market. Current volume is in the tens of thousands with only 8 days left, making a jump to $1M highly unlikely."
@@ -1500,6 +1490,16 @@
       "ts": 1787625158527,
       "kind": "book",
       "text": "Looked over 11 positions: The tradable book is lean, high-conviction, and entirely profitable. All active positions pass the re-open test based on current probability assessments. While spendable liquidity is critically low (M$1), the expected resolution wave of M$283 between August 28-31 justifies holding these high-EV positions rather than forced liquidation for minimal immediate mana. (0 change(s) proposed)"
+    },
+    {
+      "ts": 1787626195681,
+      "kind": "agency",
+      "text": "Own turn: Liquidity remains critically low at M$1 spendable. All active positions continue to pass the re-open test and are currently profitable. I am maintaining a strict holding pattern awaiting the resolution of the 'Company sale' market and the larger Aug 11-14 cluster. To keep my standing notes lean and avoid redundant information, I am removing the point-in-time scan status from Aug 24, which has been superseded by the Aug 25 scan."
+    },
+    {
+      "ts": 1787626195686,
+      "kind": "agency",
+      "text": "Own turn, retired a standing note: [self] [self] [strategy] Timeline NO Scan Status (Aug 24): Reviewed AI release calendars and political deadlines for Aug. Because: This note is a point-in-time status update from August 24 and has been superseded by the August 25 scan. Removing it reduces noise in the standing notes."
     }
   ],
   "lessons": [
@@ -1537,11 +1537,6 @@
       "text": "[self] [portfolio] HMIC 2027 Conviction (Aug 24): Re-evaluated probability of YES at 15% vs market 34%. Strong conviction in NO position; will not liquidate to free up mana.",
       "source": "self",
       "ts": 1787581691229
-    },
-    {
-      "text": "[self] [strategy] Timeline NO Scan Status (Aug 24): Reviewed AI release calendars and political deadlines for Aug 31. No high-alpha 'Timeline NO' opportunities identified in the last hour. Holding pattern remains the optimal strategy until the Aug 28-31 liquidity unlock.",
-      "source": "self",
-      "ts": 1787585431008
     },
     {
       "text": "[self] [strategy] Timeline NO Watchlist (Aug 24): Specifically monitoring for Aug 31 deadlines: 1. New frontier AI model releases (OpenAI/Anthropic/Google). 2. White House Press Secretary changes. 3. High-profile political appointments. Ready to deploy M$283 unlock into these if ",
@@ -2374,7 +2369,7 @@
   "llm_usage": {
     "day": "2026-08-25",
     "fast": 9,
-    "chat": 5,
+    "chat": 6,
     "deep": 2
   },
   "last_scan_ms": 1787623917707,
@@ -2486,15 +2481,9 @@
       "done": false
     }
   ],
-  "last_own_action_ms": 1787622329031,
+  "last_own_action_ms": 1787626106305,
   "last_book_review_ms": 1787625098603,
   "own_actions": [
-    {
-      "ts": 1787491980681,
-      "action": "note_add",
-      "detail": "wrote a standing note: [self] [social] Debt Ledger (Aug 23): Outstanding debts for settlement post-liquidity wave: M$10 to y5RkCJ45bRTdfdoln6wR",
-      "reasoning": "Recording full usernames and total debt amounts to ensure precise execution once the resolution wave unlocks mana."
-    },
     {
       "ts": 1787495815031,
       "action": "note_remove",
@@ -2728,6 +2717,12 @@
       "action": "note_add",
       "detail": "wrote a standing note: [self] [strategy] Timeline NO Scan (Aug 25): No new high-alpha markets identified. Focus remains on AI frontier releases",
       "reasoning": "Documents the ongoing scan for August 31 opportunities, ensuring the turn is not empty and recording that the holding pattern is a result of active monitoring rather than inattention."
+    },
+    {
+      "ts": 1787626195684,
+      "action": "note_remove",
+      "detail": "retired a standing note: [self] [self] [strategy] Timeline NO Scan Status (Aug 24): Reviewed AI release calendars and political deadlines for Aug",
+      "reasoning": "This note is a point-in-time status update from August 24 and has been superseded by the August 25 scan. Removing it reduces noise in the standing notes."
     }
   ],
   "portfolio_mark": {
@@ -2909,7 +2904,7 @@
   },
   "replied_to": [],
   "tracked_orders": {},
-  "events_since_compress": 3,
+  "events_since_compress": 4,
   "watch_probs": {
     "Ln5EgOhAty": 0.4726684393929348,
     "dCP8cP0CLL": 0.1974882220016723,
