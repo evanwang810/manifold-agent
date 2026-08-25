@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787684199288,
+  "generated_ms": 1787684497885,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 77,
+      "today": 80,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 23,
+      "today": 24,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 499.35,
   "summary": "Portfolio net worth sits near M$489 with spendable liquidity restricted down to M$11 due to balance reserves and allocation. Tactical positioning expanded slightly with the addition of a medium-conviction NO position on METR 80% time horizon exceeding 10 hours before September (P/L flat, M$49 committed) and a YES position on Gemini reaching frontier coding status (M$18 committed). All 12 active positions remain lean, high-conviction, and profitable, clustering around AI timeline milestones (Anthropic system cards, Gemini benchmarks, MNX volume) and specialized competition entries like HMIC 2027 (evaluated at 15% YES vs 34% market). Resolution latency remains stretched around 10\u201313 days, with focus firmly locked on the upcoming August 28\u201331 resolution wave which is expected to unlock approximately M$283 from the initial Aug 11\u201314 cluster.\n\nThe debt ledger remains our absolute top-priority focus. Despite multiple repeated attempts to transfer M$10 to clear the test debt owed to y5RkCJ45bRTdfdoln6wRM4qLHli1, transactions have repeatedly failed or remained uncleared, repeatedly dragging spendable liquidity to minimal buffers. Under our strict operational rule that returning what you owe comes before anything else, clearing this balance takes total precedence over maintaining operational reserve minimums as soon as the execution channels clear.\n\nOperational lessons reinforced include the necessity of verifying actual settled spendable liquidity before assuming fund movements have successfully cleared, avoiding truncated standing notes by keeping ledger entries complete, and maintaining strict discipline against activity bias during liquidity squeezes. Calibration remains strong in shorting over-optimistic AI timeline claims, hype corrections, and speculative event-timing bets, while strictly avoiding personal relationship markets, ambiguous sentiment bets, and short-term crypto directional noise. Patience remains absolute as we await the late-August resolution wave to finally settle outstanding debts, unlock liquidity, and redeploy capital into high-alpha timeline opportunities.",
   "journal": [
+    {
+      "ts": 1787684497815,
+      "kind": "analysis",
+      "text": "Analysed \"Will Bitcoin be higher 7 days from now?\": market 95%, my 96% (high). No trade, edge 0.009 below minimum 0.04."
+    },
+    {
+      "ts": 1787684384863,
+      "kind": "screen",
+      "text": "Escalated \"Will Bitcoin be higher 7 days from now?\" at 95%: quick estimate 50% vs market 95%"
+    },
     {
       "ts": 1787681964551,
       "kind": "analysis",
@@ -437,16 +447,6 @@
       "ts": 1787637342328,
       "kind": "agency",
       "text": "Own turn: I am in a strict holding pattern due to critically low spendable liquidity (M$1), awaiting the resolution of the Aug 11-14 cluster. All active positions remain high-conviction and profitable. I noticed that the 'Settlement Priority Queue' standing note I added previously was truncated ('2. Send M$.'). I will remove the incomplete note and replace it with the full sequence to ensure my debt and verification obligations are clearly documented."
-    },
-    {
-      "ts": 1787636552267,
-      "kind": "book",
-      "text": "Looked over 11 positions: The tradable book is lean, high-conviction, and entirely profitable. All active positions pass the re-open test. With a significant liquidity unlock (M$283) expected from the Aug 11-14 cluster in the coming days, forced liquidation of high-EV positions for minimal immediate mana is suboptimal. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1787636328754,
-      "kind": "screen",
-      "text": "Passed on \"Will Deshaun Watson ever play in another NFL game?\" at 97%: quick estimate 85% agrees with market. Comments show he is active in camp and slated to play preseason games, making another appearance extremely likely."
     }
   ],
   "todos": [
@@ -745,9 +745,9 @@
       "side": "NO",
       "shares": 166.4,
       "invested": 106.0,
-      "value": 122.4,
-      "profit": 16.4,
-      "prob": 0.265,
+      "value": 127.7,
+      "profit": 21.7,
+      "prob": 0.233,
       "closed": false,
       "days_to_close": 5.2
     },
@@ -849,6 +849,29 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1787684497812,
+      "kind": "no_trade",
+      "question": "Will Bitcoin be higher 7 days from now?",
+      "url": "https://manifold.markets/OnlySlides/will-bitcoin-be-higher-7-days-from-CZSZLlZl0g",
+      "market_prob": 0.9510724668054091,
+      "model_prob": 0.96,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With Bitcoin trading around $78.8k\u2013$79.2k, it maintains a >12% buffer over the $69,279.74 baseline with only ~30 hours remaining until resolution. A drawdown of that magnitude in a 30-hour window is historically rare.",
+      "uncertainty": "Whether an unexpected macro event or major exchange outage/liquidation triggers a >12% drop in the next 30 hours.",
+      "resolution_risk": "Minor discrepancies between CoinGecko's hourly data points and real-time spot pricing at the exact resolution minute.",
+      "evidence_for": [
+        "Current BTC price is ~$78,800\u2013$79,250, well above the $69,279.74 open baseline.",
+        "Only ~30 hours (1.25 days) remain until the resolution timestamp at 9:30 PM EDT on August 26.",
+        "A downward movement of >12% in 30 hours without a major black swan event is statistically rare for Bitcoin."
+      ],
+      "evidence_against": [
+        "Crypto markets remain volatile and capable of sudden flash crashes or extreme liquidation cascades."
+      ],
+      "reason": "edge 0.009 below minimum 0.04"
+    },
     {
       "ts": 1787681964548,
       "kind": "no_trade",
@@ -1174,30 +1197,6 @@
       ],
       "evidence_against": [
         "The creator explicitly noted their Manifold activity is decreasing lately, which risks losing rank if competing traders actively accumulate profit before month-end."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1787623986975,
-      "kind": "no_trade",
-      "question": "Will the AfD win an absolute majority in the state election in Saxony-Anhalt in 2026",
-      "url": "https://manifold.markets/NFNL2zc/will-the-afd-win-an-absolute-majori",
-      "market_prob": 0.33144968105528255,
-      "model_prob": 0.17,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "AfD polling at ~41-42% puts them close, but winning an absolute majority of seats in a proportional system requires either a polling surge or a large wasted vote share (e.g., SPD falling under 5%). Given current polling for CDU, Linke, and SPD, securing >50% of seats remains an uphill climb.",
-      "uncertainty": "Whether the SPD and other small parties clear the 5% threshold, directly dictating the total effective vote pool.",
-      "resolution_risk": "Complex overhang and compensatory seat calculations under state electoral law that could alter the exact majority cutoff.",
-      "evidence_for": [
-        "AfD leads polling in Saxony-Anhalt with 41% to 42.1% of voter support.",
-        "If smaller parties like SPD, Greens, and BSW fail to cross the 5% threshold, the wasted vote share could allow a ~42% vote tally to yield >50% of parliamentary seats."
-      ],
-      "evidence_against": [
-        "CDU (23-24%) and Die Linke (13-14%) are virtually guaranteed to clear the threshold, meaning non-AfD core representation starts at ~37%.",
-        "SPD is currently polling above the 5% threshold (5-6.5%), making a massive wasted vote scenario less likely.",
-        "Mobilization against an AfD absolute majority typically strengthens tactical voting for borderline democratic parties in the closing weeks."
       ],
       "reason": "size floored to zero by balance reserve"
     }
