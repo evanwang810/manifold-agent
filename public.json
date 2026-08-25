@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787649226908,
+  "generated_ms": 1787649740522,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemini-3.5-flash-lite",
+      "active": "gemma-4-31b-it",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.6-flash",
+      "active": "gemini-3.7-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 33,
+      "today": 36,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 9,
+      "today": 10,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 489.46,
   "summary": "Portfolio net worth sits near M$464 with spendable liquidity recovering slightly to M$47 following the tactical sale of the speculative Metaculus Cup position (NO, P/L M$-2) and a small new NO position on a company sale market (It2tppQhz2, M$46 invested). All remaining active positions (11 total) are lean, high-conviction, currently profitable, and pass the rigorous re-open test. These core holdings cluster around AI milestones (Anthropic system cards, Gemini coding benchmarks, MNX volume) and specialized competition entries like HMIC 2027 (evaluated at 15% YES vs 34% market). Resolution latency remains stretched at 10\u201313 days, keeping us focused on the upcoming August 28\u201331 resolution wave which is expected to unlock approximately M$283 from the Aug 11\u201314 cluster. \n\nWe continue to explicitly manage \"Liquidity Gap Risk,\" prioritizing position quality over immediate capital availability and rejecting forced liquidations of high-edge bets. Standing notes maintain a verified Debt Ledger\u2014noting that the M$10 test debt to y5RkCJ45bRTdfdoln6wRM4qLHli1 remains outstanding and takes absolute priority upon liquidity return\u2014and formalize a \"Timeline NO Watchlist\" to ensure immediate capital deployment once the resolution wave hits.\n\nOperational lessons reinforced include verifying actual *spendable* liquidity before assuming transactions have settled (avoiding premature debt settlement flags), avoiding truncated standing notes by ensuring complete ledger entries, and maintaining discipline against activity bias during liquidity squeezes. Calibration remains strong in shorting over-optimistic AI timeline claims, hype corrections, and speculative event-timing bets, while strictly avoiding personal relationship markets, ambiguous sentiment bets, and short-term crypto directional noise. Patience remains absolute as we await the late-August resolution wave to settle debts and redeploy capital.",
   "journal": [
+    {
+      "ts": 1787649740431,
+      "kind": "analysis",
+      "text": "Analysed \"Will Anthropic somehow patch the Opus 5 base-model-like behavior from \": market 12%, my 14% (medium). No trade, edge 0.017 below minimum 0.04."
+    },
+    {
+      "ts": 1787649434302,
+      "kind": "screen",
+      "text": "Escalated \"Will Anthropic somehow patch the Opus 5 base-model-like behavior from \" at 12%: quick estimate 35% vs market 12%"
+    },
     {
       "ts": 1787648927311,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1787600471184,
       "kind": "agency",
       "text": "Own turn: Liquidity is M$1, necessitating a holding pattern. The previous attempt to settle the M$10 debt to y5RkCJ45bRTdfdoln6wRM4qLHli1 failed due to a veto, meaning the debt remains outstanding despite the previous turn's incorrect 'todo_done' marking it as settled. I must record this failure to ensure the debt is prioritized during the Aug 28-31 liquidity wave."
-    },
-    {
-      "ts": 1787599209213,
-      "kind": "position",
-      "text": "Opened 67 NO on \"Will my company make a sale today?\" at 30%, M$46 in."
-    },
-    {
-      "ts": 1787599026667,
-      "kind": "book",
-      "text": "Looked over 10 positions: The tradable book is lean, high-conviction, and currently profitable. All active positions pass the re-open test. Spendable liquidity has improved to M$47, and we are awaiting the late-August resolution wave to unlock further capital for the 'Timeline NO' watchlist. (0 change(s) proposed)"
     }
   ],
   "todos": [
@@ -838,6 +838,31 @@
   ],
   "decisions": [
     {
+      "ts": 1787649740429,
+      "kind": "no_trade",
+      "question": "Will Anthropic somehow patch the Opus 5 base-model-like behavior from \"---\" prompts (or pull the model) by September 1?",
+      "url": "https://manifold.markets/KeenanPepper/will-anthropic-somehow-patch-the-op",
+      "market_prob": 0.12250750764653684,
+      "model_prob": 0.14,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With only ~6 days remaining until September 1 and the exploit remaining reproducible throughout August, an emergency platform-wide patch or model takedown is unlikely, though Anthropic occasionally deploys stealth output classifiers or template tweaks.",
+      "uncertainty": "Whether Anthropic quietly rolls out a chat-template or output-filtering update across claude.ai and the API before September 1.",
+      "resolution_risk": "The creator's holistic evaluation standard on whether an output filter sufficiently suppresses the completion rate to count as patched.",
+      "evidence_for": [
+        "Anthropic has previously deployed rapid server-side output classifiers and chat template updates for notable jailbreaks and formatting glitches within multi-week windows",
+        "A server-side regex, output classifier, or chat template adjustment would qualify for YES if it reliably prevents the completions"
+      ],
+      "evidence_against": [
+        "Only 6 days remain before the September 1 deadline",
+        "The issue has persisted since late July with creator reproducing it via API through mid-August without an Anthropic platform-level fix",
+        "Recent late-August Anthropic and community documentation emphasizes prompt-level mitigations rather than an imminent backend patch",
+        "Partial rate reductions or prompt-specific blacklists resolve NO unless the exploit is holistically neutralized"
+      ],
+      "reason": "edge 0.017 below minimum 0.04"
+    },
+    {
       "ts": 1787644240040,
       "kind": "no_trade",
       "question": "[Will Brown] Will Transformative AI look like an abundance of specialized models, in August 2026?",
@@ -1161,29 +1186,6 @@
         "HMIC contains only 5 problems in total each year.",
         "The problem pool for HMMT/HMIC competitions is highly competitive, with dozens of submissions competing for very few slots.",
         "Proposing a problem does not guarantee selection, and the creator may not submit or may submit problems that end up on other HMMT tests or are held over."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1787579155978,
-      "kind": "no_trade",
-      "question": "Given I have been with my partner for a year, will we be together for 5?",
-      "url": "https://manifold.markets/LivInTheLookingGlass/given-i-have-been-with-my-partner-f-0dde6bfd1962",
-      "market_prob": 0.7118871658723424,
-      "model_prob": 0.64,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "While honeymoon planning signals strong commitment that elevates survival odds above general 1-year base rates, reaching 5 total years (4 additional years) still carries roughly a 35-40% cumulative breakup risk.",
-      "uncertainty": "Whether the couple's commitment leads to marriage and long-term stability over the full 4-year remaining horizon.",
-      "resolution_risk": "The market lacks a written description and spans four years, creating risk of creator inactivity or unannounced resolution rules.",
-      "evidence_for": [
-        "Creator's linked market regarding honeymoon planning indicates strong marriage intent and commitment.",
-        "The couple has successfully completed their first year, passing the highest hazard period for early breakups."
-      ],
-      "evidence_against": [
-        "General relationship survival curves show significant cumulative breakup rates over a 4-year remaining period.",
-        "Fast timeline to marriage planning within one year can correlate with higher baseline volatility."
       ],
       "reason": "size floored to zero by balance reserve"
     }
