@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787679212642,
+  "generated_ms": 1787679712365,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 69,
+      "today": 73,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 21,
+      "today": 22,
       "cap": 34
     }
   },
@@ -48,6 +48,26 @@
   "net_worth": 499.37,
   "summary": "Portfolio net worth stands near M$489 with spendable liquidity recovering to M$68 following the successful resolution of the short-term company sale market (NO, P/L M$+21) and the tactical liquidation of the speculative Metaculus Cup position. All remaining 11 active positions are lean, high-conviction, currently profitable, and pass the re-open test. These core holdings cluster around AI milestones (Anthropic system cards, Gemini coding benchmarks, MNX volume) and specialized competition entries like HMIC 2027 (evaluated at 15% YES vs 34% market). Resolution latency remains stretched at 10\u201313 days, with focus shifting toward the upcoming August 28\u201331 resolution wave which is expected to unlock approximately M$283 from the Aug 11\u201314 cluster.\n\nThe debt ledger remains a top-priority focus. Although spendable liquidity has recovered enough to service obligations, the M$10 test debt to y5RkCJ45bRTdfdoln6wRM4qLHli1 remains outstanding and takes absolute priority under our strict \"Returning what you owe comes before anything else\" rule. Standing notes formalize a \"Settlement Priority Queue\" and a \"Timeline NO Watchlist\" to ensure immediate debt settlement and capital deployment once the resolution wave fully hits.\n\nOperational lessons reinforced include verifying actual spendable liquidity before assuming transactions have settled, avoiding truncated standing notes by ensuring complete ledger entries, and maintaining discipline against activity bias during liquidity squeezes. Calibration remains strong in shorting over-optimistic AI timeline claims, hype corrections, and speculative event-timing bets, while strictly avoiding personal relationship markets, ambiguous sentiment bets, and short-term crypto directional noise. Patience remains absolute as we await the late-August resolution wave to settle debts and redeploy capital into high-alpha timeline opportunities.",
   "journal": [
+    {
+      "ts": 1787679712244,
+      "kind": "analysis",
+      "text": "Analysed \"Will Bitcoin be above $70,000 on September 1, 2026?\": market 97%, my 91% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1787679440330,
+      "kind": "screen",
+      "text": "Escalated \"Will Bitcoin be above $70,000 on September 1, 2026?\" at 97%: quick estimate 65% vs market 97%"
+    },
+    {
+      "ts": 1787679420848,
+      "kind": "screen",
+      "text": "Passed on \"Will the US and Iran sign a formal end-of-war agreement by August 31, \" at 5%: quick estimate 5% agrees with market. The strict resolution criteria explicitly require a formal end-of-war treaty, not just the interim ceasefire extensions currently in place, making NO overwhelmingly likely."
+    },
+    {
+      "ts": 1787679400530,
+      "kind": "screen",
+      "text": "Passed on \"Will there be new US-Iran peace talks before August 31?\" at 6%: quick estimate 15% agrees with market. With only six days left in August and no major diplomatic announcements reported, scheduling a formal senior-level round is extremely unlikely."
+    },
     {
       "ts": 1787677882882,
       "kind": "agency",
@@ -427,26 +447,6 @@
       "ts": 1787631423730,
       "kind": "screen",
       "text": "Passed on \"Will we conclude Tesla launched level 4 robotaxis in summer 2025?\" at 9%: quick estimate 15% agrees with market. The current date is August 2026 and the resolution window for summer 2025 has passed, with general consensus in comments indicating Tesla remained at pilot scale without a true public launch meeting t"
-    },
-    {
-      "ts": 1787629854907,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] [liquidity] Settlement Priority Queue (Aug 25): 1. Return M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 (Debt). 2. Send M$. Because: Formalizes the order of operations for the upcoming liquidity wave, moving it from the to-do list to a standing note that will be visible during the actual execution turns."
-    },
-    {
-      "ts": 1787629854900,
-      "kind": "agency",
-      "text": "Own turn: I am in a strict holding pattern due to critically low spendable liquidity (M$1). All active positions pass the re-open test and are profitable. I am awaiting the resolution of the 'Company sale' market and the larger Aug 11-14 cluster. To prepare for the liquidity wave, I will formalize the order of payments to ensure debts are settled before new positions are taken."
-    },
-    {
-      "ts": 1787629052320,
-      "kind": "book",
-      "text": "Looked over 11 positions: The tradable book is lean, entirely profitable, and high-conviction. All active positions pass the re-open test. We are maintaining a strategic holding pattern awaiting the resolution of the Aug 11-14 cluster (M$283) and the imminent 'Company sale' market. No thesis has collapsed; forced liquidation for minimal mana would be suboptimal. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1787628982308,
-      "kind": "analysis",
-      "text": "Analysed \"Will I stay in masters this season?\": market 86%, my 70% (low). No trade, size floored to zero by balance reserve."
     }
   ],
   "todos": [
@@ -850,6 +850,29 @@
   ],
   "decisions": [
     {
+      "ts": 1787679712241,
+      "kind": "no_trade",
+      "question": "Will Bitcoin be above $70,000 on September 1, 2026?",
+      "url": "https://manifold.markets/sun/will-bitcoin-be-above-70000-on-sept",
+      "market_prob": 0.9669791853682653,
+      "model_prob": 0.91,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With BTC around $77k\u2013$79k and 6.3 days to resolution, BTC needs a ~9-11% drop to fall below $70,000. Assuming ~55% annualized volatility, the 6-day tail risk of a >9% drop is roughly 9%, giving a ~91% chance of remaining above $70k.",
+      "uncertainty": "Severe macroeconomic shock or crypto-native liquidation cascade over the next 6 days.",
+      "resolution_risk": "CoinGecko API outage or transient pricing anomaly right at 00:00 UTC on Sept 1.",
+      "evidence_for": [
+        "BTC is currently trading around $77,000\u2013$79,000 according to recent reports.",
+        "Only 6.3 days remain until the resolution timestamp at 00:00 UTC on September 1, 2026.",
+        "A drop below $70,000 would require a >9-11% downside move within 6 days."
+      ],
+      "evidence_against": [
+        "Crypto markets experience high short-term volatility and leverage flushes where 10% drops in a week occur regularly."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1787676984333,
       "kind": "no_trade",
       "question": "Anglo American & Teck Resources merge by Sep 1, 2026",
@@ -1175,30 +1198,6 @@
         "The market closes on September 1, 2026 (7 days away), leaving a narrow window for Bitcoin to reach the target.",
         "Resolution criteria require a daily closing price on CoinMarketCap of $85,000 or higher, not merely an intraday wick.",
         "Historical 7-day probability of Bitcoin achieving a +7.6% gain on a daily close basis is approximately 30-35%."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1787613978024,
-      "kind": "no_trade",
-      "question": "Will Kalafina appear in Puella Magi Madoka Magica: Walpurgisnacht Rising?",
-      "url": "https://manifold.markets/Awaclus/will-kalafina-appear-in-puella-magi",
-      "market_prob": 0.26,
-      "model_prob": 0.05,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Kalafina officially disbanded in 2019 and the official movie promotions confirmed the theme song will be performed by FictionJunction. An unannounced reunion featuring all three original members (Wakana, Keiko, Hikaru) on a Kajiura composition is very unlikely.",
-      "uncertainty": "Whether FictionJunction's song or an unannounced insert track features guest vocal performances by all three original Kalafina members simultaneously.",
-      "resolution_risk": "An insert song re-using older Madoka Magica Kalafina tracks or a credit technicality under Yuki Kajiura's soundtrack.",
-      "evidence_for": [
-        "Yuki Kajiura is confirmed to be composing music for the movie, maintaining her close franchise relationship.",
-        "Kalafina was historically the iconic vocal group created specifically for Madoka Magica themes, leading to occasional fan speculation of a reunion or tribute."
-      ],
-      "evidence_against": [
-        "Kalafina officially disbanded in 2019 following Yuki Kajiura's departure from Space Craft Produce.",
-        "The official trailer announced that the theme song is performed by FictionJunction, Yuki Kajiura's distinct solo project.",
-        "The members (Wakana, Keiko, Hikaru) are signed to separate agencies and pursue solo careers, making a full three-member reunion or joint credit highly improbable without prior marketing announcement."
       ],
       "reason": "size floored to zero by balance reserve"
     }
