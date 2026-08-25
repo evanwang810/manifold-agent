@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787694350357,
+  "generated_ms": 1787694604637,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 92,
+      "today": 95,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 27,
+      "today": 28,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 518.26,
   "summary": "Portfolio net worth sits near M$489 with spendable liquidity restricted down to M$11 due to balance reserves and allocation. Tactical positioning expanded slightly with the addition of a medium-conviction NO position on METR 80% time horizon exceeding 10 hours before September (P/L flat, M$49 committed) and a YES position on Gemini reaching frontier coding status (M$18 committed). All 12 active positions remain lean, high-conviction, and profitable, clustering around AI timeline milestones (Anthropic system cards, Gemini benchmarks, MNX volume) and specialized competition entries like HMIC 2027 (evaluated at 15% YES vs 34% market). Resolution latency remains stretched around 10\u201313 days, with focus firmly locked on the upcoming August 28\u201331 resolution wave which is expected to unlock approximately M$283 from the initial Aug 11\u201314 cluster.\n\nThe debt ledger remains our absolute top-priority focus. Despite multiple repeated attempts to transfer M$10 to clear the test debt owed to y5RkCJ45bRTdfdoln6wRM4qLHli1, transactions have repeatedly failed or remained uncleared, repeatedly dragging spendable liquidity to minimal buffers. Under our strict operational rule that returning what you owe comes before anything else, clearing this balance takes total precedence over maintaining operational reserve minimums as soon as the execution channels clear.\n\nOperational lessons reinforced include the necessity of verifying actual settled spendable liquidity before assuming fund movements have successfully cleared, avoiding truncated standing notes by keeping ledger entries complete, and maintaining strict discipline against activity bias during liquidity squeezes. Calibration remains strong in shorting over-optimistic AI timeline claims, hype corrections, and speculative event-timing bets, while strictly avoiding personal relationship markets, ambiguous sentiment bets, and short-term crypto directional noise. Patience remains absolute as we await the late-August resolution wave to finally settle outstanding debts, unlock liquidity, and redeploy capital into high-alpha timeline opportunities.",
   "journal": [
+    {
+      "ts": 1787694604494,
+      "kind": "analysis",
+      "text": "Analysed \"Will the WTI Crude Oil Spot Price be above $86.50 on August 27, 2026?\": market 19%, my 48% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1787694535300,
+      "kind": "screen",
+      "text": "Escalated \"Will the WTI Crude Oil Spot Price be above $86.50 on August 27, 2026?\" at 19%: quick estimate 52% vs market 19%"
+    },
     {
       "ts": 1787692878827,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1787648927311,
       "kind": "agency",
       "text": "Own turn: Spendable liquidity is now M$68, and my debt to y5RkCJ45bRTdfdoln6wRM4qLHli1 (M$10) remains outstanding. Following the rule 'Returning what you owe comes before anything else', I will send the M$10 back to y5RkCJ45bRTdfdoln6wRM4qLHli1 with a thank-you note."
-    },
-    {
-      "ts": 1787647999580,
-      "kind": "book",
-      "text": "Looked over 11 positions: The tradable book is lean, high-conviction, and entirely profitable. All active positions (HMIC, Gemini, Anthropic, MNX) pass the re-open test based on current probability assessments. With M$68 spendable and a significant resolution wave (M$283) expected shortly, there is no rational basis to liquidate high-EV positions. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1787646467910,
-      "kind": "screen",
-      "text": "Passed on \"Will the S&P 500 close above 7,000 on the last trading day of August 2\" at 97%: quick estimate 95% agrees with market. The index is currently around 7,400 to 7,500, making a drop below 7,000 in just a few days extremely unlikely without a massive sudden crash."
     }
   ],
   "todos": [
@@ -797,7 +797,7 @@
       "profit": 0.6,
       "prob": 0.337,
       "closed": false,
-      "days_to_close": 7.1
+      "days_to_close": 7.0
     },
     {
       "question": "Will my company make a sale today?",
@@ -849,6 +849,30 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1787694604492,
+      "kind": "no_trade",
+      "question": "Will the WTI Crude Oil Spot Price be above $86.50 on August 27, 2026?",
+      "url": "https://manifold.markets/ShaneBo/will-the-wti-crude-oil-spot-price-b-IRZC9y0ZNQ",
+      "market_prob": 0.1939505083884083,
+      "model_prob": 0.48,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With front-month CL around $84.94-$85.58 and the EIA Cushing spot basis historically running ~$1.50+ above futures, estimated spot is hovering right near the $86.50 strike with 2 days to settlement, making this close to a coin-flip (~48%).",
+      "uncertainty": "Crude oil price movement over the next 48 hours and the stability of the Cushing spot-to-futures basis.",
+      "resolution_risk": "Traders confusing NYMEX CL front-month futures with official EIA Cushing spot (DCOILWTICO).",
+      "evidence_for": [
+        "EIA Cushing spot historically trades at a $1.50+ premium over front-month CL futures, placing estimated current spot near $86.40-$86.53.",
+        "WTI spot was reported at $86.64 on August 22.",
+        "With only 2 days until resolution, normal price variance keeps the expected value right near the $86.50 barrier."
+      ],
+      "evidence_against": [
+        "Crude futures fell recently towards $84.94, dragging estimated spot slightly below the barrier.",
+        "Recent live feeds indicate WTI around $85.58, which requires an upward move to cross $86.50."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1787692129565,
       "kind": "no_trade",
@@ -1180,29 +1204,6 @@
         "Historical Manifold sentiment and community discussions skew heavily towards generalist LLM/agent architectures driving TAI."
       ],
       "reason": "edge 0.018 below minimum 0.04"
-    },
-    {
-      "ts": 1787641505275,
-      "kind": "no_trade",
-      "question": "Will Bitcoin be higher 14 days from now?",
-      "url": "https://manifold.markets/prismatic/will-bitcoin-be-higher-14-days-from-RzSNIly8IP",
-      "market_prob": 0.9690591082953616,
-      "model_prob": 0.94,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With BTC currently trading around $78.9k-$79.6k, the market maintains an approximate 15% buffer above the $68,506.41 baseline with only ~8 days remaining until resolution on September 2.",
-      "uncertainty": "Major macroeconomic shocks or crypto-specific liquidation cascades over the next 8 days.",
-      "resolution_risk": "Price discrepancy between CoinGecko and Yahoo Finance right at the threshold boundary.",
-      "evidence_for": [
-        "Baseline creation price was $68,506.41 on August 19, 2026.",
-        "Current BTC spot price on August 25 is ~$78,872 (CoinGecko) to ~$79,641 (Yahoo Finance), providing a ~15% downside buffer.",
-        "Only ~8 days remain until the September 2, 2026 resolution deadline."
-      ],
-      "evidence_against": [
-        "Cryptocurrency markets exhibit fat tails and high volatility, making a >15% drop within an 8-day window possible in an extreme drawdown."
-      ],
-      "reason": "edge 0.029 below minimum 0.04"
     }
   ]
 }
