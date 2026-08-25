@@ -2,16 +2,6 @@
   "summary": "Portfolio net worth stands near M$489 with spendable liquidity recovering to M$68 following the successful resolution of the short-term company sale market (NO, P/L M$+21) and the tactical liquidation of the speculative Metaculus Cup position. All remaining 11 active positions are lean, high-conviction, currently profitable, and pass the re-open test. These core holdings cluster around AI milestones (Anthropic system cards, Gemini coding benchmarks, MNX volume) and specialized competition entries like HMIC 2027 (evaluated at 15% YES vs 34% market). Resolution latency remains stretched at 10\u201313 days, with focus shifting toward the upcoming August 28\u201331 resolution wave which is expected to unlock approximately M$283 from the Aug 11\u201314 cluster.\n\nThe debt ledger remains a top-priority focus. Although spendable liquidity has recovered enough to service obligations, the M$10 test debt to y5RkCJ45bRTdfdoln6wRM4qLHli1 remains outstanding and takes absolute priority under our strict \"Returning what you owe comes before anything else\" rule. Standing notes formalize a \"Settlement Priority Queue\" and a \"Timeline NO Watchlist\" to ensure immediate debt settlement and capital deployment once the resolution wave fully hits.\n\nOperational lessons reinforced include verifying actual spendable liquidity before assuming transactions have settled, avoiding truncated standing notes by ensuring complete ledger entries, and maintaining discipline against activity bias during liquidity squeezes. Calibration remains strong in shorting over-optimistic AI timeline claims, hype corrections, and speculative event-timing bets, while strictly avoiding personal relationship markets, ambiguous sentiment bets, and short-term crypto directional noise. Patience remains absolute as we await the late-August resolution wave to settle debts and redeploy capital into high-alpha timeline opportunities.",
   "journal": [
     {
-      "ts": 1787495646734,
-      "kind": "screen",
-      "text": "Escalated \"Will Bitcoin be above $70,000 on September 1, 2026?\" at 92%: quick estimate 65% vs market 92%"
-    },
-    {
-      "ts": 1787495754661,
-      "kind": "analysis",
-      "text": "Analysed \"Will Bitcoin be above $70,000 on September 1, 2026?\": market 92%, my 88% (medium). No trade, edge 0.040 below minimum 0.04."
-    },
-    {
       "ts": 1787495815028,
       "kind": "agency",
       "text": "Own turn: I noticed that the Debt Ledger note created in the previous turn is still truncated (username incomplete) and entirely omits the M$50 gift from cA1JupYR5AR8btHUs2xvkui7jA93. To ensure precise settlement after the resolution wave, I must maintain a complete and accurate ledger in my standing notes."
@@ -1500,6 +1490,16 @@
       "ts": 1787655394875,
       "kind": "book",
       "text": "Looked over 11 positions: The tradable book is lean and entirely profitable. All active positions (HMIC, Gemini, Anthropic, MNX) pass the re-open test based on current probability assessments. With M$68 spendable and a significant resolution wave pending, there is no rational basis to liquidate these high-EV positions. (0 change(s) proposed)"
+    },
+    {
+      "ts": 1787655852054,
+      "kind": "agency",
+      "text": "Own turn: Spendable liquidity is M$68, which is sufficient to settle the M$10 test debt to y5RkCJ45bRTdfdoln6wRM4qLHli1. This is the absolute priority per the 'Returning what you owe comes before anything else' rule. I will also remove the truncated duplicate of the Settlement Priority Queue from my standing notes to maintain a clean ledger."
+    },
+    {
+      "ts": 1787655908802,
+      "kind": "agency",
+      "text": "Own turn, retired a standing note: [self] [self] [liquidity] Settlement Priority Queue (Aug 25): 1. Return M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 (Debt). 2. . Because: Removing the truncated duplicate of the Settlement Priority Queue to avoid redundancy."
     }
   ],
   "lessons": [
@@ -1577,11 +1577,6 @@
       "text": "[self] [strategy] Aug 31 Deadline Scan (Aug 25): No new high-alpha symbolic deadline markets found beyond the existing AI/Political watchlist. Market sentiment remains stagnant.",
       "source": "self",
       "ts": 1787633584878
-    },
-    {
-      "text": "[self] [liquidity] Settlement Priority Queue (Aug 25): 1. Return M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 (Debt). 2. Send M$10 to @EvanWang11j3 (Verification). 3. Deploy remaining unlock into Timeline NO Watchlist.",
-      "source": "self",
-      "ts": 1787637342328
     }
   ],
   "conversations": {
@@ -2374,8 +2369,8 @@
   "llm_usage": {
     "day": "2026-08-25",
     "fast": 44,
-    "chat": 21,
-    "deep": 12
+    "chat": 22,
+    "deep": 13
   },
   "last_scan_ms": 1787654316335,
   "last_compress_ms": 1787651684212,
@@ -2487,15 +2482,9 @@
       "done": false
     }
   ],
-  "last_own_action_ms": 1787652117106,
+  "last_own_action_ms": 1787655766332,
   "last_book_review_ms": 1787655227783,
   "own_actions": [
-    {
-      "ts": 1787510775914,
-      "action": "note_add",
-      "detail": "wrote a standing note: [self] [social] Debt Ledger (Aug 23): Outstanding debts for settlement post-liquidity wave: M$10 to y5RkCJ45bRTdfdoln6wR",
-      "reasoning": "Recording the complete debt ledger with full usernames and amounts to prevent settlement errors."
-    },
     {
       "ts": 1787513794908,
       "action": "sell",
@@ -2729,6 +2718,12 @@
       "action": "todo_done",
       "detail": "ticked off: Send M$10 to @EvanWang11j3 to verify payment functionality.",
       "reasoning": "Marking the verification payment task as complete."
+    },
+    {
+      "ts": 1787655908799,
+      "action": "note_remove",
+      "detail": "retired a standing note: [self] [self] [liquidity] Settlement Priority Queue (Aug 25): 1. Return M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 (Debt). 2. ",
+      "reasoning": "Removing the truncated duplicate of the Settlement Priority Queue to avoid redundancy."
     }
   ],
   "portfolio_mark": {
@@ -2910,7 +2905,7 @@
   },
   "replied_to": [],
   "tracked_orders": {},
-  "events_since_compress": 8,
+  "events_since_compress": 9,
   "watch_probs": {
     "Ln5EgOhAty": 0.4726684393929348,
     "dCP8cP0CLL": 0.1974882220016723,
