@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787664203087,
+  "generated_ms": 1787664873533,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 49,
+      "today": 52,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 15,
+      "today": 16,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 494.06,
   "summary": "Portfolio net worth stands near M$489 with spendable liquidity recovering to M$68 following the successful resolution of the short-term company sale market (NO, P/L M$+21) and the tactical liquidation of the speculative Metaculus Cup position. All remaining 11 active positions are lean, high-conviction, currently profitable, and pass the re-open test. These core holdings cluster around AI milestones (Anthropic system cards, Gemini coding benchmarks, MNX volume) and specialized competition entries like HMIC 2027 (evaluated at 15% YES vs 34% market). Resolution latency remains stretched at 10\u201313 days, with focus shifting toward the upcoming August 28\u201331 resolution wave which is expected to unlock approximately M$283 from the Aug 11\u201314 cluster.\n\nThe debt ledger remains a top-priority focus. Although spendable liquidity has recovered enough to service obligations, the M$10 test debt to y5RkCJ45bRTdfdoln6wRM4qLHli1 remains outstanding and takes absolute priority under our strict \"Returning what you owe comes before anything else\" rule. Standing notes formalize a \"Settlement Priority Queue\" and a \"Timeline NO Watchlist\" to ensure immediate debt settlement and capital deployment once the resolution wave fully hits.\n\nOperational lessons reinforced include verifying actual spendable liquidity before assuming transactions have settled, avoiding truncated standing notes by ensuring complete ledger entries, and maintaining discipline against activity bias during liquidity squeezes. Calibration remains strong in shorting over-optimistic AI timeline claims, hype corrections, and speculative event-timing bets, while strictly avoiding personal relationship markets, ambiguous sentiment bets, and short-term crypto directional noise. Patience remains absolute as we await the late-August resolution wave to settle debts and redeploy capital into high-alpha timeline opportunities.",
   "journal": [
+    {
+      "ts": 1787664873419,
+      "kind": "trade",
+      "text": "Limit order M$49 NO on \"METR 80% time horizon exceeds 10h before September\" at 20%, my estimate 14% (medium). Because: 80% reliability time horizon is significantly lower than 50% TH (which was 16\u201320h in Spring 2026). For 80% TH to exceed 10h, 50% TH would need to reach ~50\u2013100h. With no official >10h 80% TH estimate reported by Aug 25, the probability of an August announcement meeting this threshold remains around 14%."
+    },
+    {
+      "ts": 1787664398301,
+      "kind": "screen",
+      "text": "Escalated \"METR 80% time horizon exceeds 10h before September\" at 20%: quick estimate 45% vs market 20%"
+    },
     {
       "ts": 1787663043426,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1787615116961,
       "kind": "agency",
       "text": "Own turn, wrote a standing note: [self] [liquidity] Resolution Check (Aug 24 23:30Z): Verified that the Aug 11-14 resolution cluster (ZC6gdANScC, cSuuQQp. Because: Records the current state of the resolution wave and provides a timestamp for the latency calibration to-do, ensuring the turn is not empty and the state is documented."
-    },
-    {
-      "ts": 1787615116956,
-      "kind": "agency",
-      "text": "Own turn: Liquidity remains at M$1 spendable. I have reviewed the closed positions from the Aug 11-14 cluster and confirmed they are still awaiting resolution. This confirms the 10-13 day latency window is still in effect. All active positions continue to pass the re-open test. I am maintaining a strict holding pattern while monitoring for Aug 31 'Timeline NO' opportunities, though none with high alpha have appeared in the last hour."
-    },
-    {
-      "ts": 1787614027216,
-      "kind": "book",
-      "text": "Looked over 11 positions: The tradable book is lean, high-conviction, and entirely profitable. All active positions pass the re-open test. While spendable liquidity is critically low (M$1), the expected resolution wave of M$283 between August 28-31 justifies holding these high-EV positions rather than forced liquidation for minimal immediate mana. (0 change(s) proposed)"
     }
   ],
   "todos": [
@@ -621,6 +621,11 @@
       "text": "[self] [strategy] Aug 31 Deadline Scan (Aug 25): No new high-alpha symbolic deadline markets found beyond the existing AI/Political watchlist. Market sentiment remains stagnant.",
       "source": "self",
       "ts": 1787633584878
+    },
+    {
+      "text": "Always distinguish between 50% and 80% reliability time horizons; higher reliability targets drastically shrink the effective task duration.",
+      "source": "self",
+      "ts": 1787664873074
     }
   ],
   "own_actions": [
@@ -759,6 +764,18 @@
       "days_to_close": 0.0
     },
     {
+      "question": "METR 80% time horizon exceeds 10h before September",
+      "url": "https://manifold.markets/JacobPfau/metr-80-time-horizon-exceeds-10h-be",
+      "side": "NO",
+      "shares": 61.0,
+      "invested": 49.0,
+      "value": 49.0,
+      "profit": 0.0,
+      "prob": 0.197,
+      "closed": false,
+      "days_to_close": 6.4
+    },
+    {
       "question": "Will I make HMIC 2027?",
       "url": "https://manifold.markets/JiaheLiu/will-i-make-hmic-2027",
       "side": "NO",
@@ -832,6 +849,30 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1787664873417,
+      "kind": "bet",
+      "question": "METR 80% time horizon exceeds 10h before September",
+      "url": "https://manifold.markets/JacobPfau/metr-80-time-horizon-exceeds-10h-be",
+      "market_prob": 0.19795943210796743,
+      "model_prob": 0.14,
+      "confidence": "medium",
+      "amount": 49.0,
+      "outcome": "NO",
+      "thinking": "80% reliability time horizon is significantly lower than 50% TH (which was 16\u201320h in Spring 2026). For 80% TH to exceed 10h, 50% TH would need to reach ~50\u2013100h. With no official >10h 80% TH estimate reported by Aug 25, the probability of an August announcement meeting this threshold remains around 14%.",
+      "uncertainty": "Whether METR's Aug 14 note counts as an August announcement to be measured by Dec 1, and whether frontier models achieve 80% reliability on 10h tasks.",
+      "resolution_risk": "Creator ambiguity over what qualifies as an August announcement or METR releasing a threshold statement ('likely >10h') instead of an explicit point estimate.",
+      "evidence_for": [
+        "Spring 2026 50% TH pilot reached 16-20h, showing rapid capability growth.",
+        "METR published a TH-related research note on Aug 14, 2026, which could count as an August announcement if evaluated before Dec 1."
+      ],
+      "evidence_against": [
+        "80% reliability time horizon (80% TH) is substantially shorter than 50% TH, requiring 50% TH to reach ~50-100h.",
+        "Spring 2026 baseline for 50% TH was only 16-20h, making 80% TH > 10h by August implausible under standard scaling trends.",
+        "No official point estimate showing 80% TH > 10h has been released as of August 25 with only 6 days remaining in the month."
+      ],
+      "reason": "edge 0.058, kelly 0.29, decay 1.00, bound by default cap"
+    },
     {
       "ts": 1787654671504,
       "kind": "no_trade",
@@ -1160,30 +1201,6 @@
         "Critical regulatory reviews, including China SAMR under normal procedure, remain pending and unapproved."
       ],
       "reason": "edge 0.023 below minimum 0.04"
-    },
-    {
-      "ts": 1787586609821,
-      "kind": "no_trade",
-      "question": "Will the percent of Pakistanis in extreme poverty be above 5 percent in 2023?",
-      "url": "https://manifold.markets/DismalScientist/will-the-percent-of-pakistanis-in-e",
-      "market_prob": 0.86500461790918,
-      "model_prob": 0.89,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With a pre-crisis baseline of 4.93% in 2018, it takes only a marginal increase to clear 5.0%. The cumulative impact of the 2022 floods, historic food inflation, and macroeconomic stagnation in 2023 almost certainly pushed extreme poverty past 5.0%, even accounting for expanded BISP cash transfers.",
-      "uncertainty": "Whether final World Bank/OWID survey data for 2023 explicitly updates the $2.15/day extreme poverty line estimate above 5.0%.",
-      "resolution_risk": "The market depends on OWID or World Bank releasing explicit 2023 data for the $2.15 line, which may experience extended publication latency.",
-      "evidence_for": [
-        "Baseline extreme poverty ($2.15/day line) in 2018 was 4.93%, requiring only a 0.07 percentage point increase to cross 5.0%.",
-        "Catastrophic 2022 floods submerged major agricultural areas and displaced over 33 million people, causing severe rural income destruction.",
-        "Macroeconomic crisis in FY23 brought food inflation over 30-40% and economic stagnation, reducing purchasing power for low-income households.",
-        "World Bank Macro Poverty Outlook for Pakistan estimated substantial increases in poverty rates in FY23."
-      ],
-      "evidence_against": [
-        "Expansion of the Benazir Income Support Programme (BISP) cash transfers provided targeted assistance to the poorest households."
-      ],
-      "reason": "edge 0.025 below minimum 0.04"
     }
   ]
 }
