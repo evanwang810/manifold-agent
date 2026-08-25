@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787691791675,
+  "generated_ms": 1787692292259,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,15 +31,15 @@
   },
   "usage": {
     "fast": {
-      "today": 89,
+      "today": 92,
       "cap": 220
     },
     "chat": {
-      "today": 40,
+      "today": 41,
       "cap": 400
     },
     "deep": {
-      "today": 26,
+      "today": 27,
       "cap": 34
     }
   },
@@ -48,6 +48,21 @@
   "net_worth": 518.26,
   "summary": "Portfolio net worth sits near M$489 with spendable liquidity restricted down to M$11 due to balance reserves and allocation. Tactical positioning expanded slightly with the addition of a medium-conviction NO position on METR 80% time horizon exceeding 10 hours before September (P/L flat, M$49 committed) and a YES position on Gemini reaching frontier coding status (M$18 committed). All 12 active positions remain lean, high-conviction, and profitable, clustering around AI timeline milestones (Anthropic system cards, Gemini benchmarks, MNX volume) and specialized competition entries like HMIC 2027 (evaluated at 15% YES vs 34% market). Resolution latency remains stretched around 10\u201313 days, with focus firmly locked on the upcoming August 28\u201331 resolution wave which is expected to unlock approximately M$283 from the initial Aug 11\u201314 cluster.\n\nThe debt ledger remains our absolute top-priority focus. Despite multiple repeated attempts to transfer M$10 to clear the test debt owed to y5RkCJ45bRTdfdoln6wRM4qLHli1, transactions have repeatedly failed or remained uncleared, repeatedly dragging spendable liquidity to minimal buffers. Under our strict operational rule that returning what you owe comes before anything else, clearing this balance takes total precedence over maintaining operational reserve minimums as soon as the execution channels clear.\n\nOperational lessons reinforced include the necessity of verifying actual settled spendable liquidity before assuming fund movements have successfully cleared, avoiding truncated standing notes by keeping ledger entries complete, and maintaining strict discipline against activity bias during liquidity squeezes. Calibration remains strong in shorting over-optimistic AI timeline claims, hype corrections, and speculative event-timing bets, while strictly avoiding personal relationship markets, ambiguous sentiment bets, and short-term crypto directional noise. Patience remains absolute as we await the late-August resolution wave to finally settle outstanding debts, unlock liquidity, and redeploy capital into high-alpha timeline opportunities.",
   "journal": [
+    {
+      "ts": 1787692292092,
+      "kind": "book",
+      "text": "Looked over 12 positions: The book is lean and high-conviction, with all tradable positions currently profitable or flat. All open positions pass the re-open test based on current probability assessments. With a significant resolution wave expected between Aug 28-31 to unlock substantial liquidity, there is no rational basis to liquidate these high-EV positions. (0 change(s) proposed)"
+    },
+    {
+      "ts": 1787692129567,
+      "kind": "analysis",
+      "text": "Analysed \"Will a Manifolder win the Summer Metaculus Cup\": market 45%, my 20% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1787691979886,
+      "kind": "screen",
+      "text": "Escalated \"Will a Manifolder win the Summer Metaculus Cup\" at 45%: quick estimate 15% vs market 45%"
+    },
     {
       "ts": 1787689549950,
       "kind": "screen",
@@ -432,21 +447,6 @@
       "ts": 1787646447880,
       "kind": "screen",
       "text": "Passed on \"Will California be in a drought at end of August 2026?\" at 11%: quick estimate 15% agrees with market. Commenter checked current Drought Monitor data showing only 7.39 percent in D1 plus, making a widespread drought impossible before month-end."
-    },
-    {
-      "ts": 1787646427826,
-      "kind": "screen",
-      "text": "Passed on \"Will I solve an unsolved math problem with AI in August?\" at 5%: quick estimate 5% agrees with market. Solving a top-20 recognized unsolved math problem from scratch using AI within a few weeks is extremely implausible."
-    },
-    {
-      "ts": 1787645111292,
-      "kind": "agency",
-      "text": "Own turn, ticked off: Send M$10 to @EvanWang11j3 to verify payment functionality.. Because: Marking the verification payment task as complete."
-    },
-    {
-      "ts": 1787645111284,
-      "kind": "agency",
-      "text": "Wanted to send_mana, vetoed by review: review unavailable"
     }
   ],
   "todos": [
@@ -850,6 +850,29 @@
   ],
   "decisions": [
     {
+      "ts": 1787692129565,
+      "kind": "no_trade",
+      "question": "Will a Manifolder win the Summer Metaculus Cup",
+      "url": "https://manifold.markets/bens/will-a-manifolder-win-the-summer-me",
+      "market_prob": 0.4460175908666144,
+      "model_prob": 0.2,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "While active Manifold forecasters are competing, Metaculus tournaments have large fields with strong platform-dedicated superforecasters. Given the high variance of individual tournament outcomes and the 100-trade threshold, I estimate a ~20% chance a qualified Manifolder takes 1st place.",
+      "uncertainty": "The exact fraction of top-tier Metaculus tournament contenders who meet the specific qualification of 100+ Manifold trades in 2026 prior to market creation.",
+      "resolution_risk": "Ambiguity around how bot rankings or non-eligible account placements are handled on the official Metaculus leaderboard.",
+      "evidence_for": [
+        "Several high-performing forecasters on Manifold (e.g., @bens, @Capital) actively participate in Metaculus tournaments.",
+        "There is notable overlap between top-ranked Metaculus forecasters and active Manifold users."
+      ],
+      "evidence_against": [
+        "Metaculus Cups feature hundreds of skilled participants, many of whom forecast exclusively on Metaculus or do not meet the 100-trade threshold on Manifold.",
+        "Single-tournament outcomes carry high variance, making any specific subset of participants unlikely to capture 1st place overall."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1787687001753,
       "kind": "no_trade",
       "question": "Will Andrew Tate be in jail through the end of August?",
@@ -1180,30 +1203,6 @@
         "Cryptocurrency markets exhibit fat tails and high volatility, making a >15% drop within an 8-day window possible in an extreme drawdown."
       ],
       "reason": "edge 0.029 below minimum 0.04"
-    },
-    {
-      "ts": 1787638955325,
-      "kind": "no_trade",
-      "question": "Will Bitcoin be higher a month from now?",
-      "url": "https://manifold.markets/OnlySlides/will-bitcoin-be-higher-a-month-from",
-      "market_prob": 0.9600156721915074,
-      "model_prob": 0.94,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Bitcoin opened at $64,090 on August 5 and is currently trading around $79,500 (+24% above baseline) with 11.6 days remaining until resolution on September 5. For the market to resolve NO, BTC would need to suffer a >19.4% drawdown in under 12 days. While crypto volatility leaves a tail risk (~6%) of a severe crash, the likelihood of remaining above $64,090 is around 94%.",
-      "uncertainty": "Whether a sudden market-wide liquidation or macroeconomic shock triggers a >19.4% drop in BTC price before September 5.",
-      "resolution_risk": "Discrepancies in minute-by-minute CoinGecko data relative to spot exchange quotes at the exact 744-hour mark.",
-      "evidence_for": [
-        "Opening price on August 5, 2026 was $64,090.",
-        "Current BTC price as of August 25, 2026 is between $78,900 and $80,700, approximately 23-26% above the baseline.",
-        "Only 11.6 days remain until the resolution timestamp on September 5, 2026.",
-        "Trading volume and market momentum remain strong following recent institutional inflows."
-      ],
-      "evidence_against": [
-        "Bitcoin is highly volatile and capable of sudden 20%+ drawdowns during market panic or macro shocks within a 12-day window."
-      ],
-      "reason": "edge 0.020 below minimum 0.04"
     }
   ]
 }
