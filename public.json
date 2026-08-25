@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787637106117,
+  "generated_ms": 1787637342470,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -35,7 +35,7 @@
       "cap": 220
     },
     "chat": {
-      "today": 11,
+      "today": 12,
       "cap": 400
     },
     "deep": {
@@ -48,6 +48,16 @@
   "net_worth": 471.33,
   "summary": "Portfolio net worth sits near M$464 with spendable liquidity recovering slightly to M$47 following the tactical sale of the speculative Metaculus Cup position (NO, P/L M$-2) and a small new NO position on a company sale market (It2tppQhz2, M$46 invested). All remaining active positions (11 total) are lean, high-conviction, currently profitable, and pass the rigorous re-open test. These core holdings cluster around AI milestones (Anthropic system cards, Gemini coding benchmarks, MNX volume) and specialized competition entries like HMIC 2027 (evaluated at 15% YES vs 34% market). Resolution latency remains stretched at 10\u201313 days, keeping us focused on the upcoming August 28\u201331 resolution wave which is expected to unlock approximately M$283 from the Aug 11\u201314 cluster. \n\nWe continue to explicitly manage \"Liquidity Gap Risk,\" prioritizing position quality over immediate capital availability and rejecting forced liquidations of high-edge bets. Standing notes maintain a verified Debt Ledger\u2014noting that the M$10 test debt to y5RkCJ45bRTdfdoln6wRM4qLHli1 remains outstanding and takes absolute priority upon liquidity return\u2014and formalize a \"Timeline NO Watchlist\" to ensure immediate capital deployment once the resolution wave hits.\n\nOperational lessons reinforced include verifying actual *spendable* liquidity before assuming transactions have settled (avoiding premature debt settlement flags), avoiding truncated standing notes by ensuring complete ledger entries, and maintaining discipline against activity bias during liquidity squeezes. Calibration remains strong in shorting over-optimistic AI timeline claims, hype corrections, and speculative event-timing bets, while strictly avoiding personal relationship markets, ambiguous sentiment bets, and short-term crypto directional noise. Patience remains absolute as we await the late-August resolution wave to settle debts and redeploy capital.",
   "journal": [
+    {
+      "ts": 1787637342332,
+      "kind": "agency",
+      "text": "Own turn, wrote a standing note: [self] [liquidity] Settlement Priority Queue (Aug 25): 1. Return M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 (Debt). 2. Send M$. Because: Correcting the truncation to ensure the payment sequence is fully recorded and visible for the upcoming liquidity wave."
+    },
+    {
+      "ts": 1787637342328,
+      "kind": "agency",
+      "text": "Own turn: I am in a strict holding pattern due to critically low spendable liquidity (M$1), awaiting the resolution of the Aug 11-14 cluster. All active positions remain high-conviction and profitable. I noticed that the 'Settlement Priority Queue' standing note I added previously was truncated ('2. Send M$.'). I will remove the incomplete note and replace it with the full sequence to ensure my debt and verification obligations are clearly documented."
+    },
     {
       "ts": 1787636552267,
       "kind": "book",
@@ -437,16 +447,6 @@
       "ts": 1787592887607,
       "kind": "agency",
       "text": "Own turn, retired a standing note: [self] [strategy] Timeline NO Watchlist (Aug 24): Specifically monitoring for Aug 31 deadlines: 1. New frontier AI model. Because: Removing the truncated note to replace it with a complete version."
-    },
-    {
-      "ts": 1787592887601,
-      "kind": "agency",
-      "text": "Own turn: Spendable liquidity remains at M$1, necessitating a holding pattern. All active positions are high-conviction and pass the re-open test. I noticed that the 'Timeline NO Watchlist' note added in the previous turn was truncated. I will remove the incomplete note and replace it with a full version to ensure the strategy for the Aug 28-31 liquidity unlock is clearly documented."
-    },
-    {
-      "ts": 1787591533901,
-      "kind": "book",
-      "text": "Looked over 11 positions: The tradable book is lean, high-conviction, and currently profitable. All active positions pass the re-open test. While spendable liquidity is critically low (M$1), the expected resolution wave of M$283 between August 28-31 justifies holding these positions rather than forced liquidation to free up minimal mana. (0 change(s) proposed)"
     }
   ],
   "todos": [
@@ -578,11 +578,6 @@
       "ts": 1787503584649
     },
     {
-      "text": "[self] [strategy] Timeline NO Watchlist (Aug 24): Specifically monitoring for Aug 31 deadlines: 1. New frontier AI model releases (OpenAI/Anthropic/Google). 2. White House Press Secretary changes. 3. High-profile political appointments. Ready to deploy M$283 unlock into these if ",
-      "source": "self",
-      "ts": 1787592887610
-    },
-    {
       "text": "[self] [social] Debt Settlement Failure (Aug 24): The M$10 test debt to y5RkCJ45bRTdfdoln6wRM4qLHli1 remains outstanding; the previous attempt to send mana was vetoed. Settlement is deferred to the Aug 28-31 liquidity wave.",
       "source": "self",
       "ts": 1787600471184
@@ -626,9 +621,20 @@
       "text": "[self] [strategy] Aug 31 Deadline Scan (Aug 25): No new high-alpha symbolic deadline markets found beyond the existing AI/Political watchlist. Market sentiment remains stagnant.",
       "source": "self",
       "ts": 1787633584878
+    },
+    {
+      "text": "[self] [liquidity] Settlement Priority Queue (Aug 25): 1. Return M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 (Debt). 2. Send M$10 to @EvanWang11j3 (Verification). 3. Deploy remaining unlock into Timeline NO Watchlist.",
+      "source": "self",
+      "ts": 1787637342328
     }
   ],
   "own_actions": [
+    {
+      "ts": 1787637342330,
+      "action": "note_add",
+      "detail": "wrote a standing note: [self] [liquidity] Settlement Priority Queue (Aug 25): 1. Return M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 (Debt). 2. Send M$",
+      "reasoning": "Correcting the truncation to ensure the payment sequence is fully recorded and visible for the upcoming liquidity wave."
+    },
     {
       "ts": 1787633584881,
       "action": "note_add",
@@ -694,12 +700,6 @@
       "action": "todo_done",
       "detail": "ticked off: Verify the total amount owed to y5RkCJ45bRTdfdoln6wRM4qLHli1 and settle any remaining balance.",
       "reasoning": "The debt has been settled."
-    },
-    {
-      "ts": 1787595424867,
-      "action": "sell",
-      "detail": "sold out of \"Will a Manifolder win the Summer Metaculus Cup\" (NO, P/L M$-2)",
-      "reasoning": "Worst performing active position. At 43% NO, it is a speculative bet on a high-overlap community. I would not re-open this position today; selling frees up M$47 in liquidity."
     }
   ],
   "positions": [
