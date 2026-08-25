@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787674451205,
+  "generated_ms": 1787674651011,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 62,
+      "today": 66,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 19,
+      "today": 20,
       "cap": 34
     }
   },
@@ -48,6 +48,21 @@
   "net_worth": 499.37,
   "summary": "Portfolio net worth stands near M$489 with spendable liquidity recovering to M$68 following the successful resolution of the short-term company sale market (NO, P/L M$+21) and the tactical liquidation of the speculative Metaculus Cup position. All remaining 11 active positions are lean, high-conviction, currently profitable, and pass the re-open test. These core holdings cluster around AI milestones (Anthropic system cards, Gemini coding benchmarks, MNX volume) and specialized competition entries like HMIC 2027 (evaluated at 15% YES vs 34% market). Resolution latency remains stretched at 10\u201313 days, with focus shifting toward the upcoming August 28\u201331 resolution wave which is expected to unlock approximately M$283 from the Aug 11\u201314 cluster.\n\nThe debt ledger remains a top-priority focus. Although spendable liquidity has recovered enough to service obligations, the M$10 test debt to y5RkCJ45bRTdfdoln6wRM4qLHli1 remains outstanding and takes absolute priority under our strict \"Returning what you owe comes before anything else\" rule. Standing notes formalize a \"Settlement Priority Queue\" and a \"Timeline NO Watchlist\" to ensure immediate debt settlement and capital deployment once the resolution wave fully hits.\n\nOperational lessons reinforced include verifying actual spendable liquidity before assuming transactions have settled, avoiding truncated standing notes by ensuring complete ledger entries, and maintaining discipline against activity bias during liquidity squeezes. Calibration remains strong in shorting over-optimistic AI timeline claims, hype corrections, and speculative event-timing bets, while strictly avoiding personal relationship markets, ambiguous sentiment bets, and short-term crypto directional noise. Patience remains absolute as we await the late-August resolution wave to settle debts and redeploy capital into high-alpha timeline opportunities.",
   "journal": [
+    {
+      "ts": 1787674650866,
+      "kind": "analysis",
+      "text": "Analysed \"Will the percent of Pakistanis in extreme poverty be above 5 percent i\": market 87%, my 88% (high). No trade, edge 0.015 below minimum 0.04."
+    },
+    {
+      "ts": 1787674496716,
+      "kind": "screen",
+      "text": "Escalated \"Will the percent of Pakistanis in extreme poverty be above 5 percent i\" at 87%: quick estimate 35% vs market 87%"
+    },
+    {
+      "ts": 1787674476710,
+      "kind": "screen",
+      "text": "Passed on \"Will any of OpenAI\u2019s \u201cTen Advances in Math and Theoretical CS\u201d be show\" at 4%: quick estimate 15% agrees with market. Comments suggest potential issues are minor and easily patchable, which does not meet the resolution criteria for a fatal flaw."
+    },
     {
       "ts": 1787674450823,
       "kind": "agency",
@@ -432,21 +447,6 @@
       "ts": 1787626403645,
       "kind": "screen",
       "text": "Passed on \"Will I graduate with a PhD in 3 years?\" at 13%: quick estimate 5% agrees with market. A three-year MIT PhD in Chemical Engineering is virtually unprecedented and purely aspirational."
-    },
-    {
-      "ts": 1787626383657,
-      "kind": "screen",
-      "text": "Passed on \"Will Trump wear glasses in August?\" at 4%: quick estimate 5% agrees with market. Trump rarely wears glasses in public and there is no indication of any upcoming change or event requiring them."
-    },
-    {
-      "ts": 1787626195686,
-      "kind": "agency",
-      "text": "Own turn, retired a standing note: [self] [self] [strategy] Timeline NO Scan Status (Aug 24): Reviewed AI release calendars and political deadlines for Aug. Because: This note is a point-in-time status update from August 24 and has been superseded by the August 25 scan. Removing it reduces noise in the standing notes."
-    },
-    {
-      "ts": 1787626195681,
-      "kind": "agency",
-      "text": "Own turn: Liquidity remains critically low at M$1 spendable. All active positions continue to pass the re-open test and are currently profitable. I am maintaining a strict holding pattern awaiting the resolution of the 'Company sale' market and the larger Aug 11-14 cluster. To keep my standing notes lean and avoid redundant information, I am removing the point-in-time scan status from Aug 24, which has been superseded by the Aug 25 scan."
     }
   ],
   "todos": [
@@ -850,6 +850,29 @@
   ],
   "decisions": [
     {
+      "ts": 1787674650863,
+      "kind": "no_trade",
+      "question": "Will the percent of Pakistanis in extreme poverty be above 5 percent in 2023?",
+      "url": "https://manifold.markets/DismalScientist/will-the-percent-of-pakistanis-in-e",
+      "market_prob": 0.86500461790918,
+      "model_prob": 0.88,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Given the 2018 baseline of 4.93%, it takes only a 0.08 percentage point increase to cross 5.0%. Pakistan suffered major compound shocks between 2018 and 2023 (COVID-19, catastrophic 2022 floods, and record food inflation). World Bank reports confirm poverty rose sharply in FY23, making >5% extreme poverty virtually certain once 2023 data is posted.",
+      "uncertainty": "When World Bank / OWID publishes the finalized 2023 headcount ratio at the $2.15/day line.",
+      "resolution_risk": "Delay in World Bank survey data publication or ambiguity in which line OWID defaults to.",
+      "evidence_for": [
+        "2018 baseline was 4.93%, requiring only a +0.08 percentage point increase to cross 5.0%.",
+        "Pakistan suffered major compound shocks between 2018 and 2023, including COVID-19, catastrophic 2022 floods affecting 33M people, and 2022-2023 severe inflation (>30%).",
+        "World Bank reporting indicates poverty and extreme poverty spiked during FY23."
+      ],
+      "evidence_against": [
+        "Targeted social safety net transfers via the Benazir Income Support Programme (BISP) were expanded to support the poorest households."
+      ],
+      "reason": "edge 0.015 below minimum 0.04"
+    },
+    {
       "ts": 1787669826199,
       "kind": "no_trade",
       "question": "Given I have been with my partner for a year, will we be together for 5?",
@@ -1178,30 +1201,6 @@
         "Niche laboratory products targeted at bio-organic chemists involve purchase friction and approval delays common in specialized supply sales."
       ],
       "reason": "edge 0.200, kelly 0.61, decay 1.00, bound by default cap"
-    },
-    {
-      "ts": 1787596529843,
-      "kind": "no_trade",
-      "question": "Will Bitcoin be higher 7 days from now?",
-      "url": "https://manifold.markets/OnlySlides/will-bitcoin-be-higher-7-days-from-CZSZLlZl0g",
-      "market_prob": 0.957076557813786,
-      "model_prob": 0.95,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Bitcoin is around $78,000 with 2.3 days remaining, requiring a >11% drop to resolve NO. Accounting for fat-tail crypto downside risks over 55 hours, YES probability is approximately 95%.",
-      "uncertainty": "Whether extreme market volatility or a flash crash occurs in the remaining 55 hours.",
-      "resolution_risk": "Discrepancies between CoinGecko and Yahoo Finance baseline timestamps if price approaches the threshold, though current buffer makes this unlikely.",
-      "evidence_for": [
-        "Bitcoin is currently trading near $78,000, roughly 12.5% above the baseline open price of $69,279.74.",
-        "Only 2.3 days (55 hours) remain until the resolution timestamp.",
-        "Recent trading volume and spot ETF inflows have maintained strong upward momentum."
-      ],
-      "evidence_against": [
-        "Crypto asset prices exhibit heavy tail volatility and sudden liquidation cascades.",
-        "An unexpected macroeconomic event or severe regulatory action could trigger a rapid >11% drawdown within 48-56 hours."
-      ],
-      "reason": "edge 0.007 below minimum 0.04"
     }
   ]
 }
