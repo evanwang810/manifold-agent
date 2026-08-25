@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787618776485,
+  "generated_ms": 1787619098518,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 2,
+      "today": 5,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 0,
+      "today": 1,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 465.16,
   "summary": "Portfolio net worth sits near M$464 with spendable liquidity strictly bottlenecked at M$1, keeping us in a tight defensive holding pattern. Recent activity successfully cut a failing Anthropic Opus 5 patch position (YES, P/L M$-21) and a UK riot prosecution bet (YES, P/L M$-57), reducing total net worth from M$534. All remaining active positions (11 total) are lean, high-conviction, currently in profit or near break-even, and pass the re-open test. These core positions cluster around AI milestones (Anthropic system cards, Gemini coding benchmarks, MNX volume) and specialized competition entries like HMIC 2027 (evaluated at 15% YES vs 34% market). \n\nResolution latency has stretched to 10\u201313 days, with the Aug 11\u201314 cluster awaiting resolution. Updated calculations place the expected liquidity unlock from closed positions at M$283 during the upcoming August 28\u201331 resolution wave. We have explicitly documented this as \"Liquidity Gap Risk,\" prioritizing position quality over immediate capital availability and rejecting forced liquidations. Standing notes maintain a verified Debt Ledger (recording M$10 to y5RkCJ45bRTdfdoln6wR) and formalize a \"Timeline NO Watchlist\" to ensure immediate capital deployment once liquidity returns.\n\nOperational lessons reinforced include verifying actual *spendable* liquidity before promising transactions, avoiding truncated standing notes by ensuring complete ledger entries, and maintaining discipline against activity bias during liquidity squeezes. Calibration remains strong in shorting over-optimistic AI timeline claims, hype corrections, and speculative event-timing bets, while strictly avoiding personal relationship markets, ambiguous sentiment bets, and short-term crypto directional noise. Patience remains absolute as we await the late-August resolution wave.",
   "journal": [
+    {
+      "ts": 1787619098472,
+      "kind": "analysis",
+      "text": "Analysed \"Will bitcoin rise to 85k before the Strait of Hormuz is freely open?\": market 94%, my 32% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1787618962418,
+      "kind": "screen",
+      "text": "Escalated \"Will bitcoin rise to 85k before the Strait of Hormuz is freely open?\" at 94%: quick estimate 35% vs market 94%"
+    },
     {
       "ts": 1787618772278,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1787581405836,
       "kind": "screen",
       "text": "Passed on \"Will Starship Ship 40 be recovered to shore?\" at 87%: quick estimate 85% agrees with market. Comments confirm Ship 40 is already being towed into Christmas Island port with recovery vessels present."
-    },
-    {
-      "ts": 1787580824890,
-      "kind": "book",
-      "text": "Looked over 11 positions: The book is tightly managed, with all active positions in profit or near break-even and passing the re-open test. Spendable liquidity is bottlenecked at M$1, but an expected resolution wave of M$283 between August 28-31 will soon unlock capital. Forced liquidation is suboptimal, so no changes are proposed. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1787579155980,
-      "kind": "analysis",
-      "text": "Analysed \"Given I have been with my partner for a year, will we be together for \": market 71%, my 64% (medium). No trade, size floored to zero by balance reserve."
     }
   ],
   "todos": [
@@ -838,6 +838,30 @@
   ],
   "decisions": [
     {
+      "ts": 1787619098469,
+      "kind": "no_trade",
+      "question": "Will bitcoin rise to 85k before the Strait of Hormuz is freely open?",
+      "url": "https://manifold.markets/apol/will-bitcoin-rise-to-85k-before-the",
+      "market_prob": 0.9372469993748368,
+      "model_prob": 0.32,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With BTC around $79k and the market scheduled to close on Sept 1, BTC needs a ~7.6% gain to achieve a daily closing price of $85k on CoinMarketCap in the next 7 days before Hormuz is declared open. Historical 7-day return distributions give roughly a 32% chance of achieving this target within the remaining window.",
+      "uncertainty": "Whether the market creator will resolve NO on September 1 if neither condition has triggered or extend the resolution window further.",
+      "resolution_risk": "Potential creator extension past September 1 or ambiguity in timing of CoinMarketCap daily closing updates.",
+      "evidence_for": [
+        "Bitcoin is currently trading near $79,000, requiring a ~7.6% increase to reach $85,000.",
+        "The Strait of Hormuz remains operating under active shipping restrictions and is very unlikely to be declared 'freely open' by authoritative bodies within the next week."
+      ],
+      "evidence_against": [
+        "The market closes on September 1, 2026 (7 days away), leaving a narrow window for Bitcoin to reach the target.",
+        "Resolution criteria require a daily closing price on CoinMarketCap of $85,000 or higher, not merely an intraday wick.",
+        "Historical 7-day probability of Bitcoin achieving a +7.6% gain on a daily close basis is approximately 30-35%."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1787613978024,
       "kind": "no_trade",
       "question": "Will Kalafina appear in Puella Magi Madoka Magica: Walpurgisnacht Rising?",
@@ -1168,30 +1192,6 @@
         "Unforeseen catastrophic geopolitical events or systemic financial panic could trigger sharp multi-day market sell-offs."
       ],
       "reason": "edge 0.020 below minimum 0.04"
-    },
-    {
-      "ts": 1787556834987,
-      "kind": "no_trade",
-      "question": "[Will Brown] Will Transformative AI look like an abundance of specialized models, in August 2026?",
-      "url": "https://manifold.markets/Bayesian/will-brown-will-transformative-ai-l",
-      "market_prob": 0.11173957804925876,
-      "model_prob": 0.13,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "",
-      "uncertainty": "Whether the poll phrasing and voter turnout on Manifold in August 2026 lean toward broad AI tool adoption or strict generalist AGI definitions.",
-      "resolution_risk": "The poll outcome depends entirely on user sentiment at the time the poll is posted, and poll options/thresholds could be interpreted strictly (>50%) or relatively.",
-      "evidence_for": [
-        "In August 2026, the AI ecosystem heavily features specialized domain models (e.g., Qwen-Coder, AlphaFold 3, Nemotron 3 Nano) alongside general foundation models.",
-        "Some voters may interpret current AI progress as being driven by specialized tools rather than a single monolithic general intelligence."
-      ],
-      "evidence_against": [
-        "Manifold users heavily favor generalist scaling / AGI definitions for Transformative AI (TAI) over narrow specialized models.",
-        "Will Brown's contrarian takes on TAI architecture typically fail to win a majority (>50%) vote in community polls on Manifold.",
-        "Previous assessment recorded a 12% estimate reflecting strong community consensus against specialized models being equivalent to TAI."
-      ],
-      "reason": "edge 0.018 below minimum 0.04"
     }
   ]
 }
