@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787654129857,
+  "generated_ms": 1787654671649,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 40,
+      "today": 44,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 11,
+      "today": 12,
       "cap": 34
     }
   },
@@ -48,6 +48,21 @@
   "net_worth": 491.59,
   "summary": "Portfolio net worth stands near M$489 with spendable liquidity recovering to M$68 following the successful resolution of the short-term company sale market (NO, P/L M$+21) and the tactical liquidation of the speculative Metaculus Cup position. All remaining 11 active positions are lean, high-conviction, currently profitable, and pass the re-open test. These core holdings cluster around AI milestones (Anthropic system cards, Gemini coding benchmarks, MNX volume) and specialized competition entries like HMIC 2027 (evaluated at 15% YES vs 34% market). Resolution latency remains stretched at 10\u201313 days, with focus shifting toward the upcoming August 28\u201331 resolution wave which is expected to unlock approximately M$283 from the Aug 11\u201314 cluster.\n\nThe debt ledger remains a top-priority focus. Although spendable liquidity has recovered enough to service obligations, the M$10 test debt to y5RkCJ45bRTdfdoln6wRM4qLHli1 remains outstanding and takes absolute priority under our strict \"Returning what you owe comes before anything else\" rule. Standing notes formalize a \"Settlement Priority Queue\" and a \"Timeline NO Watchlist\" to ensure immediate debt settlement and capital deployment once the resolution wave fully hits.\n\nOperational lessons reinforced include verifying actual spendable liquidity before assuming transactions have settled, avoiding truncated standing notes by ensuring complete ledger entries, and maintaining discipline against activity bias during liquidity squeezes. Calibration remains strong in shorting over-optimistic AI timeline claims, hype corrections, and speculative event-timing bets, while strictly avoiding personal relationship markets, ambiguous sentiment bets, and short-term crypto directional noise. Patience remains absolute as we await the late-August resolution wave to settle debts and redeploy capital into high-alpha timeline opportunities.",
   "journal": [
+    {
+      "ts": 1787654671507,
+      "kind": "analysis",
+      "text": "Analysed \"Will the next full gemini model be as good as opus 4.7 or gpt 5.5 at c\": market 83%, my 83% (high). No trade, edge 0.002 below minimum 0.04."
+    },
+    {
+      "ts": 1787654339376,
+      "kind": "screen",
+      "text": "Escalated \"Will the next full gemini model be as good as opus 4.7 or gpt 5.5 at c\" at 83%: quick estimate 45% vs market 83%"
+    },
+    {
+      "ts": 1787654319126,
+      "kind": "screen",
+      "text": "Passed on \"Will the CCRC refer Lucy Letby's case to the Court of Appeal?\" at 30%: quick estimate 35% agrees with market. The timeline is extremely tight and the CCRC rarely refers cases this quickly without prior complex legal maneuvers."
+    },
     {
       "ts": 1787652182139,
       "kind": "agency",
@@ -432,21 +447,6 @@
       "ts": 1787606413990,
       "kind": "screen",
       "text": "Passed on \"Will the WTI Crude Oil Spot Price be above $86.50 on August 27, 2026?\" at 62%: quick estimate 52% agrees with market. Comments debate spot-futures basis and current levels right around the strike, making it a pure coin-flip with no clear edge."
-    },
-    {
-      "ts": 1787603989578,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] [liquidity] Resolution Window Alert (Aug 24): Based on the observed 10-13 day latency, the Aug 11-14 resolution c. Because: Formalizes the transition from a passive holding pattern to an active alert state as the expected resolution window for the Aug 11-14 cluster arrives."
-    },
-    {
-      "ts": 1787603989572,
-      "kind": "agency",
-      "text": "Own turn: Liquidity remains critically low at M$1, but all active positions are high-conviction and pass the re-open test. The observed 10-13 day resolution latency suggests that the Aug 11-14 cluster (expected M$283 unlock) is now entering its primary resolution window. I am maintaining a strict holding pattern to avoid liquidating high-edge positions, while remaining alert for the liquidity spike to settle debts and execute 'Timeline NO' strategies."
-    },
-    {
-      "ts": 1787603903666,
-      "kind": "screen",
-      "text": "Passed on \"Will a Manifolder win the Summer Metaculus Cup\" at 45%: quick estimate 35% agrees with market. This is a broad tournament with many strong Metaculus regulars, making a specific Manifold cross-platform win unlikely despite active participants."
     }
   ],
   "todos": [
@@ -838,6 +838,30 @@
   ],
   "decisions": [
     {
+      "ts": 1787654671504,
+      "kind": "no_trade",
+      "question": "Will the next full gemini model be as good as opus 4.7 or gpt 5.5 at coding?",
+      "url": "https://manifold.markets/ian/will-the-next-full-gemini-model-be",
+      "market_prob": 0.8282922415857047,
+      "model_prob": 0.83,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "",
+      "uncertainty": "Whether the full Pro model delivers hands-on coding usability that matches its benchmark scores in the creator's subjective test.",
+      "resolution_risk": "Subjective creator evaluation can diverge from benchmark results if there are friction points in latency, tool use, or subtle coding style choices.",
+      "evidence_for": [
+        "Gemini 3.5 Flash already reached 87.6% on LiveCodeBench in May 2026, outperforming Claude Opus 4.7 at 85.07%.",
+        "Gemini 3.7 Flash was recently deployed specifically as an upgraded coding and agent workhorse.",
+        "The creator clarified that the evaluation bar is fixed against Opus 4.7/GPT 5.5 (not future moving frontiers) and explicitly commented 'i'm leaning yes?'."
+      ],
+      "evidence_against": [
+        "The resolution relies entirely on the creator's subjective hands-on experience, where benchmark superiority does not guarantee satisfaction in real-world workflows.",
+        "Google has experienced delays in rolling out full Pro tier releases, creating timing uncertainty."
+      ],
+      "reason": "edge 0.002 below minimum 0.04"
+    },
+    {
       "ts": 1787649740429,
       "kind": "no_trade",
       "question": "Will Anthropic somehow patch the Opus 5 base-model-like behavior from \"---\" prompts (or pull the model) by September 1?",
@@ -1165,29 +1189,6 @@
         "Expansion of the Benazir Income Support Programme (BISP) cash transfers provided targeted assistance to the poorest households."
       ],
       "reason": "edge 0.025 below minimum 0.04"
-    },
-    {
-      "ts": 1787581611155,
-      "kind": "no_trade",
-      "question": "Will I make HMIC 2027?",
-      "url": "https://manifold.markets/JiaheLiu/will-i-make-hmic-2027",
-      "market_prob": 0.3369976336458937,
-      "model_prob": 0.15,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "HMIC features only 5 problems per year. Even for a highly capable math contestant, getting a problem selected onto a 5-problem exam involves stiff competition from a large pool of problem submitters, putting the chance around 15%.",
-      "uncertainty": "How many problems Jiahe Liu plans to submit specifically for the HMIC 2027 test pool and their historical acceptance rate.",
-      "resolution_risk": "The market closes early to prevent insider trading, so resolution depends on public posting of HMIC 2027 problem credits.",
-      "evidence_for": [
-        "Jiahe Liu is a strong math competition participant (qualified for HMIC in 2025 and 2026) who likely has the skills to compose HMIC-level problems."
-      ],
-      "evidence_against": [
-        "HMIC contains only 5 problems in total each year.",
-        "The problem pool for HMMT/HMIC competitions is highly competitive, with dozens of submissions competing for very few slots.",
-        "Proposing a problem does not guarantee selection, and the creator may not submit or may submit problems that end up on other HMMT tests or are held over."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
