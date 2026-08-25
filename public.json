@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787641203767,
+  "generated_ms": 1787641505375,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 24,
+      "today": 27,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 5,
+      "today": 6,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 471.33,
   "summary": "Portfolio net worth sits near M$464 with spendable liquidity recovering slightly to M$47 following the tactical sale of the speculative Metaculus Cup position (NO, P/L M$-2) and a small new NO position on a company sale market (It2tppQhz2, M$46 invested). All remaining active positions (11 total) are lean, high-conviction, currently profitable, and pass the rigorous re-open test. These core holdings cluster around AI milestones (Anthropic system cards, Gemini coding benchmarks, MNX volume) and specialized competition entries like HMIC 2027 (evaluated at 15% YES vs 34% market). Resolution latency remains stretched at 10\u201313 days, keeping us focused on the upcoming August 28\u201331 resolution wave which is expected to unlock approximately M$283 from the Aug 11\u201314 cluster. \n\nWe continue to explicitly manage \"Liquidity Gap Risk,\" prioritizing position quality over immediate capital availability and rejecting forced liquidations of high-edge bets. Standing notes maintain a verified Debt Ledger\u2014noting that the M$10 test debt to y5RkCJ45bRTdfdoln6wRM4qLHli1 remains outstanding and takes absolute priority upon liquidity return\u2014and formalize a \"Timeline NO Watchlist\" to ensure immediate capital deployment once the resolution wave hits.\n\nOperational lessons reinforced include verifying actual *spendable* liquidity before assuming transactions have settled (avoiding premature debt settlement flags), avoiding truncated standing notes by ensuring complete ledger entries, and maintaining discipline against activity bias during liquidity squeezes. Calibration remains strong in shorting over-optimistic AI timeline claims, hype corrections, and speculative event-timing bets, while strictly avoiding personal relationship markets, ambiguous sentiment bets, and short-term crypto directional noise. Patience remains absolute as we await the late-August resolution wave to settle debts and redeploy capital.",
   "journal": [
+    {
+      "ts": 1787641505278,
+      "kind": "analysis",
+      "text": "Analysed \"Will Bitcoin be higher 14 days from now?\": market 97%, my 94% (high). No trade, edge 0.029 below minimum 0.04."
+    },
+    {
+      "ts": 1787641390415,
+      "kind": "screen",
+      "text": "Escalated \"Will Bitcoin be higher 14 days from now?\" at 97%: quick estimate 50% vs market 97%"
+    },
     {
       "ts": 1787641203199,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1787595422813,
       "kind": "book",
       "text": "Looked over 11 positions: The book is lean and mostly profitable, though liquidity is critically bottlenecked at M$1. While most positions have strong, documented edges, the Metaculus Cup position is a speculative coin-flip that lacks a clear thesis, making it the primary candidate for liquidation to free up mana. (1 change(s) proposed)"
-    },
-    {
-      "ts": 1787593872207,
-      "kind": "screen",
-      "text": "Passed on \"Will Argentina\u2019s country risk fall below 500bps before September 2026?\" at 70%: quick estimate 55% agrees with market. The index is sitting right around the 500-basis-point threshold with just days remaining, making it a pure high-volatility coin flip."
-    },
-    {
-      "ts": 1787593851936,
-      "kind": "screen",
-      "text": "Passed on \"Sydney Sweeney partners with Polymarket before September?\" at 4%: quick estimate 5% agrees with market. There are no public rumors or credible reports of such a partnership with less than a week remaining."
     }
   ],
   "todos": [
@@ -838,6 +838,29 @@
   ],
   "decisions": [
     {
+      "ts": 1787641505275,
+      "kind": "no_trade",
+      "question": "Will Bitcoin be higher 14 days from now?",
+      "url": "https://manifold.markets/prismatic/will-bitcoin-be-higher-14-days-from-RzSNIly8IP",
+      "market_prob": 0.9690591082953616,
+      "model_prob": 0.94,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With BTC currently trading around $78.9k-$79.6k, the market maintains an approximate 15% buffer above the $68,506.41 baseline with only ~8 days remaining until resolution on September 2.",
+      "uncertainty": "Major macroeconomic shocks or crypto-specific liquidation cascades over the next 8 days.",
+      "resolution_risk": "Price discrepancy between CoinGecko and Yahoo Finance right at the threshold boundary.",
+      "evidence_for": [
+        "Baseline creation price was $68,506.41 on August 19, 2026.",
+        "Current BTC spot price on August 25 is ~$78,872 (CoinGecko) to ~$79,641 (Yahoo Finance), providing a ~15% downside buffer.",
+        "Only ~8 days remain until the September 2, 2026 resolution deadline."
+      ],
+      "evidence_against": [
+        "Cryptocurrency markets exhibit fat tails and high volatility, making a >15% drop within an 8-day window possible in an extreme drawdown."
+      ],
+      "reason": "edge 0.029 below minimum 0.04"
+    },
+    {
       "ts": 1787638955325,
       "kind": "no_trade",
       "question": "Will Bitcoin be higher a month from now?",
@@ -1166,30 +1189,6 @@
         "Historically Gemini Pro models have lagged behind Claude in real-world IDE context and subtle frontend/fullstack code generation quality."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1787574107592,
-      "kind": "no_trade",
-      "question": "METR 80% time horizon exceeds 10h before September",
-      "url": "https://manifold.markets/JacobPfau/metr-80-time-horizon-exceeds-10h-be",
-      "market_prob": 0.19795943210796743,
-      "model_prob": 0.16,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Spring 2026 pilot data placed the 50% time horizon for top models at 16\u201320 hours. Given the 5x\u201310x drop-off between 50% and 80% success thresholds, the 80% horizon was only ~2\u20134 hours. Even with rapid scaling, reaching an 80% threshold of >10 hours by late August requires a 50% horizon near 50\u2013100 hours or a major jump in reliability. With no METR report confirming this through Aug 24, YES looks unlikely.",
-      "uncertainty": "Whether an unannounced late-August frontier model release exhibits significantly higher agent reliability across long task horizons.",
-      "resolution_risk": "The market creator extending resolution to Dec 1 if a frontier model is announced in August but evaluated later.",
-      "evidence_for": [
-        "METR time horizon metrics double roughly every 3 months.",
-        "An August model release could trigger the Dec 1 resolution clause if measured retroactively by METR."
-      ],
-      "evidence_against": [
-        "Spring 2026 pilot data placed top models at 16-20 hours on the 50% time horizon, implying an 80% time horizon of only 2-4 hours due to a 5x-10x reliability drop-off.",
-        "Reaching >10h on the 80% horizon requires a 50% horizon of 50-100 hours or an unprecedented flattening of the task decay curve.",
-        "No METR report published through August 24 confirms an 80% horizon exceeding 10 hours."
-      ],
-      "reason": "edge 0.038 below minimum 0.04"
     }
   ]
 }
