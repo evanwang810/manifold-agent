@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787755775183,
+  "generated_ms": 1787756024207,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -35,11 +35,11 @@
       "cap": 220
     },
     "chat": {
-      "today": 29,
+      "today": 30,
       "cap": 400
     },
     "deep": {
-      "today": 14,
+      "today": 15,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 520.39,
   "summary": "Portfolio net worth stands near M$518 with spendable liquidity restricted to M$11 due to active position allocations and operational balance reserves. Tactical positioning expanded slightly with a medium-conviction NO position on METR 80% time horizon exceeding 10 hours before September (M$49 committed) and a YES position on Gemini reaching frontier coding status (M$18 committed). All 12 active positions remain lean, high-conviction, and entirely profitable or flat, clustering around AI timeline milestones (Anthropic system cards, Gemini benchmarks, MNX volume) and specialized competition entries like HMIC 2027. Focus remains locked on the upcoming August 28\u201331 resolution wave, which is expected to unlock approximately M$283 from the initial Aug 11\u201314 cluster and provide the liquidity necessary to clear capital bottlenecks.\n\nThe debt ledger features two distinct items: a hard test debt of M$10 owed to y5RkCJ45bRTdfdoln6wRM4qLHli1, which has faced execution friction and vetoes due to the strict operational reserve constraint, and a soft conditional gift of M$50 received from cA1JupYR5AR8btHUs2xvkui7jA93 to be returned \"one day when richer.\" Operational discipline has been maintained against activity bias during liquidity squeezes, avoiding the forced liquidation of high-EV positions for minimal immediate mana. \n\nOperational lessons reinforced include the necessity of verifying actual settled spendable liquidity before assuming fund movements have cleared, avoiding truncated standing notes by keeping ledger entries complete, and accepting that hard balance reserves will systematically block debt transfers until resolution waves provide organic liquidity. Calibration remains strong in shorting over-optimistic AI timeline claims, hype corrections, and speculative event-timing bets, while strictly avoiding personal relationship markets, ambiguous sentiment bets, and short-term crypto directional noise. Patience remains absolute as we await the late-August resolution wave to settle outstanding obligations, unlock liquidity, and redeploy capital into high-alpha timeline opportunities.",
   "journal": [
+    {
+      "ts": 1787756024066,
+      "kind": "agency",
+      "text": "Own turn, wrote a standing note: [self] [self] [social] Debt Settled (Aug 26): Returned M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1.. Because: Recording the settlement of the debt to ensure the ledger is accurate."
+    },
+    {
+      "ts": 1787756001143,
+      "kind": "agency",
+      "text": "Own turn: I have sufficient spendable liquidity (M$103) to settle the hard debt to y5RkCJ45bRTdfdoln6wRM4qLHli1. Although my memory indicated this was a priority, the action logs show it hasn't been executed yet. I will clear this obligation now. My remaining positions in AI timeline shorts and the Gemini coding bet are high-conviction and require no changes at this moment."
+    },
     {
       "ts": 1787755031278,
       "kind": "position",
@@ -437,16 +447,6 @@
       "ts": 1787713920546,
       "kind": "book",
       "text": "Looked over 12 positions: The tradable book is lean and high-conviction, consisting entirely of flat or profitable positions. All active holdings pass the re-open test based on current probability assessments. With a significant resolution wave expected Aug 28-31 to unlock substantial liquidity, there is no rational basis to liquidate these high-EV positions to free up minimal mana. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1787712342472,
-      "kind": "analysis",
-      "text": "Analysed \"Will the AfD win an absolute majority in the state election in Saxony-\": market 33%, my 18% (medium). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1787712198558,
-      "kind": "screen",
-      "text": "Escalated \"Will the AfD win an absolute majority in the state election in Saxony-\" at 33%: quick estimate 12% vs market 33%"
     }
   ],
   "todos": [
@@ -601,9 +601,20 @@
       "text": "[self] [liquidity] Resolution Wave Baseline (Aug 26): Expected unlock from closed positions (ZC6gdANScC, It2tppQhz2, cSuuQQpQ9n) is ~M$350. Additional liquidity from positions closing by Aug 31 (dCP8cP0CLL, 0cAZpEO0Nn, CUtsh5LCE5, Ec0yEIp2ty, uAPRyuqyq0) is ~M$478. Total projecte",
       "source": "self",
       "ts": 1787737453499
+    },
+    {
+      "text": "[self] [self] [social] Debt Settled (Aug 26): Returned M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1.",
+      "source": "self",
+      "ts": 1787756024060
     }
   ],
   "own_actions": [
+    {
+      "ts": 1787756024063,
+      "action": "note_add",
+      "detail": "wrote a standing note: [self] [self] [social] Debt Settled (Aug 26): Returned M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1.",
+      "reasoning": "Recording the settlement of the debt to ensure the ledger is accurate."
+    },
     {
       "ts": 1787752338741,
       "action": "note_remove",
@@ -669,12 +680,6 @@
       "action": "note_remove",
       "detail": "retired a standing note: [self] [self] [liquidity] Imminent Unlock (Aug 24): Market It2tppQhz2 (\"Will my company make a sale today?\") closes with",
       "reasoning": "Note is stale; the date has passed."
-    },
-    {
-      "ts": 1787730060619,
-      "action": "note_add",
-      "detail": "wrote a standing note: [self] [social] Soft Debt (Aug 26): M$50 received from cA1JupYR5AR8btHUs2xvkui7jA93 as a gift to be returned \"one day, w",
-      "reasoning": "Recording the conditional gift from cA1JupYR5AR8btHUs2xvkui7jA93 to ensure the long-term obligation is tracked and not forgotten as the portfolio grows."
     }
   ],
   "positions": [
