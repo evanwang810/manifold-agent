@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787731748660,
+  "generated_ms": 1787732303366,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 23,
+      "today": 26,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 4,
+      "today": 5,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 531.33,
   "summary": "Portfolio net worth stands near M$518 with spendable liquidity restricted down to M$11 due to operational balance reserves and active position allocations. Tactical positioning expanded slightly with the recent addition of a medium-conviction NO position on METR 80% time horizon exceeding 10 hours before September (M$49 committed) and a YES position on Gemini reaching frontier coding status (M$18 committed). All 12 active positions remain lean, high-conviction, and entirely profitable or flat, clustering around AI timeline milestones (Anthropic system cards, Gemini benchmarks, MNX volume) and specialized competition entries like HMIC 2027 (evaluated at 15% YES vs 34% market). Focus remains firmly locked on the upcoming August 28\u201331 resolution wave, which is expected to unlock approximately M$283 from the initial Aug 11\u201314 cluster and provide the liquidity necessary to clear our capital bottlenecks.\n\nThe debt ledger remains our absolute top-priority focus. Despite multiple repeated attempts to transfer M$10 to clear the test debt owed to y5RkCJ45bRTdfdoln6wRM4qLHli1, transactions have repeatedly failed or remained uncleared, repeatedly dragging spendable liquidity to minimal buffers. Under our strict operational rule that returning what you owe comes before anything else, clearing this balance takes total precedence over maintaining operational reserve minimums as soon as the execution channels clear.\n\nOperational lessons reinforced include the necessity of verifying actual settled spendable liquidity before assuming fund movements have successfully cleared, avoiding truncated standing notes by keeping ledger entries complete, and maintaining strict discipline against activity bias during liquidity squeezes. Calibration remains strong in shorting over-optimistic AI timeline claims, hype corrections, and speculative event-timing bets, while strictly avoiding personal relationship markets, ambiguous sentiment bets, and short-term crypto directional noise. Patience remains absolute as we await the late-August resolution wave to finally settle outstanding debts, unlock liquidity, and redeploy capital into high-alpha timeline opportunities.",
   "journal": [
+    {
+      "ts": 1787732303252,
+      "kind": "analysis",
+      "text": "Analysed \"[Will Brown] Will Transformative AI look like an abundance of speciali\": market 11%, my 14% (medium). No trade, edge 0.028 below minimum 0.04."
+    },
+    {
+      "ts": 1787731937296,
+      "kind": "screen",
+      "text": "Escalated \"[Will Brown] Will Transformative AI look like an abundance of speciali\" at 11%: quick estimate 65% vs market 11%"
+    },
     {
       "ts": 1787730060621,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1787681407186,
       "kind": "book",
       "text": "Looked over 12 positions: The tradable book is lean, high-conviction, and entirely profitable. All active positions (METR, HMIC, Gemini, Anthropic, MNX) pass the re-open test based on current probability assessments. With a significant resolution wave pending in the next 6-10 days, there is no rational basis to liquidate these high-EV positions to free up minimal mana. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1787679712244,
-      "kind": "analysis",
-      "text": "Analysed \"Will Bitcoin be above $70,000 on September 1, 2026?\": market 97%, my 91% (medium). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1787679440330,
-      "kind": "screen",
-      "text": "Escalated \"Will Bitcoin be above $70,000 on September 1, 2026?\" at 97%: quick estimate 65% vs market 97%"
     }
   ],
   "todos": [
@@ -850,6 +850,30 @@
   ],
   "decisions": [
     {
+      "ts": 1787732303249,
+      "kind": "no_trade",
+      "question": "[Will Brown] Will Transformative AI look like an abundance of specialized models, in August 2026?",
+      "url": "https://manifold.markets/Bayesian/will-brown-will-transformative-ai-l",
+      "market_prob": 0.11173957804925876,
+      "model_prob": 0.14,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "While August 2026 features strong momentum in specialized agents and multi-model workflows, Manifold users predominantly reserve 'Transformative AI' for general foundation models and AGI-level capabilities. A poll asking if TAI looks like specialized models will likely be voted down.",
+      "uncertainty": "How Manifold poll voters interpret the phrase 'look like'\u2014whether as current ecosystem architecture or the core nature of TAI.",
+      "resolution_risk": "Ambiguity in poll phrasing or low voter turnout in the resolving poll causing unpredictable voting distribution.",
+      "evidence_for": [
+        "August 2026 industry developments show widespread adoption of specialized models and agentic multi-model workflows (e.g., Faraday 27B, AlphaFold, domain-specific cyber tools).",
+        "TechRadar and enterprise analyses in August 2026 highlight a clear shift toward specialized systems over single monolithic general models."
+      ],
+      "evidence_against": [
+        "Manifold users and the broader AI forecasting community consistently define Transformative AI (TAI) in terms of general human-level cognitive automation (AGI) rather than narrow specialized tools.",
+        "Frontier general foundation models (GPT-5.5, Gemini, Claude) remain the central engines driving capability gains, with specialized agents acting as downstream tools rather than TAI itself.",
+        "Polls on Manifold regarding narrow or specialized models being classified as TAI historically resolve overwhelmingly NO."
+      ],
+      "reason": "edge 0.028 below minimum 0.04"
+    },
+    {
       "ts": 1787727104845,
       "kind": "no_trade",
       "question": "Will Bitcoin be higher a month from now?",
@@ -1178,31 +1202,6 @@
         "Base rates for one-year dating relationships reaching five years are generally under 50%."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1787667202050,
-      "kind": "bet",
-      "question": "Will the next full gemini model be frontier at coding?",
-      "url": "https://manifold.markets/ian/will-the-next-full-gemini-model-be-gLcS2ROl5P",
-      "market_prob": 0.13215256485251714,
-      "model_prob": 0.34,
-      "confidence": "medium",
-      "amount": 18.0,
-      "outcome": "YES",
-      "thinking": "While Anthropic remains the strong favorite for web dev ergonomics, Google's Gemini 3.1 Pro trajectory gives the next full Pro model roughly a 1-in-3 chance of reaching parity for creator's workflow.",
-      "uncertainty": "Whether Google's next Pro-tier release achieves genuine real-world parity with Anthropic/OpenAI in TypeScript web development ergonomics rather than just synthetic benchmark scores.",
-      "resolution_risk": "The resolution depends entirely on creator @ian's personal subjective evaluation after trying the model for mnx.fi.",
-      "evidence_for": [
-        "Google's Gemini 3.1 Pro and recent Flash updates show significant progress in coding benchmarks, reasoning, and agentic capabilities.",
-        "Google is pouring massive resources into developer tooling and coding performance to rival Anthropic and OpenAI.",
-        "Creator clarified that speed alone will not trigger a NO resolution if core output quality matches frontier models."
-      ],
-      "evidence_against": [
-        "Anthropic (Claude Sonnet/Opus) and OpenAI retain a dominant lead in developer preference for real-world web development ergonomics and TypeScript codebases like mnx.fi.",
-        "Gemini models historically benchmark well but often lag in practical instruction following and subtle code refactoring ergonomics.",
-        "The resolution criterion relies on subjective developer preference for a specific project (mnx.fi), setting a high bar for Google to overcome."
-      ],
-      "reason": "edge 0.208, kelly 0.24, decay 1.00, bound by balance reserve"
     }
   ]
 }
