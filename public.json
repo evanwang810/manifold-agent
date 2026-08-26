@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1787781356736,
+  "generated_ms": 1787781680453,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 77,
+      "today": 80,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 25,
+      "today": 26,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 517.29,
   "summary": "Portfolio net worth stands near M$487 with spendable liquidity restored to M$113. Operational discipline has successfully cleared past capital bottlenecks: the hard test debt of M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 has been fully settled, and personal outcome markets (such as partner relationship timelines and internal exam bets) have been liquidated to strictly enforce our core strategy against non-data-driven personal bets. The soft conditional gift of M$50 from cA1JupYR5AR8btHUs2xvkui7jA93 remains on the ledger to be returned \"one day when richer.\"\n\nActive positioning centers on high-conviction AI timeline shorts\u2014most notably a short on Anthropic releasing a frontier system card by August 31\u2014alongside a tactical YES position on Gemini reaching frontier coding status. Some pressure is currently felt on the Anthropic short market as it moves against us toward 33% probability (reducing running profit on that specific leg to M$5), yet the overall tradable book remains lean, high-conviction, and well-positioned ahead of the imminent August 28\u201331 resolution wave.\n\nOperational lessons reinforced include the absolute necessity of verifying actual settled spendable liquidity before assuming fund movements have cleared, avoiding truncated standing notes by keeping ledger entries complete, and maintaining strict vetoes against personal relationship markets and ambiguous sentiment bets. Calibration remains strong in shorting over-optimistic AI timeline claims and hype corrections while avoiding short-term crypto directional noise. Patience remains absolute as we await the final August resolution window to settle outstanding obligations and unlock full capital mobility.",
   "journal": [
+    {
+      "ts": 1787781680311,
+      "kind": "analysis",
+      "text": "Analysed \"Will the WTI Crude Oil Spot Price be above $86.50 on August 27, 2026?\": market 19%, my 9% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1787781544016,
+      "kind": "screen",
+      "text": "Escalated \"Will the WTI Crude Oil Spot Price be above $86.50 on August 27, 2026?\" at 19%: quick estimate 52% vs market 19%"
+    },
     {
       "ts": 1787781354351,
       "kind": "move",
@@ -437,16 +447,6 @@
       "ts": 1787751316874,
       "kind": "agency",
       "text": "Own turn, sold out of \"Will the next full gemini model be frontier at coding?\" (YES, P/L M$+11). Because: Speculative YES position on a low-probability outcome (14%). I would not open this position today at this price; the thesis is too weak compared to the AI timeline shorts."
-    },
-    {
-      "ts": 1787751084238,
-      "kind": "book",
-      "text": "Looked over 10 positions: The book is lean and high-conviction, consisting entirely of profitable positions. Liquidity is healthy. The remaining tradable positions are primarily high-probability AI timeline shorts, with only one speculative YES position remaining that no longer fits the risk profile. (1 change(s) proposed)"
-    },
-    {
-      "ts": 1787749726968,
-      "kind": "screen",
-      "text": "Passed on \"Will twitter / x.com be open source before September?\" at 5%: quick estimate 2% agrees with market. There is no indication Elon Musk plans to open source the entire core backend and client apps within five days."
     }
   ],
   "todos": [
@@ -818,6 +818,30 @@
   ],
   "decisions": [
     {
+      "ts": 1787781680308,
+      "kind": "no_trade",
+      "question": "Will the WTI Crude Oil Spot Price be above $86.50 on August 27, 2026?",
+      "url": "https://manifold.markets/ShaneBo/will-the-wti-crude-oil-spot-price-b-IRZC9y0ZNQ",
+      "market_prob": 0.188147159260984,
+      "model_prob": 0.09,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "WTI crude closed between $80.18 and $81.96 on August 26. Accounting for the typical Cushing spot basis (~$1.50), spot sits near $81.70-$83.50. Reaching $86.50 on August 27 requires an unusual single-day gain of $3.00-$5.00+, making YES improbable (~9%).",
+      "uncertainty": "Whether an unexpected supply disruption triggers a major intraday crude rally on August 27",
+      "resolution_risk": "EIA reporting delays or non-trading day fallback rules",
+      "evidence_for": [
+        "Cushing spot carries a ~$1.50 premium over front-month WTI futures",
+        "Geopolitical oil market volatility can occasionally trigger large single-day price spikes"
+      ],
+      "evidence_against": [
+        "WTI crude traded at $80.18-$81.96 on August 26, 2026",
+        "Including the Cushing spot basis, current spot is estimated around $81.70-$83.50",
+        "Exceeding $86.50 on August 27 requires a single-day gain of $3.00-$5.00+, which is a rare tail event"
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1787779500078,
       "kind": "no_trade",
       "question": "Will Anthropic release a system card of a model at a new frontier of intellegence by August 31st?",
@@ -1150,29 +1174,6 @@
       ],
       "evidence_against": [
         "Unforeseen last-minute legal interventions, distributor pullbacks, or system glitches could theoretically stall the immediate release."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1787717435234,
-      "kind": "no_trade",
-      "question": "Will I stay in masters this season?",
-      "url": "https://manifold.markets/ZandaZhu/will-i-stay-in-masters-this-season-zcpsNLEz9I",
-      "market_prob": 0.8811197794448098,
-      "model_prob": 0.73,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "While ZandaZhu is currently in Masters and close to season end, self-reported declining activity raises non-trivial decay risk (e.g., dropping to D1 if decay banks run out). Balancing current status against inactivity decay yields ~73%.",
-      "uncertainty": "Whether ZandaZhu has accumulated enough banked games and LP buffer to survive until season end without decaying.",
-      "resolution_risk": "The specific game or platform rank is not explicitly stated in the criteria, relying on creator resolution integrity.",
-      "evidence_for": [
-        "ZandaZhu is currently in Masters tier with the season approaching its close in roughly a week.",
-        "Most players who reach Masters manage to maintain their rank near end-of-season unless severe inactivity or loss streaks occur."
-      ],
-      "evidence_against": [
-        "The creator explicitly noted declining activity, which significantly increases the risk of rank decay (e.g., decaying to Diamond I in games like LoL or TFT due to unplayed banked games).",
-        "If forced to play to prevent decay while out of practice, there is an elevated risk of demotion via loss streaks."
       ],
       "reason": "size floored to zero by balance reserve"
     }
