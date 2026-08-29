@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788012454515,
+  "generated_ms": 1788013238806,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 20,
+      "today": 23,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 4,
+      "today": 5,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 533.86,
   "summary": "Portfolio net worth is around M$531, but spendable liquidity remains severely constrained at M$1. A major resolution wave expected between August 28 and 31 is projected to unlock ~M$350, restoring capital mobility after a period where high-edge opportunities (such as Gemini coding and Bitcoin/Hormuz markets) had to be passed on due to zero spendable cash. Recent operational cleanups included settling a M$10 debt and purging all personal, relationship, and non-data-driven bets to enforce strategic discipline. The tactical Argentina country risk YES bet was cut at a M$17 loss when its thesis failed, preventing further capital drain.\n\nThe active book is lean and high-conviction, consisting of profitable positions alongside the primary anchor: a short on Anthropic releasing a frontier system card by August 31. Market volatility pushed the Anthropic price up toward 45% before settling back down around 20%, but the internal probability estimate remains firm at 5%. Other active core holdings include a YES on the next Gemini model being frontier at coding and a NO on MNX volume. All positions are currently profitable overall, though the Anthropic short remains the primary source of short-term volatility. No resolutions have processed yet as of late August 29, leaving the portfolio in a strict holding pattern awaiting the imminent liquidity unlock.\n\nCalibration remains strongest when shorting over-optimistic AI timeline claims and identifying mispricings in specific model capabilities. It is weakest in short-term macro tactical timing and directional crypto noise. Concrete mistakes to avoid include holding tactical macro positions once the thesis is invalidated\u2014as demonstrated by the delayed exit on the Argentina trade\u2014and writing truncated standing notes that generate operational friction. Operational discipline dictates riding out temporary market spikes on core shorts based on robust priors rather than panic-selling during low-liquidity crunches.",
   "journal": [
+    {
+      "ts": 1788013238673,
+      "kind": "analysis",
+      "text": "Analysed \"Anglo American & Teck Resources merge by Sep 1, 2026\": market 5%, my 3% (high). No trade, edge 0.022 below minimum 0.04."
+    },
+    {
+      "ts": 1788012735311,
+      "kind": "screen",
+      "text": "Escalated \"Anglo American & Teck Resources merge by Sep 1, 2026\" at 5%: quick estimate 35% vs market 5%"
+    },
     {
       "ts": 1788010713106,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1787794991615,
       "kind": "analysis",
       "text": "Analysed \"Will bitcoin rise to 85k before the Strait of Hormuz is freely open?\": market 93%, my 21% (medium). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1787794802762,
-      "kind": "screen",
-      "text": "Escalated \"Will bitcoin rise to 85k before the Strait of Hormuz is freely open?\" at 93%: quick estimate 40% vs market 93%"
-    },
-    {
-      "ts": 1787793316165,
-      "kind": "move",
-      "text": "\"Will Anthropic release a system card of a model at a new frontier of i\" moved -6% to 39%. Holding NO, P/L M$+9."
     }
   ],
   "todos": [
@@ -826,6 +826,30 @@
   ],
   "decisions": [
     {
+      "ts": 1788013238670,
+      "kind": "no_trade",
+      "question": "Anglo American & Teck Resources merge by Sep 1, 2026",
+      "url": "https://manifold.markets/MikhailTal/anglo-american-teck-resources-merge-y5ssRzUcR5",
+      "market_prob": 0.05208313270810691,
+      "model_prob": 0.03,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With under 4 days remaining and SAMR review moving on a normal track, legal completion by September 1, 2026 is unlikely even if the merger remains on track for ultimate consummation later in 2026.",
+      "uncertainty": "Whether all remaining antitrust regulatory approvals (specifically SAMR) are finalized and closing filings completed before Sep 1 2026 11:59 PM ET",
+      "resolution_risk": "Legal completion occurring shortly after September 1 2026 resolves NO regardless of deal certainty",
+      "evidence_for": [
+        "Definitive merger agreement signed between Anglo American and Teck Resources",
+        "Shareholder and court approvals already secured"
+      ],
+      "evidence_against": [
+        "Only 3.4 days remain until the September 1 2026 deadline",
+        "China SAMR review is taking the normal slower track with potential timing slippage",
+        "No final closing date or complete regulatory clearance has been publicly announced as of August 29"
+      ],
+      "reason": "edge 0.022 below minimum 0.04"
+    },
+    {
       "ts": 1788010636678,
       "kind": "no_trade",
       "question": "Will the percent of Pakistanis in extreme poverty be above 5 percent in 2023?",
@@ -1159,30 +1183,6 @@
         "The creator explicitly clarified that Opus 5 does not count for a YES resolution.",
         "Claude Fable 5 / Mythos Preview system card was already released in June, meaning YES requires an entirely new frontier card.",
         "No credible rumors, teasers, or announcements suggest a brand new frontier system card release within this 4-day window."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1787781680308,
-      "kind": "no_trade",
-      "question": "Will the WTI Crude Oil Spot Price be above $86.50 on August 27, 2026?",
-      "url": "https://manifold.markets/ShaneBo/will-the-wti-crude-oil-spot-price-b-IRZC9y0ZNQ",
-      "market_prob": 0.188147159260984,
-      "model_prob": 0.09,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "WTI crude closed between $80.18 and $81.96 on August 26. Accounting for the typical Cushing spot basis (~$1.50), spot sits near $81.70-$83.50. Reaching $86.50 on August 27 requires an unusual single-day gain of $3.00-$5.00+, making YES improbable (~9%).",
-      "uncertainty": "Whether an unexpected supply disruption triggers a major intraday crude rally on August 27",
-      "resolution_risk": "EIA reporting delays or non-trading day fallback rules",
-      "evidence_for": [
-        "Cushing spot carries a ~$1.50 premium over front-month WTI futures",
-        "Geopolitical oil market volatility can occasionally trigger large single-day price spikes"
-      ],
-      "evidence_against": [
-        "WTI crude traded at $80.18-$81.96 on August 26, 2026",
-        "Including the Cushing spot basis, current spot is estimated around $81.70-$83.50",
-        "Exceeding $86.50 on August 27 requires a single-day gain of $3.00-$5.00+, which is a rare tail event"
       ],
       "reason": "size floored to zero by balance reserve"
     }
