@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788026258486,
+  "generated_ms": 1788026804497,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 26,
+      "today": 29,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 6,
+      "today": 7,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 541.48,
   "summary": "Portfolio net worth is around M$531, but spendable liquidity remains severely constrained at M$1. A major resolution wave expected between August 28 and 31 is projected to unlock ~M$350, restoring capital mobility after a period where high-edge opportunities (such as Gemini coding and Bitcoin/Hormuz markets) had to be passed on due to zero spendable cash. Recent operational cleanups included settling a M$10 debt and purging all personal, relationship, and non-data-driven bets to enforce strategic discipline. The tactical Argentina country risk YES bet was cut at a M$17 loss when its thesis failed, preventing further capital drain.\n\nThe active book is lean and high-conviction, consisting of profitable positions alongside the primary anchor: a short on Anthropic releasing a frontier system card by August 31. Market volatility pushed the Anthropic price up toward 45% before settling back down around 20%, but the internal probability estimate remains firm at 5%. Other active core holdings include a YES on the next Gemini model being frontier at coding and a NO on MNX volume. All positions are currently profitable overall, though the Anthropic short remains the primary source of short-term volatility. No resolutions have processed yet as of late August 29, leaving the portfolio in a strict holding pattern awaiting the imminent liquidity unlock.\n\nCalibration remains strongest when shorting over-optimistic AI timeline claims and identifying mispricings in specific model capabilities. It is weakest in short-term macro tactical timing and directional crypto noise. Concrete mistakes to avoid include holding tactical macro positions once the thesis is invalidated\u2014as demonstrated by the delayed exit on the Argentina trade\u2014and writing truncated standing notes that generate operational friction. Operational discipline dictates riding out temporary market spikes on core shorts based on robust priors rather than panic-selling during low-liquidity crunches.",
   "journal": [
+    {
+      "ts": 1788026804156,
+      "kind": "analysis",
+      "text": "Analysed \"Will Anthropic somehow patch the Opus 5 base-model-like behavior from \": market 10%, my 7% (high). No trade, edge 0.031 below minimum 0.04."
+    },
+    {
+      "ts": 1788026446686,
+      "kind": "screen",
+      "text": "Escalated \"Will Anthropic somehow patch the Opus 5 base-model-like behavior from \" at 10%: quick estimate 45% vs market 10%"
+    },
     {
       "ts": 1788024404738,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1787829727780,
       "kind": "screen",
       "text": "Escalated \"Will Anthropic somehow patch the Opus 5 base-model-like behavior from \" at 13%: quick estimate 42% vs market 13%"
-    },
-    {
-      "ts": 1787827469033,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] [portfolio] Tradable Baseline (Aug 27): Holding uAPRyuqyq0 (NO), N2Zuz5RuIE (YES), CUtsh5LCE5 (YES), Ec0yEIp2ty (. Because: To document the state of the portfolio during the zero-liquidity period, ensuring that the subsequent deployment of the resolution wave is based on a stable, high-conviction baseline."
-    },
-    {
-      "ts": 1787827469027,
-      "kind": "agency",
-      "text": "Own turn: Liquidity is currently zero, and my tradable book (Anthropic NO, Argentina YES, Gemini YES, MNX NO) remains high-conviction. The Anthropic position is volatile (currently 44% vs my 5% estimate), but the edge is too large to justify selling. I am in a strict holding pattern awaiting the resolution of 7 closed positions. I will record the current tradable baseline to ensure a clean audit trail for the post-liquidity deployment phase."
     }
   ],
   "todos": [
@@ -713,7 +713,7 @@
       "profit": 68.2,
       "prob": 0.186,
       "closed": false,
-      "days_to_close": 1.3
+      "days_to_close": 1.2
     },
     {
       "question": "Will something happen this week in AI (by 5pm EST August 14)?",
@@ -749,7 +749,7 @@
       "profit": 52.5,
       "prob": 0.049,
       "closed": false,
-      "days_to_close": 2.3
+      "days_to_close": 2.2
     },
     {
       "question": "Will the next full gemini model be frontier at coding?",
@@ -825,6 +825,29 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1788026804153,
+      "kind": "no_trade",
+      "question": "Will Anthropic somehow patch the Opus 5 base-model-like behavior from \"---\" prompts (or pull the model) by September 1?",
+      "url": "https://manifold.markets/KeenanPepper/will-anthropic-somehow-patch-the-op",
+      "market_prob": 0.10063089125959818,
+      "model_prob": 0.07,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With the exploit still active as of August 28 and the weekend now here, it is highly improbable that Anthropic will deploy a complete patch or pull Opus 5 before the September 1 deadline.",
+      "uncertainty": "Whether Anthropic has a silent patch or output classifier scheduled to go live on Monday, August 31.",
+      "resolution_risk": "Anthropic could deploy a highly restrictive input filter that technically blocks the specific prompts but leaves minor variations open, leading to a close dispute.",
+      "evidence_for": [
+        "Anthropic is aware of the markdown delimiter exploit and has previously patched similar issues with classifiers."
+      ],
+      "evidence_against": [
+        "The exploit has been known since at least late July and remained unpatched as of August 28.",
+        "Today is Saturday, August 29, and the weekend timeline makes a non-emergency model patch or model pull highly unlikely before the September 1 deadline.",
+        "Partial rate reductions do not count as a patch under the resolution criteria."
+      ],
+      "reason": "edge 0.031 below minimum 0.04"
+    },
     {
       "ts": 1788024245709,
       "kind": "no_trade",
@@ -1160,29 +1183,6 @@
         "Market creator dreev explicitly stated Tesla stayed at demo/pilot scale and indicated an intent to resolve to NO or a very low probability."
       ],
       "reason": "edge 0.008 below minimum 0.04"
-    },
-    {
-      "ts": 1787794991613,
-      "kind": "no_trade",
-      "question": "Will bitcoin rise to 85k before the Strait of Hormuz is freely open?",
-      "url": "https://manifold.markets/apol/will-bitcoin-rise-to-85k-before-the",
-      "market_prob": 0.9252844858947104,
-      "model_prob": 0.21,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Hormuz remains closed, so the condition is active. However, with BTC around $78.7k and only 5 days until the Sept 1 deadline, the probability of BTC gaining 8%+ to secure an $85k daily close on CoinMarketCap is around 21%.",
-      "uncertainty": "Whether Bitcoin can achieve an 8%+ multi-day rally to secure an $85,000 daily close within the remaining 5 days.",
-      "resolution_risk": "The market creator could potentially extend the market close date again if the Strait of Hormuz remains closed past September 1, 2026.",
-      "evidence_for": [
-        "Strait of Hormuz is currently not freely open under U.S. blockade and Iranian military escorts, fulfilling the conditional state requirement.",
-        "BTC sits at ~$78,700, requiring an 8.0% gain to reach the $85,000 threshold."
-      ],
-      "evidence_against": [
-        "Only 5 days remain before the September 1, 2026 market close date.",
-        "Resolution requires a daily closing price on CoinMarketCap of $85,000, meaning brief intraday spikes will not trigger a YES resolution."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
