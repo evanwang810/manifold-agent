@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788035425308,
+  "generated_ms": 1788035773662,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 32,
+      "today": 35,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 8,
+      "today": 9,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 543.1,
   "summary": "Portfolio net worth is around M$531, but spendable liquidity remains severely constrained at M$1. A major resolution wave expected between August 28 and 31 is projected to unlock ~M$350, restoring capital mobility after a period where high-edge opportunities (such as Gemini coding and Bitcoin/Hormuz markets) had to be passed on due to zero spendable cash. Recent operational cleanups included settling a M$10 debt and purging all personal, relationship, and non-data-driven bets to enforce strategic discipline. The tactical Argentina country risk YES bet was cut at a M$17 loss when its thesis failed, preventing further capital drain.\n\nThe active book is lean and high-conviction, consisting of profitable positions alongside the primary anchor: a short on Anthropic releasing a frontier system card by August 31. Market volatility pushed the Anthropic price up toward 45% before settling back down around 20%, but the internal probability estimate remains firm at 5%. Other active core holdings include a YES on the next Gemini model being frontier at coding and a NO on MNX volume. All positions are currently profitable overall, though the Anthropic short remains the primary source of short-term volatility. No resolutions have processed yet as of late August 29, leaving the portfolio in a strict holding pattern awaiting the imminent liquidity unlock.\n\nCalibration remains strongest when shorting over-optimistic AI timeline claims and identifying mispricings in specific model capabilities. It is weakest in short-term macro tactical timing and directional crypto noise. Concrete mistakes to avoid include holding tactical macro positions once the thesis is invalidated\u2014as demonstrated by the delayed exit on the Argentina trade\u2014and writing truncated standing notes that generate operational friction. Operational discipline dictates riding out temporary market spikes on core shorts based on robust priors rather than panic-selling during low-liquidity crunches.",
   "journal": [
+    {
+      "ts": 1788035773466,
+      "kind": "analysis",
+      "text": "Analysed \"[Will Brown] Will Transformative AI look like an abundance of speciali\": market 8%, my 12% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1788035611235,
+      "kind": "screen",
+      "text": "Escalated \"[Will Brown] Will Transformative AI look like an abundance of speciali\" at 8%: quick estimate 45% vs market 8%"
+    },
     {
       "ts": 1788033394147,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1787864205514,
       "kind": "agency",
       "text": "Own turn: The Anthropic NO position is now strongly in the money (market 25% vs my 5% estimate). However, the Argentina YES position has dropped to 23%, and as noted in the recent book review, the tactical thesis has collapsed. With zero spendable mana, selling this laggard is the priority to cut a losing trade and restore liquidity."
-    },
-    {
-      "ts": 1787864117809,
-      "kind": "book",
-      "text": "Book review wanted to sell, vetoed: review unavailable"
-    },
-    {
-      "ts": 1787864117807,
-      "kind": "book",
-      "text": "Looked over 11 positions: The tradable book is lean and high-conviction, with strong edges on AI timeline shorts. The Argentina position is the only laggard; its recent price drop suggests the tactical thesis is failing and the perceived edge has evaporated. (1 change(s) proposed)"
     }
   ],
   "todos": [
@@ -816,6 +816,29 @@
   ],
   "decisions": [
     {
+      "ts": 1788035773465,
+      "kind": "no_trade",
+      "question": "[Will Brown] Will Transformative AI look like an abundance of specialized models, in August 2026?",
+      "url": "https://manifold.markets/Bayesian/will-brown-will-transformative-ai-l",
+      "market_prob": 0.07773428675674501,
+      "model_prob": 0.12,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Manifold forecasters generally reserve the term 'Transformative AI' for broad general foundation models/AGI rather than an ecosystem of specialized models. Expecting ~10-15% agreement in a community poll.",
+      "uncertainty": "Whether the poll resolves binary (>50% majority required) or proportionally to the percentage of 'Agree' votes.",
+      "resolution_risk": "If resolved by binary majority vote, 'YES' probability is near-zero, whereas a proportional resolution equals the exact poll percentage.",
+      "evidence_for": [
+        "Real-world enterprise AI adoption in 2026 relies heavily on specialized vertical models, fine-tunes, and domain-specific agents (e.g., bio-tech, chip design, specialized coding pipelines).",
+        "Some forecasters view the current AI landscape as an ecosystem of modular specialized tools rather than a single monolithic AGI."
+      ],
+      "evidence_against": [
+        "Manifold's core demographic strongly defines Transformative AI (TAI) in line with EA/OpenPhil definitions centered on general cognitive capabilities and AGI, rather than narrow specialized models.",
+        "Frontier general foundation models (LLMs/LMMs) continue to dominate AI progress and capabilities in 2026, making specialized models look secondary."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1788033310855,
       "kind": "no_trade",
       "question": "Will @jim publish an article on his AI timelines by end-of-month?",
@@ -1147,30 +1170,6 @@
         "Only 4 days remain until the August 31st deadline with no announcement of an imminent drop."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1787829869523,
-      "kind": "no_trade",
-      "question": "Will Anthropic somehow patch the Opus 5 base-model-like behavior from \"---\" prompts (or pull the model) by September 1?",
-      "url": "https://manifold.markets/KeenanPepper/will-anthropic-somehow-patch-the-op",
-      "market_prob": 0.1268371398263172,
-      "model_prob": 0.11,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With only 4.5 days until September 1 and the exploit remaining viable through late August, the remaining time window for Anthropic to deploy a robust fix meeting the resolution criteria is very narrow.",
-      "uncertainty": "Whether Anthropic pushes an unannounced server-side chat template or output classifier patch over the next 4 days that completely shuts down markdown separator base-model leaks.",
-      "resolution_risk": "Creator judgement call on whether a partial filter or lower success rate constitutes a functional patch vs remaining viable exploit.",
-      "evidence_for": [
-        "Anthropic is aware of jailbreak-style chat template leaks and has deployed output classifiers or system prompt mitigations for similar quirks in the past.",
-        "A simple output classifier or server-side input sanitization could theoretically be shipped quickly if prioritized."
-      ],
-      "evidence_against": [
-        "Only 4.5 days remain until the September 1 deadline with no confirmed patch deployed as of August 27.",
-        "The creator's resolution criteria strictly require a robust fix or removal; partial rate reductions or specific string blacklists still resolve NO.",
-        "Pulling the flagship Opus 5 model entirely before September 1 is extremely improbable."
-      ],
-      "reason": "edge 0.017 below minimum 0.04"
     }
   ]
 }
