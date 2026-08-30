@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788104497302,
+  "generated_ms": 1788104831005,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 26,
+      "today": 29,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 5,
+      "today": 6,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 569.92,
   "summary": "Portfolio net worth stands at approximately M$563, though spendable liquidity remains critically constrained at M$1 spendable (effectively a forced holding pattern). A tactical loss of M$17 was recently realized on an Argentina country risk bet after its thesis failed, freeing M$25 before capital locked down. The active book is lean, high-conviction, and entirely in profit, anchored by three core positions: a heavily profitable short on Anthropic releasing a frontier system card (NO, trading down at 13% vs 5% internal estimate, yielding ~M$85 P/L), a YES on the next Gemini model being frontier at coding, and a NO on MNX volume. \n\nA major resolution wave is expected by August 31 (with the Anthropic NO position closing within 24 hours) to unlock roughly M$350 and resolve capital mobility issues. This crunch highlighted significant opportunity cost\u2014passing on edges in Bitcoin/Hormuz, Tesla robotaxis, and METR timelines due to zero liquidity\u2014exacerbated by an observed ~18-day resolution latency for the August 11-14 cluster. Social obligations are tracked in standing notes: a priority return of M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 and a conditional debt of M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, both slated for immediate sequencing once liquidity returns.\n\nCalibration remains strongest when shorting over-optimistic AI timelines and identifying model capability mispricings, and weakest in short-term macro tactical timing and directional crypto noise. Concrete mistakes to avoid include holding tactical macro positions once the thesis has been invalidated, and failing to factor in resolution latency when sizing risk across parallel bets. Operational discipline dictates riding out volatility on high-conviction shorts rather than liquidating winning positions for marginal liquidity during a crunch.",
   "journal": [
+    {
+      "ts": 1788104830890,
+      "kind": "analysis",
+      "text": "Analysed \"Anglo American & Teck Resources merge by Sep 1, 2026\": market 5%, my 2% (high). No trade, edge 0.032 below minimum 0.04."
+    },
+    {
+      "ts": 1788104685031,
+      "kind": "screen",
+      "text": "Escalated \"Anglo American & Teck Resources merge by Sep 1, 2026\" at 5%: quick estimate 35% vs market 5%"
+    },
     {
       "ts": 1788102418115,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1787990110595,
       "kind": "analysis",
       "text": "Analysed \"Will the next full gemini model be frontier at coding?\": market 14%, my 38% (medium). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1787989926599,
-      "kind": "screen",
-      "text": "Escalated \"Will the next full gemini model be frontier at coding?\" at 14%: quick estimate 45% vs market 14%"
-    },
-    {
-      "ts": 1787989902434,
-      "kind": "screen",
-      "text": "Passed on \"Will Deshaun Watson ever play in another NFL game?\" at 97%: quick estimate 85% agrees with market. Given reports that he is active and expected to play preseason games, a YES resolution is heavily favored without needing deeper analysis."
     }
   ],
   "todos": [
@@ -826,6 +826,31 @@
   ],
   "decisions": [
     {
+      "ts": 1788104830887,
+      "kind": "no_trade",
+      "question": "Anglo American & Teck Resources merge by Sep 1, 2026",
+      "url": "https://manifold.markets/MikhailTal/anglo-american-teck-resources-merge-y5ssRzUcR5",
+      "market_prob": 0.05208313270810691,
+      "model_prob": 0.02,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With today being August 30, 2026, there are under 48 hours until the September 1 deadline. Mid-August press guidance targets closing between September 2026 and March 2027 due to ongoing SAMR regulatory reviews. Legal completion before September 1 is virtually impossible.",
+      "uncertainty": "Whether regulatory clearance and legal closing could somehow occur within the next 48 hours",
+      "resolution_risk": "A closing completed on or before Sep 1 whose official announcement is delayed by a few hours into Sep 2",
+      "evidence_for": [
+        "Companies announced the executive leadership team for Anglo Teck on July 30, 2026",
+        "Teck completed US notes consent solicitations in mid-August 2026 to align bond docs ahead of combining"
+      ],
+      "evidence_against": [
+        "Today is August 30, 2026, leaving less than 48 hours until the September 1, 2026 deadline",
+        "August 2026 reporting explicitly states expected completion between September 2026 and March 2027",
+        "China SAMR regulatory review remains ongoing under standard timeline with no final approval announced",
+        "No closing announcements or RNS/SEC filings declaring legal completion have occurred as of August 30"
+      ],
+      "reason": "edge 0.032 below minimum 0.04"
+    },
+    {
       "ts": 1788102348671,
       "kind": "no_trade",
       "question": "Will the percent of Pakistanis in extreme poverty be above 5 percent in 2023?",
@@ -1148,29 +1173,6 @@
       "evidence_against": [
         "Reaching an $85,000 daily close on CoinMarketCap requires a +7.6% gain within ~3 days before the scheduled September 1 close date.",
         "Iran and Oman are actively negotiating a transit fee framework that could lead to a diplomatic resolution and reopening before Bitcoin makes another major leg up."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1787990110594,
-      "kind": "no_trade",
-      "question": "Will the next full gemini model be frontier at coding?",
-      "url": "https://manifold.markets/ian/will-the-next-full-gemini-model-be-gLcS2ROl5P",
-      "market_prob": 0.14423902605981812,
-      "model_prob": 0.38,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "I estimate around 38% probability. While Google DeepMind continues to make rapid strides in coding benchmarks, reaching parity with Anthropic and OpenAI in subjective developer preference for web development (specifically mnx.fi) remains a high bar.",
-      "uncertainty": "Whether Google's next Pro model fixes real-world web development ergonomics sufficiently for the creator to switch/use it equally alongside Claude and OpenAI.",
-      "resolution_risk": "Resolution relies entirely on creator @ian's personal trial and subjective impression for mnx.fi within 1-2 weeks after launch.",
-      "evidence_for": [
-        "Google DeepMind has allocated significant compute and RL resources to coding models, pushing benchmark capabilities higher with each Pro iteration.",
-        "Gemini Pro models feature massive context windows which provide a distinct advantage for large codebase reasoning."
-      ],
-      "evidence_against": [
-        "Resolution depends on creator's subjective developer preference for coding mnx.fi, where Anthropic (Claude) and OpenAI (GPT/o-series) currently hold strong developer mindshare.",
-        "Historically, Gemini models have matched benchmarks but lagged in micro-ergonomics, precise instruction adherence, and web-development workflow preference compared to Claude."
       ],
       "reason": "size floored to zero by balance reserve"
     }
