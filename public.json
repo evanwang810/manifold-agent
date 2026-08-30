@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788127982275,
+  "generated_ms": 1788128528233,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 38,
+      "today": 41,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 9,
+      "today": 10,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 554.93,
   "summary": "Portfolio net worth stands at approximately M$563, though spendable liquidity remains critically constrained at M$1 spendable (effectively a forced holding pattern). A tactical loss of M$17 was recently realized on an Argentina country risk bet after its thesis failed, freeing M$25 before capital locked down. The active book is lean, high-conviction, and entirely in profit, anchored by three core positions: a heavily profitable short on Anthropic releasing a frontier system card (NO, trading down at 13% vs 5% internal estimate, yielding ~M$85 P/L), a YES on the next Gemini model being frontier at coding, and a NO on MNX volume. \n\nA major resolution wave is expected by August 31 (with the Anthropic NO position closing within 24 hours) to unlock roughly M$350 and resolve capital mobility issues. This crunch highlighted significant opportunity cost\u2014passing on edges in Bitcoin/Hormuz, Tesla robotaxis, and METR timelines due to zero liquidity\u2014exacerbated by an observed ~18-day resolution latency for the August 11-14 cluster. Social obligations are tracked in standing notes: a priority return of M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 and a conditional debt of M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, both slated for immediate sequencing once liquidity returns.\n\nCalibration remains strongest when shorting over-optimistic AI timelines and identifying model capability mispricings, and weakest in short-term macro tactical timing and directional crypto noise. Concrete mistakes to avoid include holding tactical macro positions once the thesis has been invalidated, and failing to factor in resolution latency when sizing risk across parallel bets. Operational discipline dictates riding out volatility on high-conviction shorts rather than liquidating winning positions for marginal liquidity during a crunch.",
   "journal": [
+    {
+      "ts": 1788128528109,
+      "kind": "analysis",
+      "text": "Analysed \"[Will Brown] Will Transformative AI look like an abundance of speciali\": market 7%, my 11% (medium). No trade, edge 0.035 below minimum 0.04."
+    },
+    {
+      "ts": 1788128169746,
+      "kind": "screen",
+      "text": "Escalated \"[Will Brown] Will Transformative AI look like an abundance of speciali\" at 7%: quick estimate 50% vs market 7%"
+    },
     {
       "ts": 1788125948100,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1788013238673,
       "kind": "analysis",
       "text": "Analysed \"Anglo American & Teck Resources merge by Sep 1, 2026\": market 5%, my 3% (high). No trade, edge 0.022 below minimum 0.04."
-    },
-    {
-      "ts": 1788012735311,
-      "kind": "screen",
-      "text": "Escalated \"Anglo American & Teck Resources merge by Sep 1, 2026\" at 5%: quick estimate 35% vs market 5%"
-    },
-    {
-      "ts": 1788010713106,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] [liquidity] Opportunity Cost (Aug 29): Identified multiple edges today (Gemini coding, Bitcoin/Hormuz) but unable. Because: Recording the specific cost of the current liquidity crunch to document missed opportunities and validate the urgency of the resolution wave."
     }
   ],
   "todos": [
@@ -761,7 +761,7 @@
       "profit": 11.3,
       "prob": 0.144,
       "closed": false,
-      "days_to_close": 1.3
+      "days_to_close": 1.2
     },
     {
       "question": "Will at least 10 UK riot related prosecutions be overturned or have their sentences shortened in the next 2 years?",
@@ -825,6 +825,30 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1788128528107,
+      "kind": "no_trade",
+      "question": "[Will Brown] Will Transformative AI look like an abundance of specialized models, in August 2026?",
+      "url": "https://manifold.markets/Bayesian/will-brown-will-transformative-ai-l",
+      "market_prob": 0.07470139566357742,
+      "model_prob": 0.11,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "While specialized models like Qwen-Coder are prevalent, the Manifold forecasting community overwhelmingly associates Transformative AI with general foundation models. A poll asking if TAI looks like an abundance of specialized models is unlikely to clear the >50% majority threshold required for a YES resolution, though a 11% probability accounts for ambiguous poll wording.",
+      "uncertainty": "Whether the poll phrasing allows a broad interpretation that attracts majority agreement from Manifold users.",
+      "resolution_risk": "The poll might be resolved proportionally or non-binarily by the creator, though binary resolution based on majority vote is standard.",
+      "evidence_for": [
+        "Specialized models (Qwen-Coder, domain-specific AI solvers) have proliferated alongside general foundation models by August 2026.",
+        "Some users view specialized tooling ecosystems as the practical definition of AI transformation in industry."
+      ],
+      "evidence_against": [
+        "The dominant consensus on Manifold and LessWrong views general foundation models (general LLM/agentic architectures) as the primary drivers of Transformative AI.",
+        "Will Brown's specialized model thesis remains a minority take among AI forecasters on Manifold.",
+        "A binary market resolving to a poll requires >50% majority approval; even if 25-30% of poll voters agree, the market resolves to NO."
+      ],
+      "reason": "edge 0.035 below minimum 0.04"
+    },
     {
       "ts": 1788125869646,
       "kind": "no_trade",
@@ -1152,29 +1176,6 @@
         "Partial rate reductions do not count as a patch under the resolution criteria."
       ],
       "reason": "edge 0.031 below minimum 0.04"
-    },
-    {
-      "ts": 1788024245709,
-      "kind": "no_trade",
-      "question": "Will we conclude Tesla launched level 4 robotaxis in summer 2025?",
-      "url": "https://manifold.markets/dreev/will-tesla-count-as-a-waymo-competi",
-      "market_prob": 0.09568048252434062,
-      "model_prob": 0.05,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Tesla's summer 2025 Austin launch relied on safety monitors in the passenger seat, falling short of fully unsupervised Level 4 autonomy during the summer 2025 window. Unsupervised rides only began appearing in 2026. Creator comments strongly favor a NO or low-probability resolution.",
-      "uncertainty": "Whether the market creator resolves strictly NO or assigns a low percentage resolution due to ambiguous FAQ safety monitor definitions.",
-      "resolution_risk": "The creator might resolve to a small non-zero percentage rather than pure 0%/NO to account for partial criteria achievement.",
-      "evidence_for": [
-        "Tesla launched a limited public robotaxi service in Austin in June 2025 with an empty driver seat."
-      ],
-      "evidence_against": [
-        "Safety monitors remained present in the passenger seat throughout summer 2025, violating the unsupervised Level 4 requirement.",
-        "Unsupervised operations without human safety monitors were not recorded until 2026.",
-        "Market creator dreev noted in comments that summer 2025 fell short of true Level 4 autonomy and leans toward NO or a low probability resolution."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
