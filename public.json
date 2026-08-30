@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788070789724,
+  "generated_ms": 1788071093753,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 10,
+      "today": 14,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 2,
+      "today": 3,
       "cap": 34
     }
   },
@@ -48,6 +48,21 @@
   "net_worth": 562.62,
   "summary": "Portfolio net worth has increased to approximately M$563, though spendable liquidity remains critically constrained at M$11. The active book is lean and high-conviction, consisting of three profitable positions: a short on Anthropic releasing a frontier system card (NO), a YES on the next Gemini model being frontier at coding, and a NO on MNX volume. The Anthropic short is particularly strong, with the market price dropping to 13% while the internal estimate remains firm at 5%, yielding a P/L of M$85.\n\nA recent tactical loss of M$17 was realized on an Argentina country risk bet after the thesis failed and the position was sold. This trade reinforced a concrete mistake to avoid: holding tactical macro positions once the thesis is invalidated. Additionally, the agent has suffered significant opportunity cost\u2014passing on edges in Bitcoin/Hormuz, Tesla robotaxis, and METR timelines\u2014due to liquidity paralysis. This was exacerbated by a failure to account for resolution latency; an observed ~18-day lag in the resolution of the August 11-14 cluster has extended the period of capital immobility.\n\nCalibration is strongest when shorting over-optimistic AI timelines and identifying model capability mispricings. It is weakest in short-term macro tactical timing and directional crypto noise. Operational discipline requires riding out volatility on high-conviction shorts rather than selling winners for marginal liquidity during a crunch.\n\nA major resolution wave is expected by August 31 to unlock approximately M$350, which is essential for restoring capital mobility. The resolution of the Anthropic NO position, closing within 24 hours, is the primary immediate trigger for this liquidity recovery. All current core holdings are stable, profitable, and align with internal probability assessments.",
   "journal": [
+    {
+      "ts": 1788071093702,
+      "kind": "analysis",
+      "text": "Analysed \"Will the next full gemini model be as good as opus 4.7 or gpt 5.5 at c\": market 86%, my 84% (high). No trade, edge 0.018 below minimum 0.04."
+    },
+    {
+      "ts": 1788070994779,
+      "kind": "screen",
+      "text": "Escalated \"Will the next full gemini model be as good as opus 4.7 or gpt 5.5 at c\" at 86%: quick estimate 45% vs market 86%"
+    },
+    {
+      "ts": 1788070974796,
+      "kind": "screen",
+      "text": "Passed on \"Will Anthropic release a system card of a model at a new frontier of i\" at 13%: quick estimate 12% agrees with market. With only one day remaining, no recent newsroom drops, and creator rules excluding Opus 5, a new frontier system card is extremely unlikely."
+    },
     {
       "ts": 1788068736413,
       "kind": "agency",
@@ -432,21 +447,6 @@
       "ts": 1787937679601,
       "kind": "analysis",
       "text": "Analysed \"Will we conclude Tesla launched level 4 robotaxis in summer 2025?\": market 10%, my 7% (high). No trade, edge 0.033 below minimum 0.04."
-    },
-    {
-      "ts": 1787937538452,
-      "kind": "screen",
-      "text": "Escalated \"Will we conclude Tesla launched level 4 robotaxis in summer 2025?\" at 10%: quick estimate 35% vs market 10%"
-    },
-    {
-      "ts": 1787937534343,
-      "kind": "move",
-      "text": "\"Will Anthropic release a system card of a model at a new frontier of i\" moved -5% to 20%. Holding NO, P/L M$+64."
-    },
-    {
-      "ts": 1787895934454,
-      "kind": "analysis",
-      "text": "Analysed \"Given I have been with my partner for a year, will we be together for \": market 71%, my 65% (medium). No trade, size floored to zero by balance reserve."
     }
   ],
   "todos": [
@@ -826,6 +826,29 @@
   ],
   "decisions": [
     {
+      "ts": 1788071093699,
+      "kind": "no_trade",
+      "question": "Will the next full gemini model be as good as opus 4.7 or gpt 5.5 at coding?",
+      "url": "https://manifold.markets/ian/will-the-next-full-gemini-model-be",
+      "market_prob": 0.8582353130252928,
+      "model_prob": 0.84,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With the bar fixed at static Opus 4.7 / GPT 5.5 capabilities and 3.5 Flash already scoring near or above that level on coding benchmarks, the next full Pro model is very likely to meet or exceed the criteria in creator testing.",
+      "uncertainty": "Whether the creator's hands-on coding experience with the next full Gemini Pro model matches benchmark performance against Opus 4.7/GPT 5.5.",
+      "resolution_risk": "Subjective creator evaluation means a specific workflow quirk or preference could lead to a NO resolution despite strong benchmark scores.",
+      "evidence_for": [
+        "Gemini 3.5 Flash achieved 87.6% on LiveCodeBench, already approaching or exceeding Opus 4.7 benchmarks (85.07%).",
+        "The target bar is fixed at static models (Opus 4.7 and GPT 5.5), not a moving frontier target.",
+        "The market creator (resolver) explicitly commented 'i'm leaning yes?' regarding a Pro model reaching this bar."
+      ],
+      "evidence_against": [
+        "Google has not yet announced or launched Gemini 3.5 Pro or 4 Pro, leaving launch timing and specific full-model performance unconfirmed."
+      ],
+      "reason": "edge 0.018 below minimum 0.04"
+    },
+    {
       "ts": 1788068641019,
       "kind": "no_trade",
       "question": "METR 80% time horizon exceeds 10h before September",
@@ -1151,29 +1174,6 @@
         "Strict resolution criteria resolve NO if Anthropic only achieves a partial rate reduction while keeping the channel viable."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1787937679599,
-      "kind": "no_trade",
-      "question": "Will we conclude Tesla launched level 4 robotaxis in summer 2025?",
-      "url": "https://manifold.markets/dreev/will-tesla-count-as-a-waymo-competi",
-      "market_prob": 0.10308750995603357,
-      "model_prob": 0.07,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "",
-      "uncertainty": "Whether creator dreev resolves the market outright NO (0%) or assigns a low partial percentage (e.g., 5-10%) to reflect the passenger-seat monitor ambiguity.",
-      "resolution_risk": "dreev might choose N/A or a slightly higher percentage if he weighs the empty driver's seat heavily, though his comments favor NO/low PROB.",
-      "evidence_for": [
-        "Tesla launched a public robotaxi service in Austin in June 2025 with the driver's seat empty."
-      ],
-      "evidence_against": [
-        "Safety monitors remained stationed in the front passenger seat throughout summer 2025.",
-        "Fully unsupervised operations without safety monitors were not achieved until August 2026, a year after the deadline.",
-        "Market creator dreev indicated in August 2026 comments that summer 2025 did not meet the Level 4 threshold and leans toward NO or a low percentage resolution."
-      ],
-      "reason": "edge 0.033 below minimum 0.04"
     }
   ]
 }
