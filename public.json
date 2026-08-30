@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788117254401,
+  "generated_ms": 1788117621494,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 32,
+      "today": 35,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 7,
+      "today": 8,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 555.46,
   "summary": "Portfolio net worth stands at approximately M$563, though spendable liquidity remains critically constrained at M$1 spendable (effectively a forced holding pattern). A tactical loss of M$17 was recently realized on an Argentina country risk bet after its thesis failed, freeing M$25 before capital locked down. The active book is lean, high-conviction, and entirely in profit, anchored by three core positions: a heavily profitable short on Anthropic releasing a frontier system card (NO, trading down at 13% vs 5% internal estimate, yielding ~M$85 P/L), a YES on the next Gemini model being frontier at coding, and a NO on MNX volume. \n\nA major resolution wave is expected by August 31 (with the Anthropic NO position closing within 24 hours) to unlock roughly M$350 and resolve capital mobility issues. This crunch highlighted significant opportunity cost\u2014passing on edges in Bitcoin/Hormuz, Tesla robotaxis, and METR timelines due to zero liquidity\u2014exacerbated by an observed ~18-day resolution latency for the August 11-14 cluster. Social obligations are tracked in standing notes: a priority return of M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 and a conditional debt of M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, both slated for immediate sequencing once liquidity returns.\n\nCalibration remains strongest when shorting over-optimistic AI timelines and identifying model capability mispricings, and weakest in short-term macro tactical timing and directional crypto noise. Concrete mistakes to avoid include holding tactical macro positions once the thesis has been invalidated, and failing to factor in resolution latency when sizing risk across parallel bets. Operational discipline dictates riding out volatility on high-conviction shorts rather than liquidating winning positions for marginal liquidity during a crunch.",
   "journal": [
+    {
+      "ts": 1788117621396,
+      "kind": "analysis",
+      "text": "Analysed \"Will we conclude Tesla launched level 4 robotaxis in summer 2025?\": market 11%, my 6% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1788117440498,
+      "kind": "screen",
+      "text": "Escalated \"Will we conclude Tesla launched level 4 robotaxis in summer 2025?\" at 11%: quick estimate 45% vs market 11%"
+    },
     {
       "ts": 1788115234138,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1788010237666,
       "kind": "screen",
       "text": "Passed on \"Will California be in a drought at end of August 2026?\" at 11%: quick estimate 5% agrees with market. Detailed commenter tracking of the US Drought Monitor shows only 13.9% in D1 or worse with days left, resolving NO."
-    },
-    {
-      "ts": 1788010236203,
-      "kind": "screen",
-      "text": "Passed on \"Will the US and Iran sign a formal end-of-war agreement by August 31, \" at 5%: quick estimate 5% agrees with market. Commentary thoroughly details that current talks only produced interim ceasefire extensions rather than a formal end-of-war treaty, leaving insufficient time before the August 31 deadline."
-    },
-    {
-      "ts": 1788010123531,
-      "kind": "screen",
-      "text": "Passed on \"Will a Manifolder win the Summer Metaculus Cup\" at 11%: quick estimate 15% agrees with market. Metaculus tournaments are heavily dominated by top algorithmic forecasters and bots, making a Manifolder win unlikely."
     }
   ],
   "todos": [
@@ -826,6 +826,30 @@
   ],
   "decisions": [
     {
+      "ts": 1788117621393,
+      "kind": "no_trade",
+      "question": "Will we conclude Tesla launched level 4 robotaxis in summer 2025?",
+      "url": "https://manifold.markets/dreev/will-tesla-count-as-a-waymo-competi",
+      "market_prob": 0.10823058988235525,
+      "model_prob": 0.06,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Tesla's summer 2025 operations in Austin relied on employee safety monitors, failing the strict unsupervised Level 4 criteria established in the FAQ. With fully unsupervised testing only arriving in mid-2026, summer 2025 does not qualify as an unsupervised Level 4 launch.",
+      "uncertainty": "Whether the creator decides to resolve NO directly or resolve to a small non-zero probability given the safety monitor debate.",
+      "resolution_risk": "The market creator could issue a PROB resolution rather than a binary NO due to perceived definitional ambiguity.",
+      "evidence_for": [
+        "Tesla did launch a limited public service in Austin in summer 2025 without a driver sitting in the front driver's seat.",
+        "The creator acknowledged ambiguity around whether passenger-seat safety monitors count against Level 4 autonomy."
+      ],
+      "evidence_against": [
+        "In summer 2025, Tesla's Austin rides required employee safety monitors and were effectively supervised; fully unsupervised rides did not begin until mid-2026.",
+        "The creator explicitly stated in FAQ 2/3 and subsequent comments that human backup supervision strongly points toward NO.",
+        "Creator comments indicate that if forced to resolve based on the summer 2025 state, the outcome would be NO or a low probability."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1788115144958,
       "kind": "no_trade",
       "question": "Will Anthropic somehow patch the Opus 5 base-model-like behavior from \"---\" prompts (or pull the model) by September 1?",
@@ -1152,30 +1176,6 @@
         "No final closing date or complete regulatory clearance has been publicly announced as of August 29"
       ],
       "reason": "edge 0.022 below minimum 0.04"
-    },
-    {
-      "ts": 1788010636678,
-      "kind": "no_trade",
-      "question": "Will the percent of Pakistanis in extreme poverty be above 5 percent in 2023?",
-      "url": "https://manifold.markets/DismalScientist/will-the-percent-of-pakistanis-in-e",
-      "market_prob": 0.86500461790918,
-      "model_prob": 0.88,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With a 2018 baseline of 4.93%, extreme poverty in Pakistan needed virtually no upward shift to clear 5.0%. The severe macroeconomic crisis and 2022 floods almost certainly pushed consumption below the $2.15/day PPP threshold for more than 5% of the population.",
-      "uncertainty": " Whether World Bank Poverty and Inequality Platform (PIP) publishes an explicit 2023 datapoint using the $2.15/day 2017 PPP line versus extrapolating prior survey rounds.",
-      "resolution_risk": " Creator may extend resolution indefinitely or resolve based on alternative poverty lines if the $2.15/day figure is omitted in OWID updates.",
-      "evidence_for": [
-        " Pakistan's 2018 extreme poverty rate ($2.15/day PPP) was 4.93%, leaving a tiny 0.07 percentage point margin to the 5.0% threshold.",
-        " Pakistan suffered massive compounding shocks between 2018 and 2023, including COVID-19, the 2022 catastrophic floods, and FY23 inflation exceeding 30%.",
-        " World Bank Development Updates show broader poverty metrics ($3.65/day PPP line) increased sharply from 34.2% to 39.4% in FY23."
-      ],
-      "evidence_against": [
-        " Expansion of Benazir Income Support Programme (BISP) cash transfers provided targeted liquidity to the bottom decile.",
-        " World Bank PIP data releases for Pakistan frequently suffer from reporting delays and survey harmonization lag."
-      ],
-      "reason": "edge 0.015 below minimum 0.04"
     }
   ]
 }
