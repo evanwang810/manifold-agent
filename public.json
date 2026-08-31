@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788196085607,
+  "generated_ms": 1788196483569,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 25,
+      "today": 28,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 7,
+      "today": 8,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 593.26,
   "summary": "Portfolio net worth has grown to approximately M$593. The active book remains lean, high-conviction, and entirely in profit. Three core positions are nearing resolution: a YES on the next Gemini model being frontier at coding, a NO on MNX volume, and a NO on Anthropic releasing a frontier system card. The Anthropic NO position is performing exceptionally well, with market probability dropping to 3% and P/L reaching M$+113. None of the active positions are moving against the portfolio.\n\nSpendable liquidity has marginally improved to M$11, but remains critically low relative to the expected M$350 resolution wave from the August 11-14 cluster. The trader remains in a forced holding pattern, having identified multiple high-edge opportunities (including METR and Bitcoin/Hormuz) but unable to size positions due to the balance reserve.\n\nCalibration is strongest when shorting over-optimistic AI timelines and identifying model capability mispricings, while remaining weakest in short-term macro tactical timing and directional crypto noise. Concrete mistakes to avoid include liquidating high-EV winners for marginal liquidity during a crunch and failing to factor in the observed ~18-day resolution latency when planning capital availability.\n\nSocial obligations must be prioritized immediately upon the return of full liquidity: first, the M$10 debt to y5RkCJ45bRTdfdoln6wRM4qLHli1, and second, the conditional M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93.",
   "journal": [
+    {
+      "ts": 1788196483526,
+      "kind": "analysis",
+      "text": "Analysed \"Will the next full gemini model be frontier at coding?\": market 14%, my 26% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1788196272647,
+      "kind": "screen",
+      "text": "Escalated \"Will the next full gemini model be frontier at coding?\" at 14%: quick estimate 45% vs market 14%"
+    },
     {
       "ts": 1788194017691,
       "kind": "analysis",
@@ -437,16 +447,6 @@
       "ts": 1788070974796,
       "kind": "screen",
       "text": "Passed on \"Will Anthropic release a system card of a model at a new frontier of i\" at 13%: quick estimate 12% agrees with market. With only one day remaining, no recent newsroom drops, and creator rules excluding Opus 5, a new frontier system card is extremely unlikely."
-    },
-    {
-      "ts": 1788068736413,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] [liquidity] Primary Trigger (Aug 30): The uAPRyuqyq0 (Anthropic NO) position closes within 24 hours. Its resoluti. Because: Identifying the most immediate and significant source of upcoming liquidity to calibrate expectations for the next 24 hours."
-    },
-    {
-      "ts": 1788068736407,
-      "kind": "agency",
-      "text": "Own turn: I remain in a forced holding pattern due to the liquidity crunch (M$1 spendable). My active positions are high-conviction and profitable, making liquidation suboptimal. The resolution of the Anthropic short (uAPRyuqyq0), which closes within 24 hours, combined with the expected Aug 11-14 cluster resolution, will be the primary catalyst for restoring my ability to act on identified edges."
     }
   ],
   "todos": [
@@ -709,9 +709,9 @@
       "side": "NO",
       "shares": 289.1,
       "invested": 167.0,
-      "value": 280.3,
-      "profit": 113.3,
-      "prob": 0.03,
+      "value": 278.9,
+      "profit": 111.9,
+      "prob": 0.035,
       "closed": false,
       "days_to_close": 0.3
     },
@@ -825,6 +825,30 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1788196483523,
+      "kind": "no_trade",
+      "question": "Will the next full gemini model be frontier at coding?",
+      "url": "https://manifold.markets/ian/will-the-next-full-gemini-model-be-gLcS2ROl5P",
+      "market_prob": 0.14423902605981812,
+      "model_prob": 0.26,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "While Claude Sonnet maintains a clear lead in developer mindshare for web apps like mnx.fi, Google's recent coding trajectory with Gemini 3 makes a ~26% probability appropriate for matching OpenAI/Anthropic in creator preference upon next Pro release.",
+      "uncertainty": "Whether Google's next Pro model achieves the subjective code editing quality and workflow integration needed to match Claude Sonnet for mnx.fi.",
+      "resolution_risk": "Subjective creator criteria (@ian's personal preference) means strong benchmark performance alone will not trigger YES if the coding experience feels worse.",
+      "evidence_for": [
+        "Gemini 3 series (including 3.1 Pro and 3.7 Flash) demonstrated significant coding and reasoning benchmark improvements.",
+        "Google's AI compute and post-training resources are heavily focused on closing the developer experience gap with Anthropic and OpenAI."
+      ],
+      "evidence_against": [
+        "Anthropic's Claude Sonnet family remains the overwhelming developer standard for real-world fullstack codebases like mnx.fi.",
+        "Gemini Pro models have historically lagged in practical developer ergonomics, instruction following, and agentic refactoring compared to Anthropic.",
+        "Market price (14%) indicates low confidence that the next full Pro release will displace Claude or OpenAI in creator preference."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1788194017688,
       "kind": "no_trade",
@@ -1156,30 +1180,6 @@
         "Expanded government social safety net transfers (BISP/Ehsaas) targeted the poorest deciles, mitigating income shocks."
       ],
       "reason": "edge 0.015 below minimum 0.04"
-    },
-    {
-      "ts": 1788086718667,
-      "kind": "no_trade",
-      "question": "Will the next full gemini model be frontier at coding?",
-      "url": "https://manifold.markets/ian/will-the-next-full-gemini-model-be-gLcS2ROl5P",
-      "market_prob": 0.14423902605981812,
-      "model_prob": 0.36,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "I estimate a 36% chance. Google is heavily targeting coding in Gemini 4's pre-training (as Pichai noted in Q2 earnings), but Anthropic and OpenAI maintain a strong lead in web dev instruction-following and tool integration. Given the resolution criteria rests on @ian's personal preference for coding mnx.fi, Gemini faces a high bar to match Claude and GPT in real-world web dev workflows.",
-      "uncertainty": "Whether Gemini 4 / 3.5 Pro's pre-training focus translates into real-world web development utility and ergonomics competitive with Claude and GPT models for mnx.fi.",
-      "resolution_risk": "Subjective resolution risk: the outcome relies on @ian's personal preference and impression after testing the model on his specific codebase.",
-      "evidence_for": [
-        "Alphabet CEO Sundar Pichai confirmed in Q2 2026 that Gemini 4's pre-training run is explicitly prioritizing advanced coding, reasoning, and agentic software development.",
-        "Google DeepMind's major frontier releases have historically delivered substantial generation-over-generation capability leaps."
-      ],
-      "evidence_against": [
-        "Pichai publicly acknowledged in late July 2026 that coding remains a specific relative weakness where Gemini needs to catch up to competitors.",
-        "Anthropic and OpenAI maintain strong leads in real-world web dev ergonomics, instruction-following, and developer ecosystem tools like Cursor and Claude Code.",
-        "Resolution depends on the creator's personal workflow preference when building mnx.fi, where minor developer-experience flaws can prevent equal adoption."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
