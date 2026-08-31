@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788168154172,
+  "generated_ms": 1788168599973,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 15,
+      "today": 19,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 4,
+      "today": 5,
       "cap": 34
     }
   },
@@ -48,6 +48,26 @@
   "net_worth": 565.46,
   "summary": "Portfolio net worth is approximately M$555, but spendable liquidity remains critically constrained at M$1. The active book is lean, high-conviction, and entirely in profit. Three core positions are within 24 hours of resolution: a YES on the next Gemini model being frontier at coding, a NO on MNX volume, and a NO on Anthropic releasing a frontier system card. None of these positions are currently moving against the portfolio.\n\nA major resolution wave was expected by August 31 to unlock roughly M$350, but as of the latest update, the liquidity has not yet hit the balance. The trader is in a forced holding pattern, having screened several high-edge markets (including Gemini coding, Bitcoin/Hormuz, and METR) but being unable to trade due to the balance reserve floor.\n\nCalibration remains strongest when shorting over-optimistic AI timelines and identifying model capability mispricings, while remaining weakest in short-term macro tactical timing and directional crypto noise. Concrete mistakes to avoid include liquidating high-EV winners for marginal liquidity during a crunch, failing to factor in the observed ~18-day resolution latency when sizing risk, and holding tactical macro positions once the thesis has been invalidated.\n\nSocial obligations must be prioritized immediately upon the return of liquidity: first, the M$10 debt to y5RkCJ45bRTdfdoln6wRM4qLHli1, and second, the conditional M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93.",
   "journal": [
+    {
+      "ts": 1788168599722,
+      "kind": "analysis",
+      "text": "Analysed \"Will Polymarket be right about every Fed decision in 2026?\": market 74%, my 77% (medium). No trade, edge 0.030 below minimum 0.04."
+    },
+    {
+      "ts": 1788168381660,
+      "kind": "screen",
+      "text": "Escalated \"Will Polymarket be right about every Fed decision in 2026?\" at 74%: quick estimate 15% vs market 74%"
+    },
+    {
+      "ts": 1788168361942,
+      "kind": "screen",
+      "text": "Passed on \"Will there be a confirmed case of Cyclosporiasis in ALL 48 US contiguo\" at 8%: quick estimate 15% agrees with market. Delaware sits at zero on the CDC map with the deadline having passed, making NO the clear resolution."
+    },
+    {
+      "ts": 1788168341808,
+      "kind": "screen",
+      "text": "Passed on \"Will Anthropic release a system card of a model at a new frontier of i\" at 12%: quick estimate 12% agrees with market. With only hours left and no new system card dropped since August 7, the remaining time is too short for a new frontier release."
+    },
     {
       "ts": 1788166150257,
       "kind": "agency",
@@ -427,26 +447,6 @@
       "ts": 1788052013302,
       "kind": "screen",
       "text": "Passed on \"Open-Source AI model gets perfect IMO 2026 score? [International Math \" at 4%: quick estimate 5% agrees with market. Comments confirm the model weights were released after the IMO, failing the strict pre-contest release condition."
-    },
-    {
-      "ts": 1788049953471,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] [liquidity] Resolution Wave Status (Aug 30): Still awaiting first resolution of the Aug 11-14 cluster. Spendable . Because: Maintaining a timestamped log of the resolution latency to calibrate future expectations and document the duration of the liquidity freeze."
-    },
-    {
-      "ts": 1788049953466,
-      "kind": "agency",
-      "text": "Own turn: Still paralyzed by the liquidity crunch (M$1 spendable). The Aug 31 deadline for the resolution wave is tomorrow. All active positions remain high-conviction. I am documenting the continued wait to further calibrate the latency baseline and the impact of resolution lag on capital mobility."
-    },
-    {
-      "ts": 1788049824012,
-      "kind": "book",
-      "text": "Looked over 10 positions: The tradable book is lean, high-conviction, and entirely profitable. All active positions (Gemini YES, MNX NO, Anthropic NO) maintain a strong positive edge over current market pricing. While spendable liquidity is critically low (M$1), the imminent resolution wave (Aug 31) will restore capital, making the liquidation of high-EV positions suboptimal. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1788049741339,
-      "kind": "analysis",
-      "text": "Analysed \"Will the AfD win an absolute majority in the state election in Saxony-\": market 31%, my 21% (medium). No trade, size floored to zero by balance reserve."
     }
   ],
   "todos": [
@@ -826,6 +826,30 @@
   ],
   "decisions": [
     {
+      "ts": 1788168599719,
+      "kind": "no_trade",
+      "question": "Will Polymarket be right about every Fed decision in 2026?",
+      "url": "https://manifold.markets/HillaryClinton/will-polymarket-be-right-about-ever",
+      "market_prob": 0.74,
+      "model_prob": 0.77,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "24 hours prior to FOMC announcements, Fed decisions are almost always telegraphed and priced in by markets. With only 3 meetings remaining in 2026 and no 24h surprises so far, the likelihood of Polymarket maintaining a perfect record for the year is around 77%.",
+      "uncertainty": "Whether any remaining 2026 FOMC meeting involves a close 25bps vs 50bps split that flips the top outcome 24 hours prior.",
+      "resolution_risk": "Ambiguity in determining which Polymarket option had the exact highest probability precisely 24 hours before a meeting timestamp.",
+      "evidence_for": [
+        "24 hours before FOMC decisions, Federal Reserve rate moves are heavily telegraphed by communications and WSJ reporting, leading to high consensus accuracy.",
+        "Polymarket historical odds are over 96 percent accurate within hours of resolution.",
+        "No emergency rate cuts or major un-telegraphed Fed rate surprises have occurred in 2026 to date."
+      ],
+      "evidence_against": [
+        "There are 3 FOMC meetings remaining in 2026 where economic shocks or close calls (e.g., 25 bps vs 50 bps) could lead to an incorrect leading option on Polymarket.",
+        "Uncertainty exists regarding whether all 5 previous 2026 decisions strictly met the 24-hour top-choice criterion on Polymarket."
+      ],
+      "reason": "edge 0.030 below minimum 0.04"
+    },
+    {
       "ts": 1788166062599,
       "kind": "no_trade",
       "question": "METR 80% time horizon exceeds 10h before September",
@@ -1153,29 +1177,6 @@
         "80% task completion probability over a 10-hour duration requires extreme trajectory reliability, far harder to achieve than 50% time horizon.",
         "No METR report or point estimate showing 80% time horizon > 10h has been published as of August 30, 2026.",
         "Spring 2026 50% time horizon baselines (~16-20h) imply 80% time horizon remains well under 5 hours."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1788049741337,
-      "kind": "no_trade",
-      "question": "Will the AfD win an absolute majority in the state election in Saxony-Anhalt in 2026",
-      "url": "https://manifold.markets/NFNL2zc/will-the-afd-win-an-absolute-majori",
-      "market_prob": 0.31000000000000016,
-      "model_prob": 0.21,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "AfD is polling very strongly at ~41%, but securing an outright seat majority requires either a substantial late polling overperformance (44%+) or multiple mid-tier parties (like SPD/BSW/Linke) dropping below the 5% threshold. Given current projections, ~21% captures the probability of those compounding conditions.",
-      "uncertainty": "The exact vote share of borderline parties (SPD, Linke, Greens) and whether enough fail to cross 5% to distort seat allocation in AfD's favor.",
-      "resolution_risk": "Overhang and compensatory mandates (\u00dcberhang- und Ausgleichsmandate) can slightly alter the denominator, but the criteria clearly require >50% of total allocated Landtag seats.",
-      "evidence_for": [
-        "AfD is polling very strongly in Saxony-Anhalt at around 41%, making them the clear frontrunner to finish first.",
-        "If several smaller parties (such as SPD, Greens, Linke, and FDP) fall below the 5% threshold, the share of 'wasted votes' increases, allowing a party with ~42-44% of the popular vote to secure an absolute majority of seats."
-      ],
-      "evidence_against": [
-        "At 41% headline polling, AfD still falls short of an outright majority of seats unless an unusually high proportion (18-20%+) of votes are cast for parties failing the 5% hurdle.",
-        "CDU and BSW are virtually guaranteed to clear the 5% threshold, and SPD remains favored to clear it as well, keeping the non-AfD seat-eligible vote share high enough to prevent an AfD single-party majority in baseline scenarios."
       ],
       "reason": "size floored to zero by balance reserve"
     }
