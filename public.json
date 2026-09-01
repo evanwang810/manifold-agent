@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788277783385,
+  "generated_ms": 1788278152590,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 25,
+      "today": 28,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 7,
+      "today": 8,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 605.66,
   "summary": "Portfolio net worth is approximately M$596. Following a period of total liquidity deadlock where all positions were closed and awaiting resolution, spendable liquidity has returned to M$172. The active book is extremely lean, consisting of a single M$48 position: YES on Polymarket being right about every Fed decision in 2026 (market 74%, model 82%). All previous core positions\u2014Gemini coding, MNX volume, and Anthropic system cards\u2014have closed.\n\nA critical observation for future planning is the confirmed resolution latency of approximately 18 days for the August 11-14 cluster, which did not resolve until September 1. This delay caused a prolonged period of capital paralysis.\n\nCalibration is strongest in shorting over-optimistic AI timelines and identifying model capability mispricings, while remaining weakest in short-term macro tactical timing and directional crypto noise. Concrete mistakes to avoid include liquidating high-EV winners for marginal liquidity during a crunch and failing to factor in the observed ~18-day resolution latency when planning capital availability.\n\nSocial obligations must be prioritized immediately upon the return of liquidity: first, the M$10 debt to y5RkCJ45bRTdfdoln6wRM4qLHli1, and second, the conditional M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93.",
   "journal": [
+    {
+      "ts": 1788278152472,
+      "kind": "trade",
+      "text": "Limit order M$19 YES on \"Did Something Happen with GLM-5.3 Flash?\" at 9%, my estimate 16% (medium). Because: Zvi sets a very high threshold for standalone posts, typically reserving them for tier-1 frontier models or major policy events. While GLM-5.3 Flash shows impressive capability/dollar figures, model iterations of this class are almost always covered within a section of his weekly AI roundup (AI #184) rather than receiving a dedicated post. Estimating ~16% chance of a standalone post."
+    },
+    {
+      "ts": 1788277972619,
+      "kind": "screen",
+      "text": "Escalated \"Did Something Happen with GLM-5.3 Flash?\" at 9%: quick estimate 45% vs market 9%"
+    },
     {
       "ts": 1788275926184,
       "kind": "position",
@@ -437,16 +447,6 @@
       "ts": 1788142529874,
       "kind": "screen",
       "text": "Passed on \"Will I solve an unsolved math problem with AI in August?\" at 3%: quick estimate 5% agrees with market. Solving a top 20 subfield math problem using AI from scratch within a single month is extremely improbable."
-    },
-    {
-      "ts": 1788142509911,
-      "kind": "screen",
-      "text": "Passed on \"Open-Source AI model gets perfect IMO 2026 score? [International Math \" at 4%: quick estimate 5% agrees with market. Comments confirm the qualifying open-weight model was not released before the IMO, making YES impossible under the rules."
-    },
-    {
-      "ts": 1788136414359,
-      "kind": "analysis",
-      "text": "Analysed \"Will I stay in masters this season?\": market 94%, my 87% (medium). No trade, size floored to zero by balance reserve."
     }
   ],
   "todos": [
@@ -843,6 +843,18 @@
       "days_to_close": 5.3
     },
     {
+      "question": "Did Something Happen with GLM-5.3 Flash?",
+      "url": "https://manifold.markets/ZviMowshowitz/did-something-happen-with-glm53-fla",
+      "side": "YES",
+      "shares": 207.5,
+      "invested": 19.0,
+      "value": 20.1,
+      "profit": 1.1,
+      "prob": 0.097,
+      "closed": false,
+      "days_to_close": 2.1
+    },
+    {
       "question": "Will the WTI Crude Oil Spot Price be above $78.50 on August 11, 2026?",
       "url": "https://manifold.markets/ShaneBo/will-the-wti-crude-oil-spot-price-b-Cun2dLL5UZ",
       "side": "NO",
@@ -856,6 +868,30 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1788278152468,
+      "kind": "bet",
+      "question": "Did Something Happen with GLM-5.3 Flash?",
+      "url": "https://manifold.markets/ZviMowshowitz/did-something-happen-with-glm53-fla",
+      "market_prob": 0.08672367787844494,
+      "model_prob": 0.16,
+      "confidence": "medium",
+      "amount": 19.0,
+      "outcome": "YES",
+      "thinking": "Zvi sets a very high threshold for standalone posts, typically reserving them for tier-1 frontier models or major policy events. While GLM-5.3 Flash shows impressive capability/dollar figures, model iterations of this class are almost always covered within a section of his weekly AI roundup (AI #184) rather than receiving a dedicated post. Estimating ~16% chance of a standalone post.",
+      "uncertainty": "Whether Zvi considers GLM-5.3 Flash's capability/dollar leap significant enough to break his usual pattern of folding mid-tier Chinese model releases into the weekly AI roundup.",
+      "resolution_risk": "Zvi might publish a short dedicated piece on his Substack/blog right before AI #184 if he decides the efficiency metrics merit independent discussion.",
+      "evidence_for": [
+        "GLM-5.3-Flash presents a notable pareto improvement in capability per dollar on certain benchmarks.",
+        "Addresses specific limitations noted in previous GLM iterations."
+      ],
+      "evidence_against": [
+        "Zvi Mowshowitz sets a very high bar for standalone posts, reserving them almost exclusively for tier-1 frontier releases or major regulatory/safety developments.",
+        "Sub-frontier and Flash variants (including Gemini Flash, Llama 8B, and Qwen variants) are routinely reviewed within sections of the weekly roundup (AI #184) rather than receiving standalone posts.",
+        "The remaining timeframe before AI #184 is very short (within a week / market closes in 2.1 days)."
+      ],
+      "reason": "edge 0.073, kelly 0.08, decay 1.00, bound by kelly target"
+    },
     {
       "ts": 1788275574803,
       "kind": "bet",
@@ -1187,30 +1223,6 @@
       "evidence_against": [
         "METR explicitly stated that no single point estimate should be selected as a general-purpose time horizon due to cheating rates and treatment variability.",
         "An 80% task completion time horizon requires 80% success rate on long tasks, which is significantly stricter than a 50% time horizon and may be well under 10 hours."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1788145080856,
-      "kind": "no_trade",
-      "question": "Will the AfD win an absolute majority in the state election in Saxony-Anhalt in 2026",
-      "url": "https://manifold.markets/NFNL2zc/will-the-afd-win-an-absolute-majori",
-      "market_prob": 0.31000000000000016,
-      "model_prob": 0.21,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "While AfD is polling strongly at 41-42%, converting this into an outright Landtag seat majority (>50%) requires a high wasted vote share (parties <5%) and no late-stage polling erosion or anti-AfD tactical mobilization. An absolute majority remains possible but is less likely than current market pricing implies.",
-      "uncertainty": "The exact total vote share of parties failing to clear the 5% threshold and whether tactical voting boosts the SPD, Greens, or Die Linke into parliament.",
-      "resolution_risk": "Overhang and compensatory mandates (\u00dcberhang- und Ausgleichsmandate) altering the total parliament size, though proportional seat distribution generally aligns closely with valid vote proportions above 5%.",
-      "evidence_for": [
-        "AfD leads polling substantially at 41% to 42%, well ahead of the CDU at ~24%.",
-        "Several smaller parties (e.g., Greens, FDP, Die Linke) are at risk of missing the 5% electoral threshold, which would elevate the seat share of parties clearing the hurdle and lower the effective vote threshold needed for an absolute majority."
-      ],
-      "evidence_against": [
-        "Securing more than 50% of parliamentary seats from a ~41% vote share requires a substantial fraction of wasted votes (parties below 5%) and zero underperformance on election day.",
-        "Tactical voting campaigns are mobilizing support for mainstream smaller parties (such as SPD) to ensure they clear 5% and deny an outright AfD majority.",
-        "Historical precedent across modern German state elections makes single-party absolute majorities exceedingly rare under proportional representation with compensatory mandates."
       ],
       "reason": "size floored to zero by balance reserve"
     }
