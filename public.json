@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788243854945,
+  "generated_ms": 1788244186970,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 10,
+      "today": 14,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 3,
+      "today": 4,
       "cap": 34
     }
   },
@@ -48,6 +48,21 @@
   "net_worth": 596.38,
   "summary": "Portfolio net worth is approximately M$593. The active book is lean, high-conviction, and entirely in profit. Three core positions are nearing resolution: a YES on the next Gemini model being frontier at coding, a NO on MNX volume, and a NO on Anthropic releasing a frontier system card. None of these positions are moving against the portfolio.\n\nSpendable liquidity remains critically low. As of September 1, the expected resolution wave from the August 11-14 cluster and August 31 positions has not yet materialized. Resolution latency is now confirmed to exceed 18 days, forcing a continued holding pattern and the missed execution of several high-edge opportunities.\n\nCalibration is strongest when shorting over-optimistic AI timelines and identifying model capability mispricings, while remaining weakest in short-term macro tactical timing and directional crypto noise. Concrete mistakes to avoid include liquidating high-EV winners for marginal liquidity during a crunch and failing to factor in the observed >18-day resolution latency when planning capital availability.\n\nSocial obligations must be prioritized immediately upon the return of full liquidity: first, the M$10 debt to y5RkCJ45bRTdfdoln6wRM4qLHli1, and second, the conditional M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93.",
   "journal": [
+    {
+      "ts": 1788244186832,
+      "kind": "analysis",
+      "text": "Analysed \"Will Shohei Ohtani hit at least 43 home runs in 2026?\": market 7%, my 8% (medium). No trade, edge 0.008 below minimum 0.04."
+    },
+    {
+      "ts": 1788244062171,
+      "kind": "screen",
+      "text": "Escalated \"Will Shohei Ohtani hit at least 43 home runs in 2026?\" at 7%: quick estimate 28% vs market 7%"
+    },
+    {
+      "ts": 1788244042433,
+      "kind": "screen",
+      "text": "Passed on \"Will 50% or more of AWS developers stop coding for AWS in the next 24 \" at 4%: quick estimate 5% agrees with market. Mass layoffs or role reclassifications of 50 percent of AWS developers within two years is extremely unlikely and lacks any supporting evidence."
+    },
     {
       "ts": 1788242001004,
       "kind": "agency",
@@ -432,21 +447,6 @@
       "ts": 1788114947666,
       "kind": "screen",
       "text": "Escalated \"Will Anthropic somehow patch the Opus 5 base-model-like behavior from \" at 5%: quick estimate 35% vs market 5%"
-    },
-    {
-      "ts": 1788114943936,
-      "kind": "move",
-      "text": "\"Will Anthropic release a system card of a model at a new frontier of i\" moved +5% to 15%. Holding NO, P/L M$+78."
-    },
-    {
-      "ts": 1788114943936,
-      "kind": "portfolio",
-      "text": "Net worth down from M$570 to M$555, balance M$11."
-    },
-    {
-      "ts": 1788104830890,
-      "kind": "analysis",
-      "text": "Analysed \"Anglo American & Teck Resources merge by Sep 1, 2026\": market 5%, my 2% (high). No trade, edge 0.032 below minimum 0.04."
     }
   ],
   "todos": [
@@ -745,9 +745,9 @@
       "side": "NO",
       "shares": 170.9,
       "invested": 110.0,
-      "value": 169.2,
-      "profit": 59.2,
-      "prob": 0.01,
+      "value": 170.9,
+      "profit": 60.9,
+      "prob": 0.0,
       "closed": true,
       "days_to_close": 0.0
     },
@@ -825,6 +825,31 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1788244186829,
+      "kind": "no_trade",
+      "question": "Will Shohei Ohtani hit at least 43 home runs in 2026?",
+      "url": "https://manifold.markets/Yoae/will-shohei-ohtani-hit-at-least-43",
+      "market_prob": 0.07209964389269226,
+      "model_prob": 0.08,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Ohtani has 30 HRs with ~26 games remaining before the regular season ends on Sept 27. Reaching 43 requires 13 HRs (~0.50 HR/g), well above his 2026 pace (0.24 HR/g). While Ohtani is capable of historic surges, hitting 13 HRs in under 30 games is roughly an 8% event.",
+      "uncertainty": "Whether Ohtani maintains full playing time through September and can pull off a rare 13+ HR monthly burst.",
+      "resolution_risk": "None identified; resolves clearly based on official MLB regular season statistics.",
+      "evidence_for": [
+        "Ohtani has historic power potential, having hit 54 and 55 home runs in the previous two seasons.",
+        "He has demonstrated high-volume monthly hot streaks in past seasons (e.g., 15 HR in June 2023)."
+      ],
+      "evidence_against": [
+        "Ohtani currently has 30 HRs through ~127 games in 2026, a pace of ~0.236 HR per game.",
+        "Needs 13 home runs in approximately 26 remaining regular season games before Sept 27, requiring a rate of ~0.50 HR per game.",
+        "A 13-HR month represents a ~95th+ percentile outcome based on his season and career home run distributions.",
+        "Risk of end-of-season rest or minor fatigue slowing plate appearance accumulation."
+      ],
+      "reason": "edge 0.008 below minimum 0.04"
+    },
     {
       "ts": 1788241847159,
       "kind": "no_trade",
@@ -1154,30 +1179,6 @@
         "High potential for last-minute tactical voting in East Germany, where voters often rally behind the CDU to block AfD from becoming the strongest party, which can squeeze smaller parties."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1788128528107,
-      "kind": "no_trade",
-      "question": "[Will Brown] Will Transformative AI look like an abundance of specialized models, in August 2026?",
-      "url": "https://manifold.markets/Bayesian/will-brown-will-transformative-ai-l",
-      "market_prob": 0.07470139566357742,
-      "model_prob": 0.11,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "While specialized models like Qwen-Coder are prevalent, the Manifold forecasting community overwhelmingly associates Transformative AI with general foundation models. A poll asking if TAI looks like an abundance of specialized models is unlikely to clear the >50% majority threshold required for a YES resolution, though a 11% probability accounts for ambiguous poll wording.",
-      "uncertainty": "Whether the poll phrasing allows a broad interpretation that attracts majority agreement from Manifold users.",
-      "resolution_risk": "The poll might be resolved proportionally or non-binarily by the creator, though binary resolution based on majority vote is standard.",
-      "evidence_for": [
-        "Specialized models (Qwen-Coder, domain-specific AI solvers) have proliferated alongside general foundation models by August 2026.",
-        "Some users view specialized tooling ecosystems as the practical definition of AI transformation in industry."
-      ],
-      "evidence_against": [
-        "The dominant consensus on Manifold and LessWrong views general foundation models (general LLM/agentic architectures) as the primary drivers of Transformative AI.",
-        "Will Brown's specialized model thesis remains a minority take among AI forecasters on Manifold.",
-        "A binary market resolving to a poll requires >50% majority approval; even if 25-30% of poll voters agree, the market resolves to NO."
-      ],
-      "reason": "edge 0.035 below minimum 0.04"
     }
   ]
 }
