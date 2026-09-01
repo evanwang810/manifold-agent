@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788225855841,
+  "generated_ms": 1788226158549,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 3,
+      "today": 6,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 1,
+      "today": 2,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 596.38,
   "summary": "Portfolio net worth is approximately M$593. The active book is lean, high-conviction, and entirely in profit. Three core positions are nearing resolution: a YES on the next Gemini model being frontier at coding, a NO on MNX volume, and a NO on Anthropic releasing a frontier system card. None of these positions are moving against the portfolio.\n\nSpendable liquidity remains critically low. As of September 1, the expected resolution wave from the August 11-14 cluster and August 31 positions has not yet materialized. Resolution latency is now confirmed to exceed 18 days, forcing a continued holding pattern and the missed execution of several high-edge opportunities.\n\nCalibration is strongest when shorting over-optimistic AI timelines and identifying model capability mispricings, while remaining weakest in short-term macro tactical timing and directional crypto noise. Concrete mistakes to avoid include liquidating high-EV winners for marginal liquidity during a crunch and failing to factor in the observed >18-day resolution latency when planning capital availability.\n\nSocial obligations must be prioritized immediately upon the return of full liquidity: first, the M$10 debt to y5RkCJ45bRTdfdoln6wRM4qLHli1, and second, the conditional M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93.",
   "journal": [
+    {
+      "ts": 1788226158490,
+      "kind": "analysis",
+      "text": "Analysed \"Xi JinPing visits USA before Sep 30?\": market 81%, my 84% (high). No trade, edge 0.030 below minimum 0.04."
+    },
+    {
+      "ts": 1788226041054,
+      "kind": "screen",
+      "text": "Escalated \"Xi JinPing visits USA before Sep 30?\" at 81%: quick estimate 65% vs market 81%"
+    },
     {
       "ts": 1788223978759,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1788102210399,
       "kind": "screen",
       "text": "Passed on \"Will the US and Iran sign a formal end-of-war agreement by August 31, \" at 5%: quick estimate 5% agrees with market. Commentary and current diplomatic deadlock indicate only a ceasefire extension exists, failing the strict end-of-war resolution criteria by tomorrow's deadline."
-    },
-    {
-      "ts": 1788102190419,
-      "kind": "screen",
-      "text": "Passed on \"Will a Manifolder win the Summer Metaculus Cup\" at 11%: quick estimate 15% agrees with market. This is a low-liquidity novelty prediction market about a competition dominated by advanced forecasting bots and top Metaculus experts where a Manifolder winning is a long shot."
-    },
-    {
-      "ts": 1788089098171,
-      "kind": "screen",
-      "text": "Passed on \"Will DeepSeek V4 Pro GA be better than Gemini 3.5 Pro?\" at 92%: quick estimate 88% agrees with market. DeepSeek V4 Pro is released and ranked while Gemini 3.5 Pro is delayed, and resolution rules favor the sole released model."
     }
   ],
   "todos": [
@@ -826,6 +826,29 @@
   ],
   "decisions": [
     {
+      "ts": 1788226158486,
+      "kind": "no_trade",
+      "question": "Xi JinPing visits USA before Sep 30?",
+      "url": "https://manifold.markets/predyx_markets/xi-jingping-visits-usa-before-sep-3",
+      "market_prob": 0.8100000000000002,
+      "model_prob": 0.84,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With official public confirmation from both the White House and top Chinese leadership setting the trip for September 23\u201325, 2026, a visit before the September 30 deadline is highly likely. The primary remaining risk is a last-minute geopolitical breakdown or postponement, which occurs roughly 15% of the time for confirmed high-level summits.",
+      "uncertainty": "Whether unexpected diplomatic friction or a major geopolitical incident in the next three weeks causes the visit to be postponed beyond September 30.",
+      "resolution_risk": "If the trip is postponed even by a few days into early October, the market resolves NO despite a visit occurring.",
+      "evidence_for": [
+        "Xi Jinping's visit is scheduled for September 23\u201325, 2026, well before the September 30 deadline.",
+        "The scheduled visit has been publicly confirmed by the White House, President Trump, and Chinese Foreign Minister Wang Yi."
+      ],
+      "evidence_against": [
+        "Geopolitical volatility or diplomatic disagreements could lead to a last-minute postponement or cancellation.",
+        "Beijing requested Washington to 'overcome obstacles' ahead of the trip, signaling remaining friction."
+      ],
+      "reason": "edge 0.030 below minimum 0.04"
+    },
+    {
       "ts": 1788223832755,
       "kind": "no_trade",
       "question": "Will If Anyone Builds It appear in a NYT bestseller list again?",
@@ -1154,30 +1177,6 @@
       "evidence_against": [
         "Less than 45 hours remain in August 2026 and no article has been published yet.",
         "Self-imposed writing and publishing deadlines on prediction markets frequently slip due to scope expansion or procrastination."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1788117621393,
-      "kind": "no_trade",
-      "question": "Will we conclude Tesla launched level 4 robotaxis in summer 2025?",
-      "url": "https://manifold.markets/dreev/will-tesla-count-as-a-waymo-competi",
-      "market_prob": 0.10823058988235525,
-      "model_prob": 0.06,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Tesla's summer 2025 operations in Austin relied on employee safety monitors, failing the strict unsupervised Level 4 criteria established in the FAQ. With fully unsupervised testing only arriving in mid-2026, summer 2025 does not qualify as an unsupervised Level 4 launch.",
-      "uncertainty": "Whether the creator decides to resolve NO directly or resolve to a small non-zero probability given the safety monitor debate.",
-      "resolution_risk": "The market creator could issue a PROB resolution rather than a binary NO due to perceived definitional ambiguity.",
-      "evidence_for": [
-        "Tesla did launch a limited public service in Austin in summer 2025 without a driver sitting in the front driver's seat.",
-        "The creator acknowledged ambiguity around whether passenger-seat safety monitors count against Level 4 autonomy."
-      ],
-      "evidence_against": [
-        "In summer 2025, Tesla's Austin rides required employee safety monitors and were effectively supervised; fully unsupervised rides did not begin until mid-2026.",
-        "The creator explicitly stated in FAQ 2/3 and subsequent comments that human backup supervision strongly points toward NO.",
-        "Creator comments indicate that if forced to resolve based on the summer 2025 state, the outcome would be NO or a low probability."
       ],
       "reason": "size floored to zero by balance reserve"
     }
