@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788349479842,
+  "generated_ms": 1788350028443,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 20,
+      "today": 23,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 6,
+      "today": 7,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 593.28,
   "summary": "Portfolio net worth is M$596 with spendable liquidity fully recovered to M$162 following the resolution of the August cluster. The operational floor is set at a prudent M$100 to balance capital availability and liquidity preservation. \n\nThe portfolio holds 15 active positions, focusing primarily on structural edges, capability mispricings, and political thresholds. Recent execution errors\u2014specifically taking positions opposite to stated model probabilities in the SPD state election and GLM-5.3 Flash markets\u2014have been fully corrected via immediate liquidation. Furthermore, a tactical crypto bet on Bitcoin was promptly exited to maintain strict discipline against trading low-edge directional noise. \n\nActive positions include YES on Polymarket correctly predicting every Fed decision in 2026, NO on YES having more holders than NO (capitalizing on a structural edge where ties resolve to NO and alt accounts face bans), YES on a human left hand learning to write before a robot hand (relying on fine-motor sim-to-real transfer difficulty), YES on the Swedish Liberals remaining in the Riksdag past the next election (leveraging historical tactical *st\u00f6dr\u00f6stning*), NO on the Greens crossing the 5% threshold in the Saxony-Anhalt Landtag (based on historical underperformance in Eastern state elections), and a micro-position on *If Anyone Builds It* appearing on the NYT bestseller list again. \n\nCalibration remains strong in identifying model capability mispricings and structural market rules, while remaining weak in short-term macro tactical timing and directional crypto noise. Resolution latency for major clusters has been firmly established at 18-21 days, a critical parameter for capital planning that prevents future paralyzing deadlocks. Future instances must strictly validate that trade directions align with model probability estimates prior to execution.",
   "journal": [
+    {
+      "ts": 1788350028315,
+      "kind": "analysis",
+      "text": "Analysed \"Will Polymarket be right about every Fed decision in 2026?\": market 75%, my 76% (medium). No trade, edge 0.006 below minimum 0.04."
+    },
+    {
+      "ts": 1788349666522,
+      "kind": "screen",
+      "text": "Escalated \"Will Polymarket be right about every Fed decision in 2026?\" at 75%: quick estimate 15% vs market 75%"
+    },
     {
       "ts": 1788347995473,
       "kind": "position",
@@ -437,16 +447,6 @@
       "ts": 1788261192439,
       "kind": "screen",
       "text": "Passed on \"Will the silver spot price be above $75 USD on September 1st?\" at 4%: quick estimate 15% agrees with market. Commenters correctly point out that options pricing puts the probability near 14 percent for a move to 75 USD in just days."
-    },
-    {
-      "ts": 1788259341905,
-      "kind": "position",
-      "text": "Opened 64 YES on \"Will Polymarket be right about every Fed decision in 2026?\" at 75%, M$48 in."
-    },
-    {
-      "ts": 1788259080247,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] [liquidity] Latency Calibration (Sep 1): The Aug 11-14 cluster resolved on Sep 1. Actual resolution latency: ~18-. Because: Recording the observed latency to avoid overestimating liquidity in future cycles."
     }
   ],
   "todos": [
@@ -915,6 +915,30 @@
   ],
   "decisions": [
     {
+      "ts": 1788350028312,
+      "kind": "no_trade",
+      "question": "Will Polymarket be right about every Fed decision in 2026?",
+      "url": "https://manifold.markets/HillaryClinton/will-polymarket-be-right-about-ever",
+      "market_prob": 0.7544265160090401,
+      "model_prob": 0.76,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With 5 meetings already passed, only 3 remain in 2026. The Fed almost always telegraphs decisions days ahead of meetings, giving Polymarket's 24h favorite an ~91-93% historical hit rate per meeting, yielding ~76% overall probability for the year.",
+      "uncertainty": "Whether the Fed delivers an untelegraphed rate move or split decision within 24 hours of any of the remaining 3 meetings.",
+      "resolution_risk": "Disputes over exact Polymarket timestamp pricing or pluralities 24 hours prior to decision announcements.",
+      "evidence_for": [
+        "5 of 8 Fed meetings in 2026 have passed without major 24-hour consensus failures.",
+        "The Fed consistently telegraphs policy decisions via communications and WSJ leaks prior to the blackout window, ensuring high 24-hour market accuracy.",
+        "Only 3 meetings remain in 2026 (September, November, December)."
+      ],
+      "evidence_against": [
+        "Macro volatility and shifting inflation/labor metrics increase the risk of tight 50/50 consensus splits close to meeting dates.",
+        "A single failure across any remaining meeting resolves the entire market to NO."
+      ],
+      "reason": "edge 0.006 below minimum 0.04"
+    },
+    {
       "ts": 1788347589883,
       "kind": "bet",
       "question": "Will there be a confirmed case of Cyclosporiasis in ALL 48 US contiguous states before the end of August 2026?",
@@ -1248,30 +1272,6 @@
         "Traders in comments are actively coordinating position flips."
       ],
       "reason": "edge 0.339, kelly 0.47, decay 0.80, bound by kelly target, trimmed from M$90 for impact"
-    },
-    {
-      "ts": 1788258926824,
-      "kind": "bet",
-      "question": "Will Polymarket be right about every Fed decision in 2026?",
-      "url": "https://manifold.markets/HillaryClinton/will-polymarket-be-right-about-ever",
-      "market_prob": 0.74,
-      "model_prob": 0.82,
-      "confidence": "medium",
-      "amount": 48.0,
-      "outcome": "YES",
-      "thinking": "With 5 of 8 meetings already completed matching market consensus and the Fed strongly telegraphing rate decisions to avoid market shocks, the chance that Polymarket's 24-hour favorite outcome is correct for all 3 remaining 2026 meetings is roughly 82%.",
-      "uncertainty": "Whether the Fed delivers a surprise decision contrary to 24-hour market expectations in any of the 3 remaining meetings of 2026.",
-      "resolution_risk": "Resolves based on Polymarket's most likely outcome exactly 24 hours prior; minor market microstructure or liquidity distortions on Polymarket at that exact snapshot timestamp could create unexpected results.",
-      "evidence_for": [
-        "The Federal Reserve explicitly telegraphs rate decisions days and weeks in advance to prevent market surprises, making the 24-hour favorite outcome overwhelmingly accurate.",
-        "The 5 FOMC meetings already held in 2026 (Jan, Mar, Apr, Jun, Jul) matched prediction market consensus 24 hours prior.",
-        "Only 3 FOMC meetings remain in 2026 (September, November, December)."
-      ],
-      "evidence_against": [
-        "Geopolitical shocks (such as U.S.-Iran conflicts impacting energy prices) or sudden inflation surprises could force rapid pivot decisions late in the meeting cycle.",
-        "A tail-risk unexpected Fed decision that differs from 24-hour market consensus across any of the remaining meetings would resolve this market to NO."
-      ],
-      "reason": "edge 0.080, kelly 0.31, decay 0.65, bound by kelly target"
     }
   ]
 }
