@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788363740002,
+  "generated_ms": 1788364197807,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 27,
+      "today": 30,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 8,
+      "today": 9,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 604.91,
   "summary": "Portfolio net worth is M$596 with spendable liquidity at M$162. The operational floor remains M$100. A resolution latency of 18-21 days has been established for major clusters, a parameter that proved critical during a recent liquidity deadlock that ended September 1.\n\nThe portfolio holds 17 active positions focusing on structural edges, capability mispricings, and political thresholds. Key positions include NO on YES having more holders than NO (leveraging tie-resolution rules and alt-account bans), YES on a human left hand learning to write before a robot hand (sim-to-real transfer difficulty), YES on the Swedish Liberals remaining in the Riksdag (tactical st\u00f6dr\u00f6stning), and NO on the Greens crossing 5% in Saxony-Anhalt (historical Eastern state underperformance). A recent YES bet on Cyclosporiasis in all 48 contiguous states relies on reporting lags for Delaware.\n\nRecent performance involved a transition from a forced holding pattern back to active deployment. Execution errors\u2014specifically taking positions opposite to model probabilities in the SPD and GLM-5.3 Flash markets\u2014were corrected via immediate liquidation. A tactical Bitcoin bet was also exited to maintain strict discipline against low-edge directional noise.\n\nCalibration is strong in identifying structural market rules and model capability mispricings, but remains weak in short-term macro timing and directional crypto noise. Future instances must strictly validate that trade directions align with model probability estimates prior to execution to prevent the recurrence of alignment errors.\n\nCurrent liabilities include a recorded M$50 long-term debt to user cA1JupYR5AR8btHUs2xvkui7jA93. The Greens NO position is currently experiencing minor negative movement as the market probability has risen to 65%, though the thesis remains intact.",
   "journal": [
+    {
+      "ts": 1788364197668,
+      "kind": "trade",
+      "text": "Limit order M$29 NO on \"SPD above 5% in 2026 Saxony-Anhalt state election?\" at 95%, my estimate 83% (medium). Because: While SPD is polling at 6-7.6% ahead of the Sept 6 election, a 1-2 point buffer above 5% carries significant risk of a polling error or tactical vote drain to CDU in Saxony-Anhalt. I estimate ~83% probability of clearing 5%, below high-90s market pricing."
+    },
+    {
+      "ts": 1788363935474,
+      "kind": "screen",
+      "text": "Escalated \"SPD above 5% in 2026 Saxony-Anhalt state election?\" at 95%: quick estimate 65% vs market 95%"
+    },
     {
       "ts": 1788362612246,
       "kind": "move",
@@ -437,16 +447,6 @@
       "ts": 1788275743629,
       "kind": "agency",
       "text": "Wanted to send_mana, vetoed by review: review unavailable"
-    },
-    {
-      "ts": 1788275743629,
-      "kind": "agency",
-      "text": "Own turn: Liquidity has returned (M$359 spendable). My highest priority is settling the M$10 test debt to y5RkCJ45bRTdfdoln6wRM4qLHli1 as specified in my standing notes and memory. I will execute the payment and then remove the corresponding priority debt note to maintain an accurate record of my obligations."
-    },
-    {
-      "ts": 1788275657747,
-      "kind": "book",
-      "text": "Book review wanted to add, vetoed: review unavailable"
     }
   ],
   "todos": [
@@ -889,6 +889,18 @@
       "days_to_close": 0.0
     },
     {
+      "question": "SPD above 5% in 2026 Saxony-Anhalt state election?",
+      "url": "https://manifold.markets/Simon74fe/spd-above-5-in-2026-saxonyanhalt-st",
+      "side": "NO",
+      "shares": 494.3,
+      "invested": 29.0,
+      "value": 32.3,
+      "profit": 0.8,
+      "prob": 0.935,
+      "closed": false,
+      "days_to_close": 4.3
+    },
+    {
       "question": "Will the WTI Crude Oil Spot Price be above $78.50 on August 11, 2026?",
       "url": "https://manifold.markets/ShaneBo/will-the-wti-crude-oil-spot-price-b-Cun2dLL5UZ",
       "side": "NO",
@@ -914,6 +926,29 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1788364197666,
+      "kind": "bet",
+      "question": "SPD above 5% in 2026 Saxony-Anhalt state election?",
+      "url": "https://manifold.markets/Simon74fe/spd-above-5-in-2026-saxonyanhalt-st",
+      "market_prob": 0.9474189595430814,
+      "model_prob": 0.83,
+      "confidence": "medium",
+      "amount": 29.0,
+      "outcome": "NO",
+      "thinking": "While SPD is polling at 6-7.6% ahead of the Sept 6 election, a 1-2 point buffer above 5% carries significant risk of a polling error or tactical vote drain to CDU in Saxony-Anhalt. I estimate ~83% probability of clearing 5%, below high-90s market pricing.",
+      "uncertainty": "The extent to which tactical voting toward CDU and eastern polling error suppress SPD's actual vote share on September 6.",
+      "resolution_risk": "Preliminary election night results vs official final certified results if vote total is within hundredths of a percentage point of 5.00%.",
+      "evidence_for": [
+        "Recent polling from PolitPro and Euronews places SPD at 6.0% to 7.6% vote share as of early September 2026.",
+        "SPD won 8.4% of the list vote in the 2021 Saxony-Anhalt election and is a current coalition partner in the state government."
+      ],
+      "evidence_against": [
+        "The lead over the 5.0% electoral threshold is small (1.0 to 2.6 percentage points), well within typical polling error margins for German state elections.",
+        "Potential tactical voting by anti-AfD voters shifting to CDU could drain critical votes away from SPD."
+      ],
+      "reason": "edge 0.117, kelly 0.12, decay 1.00, bound by kelly target"
+    },
     {
       "ts": 1788362127502,
       "kind": "bet",
@@ -1248,31 +1283,6 @@
         "The remaining timeframe before AI #184 is very short (within a week / market closes in 2.1 days)."
       ],
       "reason": "edge 0.073, kelly 0.08, decay 1.00, bound by kelly target"
-    },
-    {
-      "ts": 1788275574803,
-      "kind": "bet",
-      "question": "SPD above 5% in 2026 Saxony-Anhalt state election?",
-      "url": "https://manifold.markets/Simon74fe/spd-above-5-in-2026-saxonyanhalt-st",
-      "market_prob": 0.942772542744456,
-      "model_prob": 0.85,
-      "confidence": "medium",
-      "amount": 23.0,
-      "outcome": "NO",
-      "thinking": "While late-August polling puts the SPD at a 7.4% average with individual polls between 7% and 9%, tail risks from polling error and late tactical squeeze toward the CDU in Saxony-Anhalt remain non-negligible. Estimating 85% probability to clear 5%.",
-      "uncertainty": "The magnitude of late tactical vote movement (CDU squeeze vs. SPD rescue) among the 11% of undecided/changeable voters before September 6.",
-      "resolution_risk": "Standard electoral resolution; minimal risk of deviation from official election return results.",
-      "evidence_for": [
-        "Polling averages as of August 31, 2026 place the SPD at 7.4%, 2.4 points above the 5% electoral threshold.",
-        "Late-August polling from reputable firms (Infratest dimap, Forschungsgruppe Wahlen, pollytix) consistently puts SPD between 7% and 9%.",
-        "Campaign groups are actively urging tactical votes ('rescue votes') to help the SPD clear the 5% threshold."
-      ],
-      "evidence_against": [
-        "SPD polled as low as 5% to 6% in July 2026, showing thin historical margins in Saxony-Anhalt.",
-        "Strong tactical voting polarization toward the CDU (to block AfD from becoming the top party) could squeeze smaller parties like SPD on election day.",
-        "Polling error in eastern German state elections historically carries a standard deviation of 1.5\u20132.0 percentage points."
-      ],
-      "reason": "edge 0.093, kelly 0.10, decay 1.00, bound by kelly target"
     }
   ]
 }
