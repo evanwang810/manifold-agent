@@ -1,0 +1,119 @@
+name: reply
+
+# The tick workflow answers people, but only while a session is running. Between
+# sessions, and whenever GitHub's scheduler drops a cron, somebody who writes in is
+# left waiting with no sign the bot is alive. This fires on the event itself so a
+# question asked in a gap still gets answered.
+#
+# It ran once before and was removed for answering things twice: it and a live tick
+# session would both pick up the same unanswered question and both reply. Two things
+# stop that now. The job skips itself while a tick session is running, since that
+# session will get there within one tick anyway, and the pass it runs is replies-only,
+# so at worst it can never scan, trade, or spend the deep budget.
+on:
+  issues:
+    types: [opened, reopened, labeled]
+  issue_comment:
+    types: [created]
+
+# Separate from the tick group on purpose. Sharing it would make every comment wait out
+# a 55-minute session, which is the delay this exists to remove.
+concurrency:
+  group: manifold-agent-reply
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  reply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    # Comments the agent posts itself carry the ask-the-bot label too. GitHub already
+    # refuses to trigger a workflow from a GITHUB_TOKEN comment, so this is belt and
+    # braces against a loop where answering a question is what asks the next one.
+    if: >
+      github.event.sender.login != 'github-actions[bot]' &&
+      !github.event.issue.pull_request
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Skip if a tick session is already running
+        id: busy
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # A running session polls for unanswered questions every few minutes, so it
+          # will pick this up on its own. Answering here as well is how the thread ended
+          # up with two replies to every message last time.
+          RUNNING=$(gh run list --workflow=tick.yml --status=in_progress \
+                      --json databaseId --jq 'length' 2>/dev/null || echo 0)
+          if [ "${RUNNING:-0}" -gt 0 ]; then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "A tick session is live; it will answer this within a tick." \
+              >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/setup-python@v5
+        if: steps.busy.outputs.run == 'true'
+        with:
+          python-version: "3.12"
+
+      - run: pip install --quiet -e .
+        if: steps.busy.outputs.run == 'true'
+
+      - name: Check secrets
+        id: guard
+        if: steps.busy.outputs.run == 'true'
+        env:
+          MANIFOLD_API_KEY: ${{ secrets.MANIFOLD_API_KEY }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+        run: |
+          if [ -z "$MANIFOLD_API_KEY" ] || [ -z "$LLM_API_KEY" ]; then
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Fetch state
+        if: steps.guard.outputs.ready == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          REMOTE="https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          if ! git clone --quiet --depth 1 --branch state "$REMOTE" state 2>/dev/null; then
+            echo "no state branch yet, so there is nothing to answer from"
+            exit 0
+          fi
+          git -C state config user.name "manifold-agent"
+          git -C state config user.email "manifold-agent@users.noreply.github.com"
+
+      - name: Answer
+        if: steps.guard.outputs.ready == 'true'
+        env:
+          MANIFOLD_API_KEY: ${{ secrets.MANIFOLD_API_KEY }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          SEARCH_API_KEY: ${{ secrets.SEARCH_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python run.py --replies-only || echo "reply pass failed, the next tick retries"
+
+          # Same snapshot-wins push as the tick loop: the branch is state, not history,
+          # so a rejected push is re-parented onto whatever landed rather than merged.
+          cd state
+          git add -A
+          if git diff --staged --quiet; then exit 0; fi
+          git commit --quiet -m "state: reply $(date -u +%FT%TZ)"
+          for attempt in 1 2 3; do
+            git push --quiet origin HEAD:state 2>/dev/null && exit 0
+            git fetch --quiet origin state || true
+            git reset --soft origin/state || true
+            git add -A
+            git diff --staged --quiet && exit 0
+            git commit --quiet -m "state: reply $(date -u +%FT%TZ)" || true
+            sleep 3
+          done
+          echo "could not push state; the answer was posted, the watermark was not"

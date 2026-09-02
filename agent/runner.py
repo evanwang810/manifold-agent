@@ -112,7 +112,15 @@ class Runner:
         for client in self._clients:
             await client.aclose()
 
-    async def tick(self) -> TickReport:
+    async def tick(self, replies_only: bool = False) -> TickReport:
+        """One pass. `replies_only` answers people and does nothing else.
+
+        That mode exists for the reply workflow, which fires on a GitHub event so
+        somebody who writes in between sessions is not left waiting for the next cron.
+        It skips the scan, the agency turn and anything that re-evaluates a market, so
+        it cannot trade and cannot spend the deep budget: a stranger opening issues
+        should not be able to drive the agent's trading clock.
+        """
         me = await self.client.me()
         self.user_id = me["id"]
         username = me.get("username", "?")
@@ -147,29 +155,32 @@ class Runner:
             self.report.notes.append(f"one-off order: {self.cfg.one_off_order[:120]}")
 
         self._observe_portfolio(positions)
-        await self._check_fills()
-        await self._check_moves(positions)
+        if not replies_only:
+            await self._check_fills()
+            await self._check_moves(positions)
 
-        # Once per tick, before the expensive work. It used to run again afterwards,
-        # which combined with the separate reply workflow meant two processes could be
-        # holding the same unanswered question at the same time and both answer it.
+        # Once per pass, and only once. When this also ran after the scan, that second
+        # call and the reply workflow could be holding the same unanswered question at
+        # the same time, and both would answer it.
         self.report.replies = await self._answer_messages(len(positions))
-        await self._scan()
 
-        # Last, and only occasionally: the one thing it does because it wanted to
-        # rather than because something happened.
-        agency = Agency(
-            self.cfg, client=self.client, chat=self.chat, deep=self.deep,
-            memory=self.memory, budget=self.budget, user_id=self.user_id,
-        )
-        book = await agency.review_book(
-            positions, self.report.balance, self.report.net_worth
-        )
-        if book:
-            self.report.notes.append(f"book: {book}")
-        own = await agency.run(positions, self.report.balance, self.report.net_worth)
-        if own:
-            self.report.notes.append(f"own turn: {own}")
+        if not replies_only:
+            await self._scan()
+
+            # Last, and only occasionally: the one thing it does because it wanted to
+            # rather than because something happened.
+            agency = Agency(
+                self.cfg, client=self.client, chat=self.chat, deep=self.deep,
+                memory=self.memory, budget=self.budget, user_id=self.user_id,
+            )
+            book = await agency.review_book(
+                positions, self.report.balance, self.report.net_worth
+            )
+            if book:
+                self.report.notes.append(f"book: {book}")
+            own = await agency.run(positions, self.report.balance, self.report.net_worth)
+            if own:
+                self.report.notes.append(f"own turn: {own}")
 
 
         if not self.budget.chat.spent:

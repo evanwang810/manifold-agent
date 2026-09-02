@@ -16,7 +16,8 @@ next to the market's at decision time, which is a Brier score waiting to be comp
 run.py                    entrypoint, one tick per invocation
 config.toml               settings, committed, no secrets
 instructions.md           standing orders injected into the system prompt
-.github/workflows/tick.yml  the cron
+.github/workflows/tick.yml   the cron
+.github/workflows/reply.yml  answers questions asked between sessions
 agent/
   config.py      typed settings, .env loading, owner instruction assembly
   models.py      Market, Comment, Position, Decision, Sizing, TipTap flattening
@@ -125,14 +126,15 @@ Name the same model in every tier and you get single-model behaviour; the runner
 and reuses one client. Set `[screen] enabled = false` to skip screening entirely and send
 everything to the deep model.
 
-`[budget]` has two ceilings per tier. The per-tick one is really a rate limit, since ticks
-run 60 seconds apart. The per-day one is tracked in durable state across ticks, and on a
-free tier it is the number that decides what the agent can do at all.
+`[budget]` has two ceilings per tier. The per-tick one is really a rate limit. The
+per-day one is tracked in durable state across ticks, and on a free tier it is the number
+that decides what the agent can do at all.
 
-Defaults assume 20 requests a day on the deep model, which is the binding constraint on
-everything else: 18 analyses a day means about 72 markets screened at a 25% pass rate,
-and the scan cadence and screen threshold are set to land there. If your quota is larger,
-raise `max_deep_calls_per_day` and drop `min_minutes_between_scans` together.
+Count the quota of every model in the deep chain, not just the first, since the chain
+only advances once a model actually answers 429. The defaults assume two models at 20 a
+day each: 34 analyses, which at a 25% screen pass rate is about 130 markets looked at.
+If your quota is larger, raise `max_deep_calls_per_day` and drop
+`min_minutes_between_scans` together.
 
 Daily allowances are released against the clock rather than first-come, because a cap with
 no pacing is spent in the first ten minutes and then the agent is dark until midnight.
@@ -219,9 +221,12 @@ trigger a single live run by hand from the Actions tab using the **live** input.
 Four channels, in increasing order of permanence:
 
 - **A question from the website.** The site's form opens a GitHub issue labelled
-  `ask-the-bot`. The agent answers it publicly on the next tick and leaves the thread
-  open, so replying pulls it back into the conversation. Anyone can use this, not just
-  you.
+  `ask-the-bot`. The agent answers it publicly and leaves the thread open, so replying
+  pulls it back into the conversation. Anyone can use this, not just you. A live session
+  picks it up on its next tick; between sessions the `reply` workflow fires on the
+  GitHub event instead, so asking at an awkward hour does not mean waiting for the next
+  cron. That workflow only ever answers: it cannot scan, trade, or spend the deep
+  budget, so a stranger opening issues cannot drive the trading clock.
 - **A one-off instruction.** Actions tab, Run workflow, type into the `instruction`
   box. It applies to that run only.
 - **A Manifold comment.** Reply to any of the bot's last 10 comments, oldest answered

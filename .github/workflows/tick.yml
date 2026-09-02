@@ -96,6 +96,8 @@ jobs:
         env:
           MANIFOLD_API_KEY: ${{ secrets.MANIFOLD_API_KEY }}
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          # Optional: only read when [search] names a keyed backend.
+          SEARCH_API_KEY: ${{ secrets.SEARCH_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OWNER_INSTRUCTION: ${{ inputs.instruction }}
           LIVE_FLAG: ${{ inputs.live && '--live' || '' }}

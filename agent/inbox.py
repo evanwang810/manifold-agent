@@ -1,13 +1,18 @@
 """Questions asked through the website.
 
 The showcase site is static, so it cannot take a message directly. Instead its form
-opens a prefilled GitHub issue, and this reads those issues on the next tick and answers
-them. No backend, no extra hosting, and the whole conversation stays public and readable.
+opens a prefilled GitHub issue, and this reads those issues and answers them. No
+backend, no extra hosting, and the whole conversation stays public and readable.
+
+This runs from two places: every tick while a session is live, and from the reply
+workflow on the GitHub event itself, so a question asked between sessions is not left
+waiting for the next cron. Either way it is the same pass over the same open issues,
+and a watermark on the last comment it handled is what stops it from answering the same
+message twice.
 
 Threads are left open. Answering and closing turns a conversation into a ticket queue,
 and the agent is supposed to be talkable-to: a reply on an answered issue pulls it back
-in on the next tick. A watermark on the last comment it handled is what stops it from
-answering the same message twice.
+in.
 
 Both environment variables are provided automatically inside GitHub Actions. Outside
 it, this is a no-op.

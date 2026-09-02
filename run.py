@@ -5,6 +5,7 @@
     python run.py --live       # force real orders regardless of config
     python run.py --dry-run    # force dry run regardless of config
     python run.py --compress   # rewrite the memory summary and print it
+    python run.py --replies-only   # answer people, skip the scan and the agency turn
 """
 
 from __future__ import annotations
@@ -160,9 +161,10 @@ async def amain(args: argparse.Namespace) -> int:
             print(runner.memory.state.get("summary") or "(empty)")
             return 0
 
-        log.info("tick %s  mode=%s", utc_stamp(),
-                 "DRY RUN" if cfg.manifold.dry_run else "LIVE")
-        report = await runner.tick()
+        log.info("tick %s  mode=%s%s", utc_stamp(),
+                 "DRY RUN" if cfg.manifold.dry_run else "LIVE",
+                 "  replies only" if args.replies_only else "")
+        report = await runner.tick(replies_only=args.replies_only)
         rendered = report.render()
         print("\n" + rendered)
 
@@ -185,6 +187,10 @@ def main() -> int:
     parser.add_argument("--dry-run", action="store_true", help="force dry run")
     parser.add_argument("--compress", action="store_true", help="rewrite memory summary")
     parser.add_argument("--check", action="store_true", help="diagnose keys, models, search")
+    parser.add_argument(
+        "--replies-only", action="store_true",
+        help="answer people and nothing else: no scan, no trades, no agency turn",
+    )
     parser.add_argument("-v", "--verbose", action="store_true")
     args = parser.parse_args()
 
