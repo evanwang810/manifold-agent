@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788386279300,
+  "generated_ms": 1788386614156,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 40,
+      "today": 43,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 12,
+      "today": 13,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 613.84,
   "summary": "Portfolio net worth is M$596 with spendable liquidity at M$162. The operational floor remains M$100. A resolution latency of 18-21 days has been established for major clusters, a parameter that proved critical during a recent liquidity deadlock that ended September 1.\n\nThe portfolio holds 17 active positions focusing on structural edges, capability mispricings, and political thresholds. Key positions include NO on YES having more holders than NO (leveraging tie-resolution rules and alt-account bans), YES on a human left hand learning to write before a robot hand (sim-to-real transfer difficulty), YES on the Swedish Liberals remaining in the Riksdag (tactical st\u00f6dr\u00f6stning), and NO on the Greens crossing 5% in Saxony-Anhalt (historical Eastern state underperformance). A recent YES bet on Cyclosporiasis in all 48 contiguous states relies on reporting lags for Delaware.\n\nRecent performance involved a transition from a forced holding pattern back to active deployment. Execution errors\u2014specifically taking positions opposite to model probabilities in the SPD and GLM-5.3 Flash markets\u2014were corrected via immediate liquidation. A tactical Bitcoin bet was also exited to maintain strict discipline against low-edge directional noise.\n\nCalibration is strong in identifying structural market rules and model capability mispricings, but remains weak in short-term macro timing and directional crypto noise. Future instances must strictly validate that trade directions align with model probability estimates prior to execution to prevent the recurrence of alignment errors.\n\nCurrent liabilities include a recorded M$50 long-term debt to user cA1JupYR5AR8btHUs2xvkui7jA93. The Greens NO position is currently experiencing minor negative movement as the market probability has risen to 65%, though the thesis remains intact.",
   "journal": [
+    {
+      "ts": 1788386614103,
+      "kind": "analysis",
+      "text": "Analysed \"Will the Sweden Democrats increase their share in parliament in the Sw\": market 37%, my 38% (medium). No trade, edge 0.014 below minimum 0.04."
+    },
+    {
+      "ts": 1788386465677,
+      "kind": "screen",
+      "text": "Escalated \"Will the Sweden Democrats increase their share in parliament in the Sw\" at 37%: quick estimate 58% vs market 37%"
+    },
     {
       "ts": 1788384620199,
       "kind": "closed",
@@ -437,16 +447,6 @@
       "ts": 1788297521214,
       "kind": "screen",
       "text": "Passed on \"Will the winner of the 2026 Vuelta a Espa\u00f1a be Roglic or Pogacar?\" at 25%: quick estimate 38% agrees with market. Comments provide a clear picture of current standings and injuries, making further deep analysis unnecessary."
-    },
-    {
-      "ts": 1788290243869,
-      "kind": "analysis",
-      "text": "Analysed \"Will Uber raise the default minimum suggested tip?\": market 4%, my 4% (high). No trade, edge 0.001 below minimum 0.04."
-    },
-    {
-      "ts": 1788290066641,
-      "kind": "screen",
-      "text": "Escalated \"Will Uber raise the default minimum suggested tip?\" at 4%: quick estimate 45% vs market 4%"
     }
   ],
   "todos": [
@@ -903,6 +903,29 @@
   ],
   "decisions": [
     {
+      "ts": 1788386614101,
+      "kind": "no_trade",
+      "question": "Will the Sweden Democrats increase their share in parliament in the Swedish 2026 general election?",
+      "url": "https://manifold.markets/HenriThunberg/will-the-sweden-democrats-increase",
+      "market_prob": 0.36609126264833475,
+      "model_prob": 0.38,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "",
+      "uncertainty": "Whether late-campaign polling errors or tactical vote shifts within the right-wing bloc alter SD's share by more than 1.3 percentage points on election day.",
+      "resolution_risk": "Official Riksdag election results aggregated post-election count could differ slightly from preliminary election night counts.",
+      "evidence_for": [
+        "Sweden Democrats have historically shown upside polling variance in Swedish general elections.",
+        "Botten Ada model previously estimated a non-negligible path (>50%) to exceeding 20.5% earlier in the cycle."
+      ],
+      "evidence_against": [
+        "Late August 2026 PolitPro polling trend puts SD at 19.2%, 1.3 percentage points below the 20.5% baseline.",
+        "Tactical support voting (st\u00f6dr\u00f6stning) within the Tid\u00f6 bloc could drain SD votes to keep smaller coalition partners (L/KD) above the 4% threshold."
+      ],
+      "reason": "edge 0.014 below minimum 0.04"
+    },
+    {
       "ts": 1788384094070,
       "kind": "no_trade",
       "question": "Will Bitcoin be higher 7 days from now?",
@@ -1235,30 +1258,6 @@
         "Short-term 24-hour price momentum is negative (-2.40%)."
       ],
       "reason": "edge 0.139, kelly 0.17, decay 1.00, bound by kelly target"
-    },
-    {
-      "ts": 1788297934159,
-      "kind": "no_trade",
-      "question": "Will the Sweden Democrats increase their share in parliament in the Swedish 2026 general election?",
-      "url": "https://manifold.markets/HenriThunberg/will-the-sweden-democrats-increase",
-      "market_prob": 0.36609126264833475,
-      "model_prob": 0.36,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Polling averages from late August 2026 place the Sweden Democrats at around 19.3% to 20.2%, consistently below their 2022 high-water mark of 20.5%. While they have historically increased their share in every election, their role as a government-supporting party has brought incumbency costs, and the right-wing bloc is down overall. With the 'shy voter' effect largely gone in recent cycles, they face an uphill battle to clear 20.5%.",
-      "uncertainty": "The presence of any systematic polling error or a late-campaign shift on salient issues like immigration and crime.",
-      "resolution_risk": "Very low; the resolution criteria clearly define the 20.5% threshold and handle party splits or name changes.",
-      "evidence_for": [
-        "Botten Ada, a Swedish election forecasting model, previously estimated a 58% chance of YES.",
-        "Historically, the Sweden Democrats have increased their vote share in every single general election they have contested (2006, 2010, 2014, 2018, 2022)."
-      ],
-      "evidence_against": [
-        "Polling averages from late August 2026 place the Sweden Democrats at 19.3% to 20.2%, which is below the 20.5% threshold.",
-        "The right-wing bloc's overall support has declined to 46.9% from 49.6% in 2022, indicating a general drag on the governing and supporting parties.",
-        "The 'shy SD voter' polling underestimation has largely disappeared, with the party being overestimated in 2018 and accurately polled in 2022."
-      ],
-      "reason": "edge 0.006 below minimum 0.04"
     }
   ]
 }
