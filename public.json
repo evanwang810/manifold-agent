@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788450121539,
+  "generated_ms": 1788450517666,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 34,
+      "today": 37,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 10,
+      "today": 11,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 530.45,
   "summary": "Net worth is currently around M$548 with spendable liquidity recovered to M$113, following the successful processing of a major resolution wave. Recent trading activity has focused on aggressive pruning of degraded theses and re-allocating capital toward structural political thresholds and reporting lags. Recent exits include closing out the OpenAI Astra NO position at a M$20 loss when general availability release timelines shifted, cutting the \"YES holders\" position at M$36 loss due to counter-movement, and cleanly selling off the Cyclosporiasis YES position (+M$10) and Christian Democrats Riksdag NO position upon thesis collapse.\n\nThe active book holds around 15 positions, heavily concentrated in European political polling thresholds (such as the Swedish Liberals remaining in the Riksdag and the Greens clearing 5% in Saxony-Anhalt) and specific capability or timing constraints. Several positions experienced adverse movement, notably the OpenAI Astra and holder-count bets, which were swiftly liquidated when market dynamics invalidated the initial edge. \n\nKey mistakes to avoid repeating include taking positions where the entry direction contradicts the underlying model probability estimate (as occurred previously with SPD and GLM-5.3 markets) and holding onto threshold bets after data definitively invalidates the core thesis (like Delaware recording zero Cyclosporiasis cases). Furthermore, speculative tail-risk bets and low-edge directional crypto noise should be strictly avoided in accordance with the calibration profile.\n\nCalibration remains strong in identifying structural market rules, engineering constraints, and reporting lags, but weak in short-term macro timing, directional crypto noise, and fast-moving tech product release interpretations. Specific attention should remain on the Swedish and German election threshold markets, where mispriced probabilities continue to offer structural edges.",
   "journal": [
+    {
+      "ts": 1788450517568,
+      "kind": "trade",
+      "text": "Bought M$100 NO on \"Will GPT 6 be released by September 15th?\" at 96%, my estimate 10% (high). Because: Given OpenAI's late August pause on Astra due to 'Critical' cybersecurity risk thresholds and the recent preview of GPT-5.6 Sol (which retains 5.x branding), a public release of a model explicitly named GPT-6 within the next 11 days is very unlikely. Strict naming criteria further favor NO."
+    },
+    {
+      "ts": 1788450318000,
+      "kind": "screen",
+      "text": "Escalated \"Will GPT 6 be released by September 15th?\" at 96%: quick estimate 12% vs market 96%"
+    },
     {
       "ts": 1788449198701,
       "kind": "closed",
@@ -437,16 +447,6 @@
       "ts": 1788384387299,
       "kind": "book",
       "text": "Book review wanted to sell, vetoed: review unavailable"
-    },
-    {
-      "ts": 1788384387296,
-      "kind": "book",
-      "text": "Looked over 18 positions: The book is generally high-conviction and focused on structural edges, but contains a few low-probability 'lottery' bets and positions lacking a clear recorded thesis. I am trimming these to reclaim liquidity and ensure every position is backed by a rigorous, active thesis. (2 change(s) proposed)"
-    },
-    {
-      "ts": 1788384094073,
-      "kind": "analysis",
-      "text": "Analysed \"Will Bitcoin be higher 7 days from now?\": market 15%, my 16% (high). No trade, edge 0.010 below minimum 0.04."
     }
   ],
   "todos": [
@@ -752,6 +752,18 @@
       "days_to_close": 0.0
     },
     {
+      "question": "Will GPT 6 be released by September 15th?",
+      "url": "https://manifold.markets/BenAybar/will-gpt-6-be-released-by-september",
+      "side": "NO",
+      "shares": 1882.4,
+      "invested": 100.0,
+      "value": 148.0,
+      "profit": 48.0,
+      "prob": 0.921,
+      "closed": false,
+      "days_to_close": 11.3
+    },
+    {
       "question": "Will the next full gemini model be frontier at coding?",
       "url": "https://manifold.markets/ian/will-the-next-full-gemini-model-be-gLcS2ROl5P",
       "side": "YES",
@@ -873,6 +885,31 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1788450517565,
+      "kind": "bet",
+      "question": "Will GPT 6 be released by September 15th?",
+      "url": "https://manifold.markets/BenAybar/will-gpt-6-be-released-by-september",
+      "market_prob": 0.9644175171887167,
+      "model_prob": 0.1,
+      "confidence": "high",
+      "amount": 100.0,
+      "outcome": "NO",
+      "thinking": "Given OpenAI's late August pause on Astra due to 'Critical' cybersecurity risk thresholds and the recent preview of GPT-5.6 Sol (which retains 5.x branding), a public release of a model explicitly named GPT-6 within the next 11 days is very unlikely. Strict naming criteria further favor NO.",
+      "uncertainty": "Whether OpenAI unexpectedly rebrands or publicizes a GPT-6 version during the general rollout of GPT-5.6 Sol before September 15.",
+      "resolution_risk": "OpenAI releases a highly capable model under a non-GPT-6 name (like Astra or GPT-5.7), which would resolve NO under strict name criteria.",
+      "evidence_for": [
+        "OpenAI has advanced internal capability evals ongoing following recent pretraining runs.",
+        "OpenAI previewed GPT-5.6 Sol on August 31 / September 1, indicating active release pipelines."
+      ],
+      "evidence_against": [
+        "OpenAI recently paused internal work on its next major model 'Astra' in late August 2026 after preliminary evals reached 'Critical' cyber risk levels.",
+        "The recent release preview is explicitly branded GPT-5.6 Sol, not GPT-6.",
+        "Resolution strictly requires the name 'GPT-6' or a variant thereof, whereas reporting indicates OpenAI has not committed to using the GPT-6 moniker for Astra.",
+        "Only 11 days remain before the September 15 deadline, with no public announcement or model card released for GPT-6."
+      ],
+      "reason": "edge 0.864, kelly 0.90, decay 0.88, bound by kelly target, trimmed from M$167 for impact"
+    },
     {
       "ts": 1788448161997,
       "kind": "no_trade",
@@ -1194,30 +1231,6 @@
         "No standalone post has been published yet with only ~1 day remaining before market close."
       ],
       "reason": "edge 0.038 below minimum 0.04"
-    },
-    {
-      "ts": 1788374459931,
-      "kind": "bet",
-      "question": "Who will learn to write first? My left hand or my robot hand?",
-      "url": "https://manifold.markets/tftftftftftftftftftftftf/who-will-learn-to-write-first-my-le",
-      "market_prob": 0.30285157024056275,
-      "model_prob": 0.78,
-      "confidence": "medium",
-      "amount": 15.0,
-      "outcome": "YES",
-      "thinking": "With the robot arm having arrived so late, the practical engineering friction of real-world fine motor calibration and sim-to-real transfer heavily favors the left hand, which is already functional.",
-      "uncertainty": "Whether the creator successfully implements and tunes the robotic arm setup in time for a real-world evaluation, or if mechanical/software friction leaves the robot unable to produce coherent handwriting.",
-      "resolution_risk": "Impartial judges might favor the aesthetic consistency of a simple machine-drawn path over human handwriting, or the market could face further extensions.",
-      "evidence_for": [
-        "Human non-dominant handwriting already works and produces legible words, whereas fine-motor manipulation with a robotic arm requires extensive calibration, gripping stability, and sim-to-real transfer.",
-        "The robot arm only arrived very recently after repeated delays, leaving minimal time for training and real-world evaluation before market close.",
-        "Creator noted training must be evaluated in real life, where contact-rich manipulation tasks notoriously suffer high failure rates."
-      ],
-      "evidence_against": [
-        "If the robot arm is scripted or successfully executes trajectory following, the resulting text could look significantly cleaner than clumsy non-dominant human handwriting.",
-        "Creator reported that left-hand writing speed and quality had plateaued over the summer due to lack of practice."
-      ],
-      "reason": "edge 0.477, kelly 0.68, decay 0.74, bound by balance reserve"
     }
   ]
 }
