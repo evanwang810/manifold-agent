@@ -2,21 +2,6 @@
   "summary": "Net worth is M$596, but spendable liquidity is critically low at M$57, well below the M$100 operational floor. However, a resolution wave is imminent, with over M$768 tied up in closed positions awaiting settlement. The portfolio is currently in a research-heavy posture to avoid further liquidity depletion.\n\nThe book consists of approximately 16-18 positions focused on structural edges, capability mispricings, and threshold risks. Key active positions include NO on YES having more holders than NO, YES on a human left hand learning to write before a robot hand (sim-to-real friction), and YES on Swedish Liberals remaining in the Riksdag. New high-conviction entries include NO on OpenAI Astra being publicly available before September 7 (due to mandatory US government cybersecurity reviews) and NO on the SPD clearing 5% in Saxony-Anhalt (due to polling buffer risks). The YES position on Cyclosporiasis in all 48 states remains a play on reporting lags.\n\nRecent performance has been characterized by high-conviction entries in structural markets, though execution errors occurred in the SPD and GLM-5.3 markets where positions were taken opposite to model probabilities. These were immediately corrected via liquidation. A tactical Bitcoin bet was also exited to maintain discipline against low-edge directional noise.\n\nCalibration is strong in identifying structural market rules, engineering constraints, and reporting lags, but remains weak in short-term macro timing and directional crypto noise. Future instances must strictly validate that trade directions align with model probability estimates to prevent recurrence of alignment errors.\n\nCurrent focus is on research for the Jared Moskowitz (FL-25) market while awaiting the resolution wave to restore liquidity.",
   "journal": [
     {
-      "ts": 1787990321800,
-      "kind": "agency",
-      "text": "Own turn: The portfolio remains in a high-conviction holding pattern. Liquidity is critical (M$1), but the expected resolution wave (Aug 28-31) is imminent and should unlock ~M$350. All active positions (Anthropic NO, Gemini YES, MNX NO) are in profit and align with my internal probability estimates. I am removing the stale Aug 28 liquidity status note to keep the standing notes clean and focused on the current state."
-    },
-    {
-      "ts": 1787992370986,
-      "kind": "screen",
-      "text": "Passed on \"Will temperatures in Berlin, Germany, reach 40\u00b0C this summer?\" at 3%: quick estimate 5% agrees with market. Berlin has never reached 40C at this station and summer is ending in two days with no forecasted extreme heat."
-    },
-    {
-      "ts": 1787992385372,
-      "kind": "screen",
-      "text": "Passed on \"By end of 2026, will Volodymyr Zelenskyy be charged with war crimes by\" at 5%: quick estimate 2% agrees with market. The ICC has no active investigation or preliminary examination targeting Zelenskyy, making an indictment by end of 2026 extremely unlikely."
-    },
-    {
       "ts": 1787992405323,
       "kind": "screen",
       "text": "Escalated \"Will bitcoin rise to 85k before the Strait of Hormuz is freely open?\" at 93%: quick estimate 35% vs market 93%"
@@ -1500,6 +1485,21 @@
       "ts": 1788399053849,
       "kind": "agency",
       "text": "Own turn, wrote a standing note: [self] [market] OpenAI Astra (slU22OlsCP): Thesis relies on the Sep 1 start of the US government cybersecurity review. M. Because: The Astra market is highly time-sensitive and the definition of 'publicly available' can be ambiguous. Recording this ensures I monitor the specific nature of any release rather than just the headline."
+    },
+    {
+      "ts": 1788399236676,
+      "kind": "portfolio",
+      "text": "Net worth down from M$619 to M$594, balance M$11."
+    },
+    {
+      "ts": 1788399236676,
+      "kind": "move",
+      "text": "\"Openai Astra publically available before September 7th 2026\" moved +9% to 88%. Holding NO, P/L M$-20."
+    },
+    {
+      "ts": 1788399319659,
+      "kind": "trade",
+      "text": "Sold out of \"Openai Astra publically available before September 7th 2026\" (NO) for M$-20. Now think 54% against market 88%."
     }
   ],
   "lessons": [
@@ -1532,11 +1532,6 @@
       "text": "Before promising a financial transaction or diagnostic test, verify the current *spendable* liquidity, not just the total balance or net worth.",
       "source": "owner",
       "ts": 1787503584649
-    },
-    {
-      "text": "[self] [liquidity] Resolution Wave Status (Aug 31, EOD): The Aug 31 deadline has passed without the expected resolution of the Aug 11-14 cluster or the Aug 31 positions. Latency is now confirmed to be > 18 days. Priority debt (M$10) remains pending until the balance updates.",
-      "source": "self",
-      "ts": 1788212388123
     },
     {
       "text": "[self] [liquidity] Latency Calibration (Sep 1): The Aug 11-14 cluster resolved on Sep 1. Actual resolution latency: ~18-21 days. This is the new baseline for capital availability planning.",
@@ -1582,6 +1577,11 @@
       "text": "[self] [market] OpenAI Astra (slU22OlsCP): Thesis relies on the Sep 1 start of the US government cybersecurity review. Monitor for any 'limited', 'developer', or 'beta' releases before Sep 7 that could be argued as 'publicly available' to avoid being blindsided by resolution.",
       "source": "self",
       "ts": 1788399053843
+    },
+    {
+      "text": "When a company announces safety restrictions 'at launch', it implies launch is imminent with tiered features, not delayed.",
+      "source": "self",
+      "ts": 1788399319407
     }
   ],
   "conversations": {
@@ -2331,10 +2331,10 @@
       "ts": 1788384093984
     },
     "slU22OlsCP": {
-      "note": "OpenAI Astra's Critical preparedness tier requires alpha and Daybreak Blue testing before public launch; <4 day timeline makes public release highly improbable.",
+      "note": "Astra tiered release model means public launch isn't delayed by high-risk feature reviews; probability adjusted to ~54%.",
       "question": "Openai Astra publically available before September 7th 2026",
       "url": "https://manifold.markets/winged_one/openai-astra-publically-available-b",
-      "ts": 1788394819922
+      "ts": 1788399319404
     }
   },
   "seen": {
@@ -2489,7 +2489,7 @@
     "gtcRqCcCgI": 1788307519887,
     "8Uu0PPE9ns": 1788307521050,
     "LCgppU9SyA": 1788383990906,
-    "slU22OlsCP": 1788394750626
+    "slU22OlsCP": 1788399236881
   },
   "budget": {
     "day": "2026-09-02",
@@ -2497,8 +2497,8 @@
   },
   "llm_usage": {
     "day": "2026-09-03",
-    "fast": 8,
-    "deep": 3,
+    "fast": 10,
+    "deep": 4,
     "chat": 2
   },
   "last_scan_ms": 1788398552888,
@@ -2868,7 +2868,7 @@
     }
   ],
   "portfolio_mark": {
-    "net_worth": 619.0365433892366,
+    "net_worth": 593.5590058401044,
     "balance": 10.501434151570045
   },
   "position_mark": {
@@ -2985,8 +2985,8 @@
       "question": "SPD above 5% in 2026 Saxony-Anhalt state election?"
     },
     "slU22OlsCP": {
-      "prob": 0.7944062210234424,
-      "profit": 5.196307563167643,
+      "prob": 0.88,
+      "profit": -20.28122998596446,
       "shares": 297.65641678362954,
       "side": "NO",
       "question": "Openai Astra publically available before September 7th 2026"
@@ -3088,7 +3088,7 @@
   },
   "replied_to": [],
   "tracked_orders": {},
-  "events_since_compress": 7,
+  "events_since_compress": 8,
   "watch_probs": {
     "Ln5EgOhAty": 0.4726684393929348,
     "dCP8cP0CLL": 0.19410275640601396,
@@ -3135,6 +3135,6 @@
     "8Uu0PPE9ns": 0.6470212012000959,
     "spuyq56Py5": 0.04181590289674374,
     "QCCAun6OZ9": 0.06903844581225305,
-    "slU22OlsCP": 0.7944062210234424
+    "slU22OlsCP": 0.88
   }
 }

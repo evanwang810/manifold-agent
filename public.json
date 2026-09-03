@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788399054209,
+  "generated_ms": 1788399322430,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 8,
+      "today": 10,
       "cap": 220
     },
     "chat": {
@@ -39,15 +39,30 @@
       "cap": 400
     },
     "deep": {
-      "today": 3,
+      "today": 4,
       "cap": 34
     }
   },
   "dry_run": false,
   "balance": 10.5,
-  "net_worth": 619.04,
+  "net_worth": 593.56,
   "summary": "Net worth is M$596, but spendable liquidity is critically low at M$57, well below the M$100 operational floor. However, a resolution wave is imminent, with over M$768 tied up in closed positions awaiting settlement. The portfolio is currently in a research-heavy posture to avoid further liquidity depletion.\n\nThe book consists of approximately 16-18 positions focused on structural edges, capability mispricings, and threshold risks. Key active positions include NO on YES having more holders than NO, YES on a human left hand learning to write before a robot hand (sim-to-real friction), and YES on Swedish Liberals remaining in the Riksdag. New high-conviction entries include NO on OpenAI Astra being publicly available before September 7 (due to mandatory US government cybersecurity reviews) and NO on the SPD clearing 5% in Saxony-Anhalt (due to polling buffer risks). The YES position on Cyclosporiasis in all 48 states remains a play on reporting lags.\n\nRecent performance has been characterized by high-conviction entries in structural markets, though execution errors occurred in the SPD and GLM-5.3 markets where positions were taken opposite to model probabilities. These were immediately corrected via liquidation. A tactical Bitcoin bet was also exited to maintain discipline against low-edge directional noise.\n\nCalibration is strong in identifying structural market rules, engineering constraints, and reporting lags, but remains weak in short-term macro timing and directional crypto noise. Future instances must strictly validate that trade directions align with model probability estimates to prevent recurrence of alignment errors.\n\nCurrent focus is on research for the Jared Moskowitz (FL-25) market while awaiting the resolution wave to restore liquidity.",
   "journal": [
+    {
+      "ts": 1788399319659,
+      "kind": "trade",
+      "text": "Sold out of \"Openai Astra publically available before September 7th 2026\" (NO) for M$-20. Now think 54% against market 88%."
+    },
+    {
+      "ts": 1788399236676,
+      "kind": "move",
+      "text": "\"Openai Astra publically available before September 7th 2026\" moved +9% to 88%. Holding NO, P/L M$-20."
+    },
+    {
+      "ts": 1788399236676,
+      "kind": "portfolio",
+      "text": "Net worth down from M$619 to M$594, balance M$11."
+    },
     {
       "ts": 1788399053849,
       "kind": "agency",
@@ -432,21 +447,6 @@
       "ts": 1788311756345,
       "kind": "screen",
       "text": "Escalated \"Will If Anyone Builds It appear in a NYT bestseller list again?\" at 4%: quick estimate 65% vs market 4%"
-    },
-    {
-      "ts": 1788307819516,
-      "kind": "position",
-      "text": "Opened 159 NO on \"The Greens receive at least 5% and enter the Saxony-Anhalt Landtag\" at 61%, M$59 in."
-    },
-    {
-      "ts": 1788307637179,
-      "kind": "trade",
-      "text": "Limit order M$59 NO on \"The Greens receive at least 5% and enter the Saxony-Anhalt Landtag\" at 65%, my estimate 25% (medium). Because: With polling averages sitting around 4.5-4.7% and a consistent historical trend of the Greens underperforming pre-election polling in Eastern state elections, the odds of clearing the hard 5.00% Zweitstimmen threshold on September 6 look lean (~25%). Tactical voting against the AfD is more likely to benefit larger central parties than the Greens."
-    },
-    {
-      "ts": 1788307540897,
-      "kind": "screen",
-      "text": "Escalated \"The Greens receive at least 5% and enter the Saxony-Anhalt Landtag\" at 65%: quick estimate 25% vs market 65%"
     }
   ],
   "todos": [
@@ -583,11 +583,6 @@
       "ts": 1787503584649
     },
     {
-      "text": "[self] [liquidity] Resolution Wave Status (Aug 31, EOD): The Aug 31 deadline has passed without the expected resolution of the Aug 11-14 cluster or the Aug 31 positions. Latency is now confirmed to be > 18 days. Priority debt (M$10) remains pending until the balance updates.",
-      "source": "self",
-      "ts": 1788212388123
-    },
-    {
       "text": "[self] [liquidity] Latency Calibration (Sep 1): The Aug 11-14 cluster resolved on Sep 1. Actual resolution latency: ~18-21 days. This is the new baseline for capital availability planning.",
       "source": "self",
       "ts": 1788259080242
@@ -631,6 +626,11 @@
       "text": "[self] [market] OpenAI Astra (slU22OlsCP): Thesis relies on the Sep 1 start of the US government cybersecurity review. Monitor for any 'limited', 'developer', or 'beta' releases before Sep 7 that could be argued as 'publicly available' to avoid being blindsided by resolution.",
       "source": "self",
       "ts": 1788399053843
+    },
+    {
+      "text": "When a company announces safety restrictions 'at launch', it implies launch is imminent with tiered features, not delayed.",
+      "source": "self",
+      "ts": 1788399319407
     }
   ],
   "own_actions": [
@@ -829,18 +829,6 @@
       "days_to_close": 0.0
     },
     {
-      "question": "Openai Astra publically available before September 7th 2026",
-      "url": "https://manifold.markets/winged_one/openai-astra-publically-available-b",
-      "side": "NO",
-      "shares": 297.7,
-      "invested": 56.0,
-      "value": 37.0,
-      "profit": -19.0,
-      "prob": 0.876,
-      "closed": false,
-      "days_to_close": 3.9
-    },
-    {
       "question": "Will there be a confirmed case of Cyclosporiasis in ALL 48 US contiguous states before the end of August 2026?",
       "url": "https://manifold.markets/EstMtz/will-there-be-a-confirmed-case-of-c",
       "side": "YES",
@@ -914,6 +902,23 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1788399319656,
+      "kind": "sell",
+      "question": "Openai Astra publically available before September 7th 2026",
+      "url": "https://manifold.markets/winged_one/openai-astra-publically-available-b",
+      "market_prob": 0.88,
+      "model_prob": 0.54,
+      "confidence": null,
+      "amount": null,
+      "outcome": null,
+      "thinking": "Re-evaluating based on Sep 1-2 details: restricting advanced cyber capabilities to partners 'at launch' implies the general release is imminent rather than delayed by government review. With a Sep 3-10 window rumoured, public availability before Sep 7 is roughly a coin flip.",
+      "uncertainty": "",
+      "resolution_risk": "",
+      "evidence_for": [],
+      "evidence_against": [],
+      "reason": null
+    },
     {
       "ts": 1788398634265,
       "kind": "no_trade",
@@ -1247,30 +1252,6 @@
         "A sharp decline of over 16.7% in 86 hours would result in a NO resolution."
       ],
       "reason": "edge 0.009 below minimum 0.04"
-    },
-    {
-      "ts": 1788314263763,
-      "kind": "no_trade",
-      "question": "Xi JinPing visits USA before Sep 30?",
-      "url": "https://manifold.markets/predyx_markets/xi-jingping-visits-usa-before-sep-3",
-      "market_prob": 0.83,
-      "model_prob": 0.85,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With bilateral logistics actively being finalized for September 24 and both governments moving forward on agenda planning, the visit is strongly on track with ~15% risk reserved for sudden diplomatic disruptions or scheduling slippage.",
-      "uncertainty": "Whether an unexpected diplomatic breakdown or sudden geopolitical incident disrupts the planned September 24 bilateral meeting.",
-      "resolution_risk": "If the visit is delayed past September 30 by even a few days for diplomatic rescheduling, the market will resolve NO despite the visit occurring.",
-      "evidence_for": [
-        "President Trump announced a planned visit by President Xi Jinping for September 24, 2026.",
-        "Bilateral preparations are actively underway, including composition of delegations and trade discussion agendas.",
-        "U.S. officials (including Rubio) have affirmed the visit remains on schedule with no indications of postponement."
-      ],
-      "evidence_against": [
-        "High-stakes U.S.-China bilateral summits carry baseline cancellation or postponement risks from unforeseen diplomatic or geopolitical flashpoints.",
-        "Logistical itineraries and formal final state confirmations remain subject to last-minute bilateral negotiations."
-      ],
-      "reason": "edge 0.020 below minimum 0.04"
     }
   ]
 }
