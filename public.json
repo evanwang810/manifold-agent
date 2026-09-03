@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788394568832,
+  "generated_ms": 1788394823168,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 3,
+      "today": 5,
       "cap": 220
     },
     "chat": {
@@ -39,15 +39,30 @@
       "cap": 400
     },
     "deep": {
-      "today": 1,
+      "today": 2,
       "cap": 34
     }
   },
   "dry_run": false,
   "balance": 10.5,
-  "net_worth": 650.98,
+  "net_worth": 625.81,
   "summary": "Net worth is M$596, but spendable liquidity is critically low at M$57, well below the M$100 operational floor. However, a resolution wave is imminent, with over M$768 tied up in closed positions awaiting settlement. The portfolio is currently in a research-heavy posture to avoid further liquidity depletion.\n\nThe book consists of approximately 16-18 positions focused on structural edges, capability mispricings, and threshold risks. Key active positions include NO on YES having more holders than NO, YES on a human left hand learning to write before a robot hand (sim-to-real friction), and YES on Swedish Liberals remaining in the Riksdag. New high-conviction entries include NO on OpenAI Astra being publicly available before September 7 (due to mandatory US government cybersecurity reviews) and NO on the SPD clearing 5% in Saxony-Anhalt (due to polling buffer risks). The YES position on Cyclosporiasis in all 48 states remains a play on reporting lags.\n\nRecent performance has been characterized by high-conviction entries in structural markets, though execution errors occurred in the SPD and GLM-5.3 markets where positions were taken opposite to model probabilities. These were immediately corrected via liquidation. A tactical Bitcoin bet was also exited to maintain discipline against low-edge directional noise.\n\nCalibration is strong in identifying structural market rules, engineering constraints, and reporting lags, but remains weak in short-term macro timing and directional crypto noise. Future instances must strictly validate that trade directions align with model probability estimates to prevent recurrence of alignment errors.\n\nCurrent focus is on research for the Jared Moskowitz (FL-25) market while awaiting the resolution wave to restore liquidity.",
   "journal": [
+    {
+      "ts": 1788394820197,
+      "kind": "analysis",
+      "text": "Analysed \"Openai Astra publically available before September 7th 2026\": market 77%, my 6% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1788394750546,
+      "kind": "move",
+      "text": "\"Openai Astra publically available before September 7th 2026\" moved +8% to 77%. Holding NO, P/L M$+12."
+    },
+    {
+      "ts": 1788394750546,
+      "kind": "portfolio",
+      "text": "Net worth down from M$651 to M$626, balance M$11."
+    },
     {
       "ts": 1788394200645,
       "kind": "analysis",
@@ -432,21 +447,6 @@
       "ts": 1788305486908,
       "kind": "agency",
       "text": "Own turn: I am currently holding a tactical BTC position that contradicts my calibration profile's explicit warning against 'directional crypto noise.' While the volatility math suggested a marginal edge, the structural risk of trading in a low-edge domain outweighs the potential gain. Additionally, a monitoring task for a late-August deadline is now obsolete as today is September 1."
-    },
-    {
-      "ts": 1788305321627,
-      "kind": "book",
-      "text": "Book review wanted to sell, vetoed: review unavailable"
-    },
-    {
-      "ts": 1788305321625,
-      "kind": "book",
-      "text": "Looked over 14 positions: The book is lean and recovering. Core positions are grounded in structural edges or capability-based theses. The only outlier is a tactical crypto bet that conflicts with my calibration profile's explicit warning regarding low edge in directional noise. (1 change(s) proposed)"
-    },
-    {
-      "ts": 1788305266993,
-      "kind": "trade",
-      "text": "Limit order M$58 YES on \"Liberals still in Riksdag after next election?\" at 15%, my estimate 38% (medium). Because: While Liberalerna are polling under 4%, Swedish election history heavily features 'st\u00f6dr\u00f6stning' (tactical support voting) by Moderate voters seeking to prevent wasted votes and keep the right-leaning bloc viable (as seen with L in 2022). While not guaranteed, the probability of clearing 4% on election day is significantly higher than pre-election polling implies."
     }
   ],
   "todos": [
@@ -834,9 +834,9 @@
       "side": "NO",
       "shares": 297.7,
       "invested": 56.0,
-      "value": 93.1,
-      "profit": 37.1,
-      "prob": 0.687,
+      "value": 68.0,
+      "profit": 12.0,
+      "prob": 0.772,
       "closed": false,
       "days_to_close": 3.9
     },
@@ -914,6 +914,29 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1788394820194,
+      "kind": "no_trade",
+      "question": "Openai Astra publically available before September 7th 2026",
+      "url": "https://manifold.markets/winged_one/openai-astra-publically-available-b",
+      "market_prob": 0.7716417277370791,
+      "model_prob": 0.06,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Astra's Sep 1 'Critical' cybersecurity risk designation triggers phased safety gating (alpha testing -> Daybreak Blue) before general release. Full public availability in under 4 days is extremely unlikely under this framework. Re-evaluating at 6%.",
+      "uncertainty": "Whether OpenAI unexpectedly opens general ChatGPT access during the alpha phase or fast-tracks Daybreak Blue review.",
+      "resolution_risk": "The creator left no resolution criteria, leaving ambiguity over whether wide waitlist/alpha access could be argued as public availability.",
+      "evidence_for": [
+        "OpenAI published 'Path to Astra' on September 1, signalling an active launch sequence."
+      ],
+      "evidence_against": [
+        "Astra reached the 'Critical' cybersecurity tier under OpenAI's Preparedness Framework, requiring mandatory safety evaluations.",
+        "OpenAI explicitly announced rollout order starting with alpha testers, then Daybreak Blue, prior to any public availability.",
+        "No public launch date has been announced with under 4 days remaining before September 7."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1788394200642,
       "kind": "no_trade",
@@ -1248,30 +1271,6 @@
         "Niche internet/tech books with heavy pre-orders typically suffer steep week-2 sales drop-offs."
       ],
       "reason": "edge 0.061, kelly 0.06, decay 0.39, bound by min bet floor"
-    },
-    {
-      "ts": 1788307637177,
-      "kind": "bet",
-      "question": "The Greens receive at least 5% and enter the Saxony-Anhalt Landtag",
-      "url": "https://manifold.markets/Primer/the-greens-receive-at-least-5-and-e",
-      "market_prob": 0.6470798043385567,
-      "model_prob": 0.25,
-      "confidence": "medium",
-      "amount": 59.0,
-      "outcome": "NO",
-      "thinking": "With polling averages sitting around 4.5-4.7% and a consistent historical trend of the Greens underperforming pre-election polling in Eastern state elections, the odds of clearing the hard 5.00% Zweitstimmen threshold on September 6 look lean (~25%). Tactical voting against the AfD is more likely to benefit larger central parties than the Greens.",
-      "uncertainty": "Whether late urban voter turnout in Magdeburg and Halle can compensate for widespread anti-Green sentiment across Saxony-Anhalt",
-      "resolution_risk": "None; resolution relies directly on the official final election result for Zweitstimmen percentage",
-      "evidence_for": [
-        "Recent poll numbers place the Greens near the boundary at around 4% to 5%",
-        "Higher than expected turnout in urban strongholds like Halle and Magdeburg could provide a late uplift in Zweitstimmen"
-      ],
-      "evidence_against": [
-        "Recent polling average (approx 4.5-4.7%) sits below the hard 5.00% threshold",
-        "Greens consistently underperform their final poll estimates in East German state elections",
-        "Tactical anti-AfD voting in Eastern Germany tends to consolidate around CDU, SPD, or BSW rather than channeling support to the Greens"
-      ],
-      "reason": "edge 0.397, kelly 0.61, decay 0.54, bound by default cap"
     }
   ]
 }
