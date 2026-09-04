@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788486486532,
+  "generated_ms": 1788486810983,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 6,
+      "today": 9,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 1,
+      "today": 2,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 469.12,
   "summary": "Net worth is M$480 with spendable liquidity at the M$100 operational floor. Recent activity focused on pruning non-structural speculative noise\u2014specifically exiting \"Harry Potter\" and \"robot hand\" bets\u2014to concentrate capital on high-conviction structural edges. The book is currently concentrated in political thresholds and capability constraints. The most significant position is a M$100 NO on the GPT-6 release before September 15, which is currently experiencing a M$-53 drawdown due to market volatility; however, the thesis remains solid, relying on OpenAI's cybersecurity gating and strict naming conventions. Another major position is a M$72 YES on \"Who will learn to write first\" (left hand vs. robot hand), predicated on the technical difficulty of sim-to-real fine-motor control. In Saxony-Anhalt, positions were realigned from SPD NO to Greens NO to better capture mispriced probabilities.\n\nMistakes to avoid include holding onto low-conviction speculative \"noise\" that lacks a structural thesis and entering markets where the edge is negligible (e.g., the Fed or WTI markets). Calibration remains strong in identifying engineering constraints, reporting lags, and political threshold rules, but remains weak in short-term macro timing and directional noise. Future focus should remain on the upcoming resolution wave and high-edge political threshold markets in Sweden and Germany.",
   "journal": [
+    {
+      "ts": 1788486810692,
+      "kind": "trade",
+      "text": "Bought M$3 NO on \"Openai Astra publically available before September 7th 2026\" at 78%, my estimate 28% (medium). Because: While GPT-6 Astra officially launched on Sept 3, initial access is gated to Daybreak enterprise partners. With general Plus/Pro/API rollout scheduled 'in the coming days' and the Sept 7 deadline falling right after the weekend, a public rollout before Monday is unlikely."
+    },
+    {
+      "ts": 1788486673647,
+      "kind": "screen",
+      "text": "Escalated \"Openai Astra publically available before September 7th 2026\" at 78%: quick estimate 15% vs market 78%"
+    },
     {
       "ts": 1788485003065,
       "kind": "portfolio",
@@ -437,16 +447,6 @@
       "ts": 1788418228122,
       "kind": "screen",
       "text": "Passed on \"Will 50% or more of AWS developers stop coding for AWS in the next 24 \" at 4%: quick estimate 2% agrees with market. Mass layoffs or role changes affecting 50 percent of AWS engineers in two years is extremely unlikely and contradicts business reality."
-    },
-    {
-      "ts": 1788416932954,
-      "kind": "position",
-      "text": "Opened 109 NO on \"Christian Democrats still in Riksdag after next election?\" at 88%, M$13 in."
-    },
-    {
-      "ts": 1788416750979,
-      "kind": "agency",
-      "text": "Wanted to add, vetoed by review: review unavailable"
     }
   ],
   "todos": [
@@ -863,9 +863,45 @@
       "prob": 1.0,
       "closed": true,
       "days_to_close": 0.0
+    },
+    {
+      "question": "Openai Astra publically available before September 7th 2026",
+      "url": "https://manifold.markets/winged_one/openai-astra-publically-available-b",
+      "side": "NO",
+      "shares": 10.9,
+      "invested": 3.0,
+      "value": 3.0,
+      "profit": -21.1,
+      "prob": 0.724,
+      "closed": false,
+      "days_to_close": 2.8
     }
   ],
   "decisions": [
+    {
+      "ts": 1788486810689,
+      "kind": "bet",
+      "question": "Openai Astra publically available before September 7th 2026",
+      "url": "https://manifold.markets/winged_one/openai-astra-publically-available-b",
+      "market_prob": 0.7791897215641371,
+      "model_prob": 0.28,
+      "confidence": "medium",
+      "amount": 3.0,
+      "outcome": "NO",
+      "thinking": "While GPT-6 Astra officially launched on Sept 3, initial access is gated to Daybreak enterprise partners. With general Plus/Pro/API rollout scheduled 'in the coming days' and the Sept 7 deadline falling right after the weekend, a public rollout before Monday is unlikely.",
+      "uncertainty": "Whether OpenAI activates the first wave of Plus/Pro consumer access or public API keys on Friday, September 4, prior to the weekend.",
+      "resolution_risk": "Phased rollouts could grant access to a subset of Plus users before Sept 7, creating ambiguity over whether 'public' access has been satisfied.",
+      "evidence_for": [
+        "OpenAI officially launched GPT-6 Astra on September 3, 2026.",
+        "OpenAI stated that rollout to Plus, Pro, Enterprise, Business, and API users would begin 'in the coming days' over the next week."
+      ],
+      "evidence_against": [
+        "As of September 3, immediate access is restricted to select Daybreak program enterprise partners; criteria explicitly states limited access to specific organizations does not count.",
+        "The September 7 deadline is only 3-4 days post-launch, spanning a weekend (Sept 5-6) when OpenAI historically avoids major rollout waves.",
+        "General public API and consumer tier rollouts for major OpenAI models typically require 1-2 weeks following initial partner previews."
+      ],
+      "reason": "edge 0.499, kelly 0.64, decay 1.00, bound by balance reserve"
+    },
     {
       "ts": 1788484573264,
       "kind": "bet",
@@ -1192,30 +1228,6 @@
       "evidence_for": [],
       "evidence_against": [],
       "reason": null
-    },
-    {
-      "ts": 1788398634265,
-      "kind": "no_trade",
-      "question": "Will If Anyone Builds It appear in a NYT bestseller list again?",
-      "url": "https://manifold.markets/ms/will-if-anyone-builds-it-appear-in",
-      "market_prob": 0.038851756874899335,
-      "model_prob": 0.04,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With only ~3-4 weekly NYT list cycles remaining before market close and weekly sales far below the threshold required without pre-order frontloading, re-entry is very unlikely.",
-      "uncertainty": "Whether an unexpected viral event or major mainstream media feature abruptly spikes sales within the next 3 weeks.",
-      "resolution_risk": "None identified; resolution criteria rely directly on official published NYT weekly bestseller lists.",
-      "evidence_for": [
-        "The book previously made the NYT Best Seller list during its initial release period.",
-        "Word of mouth, podcast appearances, or AI-related news cycles can occasionally generate minor sales spikes."
-      ],
-      "evidence_against": [
-        "The initial list appearance was heavily driven by accumulated pre-orders (over 5,000 copies), while ongoing organic sales settled under 2,000/week.",
-        "Only 24.5 days (approximately 3 to 4 weekly NYT bestseller list publications) remain before the market closes.",
-        "Recent tracking and review mentions in August/September show standard niche interest without the massive sales volume required to breach top nonfiction lists."
-      ],
-      "reason": "edge 0.001 below minimum 0.04"
     }
   ]
 }
