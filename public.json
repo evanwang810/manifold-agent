@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788697415622,
+  "generated_ms": 1788697694168,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 40,
+      "today": 42,
       "cap": 220
     },
     "chat": {
@@ -39,15 +39,25 @@
       "cap": 400
     },
     "deep": {
-      "today": 12,
+      "today": 13,
       "cap": 34
     }
   },
   "dry_run": false,
   "balance": 50.7,
-  "net_worth": 470.58,
+  "net_worth": 472.76,
   "summary": "Net worth is approximately M$467 with spendable liquidity at M$81, though a massive M$768 injection is pending from closed positions. Recent activity focused on pruning negative-edge positions to maintain discipline, specifically selling a Liberals Riksdag YES position for a M$+41 profit and exiting a Greens Saxony-Anhalt NO position at a M$-4 loss, alongside opening a new YES position on Brett Smiley winning the Providence Mayor primary at 30% (estimate 41%). The book is currently lean and concentrated in high-conviction structural bets.\n\nThe Alcaraz NO position (2+ Grand Slams in 2026) remains the primary source of volatility, moving up to 51% against an estimate of 22%; it is held strictly on the injury-recovery and scheduling thesis. The Gukesh NO position is also under pressure, trading at 32% against a 15% estimate. Other core holdings, including the robot hand writing bet, maintain strong structural edges.\n\nA key mistake to avoid is holding positions when market conviction overwhelms the structural edge, such as the recent errors in the Liberals Riksdag and Greens Saxony-Anhalt markets where the market price exceeded internal probability. Calibration remains strong in technical constraints and political thresholds but is weak in managing short-term directional noise and volatility in sports or multi-variable outcomes.\n\nFuture focus must remain on monitoring Alcaraz's US Open performance as a critical catalyst for the NO thesis. Once the pending M$768 liquidity is released, the immediate priorities are settling the M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 and auditing the resolution of closed markets uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, and It2tppQhz2.",
   "journal": [
+    {
+      "ts": 1788697688753,
+      "kind": "analysis",
+      "text": "Analysed \"Will an American man reach the 2026 US Open men's singles semifinals?\": market 85%, my 84% (medium). No trade, edge 0.010 below minimum 0.04."
+    },
+    {
+      "ts": 1788697599033,
+      "kind": "move",
+      "text": "\"Will an American man reach the 2026 US Open men's singles semifinals?\" moved +26% to 85%. Holding YES, P/L M$+2."
+    },
     {
       "ts": 1788695907458,
       "kind": "position",
@@ -437,16 +447,6 @@
       "ts": 1788643455222,
       "kind": "agency",
       "text": "Own turn: Spendable liquidity is critically low (M$1), though a large resolution wave (~M$768) is pending. The portfolio is structurally sound, but the Greens Saxony-Anhalt position has a thin edge (my 72% vs market 66%) and was previously flagged as the weakest structural position. To align with the directive of decisive pruning and maintaining a high-conviction book, I will exit this position now."
-    },
-    {
-      "ts": 1788643387281,
-      "kind": "book",
-      "text": "Book review wanted to sell, vetoed: review unavailable"
-    },
-    {
-      "ts": 1788643387279,
-      "kind": "book",
-      "text": "Looked over 15 positions: The book is structurally sound and anchored by high-conviction bets. I am pruning a negative-edge position and a low-conviction marginal bet to tighten the portfolio and increase spendable liquidity ahead of the pending resolution wave. (2 change(s) proposed)"
     }
   ],
   "todos": [
@@ -858,7 +858,7 @@
       "profit": 1.4,
       "prob": 0.295,
       "closed": false,
-      "days_to_close": 5.7
+      "days_to_close": 5.6
     },
     {
       "question": "Will Geometry Dash 2.21 Update Will Be Released In August 13 2026?",
@@ -926,14 +926,37 @@
       "side": "YES",
       "shares": 8.4,
       "invested": 4.8,
-      "value": 4.9,
-      "profit": 0.1,
-      "prob": 0.59,
+      "value": 6.6,
+      "profit": 1.7,
+      "prob": 0.789,
       "closed": false,
       "days_to_close": 9.5
     }
   ],
   "decisions": [
+    {
+      "ts": 1788697688750,
+      "kind": "no_trade",
+      "question": "Will an American man reach the 2026 US Open men's singles semifinals?",
+      "url": "https://manifold.markets/Terminator2/will-an-american-man-reach-the-2026",
+      "market_prob": 0.8500000000000002,
+      "model_prob": 0.84,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With Round of 16 play progressing and American men positioned across two quarters, the likelihood of at least one reaching the semifinals has risen significantly to around 84%, closely matching current market pricing.",
+      "uncertainty": "Exact completion and results of the Round of 16 matches involving Michelsen/Tiafoe and Shelton/Paul.",
+      "resolution_risk": "None identified; official ATP/US Open draw and match results are unambiguous.",
+      "evidence_for": [
+        "Four American men reached the Round of 16 clustered in two quarters (Tiafoe/Michelsen and Shelton/Paul).",
+        "Pairing in the same quarters creates high odds of at least one advancing to the QF, with a non-zero probability of an all-American QF guaranteeing a semifinalist."
+      ],
+      "evidence_against": [
+        "Opponents in R16 and potential QFs include top-tier players like Alcaraz, Medvedev, and Tsitsipas.",
+        "If Americans fail to create an all-American QF, any remaining American faces a tough quarterfinal as an underdog."
+      ],
+      "reason": "edge 0.010 below minimum 0.04"
+    },
     {
       "ts": 1788695363240,
       "kind": "bet",
@@ -1268,30 +1291,6 @@
         "Enric Mas currently leads the general classification in strong form with full team support to defend his red jersey."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1788645738440,
-      "kind": "bet",
-      "question": "Who will learn to write first? My left hand or my robot hand?",
-      "url": "https://manifold.markets/tftftftftftftftftftftftf/who-will-learn-to-write-first-my-le",
-      "market_prob": 0.3069762971522999,
-      "model_prob": 0.84,
-      "confidence": "high",
-      "amount": 47.0,
-      "outcome": "YES",
-      "thinking": "Human non-dominant hands inherently produce recognizable letters even with plateaued practice, whereas getting a newly arrived robotic arm and hand to reliably grasp, maintain surface contact, and write legibly in real hardware requires substantial calibration time that was lost to shipping delays.",
-      "uncertainty": "Whether the creator relies on out-of-the-box 2D Cartesian trajectory replay for the robot or genuinely attempts complex end-to-end motor learning that struggles with physical contact dynamics.",
-      "resolution_risk": "Impartial judges might score robot novelty or steady line quality higher despite the robot arm's late arrival and setup hurdles.",
-      "evidence_for": [
-        "Human adults already possess the cognitive and motor baseline to produce legible characters with their non-dominant hand, even with minimal or plateaued practice.",
-        "The robotic arm and hand suffered severe shipping and tariff delays, arriving only very recently and leaving virtually no engineering runway for complex sim-to-real calibration, fine-tuning, and robust trajectory control.",
-        "Achieving legible, continuous contact handwriting with a robotic manipulator under physical evaluation is notoriously prone to hardware failure, grip slippage, and sim-to-real dynamics mismatch."
-      ],
-      "evidence_against": [
-        "The creator noted that left-hand writing speed and progress have plateaued.",
-        "Modern imitation learning and policy deployment pipelines (like WidowX setups) can theoretically execute smooth 2D trajectories if pre-packaged software is utilized."
-      ],
-      "reason": "edge 0.533, kelly 0.77, decay 0.96, bound by balance reserve"
     }
   ]
 }
