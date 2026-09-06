@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788682344729,
+  "generated_ms": 1788682635942,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 19,
+      "today": 22,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 6,
+      "today": 7,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 466.91,
   "summary": "Net worth sits around M$489 with spendable liquidity severely constrained (M$11), while approximately M$768 remains tied up in closed positions awaiting resolution. Recent activity has focused on rigorous portfolio pruning to eliminate execution errors (such as exiting a misaligned Chris Pappas NO bet at P/L M$+1 and closing the thin-edge Greens Saxony-Anhalt NO position at P/L M$-4) and capturing high-edge structural opportunities like the robot hand writing bet (YES) and the Gukesh chess Olympiad board 1 bet (NO). \n\nThe active book is heavily concentrated in high-conviction structural and political threshold plays. The Alcaraz NO position (under 2 Grand Slams in 2026) remains under short-term pressure, moving up to 51% (P/L M$-17), but is deliberately held due to post-injury recovery constraints and the limited remaining schedule. Other core holdings include European political thresholds (Liberals and Christian Democrats in the Riksdag) and technical constraints, while pending resolutions will soon inject substantial liquidity to settle a standing M$50 debt and clear outstanding operational tasks.\n\nKey mistakes to avoid include falling into the \"thesis trap\" by holding positions after market conviction overwhelms the structural edge, failing to promptly catch and rectify execution errors (such as betting against our own qualitative model probability), and letting internal liquidity crises cause us to ignore public discourse or community engagement (as noted in issue #28). \n\nCalibration remains strong in engineering/technical constraints and political polling threshold rules, but weak in managing short-term directional noise and volatility in complex sports or multi-variable outcomes. Future focus remains strictly on maintaining portfolio discipline, clearing pending debts as soon as liquidity releases, and holding high-edge structural bets without over-allocating to speculative noise.",
   "journal": [
+    {
+      "ts": 1788682635813,
+      "kind": "trade",
+      "text": "Limit order M$35 YES on \"Will Brett Smiley win the 2026 Democratic primary for Mayor of Provide\" at 27%, my estimate 41% (medium). Because: While late August polling commissioned by an opposition-aligned PAC showed Morales leading 48-38, historical incumbent resilience in Providence primaries, massive ad spend, and closed-primary registration deadlines give Smiley a substantial ~41% path to victory."
+    },
+    {
+      "ts": 1788682530098,
+      "kind": "screen",
+      "text": "Escalated \"Will Brett Smiley win the 2026 Democratic primary for Mayor of Provide\" at 27%: quick estimate 62% vs market 27%"
+    },
     {
       "ts": 1788680501891,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1788621285111,
       "kind": "book",
       "text": "Book review wanted to sell, vetoed: review unavailable"
-    },
-    {
-      "ts": 1788621285108,
-      "kind": "book",
-      "text": "Looked over 15 positions: The book is heavily weighted toward structural bets with a massive liquidity injection pending. However, several political and holder-count positions have thin or negative edges. Pruning these marginal holdings is necessary to maintain discipline and free up mana for higher-conviction opportunities. (3 change(s) proposed)"
-    },
-    {
-      "ts": 1788621187870,
-      "kind": "analysis",
-      "text": "Analysed \"Will Trump outlive DeSantis?\": market 7%, my 6% (high). No trade, edge 0.009 below minimum 0.04."
     }
   ],
   "todos": [
@@ -849,6 +849,18 @@
       "days_to_close": 0.0
     },
     {
+      "question": "Will Brett Smiley win the 2026 Democratic primary for Mayor of Providence?",
+      "url": "https://manifold.markets/AdamBraff/will-brett-smiley-win-the-2026-demo",
+      "side": "YES",
+      "shares": 123.4,
+      "invested": 35.0,
+      "value": 36.4,
+      "profit": 1.4,
+      "prob": 0.295,
+      "closed": false,
+      "days_to_close": 5.8
+    },
+    {
       "question": "Will Geometry Dash 2.21 Update Will Be Released In August 13 2026?",
       "url": "https://manifold.markets/BetBeginner_098/will-geometry-dash-221-update-will",
       "side": "NO",
@@ -886,6 +898,32 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1788682635810,
+      "kind": "bet",
+      "question": "Will Brett Smiley win the 2026 Democratic primary for Mayor of Providence?",
+      "url": "https://manifold.markets/AdamBraff/will-brett-smiley-win-the-2026-demo",
+      "market_prob": 0.2724498726194275,
+      "model_prob": 0.41,
+      "confidence": "medium",
+      "amount": 35.0,
+      "outcome": "YES",
+      "thinking": "While late August polling commissioned by an opposition-aligned PAC showed Morales leading 48-38, historical incumbent resilience in Providence primaries, massive ad spend, and closed-primary registration deadlines give Smiley a substantial ~41% path to victory.",
+      "uncertainty": "Whether Morales's grassroots mobilization translates into higher turnout among young and progressive voters compared to the reliable older primary electorate that typically backs incumbents.",
+      "resolution_risk": "Official certification delays or close-margin recounts pushing the final certified outcome past the expected date.",
+      "evidence_for": [
+        "Historic incumbency base rate: No Providence mayor has lost a re-election primary since 1974.",
+        "Overwhelming financial and TV advertising advantage ($1.35M cash on hand and >$400k in TV spend vs. ~$119k for Morales).",
+        "August 10 party-disaffiliation and registration deadline prevents late-stage registration surges from non-traditional primary voters.",
+        "July 2026 Concord poll had Smiley leading 42-38."
+      ],
+      "evidence_against": [
+        "August 19-20 poll by Concord showed Morales leading 48% to 38% with 13% undecided.",
+        "Morales has strong ground game, teachers union backing, and national progressive support.",
+        "Housing and rent stabilization veto creates significant progressive grassroots mobilization against Smiley."
+      ],
+      "reason": "edge 0.138, kelly 0.19, decay 1.00, bound by kelly target"
+    },
     {
       "ts": 1788680128729,
       "kind": "no_trade",
@@ -1216,29 +1254,6 @@
         "Polling errors and sudden turnout swings remain possible within the final week of campaigning."
       ],
       "reason": "edge 0.003 below minimum 0.04"
-    },
-    {
-      "ts": 1788621187867,
-      "kind": "no_trade",
-      "question": "Will Trump outlive DeSantis?",
-      "url": "https://manifold.markets/AndrewG/will-trump-outlive-desantis",
-      "market_prob": 0.06947173882817873,
-      "model_prob": 0.06,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Actuarially, with a 32-year age gap (Trump at 80 vs DeSantis at 47), the baseline probability of an 80-year-old outliving a 47-year-old male is roughly 5\u20137%, driven primarily by low baseline mortality in a 47-year-old's next 5\u201310 years.",
-      "uncertainty": "Unanticipated severe health crises or accidents affecting DeSantis before Trump's eventual death.",
-      "resolution_risk": "None identified; resolution cleanly tracks standard mortality precedence.",
-      "evidence_for": [
-        "Unforeseen catastrophic health events, accidents, or acute illnesses can affect individuals regardless of age."
-      ],
-      "evidence_against": [
-        "Donald Trump is 80 years old (born June 1946) while Ron DeSantis is 47 years old (born September 1978), a 32-year age gap.",
-        "US actuarial tables give an 80-year-old male an average remaining life expectancy of roughly 7\u20138 years, compared to over 30 years for a 47-year-old male.",
-        "The cumulative probability of a healthy 47-year-old male dying within the expected remaining lifespan of an 80-year-old is actuarially between 4% and 7%."
-      ],
-      "reason": "edge 0.009 below minimum 0.04"
     }
   ]
 }
