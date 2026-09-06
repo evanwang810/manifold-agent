@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788707838340,
+  "generated_ms": 1788708211918,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 57,
+      "today": 61,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 18,
+      "today": 19,
       "cap": 34
     }
   },
@@ -48,6 +48,21 @@
   "net_worth": 471.02,
   "summary": "Net worth is approximately M$467 with spendable liquidity at M$81, though a massive M$768 injection is pending from closed positions. Recent activity focused on pruning negative-edge positions to maintain discipline, specifically selling a Liberals Riksdag YES position for a M$+41 profit and exiting a Greens Saxony-Anhalt NO position at a M$-4 loss, alongside opening a new YES position on Brett Smiley winning the Providence Mayor primary at 30% (estimate 41%). The book is currently lean and concentrated in high-conviction structural bets.\n\nThe Alcaraz NO position (2+ Grand Slams in 2026) remains the primary source of volatility, moving up to 51% against an estimate of 22%; it is held strictly on the injury-recovery and scheduling thesis. The Gukesh NO position is also under pressure, trading at 32% against a 15% estimate. Other core holdings, including the robot hand writing bet, maintain strong structural edges.\n\nA key mistake to avoid is holding positions when market conviction overwhelms the structural edge, such as the recent errors in the Liberals Riksdag and Greens Saxony-Anhalt markets where the market price exceeded internal probability. Calibration remains strong in technical constraints and political thresholds but is weak in managing short-term directional noise and volatility in sports or multi-variable outcomes.\n\nFuture focus must remain on monitoring Alcaraz's US Open performance as a critical catalyst for the NO thesis. Once the pending M$768 liquidity is released, the immediate priorities are settling the M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 and auditing the resolution of closed markets uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, and It2tppQhz2.",
   "journal": [
+    {
+      "ts": 1788708211685,
+      "kind": "analysis",
+      "text": "Analysed \"Will Trump outlive DeSantis?\": market 7%, my 6% (high). No trade, edge 0.009 below minimum 0.04."
+    },
+    {
+      "ts": 1788708074925,
+      "kind": "screen",
+      "text": "Escalated \"Will Trump outlive DeSantis?\" at 7%: quick estimate 85% vs market 7%"
+    },
+    {
+      "ts": 1788708069441,
+      "kind": "screen",
+      "text": "Passed on \"Will 50% or more of AWS developers stop coding for AWS in the next 24 \" at 4%: quick estimate 5% agrees with market. Mass layoffs or role reassignments affecting 50% of AWS devs within two years is extremely unlikely without massive current indicators."
+    },
     {
       "ts": 1788706397978,
       "kind": "book",
@@ -432,21 +447,6 @@
       "ts": 1788658397084,
       "kind": "screen",
       "text": "Escalated \"Will the Sweden Democrats increase their share in parliament in the Sw\" at 37%: quick estimate 58% vs market 37%"
-    },
-    {
-      "ts": 1788656186484,
-      "kind": "agency",
-      "text": "Own turn, retired a standing note: [self] [self] [market] Greens Saxony-Anhalt (8Uu0PPE9ns): Holding NO. Current edge is thin (my 72% vs market 65%). This . Because: This position was sold on 2026-09-05. The note is now stale and should be removed to keep the decision-making context clean."
-    },
-    {
-      "ts": 1788656186478,
-      "kind": "agency",
-      "text": "Own turn: Spendable liquidity is zero, but I have a massive resolution wave (~M$768) pending from closed positions. My current open book consists of high-conviction structural bets (Alcaraz, Gukesh, Robot Hand) that I am comfortable holding. Since I cannot add or send mana without selling, and I don't want to prune high-edge positions for trivial liquidity, I will focus on housekeeping by removing a stale note regarding a position I already exited."
-    },
-    {
-      "ts": 1788656149613,
-      "kind": "book",
-      "text": "Looked over 14 positions: The open book is lean and consists of high-conviction structural bets. The Alcaraz NO position, while the worst performer, maintains a strong edge based on the injury-recovery timeline and the limited remaining opportunities in 2026. The Gukesh NO position is supported by published lineups. All other positions are in profit with sound theses. (0 change(s) proposed)"
     }
   ],
   "todos": [
@@ -762,7 +762,7 @@
       "profit": 12.8,
       "prob": 0.337,
       "closed": false,
-      "days_to_close": 9.7
+      "days_to_close": 9.6
     },
     {
       "question": "Will Abdul El Sayed and Francesca Hong both win their primaries?",
@@ -946,6 +946,30 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1788708211682,
+      "kind": "no_trade",
+      "question": "Will Trump outlive DeSantis?",
+      "url": "https://manifold.markets/AndrewG/will-trump-outlive-desantis",
+      "market_prob": 0.06947173882817873,
+      "model_prob": 0.06,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "",
+      "uncertainty": "Sudden premature mortality events (accidents or acute critical illnesses) affecting DeSantis during Trump's remaining lifespan.",
+      "resolution_risk": "Ambiguity or lack of public verification in the event of near-simultaneous deaths.",
+      "evidence_for": [
+        "DeSantis could suffer a sudden fatal medical event or accident while Trump remains alive.",
+        "Trump has access to top-tier presidential medical care throughout his life."
+      ],
+      "evidence_against": [
+        "Trump is 80 years old while DeSantis is 47 years old, representing a 32-year age gap.",
+        "Actuarial tables give an 80-year-old US male a remaining median life expectancy of ~8-9 years versus ~30+ years for a 47-year-old male.",
+        "The integrated annual mortality hazard for a 47-year-old over Trump's expected remaining lifetime yields a cumulative probability of DeSantis dying first of around 5-6%."
+      ],
+      "reason": "edge 0.009 below minimum 0.04"
+    },
     {
       "ts": 1788705738935,
       "kind": "no_trade",
@@ -1284,30 +1308,6 @@
         "Crude oil prices are inherently volatile and can experience sharp single-day drawdowns on macroeconomic panics or sudden supply shifts."
       ],
       "reason": "edge 0.003 below minimum 0.04"
-    },
-    {
-      "ts": 1788675232105,
-      "kind": "bet",
-      "question": "The Greens receive at least 5% and enter the Saxony-Anhalt Landtag",
-      "url": "https://manifold.markets/Primer/the-greens-receive-at-least-5-and-e",
-      "market_prob": 0.7349259006518469,
-      "model_prob": 0.35,
-      "confidence": "high",
-      "amount": 46.0,
-      "outcome": "NO",
-      "thinking": "Final polling averages around 5.0-5.5% leave Greens with no safety margin. In East German state elections, The Greens systematically underperform final polls by 0.5-1.5% due to late tactical voting for CDU/SPD. With expected vote share around 4.5-4.8%, likelihood of clearing 5.00% is ~35%.",
-      "uncertainty": "Whether urban turnouts in Halle and Magdeburg can offset systematic eastern tactical voting that typically drains Green Zweitstimmen.",
-      "resolution_risk": "Low; resolution is tied explicitly to the official final election result of valid Zweitstimmen.",
-      "evidence_for": [
-        "Pre-election polling averages placed The Greens between 5.0% and 5.7% in final surveys.",
-        "Strong urban mobilization in Magdeburg and Halle could provide a crucial cushion."
-      ],
-      "evidence_against": [
-        "The Greens consistently underperform final polling averages by 0.5% to 1.5% in East German state elections due to tactical voting toward CDU/SPD to block AfD.",
-        "Recent 2024 state elections in Thuringia (3.2%) and Brandenburg (4.1%) saw The Greens miss the 5% threshold despite close pre-election polls.",
-        "A polling average right around 5.0-5.5% leaves almost no margin of error for typical Green polling drop-off in eastern states."
-      ],
-      "reason": "edge 0.385, kelly 0.52, decay 0.71, bound by default cap"
     }
   ]
 }
