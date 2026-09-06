@@ -200,14 +200,22 @@ on the first run, so there is no manual git surgery.
 
 The cadence comes from two things working together. GitHub treats `schedule` as best
 effort and drops high-frequency crons first under load, so a `*/5` cron in practice fires
-once every one to two hours and nothing happens in between. So the job itself loops for
-55 minutes, ticking every 60 seconds, which is where the actual cadence comes from. Wall
-time inside a job is free on public repos.
+once every one to two hours and nothing happens in between. So the job itself loops,
+ticking every three minutes, which is where the actual cadence comes from. Wall time
+inside a job is free on public repos.
+
+A session runs 340 minutes, just under the six-hour ceiling GitHub puts on any single
+job. That ceiling is the only reason this is not one job running forever. Longer is
+strictly better: every handover costs a runner provision, a checkout and a pip install,
+and leaves a gap where nothing is watching, so four a day beats twenty-six.
 
 The cron still asks every five minutes, and a `concurrency` group keeps at most one
 session running plus one queued. A trigger that lands mid-session just queues, and the
-queued session starts the moment the running one ends, so there is no dead hour waiting
-for the next scheduled slot.
+queued session starts the moment the running one ends, so a crashed session is picked
+up within five minutes rather than six hours.
+
+Each tick is wrapped in a 10-minute `timeout`. At this session length a tick wedged on a
+socket that never timed out would otherwise cost most of a day; this costs one tick.
 
 Scheduled workflows are also disabled after 60 days of repository inactivity. This one
 commits to the `state` branch on every tick, which counts as activity, so it keeps

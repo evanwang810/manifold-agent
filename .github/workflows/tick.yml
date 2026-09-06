@@ -2,11 +2,17 @@ name: tick
 
 # GitHub's scheduler is best effort and drops high-frequency crons under load, so a */5
 # schedule really fires every one to two hours. The workaround is both halves of this:
-# the job loops internally for most of an hour so ticks happen on a real interval, and
-# the cron asks every five minutes so a session starts promptly after the last one ends
+# the job loops internally so ticks happen on a real interval regardless, and the cron
+# asks every five minutes so a new session starts promptly after the last one ends
 # rather than waiting for the top of the next hour. The concurrency group below keeps at
 # most one session running and one queued, and the queued one starts the moment the
 # running one finishes. Wall time is free on public repositories.
+#
+# A session runs until just short of the six-hour ceiling GitHub puts on a single job,
+# which is the longest this can be. Sessions used to be 55 minutes, which meant ~26
+# handovers a day, each costing a runner provision, a checkout and a pip install, and
+# each leaving a gap where nothing was watching. Four handovers a day costs the same
+# per handover and there are far fewer of them.
 on:
   schedule:
     - cron: "*/5 * * * *"
@@ -22,9 +28,9 @@ on:
         type: boolean
         default: false
       minutes:
-        description: "How long to keep ticking"
+        description: "How long to keep ticking (340 is the practical maximum)"
         required: false
-        default: "55"
+        default: "340"
 
 concurrency:
   group: manifold-agent
@@ -37,14 +43,22 @@ permissions:
 jobs:
   tick:
     runs-on: ubuntu-latest
-    timeout-minutes: 65
+    # GitHub kills a job at six hours wherever it happens to be, so the loop stops
+    # itself at 340 minutes and this sits above that only to catch a wedged tick. The
+    # gap between the two is deliberate: the loop needs room to finish the tick it is
+    # in and push state before anything external pulls the plug.
+    timeout-minutes: 352
     env:
       # Every minute was pointless: a market does not move meaningfully in 60 seconds,
       # and each tick still cost a round of API reads and a git commit. Three minutes is
       # frequent enough to answer somebody promptly and to catch a filled order, which
       # are the only two things that actually want a short interval.
       TICK_INTERVAL_SECONDS: 180
-      SESSION_MINUTES: ${{ inputs.minutes || '55' }}
+      SESSION_MINUTES: ${{ inputs.minutes || '340' }}
+      # A hung tick used to cost 55 minutes. At six hours a session it is worth bounding
+      # explicitly: a tick that is still going after ten minutes is stuck on a socket
+      # that never timed out, and killing it loses one tick instead of the afternoon.
+      TICK_TIMEOUT_SECONDS: 600
     steps:
       - uses: actions/checkout@v4
 
@@ -131,7 +145,10 @@ jobs:
           while :; do
             N=$((N + 1))
             echo "::group::tick $N"
-            python run.py $LIVE_FLAG || echo "tick $N failed, continuing"
+            # SIGINT first so run.py unwinds and closes its clients, SIGKILL a minute
+            # later if it ignored that.
+            timeout --signal=INT --kill-after=60 "$TICK_TIMEOUT_SECONDS" \
+              python run.py $LIVE_FLAG || echo "tick $N failed or timed out, continuing"
             echo "::endgroup::"
 
             push_state || echo "state push failed, continuing"
