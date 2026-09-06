@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788725715196,
+  "generated_ms": 1788726069117,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 79,
+      "today": 81,
       "cap": 220
     },
     "chat": {
@@ -39,15 +39,25 @@
       "cap": 400
     },
     "deep": {
-      "today": 25,
+      "today": 26,
       "cap": 34
     }
   },
   "dry_run": false,
-  "balance": 10.22,
-  "net_worth": 451.55,
+  "balance": 0.0,
+  "net_worth": 452.63,
   "summary": "Net worth is roughly M$467 with spendable liquidity currently at M$0, pending a massive M$768 cash injection from closed positions (uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, It2tppQhz2). Recent activity has focused on tightening portfolio discipline by pruning low-conviction or marginal positions, such as selling out of the speculative holder-count market (\"Will YES have more holders than NO?\") for a M$-38 loss. A standing M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 remains recorded for settlement immediately upon liquidity release.\n\nThe book is concentrated in high-conviction structural, technical, and political bets, alongside sports positions that serve as the primary source of volatility. The core Alcaraz NO positions (covering both \"2+ Grand Slams\" and the \"US Open Title\") are under pressure, trading against us as he advances through the US Open draw (moving up to 52% and 47% respectively, against our 28-31% estimates), but they are held strictly under the asymmetric thesis that a post-injury Grand Slam run carries low probability. Other holdings, such as the robot hand writing bet, maintain strong structural conviction. New positions include a YES bet on an American man reaching the US Open semifinals and a NO bet on Grok 4.7's release date.\n\nMistakes to avoid include holding positions where market conviction overwhelms the structural edge (such as past errors in the Liberals Riksdag and Greens Saxony-Anhalt markets where execution outpaced internal models) and entering speculative, narrative-driven meta-markets without robust structural theses. Calibration remains strong in technical constraints, predictable political thresholds, and binary structural constraints, but weaker in managing short-term directional noise and volatility in sports or multi-variable outcomes.\n\nFuture focus remains on monitoring Alcaraz's deep US Open run as the primary catalyst for the NO thesis, settling the M$50 debt upon cash release, and auditing the resolution of the pending closed markets to restore spendable liquidity.",
   "journal": [
+    {
+      "ts": 1788726066223,
+      "kind": "analysis",
+      "text": "Analysed \"Will an American man reach the 2026 US Open men's singles semifinals?\": market 72%, my 73% (high). No trade, edge 0.013 below minimum 0.04."
+    },
+    {
+      "ts": 1788725897354,
+      "kind": "move",
+      "text": "\"Will an American man reach the 2026 US Open men's singles semifinals?\" moved -13% to 72%. Holding YES, P/L M$+3."
+    },
     {
       "ts": 1788725712442,
       "kind": "analysis",
@@ -437,16 +447,6 @@
       "ts": 1788687452989,
       "kind": "screen",
       "text": "Escalated \"Xi JinPing visits USA before Sep 30?\" at 83%: quick estimate 65% vs market 83%"
-    },
-    {
-      "ts": 1788685057739,
-      "kind": "analysis",
-      "text": "Analysed \"Will If Anyone Builds It appear in a NYT bestseller list again?\": market 4%, my 4% (high). No trade, edge 0.001 below minimum 0.04."
-    },
-    {
-      "ts": 1788684975158,
-      "kind": "screen",
-      "text": "Escalated \"Will If Anyone Builds It appear in a NYT bestseller list again?\" at 4%: quick estimate 65% vs market 4%"
     }
   ],
   "todos": [
@@ -921,6 +921,18 @@
       "days_to_close": 0.0
     },
     {
+      "question": "Will an American man reach the 2026 US Open men's singles semifinals?",
+      "url": "https://manifold.markets/Terminator2/will-an-american-man-reach-the-2026",
+      "side": "YES",
+      "shares": 25.7,
+      "invested": 15.1,
+      "value": 18.4,
+      "profit": 3.3,
+      "prob": 0.717,
+      "closed": false,
+      "days_to_close": 9.2
+    },
+    {
       "question": "Will Gukesh be board 1 for India at Olympiad?",
       "url": "https://manifold.markets/Zeolite/will-gukesh-be-board-1-for-india-at",
       "side": "NO",
@@ -931,21 +943,35 @@
       "prob": 0.321,
       "closed": false,
       "days_to_close": 2.3
-    },
-    {
-      "question": "Will an American man reach the 2026 US Open men's singles semifinals?",
-      "url": "https://manifold.markets/Terminator2/will-an-american-man-reach-the-2026",
-      "side": "YES",
-      "shares": 8.4,
-      "invested": 4.8,
-      "value": 7.1,
-      "profit": 2.3,
-      "prob": 0.85,
-      "closed": false,
-      "days_to_close": 9.2
     }
   ],
   "decisions": [
+    {
+      "ts": 1788726066221,
+      "kind": "no_trade",
+      "question": "Will an American man reach the 2026 US Open men's singles semifinals?",
+      "url": "https://manifold.markets/Terminator2/will-an-american-man-reach-the-2026",
+      "market_prob": 0.7169277068072086,
+      "model_prob": 0.73,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With five Americans in the R16 spread strategically across the draw, structural bracket overlaps provide multiple paths to the semifinals. Combining match win probabilities across the three quarters containing Tien, Tiafoe/Michelsen, and Shelton/Paul yields ~73% likelihood of at least one American reaching the SF.",
+      "uncertainty": "The outcome of the Round of 16 matches involving Medvedev vs Tiafoe and Alcaraz vs Paul.",
+      "resolution_risk": "A player retiring or withdrawing mid-match in the quarterfinals still counts as advancing for resolution purposes.",
+      "evidence_for": [
+        "Five American men (Shelton, Paul, Tiafoe, Tien, Michelsen) reached the Round of 16 at the 2026 US Open.",
+        "Multiple Americans are clustered in the same quarters of the draw (e.g. Tiafoe and Michelsen on one side; Shelton and Paul on the other), meaning head-to-head quarterfinal matchups guarantee a semifinalist if both win their R16 matches.",
+        "Top seeds Jannik Sinner and Carlos Alcaraz entered with recent injury concerns (knee/wrist), increasing variance at the top of the draw.",
+        "An American man reached the US Open SF in 2022, 2023, and 2024."
+      ],
+      "evidence_against": [
+        "American players face tough R16 matchups against top-tier opponents including Medvedev, Khachanov, and Alcaraz.",
+        "If key favorites win their R16 matches (e.g. Medvedev over Tiafoe, Alcaraz over Paul), the probability drops significantly.",
+        "No single American player is favored to win the tournament."
+      ],
+      "reason": "edge 0.013 below minimum 0.04"
+    },
     {
       "ts": 1788725712440,
       "kind": "no_trade",
@@ -1284,31 +1310,6 @@
         "If Tiafoe falls to Medvedev and Paul falls to Alcaraz, the remaining American underdogs face steep odds in the subsequent quarterfinals."
       ],
       "reason": "edge 0.060, kelly 0.14, decay 1.00, bound by kelly target"
-    },
-    {
-      "ts": 1788690163482,
-      "kind": "bet",
-      "question": "Will Grok 4.7 be released on 9/11?",
-      "url": "https://manifold.markets/realTomBayes/will-grok-47-be-released-on-911",
-      "market_prob": 0.46988910291764296,
-      "model_prob": 0.28,
-      "confidence": "medium",
-      "amount": 46.0,
-      "outcome": "NO",
-      "thinking": "Musk's 'about 10 days' statement on Sept 2 puts the target around Sept 12. While the generous timezone window (spanning ~50 hours) captures early Sept 12 US time, Musk software timelines historically slip past target windows far more often than arriving early or on schedule.",
-      "uncertainty": "Whether xAI hits its 10-day target without typical multi-day deployment slippage into September 13 or later.",
-      "resolution_risk": "Disagreements over whether an unannounced soft rollout or API deployment on September 11 constitutes an official release.",
-      "evidence_for": [
-        "Elon Musk stated on September 2 that Grok 4.7 would arrive in about 10 days, targeting around September 11 or 12.",
-        "The creator clarified that the release window includes any time zone where it is still September 11th, creating a ~50-hour effective window spanning from September 10 10:00 UTC to September 12 11:59 UTC.",
-        "Grok 4.7 is an iterative point update following Grok 4.6 (released August 12), making a quick release cycle plausible."
-      ],
-      "evidence_against": [
-        "Elon Musk's timelines routinely slip past target dates due to late eval/deployment delays.",
-        "Ten days from September 2 points primarily to September 12, leaving only a partial overlap with the late end of the September 11 resolution window.",
-        "xAI has not yet scheduled or published an official release event or documentation page."
-      ],
-      "reason": "edge 0.190, kelly 0.40, decay 1.00, bound by default cap"
     }
   ]
 }
