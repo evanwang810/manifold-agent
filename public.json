@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788699528865,
+  "generated_ms": 1788699821283,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 46,
+      "today": 48,
       "cap": 220
     },
     "chat": {
@@ -39,15 +39,30 @@
       "cap": 400
     },
     "deep": {
-      "today": 14,
+      "today": 15,
       "cap": 34
     }
   },
   "dry_run": false,
-  "balance": 9.32,
-  "net_worth": 469.04,
+  "balance": 0.0,
+  "net_worth": 478.02,
   "summary": "Net worth is approximately M$467 with spendable liquidity at M$81, though a massive M$768 injection is pending from closed positions. Recent activity focused on pruning negative-edge positions to maintain discipline, specifically selling a Liberals Riksdag YES position for a M$+41 profit and exiting a Greens Saxony-Anhalt NO position at a M$-4 loss, alongside opening a new YES position on Brett Smiley winning the Providence Mayor primary at 30% (estimate 41%). The book is currently lean and concentrated in high-conviction structural bets.\n\nThe Alcaraz NO position (2+ Grand Slams in 2026) remains the primary source of volatility, moving up to 51% against an estimate of 22%; it is held strictly on the injury-recovery and scheduling thesis. The Gukesh NO position is also under pressure, trading at 32% against a 15% estimate. Other core holdings, including the robot hand writing bet, maintain strong structural edges.\n\nA key mistake to avoid is holding positions when market conviction overwhelms the structural edge, such as the recent errors in the Liberals Riksdag and Greens Saxony-Anhalt markets where the market price exceeded internal probability. Calibration remains strong in technical constraints and political thresholds but is weak in managing short-term directional noise and volatility in sports or multi-variable outcomes.\n\nFuture focus must remain on monitoring Alcaraz's US Open performance as a critical catalyst for the NO thesis. Once the pending M$768 liquidity is released, the immediate priorities are settling the M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 and auditing the resolution of closed markets uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, and It2tppQhz2.",
   "journal": [
+    {
+      "ts": 1788699816930,
+      "kind": "analysis",
+      "text": "Analysed \"Will Carlos Alcaraz win at least 2 Grand Slams in 2026?\": market 47%, my 31% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1788699712256,
+      "kind": "move",
+      "text": "\"Will Carlos Alcaraz win at least 2 Grand Slams in 2026?\" moved -9% to 47%. Holding NO, P/L M$-12."
+    },
+    {
+      "ts": 1788699712256,
+      "kind": "move",
+      "text": "\"Will Carlos Alcaraz win the 2026 US Open men's singles title?\" moved +5% to 47%. Holding NO, P/L M$-2."
+    },
     {
       "ts": 1788699337002,
       "kind": "move",
@@ -432,21 +447,6 @@
       "ts": 1788649631160,
       "kind": "agency",
       "text": "Own turn, sold out of \"Will Chris Pappas win the 2026 New Hampshire Democratic Prim\" (NO, P/L M$+1). Because: My estimate for Pappas winning (YES) is ~89%, meaning the NO probability is ~11%. Holding NO at 95% is a massive negative edge. Selling to correct an execution error."
-    },
-    {
-      "ts": 1788649631001,
-      "kind": "agency",
-      "text": "Own turn: I have identified a critical misalignment in the Chris Pappas position. My internal thesis is that he wins (YES ~89%), yet I am holding a NO position at 95%. This is a severe negative edge and a clear execution error from a previous turn. I will exit this position immediately to align the portfolio with my actual probability assessments."
-    },
-    {
-      "ts": 1788649587349,
-      "kind": "book",
-      "text": "Looked over 14 positions: The open book is lean and high-conviction. All remaining positions maintain a positive edge based on structural theses. The Alcaraz NO position, while the worst performer, retains the strongest edge due to the injury-recovery timeline. With a massive resolution wave pending, there is no need to liquidate sound positions for liquidity. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1788649482815,
-      "kind": "analysis",
-      "text": "Analysed \"Will the winner of the 2026 Vuelta a Espa\u00f1a be Roglic or Pogacar?\": market 15%, my 36% (high). No trade, size floored to zero by balance reserve."
     }
   ],
   "todos": [
@@ -762,7 +762,7 @@
       "profit": 12.8,
       "prob": 0.337,
       "closed": false,
-      "days_to_close": 9.8
+      "days_to_close": 9.7
     },
     {
       "question": "Will Abdul El Sayed and Francesca Hong both win their primaries?",
@@ -946,6 +946,31 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1788699816927,
+      "kind": "no_trade",
+      "question": "Will Carlos Alcaraz win at least 2 Grand Slams in 2026?",
+      "url": "https://manifold.markets/polymathematic/will-carlos-alcaraz-win-at-least-2-UAsREZuPt2",
+      "market_prob": 0.46999999999999986,
+      "model_prob": 0.31,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With AO won and FO/Wimbledon off the board, this market is functionally identical to Alcaraz winning the US Open. Sinner's withdrawal improves his path, but winning four consecutive best-of-five matches off a 4.5-month wrist layoff remains tough. At ~75% average win rate per remaining match, his title probability from R16 is ~31%.",
+      "uncertainty": "Whether Alcaraz's right wrist holds up under maximum stress across four remaining best-of-five matches against elite competition.",
+      "resolution_risk": "Minimal risk; resolves strictly on official ATP Tour records for 2026 Grand Slam titles.",
+      "evidence_for": [
+        "Alcaraz won the 2026 Australian Open, meaning a US Open victory would give him 2 Grand Slams in 2026.",
+        "Jannik Sinner withdrew from the US Open with a knee injury, removing his chief rival from the draw.",
+        "Alcaraz has advanced to the Round of 16 after winning his first three matches."
+      ],
+      "evidence_against": [
+        "Alcaraz missed 4.5 months (including Roland Garros and Wimbledon) due to right wrist tenosynovitis.",
+        "Winning four consecutive best-of-five matches against top-tier opponents in week two places heavy physical strain on a recently injured wrist.",
+        "At an average win probability of ~75% per match over the remaining four rounds (R16, QF, SF, Final), the cumulative chance to win the title is ~31%."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1788697995931,
       "kind": "bet",
@@ -1278,30 +1303,6 @@
         "The market has an impending close date without explicit long-term resolution rules, carrying substantial risk of resolving NO or N/A if closed prematurely."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1788651938509,
-      "kind": "bet",
-      "question": "Will Gukesh be board 1 for India at Olympiad?",
-      "url": "https://manifold.markets/Zeolite/will-gukesh-be-board-1-for-india-at",
-      "market_prob": 0.3236780965590325,
-      "model_prob": 0.15,
-      "confidence": "high",
-      "amount": 11.0,
-      "outcome": "NO",
-      "thinking": "Confirmed published line-ups from FIDE and ChessBase place Arjun Erigaisi on Board 1 and Gukesh on Board 4. Unless India makes an unexpected reversal at the final technical meeting to give the struggling World Champion top board over in-form Erigaisi, Gukesh will not be playing on Board 1.",
-      "uncertainty": "Whether India's published line-up was an unfinalized rating-sorted placeholder or the definitive board order submitted by the federation captain.",
-      "resolution_risk": "Disputes over whether 'plays on Board 1' requires being assigned Board 1 for the whole tournament or playing at least one game on Board 1.",
-      "evidence_for": [
-        "Gukesh is the reigning World Champion and played Board 1 in the previous two Olympiads.",
-        "Initial FIDE team listings are sometimes displayed sorted strictly by rating rather than finalized tactical board order prior to the technical captains' meeting."
-      ],
-      "evidence_against": [
-        "Official line-ups published by FIDE and ChessBase place Arjun Erigaisi on Board 1, R. Praggnanandhaa on Board 2, Nihal Sarin on Board 3, and Gukesh on Board 4.",
-        "Gukesh's rating has dropped to 2,703 amid poor recent form, whereas Arjun Erigaisi is in peak form at 2,759.",
-        "Under FIDE Olympiad substitution rules, a player registered on Board 4 cannot rotate up to Board 1 during match play due to the 5-player roster limit."
-      ],
-      "reason": "edge 0.174, kelly 0.54, decay 1.00, bound by balance reserve"
     }
   ]
 }
