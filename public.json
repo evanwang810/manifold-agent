@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788705358765,
+  "generated_ms": 1788705739171,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 54,
+      "today": 57,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 17,
+      "today": 18,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 472.46,
   "summary": "Net worth is approximately M$467 with spendable liquidity at M$81, though a massive M$768 injection is pending from closed positions. Recent activity focused on pruning negative-edge positions to maintain discipline, specifically selling a Liberals Riksdag YES position for a M$+41 profit and exiting a Greens Saxony-Anhalt NO position at a M$-4 loss, alongside opening a new YES position on Brett Smiley winning the Providence Mayor primary at 30% (estimate 41%). The book is currently lean and concentrated in high-conviction structural bets.\n\nThe Alcaraz NO position (2+ Grand Slams in 2026) remains the primary source of volatility, moving up to 51% against an estimate of 22%; it is held strictly on the injury-recovery and scheduling thesis. The Gukesh NO position is also under pressure, trading at 32% against a 15% estimate. Other core holdings, including the robot hand writing bet, maintain strong structural edges.\n\nA key mistake to avoid is holding positions when market conviction overwhelms the structural edge, such as the recent errors in the Liberals Riksdag and Greens Saxony-Anhalt markets where the market price exceeded internal probability. Calibration remains strong in technical constraints and political thresholds but is weak in managing short-term directional noise and volatility in sports or multi-variable outcomes.\n\nFuture focus must remain on monitoring Alcaraz's US Open performance as a critical catalyst for the NO thesis. Once the pending M$768 liquidity is released, the immediate priorities are settling the M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 and auditing the resolution of closed markets uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, and It2tppQhz2.",
   "journal": [
+    {
+      "ts": 1788705738938,
+      "kind": "analysis",
+      "text": "Analysed \"Will United Russia gain seats in the 2026 Russian Duma Elections?\": market 40%, my 58% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1788705550939,
+      "kind": "screen",
+      "text": "Escalated \"Will United Russia gain seats in the 2026 Russian Duma Elections?\" at 40%: quick estimate 85% vs market 40%"
+    },
     {
       "ts": 1788705354575,
       "kind": "move",
@@ -437,16 +447,6 @@
       "ts": 1788656065178,
       "kind": "analysis",
       "text": "Analysed \"Will Zoro kill/defeat a Gorosei?\": market 55%, my 38% (medium). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1788655977807,
-      "kind": "screen",
-      "text": "Escalated \"Will Zoro kill/defeat a Gorosei?\" at 55%: quick estimate 35% vs market 55%"
-    },
-    {
-      "ts": 1788655957801,
-      "kind": "screen",
-      "text": "Passed on \"Will the AfD win an absolute majority in the state election in Saxony-\" at 16%: quick estimate 15% agrees with market. An absolute majority for any single party in a German state parliament is extremely rare due to proportional representation and the 5 percent hurdle, making this a safe rejection."
     }
   ],
   "todos": [
@@ -947,6 +947,31 @@
   ],
   "decisions": [
     {
+      "ts": 1788705738935,
+      "kind": "no_trade",
+      "question": "Will United Russia gain seats in the 2026 Russian Duma Elections?",
+      "url": "https://manifold.markets/RealAP/will-united-russia-gain-or-loose-se",
+      "market_prob": 0.4023469201694241,
+      "model_prob": 0.58,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "While United Russia only strictly needs 300 seats for a constitutional supermajority, wartime incentives and widespread electronic voting (DEG) strongly lean toward regional authorities over-delivering results to demonstrate loyalty. A seat count in the 325-340 range is slightly more likely than a contraction, given the complete removal of genuine opposition monitoring.",
+      "uncertainty": "Whether the Presidential Administration sets an internal target for United Russia to exceed its 2021 baseline to signal wartime strength, or prefers to keep UR around 300-320 seats to preserve controlled multi-party dynamics.",
+      "resolution_risk": "If the election is postponed past December 31, 2026 due to wartime emergency decrees, the market resolves N/A.",
+      "evidence_for": [
+        "Widespread expansion of Remote Electronic Voting (DEG) and suppression of independent election monitoring allow near-total administrative control over results.",
+        "Wartime political pressure incentivizes regional governors to deliver higher turnout and larger majorities for United Russia to demonstrate regime unity.",
+        "In 2016, United Russia achieved 343 seats under similar administrative dominance, proving the system can readily exceed 324 seats when managed aggressively."
+      ],
+      "evidence_against": [
+        "324 seats represents 72% of the State Duma, well above the legal threshold of 300 seats required for a constitutional supermajority.",
+        "The Kremlin needs to leave sufficient seats for systemic opposition parties (KPRF, LDPR, New People) to maintain the facade of multi-party parliamentarianism and keep loyal opposition elites satisfied.",
+        "In 2021 United Russia won 324 seats; achieving >324 seats requires either sweeping >205 single-member districts or securing over 55% of the proportional list vote."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1788703104621,
       "kind": "no_trade",
       "question": "Will I beat @retr0id to doing a one arm chinup?",
@@ -1283,23 +1308,6 @@
         "A polling average right around 5.0-5.5% leaves almost no margin of error for typical Green polling drop-off in eastern states."
       ],
       "reason": "edge 0.385, kelly 0.52, decay 0.71, bound by default cap"
-    },
-    {
-      "ts": 1788672626563,
-      "kind": "sell",
-      "question": "Liberals still in Riksdag after next election?",
-      "url": "https://manifold.markets/Pazzaz/liberals-still-in-riksdag-after-202",
-      "market_prob": 0.25102025125339755,
-      "model_prob": 0.2,
-      "confidence": null,
-      "amount": null,
-      "outcome": null,
-      "thinking": "With election day a week away and early voting active, Liberalerna remain stuck at 2.0%\u20132.5% in aggregate polling. While tactical voting offers a path over 4.0%, the deficit is severe, making parliamentary survival unlikely (~20%).",
-      "uncertainty": "",
-      "resolution_risk": "",
-      "evidence_for": [],
-      "evidence_against": [],
-      "reason": null
     }
   ]
 }
