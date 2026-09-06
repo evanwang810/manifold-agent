@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788715352220,
+  "generated_ms": 1788715670539,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 67,
+      "today": 70,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 20,
+      "today": 21,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 464.27,
   "summary": "Net worth is approximately M$467 with spendable liquidity at M$81, though a massive M$768 injection is pending from closed positions. Recent activity focused on pruning negative-edge positions to maintain discipline, specifically selling a Liberals Riksdag YES position for a M$+41 profit and exiting a Greens Saxony-Anhalt NO position at a M$-4 loss, alongside opening a new YES position on Brett Smiley winning the Providence Mayor primary at 30% (estimate 41%). The book is currently lean and concentrated in high-conviction structural bets.\n\nThe Alcaraz NO position (2+ Grand Slams in 2026) remains the primary source of volatility, moving up to 51% against an estimate of 22%; it is held strictly on the injury-recovery and scheduling thesis. The Gukesh NO position is also under pressure, trading at 32% against a 15% estimate. Other core holdings, including the robot hand writing bet, maintain strong structural edges.\n\nA key mistake to avoid is holding positions when market conviction overwhelms the structural edge, such as the recent errors in the Liberals Riksdag and Greens Saxony-Anhalt markets where the market price exceeded internal probability. Calibration remains strong in technical constraints and political thresholds but is weak in managing short-term directional noise and volatility in sports or multi-variable outcomes.\n\nFuture focus must remain on monitoring Alcaraz's US Open performance as a critical catalyst for the NO thesis. Once the pending M$768 liquidity is released, the immediate priorities are settling the M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 and auditing the resolution of closed markets uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, and It2tppQhz2.",
   "journal": [
+    {
+      "ts": 1788715670096,
+      "kind": "analysis",
+      "text": "Analysed \"Christian Democrats still in Riksdag after next election?\": market 89%, my 90% (high). No trade, edge 0.013 below minimum 0.04."
+    },
+    {
+      "ts": 1788715539431,
+      "kind": "screen",
+      "text": "Escalated \"Christian Democrats still in Riksdag after next election?\" at 89%: quick estimate 55% vs market 89%"
+    },
     {
       "ts": 1788714242907,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1788675414398,
       "kind": "position",
       "text": "Opened 164 NO on \"The Greens receive at least 5% and enter the Saxony-Anhalt Landtag\" at 71%, M$46 in."
-    },
-    {
-      "ts": 1788675232107,
-      "kind": "trade",
-      "text": "Limit order M$46 NO on \"The Greens receive at least 5% and enter the Saxony-Anhalt Landtag\" at 73%, my estimate 35% (high). Because: Final polling averages around 5.0-5.5% leave Greens with no safety margin. In East German state elections, The Greens systematically underperform final polls by 0.5-1.5% due to late tactical voting for CDU/SPD. With expected vote share around 4.5-4.8%, likelihood of clearing 5.00% is ~35%."
-    },
-    {
-      "ts": 1788675143440,
-      "kind": "screen",
-      "text": "Escalated \"The Greens receive at least 5% and enter the Saxony-Anhalt Landtag\" at 73%: quick estimate 35% vs market 73%"
     }
   ],
   "todos": [
@@ -890,9 +890,9 @@
       "side": "NO",
       "shares": 48.0,
       "invested": 27.0,
-      "value": 24.5,
-      "profit": -2.5,
-      "prob": 0.49,
+      "value": 25.0,
+      "profit": -2.0,
+      "prob": 0.48,
       "closed": false,
       "days_to_close": 9.3
     },
@@ -946,6 +946,30 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1788715670094,
+      "kind": "no_trade",
+      "question": "Christian Democrats still in Riksdag after next election?",
+      "url": "https://manifold.markets/Pazzaz/christian-democrats-still-in-riksda",
+      "market_prob": 0.8866075101806186,
+      "model_prob": 0.9,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With the election one week away on September 13, KD is polling comfortably above the 4% threshold at ~6.2% across multiple major pollsters (Verian, Demoskop), making Riksdag retention highly probable.",
+      "uncertainty": "Late-breaking voter swings or significant systematic polling overestimation in the final 7 days before September 13.",
+      "resolution_risk": "None identified; Riksdag election results and seat allocation rules under Swedish law are definitive.",
+      "evidence_for": [
+        "August 2026 polls from Verian (6.2%) and Demoskop show KD well clear of the 4% threshold with multi-year high figures.",
+        "The Swedish general election is just one week away (September 13, 2026), giving very little time for polling support to evaporate.",
+        "Tactical voting dynamics among center-right/Tid\u00f6 coalition voters historically support smaller coalition partners near the threshold."
+      ],
+      "evidence_against": [
+        "KD spent significant time in 2025 polling under 4%, demonstrating potential structural vulnerability.",
+        "Polling error or unexpected late scandal could theoretically depress turnout or shift votes."
+      ],
+      "reason": "edge 0.013 below minimum 0.04"
+    },
     {
       "ts": 1788710599732,
       "kind": "no_trade",
@@ -1286,29 +1310,6 @@
         "Housing and rent stabilization veto creates significant progressive grassroots mobilization against Smiley."
       ],
       "reason": "edge 0.138, kelly 0.19, decay 1.00, bound by kelly target"
-    },
-    {
-      "ts": 1788680128729,
-      "kind": "no_trade",
-      "question": "Was the ICE agent who shot Renee Nicole Good injured?",
-      "url": "https://manifold.markets/MugaSofer/was-the-ice-agent-who-shot-renee-ni",
-      "market_prob": 0.20544702302020204,
-      "model_prob": 0.23,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "",
-      "uncertainty": "Whether official state or federal investigative reports explicitly verify or refute a physical injury sustained by agent Jonathan Ross.",
-      "resolution_risk": "Creator subjectivity regarding what constitutes a 'reliable source' given conflicting accounts between law enforcement releases and independent reporting.",
-      "evidence_for": [
-        "Initial law enforcement accounts often report contact or minor injuries following vehicle incidents.",
-        "Creator clarified that even a minor scrape or bruise from vehicle impact qualifies for YES resolution."
-      ],
-      "evidence_against": [
-        "Eight months post-incident, no definitive independent medical or official investigative report confirming physical injury has settled the market.",
-        "Video analysis and subsequent scrutiny have questioned whether meaningful physical impact occurred."
-      ],
-      "reason": "edge 0.025 below minimum 0.04"
     }
   ]
 }
