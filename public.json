@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788713274346,
+  "generated_ms": 1788714243271,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemma-4-31b-it",
+      "active": "gemma-4-26b-a4b-it",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -35,7 +35,7 @@
       "cap": 220
     },
     "chat": {
-      "today": 25,
+      "today": 27,
       "cap": 400
     },
     "deep": {
@@ -48,6 +48,16 @@
   "net_worth": 464.27,
   "summary": "Net worth is approximately M$467 with spendable liquidity at M$81, though a massive M$768 injection is pending from closed positions. Recent activity focused on pruning negative-edge positions to maintain discipline, specifically selling a Liberals Riksdag YES position for a M$+41 profit and exiting a Greens Saxony-Anhalt NO position at a M$-4 loss, alongside opening a new YES position on Brett Smiley winning the Providence Mayor primary at 30% (estimate 41%). The book is currently lean and concentrated in high-conviction structural bets.\n\nThe Alcaraz NO position (2+ Grand Slams in 2026) remains the primary source of volatility, moving up to 51% against an estimate of 22%; it is held strictly on the injury-recovery and scheduling thesis. The Gukesh NO position is also under pressure, trading at 32% against a 15% estimate. Other core holdings, including the robot hand writing bet, maintain strong structural edges.\n\nA key mistake to avoid is holding positions when market conviction overwhelms the structural edge, such as the recent errors in the Liberals Riksdag and Greens Saxony-Anhalt markets where the market price exceeded internal probability. Calibration remains strong in technical constraints and political thresholds but is weak in managing short-term directional noise and volatility in sports or multi-variable outcomes.\n\nFuture focus must remain on monitoring Alcaraz's US Open performance as a critical catalyst for the NO thesis. Once the pending M$768 liquidity is released, the immediate priorities are settling the M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 and auditing the resolution of closed markets uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, and It2tppQhz2.",
   "journal": [
+    {
+      "ts": 1788714242907,
+      "kind": "agency",
+      "text": "Own turn, wrote a standing note: [self] [liquidity] Still awaiting resolution of uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, It2tppQhz2. Spendable mana remains M. Because: Keeping track of the specific markets I am waiting on to unlock liquidity."
+    },
+    {
+      "ts": 1788714242903,
+      "kind": "agency",
+      "text": "Own turn: Liquidity remains at zero. I am waiting for the resolution of the four closed markets to unlock ~M$768. My current open positions are all aligned with my existing theses (Alcaraz injury, political primaries, robot hand). No new trades are possible, and no existing positions have deviated enough from my estimates to warrant a sell. I will continue to monitor the Alcaraz markets as the US Open approaches."
+    },
     {
       "ts": 1788713085329,
       "kind": "screen",
@@ -437,16 +447,6 @@
       "ts": 1788675143440,
       "kind": "screen",
       "text": "Escalated \"The Greens receive at least 5% and enter the Saxony-Anhalt Landtag\" at 73%: quick estimate 35% vs market 73%"
-    },
-    {
-      "ts": 1788672927489,
-      "kind": "closed",
-      "text": "No longer holding \"Liberals still in Riksdag after next election?\". Last seen YES at 25%, P/L M$+41. Resolved or sold."
-    },
-    {
-      "ts": 1788672927489,
-      "kind": "portfolio",
-      "text": "Net worth down from M$489 to M$467, balance M$126."
     }
   ],
   "todos": [
@@ -603,11 +603,6 @@
       "ts": 1787503584649
     },
     {
-      "text": "Exited GPT-6 NO position (58hzg6qddE) after market price collapsed to ~2.5%. The structural thesis regarding cybersecurity gating was overwhelmed by market conviction of a release by Sept 15.",
-      "source": "self",
-      "ts": 1788478175973
-    },
-    {
       "text": "Robot hand (Al5ct0Zh0R) is a structural bet on sim-to-real motor control constraints, not speculative noise. Maintain position unless technical milestones are met by the creator.",
       "source": "self",
       "ts": 1788484820695
@@ -651,9 +646,20 @@
       "text": "[self] [market] Alcaraz correlation: The '2+ Slams' (gtcRqCcCgI) and 'US Open Title' positions are highly correlated. A fill on the US Open NO limit order at 51% will significantly increase total exposure to the injury-recovery thesis and reduce spendable liquidity to ~M$6.",
       "source": "self",
       "ts": 1788695722964
+    },
+    {
+      "text": "[self] [liquidity] Still awaiting resolution of uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, It2tppQhz2. Spendable mana remains M$0.",
+      "source": "self",
+      "ts": 1788714242903
     }
   ],
   "own_actions": [
+    {
+      "ts": 1788714242906,
+      "action": "note_add",
+      "detail": "wrote a standing note: [self] [liquidity] Still awaiting resolution of uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, It2tppQhz2. Spendable mana remains M",
+      "reasoning": "Keeping track of the specific markets I am waiting on to unlock liquidity."
+    },
     {
       "ts": 1788695722967,
       "action": "note_add",
@@ -719,12 +725,6 @@
       "action": "sell",
       "detail": "sold out of \"Will YES have more holders than NO?\" (NO, P/L M$-39)",
       "reasoning": "Low-conviction holder-count market with a marginal edge. Pruning this to align with the strategy of holding only high-conviction structural bets."
-    },
-    {
-      "ts": 1788610721451,
-      "action": "note_add",
-      "detail": "wrote a standing note: [debt] Owe M$50 to cA1JupYR5AR8btHUs2xvkui7jA93 (gift, return when richer).",
-      "reasoning": "Recording the gift debt to ensure it is settled after the pending resolution of closed positions provides the necessary liquidity."
     }
   ],
   "positions": [
@@ -798,7 +798,7 @@
       "profit": -18.3,
       "prob": 0.52,
       "closed": false,
-      "days_to_close": 7.3
+      "days_to_close": 7.2
     },
     {
       "question": "Will the next full gemini model be frontier at coding?",
