@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788718291642,
+  "generated_ms": 1788718683256,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemini-3.5-flash-lite",
+      "active": "gemma-4-31b-it",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 70,
+      "today": 73,
       "cap": 220
     },
     "chat": {
@@ -39,15 +39,30 @@
       "cap": 400
     },
     "deep": {
-      "today": 22,
+      "today": 23,
       "cap": 34
     }
   },
   "dry_run": false,
   "balance": 39.22,
-  "net_worth": 462.35,
+  "net_worth": 467.09,
   "summary": "Net worth is roughly M$467 with spendable liquidity currently at M$0, pending a massive M$768 cash injection from closed positions (uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, It2tppQhz2). Recent activity has focused on tightening portfolio discipline by pruning low-conviction or marginal positions, such as selling out of the speculative holder-count market (\"Will YES have more holders than NO?\") for a M$-38 loss. A standing M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 remains recorded for settlement immediately upon liquidity release.\n\nThe book is concentrated in high-conviction structural, technical, and political bets, alongside sports positions that serve as the primary source of volatility. The core Alcaraz NO positions (covering both \"2+ Grand Slams\" and the \"US Open Title\") are under pressure, trading against us as he advances through the US Open draw (moving up to 52% and 47% respectively, against our 28-31% estimates), but they are held strictly under the asymmetric thesis that a post-injury Grand Slam run carries low probability. Other holdings, such as the robot hand writing bet, maintain strong structural conviction. New positions include a YES bet on an American man reaching the US Open semifinals and a NO bet on Grok 4.7's release date.\n\nMistakes to avoid include holding positions where market conviction overwhelms the structural edge (such as past errors in the Liberals Riksdag and Greens Saxony-Anhalt markets where execution outpaced internal models) and entering speculative, narrative-driven meta-markets without robust structural theses. Calibration remains strong in technical constraints, predictable political thresholds, and binary structural constraints, but weaker in managing short-term directional noise and volatility in sports or multi-variable outcomes.\n\nFuture focus remains on monitoring Alcaraz's deep US Open run as the primary catalyst for the NO thesis, settling the M$50 debt upon cash release, and auditing the resolution of the pending closed markets to restore spendable liquidity.",
   "journal": [
+    {
+      "ts": 1788718683122,
+      "kind": "trade",
+      "text": "Limit order M$29 NO on \"Will Chris Pappas win the 2026 New Hampshire Democratic Primary for Se\" at 90%, my estimate 74% (medium). Because: Chris Pappas remains favored to win the NH Democratic Senate primary thanks to four terms of name recognition and party backing. However, recent UNH polling and local reporting indicate his support has slid as Karishma Manzur gains late progressive momentum. While Pappas is still the most likely nominee (~74%), the market overestimates his margin of safety."
+    },
+    {
+      "ts": 1788718499499,
+      "kind": "screen",
+      "text": "Escalated \"Will Chris Pappas win the 2026 New Hampshire Democratic Primary for Se\" at 90%: quick estimate 45% vs market 90%"
+    },
+    {
+      "ts": 1788718473860,
+      "kind": "move",
+      "text": "\"Will Carlos Alcaraz win at least 2 Grand Slams in 2026?\" moved -4% to 48%. Holding NO, P/L M$-13."
+    },
     {
       "ts": 1788718291441,
       "kind": "agency",
@@ -432,21 +447,6 @@
       "ts": 1788680128732,
       "kind": "analysis",
       "text": "Analysed \"Was the ICE agent who shot Renee Nicole Good injured?\": market 21%, my 23% (medium). No trade, edge 0.025 below minimum 0.04."
-    },
-    {
-      "ts": 1788680043179,
-      "kind": "screen",
-      "text": "Escalated \"Was the ICE agent who shot Renee Nicole Good injured?\" at 21%: quick estimate 45% vs market 21%"
-    },
-    {
-      "ts": 1788677647765,
-      "kind": "analysis",
-      "text": "Analysed \"Will the WTI Crude Oil Spot Price be above $83 on September 10, 2026?\": market 93%, my 93% (high). No trade, edge 0.003 below minimum 0.04."
-    },
-    {
-      "ts": 1788677551394,
-      "kind": "screen",
-      "text": "Escalated \"Will the WTI Crude Oil Spot Price be above $83 on September 10, 2026?\" at 93%: quick estimate 45% vs market 93%"
     }
   ],
   "todos": [
@@ -873,14 +873,26 @@
       "days_to_close": 0.0
     },
     {
+      "question": "Will Chris Pappas win the 2026 New Hampshire Democratic Primary for Senate?",
+      "url": "https://manifold.markets/Jack1/will-chris-pappas-win-the-2026-new",
+      "side": "NO",
+      "shares": 250.3,
+      "invested": 29.0,
+      "value": 33.9,
+      "profit": 4.9,
+      "prob": 0.864,
+      "closed": false,
+      "days_to_close": 2.2
+    },
+    {
       "question": "Will Carlos Alcaraz win the 2026 US Open men's singles title?",
       "url": "https://manifold.markets/Terminator2/will-carlos-alcaraz-win-the-2026-us",
       "side": "NO",
       "shares": 48.0,
       "invested": 27.0,
-      "value": 25.5,
-      "profit": -1.5,
-      "prob": 0.47,
+      "value": 25.0,
+      "profit": -2.0,
+      "prob": 0.48,
       "closed": false,
       "days_to_close": 9.2
     },
@@ -934,6 +946,30 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1788718683120,
+      "kind": "bet",
+      "question": "Will Chris Pappas win the 2026 New Hampshire Democratic Primary for Senate?",
+      "url": "https://manifold.markets/Jack1/will-chris-pappas-win-the-2026-new",
+      "market_prob": 0.9005251031684323,
+      "model_prob": 0.74,
+      "confidence": "medium",
+      "amount": 29.0,
+      "outcome": "NO",
+      "thinking": "Chris Pappas remains favored to win the NH Democratic Senate primary thanks to four terms of name recognition and party backing. However, recent UNH polling and local reporting indicate his support has slid as Karishma Manzur gains late progressive momentum. While Pappas is still the most likely nominee (~74%), the market overestimates his margin of safety.",
+      "uncertainty": "Whether undecided voters in the final days break toward the established front-runner or the surging progressive challenger.",
+      "resolution_risk": "A close result leading to a formal recount or delayed certification.",
+      "evidence_for": [
+        "Chris Pappas is a multi-term U.S. Representative with high statewide name recognition and institutional party backing.",
+        "He has consistently held the front-runner position in the primary.",
+        "August UNH polling showed rival candidates aside from Manzur remain largely unknown to the general electorate."
+      ],
+      "evidence_against": [
+        "Late August UNH polling showed Pappas's support sliding.",
+        "Reporting from late August and early September (Concord Monitor, Jewish Insider) indicates the primary has tightened significantly with progressive challenger Karishma Manzur gaining ground."
+      ],
+      "reason": "edge 0.161, kelly 0.18, decay 1.00, bound by balance reserve"
+    },
     {
       "ts": 1788715670094,
       "kind": "no_trade",
@@ -1272,32 +1308,6 @@
         "No major viral media event or mainstream television push is driving an immediate multi-fold increase in weekly volume."
       ],
       "reason": "edge 0.001 below minimum 0.04"
-    },
-    {
-      "ts": 1788682635810,
-      "kind": "bet",
-      "question": "Will Brett Smiley win the 2026 Democratic primary for Mayor of Providence?",
-      "url": "https://manifold.markets/AdamBraff/will-brett-smiley-win-the-2026-demo",
-      "market_prob": 0.2724498726194275,
-      "model_prob": 0.41,
-      "confidence": "medium",
-      "amount": 35.0,
-      "outcome": "YES",
-      "thinking": "While late August polling commissioned by an opposition-aligned PAC showed Morales leading 48-38, historical incumbent resilience in Providence primaries, massive ad spend, and closed-primary registration deadlines give Smiley a substantial ~41% path to victory.",
-      "uncertainty": "Whether Morales's grassroots mobilization translates into higher turnout among young and progressive voters compared to the reliable older primary electorate that typically backs incumbents.",
-      "resolution_risk": "Official certification delays or close-margin recounts pushing the final certified outcome past the expected date.",
-      "evidence_for": [
-        "Historic incumbency base rate: No Providence mayor has lost a re-election primary since 1974.",
-        "Overwhelming financial and TV advertising advantage ($1.35M cash on hand and >$400k in TV spend vs. ~$119k for Morales).",
-        "August 10 party-disaffiliation and registration deadline prevents late-stage registration surges from non-traditional primary voters.",
-        "July 2026 Concord poll had Smiley leading 42-38."
-      ],
-      "evidence_against": [
-        "August 19-20 poll by Concord showed Morales leading 48% to 38% with 13% undecided.",
-        "Morales has strong ground game, teachers union backing, and national progressive support.",
-        "Housing and rent stabilization veto creates significant progressive grassroots mobilization against Smiley."
-      ],
-      "reason": "edge 0.138, kelly 0.19, decay 1.00, bound by kelly target"
     }
   ]
 }
