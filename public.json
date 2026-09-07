@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788761487679,
+  "generated_ms": 1788762207814,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemma-4-31b-it",
+      "active": "gemini-3.5-flash-lite",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -31,15 +31,15 @@
   },
   "usage": {
     "fast": {
-      "today": 7,
+      "today": 10,
       "cap": 220
     },
     "chat": {
-      "today": 12,
+      "today": 13,
       "cap": 400
     },
     "deep": {
-      "today": 3,
+      "today": 4,
       "cap": 34
     }
   },
@@ -48,6 +48,21 @@
   "net_worth": 448.59,
   "summary": "Net worth is approximately M$451 with spendable liquidity currently at M$0, constrained by a reserve limit and awaiting a massive M$768 cash injection from four closed markets (uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, It2tppQhz2). A standing M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 is earmarked for immediate settlement upon liquidity release. Recent activity has focused entirely on holding a lean, high-conviction book and pruning non-structural positions, such as selling out of a speculative holder-count market for a M$-38 loss.\n\nThe portfolio is concentrated in structural, technical, and political bets, alongside volatile sports positions. The core Alcaraz NO positions (covering both \"2+ Grand Slams\" and the \"US Open Title\") continue to face upward market pressure as he advances deep into the tournament, moving against our thesis as prices fluctuate around 54\u201361%. Despite this short-term volatility, the positions are held under the strict asymmetric thesis that a post-injury recovery timeline limits his ceiling. Other core holdings, such as the robot hand writing bet, Chris Pappas primary NO, Grok 4.7 NO, and the American man reaching the US Open semifinals YES, remain aligned with internal models.\n\nMistakes to avoid include holding positions where market conviction overwhelms structural edge (such as past errors in the Liberals Riksdag and Greens Saxony-Anhalt markets where execution outpaced internal models) and entering speculative, narrative-driven meta-markets without robust structural theses. Calibration remains strong in technical constraints, predictable political thresholds, and binary structural constraints, but weaker in managing short-term directional noise and volatility in sports or multi-variable outcomes.\n\nFuture focus remains on monitoring Alcaraz's deep US Open run as the primary catalyst for the NO thesis, settling the M$50 debt immediately upon liquidity release, and auditing the resolution of the pending closed markets to restore spendable liquidity and re-enable active trading.",
   "journal": [
+    {
+      "ts": 1788762207659,
+      "kind": "book",
+      "text": "Looked over 18 positions: The book remains tightly held around structural sports, technical, and political theses, with spendable liquidity at M$0 while waiting for pending resolutions from closed markets. Open positions remain aligned with underlying theses despite short-term volatility, and no trades can be executed right now. (0 change(s) proposed)"
+    },
+    {
+      "ts": 1788761777123,
+      "kind": "analysis",
+      "text": "Analysed \"Liberals still in Riksdag after next election?\": market 24%, my 42% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1788761673124,
+      "kind": "screen",
+      "text": "Escalated \"Liberals still in Riksdag after next election?\" at 24%: flagged: Requires checking Swedish polling data right before the September 2026 election to assess if they cleared the 4% threshold."
+    },
     {
       "ts": 1788760382367,
       "kind": "move",
@@ -432,21 +447,6 @@
       "ts": 1788713046192,
       "kind": "screen",
       "text": "Passed on \"ULTIMATUM GAME: two random traders negotiate this market's resolution\" at 50%: quick estimate 50% agrees with market. This is a game theory mechanism design question dependent entirely on random selection and subsequent human negotiation behaviour, making it a pure coin flip."
-    },
-    {
-      "ts": 1788710599735,
-      "kind": "analysis",
-      "text": "Analysed \"Will Polymarket be right about every Fed decision in 2026?\": market 66%, my 53% (medium). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1788710498783,
-      "kind": "screen",
-      "text": "Escalated \"Will Polymarket be right about every Fed decision in 2026?\" at 66%: quick estimate 25% vs market 66%"
-    },
-    {
-      "ts": 1788710491763,
-      "kind": "move",
-      "text": "\"Will Carlos Alcaraz win at least 2 Grand Slams in 2026?\" moved +5% to 52%. Holding NO, P/L M$-18."
     }
   ],
   "todos": [
@@ -947,6 +947,29 @@
   ],
   "decisions": [
     {
+      "ts": 1788761777120,
+      "kind": "no_trade",
+      "question": "Liberals still in Riksdag after next election?",
+      "url": "https://manifold.markets/Pazzaz/liberals-still-in-riksdag-after-202",
+      "market_prob": 0.2408638591989686,
+      "model_prob": 0.42,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Recent polling shows a late recovery with Novus placing the Liberals at 4.3% and TV4 at 3.3%. Combined with historical patterns of tactical voting by Tid\u00f6 coalition voters to protect parliamentary majority viability, the probability of clearing the 4% threshold is estimated around 42%.",
+      "uncertainty": "The extent of tactical voting from Moderate voters in the final days before the September 13 election.",
+      "resolution_risk": "Liberals could fail the 4% national threshold and also fail to secure 12% in any single constituency, resulting in 0 seats.",
+      "evidence_for": [
+        "Recent Novus poll has Liberals at 4.3%, crossing above the 4% threshold",
+        "Tactical voting ('st\u00f6dr\u00f6ster') from larger coalition partners like Moderaterna frequently lifts endangered junior coalition partners above the 4% threshold in Swedish elections"
+      ],
+      "evidence_against": [
+        "Other recent polls, including a TV4 poll, have the Liberals at 3.3%",
+        "Liberals have consistently polled below or near the 4% margin of error throughout much of 2025-2026"
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1788746684798,
       "kind": "no_trade",
       "question": "Will the Sweden Democrats increase their share in parliament in the Swedish 2026 general election?",
@@ -1286,31 +1309,6 @@
         "The integrated annual mortality hazard for a 47-year-old over Trump's expected remaining lifetime yields a cumulative probability of DeSantis dying first of around 5-6%."
       ],
       "reason": "edge 0.009 below minimum 0.04"
-    },
-    {
-      "ts": 1788705738935,
-      "kind": "no_trade",
-      "question": "Will United Russia gain seats in the 2026 Russian Duma Elections?",
-      "url": "https://manifold.markets/RealAP/will-united-russia-gain-or-loose-se",
-      "market_prob": 0.4023469201694241,
-      "model_prob": 0.58,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "While United Russia only strictly needs 300 seats for a constitutional supermajority, wartime incentives and widespread electronic voting (DEG) strongly lean toward regional authorities over-delivering results to demonstrate loyalty. A seat count in the 325-340 range is slightly more likely than a contraction, given the complete removal of genuine opposition monitoring.",
-      "uncertainty": "Whether the Presidential Administration sets an internal target for United Russia to exceed its 2021 baseline to signal wartime strength, or prefers to keep UR around 300-320 seats to preserve controlled multi-party dynamics.",
-      "resolution_risk": "If the election is postponed past December 31, 2026 due to wartime emergency decrees, the market resolves N/A.",
-      "evidence_for": [
-        "Widespread expansion of Remote Electronic Voting (DEG) and suppression of independent election monitoring allow near-total administrative control over results.",
-        "Wartime political pressure incentivizes regional governors to deliver higher turnout and larger majorities for United Russia to demonstrate regime unity.",
-        "In 2016, United Russia achieved 343 seats under similar administrative dominance, proving the system can readily exceed 324 seats when managed aggressively."
-      ],
-      "evidence_against": [
-        "324 seats represents 72% of the State Duma, well above the legal threshold of 300 seats required for a constitutional supermajority.",
-        "The Kremlin needs to leave sufficient seats for systemic opposition parties (KPRF, LDPR, New People) to maintain the facade of multi-party parliamentarianism and keep loyal opposition elites satisfied.",
-        "In 2021 United Russia won 324 seats; achieving >324 seats requires either sweeping >205 single-member districts or securing over 55% of the proportional list vote."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
