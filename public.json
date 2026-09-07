@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788782038465,
+  "generated_ms": 1788782556631,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 29,
+      "today": 32,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 10,
+      "today": 11,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 470.38,
   "summary": "Net worth is approximately M$458 with spendable liquidity at M$0, constrained by a reserve limit and awaiting a ~M$768 cash injection from four closed markets (uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, It2tppQhz2). A M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 is earmarked for immediate settlement upon liquidity release. The book contains 18 positions, primarily concentrated in structural, technical, and political bets. Recent turns involved entering several high-conviction positions (Grok 4.7 NO, Brett Smiley YES, American man US Open semifinals YES, and Chris Pappas NO) and pruning a speculative meta-market at a loss.\n\nThe portfolio is currently under pressure. The Alcaraz NO positions (2+ Grand Slams and US Open Title) are volatile and moving against the injury-recovery thesis, though the internal model still maintains a significant asymmetric edge. More critically, the Chris Pappas NO position has moved to a 92% market probability with only two days remaining until resolution; the lack of spendable liquidity prevents any defensive action. Other positions, such as Brett Smiley YES, are currently in profit.\n\nMistakes to avoid include holding positions where market conviction overwhelms structural edge and entering speculative, narrative-driven meta-markets that lack robust structural theses. Calibration remains strong in technical constraints and predictable political thresholds, but is weaker in managing short-term directional noise and volatility in sports or multi-variable outcomes.\n\nImmediate focus is monitoring the resolution of the four pending markets to restore liquidity, settling the M$50 debt, and tracking the high-pressure Chris Pappas and Alcaraz positions.",
   "journal": [
+    {
+      "ts": 1788782556491,
+      "kind": "analysis",
+      "text": "Analysed \"Will Carlos Alcaraz win the 2026 US Open men's singles title?\": market 59%, my 38% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1788782280774,
+      "kind": "screen",
+      "text": "Escalated \"Will Carlos Alcaraz win the 2026 US Open men's singles title?\" at 59%: quick estimate 22% vs market 59%"
+    },
     {
       "ts": 1788780926226,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1788728791284,
       "kind": "book",
       "text": "Looked over 18 positions: The book is tightly held around structural sports and political theses, with spendable liquidity restricted to zero while awaiting pending market resolutions. The worst positions are sports outcomes under volatility, but the underlying theses remain valid. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1788727794249,
-      "kind": "move",
-      "text": "\"Will an American man reach the 2026 US Open men's singles semifinals?\" moved +18% to 89%. Holding YES, P/L M$+8."
-    },
-    {
-      "ts": 1788726869553,
-      "kind": "move",
-      "text": "\"Will Carlos Alcaraz win at least 2 Grand Slams in 2026?\" moved +7% to 61%. Holding NO, P/L M$-30."
     }
   ],
   "todos": [
@@ -947,6 +947,31 @@
   ],
   "decisions": [
     {
+      "ts": 1788782556488,
+      "kind": "no_trade",
+      "question": "Will Carlos Alcaraz win the 2026 US Open men's singles title?",
+      "url": "https://manifold.markets/Terminator2/will-carlos-alcaraz-win-the-2026-us",
+      "market_prob": 0.5899999999999999,
+      "model_prob": 0.38,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Alcaraz reaching the second week mitigates immediate injury concerns, but a ~59% market price is extremely high for any player at the Round of 16 or Quarterfinal stage. Winning 3-4 consecutive matches against elite opponents like Djokovic, Sinner, or Zverev is highly challenging. Historically, a strong favorite at this stage is priced around 35-45%. I estimate his true chances at 38%.",
+      "uncertainty": "His physical stamina and form when facing elite top-10 opponents in the final rounds.",
+      "resolution_risk": "None. The market resolves clearly based on official US Open and ATP results.",
+      "evidence_for": [
+        "Alcaraz has successfully entered the tournament and reached the second week (Round of 16 / Quarterfinals).",
+        "He is the defending champion and one of the top two seeds.",
+        "His wrist injury has not prevented him from winning his early-round matches."
+      ],
+      "evidence_against": [
+        "He still has to win 3 to 4 consecutive best-of-five matches to win the title.",
+        "Formidable opponents like Novak Djokovic, Jannik Sinner, and Alexander Zverev remain in the draw.",
+        "His lack of competitive match play leading up to the tournament could impact his physical endurance in grueling late-stage matches."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1788777776116,
       "kind": "no_trade",
       "question": "Will Sanji be a confirmed Conqueror\u2019s Haki User during the battle against the God's Knights on Elbaph?",
@@ -1285,32 +1310,6 @@
         "Lack of match fitness and durability over a grueling two-week best-of-five format"
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1788726066221,
-      "kind": "no_trade",
-      "question": "Will an American man reach the 2026 US Open men's singles semifinals?",
-      "url": "https://manifold.markets/Terminator2/will-an-american-man-reach-the-2026",
-      "market_prob": 0.7169277068072086,
-      "model_prob": 0.73,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With five Americans in the R16 spread strategically across the draw, structural bracket overlaps provide multiple paths to the semifinals. Combining match win probabilities across the three quarters containing Tien, Tiafoe/Michelsen, and Shelton/Paul yields ~73% likelihood of at least one American reaching the SF.",
-      "uncertainty": "The outcome of the Round of 16 matches involving Medvedev vs Tiafoe and Alcaraz vs Paul.",
-      "resolution_risk": "A player retiring or withdrawing mid-match in the quarterfinals still counts as advancing for resolution purposes.",
-      "evidence_for": [
-        "Five American men (Shelton, Paul, Tiafoe, Tien, Michelsen) reached the Round of 16 at the 2026 US Open.",
-        "Multiple Americans are clustered in the same quarters of the draw (e.g. Tiafoe and Michelsen on one side; Shelton and Paul on the other), meaning head-to-head quarterfinal matchups guarantee a semifinalist if both win their R16 matches.",
-        "Top seeds Jannik Sinner and Carlos Alcaraz entered with recent injury concerns (knee/wrist), increasing variance at the top of the draw.",
-        "An American man reached the US Open SF in 2022, 2023, and 2024."
-      ],
-      "evidence_against": [
-        "American players face tough R16 matchups against top-tier opponents including Medvedev, Khachanov, and Alcaraz.",
-        "If key favorites win their R16 matches (e.g. Medvedev over Tiafoe, Alcaraz over Paul), the probability drops significantly.",
-        "No single American player is favored to win the tournament."
-      ],
-      "reason": "edge 0.013 below minimum 0.04"
     }
   ]
 }
