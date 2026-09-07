@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788768185346,
+  "generated_ms": 1788768492002,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 18,
+      "today": 20,
       "cap": 220
     },
     "chat": {
@@ -39,15 +39,30 @@
       "cap": 400
     },
     "deep": {
-      "today": 7,
+      "today": 8,
       "cap": 34
     }
   },
   "dry_run": false,
   "balance": 0.0,
-  "net_worth": 471.16,
+  "net_worth": 457.83,
   "summary": "Net worth is approximately M$451 with spendable liquidity currently at M$0, constrained by a reserve limit and awaiting a massive M$768 cash injection from four closed markets (uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, It2tppQhz2). A standing M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 is earmarked for immediate settlement upon liquidity release. Recent activity has focused entirely on holding a lean, high-conviction book and pruning non-structural positions, such as selling out of a speculative holder-count market for a M$-38 loss.\n\nThe portfolio is concentrated in structural, technical, and political bets, alongside volatile sports positions. The core Alcaraz NO positions (covering both \"2+ Grand Slams\" and the \"US Open Title\") continue to face upward market pressure as he advances deep into the tournament, moving against our thesis as prices fluctuate around 54\u201361%. Despite this short-term volatility, the positions are held under the strict asymmetric thesis that a post-injury recovery timeline limits his ceiling. Other core holdings, such as the robot hand writing bet, Chris Pappas primary NO, Grok 4.7 NO, and the American man reaching the US Open semifinals YES, remain aligned with internal models.\n\nMistakes to avoid include holding positions where market conviction overwhelms structural edge (such as past errors in the Liberals Riksdag and Greens Saxony-Anhalt markets where execution outpaced internal models) and entering speculative, narrative-driven meta-markets without robust structural theses. Calibration remains strong in technical constraints, predictable political thresholds, and binary structural constraints, but weaker in managing short-term directional noise and volatility in sports or multi-variable outcomes.\n\nFuture focus remains on monitoring Alcaraz's deep US Open run as the primary catalyst for the NO thesis, settling the M$50 debt immediately upon liquidity release, and auditing the resolution of the pending closed markets to restore spendable liquidity and re-enable active trading.",
   "journal": [
+    {
+      "ts": 1788768489725,
+      "kind": "analysis",
+      "text": "Analysed \"Will Brett Smiley win the 2026 Democratic primary for Mayor of Provide\": market 32%, my 42% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1788768367061,
+      "kind": "move",
+      "text": "\"Will Brett Smiley win the 2026 Democratic primary for Mayor of Provide\" moved -11% to 32%. Holding YES, P/L M$+5."
+    },
+    {
+      "ts": 1788768367061,
+      "kind": "portfolio",
+      "text": "Net worth down from M$471 to M$458, balance M$0."
+    },
     {
       "ts": 1788767081182,
       "kind": "analysis",
@@ -432,21 +447,6 @@
       "ts": 1788718499499,
       "kind": "screen",
       "text": "Escalated \"Will Chris Pappas win the 2026 New Hampshire Democratic Primary for Se\" at 90%: quick estimate 45% vs market 90%"
-    },
-    {
-      "ts": 1788718473860,
-      "kind": "move",
-      "text": "\"Will Carlos Alcaraz win at least 2 Grand Slams in 2026?\" moved -4% to 48%. Holding NO, P/L M$-13."
-    },
-    {
-      "ts": 1788718291441,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] [liquidity] Spendable balance is M$29. Awaiting resolution of uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, and It2tppQhz2 . Because: Keeping track of spendable liquidity constraints and the mandatory debt repayment queued for the next liquidity wave."
-    },
-    {
-      "ts": 1788718291315,
-      "kind": "agency",
-      "text": "Own turn: My spendable liquidity is currently very low (M$29 after reserve), and I am waiting on the resolution of several large closed markets to unlock ~M$768. My existing positions are aligned with their structural and probabilistic theses, and no positions require immediate cutting. Since everything is in a holding pattern awaiting liquidity release, I will record a note confirming my current focus on pending resolutions and debt repayment."
     }
   ],
   "todos": [
@@ -854,9 +854,9 @@
       "side": "YES",
       "shares": 123.4,
       "invested": 35.0,
-      "value": 53.1,
-      "profit": 18.1,
-      "prob": 0.43,
+      "value": 39.7,
+      "profit": 4.7,
+      "prob": 0.322,
       "closed": false,
       "days_to_close": 4.8
     },
@@ -946,6 +946,33 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1788768489722,
+      "kind": "no_trade",
+      "question": "Will Brett Smiley win the 2026 Democratic primary for Mayor of Providence?",
+      "url": "https://manifold.markets/AdamBraff/will-brett-smiley-win-the-2026-demo",
+      "market_prob": 0.3219176225951553,
+      "model_prob": 0.42,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Morales holds a consistent lead in polling (48-38 in July), but Smiley's massive cash dominance, $400k+ television campaign, and Providence's 50-year streak of unseated incumbents make this a tight race. I estimate Smiley at 42%.",
+      "uncertainty": "Whether Smiley's massive broadcast ad dominance and municipal machine turnout can erase Morales's double-digit polling lead.",
+      "resolution_risk": "Close vote margins leading to recanvassing or official certification delays past primary night.",
+      "evidence_for": [
+        "Providence incumbent mayors have not lost a re-election primary since 1974.",
+        "Smiley holds a massive financial advantage with over $1.35M in cash on hand and $411k spent on TV ads compared to almost zero TV spend from Morales.",
+        "Key endorsements from Building Trades and major municipal stakeholders.",
+        "Aug 10 voter disaffiliation deadline capped late progressive party-switching surge."
+      ],
+      "evidence_against": [
+        "Concord Public Opinion Partners poll (July 19-20) shows Morales leading 48% to 38%.",
+        "Earlier March Data for Progress poll also had Morales leading 45% to 34%.",
+        "Morales leads dramatically in individual donors (3,241 vs 1,231) and holds key labor backing like the Providence Teachers Union.",
+        "Smiley's veto of rent stabilization created a central vulnerable issue for progressive mobilization."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1788767081179,
       "kind": "no_trade",
@@ -1285,30 +1312,6 @@
         "Smash Bros reveals are traditionally saved for general Directs, E3-style events, or standalone showcases rather than specific franchise anniversary streams."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1788718683120,
-      "kind": "bet",
-      "question": "Will Chris Pappas win the 2026 New Hampshire Democratic Primary for Senate?",
-      "url": "https://manifold.markets/Jack1/will-chris-pappas-win-the-2026-new",
-      "market_prob": 0.9005251031684323,
-      "model_prob": 0.74,
-      "confidence": "medium",
-      "amount": 29.0,
-      "outcome": "NO",
-      "thinking": "Chris Pappas remains favored to win the NH Democratic Senate primary thanks to four terms of name recognition and party backing. However, recent UNH polling and local reporting indicate his support has slid as Karishma Manzur gains late progressive momentum. While Pappas is still the most likely nominee (~74%), the market overestimates his margin of safety.",
-      "uncertainty": "Whether undecided voters in the final days break toward the established front-runner or the surging progressive challenger.",
-      "resolution_risk": "A close result leading to a formal recount or delayed certification.",
-      "evidence_for": [
-        "Chris Pappas is a multi-term U.S. Representative with high statewide name recognition and institutional party backing.",
-        "He has consistently held the front-runner position in the primary.",
-        "August UNH polling showed rival candidates aside from Manzur remain largely unknown to the general electorate."
-      ],
-      "evidence_against": [
-        "Late August UNH polling showed Pappas's support sliding.",
-        "Reporting from late August and early September (Concord Monitor, Jewish Insider) indicates the primary has tightened significantly with progressive challenger Karishma Manzur gaining ground."
-      ],
-      "reason": "edge 0.161, kelly 0.18, decay 1.00, bound by balance reserve"
     }
   ]
 }
