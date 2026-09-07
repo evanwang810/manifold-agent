@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788797243211,
+  "generated_ms": 1788797677191,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 48,
+      "today": 52,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 14,
+      "today": 15,
       "cap": 34
     }
   },
@@ -48,6 +48,21 @@
   "net_worth": 462.04,
   "summary": "Net worth is approximately M$458 with spendable liquidity at M$0, constrained by a reserve limit and awaiting a ~M$768 cash injection from four closed markets (uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, It2tppQhz2). A M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 is earmarked for immediate settlement upon liquidity release. The book contains 18 positions, primarily concentrated in structural, technical, and political bets. Recent turns involved entering several high-conviction positions (Grok 4.7 NO, Brett Smiley YES, American man US Open semifinals YES, and Chris Pappas NO) and pruning a speculative meta-market at a loss.\n\nThe portfolio is currently under pressure. The Alcaraz NO positions (2+ Grand Slams and US Open Title) are volatile and moving against the injury-recovery thesis, though the internal model still maintains a significant asymmetric edge. More critically, the Chris Pappas NO position has moved to a 92% market probability with only two days remaining until resolution; the lack of spendable liquidity prevents any defensive action. Other positions, such as Brett Smiley YES, are currently in profit.\n\nMistakes to avoid include holding positions where market conviction overwhelms structural edge and entering speculative, narrative-driven meta-markets that lack robust structural theses. Calibration remains strong in technical constraints and predictable political thresholds, but is weaker in managing short-term directional noise and volatility in sports or multi-variable outcomes.\n\nImmediate focus is monitoring the resolution of the four pending markets to restore liquidity, settling the M$50 debt, and tracking the high-pressure Chris Pappas and Alcaraz positions.",
   "journal": [
+    {
+      "ts": 1788797677088,
+      "kind": "analysis",
+      "text": "Analysed \"H1B demand persists despite $100k fee?\": market 71%, my 91% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1788797449376,
+      "kind": "screen",
+      "text": "Escalated \"H1B demand persists despite $100k fee?\" at 71%: quick estimate 95% vs market 71%"
+    },
+    {
+      "ts": 1788797429419,
+      "kind": "screen",
+      "text": "Passed on \"Will Polymarket be right about every Fed decision in 2026?\" at 66%: quick estimate 55% agrees with market. This is a compound probability across multiple Fed meetings where Polymarket is usually efficient, making it a coin flip that wastes model quota."
+    },
     {
       "ts": 1788796500174,
       "kind": "move",
@@ -432,21 +447,6 @@
       "ts": 1788747725516,
       "kind": "agency",
       "text": "Own turn, wrote a standing note: [self] [liquidity] Still waiting on resolution of uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, It2tppQhz2. Total expected inflow:. Because: Consolidating the liquidity bottleneck and the specific expected inflow to keep the target amount top-of-mind."
-    },
-    {
-      "ts": 1788747725510,
-      "kind": "agency",
-      "text": "Own turn: Liquidity remains at M$0. I am still waiting for the resolution of the four closed markets (uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, It2tppQhz2) to unlock approximately M$768. The Alcaraz positions (gtcRqCcCgI and CAygP5nsSS) are volatile and moving against my injury-recovery thesis, but the edge remains. I have no ability to trade or move mana until the cash injection arrives. I will continue to monitor the status of these resolutions."
-    },
-    {
-      "ts": 1788747140616,
-      "kind": "book",
-      "text": "Looked over 18 positions: The book is currently liquidity-constrained, awaiting ~M$768 from closed markets. Open positions remain aligned with structural theses. The Alcaraz NO positions are volatile and moving against the thesis, but the injury-recovery rationale holds with a significant edge. No trades are possible or warranted until liquidity is restored. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1788746684801,
-      "kind": "analysis",
-      "text": "Analysed \"Will the Sweden Democrats increase their share in parliament in the Sw\": market 37%, my 43% (medium). No trade, size floored to zero by balance reserve."
     }
   ],
   "todos": [
@@ -613,11 +613,6 @@
       "ts": 1788655864777
     },
     {
-      "text": "[self] [liquidity] Still liquidity-constrained (M$0). Monitoring Chris Pappas (I2E9SREssp) NO position; market at 92% with 2 days to close. No action possible without resolution of pending markets.",
-      "source": "self",
-      "ts": 1788762459655
-    },
-    {
       "text": "[self] [liquidity] Still liquidity-constrained (M$0). Monitoring Chris Pappas (I2E9SREssp) NO position; market at 92% with 2 days to close. Awaiting resolution of closed markets to restore spendable mana.",
       "source": "self",
       "ts": 1788770030215
@@ -651,6 +646,11 @@
       "text": "[self] [liquidity] Still liquidity-constrained (M$0). Awaiting resolution of closed markets to restore ~M$768. Monitoring Chris Pappas (I2E9SREssp) NO at 87% (1d to close).",
       "source": "self",
       "ts": 1788795734985
+    },
+    {
+      "text": "In markets with explicit N/A clauses, if one outcome becomes factually impossible, the fair price for the remaining non-N/A outcome approaches 1.0 because N/A returns capital.",
+      "source": "self",
+      "ts": 1788797676696
     }
   ],
   "own_actions": [
@@ -942,10 +942,33 @@
       "profit": -0.0,
       "prob": 0.321,
       "closed": false,
-      "days_to_close": 1.5
+      "days_to_close": 1.4
     }
   ],
   "decisions": [
+    {
+      "ts": 1788797677085,
+      "kind": "no_trade",
+      "question": "H1B demand persists despite $100k fee?",
+      "url": "https://manifold.markets/GustavoMafra/h1b-demand-persists-despite-100k-fe",
+      "market_prob": 0.7074005102991744,
+      "model_prob": 0.91,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "USCIS confirmed on July 17, 2026 that the FY2027 85,000 cap was fully reached, ruling out a NO outcome. If the $100k fee was not in effect, criteria state it resolves N/A (refunding stakes). Accounting for N/A mechanics where P(NO) ~ 0, YES is the dominant side.",
+      "uncertainty": "Whether the market creator strictly enforces the N/A resolution clause for fee non-enforcement as written.",
+      "resolution_risk": "Risk of creator error or ambiguity regarding whether fee litigation counted as 'in effect' during the filing window.",
+      "evidence_for": [
+        "USCIS officially announced on July 17, 2026 that the 85,000 FY2027 H-1B cap was fully allocated in the initial selection round.",
+        "The criteria for a NO resolution (fewer than 85,000 applications filed and cap not reached) is factually ruled out.",
+        "Under Manifold mechanics, N/A resolutions refund capital, so when P(NO) is zero, the expected value of YES remains positive at any price below 1.0."
+      ],
+      "evidence_against": [
+        "Federal court rulings vacated or delayed the $100k fee prior to the FY2027 filing cycle, making an N/A resolution high probability."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1788792668072,
       "kind": "no_trade",
@@ -1284,31 +1307,6 @@
         "FIDE's published initial team line-up for India lists Arjun Erigaisi on Board 1 and Gukesh on Board 4.",
         "Gukesh's rating (2703) is fourth on the team behind Erigaisi (2759), Praggnanandhaa (2750), and Sarin (2718).",
         "Indian team management under Viswanathan Anand emphasizes pragmatic board optimization and recent form over title rank."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1788736732400,
-      "kind": "no_trade",
-      "question": "Will the winner of the 2026 Vuelta a Espa\u00f1a be Roglic or Pogacar?",
-      "url": "https://manifold.markets/Eliza/will-the-winner-of-the-2026-vuelta",
-      "market_prob": 0.13999999999999999,
-      "model_prob": 0.36,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With Pogacar abandoning on Stage 8, this market is purely a bet on Roglic. Sitting ~1:18 behind Mas with a 32km flat TT remaining on Stage 18 gives Roglic a strong mathematical path to overhaul the deficit, putting his GC win probability around 36%.",
-      "uncertainty": "Whether Roglic can limit time losses in the remaining high-mountain stages before making up the deficit in the Stage 18 time trial.",
-      "resolution_risk": "None identified; resolution cleanly tracks official GC podium/announcement.",
-      "evidence_for": [
-        "Roglic is sitting in 2nd place on GC, roughly 1:18 behind race leader Enric Mas.",
-        "A 32km individual time trial on Stage 18 heavily favors Roglic, an elite time trialist, where he can realistically gain 1 to 2 minutes over pure climbers like Mas.",
-        "Roglic is a four-time Vuelta winner with extensive experience pacing third-week Grand Tour comebacks."
-      ],
-      "evidence_against": [
-        "Pogacar has already abandoned the race due to a crash on Stage 8, so YES relies entirely on Roglic.",
-        "Roglic entered the Vuelta with questionable form following a pre-race training crash and could lose additional time in high-mountain stages.",
-        "Enric Mas and other GC contenders have defensive tactics and mountain stages to expand their lead before the Stage 18 TT."
       ],
       "reason": "size floored to zero by balance reserve"
     }
