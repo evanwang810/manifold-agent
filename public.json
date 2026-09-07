@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788784508748,
+  "generated_ms": 1788785017917,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemma-4-26b-a4b-it",
+      "active": "gemma-4-31b-it",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 32,
+      "today": 35,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 11,
+      "today": 12,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 470.38,
   "summary": "Net worth is approximately M$458 with spendable liquidity at M$0, constrained by a reserve limit and awaiting a ~M$768 cash injection from four closed markets (uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, It2tppQhz2). A M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 is earmarked for immediate settlement upon liquidity release. The book contains 18 positions, primarily concentrated in structural, technical, and political bets. Recent turns involved entering several high-conviction positions (Grok 4.7 NO, Brett Smiley YES, American man US Open semifinals YES, and Chris Pappas NO) and pruning a speculative meta-market at a loss.\n\nThe portfolio is currently under pressure. The Alcaraz NO positions (2+ Grand Slams and US Open Title) are volatile and moving against the injury-recovery thesis, though the internal model still maintains a significant asymmetric edge. More critically, the Chris Pappas NO position has moved to a 92% market probability with only two days remaining until resolution; the lack of spendable liquidity prevents any defensive action. Other positions, such as Brett Smiley YES, are currently in profit.\n\nMistakes to avoid include holding positions where market conviction overwhelms structural edge and entering speculative, narrative-driven meta-markets that lack robust structural theses. Calibration remains strong in technical constraints and predictable political thresholds, but is weaker in managing short-term directional noise and volatility in sports or multi-variable outcomes.\n\nImmediate focus is monitoring the resolution of the four pending markets to restore liquidity, settling the M$50 debt, and tracking the high-pressure Chris Pappas and Alcaraz positions.",
   "journal": [
+    {
+      "ts": 1788785017790,
+      "kind": "analysis",
+      "text": "Analysed \"Will YES have more holders than NO?\": market 74%, my 38% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1788784723003,
+      "kind": "screen",
+      "text": "Escalated \"Will YES have more holders than NO?\" at 74%: quick estimate 45% vs market 74%"
+    },
     {
       "ts": 1788784508533,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1788731499272,
       "kind": "screen",
       "text": "Escalated \"\ud83c\uddfa\ud83c\uddf8 Will the Fed raise interest rates in September 2026?\" at 48%: quick estimate 15% vs market 48%"
-    },
-    {
-      "ts": 1788729079599,
-      "kind": "agency",
-      "text": "Own turn, retired a standing note: [self] [self] [liquidity] Spendable balance is M$29. Awaiting resolution of uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, and It2t. Because: This note is outdated; spendable balance is now M$0."
-    },
-    {
-      "ts": 1788729079595,
-      "kind": "agency",
-      "text": "Own turn: Spendable liquidity is zero. I am waiting for the resolution of four closed markets to unlock significant mana. My current positions are aligned with my theses, particularly the Alcaraz injury-recovery bet, despite recent price volatility. I will prune outdated liquidity notes to keep my standing notes accurate."
     }
   ],
   "todos": [
@@ -947,6 +947,30 @@
   ],
   "decisions": [
     {
+      "ts": 1788785017787,
+      "kind": "no_trade",
+      "question": "Will YES have more holders than NO?",
+      "url": "https://manifold.markets/senso/will-yes-have-more-holders-than-no",
+      "market_prob": 0.7421478064032302,
+      "model_prob": 0.38,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "YES needs strictly more holders than NO, but ties resolve to NO and cheap last-minute NO buys routinely tip these holder-count meta markets. Additionally, flagged alt accounts holding YES risk disqualification.",
+      "uncertainty": "Whether NO snipers coordinate before market close and how moderators resolve the flagged alt accounts.",
+      "resolution_risk": "Disagreements over how moderator de-duplication of alt accounts affects the official list on the holders tab at resolution.",
+      "evidence_for": [
+        "Meta markets often attract casual YES buyers during initial creation and early trading."
+      ],
+      "evidence_against": [
+        "Resolution criteria state that ties resolve to NO, giving NO a structural edge.",
+        "Holder markets are vulnerable to last-minute NO sniping where traders buy M$1 NO positions cheaply to flip the count.",
+        "Three YES positions are tied to alleged alt accounts ('Evan Wang') currently under moderator review for removal/disqualification.",
+        "Commenters are actively discussing flipping positions to NO."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1788782556488,
       "kind": "no_trade",
       "question": "Will Carlos Alcaraz win the 2026 US Open men's singles title?",
@@ -1283,31 +1307,6 @@
         "The late August jobs report showed the U.S. economy lost jobs in July, raising labor market softness concerns.",
         "Flipping four additional FOMC members to achieve a majority for a hike is unlikely without Fed leadership backing.",
         "Central banks rarely initiate rate hikes during softening employment data unless inflation exhibits an acute resurgence."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1788726502805,
-      "kind": "no_trade",
-      "question": "Will Carlos Alcaraz win the 2026 US Open men's singles title?",
-      "url": "https://manifold.markets/JasonMendoza2008/will-carlos-alcaraz-win-the-2026-us-OPRhzSU265",
-      "market_prob": 0.5611870406812395,
-      "model_prob": 0.36,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "While the draw has opened up, a 56% market price is too high for Alcaraz given his return from a 139-day right wrist injury layoff. Winning a Grand Slam requires immense physical durability over seven best-of-five matches, and his lack of match fitness makes him highly vulnerable in the later rounds.",
-      "uncertainty": "Alcaraz's physical durability and wrist health as he progresses deeper into the best-of-five tournament format.",
-      "resolution_risk": "None, standard tournament outcome.",
-      "evidence_for": [
-        "Defending champion and No. 2 seed",
-        "Won his opening match against Roman Safiullin",
-        "The men's singles draw has opened up with unexpected events and upsets"
-      ],
-      "evidence_against": [
-        "Returning from a 139-day right wrist injury layoff",
-        "Missed the previous two Grand Slams of 2026 due to this injury",
-        "Lack of match fitness and durability over a grueling two-week best-of-five format"
       ],
       "reason": "size floored to zero by balance reserve"
     }
