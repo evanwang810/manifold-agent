@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788780546275,
+  "generated_ms": 1788780926402,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemini-3.5-flash-lite",
+      "active": "gemma-4-26b-a4b-it",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -35,7 +35,7 @@
       "cap": 220
     },
     "chat": {
-      "today": 23,
+      "today": 24,
       "cap": 400
     },
     "deep": {
@@ -48,6 +48,16 @@
   "net_worth": 470.67,
   "summary": "Net worth is approximately M$458 with spendable liquidity at M$0, constrained by a reserve limit and awaiting a ~M$768 cash injection from four closed markets (uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, It2tppQhz2). A M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 is earmarked for immediate settlement upon liquidity release. The book contains 18 positions, primarily concentrated in structural, technical, and political bets. Recent turns involved entering several high-conviction positions (Grok 4.7 NO, Brett Smiley YES, American man US Open semifinals YES, and Chris Pappas NO) and pruning a speculative meta-market at a loss.\n\nThe portfolio is currently under pressure. The Alcaraz NO positions (2+ Grand Slams and US Open Title) are volatile and moving against the injury-recovery thesis, though the internal model still maintains a significant asymmetric edge. More critically, the Chris Pappas NO position has moved to a 92% market probability with only two days remaining until resolution; the lack of spendable liquidity prevents any defensive action. Other positions, such as Brett Smiley YES, are currently in profit.\n\nMistakes to avoid include holding positions where market conviction overwhelms structural edge and entering speculative, narrative-driven meta-markets that lack robust structural theses. Calibration remains strong in technical constraints and predictable political thresholds, but is weaker in managing short-term directional noise and volatility in sports or multi-variable outcomes.\n\nImmediate focus is monitoring the resolution of the four pending markets to restore liquidity, settling the M$50 debt, and tracking the high-pressure Chris Pappas and Alcaraz positions.",
   "journal": [
+    {
+      "ts": 1788780926226,
+      "kind": "agency",
+      "text": "Own turn, wrote a standing note: [self] [liquidity] Still liquidity-constrained (M$0). Awaiting resolution of closed markets (uAPRyuqyq0, ZC6gdANScC, Ec0. Because: Consolidating the current liquidity bottleneck and the specific high-pressure positions being monitored."
+    },
+    {
+      "ts": 1788780926220,
+      "kind": "agency",
+      "text": "Own turn: Liquidity remains at M$0. I am still waiting for the resolution of the four closed markets to unlock ~M$768. The Chris Pappas NO position (I2E9SREssp) is at 92% with 2 days to close, which is highly concerning, but I have no spendable mana to act. I am monitoring the book for any resolution or price movements. The Alcaraz positions are also volatile but still within my thesis."
+    },
     {
       "ts": 1788780546082,
       "kind": "book",
@@ -437,16 +447,6 @@
       "ts": 1788726869553,
       "kind": "move",
       "text": "\"Will Carlos Alcaraz win at least 2 Grand Slams in 2026?\" moved +7% to 61%. Holding NO, P/L M$-30."
-    },
-    {
-      "ts": 1788726869553,
-      "kind": "portfolio",
-      "text": "Net worth down from M$460 to M$451, balance M$0."
-    },
-    {
-      "ts": 1788726685088,
-      "kind": "move",
-      "text": "\"Will Carlos Alcaraz win at least 2 Grand Slams in 2026?\" moved -6% to 54%. Holding NO, P/L M$-21."
     }
   ],
   "todos": [
@@ -613,11 +613,6 @@
       "ts": 1788655864777
     },
     {
-      "text": "Liquidity Strategy: Awaiting resolution of closed markets (uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, It2tppQhz2) to unlock ~M$768. Priority upon arrival: 1. Settle M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93. 2. Re-evaluate high-edge targets (Ukraine, Mohamed Salah, etc.).",
-      "source": "self",
-      "ts": 1788680501886
-    },
-    {
       "text": "[self] [market] Alcaraz 2+ Slams (gtcRqCcCgI): Holding NO. Thesis: Wrist injury limits ceiling at US Open. If he dominates early rounds, edge compresses. Current price (51%) vs estimate (22%) remains a strong asymmetric bet.",
       "source": "self",
       "ts": 1788691751996
@@ -651,9 +646,20 @@
       "text": "[self] [liquidity] Still liquidity-constrained (M$0). Awaiting resolution of closed markets to restore spendable mana. Monitoring Chris Pappas (I2E9SREssp) NO position (92%) and Alcaraz positions for volatility.",
       "source": "self",
       "ts": 1788777177015
+    },
+    {
+      "text": "[self] [liquidity] Still liquidity-constrained (M$0). Awaiting resolution of closed markets (uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, It2tppQhz2) to restore spendable mana. Monitoring Chris Pappas (I2E9SREssp) NO position (92%) and Alcaraz (gtcRqCcCgI, CAygP5nsSS) for volatility.",
+      "source": "self",
+      "ts": 1788780926220
     }
   ],
   "own_actions": [
+    {
+      "ts": 1788780926223,
+      "action": "note_add",
+      "detail": "wrote a standing note: [self] [liquidity] Still liquidity-constrained (M$0). Awaiting resolution of closed markets (uAPRyuqyq0, ZC6gdANScC, Ec0",
+      "reasoning": "Consolidating the current liquidity bottleneck and the specific high-pressure positions being monitored."
+    },
     {
       "ts": 1788777177018,
       "action": "note_add",
@@ -719,12 +725,6 @@
       "action": "sell",
       "detail": "sold out of \"Will YES have more holders than NO?\" (NO, P/L M$-38)",
       "reasoning": "Speculative meta-market on holder counts. It lacks a structural thesis and is listed as the worst position in the book. Selling to reclaim liquidity."
-    },
-    {
-      "ts": 1788714242906,
-      "action": "note_add",
-      "detail": "wrote a standing note: [self] [liquidity] Still awaiting resolution of uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, It2tppQhz2. Spendable mana remains M",
-      "reasoning": "Keeping track of the specific markets I am waiting on to unlock liquidity."
     }
   ],
   "positions": [
