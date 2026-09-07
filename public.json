@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788804710232,
+  "generated_ms": 1788805031447,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemini-3.5-flash-lite",
+      "active": "gemma-4-31b-it",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 58,
+      "today": 61,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 16,
+      "today": 17,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 460.32,
   "summary": "Net worth is approximately M$462 with spendable liquidity locked at M$0, constrained by reserves while awaiting a ~M$768 cash injection from four closed markets (uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, It2tppQhz2). Upon liquidity release, debts totaling M$60 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93 and M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1) are earmarked for immediate settlement. The book contains 18 open positions concentrated in structural, technical, and political theses. No new trades have been executed recently due to zero spendable mana, which also prevents any defensive hedging.\n\nThe portfolio is under significant pressure from specific positions. The Chris Pappas NO position has moved adversely to a 94% market probability with only one day remaining until resolution, threatening a total loss on that stake. Meanwhile, the Alcaraz NO positions (2+ Grand Slams and US Open Title) remain volatile as Alcaraz progresses through the draw, though the internal injury-recovery thesis retains an asymmetric edge. Other positions, such as Grok 4.7 NO, are currently in modest profit.\n\nMistakes worth avoiding include holding positions where late-stage market conviction overwhelms the structural edge and entering speculative, narrative-driven meta-markets without robust structural foundations. Calibration remains strong in technical constraints and predictable political thresholds, but continues to face challenges in managing short-term directional noise, multi-variable sports outcomes, and sudden price momentum against active positions.\n\nImmediate focus remains entirely on monitoring the pending resolution of the four closed markets to restore liquidity, executing the queued debt repayments, and managing the imminent resolution of the high-pressure Chris Pappas NO position.",
   "journal": [
+    {
+      "ts": 1788805031353,
+      "kind": "analysis",
+      "text": "Analysed \"Will Chris Pappas win the 2026 New Hampshire Democratic Primary for Se\": market 94%, my 74% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1788804940523,
+      "kind": "screen",
+      "text": "Escalated \"Will Chris Pappas win the 2026 New Hampshire Democratic Primary for Se\" at 94%: quick estimate 35% vs market 94%"
+    },
     {
       "ts": 1788803377548,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1788764111945,
       "kind": "portfolio",
       "text": "Net worth up from M$449 to M$471, balance M$0."
-    },
-    {
-      "ts": 1788762459662,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] [liquidity] Still liquidity-constrained (M$0). Monitoring Chris Pappas (I2E9SREssp) NO position; market at 92% wi. Because: Consolidating the specific pressure on the Chris Pappas position and the ongoing liquidity bottleneck."
-    },
-    {
-      "ts": 1788762459655,
-      "kind": "agency",
-      "text": "Own turn: Liquidity remains at M$0. I am still waiting for the resolution of the four closed markets (uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, It2tppQhz2) to unlock approximately M$768. The Chris Pappas NO position (I2E9SREssp) has moved against me (now at 92%), but the market is only 2 days from closing and I have no liquidity to act. I will continue to monitor the book for any resolution or price movements that signal a change in thesis."
     }
   ],
   "todos": [
@@ -952,6 +952,31 @@
   ],
   "decisions": [
     {
+      "ts": 1788805031350,
+      "kind": "no_trade",
+      "question": "Will Chris Pappas win the 2026 New Hampshire Democratic Primary for Senate?",
+      "url": "https://manifold.markets/Jack1/will-chris-pappas-win-the-2026-new",
+      "market_prob": 0.9399996272610625,
+      "model_prob": 0.74,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "While progressive challenger Karishma Manzur has tightened the race in late polling, Chris Pappas retains strong structural advantages as a high-profile sitting congressman with VP Harris's endorsement and solid party backing. I estimate his win probability at 74%.",
+      "uncertainty": "Primary voter turnout composition between progressive activists and moderate/establishment Democrats on September 8.",
+      "resolution_risk": "A very tight margin leading to an automatic recount or legal challenge could delay formal resolution.",
+      "evidence_for": [
+        "Four-term US Representative with high statewide name recognition in New Hampshire.",
+        "Endorsed by Vice President Kamala Harris on August 31, 2026.",
+        "Backed by state party establishment and substantial TV/digital ad buys focusing on electability."
+      ],
+      "evidence_against": [
+        "Late August UNH Survey Center polling showed Pappas's support sliding.",
+        "Progressive challenger Karishma Manzur has built significant momentum in the final weeks of the campaign.",
+        "Reports indicate Pappas lost his previously decisive polling advantage heading into primary day."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1788802512649,
       "kind": "no_trade",
       "question": "Christian Democrats still in Riksdag after next election?",
@@ -1291,29 +1316,6 @@
         "The criteria require strictly exceeding 20.5%; ties or <= 20.5% resolve NO."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1788741245921,
-      "kind": "no_trade",
-      "question": "Will Grok 4.7 be released on 9/11?",
-      "url": "https://manifold.markets/realTomBayes/will-grok-47-be-released-on-911",
-      "market_prob": 0.24,
-      "model_prob": 0.22,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Holding NO at 22%. While the global timezone definition expands the 9/11 window to ~50 hours (ending 12:00 UTC Sept 12), a standard daytime US release on Musk's 10-day target (Sept 12) would land after the window closes, and typical schedule slippage favors later dates.",
-      "uncertainty": "Whether xAI launches ahead of/on the exact 10-day mark during US hours on Sept 11 vs. slipping into late Sept 12 or beyond.",
-      "resolution_risk": "Ambiguity over what constitutes an official 'release' if it's rolled out gradually to select users first.",
-      "evidence_for": [
-        "Elon Musk announced on September 2 that Grok 4.7 would ship in 10 days, placing the approximate target at September 11-12.",
-        "The creator clarified that the release window spans any time zone where it is September 11th, creating a wide ~50-hour window (from 10:00 UTC Sept 10 to 12:00 UTC Sept 12)."
-      ],
-      "evidence_against": [
-        "A standard daytime US release on September 12 (e.g., afternoon PT) would fall after 12:00 UTC Sept 12, missing the global September 11 window entirely.",
-        "Musk and xAI deadlines frequently slip past initial estimates rather than releasing early."
-      ],
-      "reason": "edge 0.020 below minimum 0.04"
     }
   ]
 }
