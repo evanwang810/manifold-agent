@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788787928648,
+  "generated_ms": 1788788319252,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemma-4-31b-it",
+      "active": "gemini-3.5-flash-lite",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -35,7 +35,7 @@
       "cap": 220
     },
     "chat": {
-      "today": 27,
+      "today": 28,
       "cap": 400
     },
     "deep": {
@@ -48,6 +48,16 @@
   "net_worth": 467.77,
   "summary": "Net worth is approximately M$458 with spendable liquidity at M$0, constrained by a reserve limit and awaiting a ~M$768 cash injection from four closed markets (uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, It2tppQhz2). A M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 is earmarked for immediate settlement upon liquidity release. The book contains 18 positions, primarily concentrated in structural, technical, and political bets. Recent turns involved entering several high-conviction positions (Grok 4.7 NO, Brett Smiley YES, American man US Open semifinals YES, and Chris Pappas NO) and pruning a speculative meta-market at a loss.\n\nThe portfolio is currently under pressure. The Alcaraz NO positions (2+ Grand Slams and US Open Title) are volatile and moving against the injury-recovery thesis, though the internal model still maintains a significant asymmetric edge. More critically, the Chris Pappas NO position has moved to a 92% market probability with only two days remaining until resolution; the lack of spendable liquidity prevents any defensive action. Other positions, such as Brett Smiley YES, are currently in profit.\n\nMistakes to avoid include holding positions where market conviction overwhelms structural edge and entering speculative, narrative-driven meta-markets that lack robust structural theses. Calibration remains strong in technical constraints and predictable political thresholds, but is weaker in managing short-term directional noise and volatility in sports or multi-variable outcomes.\n\nImmediate focus is monitoring the resolution of the four pending markets to restore liquidity, settling the M$50 debt, and tracking the high-pressure Chris Pappas and Alcaraz positions.",
   "journal": [
+    {
+      "ts": 1788788318910,
+      "kind": "agency",
+      "text": "Own turn, wrote a standing note: [self] [liquidity] Still liquidity-constrained (M$0). Awaiting resolution of closed markets (uAPRyuqyq0, ZC6gdANScC, Ec0. Because: Updating the standing note to keep the liquidity and risk status current for the next turn."
+    },
+    {
+      "ts": 1788788318903,
+      "kind": "agency",
+      "text": "Own turn: Liquidity remains at M$0 while waiting for four closed markets to resolve and release ~M$768. The Chris Pappas NO position is at 92% with 2 days left, but I cannot act without spendable mana. Updating notes to reflect the ongoing liquidity bottleneck and monitoring status."
+    },
     {
       "ts": 1788787743443,
       "kind": "book",
@@ -437,16 +447,6 @@
       "ts": 1788734343149,
       "kind": "analysis",
       "text": "Analysed \"Who will learn to write first? My left hand or my robot hand?\": market 34%, my 85% (high). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1788734073484,
-      "kind": "screen",
-      "text": "Escalated \"Who will learn to write first? My left hand or my robot hand?\" at 34%: quick estimate 85% vs market 34%"
-    },
-    {
-      "ts": 1788732724778,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] [liquidity] Monitoring for resolution of uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, It2tppQhz2 to restore liquidity and . Because: Keeping the liquidity constraint and the priority of debt settlement top-of-mind while waiting for the cash injection."
     }
   ],
   "todos": [
@@ -613,11 +613,6 @@
       "ts": 1788655864777
     },
     {
-      "text": "[self] [market] Alcaraz correlation: The '2+ Slams' (gtcRqCcCgI) and 'US Open Title' positions are highly correlated. A fill on the US Open NO limit order at 51% will significantly increase total exposure to the injury-recovery thesis and reduce spendable liquidity to ~M$6.",
-      "source": "self",
-      "ts": 1788695722964
-    },
-    {
       "text": "[self] [liquidity] Status: Spendable liquidity M$0. Pending resolutions: uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, It2tppQhz2. Total expected inflow: ~M$768. Priority 1: Settle M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93.",
       "source": "self",
       "ts": 1788744026548
@@ -651,9 +646,20 @@
       "text": "[self] [liquidity] Still liquidity-constrained (M$0). Awaiting resolution of closed markets (uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, It2tppQhz2) to restore ~M$768. Monitoring Chris Pappas (I2E9SREssp) NO at 92% (2d to close) and Alcaraz (gtcRqCcCgI, CAygP5nsSS) for volatility.",
       "source": "self",
       "ts": 1788784508527
+    },
+    {
+      "text": "[self] [liquidity] Still liquidity-constrained (M$0). Awaiting resolution of closed markets (uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, It2tppQhz2) to restore ~M$768. Monitoring Chris Pappas (I2E9SREssp) NO at 92% (2d to close) and Alcaraz positions.",
+      "source": "self",
+      "ts": 1788788318904
     }
   ],
   "own_actions": [
+    {
+      "ts": 1788788318907,
+      "action": "note_add",
+      "detail": "wrote a standing note: [self] [liquidity] Still liquidity-constrained (M$0). Awaiting resolution of closed markets (uAPRyuqyq0, ZC6gdANScC, Ec0",
+      "reasoning": "Updating the standing note to keep the liquidity and risk status current for the next turn."
+    },
     {
       "ts": 1788784508530,
       "action": "note_add",
@@ -719,12 +725,6 @@
       "action": "note_remove",
       "detail": "retired a standing note: [self] [self] [liquidity] Spendable balance is M$29. Awaiting resolution of uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, and It2t",
       "reasoning": "This note is outdated; spendable balance is now M$0."
-    },
-    {
-      "ts": 1788718291317,
-      "action": "note_add",
-      "detail": "wrote a standing note: [self] [liquidity] Spendable balance is M$29. Awaiting resolution of uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, and It2tppQhz2 ",
-      "reasoning": "Keeping track of spendable liquidity constraints and the mandatory debt repayment queued for the next liquidity wave."
     }
   ],
   "positions": [
@@ -902,9 +902,9 @@
       "side": "NO",
       "shares": 33.0,
       "invested": 18.8,
-      "value": 26.3,
-      "profit": 7.4,
-      "prob": 0.204,
+      "value": 24.8,
+      "profit": 5.9,
+      "prob": 0.25,
       "closed": false,
       "days_to_close": 5.4
     },
