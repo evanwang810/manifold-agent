@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788792137707,
+  "generated_ms": 1788792668198,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemini-3.5-flash-lite",
+      "active": "gemma-4-31b-it",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 43,
+      "today": 46,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 13,
+      "today": 14,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 466.26,
   "summary": "Net worth is approximately M$458 with spendable liquidity at M$0, constrained by a reserve limit and awaiting a ~M$768 cash injection from four closed markets (uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, It2tppQhz2). A M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 is earmarked for immediate settlement upon liquidity release. The book contains 18 positions, primarily concentrated in structural, technical, and political bets. Recent turns involved entering several high-conviction positions (Grok 4.7 NO, Brett Smiley YES, American man US Open semifinals YES, and Chris Pappas NO) and pruning a speculative meta-market at a loss.\n\nThe portfolio is currently under pressure. The Alcaraz NO positions (2+ Grand Slams and US Open Title) are volatile and moving against the injury-recovery thesis, though the internal model still maintains a significant asymmetric edge. More critically, the Chris Pappas NO position has moved to a 92% market probability with only two days remaining until resolution; the lack of spendable liquidity prevents any defensive action. Other positions, such as Brett Smiley YES, are currently in profit.\n\nMistakes to avoid include holding positions where market conviction overwhelms structural edge and entering speculative, narrative-driven meta-markets that lack robust structural theses. Calibration remains strong in technical constraints and predictable political thresholds, but is weaker in managing short-term directional noise and volatility in sports or multi-variable outcomes.\n\nImmediate focus is monitoring the resolution of the four pending markets to restore liquidity, settling the M$50 debt, and tracking the high-pressure Chris Pappas and Alcaraz positions.",
   "journal": [
+    {
+      "ts": 1788792668075,
+      "kind": "analysis",
+      "text": "Analysed \"Will United Russia gain seats in the 2026 Russian Duma Elections?\": market 40%, my 43% (medium). No trade, edge 0.028 below minimum 0.04."
+    },
+    {
+      "ts": 1788792325869,
+      "kind": "screen",
+      "text": "Escalated \"Will United Russia gain seats in the 2026 Russian Duma Elections?\" at 40%: quick estimate 65% vs market 40%"
+    },
     {
       "ts": 1788792137534,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1788739999514,
       "kind": "book",
       "text": "Looked over 18 positions: The book is tightly held around sports, technical, and political theses. Spendable liquidity is currently M$0, pending major cash injections from four closed markets. Open positions remain aligned with underlying theses despite volatility. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1788739256695,
-      "kind": "analysis",
-      "text": "Analysed \"Will Gukesh be board 1 for India at Olympiad?\": market 32%, my 25% (medium). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1788739160227,
-      "kind": "screen",
-      "text": "Escalated \"Will Gukesh be board 1 for India at Olympiad?\" at 32%: quick estimate 75% vs market 32%"
     }
   ],
   "todos": [
@@ -794,9 +794,9 @@
       "side": "NO",
       "shares": 130.6,
       "invested": 81.0,
-      "value": 53.6,
-      "profit": -27.4,
-      "prob": 0.59,
+      "value": 49.6,
+      "profit": -31.4,
+      "prob": 0.62,
       "closed": false,
       "days_to_close": 6.3
     },
@@ -858,7 +858,7 @@
       "profit": 11.7,
       "prob": 0.378,
       "closed": false,
-      "days_to_close": 4.6
+      "days_to_close": 4.5
     },
     {
       "question": "Will Geometry Dash 2.21 Update Will Be Released In August 13 2026?",
@@ -946,6 +946,31 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1788792668072,
+      "kind": "no_trade",
+      "question": "Will United Russia gain seats in the 2026 Russian Duma Elections?",
+      "url": "https://manifold.markets/RealAP/will-united-russia-gain-or-loose-se",
+      "market_prob": 0.4023469201694241,
+      "model_prob": 0.43,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "While United Russia has total administrative control, including the expansion of online voting (DEG) and the integration of annexed territories, the baseline of 324 seats is historically very high. Leaked Kremlin targets suggesting a modest 45-50% party-list vote share indicate they may be satisfied with maintaining a comfortable constitutional supermajority (300+ seats) rather than pushing to exceed their 2021 result. I am slightly above the market at 43%.",
+      "uncertainty": "Whether the Kremlin prioritizes a narrative of 'growing wartime consolidation' (requiring >324 seats) or is satisfied with maintaining a comfortable constitutional supermajority (300+ seats) while keeping the systemic opposition stable.",
+      "resolution_risk": "Disputes over the official seat counts published by the Central Election Commission, or potential post-election changes to party affiliations before the Duma officially convenes.",
+      "evidence_for": [
+        "Widespread expansion of Distance Electronic Voting (DEG) since 2021 makes results highly manipulable.",
+        "Integration of annexed Ukrainian territories (Donetsk, Luhansk, Zaporizhzhia, Kherson) where United Russia is guaranteed to win near-unanimous support and sweep local single-member constituencies.",
+        "Wartime political consolidation and intense repression of independent monitoring reduce obstacles to manufacturing a high seat count."
+      ],
+      "evidence_against": [
+        "The baseline of 324 seats (72% of the Duma) is historically very high and hard to beat.",
+        "Reports of an adjusted official Kremlin vote-share target of 45-50% for the party list, which is lower than the 49.8% achieved in 2021.",
+        "The Kremlin needs to maintain the viability of loyal 'systemic opposition' parties to absorb protest votes, meaning they cannot squeeze them out entirely."
+      ],
+      "reason": "edge 0.028 below minimum 0.04"
+    },
     {
       "ts": 1788787565219,
       "kind": "no_trade",
@@ -1284,30 +1309,6 @@
         "Pogacar has already abandoned the race due to a crash on Stage 8, so YES relies entirely on Roglic.",
         "Roglic entered the Vuelta with questionable form following a pre-race training crash and could lose additional time in high-mountain stages.",
         "Enric Mas and other GC contenders have defensive tactics and mountain stages to expand their lead before the Stage 18 TT."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1788734343147,
-      "kind": "no_trade",
-      "question": "Who will learn to write first? My left hand or my robot hand?",
-      "url": "https://manifold.markets/tftftftftftftftftftftftf/who-will-learn-to-write-first-my-le",
-      "market_prob": 0.33674795671298036,
-      "model_prob": 0.85,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "",
-      "uncertainty": "Whether the newly arrived robot arm can be quickly programmed and calibrated to write legibly before the 2-month write-off window closes.",
-      "resolution_risk": "The creator might declare a tie or extend timelines if the robot arm fails to produce any recognizable writing at all.",
-      "evidence_for": [
-        "The human left hand has had months of ongoing, direct muscle memory practice and motor learning.",
-        "The robot arm arrived extremely late due to shipping and tariff issues, leaving almost no time for setup, calibration, and training compared to the human hand.",
-        "Simulation-to-real transfer for cheap or mid-range robot arms writing fluidly in real life is notoriously difficult and error-prone."
-      ],
-      "evidence_against": [
-        "The creator notes that human left-hand performance has significantly plateaued over the summer months.",
-        "Modern robotic arms and dexterous hands can process machine learning algorithms rapidly once hardware is operational."
       ],
       "reason": "size floored to zero by balance reserve"
     }
