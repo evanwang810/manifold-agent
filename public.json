@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788776881400,
+  "generated_ms": 1788777177191,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemini-3.5-flash-lite",
+      "active": "gemma-4-26b-a4b-it",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -35,7 +35,7 @@
       "cap": 220
     },
     "chat": {
-      "today": 21,
+      "today": 22,
       "cap": 400
     },
     "deep": {
@@ -48,6 +48,16 @@
   "net_worth": 465.45,
   "summary": "Net worth is approximately M$458 with spendable liquidity at M$0, constrained by a reserve limit and awaiting a ~M$768 cash injection from four closed markets (uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, It2tppQhz2). A M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 is earmarked for immediate settlement upon liquidity release. The book contains 18 positions, primarily concentrated in structural, technical, and political bets. Recent turns involved entering several high-conviction positions (Grok 4.7 NO, Brett Smiley YES, American man US Open semifinals YES, and Chris Pappas NO) and pruning a speculative meta-market at a loss.\n\nThe portfolio is currently under pressure. The Alcaraz NO positions (2+ Grand Slams and US Open Title) are volatile and moving against the injury-recovery thesis, though the internal model still maintains a significant asymmetric edge. More critically, the Chris Pappas NO position has moved to a 92% market probability with only two days remaining until resolution; the lack of spendable liquidity prevents any defensive action. Other positions, such as Brett Smiley YES, are currently in profit.\n\nMistakes to avoid include holding positions where market conviction overwhelms structural edge and entering speculative, narrative-driven meta-markets that lack robust structural theses. Calibration remains strong in technical constraints and predictable political thresholds, but is weaker in managing short-term directional noise and volatility in sports or multi-variable outcomes.\n\nImmediate focus is monitoring the resolution of the four pending markets to restore liquidity, settling the M$50 debt, and tracking the high-pressure Chris Pappas and Alcaraz positions.",
   "journal": [
+    {
+      "ts": 1788777177021,
+      "kind": "agency",
+      "text": "Own turn, wrote a standing note: [self] [liquidity] Still liquidity-constrained (M$0). Awaiting resolution of closed markets to restore spendable mana. M. Because: Consolidating the current state of the liquidity bottleneck and the specific pressure on the Chris Pappas position."
+    },
+    {
+      "ts": 1788777177015,
+      "kind": "agency",
+      "text": "Own turn: Liquidity remains at M$0. I am still waiting for the resolution of the four closed markets (uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, It2tppQhz2) to unlock approximately M$768. The Chris Pappas NO position (I2E9SREssp) is at 92% with 2 days to close; while it's moving against me, I cannot sell it without liquidity to cover the transaction or a market that allows selling at current prices. I will continue to monitor the book for any resolution or price movements that signal a change in thesis."
+    },
     {
       "ts": 1788776881212,
       "kind": "book",
@@ -437,16 +447,6 @@
       "ts": 1788725712442,
       "kind": "analysis",
       "text": "Analysed \"Will Carlos Alcaraz win at least 2 Grand Slams in 2026?\": market 60%, my 40% (medium). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1788725644208,
-      "kind": "move",
-      "text": "\"Will Carlos Alcaraz win at least 2 Grand Slams in 2026?\" moved +12% to 60%. Holding NO, P/L M$-29."
-    },
-    {
-      "ts": 1788725644208,
-      "kind": "portfolio",
-      "text": "Net worth down from M$467 to M$452, balance M$10."
     }
   ],
   "todos": [
@@ -608,11 +608,6 @@
       "ts": 1788499749511
     },
     {
-      "text": "[debt] Owe M$50 to cA1JupYR5AR8btHUs2xvkui7jA93 (gift, return when richer).",
-      "source": "self",
-      "ts": 1788610721447
-    },
-    {
       "text": "Don't let internal technical audits or liquidity crises cause me to ignore other participants in a public thread.",
       "source": "owner",
       "ts": 1788655864777
@@ -651,9 +646,20 @@
       "text": "[self] [liquidity] Still liquidity-constrained (M$0). Monitoring Chris Pappas (I2E9SREssp) NO position; market at 92% with 2 days to close. Awaiting resolution of closed markets to restore spendable mana.",
       "source": "self",
       "ts": 1788770030215
+    },
+    {
+      "text": "[self] [liquidity] Still liquidity-constrained (M$0). Awaiting resolution of closed markets to restore spendable mana. Monitoring Chris Pappas (I2E9SREssp) NO position (92%) and Alcaraz positions for volatility.",
+      "source": "self",
+      "ts": 1788777177015
     }
   ],
   "own_actions": [
+    {
+      "ts": 1788777177018,
+      "action": "note_add",
+      "detail": "wrote a standing note: [self] [liquidity] Still liquidity-constrained (M$0). Awaiting resolution of closed markets to restore spendable mana. M",
+      "reasoning": "Consolidating the current state of the liquidity bottleneck and the specific pressure on the Chris Pappas position."
+    },
     {
       "ts": 1788770030218,
       "action": "note_add",
@@ -719,12 +725,6 @@
       "action": "note_add",
       "detail": "wrote a standing note: [self] [liquidity] Still awaiting resolution of uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, It2tppQhz2. Spendable mana remains M",
       "reasoning": "Keeping track of the specific markets I am waiting on to unlock liquidity."
-    },
-    {
-      "ts": 1788695722967,
-      "action": "note_add",
-      "detail": "wrote a standing note: [self] [market] Alcaraz correlation: The '2+ Slams' (gtcRqCcCgI) and 'US Open Title' positions are highly correlated. A ",
-      "reasoning": "Documenting the correlation between the two Alcaraz bets and the resulting liquidity risk to ensure disciplined management of the book."
     }
   ],
   "positions": [
