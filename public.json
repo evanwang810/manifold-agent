@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788738953226,
+  "generated_ms": 1788739256822,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,15 +31,15 @@
   },
   "usage": {
     "fast": {
-      "today": 95,
+      "today": 0,
       "cap": 220
     },
     "chat": {
-      "today": 39,
+      "today": 0,
       "cap": 400
     },
     "deep": {
-      "today": 30,
+      "today": 1,
       "cap": 34
     }
   },
@@ -48,6 +48,21 @@
   "net_worth": 457.86,
   "summary": "Net worth is roughly M$467 with spendable liquidity currently at M$0, pending a massive M$768 cash injection from closed positions (uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, It2tppQhz2). Recent activity has focused on tightening portfolio discipline by pruning low-conviction or marginal positions, such as selling out of the speculative holder-count market (\"Will YES have more holders than NO?\") for a M$-38 loss. A standing M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 remains recorded for settlement immediately upon liquidity release.\n\nThe book is concentrated in high-conviction structural, technical, and political bets, alongside sports positions that serve as the primary source of volatility. The core Alcaraz NO positions (covering both \"2+ Grand Slams\" and the \"US Open Title\") are under pressure, trading against us as he advances through the US Open draw (moving up to 52% and 47% respectively, against our 28-31% estimates), but they are held strictly under the asymmetric thesis that a post-injury Grand Slam run carries low probability. Other holdings, such as the robot hand writing bet, maintain strong structural conviction. New positions include a YES bet on an American man reaching the US Open semifinals and a NO bet on Grok 4.7's release date.\n\nMistakes to avoid include holding positions where market conviction overwhelms the structural edge (such as past errors in the Liberals Riksdag and Greens Saxony-Anhalt markets where execution outpaced internal models) and entering speculative, narrative-driven meta-markets without robust structural theses. Calibration remains strong in technical constraints, predictable political thresholds, and binary structural constraints, but weaker in managing short-term directional noise and volatility in sports or multi-variable outcomes.\n\nFuture focus remains on monitoring Alcaraz's deep US Open run as the primary catalyst for the NO thesis, settling the M$50 debt upon cash release, and auditing the resolution of the pending closed markets to restore spendable liquidity.",
   "journal": [
+    {
+      "ts": 1788739256695,
+      "kind": "analysis",
+      "text": "Analysed \"Will Gukesh be board 1 for India at Olympiad?\": market 32%, my 25% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1788739160227,
+      "kind": "screen",
+      "text": "Escalated \"Will Gukesh be board 1 for India at Olympiad?\" at 32%: quick estimate 75% vs market 32%"
+    },
+    {
+      "ts": 1788739140184,
+      "kind": "screen",
+      "text": "Passed on \"Will my brother start reading Harry Potter in the next week?\" at 5%: quick estimate 5% agrees with market. This is a private personal bet with unresolvable insider criteria, making it pure noise to analyze."
+    },
     {
       "ts": 1788736732403,
       "kind": "analysis",
@@ -432,21 +447,6 @@
       "ts": 1788697904129,
       "kind": "screen",
       "text": "Escalated \"Will YES have more holders than NO?\" at 83%: quick estimate 45% vs market 83%"
-    },
-    {
-      "ts": 1788697884711,
-      "kind": "screen",
-      "text": "Passed on \"Will there be a confirmed case of Cyclosporiasis in ALL 48 US contiguo\" at 5%: quick estimate 15% agrees with market. Delaware remained at zero cases on the CDC map by August 31, meaning the market cleanly resolves to NO."
-    },
-    {
-      "ts": 1788697877291,
-      "kind": "move",
-      "text": "\"Will an American man reach the 2026 US Open men's singles semifinals?\" moved -6% to 79%. Holding YES, P/L M$+2."
-    },
-    {
-      "ts": 1788697688753,
-      "kind": "analysis",
-      "text": "Analysed \"Will an American man reach the 2026 US Open men's singles semifinals?\": market 85%, my 84% (medium). No trade, edge 0.010 below minimum 0.04."
     }
   ],
   "todos": [
@@ -942,6 +942,30 @@
   ],
   "decisions": [
     {
+      "ts": 1788739256692,
+      "kind": "no_trade",
+      "question": "Will Gukesh be board 1 for India at Olympiad?",
+      "url": "https://manifold.markets/Zeolite/will-gukesh-be-board-1-for-india-at",
+      "market_prob": 0.3208470325818456,
+      "model_prob": 0.25,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Initial FIDE team line-ups list Arjun Erigaisi on Board 1 and Gukesh on Board 4, reflecting current ratings (where Gukesh has dropped to 2703). While the team captain can adjust assignments before the final deadline, India's leadership prioritizes form and strategic scoring over rank prestige. I estimate a 25% chance Gukesh is moved back to Board 1.",
+      "uncertainty": "Whether Captain Srinath Narayanan changes the initial line-up to assign Gukesh to Board 1 prior to the final deadline.",
+      "resolution_risk": "Ambiguity around whether playing Board 1 during a round when the designated Board 1 rests satisfies 'board 1 for India', versus official team list order.",
+      "evidence_for": [
+        "Gukesh is the reigning World Champion, and teams historically often place World Champions on Board 1 for prestige.",
+        "Team Captain Srinath Narayanan retains authority to alter the initial board order before the final lock."
+      ],
+      "evidence_against": [
+        "FIDE's published initial team line-up for India lists Arjun Erigaisi on Board 1 and Gukesh on Board 4.",
+        "Gukesh's rating (2703) is fourth on the team behind Erigaisi (2759), Praggnanandhaa (2750), and Sarin (2718).",
+        "Indian team management under Viswanathan Anand emphasizes pragmatic board optimization and recent form over title rank."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1788736732400,
       "kind": "no_trade",
       "question": "Will the winner of the 2026 Vuelta a Espa\u00f1a be Roglic or Pogacar?",
@@ -1281,31 +1305,6 @@
         "Recent reporting indicates nagging injuries have affected his hitting output."
       ],
       "reason": "edge 0.029 below minimum 0.04"
-    },
-    {
-      "ts": 1788699816927,
-      "kind": "no_trade",
-      "question": "Will Carlos Alcaraz win at least 2 Grand Slams in 2026?",
-      "url": "https://manifold.markets/polymathematic/will-carlos-alcaraz-win-at-least-2-UAsREZuPt2",
-      "market_prob": 0.46999999999999986,
-      "model_prob": 0.31,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With AO won and FO/Wimbledon off the board, this market is functionally identical to Alcaraz winning the US Open. Sinner's withdrawal improves his path, but winning four consecutive best-of-five matches off a 4.5-month wrist layoff remains tough. At ~75% average win rate per remaining match, his title probability from R16 is ~31%.",
-      "uncertainty": "Whether Alcaraz's right wrist holds up under maximum stress across four remaining best-of-five matches against elite competition.",
-      "resolution_risk": "Minimal risk; resolves strictly on official ATP Tour records for 2026 Grand Slam titles.",
-      "evidence_for": [
-        "Alcaraz won the 2026 Australian Open, meaning a US Open victory would give him 2 Grand Slams in 2026.",
-        "Jannik Sinner withdrew from the US Open with a knee injury, removing his chief rival from the draw.",
-        "Alcaraz has advanced to the Round of 16 after winning his first three matches."
-      ],
-      "evidence_against": [
-        "Alcaraz missed 4.5 months (including Roland Garros and Wimbledon) due to right wrist tenosynovitis.",
-        "Winning four consecutive best-of-five matches against top-tier opponents in week two places heavy physical strain on a recently injured wrist.",
-        "At an average win probability of ~75% per match over the remaining four rounds (R16, QF, SF, Final), the cumulative chance to win the title is ~31%."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
