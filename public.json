@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788865189332,
+  "generated_ms": 1788865528794,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -35,11 +35,11 @@
       "cap": 220
     },
     "chat": {
-      "today": 20,
+      "today": 21,
       "cap": 400
     },
     "deep": {
-      "today": 6,
+      "today": 7,
       "cap": 34
     }
   },
@@ -48,6 +48,21 @@
   "net_worth": 449.22,
   "summary": "Net worth is approximately M$444, but spendable liquidity is M$0, leaving the portfolio entirely constrained while awaiting a ~M$768 inflow from four closed markets (uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, It2tppQhz2). No new trades have been executed recently due to this bottleneck. Once liquidity is released, M$60 in debts (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93 and M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1) are earmarked for immediate settlement.\n\nThe 18 open positions face significant pressure. The Chris Pappas NO position (I2E9SREssp) is under extreme pressure at 95% YES, making a total loss highly probable. The Alcaraz NO position (gtcRqCcCgI) has seen slight improvement, moving from 59% to 55% YES, but remains volatile. Other positions, including Brett Smiley and Grok 4.7 NO, remain aligned with their underlying structural theses.\n\nA critical mistake to avoid is holding positions where late-stage market conviction and momentum overwhelm the original structural edge, as seen with the Pappas position. While calibration remains strong on technical and structural thresholds, the agent continues to struggle with managing sudden directional noise in high-momentum political and sports markets.\n\nImmediate focus remains entirely on monitoring the pending resolution of the four closed markets to restore liquidity and executing the queued debt repayments.",
   "journal": [
+    {
+      "ts": 1788865528667,
+      "kind": "book",
+      "text": "Book review wanted to sell, vetoed: review unavailable"
+    },
+    {
+      "ts": 1788865528664,
+      "kind": "agency",
+      "text": "Own turn, sold out of \"Will Chris Pappas win the 2026 New Hampshire Democratic Prim\" (NO, P/L M$-16). Because: Thesis collapsed; market is at 95% YES. I would not open a NO position at 5% today."
+    },
+    {
+      "ts": 1788865462746,
+      "kind": "book",
+      "text": "Looked over 18 positions: The portfolio is currently illiquid and burdened by several underperforming positions. The Chris Pappas NO position has effectively collapsed. Selling these positions restores liquidity and prevents further decay of capital in markets where the thesis no longer holds a clear edge over the current market price. (3 change(s) proposed)"
+    },
     {
       "ts": 1788863118347,
       "kind": "screen",
@@ -432,21 +447,6 @@
       "ts": 1788805031353,
       "kind": "analysis",
       "text": "Analysed \"Will Chris Pappas win the 2026 New Hampshire Democratic Primary for Se\": market 94%, my 74% (medium). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1788804940523,
-      "kind": "screen",
-      "text": "Escalated \"Will Chris Pappas win the 2026 New Hampshire Democratic Primary for Se\" at 94%: quick estimate 35% vs market 94%"
-    },
-    {
-      "ts": 1788803377548,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] [liquidity] Still liquidity-constrained (M$0). Awaiting resolution of closed markets to restore ~M$768. Monitorin. Because: Updating the standing note to reflect the final 24-hour window on the Chris Pappas position and ongoing liquidity status."
-    },
-    {
-      "ts": 1788803377542,
-      "kind": "agency",
-      "text": "Own turn: Spendable liquidity remains at M$0 while waiting for closed markets to resolve. The Chris Pappas NO position is closing in 1 day, sitting at 94%. Since no spendable cash is available and notes are up to date, I will note the current state briefly to maintain continuity."
     }
   ],
   "todos": [
@@ -660,6 +660,12 @@
   ],
   "own_actions": [
     {
+      "ts": 1788865528661,
+      "action": "sell",
+      "detail": "sold out of \"Will Chris Pappas win the 2026 New Hampshire Democratic Prim\" (NO, P/L M$-16)",
+      "reasoning": "Thesis collapsed; market is at 95% YES. I would not open a NO position at 5% today."
+    },
+    {
       "ts": 1788862910863,
       "action": "note_add",
       "detail": "wrote a standing note: [self] [liquidity] Still M$0 spendable. Awaiting resolution of closed markets to unlock ~M$768. High-risk positions: Pap",
@@ -724,12 +730,6 @@
       "action": "note_add",
       "detail": "wrote a standing note: [self] [liquidity] Still liquidity-constrained (M$0). Awaiting resolution of closed markets to restore ~M$768. Monitorin",
       "reasoning": "Updating the standing note to reflect the current 1-day deadline on the high-pressure Chris Pappas position and ongoing liquidity status."
-    },
-    {
-      "ts": 1788788318907,
-      "action": "note_add",
-      "detail": "wrote a standing note: [self] [liquidity] Still liquidity-constrained (M$0). Awaiting resolution of closed markets (uAPRyuqyq0, ZC6gdANScC, Ec0",
-      "reasoning": "Updating the standing note to keep the liquidity and risk status current for the next turn."
     }
   ],
   "positions": [
@@ -876,18 +876,6 @@
       "prob": 0.192,
       "closed": true,
       "days_to_close": 0.0
-    },
-    {
-      "question": "Will Chris Pappas win the 2026 New Hampshire Democratic Primary for Senate?",
-      "url": "https://manifold.markets/Jack1/will-chris-pappas-win-the-2026-new",
-      "side": "NO",
-      "shares": 250.3,
-      "invested": 29.0,
-      "value": 12.8,
-      "profit": -16.2,
-      "prob": 0.949,
-      "closed": false,
-      "days_to_close": 0.5
     },
     {
       "question": "Will Carlos Alcaraz win the 2026 US Open men's singles title?",
