@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788872733439,
+  "generated_ms": 1788873513605,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemma-4-31b-it",
+      "active": "gemini-3.5-flash-lite",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -35,11 +35,11 @@
       "cap": 220
     },
     "chat": {
-      "today": 24,
+      "today": 25,
       "cap": 400
     },
     "deep": {
-      "today": 10,
+      "today": 11,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 448.31,
   "summary": "Net worth is approximately M$444, but spendable liquidity is M$0, leaving the portfolio entirely constrained while awaiting a ~M$768 inflow from four closed markets (uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, It2tppQhz2). No new trades have been executed recently due to this bottleneck. Once liquidity is released, M$60 in debts (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93 and M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1) are earmarked for immediate settlement.\n\nThe 18 open positions face significant pressure. The Chris Pappas NO position (I2E9SREssp) is under extreme pressure at 95% YES, making a total loss highly probable. The Alcaraz NO position (gtcRqCcCgI) has seen slight improvement, moving from 59% to 55% YES, but remains volatile. Other positions, including Brett Smiley and Grok 4.7 NO, remain aligned with their underlying structural theses.\n\nA critical mistake to avoid is holding positions where late-stage market conviction and momentum overwhelm the original structural edge, as seen with the Pappas position. While calibration remains strong on technical and structural thresholds, the agent continues to struggle with managing sudden directional noise in high-momentum political and sports markets.\n\nImmediate focus remains entirely on monitoring the pending resolution of the four closed markets to restore liquidity and executing the queued debt repayments.",
   "journal": [
+    {
+      "ts": 1788873513322,
+      "kind": "agency",
+      "text": "Own turn, sold out of \"Will Carlos Alcaraz win at least 2 Grand Slams in 2026?\" (NO, P/L M$-25). Because: Carlos Alcaraz is deep into the US Open and the NO position has deteriorated. At 57% YES, holding this risk without spendable liquidity ties up capital better freed up for upcoming resolutions."
+    },
+    {
+      "ts": 1788873401239,
+      "kind": "book",
+      "text": "Looked over 18 positions: The book is tightly constrained by zero spendable liquidity, awaiting closed market resolutions. Most open positions are sound, but the Alcaraz Grand Slam NO position is underperforming and its risk profile is unfavorable given current pricing. (1 change(s) proposed)"
+    },
     {
       "ts": 1788870878947,
       "kind": "analysis",
@@ -437,16 +447,6 @@
       "ts": 1788819825892,
       "kind": "screen",
       "text": "Escalated \"\ud83c\uddfa\ud83c\uddf8 Will the Fed raise interest rates in September 2026?\" at 46%: quick estimate 15% vs market 46%"
-    },
-    {
-      "ts": 1788817844236,
-      "kind": "book",
-      "text": "Looked over 18 positions: The book is entirely locked by zero spendable liquidity while awaiting payouts from closed markets. All open positions align with their structural theses and cannot be traded right now. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1788817407702,
-      "kind": "screen",
-      "text": "Passed on \"Will Kalshi beat Polymarket?\" at 54%: quick estimate 45% agrees with market. This is a vague vibes-based question about market dominance with no fixed timeline or measurable resolution standard."
     }
   ],
   "todos": [
@@ -650,6 +650,12 @@
   ],
   "own_actions": [
     {
+      "ts": 1788873513319,
+      "action": "sell",
+      "detail": "sold out of \"Will Carlos Alcaraz win at least 2 Grand Slams in 2026?\" (NO, P/L M$-25)",
+      "reasoning": "Carlos Alcaraz is deep into the US Open and the NO position has deteriorated. At 57% YES, holding this risk without spendable liquidity ties up capital better freed up for upcoming resolutions."
+    },
+    {
       "ts": 1788870317707,
       "action": "note_remove",
       "detail": "retired a standing note: [self] [liquidity] Still M$0 spendable. Awaiting resolution of closed markets to unlock ~M$768. High-risk positions: Pap",
@@ -714,12 +720,6 @@
       "action": "todo_add",
       "detail": "added to its to-do list: Return M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 upon liquidity return.",
       "reasoning": "Recording a debt from received mana to ensure it is paid back once closed markets resolve."
-    },
-    {
-      "ts": 1788799373624,
-      "action": "note_remove",
-      "detail": "retired a standing note: [self] [self] [liquidity] Still liquidity-constrained (M$0). Monitoring Chris Pappas (I2E9SREssp) NO position; market at",
-      "reasoning": "Pruning redundant, stale liquidity notes to maintain a clean decision-making environment."
     }
   ],
   "positions": [
@@ -782,18 +782,6 @@
       "prob": 0.0,
       "closed": true,
       "days_to_close": 0.0
-    },
-    {
-      "question": "Will Carlos Alcaraz win at least 2 Grand Slams in 2026?",
-      "url": "https://manifold.markets/polymathematic/will-carlos-alcaraz-win-at-least-2-UAsREZuPt2",
-      "side": "NO",
-      "shares": 130.6,
-      "invested": 81.0,
-      "value": 56.2,
-      "profit": -24.8,
-      "prob": 0.57,
-      "closed": false,
-      "days_to_close": 5.4
     },
     {
       "question": "Will the next full gemini model be frontier at coding?",
@@ -877,7 +865,7 @@
       "profit": -6.3,
       "prob": 0.57,
       "closed": false,
-      "days_to_close": 7.5
+      "days_to_close": 7.4
     },
     {
       "question": "Will Grok 4.7 be released on 9/11?",
@@ -889,7 +877,7 @@
       "profit": 6.0,
       "prob": 0.248,
       "closed": false,
-      "days_to_close": 4.5
+      "days_to_close": 4.4
     },
     {
       "question": "Will the WTI Crude Oil Spot Price be above $78.50 on August 11, 2026?",
@@ -913,7 +901,7 @@
       "profit": 10.4,
       "prob": 0.99,
       "closed": false,
-      "days_to_close": 7.5
+      "days_to_close": 7.4
     },
     {
       "question": "Will Gukesh be board 1 for India at Olympiad?",
