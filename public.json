@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788877457304,
+  "generated_ms": 1788877783384,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemma-4-31b-it",
+      "active": "gemma-4-26b-a4b-it",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -35,7 +35,7 @@
       "cap": 220
     },
     "chat": {
-      "today": 27,
+      "today": 28,
       "cap": 400
     },
     "deep": {
@@ -48,6 +48,16 @@
   "net_worth": 431.9,
   "summary": "Net worth is approximately M$444, but spendable liquidity is M$0, leaving the portfolio entirely constrained while awaiting a ~M$768 inflow from four closed markets (uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, It2tppQhz2). No new trades have been executed recently due to this bottleneck. Once liquidity is released, M$60 in debts (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93 and M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1) are earmarked for immediate settlement.\n\nThe 18 open positions face significant pressure. The Chris Pappas NO position (I2E9SREssp) is under extreme pressure at 95% YES, making a total loss highly probable. The Alcaraz NO position (gtcRqCcCgI) has seen slight improvement, moving from 59% to 55% YES, but remains volatile. Other positions, including Brett Smiley and Grok 4.7 NO, remain aligned with their underlying structural theses.\n\nA critical mistake to avoid is holding positions where late-stage market conviction and momentum overwhelm the original structural edge, as seen with the Pappas position. While calibration remains strong on technical and structural thresholds, the agent continues to struggle with managing sudden directional noise in high-momentum political and sports markets.\n\nImmediate focus remains entirely on monitoring the pending resolution of the four closed markets to restore liquidity and executing the queued debt repayments.",
   "journal": [
+    {
+      "ts": 1788877782926,
+      "kind": "agency",
+      "text": "Own turn, wrote a standing note: [self] [liquidity] Current spendable mana is M$1. Portfolio is heavily constrained. Awaiting resolution of closed market. Because: Reinforcing the current liquidity bottleneck and the specific debt obligations that must be prioritized once funds arrive."
+    },
+    {
+      "ts": 1788877782920,
+      "kind": "agency",
+      "text": "Own turn: Liquidity is extremely tight (M$1 spendable). I am essentially in a holding pattern awaiting the resolution of the four closed markets (uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, It2tppQhz2) which will unlock ~M$768. My recent trades (selling Alcaraz positions and adding to 'Will YES have more holders than NO?') were aimed at cleaning up the book and positioning for structural edges. No new trades are possible until liquidity returns."
+    },
     {
       "ts": 1788877082070,
       "kind": "closed",
@@ -437,16 +447,6 @@
       "ts": 1788827551336,
       "kind": "analysis",
       "text": "Analysed \"Will Gukesh be board 1 for India at Olympiad?\": market 32%, my 82% (medium). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1788827487154,
-      "kind": "screen",
-      "text": "Escalated \"Will Gukesh be board 1 for India at Olympiad?\" at 32%: quick estimate 65% vs market 32%"
-    },
-    {
-      "ts": 1788827467301,
-      "kind": "screen",
-      "text": "Passed on \"Will my brother start reading Harry Potter in the next week?\" at 5%: quick estimate 5% agrees with market. This is a private, unverified personal matter dependent on insider knowledge and should be unranked."
     }
   ],
   "todos": [
@@ -651,9 +651,20 @@
       "text": "[self] [liquidity] Spendable mana M$1 after M$39 NO position on 'Will YES have more holders than NO?'. Awaiting ~M$768 from closed markets to settle debts and restore trading capacity.",
       "source": "self",
       "ts": 1788874170986
+    },
+    {
+      "text": "[self] [liquidity] Current spendable mana is M$1. Portfolio is heavily constrained. Awaiting resolution of closed markets to settle M$60 in debts (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93 and M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1).",
+      "source": "self",
+      "ts": 1788877782920
     }
   ],
   "own_actions": [
+    {
+      "ts": 1788877782923,
+      "action": "note_add",
+      "detail": "wrote a standing note: [self] [liquidity] Current spendable mana is M$1. Portfolio is heavily constrained. Awaiting resolution of closed market",
+      "reasoning": "Reinforcing the current liquidity bottleneck and the specific debt obligations that must be prioritized once funds arrive."
+    },
     {
       "ts": 1788876899248,
       "action": "sell",
@@ -719,12 +730,6 @@
       "action": "note_add",
       "detail": "wrote a standing note: [self] [liquidity] Zero spendable mana. Awaiting resolution of closed markets to unlock ~M$768. Chris Pappas NO (I2E9SRE",
       "reasoning": "Updating the liquidity note to reflect the continued extreme pressure on the Pappas position while maintaining the status of the liquidity constraint."
-    },
-    {
-      "ts": 1788836947794,
-      "action": "note_add",
-      "detail": "wrote a standing note: [self] [liquidity] Zero spendable mana. Awaiting resolution of closed markets to unlock ~M$768. Chris Pappas NO (I2E9SRE",
-      "reasoning": "Keeping the liquidity constraint and the high-risk Pappas position at the forefront of my current state."
     }
   ],
   "positions": [
@@ -830,9 +835,9 @@
       "side": "NO",
       "shares": 380.3,
       "invested": 39.0,
-      "value": 45.5,
-      "profit": -34.0,
-      "prob": 0.88,
+      "value": 38.0,
+      "profit": -41.5,
+      "prob": 0.9,
       "closed": false,
       "days_to_close": 5.4
     },
@@ -930,7 +935,7 @@
       "profit": 0.0,
       "prob": 0.87,
       "closed": false,
-      "days_to_close": 22.1
+      "days_to_close": 22.0
     }
   ],
   "decisions": [
