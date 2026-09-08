@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788878542604,
+  "generated_ms": 1788878887666,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 42,
+      "today": 45,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 14,
+      "today": 15,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 424.17,
   "summary": "Net worth is approximately M$444, but spendable liquidity is M$0, leaving the portfolio entirely constrained while awaiting a ~M$768 inflow from four closed markets (uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, It2tppQhz2). No new trades have been executed recently due to this bottleneck. Once liquidity is released, M$60 in debts (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93 and M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1) are earmarked for immediate settlement.\n\nThe 18 open positions face significant pressure. The Chris Pappas NO position (I2E9SREssp) is under extreme pressure at 95% YES, making a total loss highly probable. The Alcaraz NO position (gtcRqCcCgI) has seen slight improvement, moving from 59% to 55% YES, but remains volatile. Other positions, including Brett Smiley and Grok 4.7 NO, remain aligned with their underlying structural theses.\n\nA critical mistake to avoid is holding positions where late-stage market conviction and momentum overwhelm the original structural edge, as seen with the Pappas position. While calibration remains strong on technical and structural thresholds, the agent continues to struggle with managing sudden directional noise in high-momentum political and sports markets.\n\nImmediate focus remains entirely on monitoring the pending resolution of the four closed markets to restore liquidity and executing the queued debt repayments.",
   "journal": [
+    {
+      "ts": 1788878887604,
+      "kind": "analysis",
+      "text": "Analysed \"Will the WTI Crude Oil Spot Price be above $83 on September 10, 2026?\": market 96%, my 97% (high). No trade, edge 0.013 below minimum 0.04."
+    },
+    {
+      "ts": 1788878729883,
+      "kind": "screen",
+      "text": "Escalated \"Will the WTI Crude Oil Spot Price be above $83 on September 10, 2026?\" at 96%: quick estimate 45% vs market 96%"
+    },
     {
       "ts": 1788877782926,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1788829988219,
       "kind": "screen",
       "text": "Passed on \"will Kalorm survive to the end of 'to face the death you're never that\" at 95%: quick estimate 85% agrees with market. This is a niche glowfic serial fiction question with sparse trading and no obvious breaking text evidence."
-    },
-    {
-      "ts": 1788829211505,
-      "kind": "book",
-      "text": "Looked over 18 positions: The book has M$0 spendable liquidity, relying on pending resolutions of four closed markets to release ~M$768. Active open positions reflect sound structural theses, though several face near-term volatility. No positions warrant selling at this moment. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1788827551336,
-      "kind": "analysis",
-      "text": "Analysed \"Will Gukesh be board 1 for India at Olympiad?\": market 32%, my 82% (medium). No trade, size floored to zero by balance reserve."
     }
   ],
   "todos": [
@@ -863,7 +863,7 @@
       "profit": -2.6,
       "prob": 0.262,
       "closed": false,
-      "days_to_close": 3.6
+      "days_to_close": 3.5
     },
     {
       "question": "Will Geometry Dash 2.21 Update Will Be Released In August 13 2026?",
@@ -939,6 +939,31 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1788878887601,
+      "kind": "no_trade",
+      "question": "Will the WTI Crude Oil Spot Price be above $83 on September 10, 2026?",
+      "url": "https://manifold.markets/ShaneBo/will-the-wti-crude-oil-spot-price-b-S6In5IIR0t",
+      "market_prob": 0.9573339991815281,
+      "model_prob": 0.97,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With WTI crude oil currently trading at $91.88, there is a comfortable 9.7% buffer above the $83 threshold with only two days left until resolution. A two-day drop of this magnitude is historically rare, making a YES resolution highly probable.",
+      "uncertainty": "Extreme short-term market volatility or a black swan event occurring within the next 48 hours.",
+      "resolution_risk": "Very low, as the resolution criteria rely on highly reliable official sources (EIA and FRED) and include clear fallback rules for non-trading days.",
+      "evidence_for": [
+        "The WTI crude oil spot price is currently trading at approximately $91.88 as of September 8, 2026.",
+        "This provides a substantial buffer of $8.88 (about 9.7%) above the $83 threshold.",
+        "There are only 2 days remaining until the target date of September 10, 2026.",
+        "A 2-day price drop of nearly 10% is historically rare for WTI crude oil outside of major global crises."
+      ],
+      "evidence_against": [
+        "Extreme, unexpected geopolitical events or sudden supply shocks could trigger a sharp sell-off.",
+        "Cushing-specific infrastructure disruptions could theoretically cause local spot prices to temporarily disconnect from global benchmarks."
+      ],
+      "reason": "edge 0.013 below minimum 0.04"
+    },
     {
       "ts": 1788876338876,
       "kind": "no_trade",
@@ -1265,31 +1290,6 @@
       "evidence_against": [
         "He still has to win three consecutive best-of-five matches (Quarterfinal, Semifinal, Final) against elite top-10 competition.",
         "Major rivals such as Jannik Sinner and other top seeds represent formidable obstacles in the late rounds."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1788805031350,
-      "kind": "no_trade",
-      "question": "Will Chris Pappas win the 2026 New Hampshire Democratic Primary for Senate?",
-      "url": "https://manifold.markets/Jack1/will-chris-pappas-win-the-2026-new",
-      "market_prob": 0.9399996272610625,
-      "model_prob": 0.74,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "While progressive challenger Karishma Manzur has tightened the race in late polling, Chris Pappas retains strong structural advantages as a high-profile sitting congressman with VP Harris's endorsement and solid party backing. I estimate his win probability at 74%.",
-      "uncertainty": "Primary voter turnout composition between progressive activists and moderate/establishment Democrats on September 8.",
-      "resolution_risk": "A very tight margin leading to an automatic recount or legal challenge could delay formal resolution.",
-      "evidence_for": [
-        "Four-term US Representative with high statewide name recognition in New Hampshire.",
-        "Endorsed by Vice President Kamala Harris on August 31, 2026.",
-        "Backed by state party establishment and substantial TV/digital ad buys focusing on electability."
-      ],
-      "evidence_against": [
-        "Late August UNH Survey Center polling showed Pappas's support sliding.",
-        "Progressive challenger Karishma Manzur has built significant momentum in the final weeks of the campaign.",
-        "Reports indicate Pappas lost his previously decisive polling advantage heading into primary day."
       ],
       "reason": "size floored to zero by balance reserve"
     }
