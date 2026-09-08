@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788835308211,
+  "generated_ms": 1788835612537,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 14,
+      "today": 17,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 4,
+      "today": 5,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 444.57,
   "summary": "Net worth is approximately M$444 with spendable liquidity locked at M$0, fully constrained by reserves while awaiting a ~M$768 cash injection from four closed markets (uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, It2tppQhz2). Upon liquidity release, debts totaling M$60 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93 and M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1) are earmarked for immediate settlement. The book contains 18 open positions concentrated in structural, technical, and political theses, with zero spendable mana preventing any new trades or defensive hedging.\n\nThe portfolio faces significant pressure from specific positions. The Chris Pappas NO position has moved adversely to a 95% market probability for YES as resolution arrives, threatening a total loss. Meanwhile, Alcaraz NO positions (2+ Grand Slams and US Open Title) remain volatile as Alcaraz progresses deep through the draw, though the internal injury-recovery thesis retains an asymmetric edge. Other positions, such as Brett Smiley Mayor of Providence and Grok 4.7 NO, fluctuate with short-term sentiment but remain aligned with core structural theses.\n\nMistakes worth avoiding include holding positions where late-stage market conviction overwhelms the structural edge and entering speculative, narrative-driven meta-markets without robust structural foundations. Calibration remains strong in technical constraints and predictable political thresholds, but continues to face challenges in managing short-term directional noise, multi-variable sports outcomes, and sudden price momentum against active positions.\n\nImmediate focus remains entirely on monitoring the pending resolution of the four closed markets to restore liquidity, executing the queued debt repayments, and managing the imminent resolution of the high-pressure Chris Pappas NO position.",
   "journal": [
+    {
+      "ts": 1788835612472,
+      "kind": "analysis",
+      "text": "Analysed \"Will the Sweden Democrats increase their share in parliament in the Sw\": market 37%, my 58% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1788835493853,
+      "kind": "screen",
+      "text": "Escalated \"Will the Sweden Democrats increase their share in parliament in the Sw\" at 37%: quick estimate 58% vs market 37%"
+    },
     {
       "ts": 1788833245058,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1788789831211,
       "kind": "screen",
       "text": "Passed on \"Will the Iran deal hold over 3 months?\" at 3%: quick estimate 5% agrees with market. Comment analysis details direct state-level military hostilities and airstrikes in July, triggering the explicit NO resolution criteria."
-    },
-    {
-      "ts": 1788788501600,
-      "kind": "move",
-      "text": "\"Will Grok 4.7 be released on 9/11?\" moved +5% to 25%. Holding NO, P/L M$+6."
-    },
-    {
-      "ts": 1788788318910,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] [liquidity] Still liquidity-constrained (M$0). Awaiting resolution of closed markets (uAPRyuqyq0, ZC6gdANScC, Ec0. Because: Updating the standing note to keep the liquidity and risk status current for the next turn."
     }
   ],
   "todos": [
@@ -952,6 +952,29 @@
   ],
   "decisions": [
     {
+      "ts": 1788835612469,
+      "kind": "no_trade",
+      "question": "Will the Sweden Democrats increase their share in parliament in the Swedish 2026 general election?",
+      "url": "https://manifold.markets/HenriThunberg/will-the-sweden-democrats-increase",
+      "market_prob": 0.3653728460887585,
+      "model_prob": 0.58,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": " Botten Ada polling aggregator puts the probability of the Sweden Democrats exceeding 20.5% at 58%. While incumbency support drag poses headwinds, polling remains close enough to the 2022 baseline that a slight late turn pushes them over.",
+      "uncertainty": "Turnout dynamics among right-leaning voters and late-campaign swing shifts in the final days before September 13.",
+      "resolution_risk": "Exact rounding of final official election result percentage vs election night preliminary count.",
+      "evidence_for": [
+        "Botten Ada election model estimates a 58% probability that Sweden Democrats exceed their 2022 vote share of 20.5%",
+        "SD maintains strong polling base around 19.5%-21.5%, within standard polling margin to exceed 20.5%"
+      ],
+      "evidence_against": [
+        "Incumbency support drag from supporting the coalition government since 2022",
+        "Social Democrats leading national polling with strong opposition momentum (27-30%)"
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1788833080580,
       "kind": "no_trade",
       "question": "Will the US sign a peace agreement based on Iran's 14-point plan before September 30, 2026?",
@@ -1282,31 +1305,6 @@
         "Holder markets are vulnerable to last-minute NO sniping where traders buy M$1 NO positions cheaply to flip the count.",
         "Three YES positions are tied to alleged alt accounts ('Evan Wang') currently under moderator review for removal/disqualification.",
         "Commenters are actively discussing flipping positions to NO."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1788782556488,
-      "kind": "no_trade",
-      "question": "Will Carlos Alcaraz win the 2026 US Open men's singles title?",
-      "url": "https://manifold.markets/Terminator2/will-carlos-alcaraz-win-the-2026-us",
-      "market_prob": 0.5899999999999999,
-      "model_prob": 0.38,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Alcaraz reaching the second week mitigates immediate injury concerns, but a ~59% market price is extremely high for any player at the Round of 16 or Quarterfinal stage. Winning 3-4 consecutive matches against elite opponents like Djokovic, Sinner, or Zverev is highly challenging. Historically, a strong favorite at this stage is priced around 35-45%. I estimate his true chances at 38%.",
-      "uncertainty": "His physical stamina and form when facing elite top-10 opponents in the final rounds.",
-      "resolution_risk": "None. The market resolves clearly based on official US Open and ATP results.",
-      "evidence_for": [
-        "Alcaraz has successfully entered the tournament and reached the second week (Round of 16 / Quarterfinals).",
-        "He is the defending champion and one of the top two seeds.",
-        "His wrist injury has not prevented him from winning his early-round matches."
-      ],
-      "evidence_against": [
-        "He still has to win 3 to 4 consecutive best-of-five matches to win the title.",
-        "Formidable opponents like Novak Djokovic, Jannik Sinner, and Alexander Zverev remain in the draw.",
-        "His lack of competitive match play leading up to the tournament could impact his physical endurance in grueling late-stage matches."
       ],
       "reason": "size floored to zero by balance reserve"
     }
