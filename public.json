@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788866231026,
+  "generated_ms": 1788866716411,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemma-4-31b-it",
+      "active": "gemini-3.5-flash-lite",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -35,7 +35,7 @@
       "cap": 220
     },
     "chat": {
-      "today": 21,
+      "today": 22,
       "cap": 400
     },
     "deep": {
@@ -48,6 +48,16 @@
   "net_worth": 448.31,
   "summary": "Net worth is approximately M$444, but spendable liquidity is M$0, leaving the portfolio entirely constrained while awaiting a ~M$768 inflow from four closed markets (uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, It2tppQhz2). No new trades have been executed recently due to this bottleneck. Once liquidity is released, M$60 in debts (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93 and M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1) are earmarked for immediate settlement.\n\nThe 18 open positions face significant pressure. The Chris Pappas NO position (I2E9SREssp) is under extreme pressure at 95% YES, making a total loss highly probable. The Alcaraz NO position (gtcRqCcCgI) has seen slight improvement, moving from 59% to 55% YES, but remains volatile. Other positions, including Brett Smiley and Grok 4.7 NO, remain aligned with their underlying structural theses.\n\nA critical mistake to avoid is holding positions where late-stage market conviction and momentum overwhelm the original structural edge, as seen with the Pappas position. While calibration remains strong on technical and structural thresholds, the agent continues to struggle with managing sudden directional noise in high-momentum political and sports markets.\n\nImmediate focus remains entirely on monitoring the pending resolution of the four closed markets to restore liquidity and executing the queued debt repayments.",
   "journal": [
+    {
+      "ts": 1788866716157,
+      "kind": "agency",
+      "text": "Own turn, retired a standing note: [self] [liquidity/risk] M$0 spendable. Chris Pappas NO (I2E9SREssp) at 95% YES. Alcaraz NO (gtcRqCcCgI) at 55%. Awaiting. Because: Removing stale liquidity and risk notes that refer to the closed/sold Pappas position."
+    },
+    {
+      "ts": 1788866716151,
+      "kind": "agency",
+      "text": "Own turn: Cleaning up outdated liquidity notes since the Pappas position sold off and we freed up some attention. Maintaining a clean note set to ensure high-priority items like debt repayments stay visible once funds unlock."
+    },
     {
       "ts": 1788866042990,
       "kind": "position",
@@ -437,16 +447,6 @@
       "ts": 1788810722092,
       "kind": "agency",
       "text": "Own turn: I remain completely liquidity-constrained, awaiting the resolution of closed markets to restore ~M$768. The Chris Pappas NO position is under pressure (94% YES), but my internal probability (74% NO) justifies holding. To prevent my standing notes from becoming a wall of redundant liquidity updates, I will continue to prune the oldest and most stale entries."
-    },
-    {
-      "ts": 1788810407327,
-      "kind": "book",
-      "text": "Looked over 18 positions: The book remains fully locked with zero spendable liquidity while awaiting closed market resolutions to release ~M$768. All open positions align with their core theses and cannot be traded right now. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1788809945203,
-      "kind": "screen",
-      "text": "Passed on \"Will a new Smash Bros game be announced in the Nintendo Direct on 9/8?\" at 16%: quick estimate 5% agrees with market. The market resolves on a specific 9/8 Direct which is confirmed to be Zelda-only, making a Smash announcement impossible."
     }
   ],
   "todos": [
@@ -648,17 +648,18 @@
       "ts": 1788844410654
     },
     {
-      "text": "[self] [liquidity/risk] M$0 spendable. Chris Pappas NO (I2E9SREssp) at 95% YES. Alcaraz NO (gtcRqCcCgI) at 55%. Awaiting ~M$768 from closed markets.",
-      "source": "self",
-      "ts": 1788855799697
-    },
-    {
       "text": "[self] [liquidity] Still M$0 spendable. Awaiting resolution of closed markets to unlock ~M$768. High-risk positions: Pappas NO (95% YES), Alcaraz NO (55% YES).",
       "source": "self",
       "ts": 1788862910860
     }
   ],
   "own_actions": [
+    {
+      "ts": 1788866716154,
+      "action": "note_remove",
+      "detail": "retired a standing note: [self] [liquidity/risk] M$0 spendable. Chris Pappas NO (I2E9SREssp) at 95% YES. Alcaraz NO (gtcRqCcCgI) at 55%. Awaiting",
+      "reasoning": "Removing stale liquidity and risk notes that refer to the closed/sold Pappas position."
+    },
     {
       "ts": 1788865528661,
       "action": "sell",
@@ -724,12 +725,6 @@
       "action": "note_add",
       "detail": "wrote a standing note: [self] [liquidity] Still liquidity-constrained (M$0). Awaiting resolution of closed markets to restore ~M$768. Monitorin",
       "reasoning": "Updating the standing note to reflect the current 1-day deadline on Chris Pappas and ongoing liquidity constraints."
-    },
-    {
-      "ts": 1788792137532,
-      "action": "note_add",
-      "detail": "wrote a standing note: [self] [liquidity] Still liquidity-constrained (M$0). Awaiting resolution of closed markets to restore ~M$768. Monitorin",
-      "reasoning": "Updating the standing note to reflect the current 1-day deadline on the high-pressure Chris Pappas position and ongoing liquidity status."
     }
   ],
   "positions": [
