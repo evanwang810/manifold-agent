@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788893664105,
+  "generated_ms": 1788893964763,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 63,
+      "today": 67,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 20,
+      "today": 21,
       "cap": 34
     }
   },
@@ -48,6 +48,21 @@
   "net_worth": 429.65,
   "summary": "Net worth is approximately M$431, with spendable liquidity sitting at a tight M$1. Portfolio activity recently included pruning bleeding or collapsed underperforming positions\u2014specifically selling out of the Chris Pappas NO position at a M$-16 loss after it surged to 95% YES, and cutting both Alcaraz NO positions at losses as he advanced deep into the US Open. A new M$39 NO position was deployed into \"Will YES have more holders than NO?\", and a M$15 limit order / position was filled on United Russia gaining seats in the Duma. Despite these maneuvers, the portfolio remains severely constrained while awaiting a ~M$768 inflow from four closed markets (uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, It2tppQhz2). Once liquidity is finally released, M$60 in earmarked debt repayments (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93 and M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1) must be settled immediately.\n\nThe remaining open positions face standard background volatility, but structural theses generally hold. The agent successfully recognized and acted on the failure of high-momentum political/sports positions where late-stage narrative shift overwhelmed initial edges. A critical mistake to avoid is holding onto speculative NO positions when late-stage momentum and market convergence heavily overwhelm the original structural edge\u2014as demonstrated by the Pappas collapse and the Alcaraz US Open run. Chasing or stubbornly clinging to positions when liquidity is frozen traps capital that could be better deployed once resolutions hit.\n\nCalibration remains strong on technical, mechanical, and structural thresholds, but the agent has historically struggled with managing sudden directional noise and emotional narrative momentum in high-profile political and sports brackets. Moving forward, the core focus remains entirely on waiting for the pending resolution of the four closed markets to restore cash flow, clear outstanding debts, and rebuild operational flexibility.",
   "journal": [
+    {
+      "ts": 1788893964707,
+      "kind": "analysis",
+      "text": "Analysed \"H1B demand persists despite $100k fee?\": market 77%, my 97% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1788893871971,
+      "kind": "screen",
+      "text": "Escalated \"H1B demand persists despite $100k fee?\" at 77%: quick estimate 95% vs market 77%"
+    },
+    {
+      "ts": 1788893851982,
+      "kind": "screen",
+      "text": "Passed on \"Will I beat @retr0id to doing a one arm chinup?\" at 62%: quick estimate 55% agrees with market. This is a personal fitness bet between two niche users with subjective updates, making it a coin flip that does not justify the deep model."
+    },
     {
       "ts": 1788892740931,
       "kind": "agency",
@@ -432,21 +447,6 @@
       "ts": 1788859109595,
       "kind": "agency",
       "text": "Own turn: I remain entirely liquidity-constrained (M$0 spendable) while awaiting the resolution of closed markets to unlock ~M$768. The Chris Pappas NO position is under extreme pressure (95% YES) and is likely a loss. My standing notes have become cluttered with multiple redundant liquidity updates; I will begin removing the oldest ones to maintain a clean and efficient decision-making environment."
-    },
-    {
-      "ts": 1788858471777,
-      "kind": "book",
-      "text": "Looked over 18 positions: The book remains entirely liquidity-constrained with M$0 spendable mana, awaiting the resolution of four closed markets to unlock ~M$768. Open positions align with their fundamental theses, and no discretionary sales are warranted right now. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1788855799704,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] [liquidity/risk] M$0 spendable. Chris Pappas NO (I2E9SREssp) at 95% YES. Alcaraz NO (gtcRqCcCgI) at 55%. Awaiting. Because: Updating the liquidity and risk status to reflect the ongoing pressure on the Pappas position and movement in the Alcaraz position."
-    },
-    {
-      "ts": 1788855799697,
-      "kind": "agency",
-      "text": "Own turn: I remain entirely liquidity-constrained with M$0 spendable mana. The Chris Pappas NO position (I2E9SREssp) is under extreme pressure at 95% YES, which is significantly higher than my 74% NO estimate. Alcaraz NO (gtcRqCcCgI) has also moved down to 55%. I am waiting for the resolution of the four closed markets to unlock approximately M$768 to settle debts and resume trading."
     }
   ],
   "todos": [
@@ -618,11 +618,6 @@
       "ts": 1788655864777
     },
     {
-      "text": "[self] [liquidity] Zero spendable mana. Awaiting resolution of closed markets to unlock ~M$768. Chris Pappas NO (I2E9SREssp) is at 95% YES, which is extremely high compared to my 74% NO estimate, but since I have no spendable mana, I cannot hedge or exit.",
-      "source": "self",
-      "ts": 1788840623126
-    },
-    {
       "text": "[self] [liquidity] Zero spendable mana. Awaiting resolution of closed markets to unlock ~M$768. Chris Pappas NO (I2E9SREssp) remains at 95% YES (extreme pressure).",
       "source": "self",
       "ts": 1788844410654
@@ -656,6 +651,11 @@
       "text": "[self] [liquidity] Still M$1 spendable. Awaiting resolution of closed markets to unlock ~M$768. Monitoring 'Will YES have more holders than NO?' (9C5RE6dRyg) for potential exit to free liquidity.",
       "source": "self",
       "ts": 1788892740925
+    },
+    {
+      "text": "In Manifold binary markets with an explicit N/A clause, fair probability corresponds to the conditional probability P(YES | YES or NO), because N/A returns stake.",
+      "source": "self",
+      "ts": 1788893964598
     }
   ],
   "own_actions": [
@@ -951,6 +951,28 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1788893964704,
+      "kind": "no_trade",
+      "question": "H1B demand persists despite $100k fee?",
+      "url": "https://manifold.markets/GustavoMafra/h1b-demand-persists-despite-100k-fe",
+      "market_prob": 0.7651247456900664,
+      "model_prob": 0.97,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "USCIS confirmed on July 17, 2026 that the FY2027 cap of 85,000 was reached with 211,600 registrations. Outcome NO is effectively ruled out. If the $100k fee was in effect, it resolves YES; if not in effect, it resolves N/A (refunding trades). On a binary basis, P(YES | YES/NO) is ~97%.",
+      "uncertainty": "Whether the market creator resolves N/A due to legal challenges/vacatur of the $100k fee, but conditional on a binary resolution (YES vs NO), YES is virtually guaranteed.",
+      "resolution_risk": "If the fee is deemed 'not in effect' for FY2027, the market resolves N/A, which refunds shares on Manifold without triggering a NO outcome.",
+      "evidence_for": [
+        "USCIS officially confirmed on July 17, 2026, that it received 211,600 registrations and reached the FY2027 statutory cap of 85,000 H-1B visas in the first selection round.",
+        "No second lottery is needed for FY2027, fulfilling the criteria for full allocation of the 85,000 cap."
+      ],
+      "evidence_against": [
+        "None regarding the cap being filled; the FY2027 cap has already been met."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1788891440389,
       "kind": "no_trade",
@@ -1278,29 +1300,6 @@
         "Even if unreleased, general sentiment trends and sampling expectations make a jump back to 13% or higher unlikely, but the 3% price is characteristic of a market where the negative result is already known."
       ],
       "reason": "edge 0.006 below minimum 0.04"
-    },
-    {
-      "ts": 1788827551333,
-      "kind": "no_trade",
-      "question": "Will Gukesh be board 1 for India at Olympiad?",
-      "url": "https://manifold.markets/Zeolite/will-gukesh-be-board-1-for-india-at",
-      "market_prob": 0.3208470325818456,
-      "model_prob": 0.82,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "The resolution criteria require Gukesh to play on Board 1 during the event. Match reports show him playing Board 1, and initial low-board listings appear to have been rating-sorted rosters rather than match lineup restrictions.",
-      "uncertainty": "Whether the tournament match reports definitively confirm official Board 1 match play under the resolution criteria.",
-      "resolution_risk": "Ambiguity between official team roster submission order versus actual match board appearance.",
-      "evidence_for": [
-        "Resolution criteria specify YES if Gukesh plays on Board 1 during the 2026 Olympiad at any point.",
-        "Live tournament reports indicate Gukesh has already played on Board 1 in matches (including against Fabiano Caruana).",
-        "Pre-event line-up listings that placed Gukesh lower were reportedly sorted by rating rather than fixed board assignments."
-      ],
-      "evidence_against": [
-        "Initial line-up announcements suggested a potential strategic reshuffle putting Arjun Erigaisi on Board 1 and Gukesh on Board 4."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
