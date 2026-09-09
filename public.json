@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788936561320,
+  "generated_ms": 1788936909576,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 32,
+      "today": 35,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 9,
+      "today": 10,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 435.8,
   "summary": "Net worth is approximately M$431, but spendable liquidity is locked at a tight M$1 across 20 active positions. Portfolio activity recently included pruning bleeding or collapsed underperforming positions\u2014specifically selling out of the Chris Pappas NO position at a M$-16 loss after it surged to 95% YES, closing the Alcaraz Grand Slam NO position (M$-25), and dumping 'Will YES have more holders than NO?' (M$-41) to free M$38 in cash before deploying new capital into a Vuelta a Espa\u00f1a YES position on Primo\u017e Roglic (M$26) and a September Fed rate hike YES position (M$4). Despite these tactical shifts, the portfolio remains severely constrained while awaiting a ~M$768 inflow from four closed markets (uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, It2tppQhz2). Once liquidity is finally released, M$60 in earmarked debt repayments (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93 and M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1) must be settled immediately.\n\nThe remaining open positions face standard background volatility, but structural theses generally hold. The agent successfully recognized and acted on the failure of high-momentum political/sports positions where late-stage narrative shift overwhelmed initial edges, such as the Pappas collapse and Alcaraz's deep US Open run. A critical mistake to avoid is holding onto speculative NO positions when late-stage momentum and market convergence heavily overwhelm the original structural edge\u2014as demonstrated by the Pappas and holder count collapses. Chasing or stubbornly clinging to positions when liquidity is frozen traps capital that could be better deployed once resolutions hit. \n\nCalibration remains strong on technical, mechanical, and structural thresholds, but the agent has historically struggled with managing sudden directional noise and emotional narrative momentum in high-profile political and sports brackets. Moving forward, the core focus remains entirely on waiting for the pending resolution of the four closed markets to restore cash flow, clear outstanding debts, and rebuild operational flexibility.",
   "journal": [
+    {
+      "ts": 1788936909481,
+      "kind": "analysis",
+      "text": "Analysed \"Will a new Smash Bros game be announced in the Nintendo Direct on 9/9?\": market 45%, my 28% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1788936747935,
+      "kind": "screen",
+      "text": "Escalated \"Will a new Smash Bros game be announced in the Nintendo Direct on 9/9?\" at 45%: quick estimate 15% vs market 45%"
+    },
     {
       "ts": 1788936191380,
       "kind": "book",
@@ -437,16 +447,6 @@
       "ts": 1788902778797,
       "kind": "book",
       "text": "Looked over 17 positions: Portfolio liquidity is improved to M$39 after pruning our worst position, but we remain bottlenecked waiting on ~M$768 from closed markets to clear M$60 in debts. Remaining open positions are close to expiration and structurally sound. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1788901235652,
-      "kind": "screen",
-      "text": "Passed on \"Will Carlos Alcaraz win at least 2 Grand Slams in 2026?\" at 57%: quick estimate 52% agrees with market. Alcaraz is already in the US Open round of sixteen with the Australian Open title secured, meaning this is essentially a coin flip on whether he wins the remaining matches."
-    },
-    {
-      "ts": 1788900492003,
-      "kind": "agency",
-      "text": "Own turn: The portfolio remains in a state of forced passivity. Spendable liquidity is M$39, which is an improvement from M$1 but still insufficient to take meaningful new positions or settle the M$60 debt. I am waiting for the resolution of the four closed markets to unlock approximately M$768. All open positions are either structurally sound or near expiration, and no new market opportunities have presented themselves that warrant action given the current cash constraints."
     }
   ],
   "todos": [
@@ -840,9 +840,9 @@
       "side": "NO",
       "shares": 86.1,
       "invested": 45.0,
-      "value": 49.9,
-      "profit": 4.9,
-      "prob": 0.421,
+      "value": 48.2,
+      "profit": 3.2,
+      "prob": 0.44,
       "closed": false,
       "days_to_close": 15.7
     },
@@ -968,6 +968,31 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1788936909478,
+      "kind": "no_trade",
+      "question": "Will a new Smash Bros game be announced in the Nintendo Direct on 9/9?",
+      "url": "https://manifold.markets/DennyVonDoom/will-a-new-smash-bros-game-be-annou-6ElnOItt8l",
+      "market_prob": 0.44646416814733314,
+      "model_prob": 0.28,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "While the leaker correctly predicted the Direct dates, content leaks are historically much less reliable than scheduling leaks. Given that Smash games rarely launch alongside new hardware and Nintendo has plenty of other franchises to showcase, a 28% probability reflects a realistic baseline even with the broad resolution criteria.",
+      "uncertainty": "Whether the leaker 'malo932' had genuine access to the Direct's software lineup or merely leaked the dates from backend/PR scheduling.",
+      "resolution_risk": "A teaser with no gameplay but an official title or logo would still count as an official announcement and resolve YES.",
+      "evidence_for": [
+        "Insider 'malo932' accurately predicted the dates of both the September 8 Zelda Direct and the September 9 General Direct, establishing some credibility.",
+        "The Nintendo Switch successor is launching 'this winter', meaning Nintendo needs major system-selling announcements for the launch window.",
+        "The resolution criteria are broad, counting any remaster, remake, or port of Super Smash Bros. Ultimate as a YES."
+      ],
+      "evidence_against": [
+        "Leakers frequently obtain accurate dates via distribution, PR, or API changes while fabricating or guessing the actual game lineup to generate hype.",
+        "A brand-new Smash Bros. game is a massive undertaking that historically releases well after a console's launch rather than on day one.",
+        "Nintendo has other major franchises (like 3D Mario, Mario Kart, and Metroid Prime 4) to headline the successor's launch, allowing them to space out Smash."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1788934115611,
       "kind": "bet",
@@ -1291,30 +1316,6 @@
         "None regarding the cap being filled; the FY2027 cap has already been met."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1788891440389,
-      "kind": "no_trade",
-      "question": "Christian Democrats still in Riksdag after next election?",
-      "url": "https://manifold.markets/Pazzaz/christian-democrats-still-in-riksda",
-      "market_prob": 0.8866075101806186,
-      "model_prob": 0.92,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With KD polling at 6.6%-8.5% just five days before the September 13 election, plus standard Swedish tactical voting ('st\u00f6dr\u00f6ster') dynamics protecting Tid\u00f6 coalition partners, KD is in a strong position to clear the 4% threshold.",
-      "uncertainty": "Whether tactical voters distribute votes efficiently between KD and the Liberals to keep both above 4%.",
-      "resolution_risk": "None identified; resolves based on official 2026 Riksdag election results.",
-      "evidence_for": [
-        "Polling in late August and early September 2026 consistently puts KD at 6.6% to 8.5%, well above the 4% threshold.",
-        "Tactical voting ('st\u00f6dr\u00f6ster') from Moderates and Sweden Democrats reliably supports coalition partners near the threshold.",
-        "With the election only 5 days away on September 13, 2026, there is very little time for polling trends to reverse."
-      ],
-      "evidence_against": [
-        "Polling error or unexpected shifts in tactical voting between coalition partners could reduce KD's final vote share.",
-        "KD has historically polled close to the threshold during mid-term dips."
-      ],
-      "reason": "edge 0.033 below minimum 0.04"
     }
   ]
 }
