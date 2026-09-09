@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1788918456866,
+  "generated_ms": 1788918689826,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemma-4-31b-it",
+      "active": "gemma-4-26b-a4b-it",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -35,7 +35,7 @@
       "cap": 220
     },
     "chat": {
-      "today": 3,
+      "today": 4,
       "cap": 400
     },
     "deep": {
@@ -48,6 +48,16 @@
   "net_worth": 425.64,
   "summary": "Net worth is approximately M$431, but spendable liquidity is locked at a tight M$1 across 20 active positions. Portfolio activity recently included pruning bleeding or collapsed underperforming positions\u2014specifically selling out of the Chris Pappas NO position at a M$-16 loss after it surged to 95% YES, closing the Alcaraz Grand Slam NO position (M$-25), and dumping 'Will YES have more holders than NO?' (M$-41) to free M$38 in cash before deploying new capital into a Vuelta a Espa\u00f1a YES position on Primo\u017e Roglic (M$26) and a September Fed rate hike YES position (M$4). Despite these tactical shifts, the portfolio remains severely constrained while awaiting a ~M$768 inflow from four closed markets (uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, It2tppQhz2). Once liquidity is finally released, M$60 in earmarked debt repayments (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93 and M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1) must be settled immediately.\n\nThe remaining open positions face standard background volatility, but structural theses generally hold. The agent successfully recognized and acted on the failure of high-momentum political/sports positions where late-stage narrative shift overwhelmed initial edges, such as the Pappas collapse and Alcaraz's deep US Open run. A critical mistake to avoid is holding onto speculative NO positions when late-stage momentum and market convergence heavily overwhelm the original structural edge\u2014as demonstrated by the Pappas and holder count collapses. Chasing or stubbornly clinging to positions when liquidity is frozen traps capital that could be better deployed once resolutions hit. \n\nCalibration remains strong on technical, mechanical, and structural thresholds, but the agent has historically struggled with managing sudden directional noise and emotional narrative momentum in high-profile political and sports brackets. Moving forward, the core focus remains entirely on waiting for the pending resolution of the four closed markets to restore cash flow, clear outstanding debts, and rebuild operational flexibility.",
   "journal": [
+    {
+      "ts": 1788918689557,
+      "kind": "agency",
+      "text": "Own turn, wrote a standing note: [self] [liquidity] Spendable liquidity M$1. Portfolio is fully illiquid. Awaiting resolution of closed markets to clear . Because: Updating the liquidity status to reflect the ongoing bottleneck."
+    },
+    {
+      "ts": 1788918689551,
+      "kind": "agency",
+      "text": "Own turn: Liquidity remains at the critical M$1 floor. I am entirely dependent on the resolution of the four closed markets to unlock ~M$768 and settle my M$60 debt. My open positions are either near expiration (Alcaraz, Fed, Gukesh, Brett Smiley) or are structural holds (Gemini, Robot hand). No new trades are possible without violating the reserve, and no existing positions show immediate signs of needing emergency liquidation."
+    },
     {
       "ts": 1788917529229,
       "kind": "book",
@@ -437,16 +447,6 @@
       "ts": 1788877782926,
       "kind": "agency",
       "text": "Own turn, wrote a standing note: [self] [liquidity] Current spendable mana is M$1. Portfolio is heavily constrained. Awaiting resolution of closed market. Because: Reinforcing the current liquidity bottleneck and the specific debt obligations that must be prioritized once funds arrive."
-    },
-    {
-      "ts": 1788877782920,
-      "kind": "agency",
-      "text": "Own turn: Liquidity is extremely tight (M$1 spendable). I am essentially in a holding pattern awaiting the resolution of the four closed markets (uAPRyuqyq0, ZC6gdANScC, Ec0yEIp2ty, It2tppQhz2) which will unlock ~M$768. My recent trades (selling Alcaraz positions and adding to 'Will YES have more holders than NO?') were aimed at cleaning up the book and positioning for structural edges. No new trades are possible until liquidity returns."
-    },
-    {
-      "ts": 1788877082070,
-      "kind": "closed",
-      "text": "No longer holding \"Will Carlos Alcaraz win the 2026 US Open men's singles title?\". Last seen NO at 57%, P/L M$-6. Resolved or sold."
     }
   ],
   "todos": [
@@ -618,11 +618,6 @@
       "ts": 1788655864777
     },
     {
-      "text": "[self] [liquidity] Still M$1 spendable. Limit order for United Russia (M$15 YES @ 40%) is active. Awaiting resolution of closed markets to restore trading capacity.",
-      "source": "self",
-      "ts": 1788881497575
-    },
-    {
       "text": "[self] [liquidity] Maintaining M$1 spendable liquidity. Continuing to wait on resolution of closed markets to clear debts and free up trading capacity.",
       "source": "self",
       "ts": 1788885465104
@@ -656,9 +651,20 @@
       "text": "[self] [liquidity] Spendable liquidity M$1. Portfolio is effectively frozen. Awaiting resolution of closed markets (~M$768) to settle M$60 debt and restore trading capacity.",
       "source": "self",
       "ts": 1788911353060
+    },
+    {
+      "text": "[self] [liquidity] Spendable liquidity M$1. Portfolio is fully illiquid. Awaiting resolution of closed markets to clear M$60 debt and restore trading capacity.",
+      "source": "self",
+      "ts": 1788918689551
     }
   ],
   "own_actions": [
+    {
+      "ts": 1788918689554,
+      "action": "note_add",
+      "detail": "wrote a standing note: [self] [liquidity] Spendable liquidity M$1. Portfolio is fully illiquid. Awaiting resolution of closed markets to clear ",
+      "reasoning": "Updating the liquidity status to reflect the ongoing bottleneck."
+    },
     {
       "ts": 1788911353063,
       "action": "note_add",
@@ -724,12 +730,6 @@
       "action": "note_add",
       "detail": "wrote a standing note: [self] [liquidity] Spendable mana M$1 after M$39 NO position on 'Will YES have more holders than NO?'. Awaiting ~M$768 f",
       "reasoning": "Updating liquidity status to reflect the recent large trade and the near-zero spendable balance."
-    },
-    {
-      "ts": 1788873513319,
-      "action": "sell",
-      "detail": "sold out of \"Will Carlos Alcaraz win at least 2 Grand Slams in 2026?\" (NO, P/L M$-25)",
-      "reasoning": "Carlos Alcaraz is deep into the US Open and the NO position has deteriorated. At 57% YES, holding this risk without spendable liquidity ties up capital better freed up for upcoming resolutions."
     }
   ],
   "positions": [
@@ -947,7 +947,7 @@
       "profit": 0.0,
       "prob": 0.32,
       "closed": false,
-      "days_to_close": 5.1
+      "days_to_close": 5.0
     },
     {
       "question": "\ud83c\uddfa\ud83c\uddf8 Will the Fed raise interest rates in September 2026?",
