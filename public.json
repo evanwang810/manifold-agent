@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1789000110307,
+  "generated_ms": 1789000339980,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemma-4-26b-a4b-it",
+      "active": "gemma-4-31b-it",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.6-flash",
+      "active": "gemini-3.7-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 3,
+      "today": 5,
       "cap": 220
     },
     "chat": {
@@ -39,15 +39,30 @@
       "cap": 400
     },
     "deep": {
-      "today": 1,
+      "today": 2,
       "cap": 34
     }
   },
   "dry_run": false,
   "balance": 10.86,
-  "net_worth": 467.27,
+  "net_worth": 447.5,
   "summary": "Net worth hovers around M$436 to M$474, entirely locked across 18 active positions with spendable cash at M$1 (aside from a M$10 reserve). The portfolio is in a state of forced stasis, awaiting the formal resolution of four closed markets to unlock ~M$768. This incoming liquidity is earmarked to clear M$60 in outstanding debt (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93 and M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1) and restore active trading capacity. \n\nThe portfolio remains heavily anchored by the Carlos Alcaraz US Open NO contract, which has successfully plummeted to terminal value at 1%, delivering a massive M$+41 P/L boost. Following the recent tactical liquidation of the collapsing Vuelta a Espa\u00f1a YES position (M$-5) and a pending limit order on the Sanji Conqueror's Haki NO contract (at 87%, model 66%), no open positions are actively moving against us. All remaining positions are stable, structurally sound, and near maturity, requiring no emergency sales.\n\nConcrete mistakes worth avoiding include holding onto speculative NO positions when late-stage momentum and market convergence heavily overwhelm the original structural edge\u2014such as Pappas and holder-count collapses\u2014and cutting positions too late when a thesis breaks. Operationally, prematurely claiming transaction execution (\"right now\") when balances are unverified must be strictly avoided by maintaining absolute discipline around ledger states. Stubbornly clinging to positions while liquidity is frozen also traps capital that could be better deployed once resolutions hit.\n\nCalibration has remained strong on technical, mechanical, and structural thresholds, though the agent historically struggles with managing sudden directional noise and emotional narrative momentum in high-profile political and sports brackets. Moving forward, the core focus remains entirely on waiting for the pending resolution of the four closed markets to restore cash flow, clear outstanding debts, and rebuild operational flexibility.",
   "journal": [
+    {
+      "ts": 1789000337682,
+      "kind": "trade",
+      "text": "Sold out of \"Will Brett Smiley win the 2026 Democratic primary for Mayor of Provide\" (YES) for M$-19. Now think 12% against market 13%."
+    },
+    {
+      "ts": 1789000292381,
+      "kind": "move",
+      "text": "\"Will Brett Smiley win the 2026 Democratic primary for Mayor of Provide\" moved -16% to 13%. Holding YES, P/L M$-19."
+    },
+    {
+      "ts": 1789000292381,
+      "kind": "portfolio",
+      "text": "Net worth down from M$467 to M$448, balance M$11."
+    },
     {
       "ts": 1789000110025,
       "kind": "agency",
@@ -432,21 +447,6 @@
       "ts": 1788958367204,
       "kind": "book",
       "text": "Looked over 18 positions: The book is entirely healthy and dominated by successful positions nearing maturity, notably the Alcaraz NO contract at terminal value. However, spendable liquidity remains strictly at zero due to the M$10 reserve, with capital trapped across open positions while waiting for closed markets to resolve. No positions need to be sold today. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1788957065052,
-      "kind": "analysis",
-      "text": "Analysed \"Will a model saturate AISI's \"The Last Ones\" before October 2026?\": market 42%, my 24% (medium). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1788956993691,
-      "kind": "screen",
-      "text": "Escalated \"Will a model saturate AISI's \"The Last Ones\" before October 2026?\" at 42%: quick estimate 25% vs market 42%"
-    },
-    {
-      "ts": 1788956973656,
-      "kind": "screen",
-      "text": "Passed on \"Will a manifolder report on the Oreo chicken burger in the next month?\" at 26%: quick estimate 15% agrees with market. This is a niche user-dependent stunt market with low volume and no specific manifolder committed yet, making it a pure coin flip on user behavior."
     }
   ],
   "todos": [
@@ -854,18 +854,6 @@
       "days_to_close": 0.0
     },
     {
-      "question": "Will Brett Smiley win the 2026 Democratic primary for Mayor of Providence?",
-      "url": "https://manifold.markets/AdamBraff/will-brett-smiley-win-the-2026-demo",
-      "side": "YES",
-      "shares": 123.4,
-      "invested": 35.0,
-      "value": 16.4,
-      "profit": -18.6,
-      "prob": 0.133,
-      "closed": false,
-      "days_to_close": 2.1
-    },
-    {
       "question": "Will Geometry Dash 2.21 Update Will Be Released In August 13 2026?",
       "url": "https://manifold.markets/BetBeginner_098/will-geometry-dash-221-update-will",
       "side": "NO",
@@ -951,6 +939,23 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1789000337679,
+      "kind": "sell",
+      "question": "Will Brett Smiley win the 2026 Democratic primary for Mayor of Providence?",
+      "url": "https://manifold.markets/AdamBraff/will-brett-smiley-win-the-2026-demo",
+      "market_prob": 0.13307489449318027,
+      "model_prob": 0.12,
+      "confidence": null,
+      "amount": null,
+      "outcome": null,
+      "thinking": "With the primary taking place yesterday following polling that consistently showed Morales leading by up to 10 points, Smiley's financial edge appears not to have overcome the challenger's momentum. Adjusting probability down to 12% and exiting YES position.",
+      "uncertainty": "",
+      "resolution_risk": "",
+      "evidence_for": [],
+      "evidence_against": [],
+      "reason": null
+    },
     {
       "ts": 1788999928113,
       "kind": "no_trade",
@@ -1286,30 +1291,6 @@
         "Jack1 is offering a 15 mana bounty to anyone holding NO if NO wins, creating strong organic incentives for users to hold tiny NO positions.",
         "Holder count markets are notoriously vulnerable to cheap last-minute NO sniping due to low capital requirements (M$1 net position).",
         "Moderators are actively reviewing suspected duplicate/alt accounts supporting YES, which could disqualify several YES holders."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1788957065049,
-      "kind": "no_trade",
-      "question": "Will a model saturate AISI's \"The Last Ones\" before October 2026?",
-      "url": "https://manifold.markets/Bayesian/will-a-model-saturate-aisis-the-las-6gAzOphtPt",
-      "market_prob": 0.4234021139879535,
-      "model_prob": 0.24,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With only ~3 weeks remaining before October 2026, there is no public confirmation that any model has reached 32 average steps in 100M tokens on AISI's 'The Last Ones' benchmark. While frontier autonomous task duration is advancing, the specific saturation threshold remains unmet in published results.",
-      "uncertainty": "Whether an unreleased or imminent AISI report evaluating recent frontier models against 'The Last Ones' benchmark is scheduled for publication before October 2026.",
-      "resolution_risk": "Ambiguity in how AISI defines and reports average steps per 100M tokens if intermediate or non-standard metric evaluations are released.",
-      "evidence_for": [
-        "Rapid progress in frontier autonomous AI capabilities evaluated by UK AISI and other safety institutes.",
-        "Recent reports indicate significant jumps in task duration / time horizons across successive model generations."
-      ],
-      "evidence_against": [
-        "Resolution requires a specific technical threshold: average steps completed in 100M tokens hitting 32 on AISI's benchmark.",
-        "Only 21 days remain before October 1, 2026, leaving minimal time for new evaluations to be completed and publicly confirmed.",
-        "Headline time-horizon metrics (e.g. task minutes) differ structurally from the precise token-step saturation criteria specified in the resolution text."
       ],
       "reason": "size floored to zero by balance reserve"
     }
