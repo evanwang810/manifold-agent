@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1789075772962,
+  "generated_ms": 1789076098848,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 89,
+      "today": 92,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 27,
+      "today": 28,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 457.83,
   "summary": "Net worth hovers around M$448, with capital locked across 18 active positions and spendable cash at M$1 alongside a M$10 reserve. The portfolio remains in forced stasis, awaiting the formal resolution of 10 closed markets to unlock ~M$768. This incoming liquidity is earmarked to clear M$60 in outstanding debt (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93 and M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1) and restore active trading capacity. Recent actions include selling the low-conviction Fed rate YES contract at break-even and opening a small M$4 YES position on Xi Jinping visiting the USA before September 30.\n\nThe portfolio is heavily anchored by the Carlos Alcaraz US Open NO contract near terminal value at 1%, alongside the Kalshi vs Polymarket NO position and the newly added Xi Jinping YES bet. No open positions are actively moving against us, and all holdings are structurally sound, stable, and near maturity, requiring no emergency liquidations. \n\nConcrete mistakes to avoid include holding onto speculative positions when late-stage momentum and market convergence heavily overwhelm the original structural edge\u2014such as failing to cut primary election losses early enough\u2014and getting trapped by persistent ledger stringency where zero spendable cash prevents seizing valid market mispricings. Operationally, letting status notes repeatedly truncate due to character limits is a persistent record-keeping failure that must be corrected by avoiding overly long note strings.\n\nCalibration remains strong on technical, mechanical, and structural thresholds, though the agent historically struggles with managing sudden directional noise, low-liquidity volatility, and emotional narrative momentum in political and sports brackets. Moving forward, the core focus remains entirely on waiting for the pending resolution of the 10 closed markets to unlock ~M$768, clear outstanding debts, and rebuild operational flexibility.",
   "journal": [
+    {
+      "ts": 1789076098778,
+      "kind": "trade",
+      "text": "Limit order M$8 YES on \"Bitcoin reaches 90k USD at any point before October\" at 7%, my estimate 14% (medium). Because: At $77,215, Bitcoin needs a +16.5% gain in 20 days to hit $90,000. With typical 45-50% annualized volatility, the touch probability over 20 days evaluates to ~14%."
+    },
+    {
+      "ts": 1789075958803,
+      "kind": "screen",
+      "text": "Escalated \"Bitcoin reaches 90k USD at any point before October\" at 7%: quick estimate 85% vs market 7%"
+    },
     {
       "ts": 1789074299326,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1789040460472,
       "kind": "screen",
       "text": "Escalated \"Xi JinPing visits USA before Sep 30?\" at 88%: quick estimate 65% vs market 88%"
-    },
-    {
-      "ts": 1789039705138,
-      "kind": "closed",
-      "text": "No longer holding \"\ud83c\uddfa\ud83c\uddf8 Will the Fed raise interest rates in September 2026?\". Last seen YES at 45%, P/L M$-0. Resolved or sold."
-    },
-    {
-      "ts": 1789039522794,
-      "kind": "agency",
-      "text": "Own turn, sold out of \"\ud83c\uddfa\ud83c\uddf8 Will the Fed raise interest rates in September 2026?\" (YES, P/L M$-0). Because: Low-conviction macro bet. At 45%, it is essentially a coin flip and does not warrant the capital given the current need for liquidity."
     }
   ],
   "todos": [
@@ -941,9 +941,45 @@
       "prob": 0.791,
       "closed": false,
       "days_to_close": 20.1
+    },
+    {
+      "question": "Bitcoin reaches 90k USD at any point before October",
+      "url": "https://manifold.markets/rg26/bitcoin-reaches-90k-usd-at-any-poin",
+      "side": "YES",
+      "shares": 65.5,
+      "invested": 5.6,
+      "value": 6.6,
+      "profit": 1.0,
+      "prob": 0.1,
+      "closed": false,
+      "days_to_close": 20.1
     }
   ],
   "decisions": [
+    {
+      "ts": 1789076098775,
+      "kind": "bet",
+      "question": "Bitcoin reaches 90k USD at any point before October",
+      "url": "https://manifold.markets/rg26/bitcoin-reaches-90k-usd-at-any-poin",
+      "market_prob": 0.0716465162223963,
+      "model_prob": 0.14,
+      "confidence": "medium",
+      "amount": 8.0,
+      "outcome": "YES",
+      "thinking": "At $77,215, Bitcoin needs a +16.5% gain in 20 days to hit $90,000. With typical 45-50% annualized volatility, the touch probability over 20 days evaluates to ~14%.",
+      "uncertainty": "Whether a strong macro or crypto-specific catalyst triggers a sharp multi-day volatility spike before September 30.",
+      "resolution_risk": "Google Finance intraday price wicks versus closing prices, though criteria specify price data from Google Finance generally.",
+      "evidence_for": [
+        "Bitcoin is currently trading at $77,215.06 USD, requiring a +16.56% gain to reach $90,000.",
+        "With 20.1 days remaining and annualized Bitcoin volatility around 45-50%, the mathematical probability of an intraday touch at +1.3 to +1.5 standard deviations is roughly 12-18%."
+      ],
+      "evidence_against": [
+        "Only 20 days remain before October 1, 2026.",
+        "September is historically a flat or seasonally weak month for cryptocurrency asset prices.",
+        "Moving from $77k to $90k requires breaking through multiple key technical resistance levels ($80k, $85k) without major clear catalysts in short order."
+      ],
+      "reason": "edge 0.068, kelly 0.07, decay 0.50, bound by min bet floor"
+    },
     {
       "ts": 1789071146583,
       "kind": "bet",
@@ -1277,28 +1313,6 @@
         "His Silicon Valley allies are largely aligned with techno-optimism/e-acc rather than Yudkowsky-style AI doom perspectives."
       ],
       "reason": "edge 0.029 below minimum 0.04"
-    },
-    {
-      "ts": 1789019884303,
-      "kind": "no_trade",
-      "question": "Will American opinion of AI improve in 2026, according to Gallup?",
-      "url": "https://manifold.markets/cash/will-american-opinion-of-ai-improve-zQqs2LEdCQ",
-      "market_prob": 0.03436117797642035,
-      "model_prob": 0.02,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "The August 2026 Bentley-Gallup survey has already been released, showing only 9% of Americans believe AI does more good than harm. With the threshold set at 13% or higher to resolve YES, this market is almost certain to resolve NO.",
-      "uncertainty": "Whether Gallup releases another major AI tracking survey before the end of 2026.",
-      "resolution_risk": "Low, as the August 2026 Bentley-Gallup study is the exact annual poll tracked in the description.",
-      "evidence_for": [
-        "Gallup could theoretically release another AI survey before the end of 2026 with different results."
-      ],
-      "evidence_against": [
-        "The August 2026 Bentley University-Gallup study has already been published, showing only 9% of Americans believe AI does 'more good than harm'.",
-        "The 9% figure is well below the 13% threshold required for a YES resolution and represents a drop from 12% in 2025."
-      ],
-      "reason": "edge 0.014 below minimum 0.04"
     }
   ]
 }
