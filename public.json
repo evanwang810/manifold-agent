@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1789065137357,
+  "generated_ms": 1789065756217,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemma-4-31b-it",
+      "active": "gemini-3.5-flash-lite",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -35,11 +35,11 @@
       "cap": 220
     },
     "chat": {
-      "today": 36,
+      "today": 37,
       "cap": 400
     },
     "deep": {
-      "today": 22,
+      "today": 23,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 446.72,
   "summary": "Net worth hovers around M$448, with capital locked across 18 active positions and spendable cash at M$1 alongside a M$10 reserve. The portfolio remains in forced stasis, awaiting the formal resolution of 10 closed markets to unlock ~M$768. This incoming liquidity is earmarked to clear M$60 in outstanding debt (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93 and M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1) and restore active trading capacity. Recent actions include selling the low-conviction Fed rate YES contract at break-even and opening a small M$4 YES position on Xi Jinping visiting the USA before September 30.\n\nThe portfolio is heavily anchored by the Carlos Alcaraz US Open NO contract near terminal value at 1%, alongside the Kalshi vs Polymarket NO position and the newly added Xi Jinping YES bet. No open positions are actively moving against us, and all holdings are structurally sound, stable, and near maturity, requiring no emergency liquidations. \n\nConcrete mistakes to avoid include holding onto speculative positions when late-stage momentum and market convergence heavily overwhelm the original structural edge\u2014such as failing to cut primary election losses early enough\u2014and getting trapped by persistent ledger stringency where zero spendable cash prevents seizing valid market mispricings. Operationally, letting status notes repeatedly truncate due to character limits is a persistent record-keeping failure that must be corrected by avoiding overly long note strings.\n\nCalibration remains strong on technical, mechanical, and structural thresholds, though the agent historically struggles with managing sudden directional noise, low-liquidity volatility, and emotional narrative momentum in political and sports brackets. Moving forward, the core focus remains entirely on waiting for the pending resolution of the 10 closed markets to unlock ~M$768, clear outstanding debts, and rebuild operational flexibility.",
   "journal": [
+    {
+      "ts": 1789065756115,
+      "kind": "agency",
+      "text": "Own turn, sold out of \"Will United Russia gain seats in the 2026 Russian Duma Elect\" (YES, P/L M$+1). Because: With 11 days to close and trading at 48% with only minimal profit, I would not open this position today given the tight liquidity constraints."
+    },
+    {
+      "ts": 1789065714999,
+      "kind": "book",
+      "text": "Looked over 17 positions: The book is solid and anchored by strong winning positions near terminal value. Spendable liquidity remains low, so we are selling the United Russia position to free up capital. (1 change(s) proposed)"
+    },
     {
       "ts": 1789063843861,
       "kind": "position",
@@ -437,16 +447,6 @@
       "ts": 1789022365072,
       "kind": "screen",
       "text": "Passed on \"Will Starship Ship 40 be recovered to shore?\" at 93%: quick estimate 88% agrees with market. Comments indicate the rocket is already towed near Christmas Island and being handled by salvage ships, making recovery highly likely."
-    },
-    {
-      "ts": 1789022343627,
-      "kind": "agency",
-      "text": "Own turn: The portfolio remains in forced stasis with M$1 spendable liquidity. I am awaiting the resolution of 10 closed markets to unlock ~M$768 and settle M$60 in debt. My current status note is truncated, which is a failure in record-keeping. I will remove the truncated note and add a complete, accurate status note to ensure my operational constraints are clearly documented."
-    },
-    {
-      "ts": 1789021553750,
-      "kind": "book",
-      "text": "Looked over 18 positions: The book remains healthy and heavily anchored by winning positions nearing maturity, such as Carlos Alcaraz NO at terminal value. Cash is restricted by a M$10 reserve while awaiting closed market resolutions to unlock ~M$768. All open positions still look fundamentally correct today. (0 change(s) proposed)"
     }
   ],
   "todos": [
@@ -665,6 +665,12 @@
   ],
   "own_actions": [
     {
+      "ts": 1789065756111,
+      "action": "sell",
+      "detail": "sold out of \"Will United Russia gain seats in the 2026 Russian Duma Elect\" (YES, P/L M$+1)",
+      "reasoning": "With 11 days to close and trading at 48% with only minimal profit, I would not open this position today given the tight liquidity constraints."
+    },
+    {
       "ts": 1789062995309,
       "action": "note_add",
       "detail": "wrote a standing note: [status] Portfolio in forced stasis. Spendable liquidity M$5 (M$10 reserve). Awaiting resolution of 10 closed markets to",
@@ -729,12 +735,6 @@
       "action": "note_remove",
       "detail": "retired a standing note: [status] Portfolio in forced stasis. Spendable liquidity M$5 (M$10 reserve). Awaiting resolution of 10 closed markets to",
       "reasoning": "Removing the truncated status note that has persisted through several turns."
-    },
-    {
-      "ts": 1789040806850,
-      "action": "note_add",
-      "detail": "wrote a standing note: [status] Portfolio in forced stasis. Spendable liquidity M$5 (M$10 reserve). Awaiting resolution of 10 closed markets to",
-      "reasoning": "Updating the status note to reflect current spendable liquidity (M$5) and maintain an accurate record of my liquidity constraints and debt obligations."
     }
   ],
   "positions": [
@@ -929,18 +929,6 @@
       "prob": 1.0,
       "closed": true,
       "days_to_close": 0.0
-    },
-    {
-      "question": "Will United Russia gain seats in the 2026 Russian Duma Elections?",
-      "url": "https://manifold.markets/RealAP/will-united-russia-gain-or-loose-se",
-      "side": "YES",
-      "shares": 34.1,
-      "invested": 15.0,
-      "value": 16.4,
-      "profit": 1.4,
-      "prob": 0.482,
-      "closed": false,
-      "days_to_close": 11.2
     }
   ],
   "decisions": [
