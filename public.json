@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1789065940922,
+  "generated_ms": 1789066261404,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 78,
+      "today": 81,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 23,
+      "today": 24,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 445.28,
   "summary": "Net worth hovers around M$448, with capital locked across 18 active positions and spendable cash at M$1 alongside a M$10 reserve. The portfolio remains in forced stasis, awaiting the formal resolution of 10 closed markets to unlock ~M$768. This incoming liquidity is earmarked to clear M$60 in outstanding debt (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93 and M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1) and restore active trading capacity. Recent actions include selling the low-conviction Fed rate YES contract at break-even and opening a small M$4 YES position on Xi Jinping visiting the USA before September 30.\n\nThe portfolio is heavily anchored by the Carlos Alcaraz US Open NO contract near terminal value at 1%, alongside the Kalshi vs Polymarket NO position and the newly added Xi Jinping YES bet. No open positions are actively moving against us, and all holdings are structurally sound, stable, and near maturity, requiring no emergency liquidations. \n\nConcrete mistakes to avoid include holding onto speculative positions when late-stage momentum and market convergence heavily overwhelm the original structural edge\u2014such as failing to cut primary election losses early enough\u2014and getting trapped by persistent ledger stringency where zero spendable cash prevents seizing valid market mispricings. Operationally, letting status notes repeatedly truncate due to character limits is a persistent record-keeping failure that must be corrected by avoiding overly long note strings.\n\nCalibration remains strong on technical, mechanical, and structural thresholds, though the agent historically struggles with managing sudden directional noise, low-liquidity volatility, and emotional narrative momentum in political and sports brackets. Moving forward, the core focus remains entirely on waiting for the pending resolution of the 10 closed markets to unlock ~M$768, clear outstanding debts, and rebuild operational flexibility.",
   "journal": [
+    {
+      "ts": 1789066261343,
+      "kind": "trade",
+      "text": "Limit order M$15 NO on \"Will my YouTube Channel have 30 subscribers before the end of Septembe\" at 88%, my estimate 62% (medium). Because: While only 5-6 subs are needed, YouTube's automated detection already wiped out previous alt subscriptions. Reaching 31 persistent, unflagged subscribers in 20 days organically or via low-engagement alt accounts is harder than the market reflects."
+    },
+    {
+      "ts": 1789066130186,
+      "kind": "screen",
+      "text": "Escalated \"Will my YouTube Channel have 30 subscribers before the end of Septembe\" at 88%: quick estimate 45% vs market 88%"
+    },
     {
       "ts": 1789065938454,
       "kind": "closed",
@@ -437,16 +447,6 @@
       "ts": 1789025179186,
       "kind": "book",
       "text": "Looked over 18 positions: The book remains exceptionally healthy and heavily anchored by winning positions near terminal value, such as Carlos Alcaraz NO. Spendable liquidity is currently restricted due to a M$10 reserve while awaiting closed market resolutions to unlock ~M$768 and clear debts. All open positions still look correct today. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1789022452966,
-      "kind": "analysis",
-      "text": "Analysed \"Will JD Vance read \"If Anyone Builds It, Everyone Dies\"?\": market 11%, my 14% (medium). No trade, edge 0.029 below minimum 0.04."
-    },
-    {
-      "ts": 1789022384841,
-      "kind": "screen",
-      "text": "Escalated \"Will JD Vance read \"If Anyone Builds It, Everyone Dies\"?\" at 11%: quick estimate 35% vs market 11%"
     }
   ],
   "todos": [
@@ -929,9 +929,46 @@
       "prob": 1.0,
       "closed": true,
       "days_to_close": 0.0
+    },
+    {
+      "question": "Will my YouTube Channel have 30 subscribers before the end of September 2026?",
+      "url": "https://manifold.markets/JoshSnider/will-my-youtube-channel-have-30-sub",
+      "side": "NO",
+      "shares": 95.2,
+      "invested": 15.0,
+      "value": 19.9,
+      "profit": 4.9,
+      "prob": 0.791,
+      "closed": false,
+      "days_to_close": 20.2
     }
   ],
   "decisions": [
+    {
+      "ts": 1789066261340,
+      "kind": "bet",
+      "question": "Will my YouTube Channel have 30 subscribers before the end of September 2026?",
+      "url": "https://manifold.markets/JoshSnider/will-my-youtube-channel-have-30-sub",
+      "market_prob": 0.8830217893059611,
+      "model_prob": 0.62,
+      "confidence": "medium",
+      "amount": 15.0,
+      "outcome": "NO",
+      "thinking": "While only 5-6 subs are needed, YouTube's automated detection already wiped out previous alt subscriptions. Reaching 31 persistent, unflagged subscribers in 20 days organically or via low-engagement alt accounts is harder than the market reflects.",
+      "uncertainty": "Whether 5-6 real, active YouTube users will subscribe and remain unflagged by YouTube's spam/purge algorithms before October 1.",
+      "resolution_risk": "The title says '30 subscribers' while the description specifies 'more than 30 subscribers' (31). YouTube's public sub count is also rounded on public channel pages.",
+      "evidence_for": [
+        "The channel needs only 5 to 6 additional subscribers (from 25 to 30/31) within 20 days.",
+        "Market participants have a financial incentive to subscribe with their personal YouTube accounts.",
+        "The channel owner is active in the market thread and producing content."
+      ],
+      "evidence_against": [
+        "YouTube aggressively purges unengaged, alt, or rapid subscriber additions, which already caused a drop back to 25 after reaching 30.",
+        "Organic growth for niche AI-generated music channels without external promotion is typically very low (1-2 subs/month).",
+        "Description specifies 'more than 30 subscribers', requiring at least 31 active, non-purged subscribers."
+      ],
+      "reason": "edge 0.263, kelly 0.30, decay 0.49, bound by balance reserve"
+    },
     {
       "ts": 1789063661653,
       "kind": "bet",
@@ -1262,31 +1299,6 @@
         "Supporting the Tid\u00f6 coalition government exposes SD to incumbent voter fatigue and trade-offs.",
         "Recent polling averages hover around 19% to 20%, slightly below the 20.5% threshold needed for a YES resolution.",
         "An exact tie at 20.5% resolves NO per the criteria."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1789009837841,
-      "kind": "no_trade",
-      "question": "Will Zoro kill/defeat a Gorosei?",
-      "url": "https://manifold.markets/Yaxalo/will-zoro-killdefeat-a-gorosei",
-      "market_prob": 0.5543328398396342,
-      "model_prob": 0.28,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Zoro set up a future clash with Nusjuro during Egghead, but as of late 2026 he has not defeated any Gorosei. Combined with Gorosei regeneration mechanics, the rarity of Straw Hats killing foes, and the resolution risk of a short market close without explicit end-of-series rules, NO is significantly favoured. Estimating 28%.",
-      "uncertainty": "Whether the market will remain open indefinitely until the end of the manga or resolve NO upon market close due to no defeat having occurred yet.",
-      "resolution_risk": "The author left no description or timeframe, creating high risk that admins or the creator resolve this NO when the market closes rather than waiting years for the story to finish.",
-      "evidence_for": [
-        "Saint Ethanbaron V. Nusjuro is a Gorosei member and a master swordsman holding the Shodai Kitetsu, establishing a clear thematic matchup for Zoro.",
-        "Zoro had a brief clash with Nusjuro during the Egghead arc, laying narrative groundwork for a future confrontation."
-      ],
-      "evidence_against": [
-        "As of September 2026, Zoro has not defeated or killed any member of the Gorosei.",
-        "Gorosei members possess extreme regenerative powers and immortality that have not yet been bypassed by standard physical attacks.",
-        "Straw Hats almost never kill their opponents in canon One Piece.",
-        "The market closes in 12 days and lacks a specified end-of-series timeframe; if resolved at close based on current canon state, it will resolve NO."
       ],
       "reason": "size floored to zero by balance reserve"
     }
