@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1789002013309,
+  "generated_ms": 1789002765918,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemma-4-31b-it",
+      "active": "gemini-3.5-flash-lite",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,15 +31,15 @@
   },
   "usage": {
     "fast": {
-      "today": 5,
+      "today": 8,
       "cap": 220
     },
     "chat": {
-      "today": 2,
+      "today": 3,
       "cap": 400
     },
     "deep": {
-      "today": 2,
+      "today": 3,
       "cap": 34
     }
   },
@@ -48,6 +48,21 @@
   "net_worth": 446.92,
   "summary": "Net worth hovers around M$436 to M$474, entirely locked across 18 active positions with spendable cash at M$1 (aside from a M$10 reserve). The portfolio is in a state of forced stasis, awaiting the formal resolution of four closed markets to unlock ~M$768. This incoming liquidity is earmarked to clear M$60 in outstanding debt (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93 and M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1) and restore active trading capacity. \n\nThe portfolio remains heavily anchored by the Carlos Alcaraz US Open NO contract, which has successfully plummeted to terminal value at 1%, delivering a massive M$+41 P/L boost. Following the recent tactical liquidation of the collapsing Vuelta a Espa\u00f1a YES position (M$-5) and a pending limit order on the Sanji Conqueror's Haki NO contract (at 87%, model 66%), no open positions are actively moving against us. All remaining positions are stable, structurally sound, and near maturity, requiring no emergency sales.\n\nConcrete mistakes worth avoiding include holding onto speculative NO positions when late-stage momentum and market convergence heavily overwhelm the original structural edge\u2014such as Pappas and holder-count collapses\u2014and cutting positions too late when a thesis breaks. Operationally, prematurely claiming transaction execution (\"right now\") when balances are unverified must be strictly avoided by maintaining absolute discipline around ledger states. Stubbornly clinging to positions while liquidity is frozen also traps capital that could be better deployed once resolutions hit.\n\nCalibration has remained strong on technical, mechanical, and structural thresholds, though the agent historically struggles with managing sudden directional noise and emotional narrative momentum in high-profile political and sports brackets. Moving forward, the core focus remains entirely on waiting for the pending resolution of the four closed markets to restore cash flow, clear outstanding debts, and rebuild operational flexibility.",
   "journal": [
+    {
+      "ts": 1789002765459,
+      "kind": "book",
+      "text": "Looked over 17 positions: The book remains heavily anchored by winning positions near terminal value like Carlos Alcaraz NO. Spendable liquidity is severely restricted by a M$10 reserve, but all open positions still look correct today. (0 change(s) proposed)"
+    },
+    {
+      "ts": 1789002333426,
+      "kind": "trade",
+      "text": "Limit order M$16 NO on \"Will Kalshi beat Polymarket?\" at 54%, my estimate 22% (medium). Because: While Kalshi holds a ~70/30 volume edge and stronger US regulatory access, Polymarket retains far too much global and crypto mindshare to meet the creator's explicit ~90/10 split requirement before market close."
+    },
+    {
+      "ts": 1789002200818,
+      "kind": "screen",
+      "text": "Escalated \"Will Kalshi beat Polymarket?\" at 54%: quick estimate 25% vs market 54%"
+    },
     {
       "ts": 1789000521668,
       "kind": "closed",
@@ -432,21 +447,6 @@
       "ts": 1788962238909,
       "kind": "screen",
       "text": "Passed on \"Will I solve an unsolved math problem with AI in September?\" at 16%: quick estimate 5% agrees with market. Solving a top-10 problem in a math subfield with AI in one month is extremely improbable based on the creator's ongoing personal experiments."
-    },
-    {
-      "ts": 1788962052938,
-      "kind": "book",
-      "text": "Looked over 18 positions: The book is heavily anchored by massive wins like Alcaraz NO, but remains bottlenecked by zero spendable liquidity while awaiting closed market resolutions. All open positions are sound, close to maturity, and have valid theses. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1788959619173,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] [liquidity] Spendable liquidity M$1 (M$10 reserve). Alcaraz NO (D8e6191c0c) at 1% (P/L M$+41). Sanji NO (lLCNddqd. Because: Updating the liquidity note to reflect the current spendable balance (M$1) and the status of the Alcaraz and Sanji positions."
-    },
-    {
-      "ts": 1788959619167,
-      "kind": "agency",
-      "text": "Own turn: The portfolio is in a liquidity bottleneck. Alcaraz NO is at 1% (P/L M$+41). Sanji NO is at 86% with a limit order pending (M$20 NO at 87%). Spendable liquidity is M$1. I am waiting for the resolution of four closed markets (~M$768) to settle M$60 in debt and regain trading capacity."
     }
   ],
   "todos": [
@@ -839,7 +839,7 @@
       "profit": 40.8,
       "prob": 0.003,
       "closed": false,
-      "days_to_close": 15.0
+      "days_to_close": 14.9
     },
     {
       "question": "Will something happen in AI the week of Aug 21, 2026?",
@@ -887,7 +887,7 @@
       "profit": 6.0,
       "prob": 0.248,
       "closed": false,
-      "days_to_close": 3.0
+      "days_to_close": 2.9
     },
     {
       "question": "Will the WTI Crude Oil Spot Price be above $78.50 on August 11, 2026?",
@@ -900,6 +900,18 @@
       "prob": 1.0,
       "closed": true,
       "days_to_close": 0.0
+    },
+    {
+      "question": "Will Kalshi beat Polymarket?",
+      "url": "https://manifold.markets/IsaacKing/will-kalshi-beat-polymarket",
+      "side": "NO",
+      "shares": 34.6,
+      "invested": 16.0,
+      "value": 16.1,
+      "profit": 0.1,
+      "prob": 0.534,
+      "closed": false,
+      "days_to_close": 14.6
     },
     {
       "question": "Will an American man reach the 2026 US Open men's singles semifinals?",
@@ -923,7 +935,7 @@
       "profit": 1.4,
       "prob": 0.482,
       "closed": false,
-      "days_to_close": 12.0
+      "days_to_close": 11.9
     },
     {
       "question": "\ud83c\uddfa\ud83c\uddf8 Will the Fed raise interest rates in September 2026?",
@@ -939,6 +951,30 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1789002333424,
+      "kind": "bet",
+      "question": "Will Kalshi beat Polymarket?",
+      "url": "https://manifold.markets/IsaacKing/will-kalshi-beat-polymarket",
+      "market_prob": 0.542247306952621,
+      "model_prob": 0.22,
+      "confidence": "medium",
+      "amount": 16.0,
+      "outcome": "NO",
+      "thinking": "While Kalshi holds a ~70/30 volume edge and stronger US regulatory access, Polymarket retains far too much global and crypto mindshare to meet the creator's explicit ~90/10 split requirement before market close.",
+      "uncertainty": "Whether the creator strictly enforces the 90/10 mindshare threshold or subjectively resolves based on Kalshi's leading valuation and US volume growth.",
+      "resolution_risk": "Vague 'mindspace' criteria could lead to a subjective resolution if the creator views Kalshi's mainstream media presence as dominant.",
+      "evidence_for": [
+        "Kalshi lead trading volume in mid-2026 ($33B vs $14.5B), capturing ~60-70% volume market share.",
+        "Kalshi secured CFTC approval, Robinhood integration, and raised funding at a $40B valuation."
+      ],
+      "evidence_against": [
+        "Creator explicitly specified in description that resolution requires roughly a 90/10 split or better in general mindspace and finance-space.",
+        "Polymarket retains dominant global, international, crypto, and political prediction mindshare, far exceeding a 10% share.",
+        "The market closes in 14.6 days, making a shift to a 90/10 mindshare split virtually impossible without an existential shutdown of Polymarket."
+      ],
+      "reason": "edge 0.322, kelly 0.59, decay 0.68, bound by balance reserve"
+    },
     {
       "ts": 1789000337679,
       "kind": "sell",
@@ -1268,31 +1304,6 @@
         "Reaching 43 home runs requires hitting 13 home runs in ~17-18 games, an unsustainable pace of nearly 0.75 HR/game compared to his season pace of ~0.23 HR/game."
       ],
       "reason": "edge 0.028 below minimum 0.04"
-    },
-    {
-      "ts": 1788962376547,
-      "kind": "no_trade",
-      "question": "Will YES have more holders than NO?",
-      "url": "https://manifold.markets/senso/will-yes-have-more-holders-than-no",
-      "market_prob": 0.829176753586795,
-      "model_prob": 0.42,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Holder count markets heavily favor NO in end-game dynamics: ties resolve to NO, Jack1's 15-mana bounty incentivizes cheap NO holding, and moderator scrutiny on YES alt accounts poses downside risk to YES's tally. At 83% market pricing, YES is overvalued against typical last-minute sniping dynamics.",
-      "uncertainty": "Whether NO snipers and bounty hunters will mobilize enough unique accounts before the September 14 close to overcome YES's current holder tally.",
-      "resolution_risk": "Disqualification or banning of alt accounts by moderators prior to resolution could abruptly alter official holder counts.",
-      "evidence_for": [
-        "Market price sits high (around 83%), indicating YES likely holds a numerical lead among current active traders.",
-        "Pro-YES participants like Evan Wang have actively attempted to coordinate or incentivize YES holding."
-      ],
-      "evidence_against": [
-        "Resolution criteria explicitly state that a tie resolves to NO, giving NO a structural tie-breaker edge.",
-        "Jack1 is offering a 15 mana bounty to anyone holding NO if NO wins, creating strong organic incentives for users to hold tiny NO positions.",
-        "Holder count markets are notoriously vulnerable to cheap last-minute NO sniping due to low capital requirements (M$1 net position).",
-        "Moderators are actively reviewing suspected duplicate/alt accounts supporting YES, which could disqualify several YES holders."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
