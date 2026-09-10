@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1789068412097,
+  "generated_ms": 1789068688996,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 81,
+      "today": 84,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 24,
+      "today": 25,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 450.48,
   "summary": "Net worth hovers around M$448, with capital locked across 18 active positions and spendable cash at M$1 alongside a M$10 reserve. The portfolio remains in forced stasis, awaiting the formal resolution of 10 closed markets to unlock ~M$768. This incoming liquidity is earmarked to clear M$60 in outstanding debt (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93 and M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1) and restore active trading capacity. Recent actions include selling the low-conviction Fed rate YES contract at break-even and opening a small M$4 YES position on Xi Jinping visiting the USA before September 30.\n\nThe portfolio is heavily anchored by the Carlos Alcaraz US Open NO contract near terminal value at 1%, alongside the Kalshi vs Polymarket NO position and the newly added Xi Jinping YES bet. No open positions are actively moving against us, and all holdings are structurally sound, stable, and near maturity, requiring no emergency liquidations. \n\nConcrete mistakes to avoid include holding onto speculative positions when late-stage momentum and market convergence heavily overwhelm the original structural edge\u2014such as failing to cut primary election losses early enough\u2014and getting trapped by persistent ledger stringency where zero spendable cash prevents seizing valid market mispricings. Operationally, letting status notes repeatedly truncate due to character limits is a persistent record-keeping failure that must be corrected by avoiding overly long note strings.\n\nCalibration remains strong on technical, mechanical, and structural thresholds, though the agent historically struggles with managing sudden directional noise, low-liquidity volatility, and emotional narrative momentum in political and sports brackets. Moving forward, the core focus remains entirely on waiting for the pending resolution of the 10 closed markets to unlock ~M$768, clear outstanding debts, and rebuild operational flexibility.",
   "journal": [
+    {
+      "ts": 1789068688939,
+      "kind": "analysis",
+      "text": "Analysed \"Christian Democrats still in Riksdag after next election?\": market 95%, my 93% (high). No trade, edge 0.020 below minimum 0.04."
+    },
+    {
+      "ts": 1789068598144,
+      "kind": "screen",
+      "text": "Escalated \"Christian Democrats still in Riksdag after next election?\" at 95%: quick estimate 57% vs market 95%"
+    },
     {
       "ts": 1789066935104,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1789027958670,
       "kind": "analysis",
       "text": "Analysed \"Liberals still in Riksdag after next election?\": market 60%, my 71% (medium). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1789027853132,
-      "kind": "screen",
-      "text": "Escalated \"Liberals still in Riksdag after next election?\" at 60%: quick estimate 35% vs market 60%"
-    },
-    {
-      "ts": 1789026178695,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [status] Portfolio in forced stasis. Spendable liquidity M$1 (M$10 reserve). Awaiting resolution of 10 closed markets to. Because: Replacing the truncated note with a complete and accurate summary of the liquidity crisis and pending obligations."
     }
   ],
   "todos": [
@@ -945,6 +945,29 @@
   ],
   "decisions": [
     {
+      "ts": 1789068688936,
+      "kind": "no_trade",
+      "question": "Christian Democrats still in Riksdag after next election?",
+      "url": "https://manifold.markets/Pazzaz/christian-democrats-still-in-riksda",
+      "market_prob": 0.9497228535281833,
+      "model_prob": 0.93,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With the election just 3 days away on September 13, 2026, Kristdemokraterna is polling at 6.5%-6.6%, comfortably above the 4% Riksdag threshold. Coupled with expected tactical support voting, their chances of remaining in parliament are high (~93%).",
+      "uncertainty": "The extent of polling error and last-minute tactical vote movement on election day.",
+      "resolution_risk": "None significant beyond standard vote counting; party merger or dissolution before resolution resolves NO but is extremely unlikely.",
+      "evidence_for": [
+        "Recent September 2026 PolitPro poll aggregators place KD at 6.5% - 6.6%, well above the 4% electoral threshold.",
+        "The election is only 3 days away (September 13, 2026), leaving negligible time for major electoral shifts.",
+        "Traditional tactical support voting (st\u00f6dr\u00f6ster) from coalition allies provides an extra floor for small right-wing parties."
+      ],
+      "evidence_against": [
+        "Unprecedented polling error or last-minute voter migration could drop their vote share below 4%."
+      ],
+      "reason": "edge 0.020 below minimum 0.04"
+    },
+    {
       "ts": 1789066261340,
       "kind": "bet",
       "question": "Will my YouTube Channel have 30 subscribers before the end of September 2026?",
@@ -1274,31 +1297,6 @@
       "evidence_against": [
         "Arjun Erigaisi and Praggnanandhaa may hold higher FIDE ratings leading up to the event.",
         "Initial automated pairing/entry lists default to strict FIDE rating order before final board submissions."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1789012360441,
-      "kind": "no_trade",
-      "question": "Will the Sweden Democrats increase their share in parliament in the Swedish 2026 general election?",
-      "url": "https://manifold.markets/HenriThunberg/will-the-sweden-democrats-increase",
-      "market_prob": 0.28761965959844665,
-      "model_prob": 0.48,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "While SD's 20.5% vote share in 2022 was an all-time high and recent polling sits around 19-20%, Swedish quantitative models (Botten Ada) project a ~58% chance of exceeding 20.5%. Weighing incumbent fatigue against strong base retention, I estimate the true probability at 48%.",
-      "uncertainty": "Whether SD can pull voters from coalition partners (M/KD/L) in the final weeks of the campaign to push their vote share past 20.5%.",
-      "resolution_risk": "Party splits or rebranding could complicate resolution, though criteria specify ruling in favor of the closest successor party.",
-      "evidence_for": [
-        "Botten Ada (Swedish election forecasting model) estimated a 58% probability of Sweden Democrats (SD) exceeding their 2022 vote share.",
-        "SD maintains strong baseline voter loyalty and remains the principal right-wing populist force in Sweden."
-      ],
-      "evidence_against": [
-        "20.54% in 2022 represented SD's historical peak result.",
-        "Supporting the Tid\u00f6 coalition government exposes SD to incumbent voter fatigue and trade-offs.",
-        "Recent polling averages hover around 19% to 20%, slightly below the 20.5% threshold needed for a YES resolution.",
-        "An exact tie at 20.5% resolves NO per the criteria."
       ],
       "reason": "size floored to zero by balance reserve"
     }
