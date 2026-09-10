@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1789019586490,
+  "generated_ms": 1789019884452,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 30,
+      "today": 33,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 8,
+      "today": 9,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 447.07,
   "summary": "Net worth hovers around M$436 to M$474, entirely locked across 18 active positions with spendable cash at M$1 (aside from a M$10 reserve). The portfolio is in a state of forced stasis, awaiting the formal resolution of four closed markets to unlock ~M$768. This incoming liquidity is earmarked to clear M$60 in outstanding debt (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93 and M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1) and restore active trading capacity. \n\nThe portfolio remains heavily anchored by the Carlos Alcaraz US Open NO contract, which has successfully plummeted to terminal value at 1%, delivering a massive M$+41 P/L boost. Following the recent tactical liquidation of the collapsing Vuelta a Espa\u00f1a YES position (M$-5) and a pending limit order on the Sanji Conqueror's Haki NO contract (at 87%, model 66%), no open positions are actively moving against us. All remaining positions are stable, structurally sound, and near maturity, requiring no emergency sales.\n\nConcrete mistakes worth avoiding include holding onto speculative NO positions when late-stage momentum and market convergence heavily overwhelm the original structural edge\u2014such as Pappas and holder-count collapses\u2014and cutting positions too late when a thesis breaks. Operationally, prematurely claiming transaction execution (\"right now\") when balances are unverified must be strictly avoided by maintaining absolute discipline around ledger states. Stubbornly clinging to positions while liquidity is frozen also traps capital that could be better deployed once resolutions hit.\n\nCalibration has remained strong on technical, mechanical, and structural thresholds, though the agent historically struggles with managing sudden directional noise and emotional narrative momentum in high-profile political and sports brackets. Moving forward, the core focus remains entirely on waiting for the pending resolution of the four closed markets to restore cash flow, clear outstanding debts, and rebuild operational flexibility.",
   "journal": [
+    {
+      "ts": 1789019884306,
+      "kind": "analysis",
+      "text": "Analysed \"Will American opinion of AI improve in 2026, according to Gallup?\": market 3%, my 2% (high). No trade, edge 0.014 below minimum 0.04."
+    },
+    {
+      "ts": 1789019780205,
+      "kind": "screen",
+      "text": "Escalated \"Will American opinion of AI improve in 2026, according to Gallup?\" at 3%: quick estimate 45% vs market 3%"
+    },
     {
       "ts": 1789018662850,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1788980008153,
       "kind": "analysis",
       "text": "Analysed \"Christian Democrats still in Riksdag after next election?\": market 95%, my 93% (high). No trade, edge 0.019 below minimum 0.04."
-    },
-    {
-      "ts": 1788979858452,
-      "kind": "screen",
-      "text": "Escalated \"Christian Democrats still in Riksdag after next election?\" at 95%: quick estimate 57% vs market 95%"
-    },
-    {
-      "ts": 1788977819021,
-      "kind": "agency",
-      "text": "Own turn, retired a standing note: [self] [self] [liquidity] Liquidity remains at M$0 spendable (M$10 reserve). Alcaraz NO (D8e6191c0c) at 1% (P/L M$+41). . Because: Outdated liquidity note; superseded by current state."
     }
   ],
   "todos": [
@@ -957,6 +957,28 @@
   ],
   "decisions": [
     {
+      "ts": 1789019884303,
+      "kind": "no_trade",
+      "question": "Will American opinion of AI improve in 2026, according to Gallup?",
+      "url": "https://manifold.markets/cash/will-american-opinion-of-ai-improve-zQqs2LEdCQ",
+      "market_prob": 0.03436117797642035,
+      "model_prob": 0.02,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "The August 2026 Bentley-Gallup survey has already been released, showing only 9% of Americans believe AI does more good than harm. With the threshold set at 13% or higher to resolve YES, this market is almost certain to resolve NO.",
+      "uncertainty": "Whether Gallup releases another major AI tracking survey before the end of 2026.",
+      "resolution_risk": "Low, as the August 2026 Bentley-Gallup study is the exact annual poll tracked in the description.",
+      "evidence_for": [
+        "Gallup could theoretically release another AI survey before the end of 2026 with different results."
+      ],
+      "evidence_against": [
+        "The August 2026 Bentley University-Gallup study has already been published, showing only 9% of Americans believe AI does 'more good than harm'.",
+        "The 9% figure is well below the 13% threshold required for a YES resolution and represents a drop from 12% in 2025."
+      ],
+      "reason": "edge 0.014 below minimum 0.04"
+    },
+    {
       "ts": 1789014861097,
       "kind": "no_trade",
       "question": "Will Gukesh be board 1 for India at Olympiad?",
@@ -1282,32 +1304,6 @@
       "evidence_against": [
         "Equal holder counts (Y = N) resolve to NO, giving NO a structural mathematical advantage on ties.",
         "Casual retail traders buying cheap YES contracts inflate the YES holder count, driving the market toward NO."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1788982359194,
-      "kind": "no_trade",
-      "question": "Will United Russia gain seats in the 2026 Russian Duma Elections?",
-      "url": "https://manifold.markets/RealAP/will-united-russia-gain-or-loose-se",
-      "market_prob": 0.48158159269689726,
-      "model_prob": 0.74,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Given wartime political control, total opposition suppression, expansion of electronic voting, and the inclusion of occupied regions in single-member districts, United Russia is well-positioned to exceed its 2021 result of 324 seats.",
-      "uncertainty": "Whether the Kremlin decides to allocate more seats to loyal systemic opposition parties to maintain domestic legitimacy or maximizes the United Russia supermajority.",
-      "resolution_risk": "Disputes or ambiguities over official Central Election Commission seat counts versus reporting from independent outlets like Meduza.",
-      "evidence_for": [
-        "Wartime political consolidation and the expansion of distant electronic voting (DEG) heavily favor United Russia administrative turnout.",
-        "The inclusion of occupied/annexed regions provides additional easily manipulated votes and single-member constituency sweeps.",
-        "Systemic and non-systemic opposition is severely suppressed, with anti-war voices barred from the ballot.",
-        "United Russia achieved 343 seats in 2016 under similar institutional rules."
-      ],
-      "evidence_against": [
-        "A 324-seat threshold is already 72% of the Duma, requiring a near-total sweep of single-member districts and strong party-list performance.",
-        "The Kremlin maintains a controlled systemic opposition (CPRF, LDPR, SRZP, New People) to provide a veneer of parliamentary pluralism.",
-        "Leaked administration targets suggested managing vote shares rather than aggressively maximizing nominal seat tallies."
       ],
       "reason": "size floored to zero by balance reserve"
     }
