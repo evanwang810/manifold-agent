@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1789052699991,
+  "generated_ms": 1789053024807,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 60,
+      "today": 63,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 17,
+      "today": 18,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 446.72,
   "summary": "Net worth hovers around M$448, with capital locked across 18 active positions and spendable cash at M$1 alongside a M$10 reserve. The portfolio remains in a state of forced stasis, awaiting the formal resolution of 10 closed markets to unlock ~M$768. This incoming liquidity is earmarked to clear M$60 in outstanding debt (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93 and M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1) and restore active trading capacity. Recent actions include selling the collapsing Brett Smiley Democratic primary YES contract at a M$-19 loss and opening a M$16 NO position on whether Kalshi will beat Polymarket at 53% (model 22%). \n\nThe portfolio remains heavily anchored by the Carlos Alcaraz US Open NO contract near terminal value at 1%, alongside the newly added Kalshi vs Polymarket NO position and a pending limit order on Sanji Conqueror's Haki NO at 87% (model 66%). No open positions are actively moving against us following the tactical cut of the Smiley position and earlier exit from the Vuelta a Espa\u00f1a collapse. All remaining holdings are structurally sound, stable, and near maturity, requiring no emergency liquidations.\n\nConcrete mistakes worth avoiding include holding onto speculative positions when late-stage momentum and market convergence heavily overwhelm the original structural edge\u2014such as failing to cut primary election losses early enough\u2014and getting trapped by persistent ledger stringency where zero spendable cash prevents seizing valid market mispricings. Operationally, letting status notes repeatedly truncate is a persistent record-keeping failure that must be corrected by maintaining absolute clarity on operational constraints.\n\nCalibration remains strong on technical, mechanical, and structural thresholds, though the agent historically struggles with managing sudden directional noise, low-liquidity volatility, and emotional narrative momentum in political and sports brackets. Moving forward, the core focus remains entirely on waiting for the pending resolution of the 10 closed markets to unlock ~M$768, clear outstanding debts, and rebuild operational flexibility.",
   "journal": [
+    {
+      "ts": 1789053024733,
+      "kind": "analysis",
+      "text": "Analysed \"AI solves Millennium Prize Problem in September 2026?\": market 95%, my 72% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1789052902667,
+      "kind": "screen",
+      "text": "Escalated \"AI solves Millennium Prize Problem in September 2026?\" at 95%: quick estimate 45% vs market 95%"
+    },
     {
       "ts": 1789051592050,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1789004774382,
       "kind": "screen",
       "text": "Passed on \"US government shutdown on October 1st 2026?\" at 4%: quick estimate 12% agrees with market. A clean stopgap funding bill passed the House in July and cleared Senate cloture in August, making an October shutdown unlikely."
-    },
-    {
-      "ts": 1789003845985,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [status] Portfolio in forced stasis. Spendable liquidity M$1 (M$10 reserve). Awaiting resolution of 10 closed markets to. Because: Replacing the truncated note with a complete and accurate summary of the current liquidity crisis and pending obligations."
-    },
-    {
-      "ts": 1789003845976,
-      "kind": "agency",
-      "text": "Own turn, retired a standing note: [status] Portfolio in forced stasis. Spendable liquidity M$1 (M$10 reserve). Awaiting resolution of closed markets to un. Because: Removing truncated status note to maintain a professional and accurate ledger."
     }
   ],
   "todos": [
@@ -808,7 +808,7 @@
       "profit": 11.3,
       "prob": 0.144,
       "closed": false,
-      "days_to_close": 20.6
+      "days_to_close": 20.5
     },
     {
       "question": "Will at least 10 UK riot related prosecutions be overturned or have their sentences shortened in the next 2 years?",
@@ -956,6 +956,29 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1789053024730,
+      "kind": "no_trade",
+      "question": "AI solves Millennium Prize Problem in September 2026?",
+      "url": "https://manifold.markets/jim/ai-solves-millennium-prize-problem",
+      "market_prob": 0.9451190508317727,
+      "model_prob": 0.72,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "OpenAI's Sept 8 announcement satisfies the September timing condition. Lean formalization eliminates standard logical calculation errors, but significant risk remains around whether the formalized statement strictly captures the Clay Institute criteria rather than a simplified variation. Weighing valid execution vs statement translation risks at 72%.",
+      "uncertainty": "Whether independent expert review confirms that OpenAI's Lean statement precisely matches the Clay Institute's Navier-Stokes criteria without missing constraints or invalid axioms.",
+      "resolution_risk": "The creator specified that a claimed preprint does not automatically count, but if the proof is 'very close to valid' or fixable, it resolves YES even if non-public or disputed initially.",
+      "evidence_for": [
+        "OpenAI officially announced a solution to the Navier-Stokes existence and smoothness problem on September 8, 2026.",
+        "The proof was generated using an AI swarm over 88 hours and includes a Lean formalization, ensuring computer-verified logical consistency."
+      ],
+      "evidence_against": [
+        "Formalizing complex PDE problems in Lean carries a non-trivial risk of statement misformulation or subtle boundary/forcing term mismatches relative to the Clay Institute specifications.",
+        "Prominent mathematicians have raised initial questions regarding whether the formalized statement accurately matches the full Millennium Prize problem."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1789050481692,
       "kind": "no_trade",
@@ -1288,23 +1311,6 @@
         "The market closes in 14.6 days, making a shift to a 90/10 mindshare split virtually impossible without an existential shutdown of Polymarket."
       ],
       "reason": "edge 0.322, kelly 0.59, decay 0.68, bound by balance reserve"
-    },
-    {
-      "ts": 1789000337679,
-      "kind": "sell",
-      "question": "Will Brett Smiley win the 2026 Democratic primary for Mayor of Providence?",
-      "url": "https://manifold.markets/AdamBraff/will-brett-smiley-win-the-2026-demo",
-      "market_prob": 0.13307489449318027,
-      "model_prob": 0.12,
-      "confidence": null,
-      "amount": null,
-      "outcome": null,
-      "thinking": "With the primary taking place yesterday following polling that consistently showed Morales leading by up to 10 points, Smiley's financial edge appears not to have overcome the challenger's momentum. Adjusting probability down to 12% and exiting YES position.",
-      "uncertainty": "",
-      "resolution_risk": "",
-      "evidence_for": [],
-      "evidence_against": [],
-      "reason": null
     }
   ]
 }
