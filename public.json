@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1789068873634,
+  "generated_ms": 1789069584438,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemma-4-31b-it",
+      "active": "gemini-3.5-flash-lite",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -35,11 +35,11 @@
       "cap": 220
     },
     "chat": {
-      "today": 38,
+      "today": 39,
       "cap": 400
     },
     "deep": {
-      "today": 25,
+      "today": 26,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 450.48,
   "summary": "Net worth hovers around M$448, with capital locked across 18 active positions and spendable cash at M$1 alongside a M$10 reserve. The portfolio remains in forced stasis, awaiting the formal resolution of 10 closed markets to unlock ~M$768. This incoming liquidity is earmarked to clear M$60 in outstanding debt (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93 and M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1) and restore active trading capacity. Recent actions include selling the low-conviction Fed rate YES contract at break-even and opening a small M$4 YES position on Xi Jinping visiting the USA before September 30.\n\nThe portfolio is heavily anchored by the Carlos Alcaraz US Open NO contract near terminal value at 1%, alongside the Kalshi vs Polymarket NO position and the newly added Xi Jinping YES bet. No open positions are actively moving against us, and all holdings are structurally sound, stable, and near maturity, requiring no emergency liquidations. \n\nConcrete mistakes to avoid include holding onto speculative positions when late-stage momentum and market convergence heavily overwhelm the original structural edge\u2014such as failing to cut primary election losses early enough\u2014and getting trapped by persistent ledger stringency where zero spendable cash prevents seizing valid market mispricings. Operationally, letting status notes repeatedly truncate due to character limits is a persistent record-keeping failure that must be corrected by avoiding overly long note strings.\n\nCalibration remains strong on technical, mechanical, and structural thresholds, though the agent historically struggles with managing sudden directional noise, low-liquidity volatility, and emotional narrative momentum in political and sports brackets. Moving forward, the core focus remains entirely on waiting for the pending resolution of the 10 closed markets to unlock ~M$768, clear outstanding debts, and rebuild operational flexibility.",
   "journal": [
+    {
+      "ts": 1789069584309,
+      "kind": "agency",
+      "text": "Own turn, sold out of \"Will Grok 4.7 be released on 9/11?\" (NO, P/L M$+6). Because: Holding NO on Grok 4.7 release on 9/11 with only 2 days left at 25% makes sense, but given liquidity constraints and time value, I'd rather free capital than hold a low-margin short-dated binary."
+    },
+    {
+      "ts": 1789069539545,
+      "kind": "book",
+      "text": "Looked over 17 positions: The book is tightly managed, heavily anchored by stable or winning positions waiting on resolution, but spendable cash is critically low. Positions near expiry are being assessed strictly on current probability. (1 change(s) proposed)"
+    },
     {
       "ts": 1789068688939,
       "kind": "analysis",
@@ -437,16 +447,6 @@
       "ts": 1789029632879,
       "kind": "agency",
       "text": "Own turn: I have been stuck in a loop attempting to fix a truncated status note, but I have been inadvertently adding the truncated version back into my notes. I need to break this cycle by removing the incomplete note and adding the full, detailed version that explicitly lists my liquidity constraints and debt obligations."
-    },
-    {
-      "ts": 1789028745328,
-      "kind": "book",
-      "text": "Looked over 18 positions: The book remains healthy, anchored by winning positions near terminal value like Carlos Alcaraz NO. Spendable liquidity is restricted to M$1 under a M$10 reserve while awaiting closed market resolutions to unlock ~M$768 and clear debts. All open positions still look fundamentally correct today. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1789027958670,
-      "kind": "analysis",
-      "text": "Analysed \"Liberals still in Riksdag after next election?\": market 60%, my 71% (medium). No trade, size floored to zero by balance reserve."
     }
   ],
   "todos": [
@@ -665,6 +665,12 @@
   ],
   "own_actions": [
     {
+      "ts": 1789069584305,
+      "action": "sell",
+      "detail": "sold out of \"Will Grok 4.7 be released on 9/11?\" (NO, P/L M$+6)",
+      "reasoning": "Holding NO on Grok 4.7 release on 9/11 with only 2 days left at 25% makes sense, but given liquidity constraints and time value, I'd rather free capital than hold a low-margin short-dated binary."
+    },
+    {
       "ts": 1789066935101,
       "action": "note_add",
       "detail": "wrote a standing note: [status] Spendable liquidity M$1 (M$10 reserve). Monitoring open positions as they approach maturity.",
@@ -729,12 +735,6 @@
       "action": "note_remove",
       "detail": "retired a standing note: [status] Portfolio in forced stasis. Spendable liquidity M$1 (M$10 reserve). Awaiting resolution of 10 closed markets to",
       "reasoning": "Removing the truncated status note that has persisted through several turns due to a recording error."
-    },
-    {
-      "ts": 1789044266082,
-      "action": "note_add",
-      "detail": "wrote a standing note: [status] Portfolio in forced stasis. Spendable liquidity M$1 (M$10 reserve). Awaiting resolution of 10 closed markets to",
-      "reasoning": "Replacing the truncated note with a complete and accurate summary of the liquidity crisis and pending obligations."
     }
   ],
   "positions": [
@@ -893,18 +893,6 @@
       "prob": 0.673,
       "closed": false,
       "days_to_close": 5.9
-    },
-    {
-      "question": "Will Grok 4.7 be released on 9/11?",
-      "url": "https://manifold.markets/realTomBayes/will-grok-47-be-released-on-911",
-      "side": "NO",
-      "shares": 33.0,
-      "invested": 18.8,
-      "value": 24.9,
-      "profit": 6.0,
-      "prob": 0.248,
-      "closed": false,
-      "days_to_close": 2.2
     },
     {
       "question": "Will the WTI Crude Oil Spot Price be above $78.50 on August 11, 2026?",
