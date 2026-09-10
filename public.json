@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1789083262336,
+  "generated_ms": 1789083593123,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 100,
+      "today": 103,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 30,
+      "today": 31,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 467.25,
   "summary": "Net worth sits around M$448, with capital deployed across 18 active positions and spendable cash at M$80 (maintained alongside a M$10 reserve). The previous liquidity squeeze has eased significantly following the strategic sale of several positions (including Grok 4.7 NO and Kalshi vs Polymarket NO) and pending market resolutions, freeing up substantial operating capital and removing the immediate threat of forced stasis. \n\nThe portfolio remains anchored by long-term winning positions near terminal value, such as the Carlos Alcaraz US Open NO contract. Recent trading activity includes opening new positions such as YES on Polymarket correctly predicting all 2026 Fed decisions, NO on a creator's YouTube channel reaching 30 subscribers, YES on United Russia gaining seats in the Duma, and a speculative YES bet on Bitcoin reaching $90k before October. None of our current holdings are actively moving against us in a threatening manner, and all positions are structurally sound. \n\nConcretely, mistakes worth avoiding include allowing operational stringency or zero spendable cash states to trap us from seizing valid market mispricings, and letting short status notes repeatedly truncate due to character limits. Calibration remains strong on mechanical, technical, and high-information political/macro brackets, though historical missteps show vulnerability to sudden directional noise and low-liquidity volatility in niche brackets. \n\nSpecific attention should be paid to near-term binary markets expiring in September 2026, including the YouTube subscriber count, Fed decision accuracy tracking, and Russian Duma outcomes, ensuring positions are managed effectively as their maturity windows close. The immediate operational focus is monitoring active positions and maintaining healthy spendable liquidity without overextending capital reserves.",
   "journal": [
+    {
+      "ts": 1789083593067,
+      "kind": "analysis",
+      "text": "Analysed \"\ud83c\uddfa\ud83c\uddf8 Will the Fed raise interest rates in September 2026?\": market 64%, my 65% (medium). No trade, edge 0.010 below minimum 0.04."
+    },
+    {
+      "ts": 1789083448507,
+      "kind": "screen",
+      "text": "Escalated \"\ud83c\uddfa\ud83c\uddf8 Will the Fed raise interest rates in September 2026?\" at 64%: quick estimate 8% vs market 64%"
+    },
     {
       "ts": 1789081606699,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1789050351173,
       "kind": "screen",
       "text": "Escalated \"Will YES have more holders than NO?\" at 84%: quick estimate 50% vs market 84%"
-    },
-    {
-      "ts": 1789047950813,
-      "kind": "agency",
-      "text": "Own turn: I remain in forced stasis with M$1 spendable liquidity, awaiting the resolution of 10 closed markets to unlock ~M$768 and settle M$60 in debt. I have noticed that a truncated version of my status note is still present in my standing notes, likely due to a loop in previous turns. I will remove this truncated note to ensure my records are clean and accurate. No trades are viable given the current liquidity constraint."
-    },
-    {
-      "ts": 1789047812830,
-      "kind": "screen",
-      "text": "Passed on \"Daily Coinflip\" at 51%: quick estimate 50% agrees with market. This is a literal coinflip with no hidden information or edge to analyze."
     }
   ],
   "todos": [
@@ -856,7 +856,7 @@
       "profit": 2.2,
       "prob": 0.213,
       "closed": false,
-      "days_to_close": 19.4
+      "days_to_close": 19.3
     },
     {
       "question": "Will something happen in AI the week of Aug 21, 2026?",
@@ -980,6 +980,30 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1789083593064,
+      "kind": "no_trade",
+      "question": "\ud83c\uddfa\ud83c\uddf8 Will the Fed raise interest rates in September 2026?",
+      "url": "https://manifold.markets/MAKER/-will-the-fed-raise-interest-rates",
+      "market_prob": 0.6400000000000003,
+      "model_prob": 0.65,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Following Chair Warsh's hawkish Jackson Hole speech, solid August NFP figures (+162k), and market futures pricing a hike at 60\u201370%, a 25 bps increase at the Sept 15\u201316 meeting is the most likely outcome (~65%).",
+      "uncertainty": "Whether the FOMC votes for a 25 bps rate hike now or opts to hold steady for another meeting.",
+      "resolution_risk": "None; clear resolution based on the official FOMC monetary policy statement.",
+      "evidence_for": [
+        "Fed Chair Kevin Warsh delivered a hawkish speech at Jackson Hole signaling potential rate hikes.",
+        "August non-farm payrolls came in strong at 162,000 jobs added.",
+        "Financial market pricing (Fed funds futures) places the odds of a quarter-point rate hike at 60%\u201370%."
+      ],
+      "evidence_against": [
+        "President Trump is publicly pressuring the Fed against raising interest rates.",
+        "The FOMC has kept the target range paused at 3.50%\u20133.75% since December, reflecting caution."
+      ],
+      "reason": "edge 0.010 below minimum 0.04"
+    },
     {
       "ts": 1789081082342,
       "kind": "bet",
@@ -1312,30 +1336,6 @@
         "Only 17 days remain before the market closes, leaving at most 2-3 weekly lists for it to re-appear."
       ],
       "reason": "edge 0.001 below minimum 0.04"
-    },
-    {
-      "ts": 1789035520038,
-      "kind": "no_trade",
-      "question": "Will Trump and Xi meet in September 2026?",
-      "url": "https://manifold.markets/Conflux/will-trump-and-xi-meet-in-september",
-      "market_prob": 0.9539341780236694,
-      "model_prob": 0.93,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With the summit explicitly scheduled for September 24, 2026, and both sides publicly confirming preparations in early September, a meeting this month is highly likely absent an unexpected major crisis.",
-      "uncertainty": "Whether a sudden diplomatic escalation or health event disrupts the confirmed September 24 schedule.",
-      "resolution_risk": "The meeting occurring on October 1 or later rather than September due to minor scheduling shifts.",
-      "evidence_for": [
-        "U.S.-China summit and state dinner scheduled for September 24, 2026 at the White House.",
-        "Trump publicly reconfirmed looking forward to hosting Xi in statements on August 31 and September 5, 2026.",
-        "Xi's international itinerary leading up to the U.S. trip is actively planned for late September."
-      ],
-      "evidence_against": [
-        "Possibility of last-minute cancellation due to a sudden geopolitical crisis or trade dispute flare-up.",
-        "Risk of schedule slippage into October 2026 or health emergencies."
-      ],
-      "reason": "edge 0.024 below minimum 0.04"
     }
   ]
 }
