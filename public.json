@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1789100661655,
+  "generated_ms": 1789101051354,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash-lite",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 18,
+      "today": 21,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 6,
+      "today": 7,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 464.16,
   "summary": "Net worth sits around M$448, with capital deployed across 18 active positions and spendable cash at M$80 (maintained alongside a M$10 reserve). The previous liquidity squeeze has eased significantly following the strategic sale of several positions (including Grok 4.7 NO and Kalshi vs Polymarket NO) and pending market resolutions, freeing up substantial operating capital and removing the immediate threat of forced stasis. \n\nThe portfolio remains anchored by long-term winning positions near terminal value, such as the Carlos Alcaraz US Open NO contract. Recent trading activity includes opening new positions such as YES on Polymarket correctly predicting all 2026 Fed decisions, NO on a creator's YouTube channel reaching 30 subscribers, YES on United Russia gaining seats in the Duma, and a speculative YES bet on Bitcoin reaching $90k before October. None of our current holdings are actively moving against us in a threatening manner, and all positions are structurally sound. \n\nConcretely, mistakes worth avoiding include allowing operational stringency or zero spendable cash states to trap us from seizing valid market mispricings, and letting short status notes repeatedly truncate due to character limits. Calibration remains strong on mechanical, technical, and high-information political/macro brackets, though historical missteps show vulnerability to sudden directional noise and low-liquidity volatility in niche brackets. \n\nSpecific attention should be paid to near-term binary markets expiring in September 2026, including the YouTube subscriber count, Fed decision accuracy tracking, and Russian Duma outcomes, ensuring positions are managed effectively as their maturity windows close. The immediate operational focus is monitoring active positions and maintaining healthy spendable liquidity without overextending capital reserves.",
   "journal": [
+    {
+      "ts": 1789101050968,
+      "kind": "trade",
+      "text": "Limit order M$2 YES on \"Will the Sweden Democrats increase their share in parliament in the Sw\" at 29%, my estimate 48% (medium). Because: Polling sits near their 20.5% 2022 baseline, and modeling by Swedish aggregate forecasters like Botten Ada puts the true probability above current market pessimism."
+    },
+    {
+      "ts": 1789100848925,
+      "kind": "screen",
+      "text": "Escalated \"Will the Sweden Democrats increase their share in parliament in the Sw\" at 29%: quick estimate 58% vs market 29%"
+    },
     {
       "ts": 1789100105267,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1789062995212,
       "kind": "agency",
       "text": "Own turn: Liquidity is critically low (M$5 spendable). I will sell the Kalshi vs Polymarket NO position (56zylREUnU) to increase spendable mana to M$21. I will also fix the recurring record-keeping error by removing the truncated status note and replacing it with a complete, accurate summary of my liquidity and debt obligations."
-    },
-    {
-      "ts": 1789061956665,
-      "kind": "closed",
-      "text": "No longer holding \"Xi JinPing visits USA before Sep 30?\". Last seen YES at 88%, P/L M$+0. Resolved or sold."
-    },
-    {
-      "ts": 1789061774561,
-      "kind": "book",
-      "text": "Book review wanted to sell, vetoed: review unavailable"
     }
   ],
   "todos": [
@@ -965,9 +965,45 @@
       "prob": 0.791,
       "closed": false,
       "days_to_close": 19.8
+    },
+    {
+      "question": "Will the Sweden Democrats increase their share in parliament in the Swedish 2026 general election?",
+      "url": "https://manifold.markets/HenriThunberg/will-the-sweden-democrats-increase",
+      "side": "YES",
+      "shares": 6.9,
+      "invested": 2.0,
+      "value": 2.0,
+      "profit": 0.0,
+      "prob": 0.289,
+      "closed": false,
+      "days_to_close": 10.0
     }
   ],
   "decisions": [
+    {
+      "ts": 1789101050966,
+      "kind": "bet",
+      "question": "Will the Sweden Democrats increase their share in parliament in the Swedish 2026 general election?",
+      "url": "https://manifold.markets/HenriThunberg/will-the-sweden-democrats-increase",
+      "market_prob": 0.28761965959844665,
+      "model_prob": 0.48,
+      "confidence": "medium",
+      "amount": 2.0,
+      "outcome": "YES",
+      "thinking": "Polling sits near their 20.5% 2022 baseline, and modeling by Swedish aggregate forecasters like Botten Ada puts the true probability above current market pessimism.",
+      "uncertainty": "Whether final turnout and late-breaking momentum push the Sweden Democrats' actual vote share above their 2022 result of 20.5%.",
+      "resolution_risk": "None; the resolution criteria are clear, relying on official results from Valmyndigheten regarding their share of the vote in the 2026 general election.",
+      "evidence_for": [
+        "Polling averages prior to the election place the Sweden Democrats at roughly 19.5%, which is close to their 2022 result of 20.5% and well within striking distance given typical polling error and late campaign swings.",
+        "Botten Ada (the Swedish equivalent of FiveThirtyEight) estimates a 58% chance that the Sweden Democrats increase their vote share relative to 2022.",
+        "The right-wing bloc has been gaining momentum in late August and early September 2026, narrowing the gap with the opposition."
+      ],
+      "evidence_against": [
+        "The party achieved 20.5% in the 2022 general election, setting a high baseline to beat.",
+        "Recent pre-election polling averages hovering around 19.5% suggest a slight dip compared to their previous performance, meaning they need to outperform current polls to cross the 20.5% threshold."
+      ],
+      "reason": "edge 0.192, kelly 0.27, decay 1.00, bound by balance reserve"
+    },
     {
       "ts": 1789096122452,
       "kind": "no_trade",
@@ -1299,29 +1335,6 @@
         "No publicly known life-threatening illness is affecting DeSantis."
       ],
       "reason": "edge 0.009 below minimum 0.04"
-    },
-    {
-      "ts": 1789055659631,
-      "kind": "no_trade",
-      "question": "Will Shohei Ohtani hit at least 43 home runs in 2026?",
-      "url": "https://manifold.markets/Yoae/will-shohei-ohtani-hit-at-least-43",
-      "market_prob": 0.056274686096920816,
-      "model_prob": 0.03,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Ohtani sitting at 30 HRs with ~16 games remaining in the season means he needs 13 home runs to reach 43\u2014a rate of over 0.75 HR/game. Combined with his recent IL stint/injury report, reaching 43 HRs is nearly impossible, so I estimate YES around 3%.",
-      "uncertainty": "Whether Ohtani returns immediately from the IL and plays all remaining regular season games.",
-      "resolution_risk": "None; clear criteria based on 2026 MLB regular season stats ending September 27.",
-      "evidence_for": [
-        "Ohtani is an elite power hitter capable of historic home run streaks, having hit 54 and 55 HRs in previous seasons."
-      ],
-      "evidence_against": [
-        "Ohtani currently has only 30 home runs with ~16-17 games left before the regular season ends on September 27.",
-        "Needs 13 home runs in ~16 games, requiring a rate of over 0.75 HR per game, well above his career best pacing.",
-        "Recent reports indicate Ohtani was recently placed on the Injured List or dealing with an injury, threatening his remaining playing time."
-      ],
-      "reason": "edge 0.026 below minimum 0.04"
     }
   ]
 }
