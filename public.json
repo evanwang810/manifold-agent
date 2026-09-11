@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1789151656148,
+  "generated_ms": 1789152018580,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemma-4-31b-it",
+      "active": "gemma-4-26b-a4b-it",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.6-flash",
+      "active": "gemini-3.7-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -35,7 +35,7 @@
       "cap": 220
     },
     "chat": {
-      "today": 36,
+      "today": 37,
       "cap": 400
     },
     "deep": {
@@ -48,6 +48,16 @@
   "net_worth": 463.1,
   "summary": "Net worth is roughly M$448, with capital deployed across 20 active positions and spendable cash currently sitting at M$0 alongside a M$10 reserve. The portfolio is caught in a severe liquidity squeeze and forced stasis, awaiting the final resolution of 11 closed markets that will unlock significant capital and clear debts. Trading activity has been entirely constrained by these low liquidity reserves, preventing new entries despite screening viable candidates such as Bitcoin weekly direction and Sanji Conqueror's Haki markets. Unfavorable or dead speculative positions like the Bitcoin $90k before October bet were successfully liquidated previously to salvage spendable mana. \n\nThe portfolio remains anchored by winning positions near terminal value, such as the Carlos Alcaraz US Open NO contract. None of our current holdings are actively moving against us in a threatening manner, and all open positions remain structurally sound and well-calibrated. Near-term binary markets expiring in September 2026\u2014including the YouTube subscriber count, Fed decision accuracy tracking, Russian Duma outcomes, and the one-arm chinup challenge\u2014require close monitoring as their maturity windows close. \n\nConcretely, mistakes worth avoiding include letting spendable liquidity drop to absolute zero which traps us from seizing valid market mispricings, and failing to purge dead theses promptly when liquidity is tight. Avoid long-winded standing notes that risk truncation in the system prompt. Calibration remains strong on mechanical, technical, and high-information political/macro brackets, though historical missteps show vulnerability to sudden directional noise and low-liquidity volatility in niche brackets. The immediate operational focus is waiting for pending closed market resolutions to restore liquidity, allowing normal trading activity to resume without overextending capital reserves.",
   "journal": [
+    {
+      "ts": 1789152018363,
+      "kind": "agency",
+      "text": "Own turn, wrote a standing note: [self] [status] 09-11 18:45Z: Stasis continues. 12 closed markets pending. Chinup market (59qd89RNgP) is closed but fund. Because: Maintaining a timestamped log of the stasis period and noting that the chinup market is closed but funds are still pending."
+    },
+    {
+      "ts": 1789152018356,
+      "kind": "agency",
+      "text": "Own turn: The portfolio remains in a total liquidity squeeze with M$0 spendable mana, awaiting the resolution of 12 closed markets. The 'one arm chinup' market (59qd89RNgP) is already marked as CLOSED, but the funds have not yet been credited to my balance. I am continuing to monitor the status of these resolutions to restore liquidity."
+    },
     {
       "ts": 1789151656092,
       "kind": "analysis",
@@ -437,16 +447,6 @@
       "ts": 1789105884272,
       "kind": "screen",
       "text": "Passed on \"Will I be wowed by whatever SSI releases in August?\" at 19%: quick estimate 15% agrees with market. This is entirely subjective, resolving on whether one specific trader is 'wowed' by a product release."
-    },
-    {
-      "ts": 1789105864218,
-      "kind": "screen",
-      "text": "Passed on \"Will the US sign a peace agreement based on Iran's 14-point plan befor\" at 11%: quick estimate 12% agrees with market. Comments indicate a signed MOU occurred in June, but subsequent military escalations in July and September make a formal peace agreement before September 30 unlikely."
-    },
-    {
-      "ts": 1789105844111,
-      "kind": "screen",
-      "text": "Passed on \"Summer of 2026: Major Unrest in the USA?\" at 8%: quick estimate 5% agrees with market. Vague resolution criteria and subjective framing make this a coin flip based on vibes."
     }
   ],
   "todos": [
@@ -633,11 +633,6 @@
       "ts": 1788935320158
     },
     {
-      "text": "[status] Monitoring pending resolutions of 11 closed markets and upcoming expirations: One arm chinup (within 1d), Robot hand (5d), and Polymarket Fed (6d).",
-      "source": "self",
-      "ts": 1789085371496
-    },
-    {
       "text": "[status] Spendable liquidity M$1. Portfolio in stasis awaiting resolution of 11 closed markets.",
       "source": "self",
       "ts": 1789089022438
@@ -666,9 +661,20 @@
       "text": "[debt] Priority payments upon liquidity: M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1.",
       "source": "self",
       "ts": 1789148165834
+    },
+    {
+      "text": "[self] [status] 09-11 18:45Z: Stasis continues. 12 closed markets pending. Chinup market (59qd89RNgP) is closed but funds not yet credited.",
+      "source": "self",
+      "ts": 1789152018356
     }
   ],
   "own_actions": [
+    {
+      "ts": 1789152018360,
+      "action": "note_add",
+      "detail": "wrote a standing note: [self] [status] 09-11 18:45Z: Stasis continues. 12 closed markets pending. Chinup market (59qd89RNgP) is closed but fund",
+      "reasoning": "Maintaining a timestamped log of the stasis period and noting that the chinup market is closed but funds are still pending."
+    },
     {
       "ts": 1789148165837,
       "action": "note_add",
@@ -734,12 +740,6 @@
       "action": "note_remove",
       "detail": "retired a standing note: [self] [self] [status] Spendable liquidity M$1. Still in stasis awaiting resolution of 11 closed markets. Monitoring 'on",
       "reasoning": "Removing redundant, double-tagged status note."
-    },
-    {
-      "ts": 1789118574688,
-      "action": "note_remove",
-      "detail": "retired a standing note: [self] [status] Spendable liquidity M$1. Still in stasis awaiting resolution of 11 closed markets. Monitoring 'one arm c",
-      "reasoning": "Removing truncated and useless note."
     }
   ],
   "positions": [
