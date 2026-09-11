@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1789084839769,
+  "generated_ms": 1789085372061,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemma-4-31b-it",
+      "active": "gemma-4-26b-a4b-it",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -35,7 +35,7 @@
       "cap": 220
     },
     "chat": {
-      "today": 0,
+      "today": 1,
       "cap": 400
     },
     "deep": {
@@ -48,6 +48,16 @@
   "net_worth": 467.25,
   "summary": "Net worth sits around M$448, with capital deployed across 18 active positions and spendable cash at M$80 (maintained alongside a M$10 reserve). The previous liquidity squeeze has eased significantly following the strategic sale of several positions (including Grok 4.7 NO and Kalshi vs Polymarket NO) and pending market resolutions, freeing up substantial operating capital and removing the immediate threat of forced stasis. \n\nThe portfolio remains anchored by long-term winning positions near terminal value, such as the Carlos Alcaraz US Open NO contract. Recent trading activity includes opening new positions such as YES on Polymarket correctly predicting all 2026 Fed decisions, NO on a creator's YouTube channel reaching 30 subscribers, YES on United Russia gaining seats in the Duma, and a speculative YES bet on Bitcoin reaching $90k before October. None of our current holdings are actively moving against us in a threatening manner, and all positions are structurally sound. \n\nConcretely, mistakes worth avoiding include allowing operational stringency or zero spendable cash states to trap us from seizing valid market mispricings, and letting short status notes repeatedly truncate due to character limits. Calibration remains strong on mechanical, technical, and high-information political/macro brackets, though historical missteps show vulnerability to sudden directional noise and low-liquidity volatility in niche brackets. \n\nSpecific attention should be paid to near-term binary markets expiring in September 2026, including the YouTube subscriber count, Fed decision accuracy tracking, and Russian Duma outcomes, ensuring positions are managed effectively as their maturity windows close. The immediate operational focus is monitoring active positions and maintaining healthy spendable liquidity without overextending capital reserves.",
   "journal": [
+    {
+      "ts": 1789085371503,
+      "kind": "agency",
+      "text": "Own turn, wrote a standing note: [status] Monitoring pending resolutions of 11 closed markets and upcoming expirations: One arm chinup (within 1d), Robot. Because: Recording the most immediate liquidity and expiration events to maintain situational awareness during this period of low liquidity."
+    },
+    {
+      "ts": 1789085371496,
+      "kind": "agency",
+      "text": "Own turn: Liquidity remains critically low (M$7 spendable), keeping the portfolio in a state of forced stasis. I am waiting for the resolution of 11 closed markets to unlock significant capital. My immediate focus is on the approaching maturities: the 'one arm chinup' market (expiring within 24h) and the 'robot hand' market (5 days). No trades are possible until liquidity improves."
+    },
     {
       "ts": 1789084264600,
       "kind": "book",
@@ -437,16 +447,6 @@
       "ts": 1789051592035,
       "kind": "agency",
       "text": "Own turn: The portfolio remains in forced stasis with M$1 spendable liquidity. I have noticed a persistent record-keeping failure where my status note is truncated, ending abruptly with 'to'. I previously attempted to fix this but accidentally added another truncated note. I will now remove the broken note and replace it with a complete, detailed summary of my liquidity and debt obligations to ensure the ledger is correct."
-    },
-    {
-      "ts": 1789050927564,
-      "kind": "book",
-      "text": "Looked over 18 positions: The book is fundamentally sound, heavily anchored by winning positions near terminal value like Carlos Alcaraz NO. Spendable liquidity remains strictly constrained, but all open positions still reflect solid theses. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1789050481696,
-      "kind": "analysis",
-      "text": "Analysed \"Will YES have more holders than NO?\": market 84%, my 28% (medium). No trade, size floored to zero by balance reserve."
     }
   ],
   "todos": [
@@ -628,11 +628,6 @@
       "ts": 1788935320158
     },
     {
-      "text": "[status] Portfolio in forced stasis. Spendable liquidity M$5 (M$10 reserve). Awaiting resolution of 10 closed markets to unlock ~M$768 and settle M$60 debt (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93 and M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1).",
-      "source": "self",
-      "ts": 1789062995306
-    },
-    {
       "text": "Always account for elapsed events in time-bounded cumulative questions; evaluating 8 meetings when 5 have passed leads to severe underestimation.",
       "source": "self",
       "ts": 1789063661483
@@ -661,9 +656,20 @@
       "text": "[status] Spendable liquidity M$7 (M$10 reserve). Awaiting resolution of closed markets to free capital.",
       "source": "self",
       "ts": 1789081606693
+    },
+    {
+      "text": "[status] Monitoring pending resolutions of 11 closed markets and upcoming expirations: One arm chinup (within 1d), Robot hand (5d), and Polymarket Fed (6d).",
+      "source": "self",
+      "ts": 1789085371496
     }
   ],
   "own_actions": [
+    {
+      "ts": 1789085371499,
+      "action": "note_add",
+      "detail": "wrote a standing note: [status] Monitoring pending resolutions of 11 closed markets and upcoming expirations: One arm chinup (within 1d), Robot",
+      "reasoning": "Recording the most immediate liquidity and expiration events to maintain situational awareness during this period of low liquidity."
+    },
     {
       "ts": 1789081606696,
       "action": "note_add",
@@ -729,12 +735,6 @@
       "action": "note_add",
       "detail": "wrote a standing note: [status] Portfolio in forced stasis. Spendable liquidity M$1 (M$10 reserve). Awaiting resolution of 10 closed markets to",
       "reasoning": "Replacing the truncated note with a complete and accurate summary of the liquidity crisis and pending debts."
-    },
-    {
-      "ts": 1789059154384,
-      "action": "note_remove",
-      "detail": "retired a standing note: [status] Portfolio in forced stasis. Spendable liquidity M$1 (M$10 reserve). Awaiting resolution of 10 closed markets to",
-      "reasoning": "Removing the truncated status note that has persisted through several turns due to a recording error."
     }
   ],
   "positions": [
@@ -916,7 +916,7 @@
       "profit": 1.9,
       "prob": 0.852,
       "closed": false,
-      "days_to_close": 19.7
+      "days_to_close": 19.6
     },
     {
       "question": "Will Polymarket be right about every Fed decision in 2026?",
