@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1789138976712,
+  "generated_ms": 1789139943042,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -31,15 +31,15 @@
   },
   "usage": {
     "fast": {
-      "today": 64,
+      "today": 67,
       "cap": 220
     },
     "chat": {
-      "today": 29,
+      "today": 30,
       "cap": 400
     },
     "deep": {
-      "today": 18,
+      "today": 19,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 463.03,
   "summary": "Net worth is roughly M$448, with capital deployed across 20 active positions and spendable cash currently sitting at M$0 alongside a M$10 reserve. The portfolio is caught in a severe liquidity squeeze and forced stasis, awaiting the final resolution of 11 closed markets that will unlock significant capital and clear debts. Trading activity has been entirely constrained by these low liquidity reserves, preventing new entries despite screening viable candidates such as Bitcoin weekly direction and Sanji Conqueror's Haki markets. Unfavorable or dead speculative positions like the Bitcoin $90k before October bet were successfully liquidated previously to salvage spendable mana. \n\nThe portfolio remains anchored by winning positions near terminal value, such as the Carlos Alcaraz US Open NO contract. None of our current holdings are actively moving against us in a threatening manner, and all open positions remain structurally sound and well-calibrated. Near-term binary markets expiring in September 2026\u2014including the YouTube subscriber count, Fed decision accuracy tracking, Russian Duma outcomes, and the one-arm chinup challenge\u2014require close monitoring as their maturity windows close. \n\nConcretely, mistakes worth avoiding include letting spendable liquidity drop to absolute zero which traps us from seizing valid market mispricings, and failing to purge dead theses promptly when liquidity is tight. Avoid long-winded standing notes that risk truncation in the system prompt. Calibration remains strong on mechanical, technical, and high-information political/macro brackets, though historical missteps show vulnerability to sudden directional noise and low-liquidity volatility in niche brackets. The immediate operational focus is waiting for pending closed market resolutions to restore liquidity, allowing normal trading activity to resume without overextending capital reserves.",
   "journal": [
+    {
+      "ts": 1789139301822,
+      "kind": "analysis",
+      "text": "Analysed \"Will YES have more holders than NO?\": market 84%, my 73% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1789139207645,
+      "kind": "screen",
+      "text": "Escalated \"Will YES have more holders than NO?\" at 84%: quick estimate 50% vs market 84%"
+    },
     {
       "ts": 1789137125368,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1789093416889,
       "kind": "screen",
       "text": "Escalated \"will Kalorm survive to the end of 'to face the death you're never that\" at 95%: quick estimate 50% vs market 95%"
-    },
-    {
-      "ts": 1789093396772,
-      "kind": "screen",
-      "text": "Passed on \"US government shutdown on October 1st 2026?\" at 4%: quick estimate 15% agrees with market. The comments indicate the House passed a CR and the Senate cleared cloture on a bipartisan stopgap funding bill through December, making a shutdown unlikely."
-    },
-    {
-      "ts": 1789092653221,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [status] Liquidity remains at M$1 spendable. Still awaiting resolution of 11 closed markets to break stasis. Monitoring . Because: Updating the liquidity status and immediate expiration focus to maintain situational awareness during this period of zero actionable capacity."
     }
   ],
   "todos": [
@@ -808,7 +808,7 @@
       "profit": 11.3,
       "prob": 0.144,
       "closed": false,
-      "days_to_close": 19.6
+      "days_to_close": 19.5
     },
     {
       "question": "Will at least 10 UK riot related prosecutions be overturned or have their sentences shortened in the next 2 years?",
@@ -980,6 +980,31 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1789139301819,
+      "kind": "no_trade",
+      "question": "Will YES have more holders than NO?",
+      "url": "https://manifold.markets/senso/will-yes-have-more-holders-than-no",
+      "market_prob": 0.837292250253995,
+      "model_prob": 0.73,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "While the market price reflects an existing YES lead on the holders tab, Jack1's 15 mana per-head NO bounty, alt-account moderation risk, and tie-breaking rules favoring NO create substantial risk of NO coordination before close.",
+      "uncertainty": "The magnitude of YES's current holder lead versus the number of late NO snipers recruited by Jack1's bounty before closing.",
+      "resolution_risk": "Disqualification or banning of alternate accounts by platform moderators altering the final net holder tallies upon resolution.",
+      "evidence_for": [
+        "Market trading at elevated levels (~84%) strongly indicates YES currently holds an active lead on the publicly visible Holders tab.",
+        "Active YES participation and promotion by traders attempting to maintain the YES holder count advantage."
+      ],
+      "evidence_against": [
+        "Jack1 is offering a 15 mana per-head bounty to all NO holders if NO resolves, creating strong economic incentive for late NO buyers.",
+        "Tie-breaking rule specifies that equal holder counts resolve to NO.",
+        "Evan Wang accounts suspected of multi-accounting may have duplicate YES positions removed or penalized by moderators.",
+        "Low friction for last-minute NO holder snipes before the close in 2.4 days."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1789134206225,
       "kind": "no_trade",
@@ -1311,30 +1336,6 @@
         "Small possibility of a technical or ambiguous death/cryo event within glowfic canon."
       ],
       "reason": "edge 0.011 below minimum 0.04"
-    },
-    {
-      "ts": 1789091074938,
-      "kind": "no_trade",
-      "question": "Will Kalshi beat Polymarket?",
-      "url": "https://manifold.markets/IsaacKing/will-kalshi-beat-polymarket",
-      "market_prob": 0.542247306952621,
-      "model_prob": 0.18,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "While Kalshi has overtaken Polymarket in US trading volume (~60-70% share) and valuation metrics, the creator specified a ~90/10 mindshare dominance threshold for resolution. Polymarket retains strong global and crypto-native mindshare, and a 90/10 split is unlikely to be achieved before close in 14 days.",
-      "uncertainty": "Whether the creator will strictly enforce the 90/10 threshold or resolve based on qualitative perception of recent momentum at close.",
-      "resolution_risk": "The creator might subjectively view Kalshi's high valuation and volume lead as 'dramatically more successful' despite Polymarket holding substantial global mindshare.",
-      "evidence_for": [
-        "Kalshi has reportedly taken a 60-70% volume share lead over Polymarket in US-accessible event trading.",
-        "Kalshi is in funding talks at a $40B valuation compared to Polymarket's $15B valuation."
-      ],
-      "evidence_against": [
-        "The creator explicitly defined the resolution threshold as roughly a 90/10 split in prediction market mindspace and finance-space.",
-        "Polymarket maintains deep international and crypto-native mindshare and liquidity that Kalshi does not replicate globally.",
-        "The market closes in under 14 days, making a shift to 90/10 market dominance before close virtually impossible."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
