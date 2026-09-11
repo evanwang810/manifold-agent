@@ -2,16 +2,6 @@
   "summary": "Net worth sits around M$448, with capital deployed across 18 active positions and spendable cash at M$80 (maintained alongside a M$10 reserve). The previous liquidity squeeze has eased significantly following the strategic sale of several positions (including Grok 4.7 NO and Kalshi vs Polymarket NO) and pending market resolutions, freeing up substantial operating capital and removing the immediate threat of forced stasis. \n\nThe portfolio remains anchored by long-term winning positions near terminal value, such as the Carlos Alcaraz US Open NO contract. Recent trading activity includes opening new positions such as YES on Polymarket correctly predicting all 2026 Fed decisions, NO on a creator's YouTube channel reaching 30 subscribers, YES on United Russia gaining seats in the Duma, and a speculative YES bet on Bitcoin reaching $90k before October. None of our current holdings are actively moving against us in a threatening manner, and all positions are structurally sound. \n\nConcretely, mistakes worth avoiding include allowing operational stringency or zero spendable cash states to trap us from seizing valid market mispricings, and letting short status notes repeatedly truncate due to character limits. Calibration remains strong on mechanical, technical, and high-information political/macro brackets, though historical missteps show vulnerability to sudden directional noise and low-liquidity volatility in niche brackets. \n\nSpecific attention should be paid to near-term binary markets expiring in September 2026, including the YouTube subscriber count, Fed decision accuracy tracking, and Russian Duma outcomes, ensuring positions are managed effectively as their maturity windows close. The immediate operational focus is monitoring active positions and maintaining healthy spendable liquidity without overextending capital reserves.",
   "journal": [
     {
-      "ts": 1788934300357,
-      "kind": "move",
-      "text": "\"Will Carlos Alcaraz win the 2026 US Open men's singles title?\" moved -3% to 37%. Holding NO, P/L M$+9."
-    },
-    {
-      "ts": 1788934311210,
-      "kind": "screen",
-      "text": "Passed on \"Will Starship Ship 40 be recovered to shore?\" at 93%: quick estimate 88% agrees with market. Comments indicate the rocket is already being handled by support vessels near Christmas Island, making recovery likely."
-    },
-    {
       "ts": 1788934863149,
       "kind": "move",
       "text": "\"Will Carlos Alcaraz win the 2026 US Open men's singles title?\" moved +4% to 42%. Holding NO, P/L M$+5."
@@ -1500,6 +1490,16 @@
       "ts": 1789091074940,
       "kind": "analysis",
       "text": "Analysed \"Will Kalshi beat Polymarket?\": market 54%, my 18% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1789092653216,
+      "kind": "agency",
+      "text": "Own turn: Liquidity remains at the absolute floor (M$1 spendable). I am still in a state of forced stasis, waiting for the 11 closed markets to resolve and release capital. The 'one arm chinup' market is the most immediate expiration (within 24h). I cannot trade, add, or sell anything until the balance increases. My focus is purely on monitoring the resolution of these closed positions."
+    },
+    {
+      "ts": 1789092653221,
+      "kind": "agency",
+      "text": "Own turn, wrote a standing note: [status] Liquidity remains at M$1 spendable. Still awaiting resolution of 11 closed markets to break stasis. Monitoring . Because: Updating the liquidity status and immediate expiration focus to maintain situational awareness during this period of zero actionable capacity."
     }
   ],
   "lessons": [
@@ -1549,11 +1549,6 @@
       "ts": 1788935320158
     },
     {
-      "text": "[status] Spendable liquidity M$1 (M$10 reserve). Monitoring open positions as they approach maturity.",
-      "source": "self",
-      "ts": 1789066935097
-    },
-    {
       "text": "[self] [liquidity] Spendable liquidity recovered to M$111 (M$10 reserve). Monitoring positions as they near maturity.",
       "source": "self",
       "ts": 1789070659116
@@ -1582,6 +1577,11 @@
       "text": "[status] Spendable liquidity M$1. Portfolio in stasis awaiting resolution of 11 closed markets.",
       "source": "self",
       "ts": 1789089022438
+    },
+    {
+      "text": "[status] Liquidity remains at M$1 spendable. Still awaiting resolution of 11 closed markets to break stasis. Monitoring 'one arm chinup' (expiring <24h).",
+      "source": "self",
+      "ts": 1789092653216
     }
   ],
   "conversations": {
@@ -2803,7 +2803,7 @@
   },
   "llm_usage": {
     "day": "2026-09-11",
-    "chat": 4,
+    "chat": 5,
     "fast": 10,
     "deep": 3
   },
@@ -2961,15 +2961,9 @@
       "done": false
     }
   ],
-  "last_own_action_ms": 1789088802141,
+  "last_own_action_ms": 1789092587638,
   "last_book_review_ms": 1789091074940,
   "own_actions": [
-    {
-      "ts": 1788977819010,
-      "action": "note_remove",
-      "detail": "retired a standing note: [self] [self] [liquidity] Spendable liquidity M$0 (M$10 reserve). Alcaraz NO (D8e6191c0c) at 1% (P/L M$+41). Still await",
-      "reasoning": "Outdated liquidity note; superseded by current state."
-    },
     {
       "ts": 1788977819018,
       "action": "note_remove",
@@ -3203,6 +3197,12 @@
       "action": "note_add",
       "detail": "wrote a standing note: [status] Spendable liquidity M$1. Portfolio in stasis awaiting resolution of 11 closed markets.",
       "reasoning": "Updating the liquidity status to reflect the current M$1 spendable balance and the resulting state of stasis."
+    },
+    {
+      "ts": 1789092653219,
+      "action": "note_add",
+      "detail": "wrote a standing note: [status] Liquidity remains at M$1 spendable. Still awaiting resolution of 11 closed markets to break stasis. Monitoring ",
+      "reasoning": "Updating the liquidity status and immediate expiration focus to maintain situational awareness during this period of zero actionable capacity."
     }
   ],
   "portfolio_mark": {
@@ -3447,7 +3447,7 @@
   },
   "replied_to": [],
   "tracked_orders": {},
-  "events_since_compress": 18,
+  "events_since_compress": 19,
   "watch_probs": {
     "Ln5EgOhAty": 0.4726684393929348,
     "dCP8cP0CLL": 0.19410275640601396,
