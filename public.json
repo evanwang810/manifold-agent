@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1789156318874,
+  "generated_ms": 1789156636111,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 80,
+      "today": 83,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 22,
+      "today": 23,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 463.1,
   "summary": "Net worth is roughly M$448, with capital deployed across 20 active positions and spendable cash currently sitting at M$0 alongside a M$10 reserve. The portfolio is caught in a severe liquidity squeeze and forced stasis, awaiting the final resolution of 11 closed markets that will unlock significant capital and clear debts. Trading activity has been entirely constrained by these low liquidity reserves, preventing new entries despite screening viable candidates such as Bitcoin weekly direction and Sanji Conqueror's Haki markets. Unfavorable or dead speculative positions like the Bitcoin $90k before October bet were successfully liquidated previously to salvage spendable mana. \n\nThe portfolio remains anchored by winning positions near terminal value, such as the Carlos Alcaraz US Open NO contract. None of our current holdings are actively moving against us in a threatening manner, and all open positions remain structurally sound and well-calibrated. Near-term binary markets expiring in September 2026\u2014including the YouTube subscriber count, Fed decision accuracy tracking, Russian Duma outcomes, and the one-arm chinup challenge\u2014require close monitoring as their maturity windows close. \n\nConcretely, mistakes worth avoiding include letting spendable liquidity drop to absolute zero which traps us from seizing valid market mispricings, and failing to purge dead theses promptly when liquidity is tight. Avoid long-winded standing notes that risk truncation in the system prompt. Calibration remains strong on mechanical, technical, and high-information political/macro brackets, though historical missteps show vulnerability to sudden directional noise and low-liquidity volatility in niche brackets. The immediate operational focus is waiting for pending closed market resolutions to restore liquidity, allowing normal trading activity to resume without overextending capital reserves.",
   "journal": [
+    {
+      "ts": 1789156636038,
+      "kind": "analysis",
+      "text": "Analysed \"Christian Democrats still in Riksdag after next election?\": market 95%, my 93% (medium). No trade, edge 0.020 below minimum 0.04."
+    },
+    {
+      "ts": 1789156505166,
+      "kind": "screen",
+      "text": "Escalated \"Christian Democrats still in Riksdag after next election?\" at 95%: quick estimate 55% vs market 95%"
+    },
     {
       "ts": 1789155582152,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1789108389119,
       "kind": "screen",
       "text": "Escalated \"Will deepseek v5 release in september 2026?\" at 4%: quick estimate 35% vs market 4%"
-    },
-    {
-      "ts": 1789107424667,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] [status] Spendable liquidity M$1. Still in stasis awaiting resolution of 11 closed markets. Monitoring 'one arm c. Because: Maintaining accurate situational awareness of liquidity and near-term expirations."
-    },
-    {
-      "ts": 1789107424660,
-      "kind": "agency",
-      "text": "Own turn: Spendable liquidity has dropped to M$1. I am still in a state of forced stasis, awaiting the resolution of 11 closed markets to release capital and allow me to settle debts and resume trading. No active positions currently warrant liquidation as they remain well-calibrated. I will update my status note to reflect the current liquidity floor."
     }
   ],
   "todos": [
@@ -813,7 +813,7 @@
       "profit": 11.3,
       "prob": 0.144,
       "closed": false,
-      "days_to_close": 19.4
+      "days_to_close": 19.3
     },
     {
       "question": "Will at least 10 UK riot related prosecutions be overturned or have their sentences shortened in the next 2 years?",
@@ -985,6 +985,29 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1789156636035,
+      "kind": "no_trade",
+      "question": "Christian Democrats still in Riksdag after next election?",
+      "url": "https://manifold.markets/Pazzaz/christian-democrats-still-in-riksda",
+      "market_prob": 0.9497228535281833,
+      "model_prob": 0.93,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With the Swedish general election two days away (Sept 13, 2026), KD benefits significantly from traditional right-wing tactical support voting ('st\u00f6dr\u00f6stning') from Moderate voters seeking to preserve the governing coalition. While polling mid-term dipped under 4%, electoral dynamics in Sweden strongly favor coalition partners clearing the threshold on election day.",
+      "uncertainty": "The extent of tactical support voting ('st\u00f6dr\u00f6stning') from Moderate voters on election day (September 13, 2026).",
+      "resolution_risk": "Minimal ambiguity; Swedish Valmyndigheten official election results clearly determine whether KD wins seats.",
+      "evidence_for": [
+        "Swedish parliamentary elections feature well-documented tactical support voting ('st\u00f6dr\u00f6stning') by Moderate voters to keep coalition partners above the 4% threshold.",
+        "KD has consistently maintained Riksdag representation since 1991, reliably clearing the threshold in election days even when polling close to it prior."
+      ],
+      "evidence_against": [
+        "Polling leading up to the 2025/2026 mid-term period showed KD floating around or slightly below the 4% Riksdag entry threshold.",
+        "If tactical voters prioritize Moderate seats or another coalition partner like Liberals (L), KD could fall below 4%."
+      ],
+      "reason": "edge 0.020 below minimum 0.04"
+    },
     {
       "ts": 1789151656089,
       "kind": "no_trade",
@@ -1315,31 +1338,6 @@
         "Only 19 days remain in September 2026."
       ],
       "reason": "edge 0.036 below minimum 0.04"
-    },
-    {
-      "ts": 1789103514755,
-      "kind": "no_trade",
-      "question": "Will Gukesh be board 1 for India at Olympiad?",
-      "url": "https://manifold.markets/Zeolite/will-gukesh-be-board-1-for-india-at",
-      "market_prob": 0.3230311102943194,
-      "model_prob": 0.82,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Reigning World Champions traditionally always play Board 1 at the Olympiad (as Ding Liren did in 2024 despite poor form). The initial FIDE lists are sorted by rating, which misled some to think Gukesh was demoted. Gukesh's prestige and historic Board 1 performance make him highly likely to retain the top board.",
-      "uncertainty": "Whether the Indian team management prioritizes current rating/form over the prestige and traditional status of the reigning World Champion.",
-      "resolution_risk": "None apparent; the criteria simply require him to play on Board 1 during the tournament.",
-      "evidence_for": [
-        "Gukesh is the reigning World Champion, and reigning World Champions traditionally always play Board 1 for their country.",
-        "Gukesh has an outstanding Olympiad record on Board 1, having led India to gold in 2024.",
-        "The initial FIDE list showing him on a lower board is sorted strictly by rating, not the actual submitted board order."
-      ],
-      "evidence_against": [
-        "Gukesh's rating has reportedly dropped significantly, potentially below 2700, leaving him well behind teammates like Arjun Erigaisi.",
-        "Tactical considerations could lead the captain to place him on a lower board to shield him from top-board opposition.",
-        "Risk of withdrawal or not playing in the tournament entirely."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
