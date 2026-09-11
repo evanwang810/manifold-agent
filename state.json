@@ -2,16 +2,6 @@
   "summary": "Net worth sits around M$448, with capital deployed across 18 active positions and spendable cash at M$80 (maintained alongside a M$10 reserve). The previous liquidity squeeze has eased significantly following the strategic sale of several positions (including Grok 4.7 NO and Kalshi vs Polymarket NO) and pending market resolutions, freeing up substantial operating capital and removing the immediate threat of forced stasis. \n\nThe portfolio remains anchored by long-term winning positions near terminal value, such as the Carlos Alcaraz US Open NO contract. Recent trading activity includes opening new positions such as YES on Polymarket correctly predicting all 2026 Fed decisions, NO on a creator's YouTube channel reaching 30 subscribers, YES on United Russia gaining seats in the Duma, and a speculative YES bet on Bitcoin reaching $90k before October. None of our current holdings are actively moving against us in a threatening manner, and all positions are structurally sound. \n\nConcretely, mistakes worth avoiding include allowing operational stringency or zero spendable cash states to trap us from seizing valid market mispricings, and letting short status notes repeatedly truncate due to character limits. Calibration remains strong on mechanical, technical, and high-information political/macro brackets, though historical missteps show vulnerability to sudden directional noise and low-liquidity volatility in niche brackets. \n\nSpecific attention should be paid to near-term binary markets expiring in September 2026, including the YouTube subscriber count, Fed decision accuracy tracking, and Russian Duma outcomes, ensuring positions are managed effectively as their maturity windows close. The immediate operational focus is monitoring active positions and maintaining healthy spendable liquidity without overextending capital reserves.",
   "journal": [
     {
-      "ts": 1788939188194,
-      "kind": "portfolio",
-      "text": "Net worth up from M$438 to M$456, balance M$10."
-    },
-    {
-      "ts": 1788939188194,
-      "kind": "move",
-      "text": "\"Will Carlos Alcaraz win the 2026 US Open men's singles title?\" moved -18% to 22%. Holding NO, P/L M$+22."
-    },
-    {
       "ts": 1788939193287,
       "kind": "screen",
       "text": "Escalated \"Liberals still in Riksdag after next election?\" at 26%: flagged: Polling data near the 4 percent threshold just before the 2026 election requires a close look at latest Swedish polls."
@@ -1500,6 +1490,16 @@
       "ts": 1789098868527,
       "kind": "closed",
       "text": "No longer holding \"Bitcoin reaches 90k USD at any point before October\". Last seen YES at 6%, P/L M$-3. Resolved or sold."
+    },
+    {
+      "ts": 1789100105262,
+      "kind": "agency",
+      "text": "Own turn: Liquidity is M$3 spendable after the Bitcoin sale. I am still in a state of forced stasis awaiting the resolution of 11 closed markets. The 'one arm chinup' market is the most immediate expiration (within 24h)."
+    },
+    {
+      "ts": 1789100105267,
+      "kind": "agency",
+      "text": "Own turn, wrote a standing note: [status] Spendable liquidity M$3. Still in stasis awaiting resolution of 11 closed markets. Monitoring 'one arm chinup' . Because: Updating the liquidity status to reflect the current M$3 spendable balance and the most immediate expiration focus."
     }
   ],
   "lessons": [
@@ -1549,11 +1549,6 @@
       "ts": 1788935320158
     },
     {
-      "text": "[self] [liquidity] Spendable liquidity recovered to M$111 (M$10 reserve). Monitoring positions as they near maturity.",
-      "source": "self",
-      "ts": 1789070659116
-    },
-    {
       "text": "[self] [liquidity] Spendable liquidity stable at M$86 (M$10 reserve). Monitoring approaching maturity dates on active contracts.",
       "source": "self",
       "ts": 1789074299320
@@ -1582,6 +1577,11 @@
       "text": "[status] Liquidity remains at M$1 spendable. Still awaiting resolution of 11 closed markets to break stasis. Monitoring 'one arm chinup' (expiring <24h).",
       "source": "self",
       "ts": 1789092653216
+    },
+    {
+      "text": "[status] Spendable liquidity M$3. Still in stasis awaiting resolution of 11 closed markets. Monitoring 'one arm chinup' (expiring <24h).",
+      "source": "self",
+      "ts": 1789100105262
     }
   ],
   "conversations": {
@@ -2803,7 +2803,7 @@
   },
   "llm_usage": {
     "day": "2026-09-11",
-    "chat": 8,
+    "chat": 9,
     "fast": 18,
     "deep": 6
   },
@@ -2961,15 +2961,9 @@
       "done": false
     }
   ],
-  "last_own_action_ms": 1789096307868,
+  "last_own_action_ms": 1789099982864,
   "last_book_review_ms": 1789098439253,
   "own_actions": [
-    {
-      "ts": 1788981534222,
-      "action": "note_add",
-      "detail": "wrote a standing note: [self] [liquidity] Spendable liquidity M$0 (M$10 reserve). Awaiting resolution of 4 closed markets to unlock ~M$768 and ",
-      "reasoning": "Updating the liquidity note to maintain a clear, current view of the primary constraint on my operations."
-    },
     {
       "ts": 1788985226857,
       "action": "note_remove",
@@ -3203,6 +3197,12 @@
       "action": "sell",
       "detail": "sold out of \"Bitcoin reaches 90k USD at any point before October\" (YES, P/L M$-3)",
       "reasoning": "Price has dropped to 6%. The probability of Bitcoin hitting 90k before October is now too low to justify holding, and I would not open this position today."
+    },
+    {
+      "ts": 1789100105265,
+      "action": "note_add",
+      "detail": "wrote a standing note: [status] Spendable liquidity M$3. Still in stasis awaiting resolution of 11 closed markets. Monitoring 'one arm chinup' ",
+      "reasoning": "Updating the liquidity status to reflect the current M$3 spendable balance and the most immediate expiration focus."
     }
   ],
   "portfolio_mark": {
@@ -3440,7 +3440,7 @@
   },
   "replied_to": [],
   "tracked_orders": {},
-  "events_since_compress": 28,
+  "events_since_compress": 29,
   "watch_probs": {
     "Ln5EgOhAty": 0.4726684393929348,
     "dCP8cP0CLL": 0.19410275640601396,
