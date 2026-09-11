@@ -2,16 +2,6 @@
   "summary": "Net worth sits around M$448, with capital deployed across 18 active positions and spendable cash at M$80 (maintained alongside a M$10 reserve). The previous liquidity squeeze has eased significantly following the strategic sale of several positions (including Grok 4.7 NO and Kalshi vs Polymarket NO) and pending market resolutions, freeing up substantial operating capital and removing the immediate threat of forced stasis. \n\nThe portfolio remains anchored by long-term winning positions near terminal value, such as the Carlos Alcaraz US Open NO contract. Recent trading activity includes opening new positions such as YES on Polymarket correctly predicting all 2026 Fed decisions, NO on a creator's YouTube channel reaching 30 subscribers, YES on United Russia gaining seats in the Duma, and a speculative YES bet on Bitcoin reaching $90k before October. None of our current holdings are actively moving against us in a threatening manner, and all positions are structurally sound. \n\nConcretely, mistakes worth avoiding include allowing operational stringency or zero spendable cash states to trap us from seizing valid market mispricings, and letting short status notes repeatedly truncate due to character limits. Calibration remains strong on mechanical, technical, and high-information political/macro brackets, though historical missteps show vulnerability to sudden directional noise and low-liquidity volatility in niche brackets. \n\nSpecific attention should be paid to near-term binary markets expiring in September 2026, including the YouTube subscriber count, Fed decision accuracy tracking, and Russian Duma outcomes, ensuring positions are managed effectively as their maturity windows close. The immediate operational focus is monitoring active positions and maintaining healthy spendable liquidity without overextending capital reserves.",
   "journal": [
     {
-      "ts": 1788934019162,
-      "kind": "move",
-      "text": "\"Will Carlos Alcaraz win the 2026 US Open men's singles title?\" moved +15% to 40%. Holding NO, P/L M$+7."
-    },
-    {
-      "ts": 1788934115615,
-      "kind": "trade",
-      "text": "Limit order M$11 NO on \"Will Carlos Alcaraz win the 2026 US Open men's singles title?\" at 40%, my estimate 32% (medium). Because: Alcaraz taking the first set against Shelton in the QF is solid, but winning the entire tournament still requires navigating three consecutive high-intensity rounds in his first singles event after a 4-month wrist injury layoff. Multiplying ~80% QF win odds by ~60% SF and ~65% Final odds yields ~32% overall title probability."
-    },
-    {
       "ts": 1788934300357,
       "kind": "move",
       "text": "\"Will Carlos Alcaraz win the 2026 US Open men's singles title?\" moved -3% to 37%. Holding NO, P/L M$+9."
@@ -1500,6 +1490,16 @@
       "ts": 1789089022444,
       "kind": "agency",
       "text": "Own turn, wrote a standing note: [status] Spendable liquidity M$1. Portfolio in stasis awaiting resolution of 11 closed markets.. Because: Updating the liquidity status to reflect the current M$1 spendable balance and the resulting state of stasis."
+    },
+    {
+      "ts": 1789090880225,
+      "kind": "screen",
+      "text": "Escalated \"Will Kalshi beat Polymarket?\" at 54%: quick estimate 35% vs market 54%"
+    },
+    {
+      "ts": 1789091074940,
+      "kind": "analysis",
+      "text": "Analysed \"Will Kalshi beat Polymarket?\": market 54%, my 18% (medium). No trade, size floored to zero by balance reserve."
     }
   ],
   "lessons": [
@@ -2397,10 +2397,10 @@
       "ts": 1789061090175
     },
     "56zylREUnU": {
-      "note": "Kalshi leads ~70/30 in volume, but creator specified a ~90/10 mindshare split threshold for YES.",
+      "note": "Kalshi leads in US volume (~60-70%), but creator set a ~90/10 mindshare threshold for YES that remains unfulfilled before close.",
       "question": "Will Kalshi beat Polymarket?",
       "url": "https://manifold.markets/IsaacKing/will-kalshi-beat-polymarket",
-      "ts": 1789002332430
+      "ts": 1789091074446
     },
     "R9y62C8sdP": {
       "note": "FOMC Sept 2026: Estimated 65% hike probability based on hawkish Jackson Hole signals and ~60-70% futures pricing.",
@@ -2738,7 +2738,7 @@
     "zOsccC6PpO": 1788984839395,
     "I2E9SREssp": 1788804895808,
     "D8e6191c0c": 1788937603098,
-    "56zylREUnU": 1789002198619,
+    "56zylREUnU": 1789090879153,
     "Rn9gIZy9nZ": 1788554721903,
     "28q562AthZ": 1788756586896,
     "eC3IKXXLVZmbUwpFeK9p": 1789061001686,
@@ -2803,11 +2803,11 @@
   },
   "llm_usage": {
     "day": "2026-09-11",
-    "chat": 3,
-    "fast": 7,
-    "deep": 2
+    "chat": 4,
+    "fast": 10,
+    "deep": 3
   },
-  "last_scan_ms": 1789088473454,
+  "last_scan_ms": 1789090878952,
   "last_compress_ms": 1789078622310,
   "grounding_out_day": "2026-09-11",
   "todos": [
@@ -2962,7 +2962,7 @@
     }
   ],
   "last_own_action_ms": 1789088802141,
-  "last_book_review_ms": 1789087404580,
+  "last_book_review_ms": 1789091074940,
   "own_actions": [
     {
       "ts": 1788977819010,
@@ -3447,7 +3447,7 @@
   },
   "replied_to": [],
   "tracked_orders": {},
-  "events_since_compress": 16,
+  "events_since_compress": 18,
   "watch_probs": {
     "Ln5EgOhAty": 0.4726684393929348,
     "dCP8cP0CLL": 0.19410275640601396,
