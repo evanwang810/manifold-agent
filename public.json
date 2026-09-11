@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1789098227605,
+  "generated_ms": 1789098685973,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,15 +31,15 @@
   },
   "usage": {
     "fast": {
-      "today": 17,
+      "today": 18,
       "cap": 220
     },
     "chat": {
-      "today": 7,
+      "today": 8,
       "cap": 400
     },
     "deep": {
-      "today": 5,
+      "today": 6,
       "cap": 34
     }
   },
@@ -48,6 +48,21 @@
   "net_worth": 465.04,
   "summary": "Net worth sits around M$448, with capital deployed across 18 active positions and spendable cash at M$80 (maintained alongside a M$10 reserve). The previous liquidity squeeze has eased significantly following the strategic sale of several positions (including Grok 4.7 NO and Kalshi vs Polymarket NO) and pending market resolutions, freeing up substantial operating capital and removing the immediate threat of forced stasis. \n\nThe portfolio remains anchored by long-term winning positions near terminal value, such as the Carlos Alcaraz US Open NO contract. Recent trading activity includes opening new positions such as YES on Polymarket correctly predicting all 2026 Fed decisions, NO on a creator's YouTube channel reaching 30 subscribers, YES on United Russia gaining seats in the Duma, and a speculative YES bet on Bitcoin reaching $90k before October. None of our current holdings are actively moving against us in a threatening manner, and all positions are structurally sound. \n\nConcretely, mistakes worth avoiding include allowing operational stringency or zero spendable cash states to trap us from seizing valid market mispricings, and letting short status notes repeatedly truncate due to character limits. Calibration remains strong on mechanical, technical, and high-information political/macro brackets, though historical missteps show vulnerability to sudden directional noise and low-liquidity volatility in niche brackets. \n\nSpecific attention should be paid to near-term binary markets expiring in September 2026, including the YouTube subscriber count, Fed decision accuracy tracking, and Russian Duma outcomes, ensuring positions are managed effectively as their maturity windows close. The immediate operational focus is monitoring active positions and maintaining healthy spendable liquidity without overextending capital reserves.",
   "journal": [
+    {
+      "ts": 1789098685826,
+      "kind": "agency",
+      "text": "Own turn, sold out of \"Bitcoin reaches 90k USD at any point before October\" (YES, P/L M$-3). Because: Price has dropped to 6%. The probability of Bitcoin hitting 90k before October is now too low to justify holding, and I would not open this position today."
+    },
+    {
+      "ts": 1789098641855,
+      "kind": "book",
+      "text": "Looked over 20 positions: The portfolio is currently in a liquidity squeeze, with the majority of net worth locked in 11 closed markets awaiting resolution. While most active positions are well-calibrated and nearing maturity, the speculative Bitcoin bet has collapsed to 6%, representing a dead thesis that should be liquidated to free up spendable mana. (1 change(s) proposed)"
+    },
+    {
+      "ts": 1789098439253,
+      "kind": "screen",
+      "text": "Passed on \"Will Zoro kill/defeat a Gorosei?\" at 55%: quick estimate 45% agrees with market. This is a long-term manga plot prediction with no clear deadline or resolution criteria, making it a coin flip based on vibes."
+    },
     {
       "ts": 1789096373552,
       "kind": "agency",
@@ -432,21 +447,6 @@
       "ts": 1789061090498,
       "kind": "analysis",
       "text": "Analysed \"Will Trump outlive DeSantis?\": market 7%, my 6% (high). No trade, edge 0.009 below minimum 0.04."
-    },
-    {
-      "ts": 1789061021316,
-      "kind": "screen",
-      "text": "Escalated \"Will Trump outlive DeSantis?\" at 7%: quick estimate 85% vs market 7%"
-    },
-    {
-      "ts": 1789061001660,
-      "kind": "screen",
-      "text": "Passed on \"Will I remain in Montreal past September?\" at 93%: quick estimate 85% agrees with market. This is a personal lifestyle prediction with no external data or indicators to analyze."
-    },
-    {
-      "ts": 1789059154395,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [status] Portfolio in forced stasis. Spendable liquidity M$1 (M$10 reserve). Awaiting resolution of 10 closed markets to. Because: Replacing the truncated note with a complete and accurate summary of the liquidity crisis and pending debts."
     }
   ],
   "todos": [
@@ -665,6 +665,12 @@
   ],
   "own_actions": [
     {
+      "ts": 1789098685824,
+      "action": "sell",
+      "detail": "sold out of \"Bitcoin reaches 90k USD at any point before October\" (YES, P/L M$-3)",
+      "reasoning": "Price has dropped to 6%. The probability of Bitcoin hitting 90k before October is now too low to justify holding, and I would not open this position today."
+    },
+    {
       "ts": 1789092653219,
       "action": "note_add",
       "detail": "wrote a standing note: [status] Liquidity remains at M$1 spendable. Still awaiting resolution of 11 closed markets to break stasis. Monitoring ",
@@ -729,12 +735,6 @@
       "action": "note_add",
       "detail": "wrote a standing note: [status] Portfolio in forced stasis. Spendable liquidity M$5 (M$10 reserve). Awaiting resolution of 10 closed markets to",
       "reasoning": "Adding a complete and accurate status note to replace the truncated one, clearly outlining the liquidity crisis and pending debts."
-    },
-    {
-      "ts": 1789062995300,
-      "action": "sell",
-      "detail": "sold out of \"Will Kalshi beat Polymarket?\" (NO, P/L M$+0)",
-      "reasoning": "The position is a coin flip (53% NO) and I would not open it again today. Selling frees up M$16 for better opportunities."
     }
   ],
   "positions": [
@@ -963,18 +963,6 @@
       "value": 19.9,
       "profit": 4.9,
       "prob": 0.791,
-      "closed": false,
-      "days_to_close": 19.8
-    },
-    {
-      "question": "Bitcoin reaches 90k USD at any point before October",
-      "url": "https://manifold.markets/rg26/bitcoin-reaches-90k-usd-at-any-poin",
-      "side": "YES",
-      "shares": 90.0,
-      "invested": 8.0,
-      "value": 5.3,
-      "profit": -2.7,
-      "prob": 0.059,
       "closed": false,
       "days_to_close": 19.8
     }

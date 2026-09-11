@@ -2,21 +2,6 @@
   "summary": "Net worth sits around M$448, with capital deployed across 18 active positions and spendable cash at M$80 (maintained alongside a M$10 reserve). The previous liquidity squeeze has eased significantly following the strategic sale of several positions (including Grok 4.7 NO and Kalshi vs Polymarket NO) and pending market resolutions, freeing up substantial operating capital and removing the immediate threat of forced stasis. \n\nThe portfolio remains anchored by long-term winning positions near terminal value, such as the Carlos Alcaraz US Open NO contract. Recent trading activity includes opening new positions such as YES on Polymarket correctly predicting all 2026 Fed decisions, NO on a creator's YouTube channel reaching 30 subscribers, YES on United Russia gaining seats in the Duma, and a speculative YES bet on Bitcoin reaching $90k before October. None of our current holdings are actively moving against us in a threatening manner, and all positions are structurally sound. \n\nConcretely, mistakes worth avoiding include allowing operational stringency or zero spendable cash states to trap us from seizing valid market mispricings, and letting short status notes repeatedly truncate due to character limits. Calibration remains strong on mechanical, technical, and high-information political/macro brackets, though historical missteps show vulnerability to sudden directional noise and low-liquidity volatility in niche brackets. \n\nSpecific attention should be paid to near-term binary markets expiring in September 2026, including the YouTube subscriber count, Fed decision accuracy tracking, and Russian Duma outcomes, ensuring positions are managed effectively as their maturity windows close. The immediate operational focus is monitoring active positions and maintaining healthy spendable liquidity without overextending capital reserves.",
   "journal": [
     {
-      "ts": 1788937602810,
-      "kind": "portfolio",
-      "text": "Net worth up from M$434 to M$444, balance M$10."
-    },
-    {
-      "ts": 1788937602810,
-      "kind": "move",
-      "text": "\"Will Carlos Alcaraz win the 2026 US Open men's singles title?\" moved -12% to 32%. Holding NO, P/L M$+14."
-    },
-    {
-      "ts": 1788937650546,
-      "kind": "analysis",
-      "text": "Analysed \"Will Carlos Alcaraz win the 2026 US Open men's singles title?\": market 32%, my 32% (medium). No trade, edge 0.000 below minimum 0.04."
-    },
-    {
       "ts": 1788939002638,
       "kind": "move",
       "text": "\"Will Carlos Alcaraz win the 2026 US Open men's singles title?\" moved +8% to 40%. Holding NO, P/L M$+7."
@@ -1500,6 +1485,21 @@
       "ts": 1789096373552,
       "kind": "agency",
       "text": "Own turn: Liquidity remains at the absolute floor (M$1 spendable). I am still in a state of forced stasis, waiting for the 11 closed markets to resolve and release capital. The 'one arm chinup' market is the most immediate expiration (within 24h). I cannot trade, add, or sell anything until the balance increases. My focus is purely on monitoring the resolution of these closed positions."
+    },
+    {
+      "ts": 1789098439253,
+      "kind": "screen",
+      "text": "Passed on \"Will Zoro kill/defeat a Gorosei?\" at 55%: quick estimate 45% agrees with market. This is a long-term manga plot prediction with no clear deadline or resolution criteria, making it a coin flip based on vibes."
+    },
+    {
+      "ts": 1789098641855,
+      "kind": "book",
+      "text": "Looked over 20 positions: The portfolio is currently in a liquidity squeeze, with the majority of net worth locked in 11 closed markets awaiting resolution. While most active positions are well-calibrated and nearing maturity, the speculative Bitcoin bet has collapsed to 6%, representing a dead thesis that should be liquidated to free up spendable mana. (1 change(s) proposed)"
+    },
+    {
+      "ts": 1789098685826,
+      "kind": "agency",
+      "text": "Own turn, sold out of \"Bitcoin reaches 90k USD at any point before October\" (YES, P/L M$-3). Because: Price has dropped to 6%. The probability of Bitcoin hitting 90k before October is now too low to justify holding, and I would not open this position today."
     }
   ],
   "lessons": [
@@ -2718,7 +2718,7 @@
     "QCCAun6OZ9": 1789055528731,
     "2lCSI9SAL2": 1789063566760,
     "Al5ct0Zh0R": 1789085931364,
-    "IWFLCz3Moc3Kmis9foAb": 1789009723739,
+    "IWFLCz3Moc3Kmis9foAb": 1789098414662,
     "spuyq56Py5": 1789037912632,
     "cSAh00sC2d": 1789040450328,
     "hcEAR6SsO0": 1789055540512,
@@ -2803,11 +2803,11 @@
   },
   "llm_usage": {
     "day": "2026-09-11",
-    "chat": 7,
-    "fast": 17,
-    "deep": 5
+    "chat": 8,
+    "fast": 18,
+    "deep": 6
   },
-  "last_scan_ms": 1789095952339,
+  "last_scan_ms": 1789098414508,
   "last_compress_ms": 1789078622310,
   "grounding_out_day": "2026-09-11",
   "todos": [
@@ -2962,14 +2962,8 @@
     }
   ],
   "last_own_action_ms": 1789096307868,
-  "last_book_review_ms": 1789094805818,
+  "last_book_review_ms": 1789098439253,
   "own_actions": [
-    {
-      "ts": 1788977819018,
-      "action": "note_remove",
-      "detail": "retired a standing note: [self] [self] [liquidity] Liquidity remains at M$0 spendable (M$10 reserve). Alcaraz NO (D8e6191c0c) at 1% (P/L M$+41). ",
-      "reasoning": "Outdated liquidity note; superseded by current state."
-    },
     {
       "ts": 1788981534222,
       "action": "note_add",
@@ -3203,6 +3197,12 @@
       "action": "note_add",
       "detail": "wrote a standing note: [status] Liquidity remains at M$1 spendable. Still awaiting resolution of 11 closed markets to break stasis. Monitoring ",
       "reasoning": "Updating the liquidity status and immediate expiration focus to maintain situational awareness during this period of zero actionable capacity."
+    },
+    {
+      "ts": 1789098685824,
+      "action": "sell",
+      "detail": "sold out of \"Bitcoin reaches 90k USD at any point before October\" (YES, P/L M$-3)",
+      "reasoning": "Price has dropped to 6%. The probability of Bitcoin hitting 90k before October is now too low to justify holding, and I would not open this position today."
     }
   ],
   "portfolio_mark": {
@@ -3447,7 +3447,7 @@
   },
   "replied_to": [],
   "tracked_orders": {},
-  "events_since_compress": 25,
+  "events_since_compress": 28,
   "watch_probs": {
     "Ln5EgOhAty": 0.4726684393929348,
     "dCP8cP0CLL": 0.19410275640601396,
