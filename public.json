@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1789118759235,
+  "generated_ms": 1789119080392,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 42,
+      "today": 45,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 12,
+      "today": 13,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 464.16,
   "summary": "Net worth is roughly M$448, with capital deployed across 20 active positions and spendable cash currently sitting at M$1 (maintained alongside a M$10 reserve). The portfolio remains in a liquidity squeeze, caught in forced stasis while awaiting the final resolution of 11 closed markets that will unlock significant capital and clear debts. Recent trading activity has been tightly constrained by these low liquidity reserves, though selective small bets were opened on markets such as the Swedish 2026 general election (YES on Sweden Democrats increasing share), a robot writing first vs left hand (YES), and weight tracking (>150lbs at end of September NO). Unfavorable or dead speculative positions, such as the Bitcoin $90k before October bet, were successfully liquidated to salvage spendable mana. \n\nThe portfolio remains robustly anchored by winning positions near terminal value, such as the Carlos Alcaraz US Open NO contract. None of our current holdings are actively moving against us in a threatening manner, and all open positions remain structurally sound. Near-term binary markets expiring in September 2026\u2014including the YouTube subscriber count, Fed decision accuracy tracking, Russian Duma outcomes, and the one-arm chinup challenge\u2014require close monitoring as their maturity windows close. \n\nConcretely, mistakes worth avoiding include letting spendable liquidity drop to absolute zero which traps us from seizing valid market mispricings, and failing to purge dead theses promptly when liquidity is tight. Calibration remains strong on mechanical, technical, and high-information political/macro brackets, though historical missteps show vulnerability to sudden directional noise and low-liquidity volatility in niche brackets. The immediate operational focus is waiting for pending closed market resolutions to restore liquidity, allowing us to resume normal trading activity without overextending capital reserves.",
   "journal": [
+    {
+      "ts": 1789119080237,
+      "kind": "analysis",
+      "text": "Analysed \"Will American opinion of AI improve in 2026, according to Gallup?\": market 3%, my 6% (medium). No trade, edge 0.026 below minimum 0.04."
+    },
+    {
+      "ts": 1789118945184,
+      "kind": "screen",
+      "text": "Escalated \"Will American opinion of AI improve in 2026, according to Gallup?\" at 3%: quick estimate 45% vs market 3%"
+    },
     {
       "ts": 1789118574708,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1789076882458,
       "kind": "book",
       "text": "Looked over 18 positions: The book is in solid shape with M$80 spendable cash. Active positions are well-calibrated near maturity, and no emergency liquidations are needed as we await the resolution of closed markets. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1789076281015,
-      "kind": "position",
-      "text": "Opened 66 YES on \"Bitcoin reaches 90k USD at any point before October\" at 10%, M$6 in."
-    },
-    {
-      "ts": 1789076098778,
-      "kind": "trade",
-      "text": "Limit order M$8 YES on \"Bitcoin reaches 90k USD at any point before October\" at 7%, my estimate 14% (medium). Because: At $77,215, Bitcoin needs a +16.5% gain in 20 days to hit $90,000. With typical 45-50% annualized volatility, the touch probability over 20 days evaluates to ~14%."
     }
   ],
   "todos": [
@@ -976,6 +976,30 @@
   ],
   "decisions": [
     {
+      "ts": 1789119080234,
+      "kind": "no_trade",
+      "question": "Will American opinion of AI improve in 2026, according to Gallup?",
+      "url": "https://manifold.markets/cash/will-american-opinion-of-ai-improve-zQqs2LEdCQ",
+      "market_prob": 0.03436117797642035,
+      "model_prob": 0.06,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Gallup's 2026 data shows overall public sentiment toward AI deteriorating further, with rising job concerns and 79% distrusting corporate AI use. However, given normal sampling variance from 2025's 12% baseline, there remains a slight ~6% chance the overall metric touches 13%.",
+      "uncertainty": "Whether sampling noise in Gallup's primary 2026 survey pushes the overarching 'more good than harm' figure back up to 13%.",
+      "resolution_risk": "Gallup publishing domain-specific results that could be confused with the overall population metric specified in the resolution criteria.",
+      "evidence_for": [
+        "Gallup recorded 13% in 2024, showing public opinion can fluctuate year-to-year.",
+        "Domain-specific Gallup findings in 2026 show higher positivity in healthcare and science."
+      ],
+      "evidence_against": [
+        "Gallup's 2026 reporting indicates AI sentiment deteriorated further, with more Americans holding negative views than in past years.",
+        "2026 Bentley-Gallup data shows 79% distrust companies to use AI responsibly and 75% expect job losses.",
+        "The overall trend declined from 13% in 2024 to 12% in 2025."
+      ],
+      "reason": "edge 0.026 below minimum 0.04"
+    },
+    {
       "ts": 1789116525234,
       "kind": "no_trade",
       "question": "Liberals still in Riksdag after next election?",
@@ -1306,30 +1330,6 @@
         "retr0id remains active and has not given up."
       ],
       "reason": "edge 0.443, kelly 0.71, decay 1.00, bound by share of volume"
-    },
-    {
-      "ts": 1789076098775,
-      "kind": "bet",
-      "question": "Bitcoin reaches 90k USD at any point before October",
-      "url": "https://manifold.markets/rg26/bitcoin-reaches-90k-usd-at-any-poin",
-      "market_prob": 0.0716465162223963,
-      "model_prob": 0.14,
-      "confidence": "medium",
-      "amount": 8.0,
-      "outcome": "YES",
-      "thinking": "At $77,215, Bitcoin needs a +16.5% gain in 20 days to hit $90,000. With typical 45-50% annualized volatility, the touch probability over 20 days evaluates to ~14%.",
-      "uncertainty": "Whether a strong macro or crypto-specific catalyst triggers a sharp multi-day volatility spike before September 30.",
-      "resolution_risk": "Google Finance intraday price wicks versus closing prices, though criteria specify price data from Google Finance generally.",
-      "evidence_for": [
-        "Bitcoin is currently trading at $77,215.06 USD, requiring a +16.56% gain to reach $90,000.",
-        "With 20.1 days remaining and annualized Bitcoin volatility around 45-50%, the mathematical probability of an intraday touch at +1.3 to +1.5 standard deviations is roughly 12-18%."
-      ],
-      "evidence_against": [
-        "Only 20 days remain before October 1, 2026.",
-        "September is historically a flat or seasonally weak month for cryptocurrency asset prices.",
-        "Moving from $77k to $90k requires breaking through multiple key technical resistance levels ($80k, $85k) without major clear catalysts in short order."
-      ],
-      "reason": "edge 0.068, kelly 0.07, decay 0.50, bound by min bet floor"
     }
   ]
 }
