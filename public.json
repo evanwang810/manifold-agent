@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1789103093330,
+  "generated_ms": 1789103514930,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 21,
+      "today": 25,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 7,
+      "today": 8,
       "cap": 34
     }
   },
@@ -48,6 +48,26 @@
   "net_worth": 464.16,
   "summary": "Net worth sits around M$448, with capital deployed across 18 active positions and spendable cash at M$80 (maintained alongside a M$10 reserve). The previous liquidity squeeze has eased significantly following the strategic sale of several positions (including Grok 4.7 NO and Kalshi vs Polymarket NO) and pending market resolutions, freeing up substantial operating capital and removing the immediate threat of forced stasis. \n\nThe portfolio remains anchored by long-term winning positions near terminal value, such as the Carlos Alcaraz US Open NO contract. Recent trading activity includes opening new positions such as YES on Polymarket correctly predicting all 2026 Fed decisions, NO on a creator's YouTube channel reaching 30 subscribers, YES on United Russia gaining seats in the Duma, and a speculative YES bet on Bitcoin reaching $90k before October. None of our current holdings are actively moving against us in a threatening manner, and all positions are structurally sound. \n\nConcretely, mistakes worth avoiding include allowing operational stringency or zero spendable cash states to trap us from seizing valid market mispricings, and letting short status notes repeatedly truncate due to character limits. Calibration remains strong on mechanical, technical, and high-information political/macro brackets, though historical missteps show vulnerability to sudden directional noise and low-liquidity volatility in niche brackets. \n\nSpecific attention should be paid to near-term binary markets expiring in September 2026, including the YouTube subscriber count, Fed decision accuracy tracking, and Russian Duma outcomes, ensuring positions are managed effectively as their maturity windows close. The immediate operational focus is monitoring active positions and maintaining healthy spendable liquidity without overextending capital reserves.",
   "journal": [
+    {
+      "ts": 1789103514757,
+      "kind": "analysis",
+      "text": "Analysed \"Will Gukesh be board 1 for India at Olympiad?\": market 32%, my 82% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1789103321339,
+      "kind": "screen",
+      "text": "Escalated \"Will Gukesh be board 1 for India at Olympiad?\" at 32%: quick estimate 75% vs market 32%"
+    },
+    {
+      "ts": 1789103310625,
+      "kind": "screen",
+      "text": "Passed on \"Will Grok 4.7 be released on 9/11?\" at 23%: quick estimate 15% agrees with market. Comments confirm Musk's stated timeline points to September 12, making the 11th unlikely based on historical delays."
+    },
+    {
+      "ts": 1789103287916,
+      "kind": "screen",
+      "text": "Passed on \"Will 0x53a125F03c90B8E07BA50356B312F4b7b9bA47A7 REACH more than 267.84\" at 5%: quick estimate 5% agrees with market. This is a wallet balance check on a specific address where the current balance can be directly verified on-chain, making it a routine look rather than an analytical puzzle."
+    },
     {
       "ts": 1789102721577,
       "kind": "book",
@@ -427,26 +447,6 @@
       "ts": 1789063843861,
       "kind": "position",
       "text": "Opened 30 YES on \"Will Polymarket be right about every Fed decision in 2026?\" at 67%, M$20 in."
-    },
-    {
-      "ts": 1789063661655,
-      "kind": "trade",
-      "text": "Limit order M$20 YES on \"Will Polymarket be right about every Fed decision in 2026?\" at 66%, my estimate 78% (medium). Because: With 5 of 8 meetings already completed and the Fed consistently signaling policy before blackout periods, Polymarket's 24-hour accuracy on the remaining 3 meetings is very high. Factoring in past completion, probability is ~78%."
-    },
-    {
-      "ts": 1789063567720,
-      "kind": "screen",
-      "text": "Escalated \"Will Polymarket be right about every Fed decision in 2026?\" at 66%: quick estimate 45% vs market 66%"
-    },
-    {
-      "ts": 1789063177514,
-      "kind": "closed",
-      "text": "No longer holding \"Will Kalshi beat Polymarket?\". Last seen NO at 53%, P/L M$+0. Resolved or sold."
-    },
-    {
-      "ts": 1789062995312,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [status] Portfolio in forced stasis. Spendable liquidity M$5 (M$10 reserve). Awaiting resolution of 10 closed markets to. Because: Adding a complete and accurate status note to replace the truncated one, clearly outlining the liquidity crisis and pending debts."
     }
   ],
   "todos": [
@@ -892,7 +892,7 @@
       "profit": 6.2,
       "prob": 0.45,
       "closed": false,
-      "days_to_close": 0.5
+      "days_to_close": 0.4
     },
     {
       "question": "Will United Russia gain seats in the 2026 Russian Duma Elections?",
@@ -976,10 +976,35 @@
       "profit": 0.0,
       "prob": 0.289,
       "closed": false,
-      "days_to_close": 10.0
+      "days_to_close": 9.9
     }
   ],
   "decisions": [
+    {
+      "ts": 1789103514755,
+      "kind": "no_trade",
+      "question": "Will Gukesh be board 1 for India at Olympiad?",
+      "url": "https://manifold.markets/Zeolite/will-gukesh-be-board-1-for-india-at",
+      "market_prob": 0.3230311102943194,
+      "model_prob": 0.82,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Reigning World Champions traditionally always play Board 1 at the Olympiad (as Ding Liren did in 2024 despite poor form). The initial FIDE lists are sorted by rating, which misled some to think Gukesh was demoted. Gukesh's prestige and historic Board 1 performance make him highly likely to retain the top board.",
+      "uncertainty": "Whether the Indian team management prioritizes current rating/form over the prestige and traditional status of the reigning World Champion.",
+      "resolution_risk": "None apparent; the criteria simply require him to play on Board 1 during the tournament.",
+      "evidence_for": [
+        "Gukesh is the reigning World Champion, and reigning World Champions traditionally always play Board 1 for their country.",
+        "Gukesh has an outstanding Olympiad record on Board 1, having led India to gold in 2024.",
+        "The initial FIDE list showing him on a lower board is sorted strictly by rating, not the actual submitted board order."
+      ],
+      "evidence_against": [
+        "Gukesh's rating has reportedly dropped significantly, potentially below 2700, leaving him well behind teammates like Arjun Erigaisi.",
+        "Tactical considerations could lead the captain to place him on a lower board to shield him from top-board opposition.",
+        "Risk of withdrawal or not playing in the tournament entirely."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1789101050966,
       "kind": "bet",
@@ -1311,30 +1336,6 @@
         "Macroeconomic shocks or sudden labor market weakness could force an emergency or uncommunicated rate adjustment."
       ],
       "reason": "edge 0.117, kelly 0.35, decay 1.00, bound by balance reserve"
-    },
-    {
-      "ts": 1789061090495,
-      "kind": "no_trade",
-      "question": "Will Trump outlive DeSantis?",
-      "url": "https://manifold.markets/AndrewG/will-trump-outlive-desantis",
-      "market_prob": 0.06947173882817873,
-      "model_prob": 0.06,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Actuarially, an 80-year-old male has roughly a 6% chance of outliving a healthy 48-year-old male under standard mortality distributions.",
-      "uncertainty": "The occurrence of an unexpected fatal accident, acute illness, or assassination targeting DeSantis prior to Trump's natural death.",
-      "resolution_risk": "Typo in description ('ReSantis'), but resolution criteria clearly refer to Ron DeSantis vs Donald Trump.",
-      "evidence_for": [
-        "Unforeseen catastrophic health events, accidents, or acute fatal illnesses can strike individuals at any age.",
-        "Trump has access to top-tier presidential medical care and monitoring."
-      ],
-      "evidence_against": [
-        "Trump is 80 years old, while DeSantis is 48 years old\u2014a 32-year age gap.",
-        "Standard actuarial life tables give an 80-year-old male roughly an 8-9 year life expectancy versus 30+ years for a 48-year-old male, giving Trump only a ~5-8% baseline probability of outliving DeSantis.",
-        "No publicly known life-threatening illness is affecting DeSantis."
-      ],
-      "reason": "edge 0.009 below minimum 0.04"
     }
   ]
 }
