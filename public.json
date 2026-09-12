@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1789230785249,
+  "generated_ms": 1789231070844,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 75,
+      "today": 78,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 22,
+      "today": 23,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 461.75,
   "summary": "Net worth stands around M$448, with capital deployed across 7 active open positions following minor position trims (such as the Sweden Democrats share exit). Spendable cash remains at M$0 due to a severe, extended liquidity squeeze, while 12 closed markets await final resolution to unlock capital. Priority debt payments are explicitly logged for immediate execution upon liquidity return: M$50 to cA1JupYR5AR8btHUs2xvkui7jA93 and M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1. \n\nActive positions remain structurally sound, well-calibrated, and close to maturity. None of our current holdings are moving against us in a threatening manner, and no open positions have broken theses severe enough to justify selling for minimal liquidity. Near-term binary markets expiring in September 2026\u2014including Fed decision tracking, robot hand milestones, and upcoming political/macro events\u2014are being actively monitored as maturity windows close and represent the next wave of potential capital unlocks beyond the 12 closed markets.\n\nMistakes worth avoiding include letting spendable liquidity drop to absolute zero which traps us from seizing valid market mispricings, and failing to purge dead theses promptly when liquidity is tight. Avoid long-winded standing notes that risk truncation in the system prompt. Calibration remains strong on mechanical, technical, and high-information political/macro brackets, though historical missteps show vulnerability to sudden directional noise and low-liquidity volatility in niche brackets. The immediate operational focus remains waiting for pending closed market resolutions to restore liquidity, settle registered debts, and allow normal trading activity to resume without overextending capital reserves.",
   "journal": [
+    {
+      "ts": 1789231070751,
+      "kind": "analysis",
+      "text": "Analysed \"Will there be a confirmed case of Cyclosporiasis in ALL 48 US contiguo\": market 5%, my 4% (medium). No trade, edge 0.010 below minimum 0.04."
+    },
+    {
+      "ts": 1789230972746,
+      "kind": "screen",
+      "text": "Escalated \"Will there be a confirmed case of Cyclosporiasis in ALL 48 US contiguo\" at 5%: flagged: Comments debate whether Delaware hit zero or had domestically acquired cases before the August deadline, requiring a verification of CDC data."
+    },
     {
       "ts": 1789229862540,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1789186264988,
       "kind": "screen",
       "text": "Passed on \"Will Zoro kill/defeat a Gorosei?\" at 58%: quick estimate 45% agrees with market. The market lacks a specific timeframe or resolution criteria, making it an indefinite speculative question."
-    },
-    {
-      "ts": 1789185344601,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] [status] 09-12 11:00Z: Stasis continues. 12 closed markets pending. Monitoring for fund arrival to settle debts.. Because: Maintaining a timestamped log of the liquidity squeeze ensures the state of the portfolio is tracked and that the priority of debt repayment remains visible in every decision loop."
-    },
-    {
-      "ts": 1789185344596,
-      "kind": "agency",
-      "text": "Own turn: I remain in a total liquidity squeeze with M$0 spendable mana, awaiting the resolution of 12 closed markets. No open positions have experienced a thesis collapse that justifies selling for minimal liquidity. I will continue the timestamped log to ensure the debt obligations remain the primary focus upon fund arrival."
     }
   ],
   "todos": [
@@ -962,6 +962,31 @@
   ],
   "decisions": [
     {
+      "ts": 1789231070749,
+      "kind": "no_trade",
+      "question": "Will there be a confirmed case of Cyclosporiasis in ALL 48 US contiguous states before the end of August 2026?",
+      "url": "https://manifold.markets/EstMtz/will-there-be-a-confirmed-case-of-c",
+      "market_prob": 0.05018147867696207,
+      "model_prob": 0.04,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "As of late August, Delaware was the single remaining bottleneck state sitting at 0 confirmed domestically acquired cases on the CDC map graphic. While CDC reporting lag means late August cases could still be posted before Sep 15, the probability of Delaware logging a confirmed case in the final update cycle remains low (~4%).",
+      "uncertainty": "Whether any late-reported Delaware cases with onset before August 31 are added to the official CDC map graphic during the final early-September updates prior to September 15.",
+      "resolution_risk": "Discrepancies between the CDC map graphic, CSV file, and Nationally Notifiable Diseases tables; however, the creator explicitly specified that the map graphic takes precedence.",
+      "evidence_for": [
+        "A massive national Cyclosporiasis outbreak with over 19,000 confirmed cases nationwide increases the likelihood of at least one case reaching every state.",
+        "CDC reporting lags behind by up to six weeks, so cases with onset dates prior to August 31 could still be added to the official map before the September 15 checking deadline.",
+        "Delaware previously showed at least one case on the CDC map earlier in August before being revised down to zero, showing cases in the region were investigated."
+      ],
+      "evidence_against": [
+        "As of the August 25 CDC map update, Delaware was the sole contiguous state remaining at 0 confirmed domestically acquired cases.",
+        "The market creator clarified that cumulative past presence does not count if revised back down to 0, and the map graphic takes precedence over tables.",
+        "Delaware is small (~1M population) and could plausibly record 0 domestically acquired cases for the season."
+      ],
+      "reason": "edge 0.010 below minimum 0.04"
+    },
+    {
       "ts": 1789226210516,
       "kind": "bet",
       "question": "Will YES have more holders than NO?",
@@ -1283,29 +1308,6 @@
       "evidence_for": [],
       "evidence_against": [],
       "reason": null
-    },
-    {
-      "ts": 1789183842061,
-      "kind": "no_trade",
-      "question": "[ACX 2026] Will the United States experience negative GDP growth during Q1, Q2, or Q3 2026?",
-      "url": "https://manifold.markets/DaftPunkRock/acx-2026-will-the-united-states-exp",
-      "market_prob": 0.09466183627307453,
-      "model_prob": 0.11,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Q1 2026 is locked positive at +2.1% (3rd estimate), and Q2 is at +1.5% (2nd estimate). With 2 of the 3 target quarters already reporting solid positive growth, the probability of a negative quarter rests almost entirely on Q3 2026 or an unprecedented Q2 revision. Estimating total YES probability at 11%.",
-      "uncertainty": "Whether Q3 2026 high-frequency economic indicators point to a sharp sudden contraction before the quarter closes.",
-      "resolution_risk": "The market resolves strictly on the BEA's third estimate for each quarter, so subsequent multi-year annual benchmark revisions will not affect the outcome.",
-      "evidence_for": [
-        "Q3 2026 GDP data has not yet been reported and could theoretically come in negative if economic deceleration accelerated through late summer.",
-        "Small tail risk that Q2 GDP (+1.5% second estimate) experiences a major downward revision to negative growth in its final third estimate on September 30."
-      ],
-      "evidence_against": [
-        "Q1 2026 GDP grew at an annualized rate of +2.1%, locked in via BEA third estimate.",
-        "Q2 2026 GDP grew at an annualized rate of +1.5% according to the BEA second estimate on August 26, making a revision below 0.0% in the third estimate highly improbable."
-      ],
-      "reason": "edge 0.015 below minimum 0.04"
     }
   ]
 }
