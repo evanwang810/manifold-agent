@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1789236359260,
+  "generated_ms": 1789236685593,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemini-3.5-flash-lite",
+      "active": "gemma-4-31b-it",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 81,
+      "today": 85,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 24,
+      "today": 25,
       "cap": 34
     }
   },
@@ -48,6 +48,21 @@
   "net_worth": 465.39,
   "summary": "Net worth stands around M$448, with capital deployed across 7 active open positions following minor position trims (such as the Sweden Democrats share exit). Spendable cash remains at M$0 due to a severe, extended liquidity squeeze, while 12 closed markets await final resolution to unlock capital. Priority debt payments are explicitly logged for immediate execution upon liquidity return: M$50 to cA1JupYR5AR8btHUs2xvkui7jA93 and M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1. \n\nActive positions remain structurally sound, well-calibrated, and close to maturity. None of our current holdings are moving against us in a threatening manner, and no open positions have broken theses severe enough to justify selling for minimal liquidity. Near-term binary markets expiring in September 2026\u2014including Fed decision tracking, robot hand milestones, and upcoming political/macro events\u2014are being actively monitored as maturity windows close and represent the next wave of potential capital unlocks beyond the 12 closed markets.\n\nMistakes worth avoiding include letting spendable liquidity drop to absolute zero which traps us from seizing valid market mispricings, and failing to purge dead theses promptly when liquidity is tight. Avoid long-winded standing notes that risk truncation in the system prompt. Calibration remains strong on mechanical, technical, and high-information political/macro brackets, though historical missteps show vulnerability to sudden directional noise and low-liquidity volatility in niche brackets. The immediate operational focus remains waiting for pending closed market resolutions to restore liquidity, settle registered debts, and allow normal trading activity to resume without overextending capital reserves.",
   "journal": [
+    {
+      "ts": 1789236685476,
+      "kind": "analysis",
+      "text": "Analysed \"Will Trump outlive DeSantis?\": market 7%, my 6% (high). No trade, edge 0.009 below minimum 0.04."
+    },
+    {
+      "ts": 1789236567083,
+      "kind": "screen",
+      "text": "Escalated \"Will Trump outlive DeSantis?\" at 7%: quick estimate 82% vs market 7%"
+    },
+    {
+      "ts": 1789236546951,
+      "kind": "screen",
+      "text": "Passed on \"Will I remain in Montreal past September?\" at 93%: quick estimate 85% agrees with market. This is a personal life event market for the creator with no public edge or external data to analyze."
+    },
     {
       "ts": 1789236358879,
       "kind": "book",
@@ -432,21 +447,6 @@
       "ts": 1789191283896,
       "kind": "screen",
       "text": "Escalated \"Will Gukesh be board 1 for India at Olympiad?\" at 33%: quick estimate 85% vs market 33%"
-    },
-    {
-      "ts": 1789191263849,
-      "kind": "screen",
-      "text": "Passed on \"Will 0x53a125F03c90B8E07BA50356B312F4b7b9bA47A7 REACH more than 267.84\" at 5%: quick estimate 5% agrees with market. This is a low-liquidity wallet balance tracking question dependent on future user actions with no edge for a deep model."
-    },
-    {
-      "ts": 1789189238846,
-      "kind": "closed",
-      "text": "No longer holding \"Will the Sweden Democrats increase their share in parliament in the Sw\". Last seen YES at 29%, P/L M$+0. Resolved or sold."
-    },
-    {
-      "ts": 1789189056393,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] [status] 09-12 12:00Z: Stasis continues. 12 closed markets pending. Monitoring for fund arrival to settle debts.. Because: Maintaining a timestamped log of the liquidity squeeze ensures the state of the portfolio is tracked and that the priority of debt repayment remains visible in every decision loop."
     }
   ],
   "todos": [
@@ -962,6 +962,30 @@
   ],
   "decisions": [
     {
+      "ts": 1789236685474,
+      "kind": "no_trade",
+      "question": "Will Trump outlive DeSantis?",
+      "url": "https://manifold.markets/AndrewG/will-trump-outlive-desantis",
+      "market_prob": 0.06947173882817873,
+      "model_prob": 0.06,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Donald Trump is 80 years old while Ron DeSantis is 48. Standard US actuarial tables give an 80-year-old male approximately a 5% to 6% baseline chance of outliving a healthy 48-year-old male, even accounting for presidential healthcare access.",
+      "uncertainty": "Whether Ron DeSantis experiences an unforeseen early mortality event prior to Trump's natural death at age 80+.",
+      "resolution_risk": "The market close date is in 17.5 days, but resolution requires the eventual death of one individual; improper early resolution or cancellation by the creator would pose a risk.",
+      "evidence_for": [
+        "Donald Trump receives elite, round-the-clock presidential medical care.",
+        "Ron DeSantis could hypothetically suffer an unexpected fatal accident, sudden acute illness, or violence before Trump dies."
+      ],
+      "evidence_against": [
+        "Donald Trump is 80 years old with documented health and lifestyle risk factors.",
+        "Ron DeSantis is 48 years old with no reported life-threatening medical conditions.",
+        "Actuarial period life tables give an 80-year-old US male approximately a 5% to 6% chance of outliving a healthy 48-year-old US male."
+      ],
+      "reason": "edge 0.009 below minimum 0.04"
+    },
+    {
       "ts": 1789233606755,
       "kind": "no_trade",
       "question": "Will Shohei Ohtani hit at least 43 home runs in 2026?",
@@ -1291,30 +1315,6 @@
         "Only 18 days remain in September 2026, making a major generational jump immediately after V4.1-Flash highly improbable."
       ],
       "reason": "edge 0.006 below minimum 0.04"
-    },
-    {
-      "ts": 1789191448035,
-      "kind": "no_trade",
-      "question": "Will Gukesh be board 1 for India at Olympiad?",
-      "url": "https://manifold.markets/Zeolite/will-gukesh-be-board-1-for-india-at",
-      "market_prob": 0.33448660168788125,
-      "model_prob": 0.78,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "While Arjun Erigaisi and Pragg are in superior form, historical precedent heavily favors reigning World Champions retaining Board 1 (e.g. Ding Liren playing Board 1 for China in 2024 despite severe slump). I estimate a 78% probability Gukesh is assigned Board 1.",
-      "uncertainty": "Whether team management optimizes board order purely by current Elo/form or follows standard tradition by giving the World Champion Board 1.",
-      "resolution_risk": "FIDE pre-registration team lists list players alphabetically or by Elo rating before official board declarations are submitted prior to Round 1.",
-      "evidence_for": [
-        "Reigning World Champions almost universally play Board 1 for their national team at the Olympiad (e.g. Ding Liren for China in 2024 despite poor form and lower rating than Wei Yi).",
-        "Gukesh has an exceptional track record on Board 1 at past Olympiads (individual gold on Board 1 in 2022 and 2024).",
-        "Demoting a reigning World Champion off Board 1 is politically sensitive and culturally unlikely in team selection."
-      ],
-      "evidence_against": [
-        "Arjun Erigaisi and Praggnanandhaa are currently higher-rated and in significantly better recent form.",
-        "Team captain Srinath Narayanan and mentor Viswanathan Anand have publicly acknowledged that board placement order is a topic of strategic debate."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
