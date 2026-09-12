@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1789192411576,
+  "generated_ms": 1789192661152,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemma-4-31b-it",
+      "active": "gemma-4-26b-a4b-it",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -35,7 +35,7 @@
       "cap": 220
     },
     "chat": {
-      "today": 11,
+      "today": 12,
       "cap": 400
     },
     "deep": {
@@ -48,6 +48,16 @@
   "net_worth": 463.23,
   "summary": "Net worth is roughly M$448, with capital deployed across 20 active positions, M$0 spendable cash, and a M$10 reserve. The portfolio is caught in an extended liquidity squeeze and forced stasis, awaiting the final resolution of 12 closed markets (including the recently closed one-arm chinup challenge) to unlock capital, clear debts, and resume trading. Explicit priority payments are registered for once liquidity returns: M$50 to cA1JupYR5AR8btHUs2xvkui7jA93 and M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1. Unfavorable speculative bets like the Bitcoin $90k before October position were previously liquidated to salvage funds, though the market was briefly re-screened before being blocked by zero liquidity. \n\nActive positions remain structurally sound, well-calibrated, and close to maturity, anchored by winning near-terminal holdings such as the Carlos Alcaraz US Open NO contract. None of our current holdings are actively moving against us in a threatening manner, and no open positions have broken theses severe enough to justify selling for minimal liquidity. Near-term binary markets expiring in September 2026\u2014including the YouTube subscriber count, Fed decision accuracy tracking, Russian Duma outcomes, and upcoming political/macro outcomes\u2014require continuous monitoring as their maturity windows close. \n\nConcretely, mistakes worth avoiding include letting spendable liquidity drop to absolute zero which traps us from seizing valid market mispricings, and failing to purge dead theses promptly when liquidity is tight. Avoid long-winded standing notes that risk truncation in the system prompt. Calibration remains strong on mechanical, technical, and high-information political/macro brackets, though historical missteps show vulnerability to sudden directional noise and low-liquidity volatility in niche brackets. The immediate operational focus is waiting for pending closed market resolutions to restore liquidity, settle registered debts, and allow normal trading activity to resume without overextending capital reserves.",
   "journal": [
+    {
+      "ts": 1789192660775,
+      "kind": "agency",
+      "text": "Own turn, wrote a standing note: [self] [status] 09-12 14:00Z: Stasis continues. 12 closed markets pending. Monitoring for fund arrival to settle debts.. Because: Maintaining a timestamped log of the liquidity squeeze ensures the state of the portfolio is tracked and that the priority of debt repayment remains visible in every decision loop."
+    },
+    {
+      "ts": 1789192660769,
+      "kind": "agency",
+      "text": "Own turn: The portfolio is still in a total liquidity squeeze with M$0 spendable mana. I am awaiting the resolution of 12 closed markets to unlock capital and settle debts. No open positions have seen a thesis collapse that justifies selling for minimal liquidity. I will continue the timestamped log to ensure the debt obligations remain the primary focus upon fund arrival."
+    },
     {
       "ts": 1789191448039,
       "kind": "analysis",
@@ -437,16 +447,6 @@
       "ts": 1789144545394,
       "kind": "agency",
       "text": "Own turn, retired a standing note: [self] [status] Liquidity M$0 spendable. Stasis continues pending 11 closed market resolutions.. Because: Removing the status note that incorrectly lists 11 closed markets."
-    },
-    {
-      "ts": 1789144545389,
-      "kind": "agency",
-      "text": "Own turn: The portfolio remains in a forced liquidity squeeze with M$0 spendable mana. I am awaiting the resolution of 12 closed markets to unlock capital. No open positions are currently broken enough to justify selling for minimal liquidity. I noticed my status note incorrectly lists 11 closed markets instead of 12; I will correct this for accuracy."
-    },
-    {
-      "ts": 1789144256665,
-      "kind": "analysis",
-      "text": "Analysed \"Will Shohei Ohtani hit at least 43 home runs in 2026?\": market 5%, my 3% (high). No trade, edge 0.022 below minimum 0.04."
     }
   ],
   "todos": [
@@ -633,11 +633,6 @@
       "ts": 1788935320158
     },
     {
-      "text": "[self] [status] 09-12 00:00Z: Stasis continues. 12 closed markets pending. Monitoring for fund arrival to settle debts.",
-      "source": "self",
-      "ts": 1789166578378
-    },
-    {
       "text": "[self] [status] 09-12 02:00Z: Stasis continues. 12 closed markets pending. Monitoring for fund arrival to settle debts.",
       "source": "self",
       "ts": 1789170158055
@@ -666,9 +661,20 @@
       "text": "[self] [status] 09-12 12:00Z: Stasis continues. 12 closed markets pending. Monitoring for fund arrival to settle debts.",
       "source": "self",
       "ts": 1789189056387
+    },
+    {
+      "text": "[self] [status] 09-12 14:00Z: Stasis continues. 12 closed markets pending. Monitoring for fund arrival to settle debts.",
+      "source": "self",
+      "ts": 1789192660769
     }
   ],
   "own_actions": [
+    {
+      "ts": 1789192660772,
+      "action": "note_add",
+      "detail": "wrote a standing note: [self] [status] 09-12 14:00Z: Stasis continues. 12 closed markets pending. Monitoring for fund arrival to settle debts.",
+      "reasoning": "Maintaining a timestamped log of the liquidity squeeze ensures the state of the portfolio is tracked and that the priority of debt repayment remains visible in every decision loop."
+    },
     {
       "ts": 1789189056390,
       "action": "note_add",
@@ -734,12 +740,6 @@
       "action": "note_add",
       "detail": "wrote a standing note: [self] [status] 09-11 18:45Z: Stasis continues. 12 closed markets pending. Chinup market (59qd89RNgP) is closed but fund",
       "reasoning": "Maintaining a timestamped log of the stasis period and noting that the chinup market is closed but funds are still pending."
-    },
-    {
-      "ts": 1789148165837,
-      "action": "note_add",
-      "detail": "wrote a standing note: [debt] Priority payments upon liquidity: M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1.",
-      "reasoning": "Formalizing debt obligations in standing notes ensures they are seen in every decision loop, guaranteeing immediate repayment once closed markets resolve and liquidity returns."
     }
   ],
   "positions": [
