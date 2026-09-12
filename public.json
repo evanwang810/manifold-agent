@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1789191078758,
+  "generated_ms": 1789192043906,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -31,15 +31,15 @@
   },
   "usage": {
     "fast": {
-      "today": 27,
+      "today": 31,
       "cap": 220
     },
     "chat": {
-      "today": 10,
+      "today": 11,
       "cap": 400
     },
     "deep": {
-      "today": 7,
+      "today": 8,
       "cap": 34
     }
   },
@@ -48,6 +48,21 @@
   "net_worth": 463.23,
   "summary": "Net worth is roughly M$448, with capital deployed across 20 active positions, M$0 spendable cash, and a M$10 reserve. The portfolio is caught in an extended liquidity squeeze and forced stasis, awaiting the final resolution of 12 closed markets (including the recently closed one-arm chinup challenge) to unlock capital, clear debts, and resume trading. Explicit priority payments are registered for once liquidity returns: M$50 to cA1JupYR5AR8btHUs2xvkui7jA93 and M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1. Unfavorable speculative bets like the Bitcoin $90k before October position were previously liquidated to salvage funds, though the market was briefly re-screened before being blocked by zero liquidity. \n\nActive positions remain structurally sound, well-calibrated, and close to maturity, anchored by winning near-terminal holdings such as the Carlos Alcaraz US Open NO contract. None of our current holdings are actively moving against us in a threatening manner, and no open positions have broken theses severe enough to justify selling for minimal liquidity. Near-term binary markets expiring in September 2026\u2014including the YouTube subscriber count, Fed decision accuracy tracking, Russian Duma outcomes, and upcoming political/macro outcomes\u2014require continuous monitoring as their maturity windows close. \n\nConcretely, mistakes worth avoiding include letting spendable liquidity drop to absolute zero which traps us from seizing valid market mispricings, and failing to purge dead theses promptly when liquidity is tight. Avoid long-winded standing notes that risk truncation in the system prompt. Calibration remains strong on mechanical, technical, and high-information political/macro brackets, though historical missteps show vulnerability to sudden directional noise and low-liquidity volatility in niche brackets. The immediate operational focus is waiting for pending closed market resolutions to restore liquidity, settle registered debts, and allow normal trading activity to resume without overextending capital reserves.",
   "journal": [
+    {
+      "ts": 1789191448039,
+      "kind": "analysis",
+      "text": "Analysed \"Will Gukesh be board 1 for India at Olympiad?\": market 33%, my 78% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1789191283896,
+      "kind": "screen",
+      "text": "Escalated \"Will Gukesh be board 1 for India at Olympiad?\" at 33%: quick estimate 85% vs market 33%"
+    },
+    {
+      "ts": 1789191263849,
+      "kind": "screen",
+      "text": "Passed on \"Will 0x53a125F03c90B8E07BA50356B312F4b7b9bA47A7 REACH more than 267.84\" at 5%: quick estimate 5% agrees with market. This is a low-liquidity wallet balance tracking question dependent on future user actions with no edge for a deep model."
+    },
     {
       "ts": 1789189238846,
       "kind": "closed",
@@ -432,21 +447,6 @@
       "ts": 1789144256665,
       "kind": "analysis",
       "text": "Analysed \"Will Shohei Ohtani hit at least 43 home runs in 2026?\": market 5%, my 3% (high). No trade, edge 0.022 below minimum 0.04."
-    },
-    {
-      "ts": 1789144139555,
-      "kind": "screen",
-      "text": "Escalated \"Will Shohei Ohtani hit at least 43 home runs in 2026?\" at 5%: quick estimate 25% vs market 5%"
-    },
-    {
-      "ts": 1789144119524,
-      "kind": "screen",
-      "text": "Passed on \"Will there be a confirmed case of Cyclosporiasis in ALL 48 US contiguo\" at 5%: quick estimate 15% agrees with market. Comments confirm Delaware remained at zero confirmed cases by the August deadline, meaning the market resolves NO."
-    },
-    {
-      "ts": 1789143562643,
-      "kind": "book",
-      "text": "Looked over 20 positions: The book is in a total liquidity squeeze with M$0 spendable, awaiting the resolution of 11 closed markets. The open positions are sound, well-calibrated, and nearing maturity, with no active theses broken enough to sell. (0 change(s) proposed)"
     }
   ],
   "todos": [
@@ -777,7 +777,7 @@
       "profit": 19.2,
       "prob": 0.352,
       "closed": false,
-      "days_to_close": 4.1
+      "days_to_close": 4.0
     },
     {
       "question": "Will Abdul El Sayed and Francesca Hong both win their primaries?",
@@ -813,7 +813,7 @@
       "profit": 11.3,
       "prob": 0.144,
       "closed": false,
-      "days_to_close": 19.0
+      "days_to_close": 18.9
     },
     {
       "question": "Will at least 10 UK riot related prosecutions be overturned or have their sentences shortened in the next 2 years?",
@@ -973,6 +973,30 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1789191448035,
+      "kind": "no_trade",
+      "question": "Will Gukesh be board 1 for India at Olympiad?",
+      "url": "https://manifold.markets/Zeolite/will-gukesh-be-board-1-for-india-at",
+      "market_prob": 0.33448660168788125,
+      "model_prob": 0.78,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "While Arjun Erigaisi and Pragg are in superior form, historical precedent heavily favors reigning World Champions retaining Board 1 (e.g. Ding Liren playing Board 1 for China in 2024 despite severe slump). I estimate a 78% probability Gukesh is assigned Board 1.",
+      "uncertainty": "Whether team management optimizes board order purely by current Elo/form or follows standard tradition by giving the World Champion Board 1.",
+      "resolution_risk": "FIDE pre-registration team lists list players alphabetically or by Elo rating before official board declarations are submitted prior to Round 1.",
+      "evidence_for": [
+        "Reigning World Champions almost universally play Board 1 for their national team at the Olympiad (e.g. Ding Liren for China in 2024 despite poor form and lower rating than Wei Yi).",
+        "Gukesh has an exceptional track record on Board 1 at past Olympiads (individual gold on Board 1 in 2022 and 2024).",
+        "Demoting a reigning World Champion off Board 1 is politically sensitive and culturally unlikely in team selection."
+      ],
+      "evidence_against": [
+        "Arjun Erigaisi and Praggnanandhaa are currently higher-rated and in significantly better recent form.",
+        "Team captain Srinath Narayanan and mentor Viswanathan Anand have publicly acknowledged that board placement order is a topic of strategic debate."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1789188970860,
       "kind": "sell",
@@ -1294,28 +1318,6 @@
         "Low friction for last-minute NO holder snipes before the close in 2.4 days."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1789134206225,
-      "kind": "no_trade",
-      "question": "Will Bitcoin be higher 7 days from now?",
-      "url": "https://manifold.markets/OnlySlides/will-bitcoin-be-higher-7-days-from-O58ZgtgAzE",
-      "market_prob": 0.12675223478357597,
-      "model_prob": 0.09,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With Bitcoin currently trading around $77,200\u2013$77,900, it is roughly 2.3%\u20133.1% below the baseline creation price of $79,713. With approximately 10 hours remaining until the 168-hour cutoff, a sharp rally of that magnitude has roughly a 9% probability based on short-term standard deviation.",
-      "uncertainty": "Whether any major macroeconomic or market-wide volatility event occurs in the remaining 10 hours to push BTC above $79,713.",
-      "resolution_risk": "Discrepancies in CoinGecko's historical hourly candle data versus live spot tickers at T_0 + 168 hours.",
-      "evidence_for": [
-        "Bitcoin could experience a rapid short-term rally exceeding +2.5% in the remaining 10 hours before resolution."
-      ],
-      "evidence_against": [
-        "Spot price quotes (Bybit $77,911, Yahoo Finance $77,221) place BTC roughly 2.3% to 3.1% below the $79,713 start price.",
-        "With less than 10 hours remaining until the 168-hour mark, a move of +$1,800 to +$2,500 requires a ~1.3 to 1.6 standard deviation move."
-      ],
-      "reason": "edge 0.037 below minimum 0.04"
     }
   ]
 }
