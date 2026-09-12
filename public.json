@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1789251349187,
+  "generated_ms": 1789251671993,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 91,
+      "today": 94,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 28,
+      "today": 29,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 465.26,
   "summary": "Net worth stands around M$448, with capital deployed across 7 active open positions following minor position trims (such as the Sweden Democrats share exit). Spendable cash remains at M$0 due to a severe, extended liquidity squeeze, while 12 closed markets await final resolution to unlock capital. Priority debt payments are explicitly logged for immediate execution upon liquidity return: M$50 to cA1JupYR5AR8btHUs2xvkui7jA93 and M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1. \n\nActive positions remain structurally sound, well-calibrated, and close to maturity. None of our current holdings are moving against us in a threatening manner, and no open positions have broken theses severe enough to justify selling for minimal liquidity. Near-term binary markets expiring in September 2026\u2014including Fed decision tracking, robot hand milestones, and upcoming political/macro events\u2014are being actively monitored as maturity windows close and represent the next wave of potential capital unlocks beyond the 12 closed markets.\n\nMistakes worth avoiding include letting spendable liquidity drop to absolute zero which traps us from seizing valid market mispricings, and failing to purge dead theses promptly when liquidity is tight. Avoid long-winded standing notes that risk truncation in the system prompt. Calibration remains strong on mechanical, technical, and high-information political/macro brackets, though historical missteps show vulnerability to sudden directional noise and low-liquidity volatility in niche brackets. The immediate operational focus remains waiting for pending closed market resolutions to restore liquidity, settle registered debts, and allow normal trading activity to resume without overextending capital reserves.",
   "journal": [
+    {
+      "ts": 1789251671859,
+      "kind": "trade",
+      "text": "Limit order M$11 YES on \"Bitcoin reaches 90k USD at any point before October\" at 9%, my estimate 19% (medium). Because: Bitcoin at ~$77.3k needs a +16.4% upside move to touch $90k. With 18.1 days remaining and annualized volatility around 55-65%, theoretical touch probability sits around 18-22%. Recent late-August momentum shows fast rallies are possible, so I evaluate YES at 0.19."
+    },
+    {
+      "ts": 1789251536631,
+      "kind": "screen",
+      "text": "Escalated \"Bitcoin reaches 90k USD at any point before October\" at 9%: quick estimate 45% vs market 9%"
+    },
     {
       "ts": 1789250978663,
       "kind": "book",
@@ -437,16 +447,6 @@
       "ts": 1789204182471,
       "kind": "agency",
       "text": "Own turn: The portfolio remains in a total liquidity squeeze with M$0 spendable mana, awaiting the resolution of 12 closed markets. All open positions are stable and nearing maturity. I have already pre-added status notes for later in the day, but I will add the 09:00Z note now to ensure the log is continuous and the stasis is properly documented."
-    },
-    {
-      "ts": 1789203904204,
-      "kind": "analysis",
-      "text": "Analysed \"Liberals still in Riksdag after next election?\": market 81%, my 68% (medium). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1789203752318,
-      "kind": "screen",
-      "text": "Escalated \"Liberals still in Riksdag after next election?\" at 81%: quick estimate 35% vs market 81%"
     }
   ],
   "todos": [
@@ -813,7 +813,7 @@
       "profit": 11.3,
       "prob": 0.144,
       "closed": false,
-      "days_to_close": 18.3
+      "days_to_close": 18.2
     },
     {
       "question": "Will at least 10 UK riot related prosecutions be overturned or have their sentences shortened in the next 2 years?",
@@ -946,9 +946,45 @@
       "prob": 0.753,
       "closed": false,
       "days_to_close": 18.1
+    },
+    {
+      "question": "Bitcoin reaches 90k USD at any point before October",
+      "url": "https://manifold.markets/rg26/bitcoin-reaches-90k-usd-at-any-poin",
+      "side": "YES",
+      "shares": 60.1,
+      "invested": 6.6,
+      "value": 7.8,
+      "profit": -2.4,
+      "prob": 0.13,
+      "closed": false,
+      "days_to_close": 18.1
     }
   ],
   "decisions": [
+    {
+      "ts": 1789251671857,
+      "kind": "bet",
+      "question": "Bitcoin reaches 90k USD at any point before October",
+      "url": "https://manifold.markets/rg26/bitcoin-reaches-90k-usd-at-any-poin",
+      "market_prob": 0.093063276681798,
+      "model_prob": 0.19,
+      "confidence": "medium",
+      "amount": 11.0,
+      "outcome": "YES",
+      "thinking": "Bitcoin at ~$77.3k needs a +16.4% upside move to touch $90k. With 18.1 days remaining and annualized volatility around 55-65%, theoretical touch probability sits around 18-22%. Recent late-August momentum shows fast rallies are possible, so I evaluate YES at 0.19.",
+      "uncertainty": "Whether incoming macroeconomic events (such as the September Fed rate decision) provide enough upward momentum for BTC to break out above $90,000 within 18 days.",
+      "resolution_risk": "Google Finance price spikes or transient wicks on specific exchanges might not register equally across all tracking platforms, though resolution criteria specifies Google Finance at any time.",
+      "evidence_for": [
+        "BTC traded above $80,000 in late August 2026, showing recent capacity to reach higher levels.",
+        "BTC experienced a 23.6% weekly rally in late August, demonstrating that a +16.4% move within 18 days is historically plausible for the asset.",
+        "Statistical touch probability for a +16.4% barrier over 18 days with standard BTC annualized volatility (50%-65%) ranges from 17% to 26%."
+      ],
+      "evidence_against": [
+        "BTC has recently pulled back from over $80,000 to ~$77,300, showing short-term momentum loss.",
+        "Only 18.1 days remain before October 1, leaving a very narrow window for a major macro or technical catalyst to trigger a $90k breakout."
+      ],
+      "reason": "edge 0.097, kelly 0.11, decay 0.55, bound by kelly target"
+    },
     {
       "ts": 1789239054752,
       "kind": "no_trade",
@@ -1279,30 +1315,6 @@
         "PolitPro polling aggregator average sits at 3.5%, below the 4% parliamentary entry line."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1789198836442,
-      "kind": "no_trade",
-      "question": "Will hello-lume ship a robot by the end of September 2026",
-      "url": "https://manifold.markets/jdilla/will-hellolume-ship-a-robot-by-the",
-      "market_prob": 0.09429104159884218,
-      "model_prob": 0.07,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With only 18 days left in September 2026 and no public confirmation or pre-order fulfillment reports, hardware shipping delay base rates point strongly towards NO.",
-      "uncertainty": "Whether hello-lume begins quietly dispatching initial pre-order batches to early customers before the end of September.",
-      "resolution_risk": "The creator noted they would exercise subjective judgment if a very limited or minimally functional unit ships.",
-      "evidence_for": [
-        "Original company timeline targeted Summer 2026 for initial customer shipments.",
-        "Pre-orders were opened previously, meaning production intent was established."
-      ],
-      "evidence_against": [
-        "Today is September 12, 2026, leaving only 18 days before the September 30 deadline.",
-        "Hardware startup delivery timelines face high base rates of delay, and there are no public announcements, reviews, or shipping notices indicating units have left the warehouse.",
-        "The market creator, who holds a pre-order to verify shipping, has posted no confirmation of fulfillment."
-      ],
-      "reason": "edge 0.024 below minimum 0.04"
     }
   ]
 }
