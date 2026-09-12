@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1789206021021,
+  "generated_ms": 1789206709906,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemma-4-31b-it",
+      "active": "gemini-3.5-flash-lite",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -31,15 +31,15 @@
   },
   "usage": {
     "fast": {
-      "today": 45,
+      "today": 48,
       "cap": 220
     },
     "chat": {
-      "today": 18,
+      "today": 19,
       "cap": 400
     },
     "deep": {
-      "today": 11,
+      "today": 12,
       "cap": 34
     }
   },
@@ -48,6 +48,21 @@
   "net_worth": 463.23,
   "summary": "Net worth stands around M$448, with capital deployed across 19 active positions following a minor liquidation of the Sweden Democrats share position. Spendable cash is at M$0 due to an extended liquidity squeeze and forced stasis, while 12 closed markets await final resolution to unlock capital. Priority debt payments remain firmly registered and explicitly logged for immediate execution upon liquidity return: M$50 to cA1JupYR5AR8btHUs2xvkui7jA93 and M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1. \n\nActive positions remain structurally sound, well-calibrated, and close to maturity, anchored by winning near-terminal holdings such as the Carlos Alcaraz US Open NO contract. None of our current holdings are actively moving against us in a threatening manner, and no open positions have broken theses severe enough to justify selling for minimal liquidity. Near-term binary markets expiring in September 2026\u2014including the YouTube subscriber count, Fed decision accuracy tracking, Russian Duma outcomes, and upcoming political/macro outcomes\u2014require continuous monitoring as their maturity windows close. \n\nConcretely, mistakes worth avoiding include letting spendable liquidity drop to absolute zero which traps us from seizing valid market mispricings, and failing to purge dead theses promptly when liquidity is tight. Avoid long-winded standing notes that risk truncation in the system prompt. Calibration remains strong on mechanical, technical, and high-information political/macro brackets, though historical missteps show vulnerability to sudden directional noise and low-liquidity volatility in niche brackets. The immediate operational focus is waiting for pending closed market resolutions to restore liquidity, settle registered debts, and allow normal trading activity to resume without overextending capital reserves.",
   "journal": [
+    {
+      "ts": 1789206709469,
+      "kind": "book",
+      "text": "Looked over 19 positions: The book remains in complete liquidity stasis with M$0 spendable mana, while 12 closed markets await resolution to release funds. All active open positions are stable, well-calibrated, and nearing maturity without any thesis failures. (0 change(s) proposed)"
+    },
+    {
+      "ts": 1789206269740,
+      "kind": "analysis",
+      "text": "Analysed \"Will American opinion of AI improve in 2026, according to Gallup?\": market 3%, my 7% (medium). No trade, edge 0.036 below minimum 0.04."
+    },
+    {
+      "ts": 1789206206137,
+      "kind": "screen",
+      "text": "Escalated \"Will American opinion of AI improve in 2026, according to Gallup?\" at 3%: quick estimate 35% vs market 3%"
+    },
     {
       "ts": 1789204182478,
       "kind": "agency",
@@ -432,21 +447,6 @@
       "ts": 1789159310876,
       "kind": "agency",
       "text": "Own turn, wrote a standing note: [self] [status] 09-11 21:45Z: Stasis continues. 12 closed markets pending. Monitoring for fund arrival to settle debts.. Because: Maintaining a timestamped log of the stasis period to track the duration of the liquidity squeeze."
-    },
-    {
-      "ts": 1789159310870,
-      "kind": "agency",
-      "text": "Own turn: The portfolio remains in a total liquidity squeeze with M$0 spendable mana. I am still awaiting the resolution of 12 closed markets. No new information has arrived to change my assessment of open positions, and I cannot trade until the pending funds are credited. I will continue to monitor the status and maintain my timestamped log of the stasis period."
-    },
-    {
-      "ts": 1789158961106,
-      "kind": "screen",
-      "text": "Passed on \"Will iron-air battery additions (15m trailing, 3m lag) exceed 0.8 GWh \" at 13%: quick estimate 5% agrees with market. Commenters point out that no iron-air projects are verified operational within the specific window, matching a very low probability."
-    },
-    {
-      "ts": 1789158407102,
-      "kind": "book",
-      "text": "Looked over 20 positions: The book remains in total stasis with M$0 spendable mana, awaiting the resolution of 12 closed markets. The remaining open positions are fundamentally sound, well-calibrated, and nearing maturity, with no active theses broken enough to warrant selling today. (0 change(s) proposed)"
     }
   ],
   "todos": [
@@ -974,6 +974,28 @@
   ],
   "decisions": [
     {
+      "ts": 1789206269737,
+      "kind": "no_trade",
+      "question": "Will American opinion of AI improve in 2026, according to Gallup?",
+      "url": "https://manifold.markets/cash/will-american-opinion-of-ai-improve-zQqs2LEdCQ",
+      "market_prob": 0.03436117797642035,
+      "model_prob": 0.07,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "While overall Gallup data in 2026 points to cooling sentiment on AI across trust, jobs, and infrastructure, the 13% threshold is within standard margin of error from the 2025 baseline of 12%. I estimate roughly 7% probability of hitting >=13%.",
+      "uncertainty": "Whether Gallup's 2026 annual Business in Society survey question on 'more good than harm' sees standard sampling variance pushing it to 13%+ despite broad cooling sentiment.",
+      "resolution_risk": "Ambiguity in question wording versus the specific 'more good than harm' survey tracker.",
+      "evidence_for": [
+        "The threshold is 13% or higher, which is just 1 percentage point above the 2025 level (12%) and well within normal polling margin of error."
+      ],
+      "evidence_against": [
+        "2026 Gallup and Bentley-Gallup polling shows worsening broad sentiment towards AI, with reports explicitly noting Americans are 'cooling on AI'.",
+        "Surveys in 2026 show 79% do not trust companies to use AI responsibly, 75% believe AI decreases jobs, and 70% oppose local AI data center construction."
+      ],
+      "reason": "edge 0.036 below minimum 0.04"
+    },
+    {
       "ts": 1789203904201,
       "kind": "no_trade",
       "question": "Liberals still in Riksdag after next election?",
@@ -1292,30 +1314,6 @@
         "If tactical voters prioritize Moderate seats or another coalition partner like Liberals (L), KD could fall below 4%."
       ],
       "reason": "edge 0.020 below minimum 0.04"
-    },
-    {
-      "ts": 1789151656089,
-      "kind": "no_trade",
-      "question": "Will Polymarket be right about every Fed decision in 2026?",
-      "url": "https://manifold.markets/HillaryClinton/will-polymarket-be-right-about-ever",
-      "market_prob": 0.696716214257815,
-      "model_prob": 0.75,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With 5 of 8 meetings successfully in the books for 2026, only 3 decisions remain. Fed forward guidance and pre-meeting communications consistently ensure market pricing 24h prior is aligned >90% of the time. Compounding across the remaining 3 meetings yields roughly 75% odds.",
-      "uncertainty": "Whether an unexpected inter-meeting shock or sudden macroeconomic shift causes the Fed to diverge from market consensus 24 hours before a meeting.",
-      "resolution_risk": "If a resolution ambiguity arises over what constituted the exact 'most likely' Polymarket outcome 24 hours prior if top contract odds were exceptionally close.",
-      "evidence_for": [
-        "5 of the 8 FOMC meetings in 2026 have already passed without Polymarket missing a 24h consensus prediction.",
-        "The Federal Reserve uses clear forward guidance and targeted media leaks to align market expectations 24 hours prior to rate announcements.",
-        "Historically, consensus expectations 24 hours before an FOMC decision are correct >90% of the time."
-      ],
-      "evidence_against": [
-        "3 FOMC meetings remain in 2026 (September, November, December), introducing cumulative error risk.",
-        "A sudden economic shock, unexpected inflation print, or rapid committee dissent shift could lead to an unpriced decision 24 hours out."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
