@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1789213439634,
+  "generated_ms": 1789214066294,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemma-4-31b-it",
+      "active": "gemini-3.5-flash-lite",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -31,15 +31,15 @@
   },
   "usage": {
     "fast": {
-      "today": 54,
+      "today": 57,
       "cap": 220
     },
     "chat": {
-      "today": 22,
+      "today": 23,
       "cap": 400
     },
     "deep": {
-      "today": 14,
+      "today": 15,
       "cap": 34
     }
   },
@@ -48,6 +48,21 @@
   "net_worth": 463.23,
   "summary": "Net worth stands around M$448, with capital deployed across 19 active positions following a minor liquidation of the Sweden Democrats share position. Spendable cash is at M$0 due to an extended liquidity squeeze and forced stasis, while 12 closed markets await final resolution to unlock capital. Priority debt payments remain firmly registered and explicitly logged for immediate execution upon liquidity return: M$50 to cA1JupYR5AR8btHUs2xvkui7jA93 and M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1. \n\nActive positions remain structurally sound, well-calibrated, and close to maturity, anchored by winning near-terminal holdings such as the Carlos Alcaraz US Open NO contract. None of our current holdings are actively moving against us in a threatening manner, and no open positions have broken theses severe enough to justify selling for minimal liquidity. Near-term binary markets expiring in September 2026\u2014including the YouTube subscriber count, Fed decision accuracy tracking, Russian Duma outcomes, and upcoming political/macro outcomes\u2014require continuous monitoring as their maturity windows close. \n\nConcretely, mistakes worth avoiding include letting spendable liquidity drop to absolute zero which traps us from seizing valid market mispricings, and failing to purge dead theses promptly when liquidity is tight. Avoid long-winded standing notes that risk truncation in the system prompt. Calibration remains strong on mechanical, technical, and high-information political/macro brackets, though historical missteps show vulnerability to sudden directional noise and low-liquidity volatility in niche brackets. The immediate operational focus is waiting for pending closed market resolutions to restore liquidity, settle registered debts, and allow normal trading activity to resume without overextending capital reserves.",
   "journal": [
+    {
+      "ts": 1789214065829,
+      "kind": "book",
+      "text": "Looked over 19 positions: The book remains entirely in liquidity stasis with M$0 spendable mana, awaiting the resolution of 12 closed markets. All 7 active open positions are stable, well-calibrated, and nearing maturity without any thesis failures, meaning no positions are poor enough to sell today. (0 change(s) proposed)"
+    },
+    {
+      "ts": 1789213689400,
+      "kind": "analysis",
+      "text": "Analysed \"Will If Anyone Builds It appear in a NYT bestseller list again?\": market 4%, my 4% (medium). No trade, edge 0.001 below minimum 0.04."
+    },
+    {
+      "ts": 1789213624909,
+      "kind": "screen",
+      "text": "Escalated \"Will If Anyone Builds It appear in a NYT bestseller list again?\" at 4%: quick estimate 65% vs market 4%"
+    },
     {
       "ts": 1789211417717,
       "kind": "agency",
@@ -432,21 +447,6 @@
       "ts": 1789168961223,
       "kind": "analysis",
       "text": "Analysed \"Will I weigh >150lbs at the end of September?\": market 21%, my 4% (high). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1789168827385,
-      "kind": "screen",
-      "text": "Escalated \"Will I weigh >150lbs at the end of September?\" at 21%: quick estimate 5% vs market 21%"
-    },
-    {
-      "ts": 1789168807312,
-      "kind": "screen",
-      "text": "Passed on \"H1B demand persists despite $100k fee?\" at 85%: quick estimate 95% agrees with market. USCIS announcements confirm the FY2027 H-1B cap was already reached, making the outcome a clear YES."
-    },
-    {
-      "ts": 1789166578384,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] [status] 09-12 00:00Z: Stasis continues. 12 closed markets pending. Monitoring for fund arrival to settle debts.. Because: Maintaining a timestamped log of the liquidity squeeze ensures the state of the portfolio is tracked and that the priority of debt repayment remains visible in every decision loop."
     }
   ],
   "todos": [
@@ -974,6 +974,30 @@
   ],
   "decisions": [
     {
+      "ts": 1789213689397,
+      "kind": "no_trade",
+      "question": "Will If Anyone Builds It appear in a NYT bestseller list again?",
+      "url": "https://manifold.markets/ms/will-if-anyone-builds-it-appear-in",
+      "market_prob": 0.03947593727127919,
+      "model_prob": 0.04,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With only ~15 days remaining (at most 2 weekly NYT lists), post-launch sales decay from frontloaded pre-orders makes a quick re-entry unlikely without a major breakout media event.",
+      "uncertainty": "Whether weekly sales rebounded sufficiently over the last two weeks to cross the NYT cutoff threshold before market close.",
+      "resolution_risk": "Delays or publication timing variations in how the NYT publishes its weekly lists online relative to the market close date.",
+      "evidence_for": [
+        "The book previously charted on the NYT Bestseller list during its launch week.",
+        "Ongoing media appearances, AI risk public debates, and word-of-mouth could generate sustained interest."
+      ],
+      "evidence_against": [
+        "The market closes in 15 days, allowing only about two weekly NYT lists to be published before expiration.",
+        "First-week sales heavily relied on accumulated pre-orders (estimated ~5k of 7k total sales), with subsequent organic weekly sales significantly lower.",
+        "Standard book sales decay patterns typically see sharp drops post-launch unless catalyzed by major viral media events."
+      ],
+      "reason": "edge 0.001 below minimum 0.04"
+    },
+    {
       "ts": 1789211322294,
       "kind": "no_trade",
       "question": "Will Trump and Xi meet in September 2026?",
@@ -1291,30 +1315,6 @@
         "The FOMC could decide to hold rates unchanged at 3.50%-3.75% to observe additional economic data."
       ],
       "reason": "edge 0.023 below minimum 0.04"
-    },
-    {
-      "ts": 1789168961220,
-      "kind": "no_trade",
-      "question": "Will I weigh >150lbs at the end of September?",
-      "url": "https://manifold.markets/Parallax/will-i-weigh-150lbs-at-the-end-of-s",
-      "market_prob": 0.2125131591736864,
-      "model_prob": 0.04,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "As of September 11, the creator weighs 142.6 lbs, showing zero net gain over 24 days of daily updates (range 137.6\u2013143.2 lbs). Reaching >150 lbs by the morning of September 30 requires gaining over 7.4 lbs in 19 days (~1400 kcal/day surplus). Without sudden extreme water-loading on weigh-in morning, the probability of reaching >150 lbs is around 4%.",
-      "uncertainty": "Whether the creator will resort to deliberate scale manipulation or water-loading to reach 150 lbs on the final morning.",
-      "resolution_risk": "The weigh-in is self-reported, but daily tracking history indicates honest fasted morning measurements.",
-      "evidence_for": [
-        "The creator is actively trying to gain weight and posting daily updates.",
-        "A person could theoretically water-load or eat heavily before the morning weigh-in on September 30 to temporarily boost scale weight."
-      ],
-      "evidence_against": [
-        "Over 24 days of daily updates (Aug 19 to Sep 11), weight has fluctuated between 137.6 and 143.2 lbs with zero net upward trend.",
-        "As of Sep 11, weight is 142.6 lbs, requiring a gain of >7.4 lbs in just 19 days.",
-        "Gaining 7.4+ lbs of real body mass in 19 days requires an aggressive daily surplus of ~1400 kcal over TDEE, which is highly improbable given zero progress over the past month."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
