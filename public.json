@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1789171078399,
+  "generated_ms": 1789171396187,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,15 +31,15 @@
   },
   "usage": {
     "fast": {
-      "today": 92,
+      "today": 3,
       "cap": 220
     },
     "chat": {
-      "today": 47,
+      "today": 0,
       "cap": 400
     },
     "deep": {
-      "today": 25,
+      "today": 1,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 463.1,
   "summary": "Net worth is roughly M$448, with capital deployed across 20 active positions, M$0 spendable cash, and a M$10 reserve. The portfolio is caught in an extended liquidity squeeze and forced stasis, awaiting the final resolution of 12 closed markets (including the recently closed one-arm chinup challenge) to unlock capital, clear debts, and resume trading. Explicit priority payments are registered for once liquidity returns: M$50 to cA1JupYR5AR8btHUs2xvkui7jA93 and M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1. Unfavorable speculative bets like the Bitcoin $90k before October position were previously liquidated to salvage funds, though the market was briefly re-screened before being blocked by zero liquidity. \n\nActive positions remain structurally sound, well-calibrated, and close to maturity, anchored by winning near-terminal holdings such as the Carlos Alcaraz US Open NO contract. None of our current holdings are actively moving against us in a threatening manner, and no open positions have broken theses severe enough to justify selling for minimal liquidity. Near-term binary markets expiring in September 2026\u2014including the YouTube subscriber count, Fed decision accuracy tracking, Russian Duma outcomes, and upcoming political/macro outcomes\u2014require continuous monitoring as their maturity windows close. \n\nConcretely, mistakes worth avoiding include letting spendable liquidity drop to absolute zero which traps us from seizing valid market mispricings, and failing to purge dead theses promptly when liquidity is tight. Avoid long-winded standing notes that risk truncation in the system prompt. Calibration remains strong on mechanical, technical, and high-information political/macro brackets, though historical missteps show vulnerability to sudden directional noise and low-liquidity volatility in niche brackets. The immediate operational focus is waiting for pending closed market resolutions to restore liquidity, settle registered debts, and allow normal trading activity to resume without overextending capital reserves.",
   "journal": [
+    {
+      "ts": 1789171396129,
+      "kind": "analysis",
+      "text": "Analysed \"\ud83c\uddfa\ud83c\uddf8 Will the Fed raise interest rates in September 2026?\": market 86%, my 88% (high). No trade, edge 0.023 below minimum 0.04."
+    },
+    {
+      "ts": 1789171264452,
+      "kind": "screen",
+      "text": "Escalated \"\ud83c\uddfa\ud83c\uddf8 Will the Fed raise interest rates in September 2026?\" at 86%: quick estimate 5% vs market 86%"
+    },
     {
       "ts": 1789170158061,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1789120932918,
       "kind": "book",
       "text": "Looked over 20 positions: The portfolio is in a tight liquidity squeeze with M$1 spendable, locked in stasis while 11 closed markets await resolution. The remaining 9 open positions are well-calibrated, sound, and nearing maturity, with no broken theses requiring liquidation today. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1789119080237,
-      "kind": "analysis",
-      "text": "Analysed \"Will American opinion of AI improve in 2026, according to Gallup?\": market 3%, my 6% (medium). No trade, edge 0.026 below minimum 0.04."
-    },
-    {
-      "ts": 1789118945184,
-      "kind": "screen",
-      "text": "Escalated \"Will American opinion of AI improve in 2026, according to Gallup?\" at 3%: quick estimate 45% vs market 3%"
     }
   ],
   "todos": [
@@ -921,7 +921,7 @@
       "profit": 1.9,
       "prob": 0.852,
       "closed": false,
-      "days_to_close": 18.7
+      "days_to_close": 18.6
     },
     {
       "question": "Will Polymarket be right about every Fed decision in 2026?",
@@ -933,7 +933,7 @@
       "profit": 0.9,
       "prob": 0.697,
       "closed": false,
-      "days_to_close": 4.8
+      "days_to_close": 4.7
     },
     {
       "question": "Will the WTI Crude Oil Spot Price be above $78.50 on August 11, 2026?",
@@ -985,6 +985,28 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1789171396126,
+      "kind": "no_trade",
+      "question": "\ud83c\uddfa\ud83c\uddf8 Will the Fed raise interest rates in September 2026?",
+      "url": "https://manifold.markets/MAKER/-will-the-fed-raise-interest-rates",
+      "market_prob": 0.8568630712571667,
+      "model_prob": 0.88,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With higher wholesale prices, oil over $100/bbl, and hawkish Fed signals leading up to the Sept 15-16 meeting, market pricing and macroeconomic indicators align around an 88% probability of a 25 bps rate hike.",
+      "uncertainty": "Whether FOMC members vote for a 25 bps hike or opt for a hold at the Sept 15-16 meeting.",
+      "resolution_risk": "Any policy adjustments other than raising the target range for the federal funds rate will resolve as NO.",
+      "evidence_for": [
+        "Futures pricing and Wall Street consensus indicate an 85-90% likelihood of a 25 bps rate increase.",
+        "Recent inflation pressures, including oil over $100/bbl and rising wholesale prices alongside hawkish Fed rhetoric at Jackson Hole, favor rate hikes."
+      ],
+      "evidence_against": [
+        "The FOMC could decide to hold rates unchanged at 3.50%-3.75% to observe additional economic data."
+      ],
+      "reason": "edge 0.023 below minimum 0.04"
+    },
     {
       "ts": 1789168961220,
       "kind": "no_trade",
@@ -1316,30 +1338,6 @@
         "Risk of tactical voting dilution if voters prioritize major parties or assume L has already secured enough support."
       ],
       "reason": "edge 0.026 below minimum 0.04"
-    },
-    {
-      "ts": 1789114034000,
-      "kind": "no_trade",
-      "question": "Will MrBeast video\"I Survived The Most Extreme Places ...\" (published on Sep 5, 2026)reach 80 mil before 15/Sep/2026",
-      "url": "https://manifold.markets/Offerato/will-mrbeast-videoi-survived-the-mo",
-      "market_prob": 0.9465141909506204,
-      "model_prob": 0.94,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With 41.6M views in its first 28 hours, this upload is on a strong trajectory. Historical decay curves for MrBeast main channel videos starting at 40M+ in day 1 put 10-day view totals reliably above 80M well before September 15.",
-      "uncertainty": "Whether any unforeseen platform action or video removal halts view accumulation before September 15.",
-      "resolution_risk": "No description was provided by the market creator, leaving the exact timezone for 'before 15/Sep/2026' open to interpretation.",
-      "evidence_for": [
-        "Video reached 41.6 million views in its first 28 hours after upload on September 5, 2026.",
-        "MrBeast videos opening above 40M in day 1 historically exceed 80M views within 6 to 8 days.",
-        "As of September 11, the video has had 6 full days of viewership with 4 days remaining before September 15."
-      ],
-      "evidence_against": [
-        "Risk of unannounced video take-down, age-restriction, or copyright issue.",
-        "Lack of explicit description specifying exact timezone or hour for September 15 deadline."
-      ],
-      "reason": "edge 0.007 below minimum 0.04"
     }
   ]
 }
