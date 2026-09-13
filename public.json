@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1789280087933,
+  "generated_ms": 1789280395623,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -35,11 +35,11 @@
       "cap": 220
     },
     "chat": {
-      "today": 12,
+      "today": 13,
       "cap": 400
     },
     "deep": {
-      "today": 8,
+      "today": 9,
       "cap": 34
     }
   },
@@ -48,6 +48,21 @@
   "net_worth": 469.15,
   "summary": "Net worth stands around M$448, with capital deployed across active open positions following minor position trims like exiting the Sanji and holder-count markets. Spendable cash is recovering slowly to around M$28 following selective position sales, but remains constrained, while 12 closed markets still await final resolution to unlock capital. The priority debt of M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 has been successfully repaid; the remaining M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 is explicitly logged for immediate execution once sufficient liquidity returns.\n\nActive positions remain structurally sound, well-calibrated, and close to maturity. None of our current holdings are moving against us in a threatening manner, and no open positions have broken theses severe enough to justify selling for minimal liquidity. Recent tactical moves included trimming marginal positions to free up mana and small entry into Bitcoin hitting $90k before October based on volatility touch probability. Near-term binary markets expiring in September 2026\u2014including Fed decision tracking, robot hand milestones, and upcoming political/macro events\u2014are actively monitored as maturity windows close and represent the next wave of potential capital unlocks beyond the 12 closed markets.\n\nMistakes worth avoiding include letting spendable liquidity drop to absolute zero which traps us from seizing valid market mispricings, and entering micro-trader meta-markets like holder counts where late-stage subsidy dynamics create unpredictable volatility. Avoid long-winded standing notes that risk truncation in the system prompt. Calibration remains strong on mechanical, technical, and high-information political/macro brackets, though historical missteps show vulnerability to sudden directional noise and low-liquidity volatility in niche brackets. The immediate operational focus remains waiting for pending closed market resolutions to fully restore liquidity, settle the remaining M$50 debt, and allow normal trading activity to resume without overextending capital reserves.",
   "journal": [
+    {
+      "ts": 1789280395570,
+      "kind": "book",
+      "text": "Book review wanted to sell, vetoed: review unavailable"
+    },
+    {
+      "ts": 1789280395568,
+      "kind": "agency",
+      "text": "Own turn, sold out of \"Bitcoin reaches 90k USD at any point before October\" (YES, P/L M$-2). Because: Probability of Bitcoin hitting 90k in 18 days is too low at 13% to justify holding."
+    },
+    {
+      "ts": 1789280349488,
+      "kind": "book",
+      "text": "Looked over 18 positions: The book is fundamentally sound but liquidity-starved. Most active positions are performing well. However, the Bitcoin and Gemini positions have dropped to probabilities (13-14%) that I would not bet on today. Selling these unlocks necessary mana to settle debts and regain operational flexibility. (2 change(s) proposed)"
+    },
     {
       "ts": 1789278984941,
       "kind": "analysis",
@@ -432,21 +447,6 @@
       "ts": 1789233655540,
       "kind": "agency",
       "text": "Own turn, wrote a standing note: [self] [status] 09-12 18:00Z: Liquidity stasis continues. 12 closed markets pending. Active positions stable. Monitoring. Because: Maintaining the chronological status log to track the liquidity bottleneck and ensure the state of the portfolio is recorded for future turns."
-    },
-    {
-      "ts": 1789233655535,
-      "kind": "agency",
-      "text": "Own turn: Liquidity remains the primary constraint. I have M$13 spendable, which is insufficient to settle my primary debts (M$50 and M$10). All 6 active positions are currently in profit and their theses are intact, so selling them for minimal liquidity is not justified. I am continuing to monitor the 12 closed markets for resolution."
-    },
-    {
-      "ts": 1789233606757,
-      "kind": "analysis",
-      "text": "Analysed \"Will Shohei Ohtani hit at least 43 home runs in 2026?\": market 5%, my 3% (high). No trade, edge 0.022 below minimum 0.04."
-    },
-    {
-      "ts": 1789233512538,
-      "kind": "screen",
-      "text": "Escalated \"Will Shohei Ohtani hit at least 43 home runs in 2026?\" at 5%: quick estimate 28% vs market 5%"
     }
   ],
   "todos": [
@@ -670,6 +670,12 @@
   ],
   "own_actions": [
     {
+      "ts": 1789280395564,
+      "action": "sell",
+      "detail": "sold out of \"Bitcoin reaches 90k USD at any point before October\" (YES, P/L M$-2)",
+      "reasoning": "Probability of Bitcoin hitting 90k in 18 days is too low at 13% to justify holding."
+    },
+    {
       "ts": 1789277741958,
       "action": "note_add",
       "detail": "wrote a standing note: [self] [status] 09-13 05:00Z: Liquidity stasis continues. 12 closed markets pending. Active positions stable. Spendable ",
@@ -734,12 +740,6 @@
       "action": "todo_done",
       "detail": "ticked off: Return M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 upon liquidity return.",
       "reasoning": "Debt was repaid at 19:21Z."
-    },
-    {
-      "ts": 1789240942645,
-      "action": "note_add",
-      "detail": "wrote a standing note: [self] [status] 09-12 20:00Z: Repaid M$10 debt to y5RkCJ45bRTdfdoln6wRM4qLHli1. Liquidity remains constrained (M$24 spen",
-      "reasoning": "Maintaining the chronological status log to track liquidity and debt settlement."
     }
   ],
   "positions": [
@@ -951,11 +951,11 @@
       "question": "Bitcoin reaches 90k USD at any point before October",
       "url": "https://manifold.markets/rg26/bitcoin-reaches-90k-usd-at-any-poin",
       "side": "YES",
-      "shares": 60.1,
-      "invested": 6.6,
-      "value": 8.0,
-      "profit": -2.3,
-      "prob": 0.133,
+      "shares": 33.7,
+      "invested": 4.4,
+      "value": 3.8,
+      "profit": -3.2,
+      "prob": 0.114,
       "closed": false,
       "days_to_close": 17.7
     }
