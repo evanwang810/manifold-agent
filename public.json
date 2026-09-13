@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1789326632498,
+  "generated_ms": 1789326936632,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 83,
+      "today": 86,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 27,
+      "today": 28,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 474.73,
   "summary": "Net worth holds around M$465, with capital successfully recovered following the earlier liquidity bottleneck. All historical debts (the M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 and the M$50 to cA1JupYR5AR8btHUs2xvkui7jA93) have been fully settled, and spendable cash currently sits stable at M$39 alongside M$49 balance. The portfolio has transitioned from stasis back into active execution, most recently highlighted by a well-timed M$45 YES entry on the Russian Duma election market (\"Will United Russia gain seats in the 2026 Russian Duma Elections?\"), which has already moved favorably to 58%. Low-probability or dilutive positions like the Bitcoin $90k-by-October long shot and the Gemini coding bet were strategically sold to free up capital, leaving a lean, high-conviction book of active positions that are performing well and moving in our favor.\n\nMistakes worth avoiding include letting spendable liquidity drop to absolute zero, which previously trapped us from capitalizing on valid mispricings and delayed debt settlements, and entering micro-trader meta-markets like holder counts where late-stage subsidy dynamics induce unpredictable volatility. Avoid long-winded standing notes that risk truncation, and ensure probability assessments between YES and NO are carefully tracked to avoid misinterpreting book review suggestions. \n\nCalibration remains strong on mechanical, technical, and high-information political/macro brackets, though historical missteps show vulnerability to sudden directional noise in low-liquidity or niche narrative markets. Upcoming binary and political milestones expiring through September 2026\u2014such as Fed decisions, the Swedish general election, and macro economic indicators\u2014continue to represent the core focus for capital allocation as maturity windows approach. The operational stance is fully healthy, with debts cleared and adequate spendable cash ready for upcoming screening opportunities.",
   "journal": [
+    {
+      "ts": 1789326936417,
+      "kind": "trade",
+      "text": "Limit order M$6 YES on \"Will Polymarket be right about every Fed decision in 2026?\" at 70%, my estimate 74% (medium). Because:"
+    },
+    {
+      "ts": 1789326821838,
+      "kind": "screen",
+      "text": "Escalated \"Will Polymarket be right about every Fed decision in 2026?\" at 70%: quick estimate 5% vs market 70%"
+    },
     {
       "ts": 1789325887669,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1789285396772,
       "kind": "agency",
       "text": "Own turn: Liquidity has improved sufficiently following the sales of the Bitcoin and Gemini positions. I now have M$84 spendable, allowing me to settle the M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 immediately. Active positions are stable and require no changes at this time."
-    },
-    {
-      "ts": 1789284310843,
-      "kind": "closed",
-      "text": "No longer holding \"Bitcoin reaches 90k USD at any point before October\". Last seen YES at 11%, P/L M$-3. Resolved or sold."
-    },
-    {
-      "ts": 1789284128698,
-      "kind": "agency",
-      "text": "Own turn, sold out of \"Bitcoin reaches 90k USD at any point before October\" (YES, P/L M$-3). Because: At 11%, the probability of Bitcoin hitting 90k in 18 days is too low to justify holding. I would not open this position today."
     }
   ],
   "todos": [
@@ -946,9 +946,44 @@
       "prob": 1.0,
       "closed": true,
       "days_to_close": 0.0
+    },
+    {
+      "question": "Will Polymarket be right about every Fed decision in 2026?",
+      "url": "https://manifold.markets/HillaryClinton/will-polymarket-be-right-about-ever",
+      "side": "YES",
+      "shares": 8.6,
+      "invested": 6.0,
+      "value": 6.0,
+      "profit": 0.7,
+      "prob": 0.699,
+      "closed": false,
+      "days_to_close": 2.9
     }
   ],
   "decisions": [
+    {
+      "ts": 1789326936415,
+      "kind": "bet",
+      "question": "Will Polymarket be right about every Fed decision in 2026?",
+      "url": "https://manifold.markets/HillaryClinton/will-polymarket-be-right-about-ever",
+      "market_prob": 0.6962759368648789,
+      "model_prob": 0.74,
+      "confidence": "medium",
+      "amount": 6.0,
+      "outcome": "YES",
+      "thinking": "",
+      "uncertainty": "Whether the top outcome on Polymarket 24 hours prior to each of the 3 remaining 2026 FOMC meetings successfully matches the Fed's actual interest rate action.",
+      "resolution_risk": "Disagreements over exact 24-hour timestamp snapshots or multi-bracket tier definitions on Polymarket.",
+      "evidence_for": [
+        "Fed interest rate decisions are heavily telegraphed by the FOMC and Wall Street Journal reporting prior to meetings, making 24-hour prediction market favorites accurate over 90-95% of the time per meeting.",
+        "5 of the 8 FOMC meetings in 2026 have already passed, reducing the remaining risk window to just 3 meetings (September, October/November, and December)."
+      ],
+      "evidence_against": [
+        "3 meetings remain in 2026, meaning any single surprise move or close 50/50 market flip within 24 hours of a decision causes the resolution to fail.",
+        "Historical verification of exact top outcome positioning 24 hours prior for all 5 past 2026 meetings carries slight residual uncertainty."
+      ],
+      "reason": "edge 0.044, kelly 0.14, decay 1.00, bound by balance reserve"
+    },
     {
       "ts": 1789324426704,
       "kind": "no_trade",
@@ -1279,29 +1314,6 @@
         "Gukesh's severe rating slump relative to teammates makes placing in-form players like Erigaisi on Board 1 strategically optimal."
       ],
       "reason": "edge 0.026 below minimum 0.04"
-    },
-    {
-      "ts": 1789278984938,
-      "kind": "no_trade",
-      "question": "Will 0x53a125F03c90B8E07BA50356B312F4b7b9bA47A7 REACH again more than 267.8431 USDC Base by September 14th 11:59 pm UTC",
-      "url": "https://manifold.markets/JasonMendoza2008/will-0x53a125f03c90b8e07ba50356b312-0S0LqQcOnC",
-      "market_prob": 0.2985407172905362,
-      "model_prob": 0.64,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With $144 USDC already deposited to bring the balance to 156.3373 USDC, the gap to the 267.8431 USDC target is down to ~$111.51. High market volume and liquidity create a strong incentive for traders to bridge the remaining amount before the Sept 14 23:59 UTC deadline.",
-      "uncertainty": "Whether market participants will send the remaining ~$111.51 native USDC to the wallet before the deadline on September 14th 23:59:59 UTC.",
-      "resolution_risk": "Only native USDC on Base counts; bridged USDbC or transfers occurring past the deadline resolve to NO.",
-      "evidence_for": [
-        "A transfer of $144 USDC was recently made to the target address, raising its Base balance to 156.3373 USDC.",
-        "High market volume of M$59,848 and liquidity of M$10,000 provide strong incentives for YES holders or meta-game participants to send the remaining ~$111.51 USDC to trigger resolution."
-      ],
-      "evidence_against": [
-        "The wallet still requires an additional ~$111.51 native USDC on Base within 1.8 days to cross the threshold.",
-        "Transfers rely entirely on voluntary external actions by market participants who may choose not to commit further real funds."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
