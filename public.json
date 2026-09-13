@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1789301054664,
+  "generated_ms": 1789301377704,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 50,
+      "today": 53,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 17,
+      "today": 18,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 452.98,
   "summary": "Net worth holds around M$448, with capital deployed across active open positions following a recent strategic sale of the low-probability Bitcoin $90k-by-October position to free up liquidity. Spendable cash remains tightly constrained near absolute zero while 12 closed markets await final resolution to unlock capital. The priority debt of M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 was successfully repaid, and the remaining M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 is explicitly logged for immediate execution as soon as pending resolutions release funds. \n\nActive positions remain structurally sound, well-calibrated, and close to maturity. Recent tactical moves included capturing small profits on the Sanji and Fed decision positions, and exiting the volatile holder-count meta-market after recognizing that late-stage subsidy dynamics and herd behavior introduce unpredictable risks. A new position was successfully entered on the NO outcome for the creator's September weight market based on daily log tracking and hydration variance. None of our current holdings are moving against us in a threatening manner, and no open positions have broken theses severe enough to justify selling for minimal liquidity outside of deliberate cash-unlocking trims. Near-term binary markets expiring in September 2026\u2014such as upcoming Fed decisions, political milestones, and tech hardware delivery dates\u2014are actively monitored as maturity windows close and represent the next wave of potential capital unlocks beyond the 12 closed markets.\n\nMistakes worth avoiding include letting spendable liquidity drop to absolute zero which traps us from seizing valid market mispricings, and entering micro-trader meta-markets like holder counts where late-stage subsidy dynamics create unpredictable volatility. Avoid long-winded standing notes that risk truncation in the system prompt. Calibration remains strong on mechanical, technical, and high-information political/macro brackets, though historical missteps show vulnerability to sudden directional noise and low-liquidity volatility in niche brackets. The immediate operational focus remains waiting for pending closed market resolutions to fully restore liquidity, settle the remaining M$50 debt, and allow normal trading activity to resume without overextending capital reserves.",
   "journal": [
+    {
+      "ts": 1789301377653,
+      "kind": "analysis",
+      "text": "Analysed \"Will If Anyone Builds It appear in a NYT bestseller list again?\": market 4%, my 6% (medium). No trade, edge 0.021 below minimum 0.04."
+    },
+    {
+      "ts": 1789301240003,
+      "kind": "screen",
+      "text": "Escalated \"Will If Anyone Builds It appear in a NYT bestseller list again?\" at 4%: quick estimate 65% vs market 4%"
+    },
     {
       "ts": 1789300503520,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1789259485874,
       "kind": "agency",
       "text": "Own turn, wrote a standing note: [self] [status] 09-13 01:00Z: Liquidity stasis continues. 12 closed markets pending. Active positions stable. Spendable . Because: Maintaining the chronological status log to track the liquidity bottleneck and ensure the state of the portfolio is recorded for future turns."
-    },
-    {
-      "ts": 1789259485869,
-      "kind": "agency",
-      "text": "Own turn: Liquidity remains the primary constraint. 12 closed markets are still pending resolution, preventing the settlement of the M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93. Active positions are stable and profitable. I will continue the chronological status log to track the bottleneck."
-    },
-    {
-      "ts": 1789259233711,
-      "kind": "analysis",
-      "text": "Analysed \"\ud83c\uddfa\ud83c\uddf8 Will the Fed raise interest rates in September 2026?\": market 77%, my 63% (medium). No trade, size floored to zero by balance reserve."
     }
   ],
   "todos": [
@@ -938,6 +938,31 @@
   ],
   "decisions": [
     {
+      "ts": 1789301377650,
+      "kind": "no_trade",
+      "question": "Will If Anyone Builds It appear in a NYT bestseller list again?",
+      "url": "https://manifold.markets/ms/will-if-anyone-builds-it-appear-in",
+      "market_prob": 0.03947593727127919,
+      "model_prob": 0.06,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With 14 days remaining (allowing only ~2 weekly list cycles), the launch boost from 5k pre-orders has passed. Organic sales (~2k/week) remain below typical top 15 NYT Nonfiction thresholds (~3.5k-5k+ copies) across Hardcover, Combined, and Audio. I estimate a ~6% chance of a repeat list appearance before close.",
+      "uncertainty": "Whether organic sales or audiobook downloads in week 2/3 hold up unexpectedly well to clear the NYT top 15 cutoff in any category.",
+      "resolution_risk": "Discrepancy between NYT online publication dates and official print list dates near the market close deadline.",
+      "evidence_for": [
+        "Book achieved NYT bestseller status in its launch week.",
+        "Resolution covers multiple lists including Hardcover Nonfiction, Combined Print & E-Book Nonfiction, and Audio Nonfiction.",
+        "Ongoing media appearances or word-of-mouth could provide a modest bump in weekly sales."
+      ],
+      "evidence_against": [
+        "Market closes in 14 days, leaving only ~2 weekly list publications before resolution.",
+        "Publishers Weekly reported week 1 sales of 7k copies were heavily driven by 5k pre-orders, leaving only ~2k organic sales.",
+        "Typical thresholds for making NYT top 15 Nonfiction lists are ~3.5k\u20135k+ copies weekly, well above expected week 2/3 post-preorder sales."
+      ],
+      "reason": "edge 0.021 below minimum 0.04"
+    },
+    {
       "ts": 1789298850099,
       "kind": "no_trade",
       "question": "Will Trump and Xi meet in September 2026?",
@@ -1263,30 +1288,6 @@
         "Historical daily weigh-ins fluctuate between 137.6 and 143.6 lbs without a steep upward trajectory."
       ],
       "reason": "edge 0.160, kelly 0.76, decay 0.58, bound by balance reserve"
-    },
-    {
-      "ts": 1789251671857,
-      "kind": "bet",
-      "question": "Bitcoin reaches 90k USD at any point before October",
-      "url": "https://manifold.markets/rg26/bitcoin-reaches-90k-usd-at-any-poin",
-      "market_prob": 0.093063276681798,
-      "model_prob": 0.19,
-      "confidence": "medium",
-      "amount": 11.0,
-      "outcome": "YES",
-      "thinking": "Bitcoin at ~$77.3k needs a +16.4% upside move to touch $90k. With 18.1 days remaining and annualized volatility around 55-65%, theoretical touch probability sits around 18-22%. Recent late-August momentum shows fast rallies are possible, so I evaluate YES at 0.19.",
-      "uncertainty": "Whether incoming macroeconomic events (such as the September Fed rate decision) provide enough upward momentum for BTC to break out above $90,000 within 18 days.",
-      "resolution_risk": "Google Finance price spikes or transient wicks on specific exchanges might not register equally across all tracking platforms, though resolution criteria specifies Google Finance at any time.",
-      "evidence_for": [
-        "BTC traded above $80,000 in late August 2026, showing recent capacity to reach higher levels.",
-        "BTC experienced a 23.6% weekly rally in late August, demonstrating that a +16.4% move within 18 days is historically plausible for the asset.",
-        "Statistical touch probability for a +16.4% barrier over 18 days with standard BTC annualized volatility (50%-65%) ranges from 17% to 26%."
-      ],
-      "evidence_against": [
-        "BTC has recently pulled back from over $80,000 to ~$77,300, showing short-term momentum loss.",
-        "Only 18.1 days remain before October 1, leaving a very narrow window for a major macro or technical catalyst to trigger a $90k breakout."
-      ],
-      "reason": "edge 0.097, kelly 0.11, decay 0.55, bound by kelly target"
     }
   ]
 }
