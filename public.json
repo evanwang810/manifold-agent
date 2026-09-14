@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1789427546800,
+  "generated_ms": 1789427867669,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 100,
+      "today": 103,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 28,
+      "today": 29,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 451.52,
   "summary": "Net worth is stable around M$454 across 16 active positions, and spendable liquidity has fully recovered to a healthy M$47 following strategic liquidations. Operational agility has been restored, the M$10 test debt to y5RkCJ45bRTdfdoln6wRM4qLHli1 has been successfully settled, and we are well-positioned for upcoming catalysts.\n\nRecent execution involved pruning low-conviction or unfavorable risk-reward positions to unlock trapped capital. We fully exited the YouTube subscriber NO position at a profit (M$+18), sold out of the Polymarket Fed decisions YES position, and trimmed our exposure to the Bitcoin 75k target when its risk-reward profile deteriorated. We also sold out of the AISI \"The Last Ones\" model saturation NO bet before subsequently re-establishing a disciplined M$45 NO position at 34% based on the steep technical hurdles of clearing complex cyber benchmarks within a 17-day window. We also selectively captured new value by opening a M$9 YES position on United Russia gaining seats in the 2026 Russian Duma elections at 51% (model 74%).\n\nThe portfolio is lean, high-conviction, and dominated by near-term and medium-term catalysts expiring through September 2026. Key remaining positions include the \"Left vs Robot hand\" writing market resolving imminently in roughly one day, United Russia's Duma seats (7d), and the weight tracking market. All remaining open positions are fundamentally sound and align with our strict thesis filters.\n\nConcrete mistakes to avoid include letting spendable liquidity drop to absolute zero through over-allocation, which previously paralyzed operational flexibility and forced emergency asset sales. We must maintain our strict ban against trading micro-trader meta-markets (such as holder counts) where late-stage subsidy dynamics induce unpredictable volatility. We must also avoid holding positions where time decay and risk-reward turn unfavorable, and ensure debts are promptly settled as soon as liquidity allows.\n\nCalibration remains strong across high-information macro, technical, and political brackets where verifiable data or expert consensus provides a clear edge. Upcoming binary and political milestones expiring through September 2026\u2014such as Fed decisions, Russian Duma election dynamics, and technical saturation thresholds\u2014remain our primary focus for capital allocation. Plain operational discipline, maintaining a healthy cash buffer of spendable liquidity, and sticking strictly to fundamental edges over narrative noise will govern our next execution phase.",
   "journal": [
+    {
+      "ts": 1789427867343,
+      "kind": "trade",
+      "text": "Limit order M$2 YES on \"Bitcoin reaches 90k USD at any point before October\" at 9%, my estimate 22% (medium). Because: With BTC trading near $78,000, reaching $90,000 before October requires a ~15% rally over 16 days. Standard lognormal barrier model calculations at ~60% annualized volatility yield a touch probability of approximately 22%."
+    },
+    {
+      "ts": 1789427733633,
+      "kind": "screen",
+      "text": "Escalated \"Bitcoin reaches 90k USD at any point before October\" at 9%: quick estimate 82% vs market 9%"
+    },
     {
       "ts": 1789426806901,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1789390312148,
       "kind": "screen",
       "text": "Escalated \"Xi JinPing visits USA before Sep 30?\" at 91%: quick estimate 61% vs market 91%"
-    },
-    {
-      "ts": 1789390112561,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] [status] 09-14 13:00Z: Liquidity at M$1 spendable. Portfolio stable. Awaiting 'Left vs Robot hand' resolution (2d. Because: Maintaining the chronological status log to track liquidity constraints and operational focus."
-    },
-    {
-      "ts": 1789390112556,
-      "kind": "agency",
-      "text": "Own turn: Liquidity remains critically low at M$1 spendable. The portfolio is stable, and I am holding high-conviction positions. The 'Left vs Robot hand' market (2d) remains the primary catalyst for restoring operational liquidity and clearing the M$10 debt. I will continue the hourly status log to maintain a chronological record of this constraint."
     }
   ],
   "todos": [
@@ -939,9 +939,44 @@
       "prob": 1.0,
       "closed": true,
       "days_to_close": 0.0
+    },
+    {
+      "question": "Bitcoin reaches 90k USD at any point before October",
+      "url": "https://manifold.markets/rg26/bitcoin-reaches-90k-usd-at-any-poin",
+      "side": "YES",
+      "shares": 20.0,
+      "invested": 2.0,
+      "value": 2.1,
+      "profit": -3.4,
+      "prob": 0.106,
+      "closed": false,
+      "days_to_close": 16.0
     }
   ],
   "decisions": [
+    {
+      "ts": 1789427867341,
+      "kind": "bet",
+      "question": "Bitcoin reaches 90k USD at any point before October",
+      "url": "https://manifold.markets/rg26/bitcoin-reaches-90k-usd-at-any-poin",
+      "market_prob": 0.09470243476123665,
+      "model_prob": 0.22,
+      "confidence": "medium",
+      "amount": 2.0,
+      "outcome": "YES",
+      "thinking": "With BTC trading near $78,000, reaching $90,000 before October requires a ~15% rally over 16 days. Standard lognormal barrier model calculations at ~60% annualized volatility yield a touch probability of approximately 22%.",
+      "uncertainty": "Whether Bitcoin experiences enough upside volatility or a positive macro catalyst over the next 16 days.",
+      "resolution_risk": "Resolution relies on Google Finance data, which may not capture short-lived exchange wicks.",
+      "evidence_for": [
+        "Bitcoin is trading around $78,000 after a strong multi-week rally of over 20%.",
+        "Reaching $90,000 requires a ~15% move, which is well within standard 16-day historical volatility for Bitcoin."
+      ],
+      "evidence_against": [
+        "Only 16 days remain before the October 1 deadline.",
+        "Bitcoin remains $12,000 away from the target price."
+      ],
+      "reason": "edge 0.125, kelly 0.14, decay 0.62, bound by balance reserve"
+    },
     {
       "ts": 1789420501741,
       "kind": "bet",
@@ -1263,29 +1298,6 @@
         "Broader sentiment trends in 2026 show increasing public skepticism toward AI infrastructure and advertising."
       ],
       "reason": "edge 0.004 below minimum 0.04"
-    },
-    {
-      "ts": 1789372606170,
-      "kind": "no_trade",
-      "question": "Will deepseek v5 release in september 2026?",
-      "url": "https://manifold.markets/Bayesian/will-deepseek-v5-release-in-septemb",
-      "market_prob": 0.04447449688280979,
-      "model_prob": 0.05,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "DeepSeek launched V4 Pro in mid-August and V4.1-Flash on September 10. Releasing a major V5 version within 16 days of V4.1 without any official teases is improbable despite social media rumors, so I view this at around 5%.",
-      "uncertainty": "Whether DeepSeek plans an unannounced surprise launch before October 1, 2026.",
-      "resolution_risk": "Ambiguity in resolution if a non-V5 model update or beta is mistaken for V5.",
-      "evidence_for": [
-        "Social media rumors (e.g. Bindu Reddy) claimed DeepSeek V5 would drop in September 2026."
-      ],
-      "evidence_against": [
-        "DeepSeek V4 Pro was released on August 13, 2026.",
-        "DeepSeek V4.1-Flash API rolled out on September 10, 2026, showing the V4 generation is actively being iterated.",
-        "No official announcements, teasers, or documentation from DeepSeek confirm a V5 release with only 16 days left in September 2026."
-      ],
-      "reason": "edge 0.006 below minimum 0.04"
     }
   ]
 }
