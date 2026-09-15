@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1789460585682,
+  "generated_ms": 1789460915687,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 38,
+      "today": 41,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 11,
+      "today": 12,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 451.32,
   "summary": "Net worth is stable around M$451 across 5 concentrated, high-conviction active positions. Spendable liquidity is currently choked at M$0 due to our cash reserve, following strategic liquidations of underperforming assets (such as the Bitcoin 75k and AISI model saturation bets) and the successful settlement of the M$10 test debt to y5RkCJ45bRTdfdoln6wRM4qLHli1. We are currently holding a lean book awaiting imminent near-term resolutions.\n\nActive exposure centers on five core positions: the \"Left vs Robot hand\" writing market resolving imminently in roughly one day, United Russia's Duma seats (7d), weight tracking (15d), AISI model saturation (16d), and a modest Bitcoin 90k target (16d). All open positions are fundamentally sound, highly aligned with our thesis filters, and face no adverse structural movements threatening our core convictions. A clear execution priority has been set for the upcoming liquidity injection from the robot hand resolution, prioritizing the settlement of the M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93.\n\nConcrete mistakes to avoid include letting spendable liquidity drop to absolute zero through over-allocation without anticipating upcoming cash needs, which previously induced operational paralysis and forced emergency asset sales. We must maintain our strict ban against trading micro-trader meta-markets (such as holder counts) where late-stage subsidy dynamics cause unpredictable volatility. We must also avoid holding positions where time decay and risk-reward turn unfavorable, and ensure outstanding debts are settled immediately upon liquidity recovery.\n\nCalibration remains strong across high-information macro, technical, and political brackets where verifiable data or expert consensus provides a clear edge. Upcoming binary and political milestones expiring through September 2026\u2014such as Russian Duma election dynamics, AI model benchmarks, and near-term resolution catalysts\u2014remain our primary focus for capital allocation. Plain operational discipline, maintaining a healthy cash buffer of spendable liquidity, and sticking strictly to fundamental edges over narrative noise will govern our next execution phase.",
   "journal": [
+    {
+      "ts": 1789460915564,
+      "kind": "analysis",
+      "text": "Analysed \"Will deepseek v5 release in september 2026?\": market 4%, my 2% (high). No trade, edge 0.024 below minimum 0.04."
+    },
+    {
+      "ts": 1789460773601,
+      "kind": "screen",
+      "text": "Escalated \"Will deepseek v5 release in september 2026?\" at 4%: quick estimate 45% vs market 4%"
+    },
     {
       "ts": 1789460214857,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1789417882837,
       "kind": "analysis",
       "text": "Analysed \"Will Iran and the US reach a formal nuclear deal by September 30, 2026\": market 3%, my 4% (high). No trade, edge 0.007 below minimum 0.04."
-    },
-    {
-      "ts": 1789417787634,
-      "kind": "screen",
-      "text": "Escalated \"Will Iran and the US reach a formal nuclear deal by September 30, 2026\" at 3%: quick estimate 35% vs market 3%"
-    },
-    {
-      "ts": 1789417596162,
-      "kind": "closed",
-      "text": "No longer holding \"Bitcoin price reaches 75k USD at any point before the end of the month\". Last seen YES at 73%, P/L M$-1. Resolved or sold."
     }
   ],
   "todos": [
@@ -945,6 +945,28 @@
   ],
   "decisions": [
     {
+      "ts": 1789460915562,
+      "kind": "no_trade",
+      "question": "Will deepseek v5 release in september 2026?",
+      "url": "https://manifold.markets/Bayesian/will-deepseek-v5-release-in-septemb",
+      "market_prob": 0.04447449688280979,
+      "model_prob": 0.02,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With half of September 2026 already past and DeepSeek actively releasing V4.1 iterations as recently as September 10, a full V5 major release in the remaining 15 days without any official teaser or API footprint is highly improbable (~2%).",
+      "uncertainty": "Whether DeepSeek does an unannounced surprise release of a major next-generation model (V5) in the remaining two weeks of September 2026.",
+      "resolution_risk": "A point release or rebranded model (e.g., V4.5 or V4-Pro) could be misinterpreted as V5 if criteria are not strictly enforced.",
+      "evidence_for": [
+        "DeepSeek has previously released models rapidly without extensive advance marketing campaigns."
+      ],
+      "evidence_against": [
+        "As of September 15, 2026, only 15 days remain in the month and no official announcement or API string for DeepSeek V5 exists.",
+        "DeepSeek recently released V4.1-Flash on September 10, 2026, indicating they are currently iterating on the V4 model family."
+      ],
+      "reason": "edge 0.024 below minimum 0.04"
+    },
+    {
       "ts": 1789458738166,
       "kind": "no_trade",
       "question": "Will a hurricane make landfall in the continental U.S. before October 1, 2026?",
@@ -1277,31 +1299,6 @@
         "The remaining time window before October 2026 is under 17 days, leaving very little room for a sudden benchmark saturation event."
       ],
       "reason": "edge 0.194, kelly 0.56, decay 0.62, bound by default cap"
-    },
-    {
-      "ts": 1789417882835,
-      "kind": "no_trade",
-      "question": "Will Iran and the US reach a formal nuclear deal by September 30, 2026?",
-      "url": "https://manifold.markets/ExcuseMeSir/will-iran-and-the-us-reach-a-formal",
-      "market_prob": 0.03301834859028884,
-      "model_prob": 0.04,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With talks suspended since August and US officials publicly voicing pessimism, the probability of a formal, binding nuclear deal being signed or announced in the next 16 days is extremely low (~4%).",
-      "uncertainty": "Whether active backchannel negotiations could yield a sudden political announcement despite public deadlock.",
-      "resolution_risk": "A non-binding joint declaration or ceasefire extension could be framed as an equivalent framework deal endorsed by both governments.",
-      "evidence_for": [
-        "Islamabad Memorandum signed in June 2026 established a ceasefire and framework for nuclear negotiations.",
-        "Trump administration remains eager for a high-profile diplomatic breakthrough."
-      ],
-      "evidence_against": [
-        "Iranian Foreign Minister Araghchi stated on August 10 that Iran suspended talks over alleged US breaches.",
-        "US Energy Secretary Chris Wright expressed pessimism on September 6 about reaching a nuclear agreement.",
-        "The August target under the 60-day window passed without a deal.",
-        "Only 16 days remain until the September 30 deadline."
-      ],
-      "reason": "edge 0.007 below minimum 0.04"
     }
   ]
 }
