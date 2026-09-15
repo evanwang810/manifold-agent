@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1789510168190,
+  "generated_ms": 1789510499677,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 95,
+      "today": 98,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 25,
+      "today": 26,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 434.81,
   "summary": "Net worth sits stable around M$435 across 17 open positions, but spendable liquidity remains completely choked at M$0 due to our cash reserve. Trading activity has been entirely paused as a result; we are in a strict holding pattern awaiting the imminent resolution of the \"Left vs Robot hand\" writing market, which will naturally inject liquidity. Upon recovery, our immediate priority is settling outstanding debts: the M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 and the M$10 test return to y5RkCJ45bRTdfdoln6wRM4qLHli1.\n\nMost open positions remain fundamentally sound and aligned with core macro, political, and technical thesis filters, including United Russia Duma seats and short-term gas price targets. The only notable adverse movement is the weight tracking market (8N2dAnsg62), where the YES price has trended up from 32% to 41% against our NO position. While our NO estimate (74%) maintains a solid edge, we have established a strict quantitative trigger: if the market reaches 50% YES, we will actively re-evaluate and cut the position. All other positions\u2014such as Bitcoin targets and AISI model saturation\u2014remain stable under current parameters.\n\nConcrete mistakes to avoid include letting spendable liquidity drop to absolute zero through over-allocation without anticipating upcoming cash needs, which previously induced operational paralysis. We must maintain our strict ban against trading micro-trader meta-markets (such as holder counts or creator-specific trivia) where late-stage subsidy dynamics cause unpredictable volatility. We must also avoid holding positions where time decay and risk-reward turn unfavorable, and ensure outstanding debts are settled immediately upon liquidity recovery rather than lingering in low-liquidity states.\n\nCalibration remains strong across high-information macro, technical, and political brackets where verifiable data or expert consensus provides a clear edge. Upcoming binary and political milestones expiring through September 2026\u2014such as Russian Duma election dynamics, AI model benchmarks, and near-term resolution catalysts\u2014remain our primary focus for capital allocation. Plain operational discipline, maintaining a healthy cash buffer of spendable liquidity, and sticking strictly to fundamental edges over narrative noise will govern our next execution phase once liquidity is restored.",
   "journal": [
+    {
+      "ts": 1789510499615,
+      "kind": "analysis",
+      "text": "Analysed \"Will bitcoin rise to 85k before the Strait of Hormuz is freely open?\": market 84%, my 83% (medium). No trade, edge 0.010 below minimum 0.04."
+    },
+    {
+      "ts": 1789510353734,
+      "kind": "screen",
+      "text": "Escalated \"Will bitcoin rise to 85k before the Strait of Hormuz is freely open?\" at 84%: quick estimate 5% vs market 84%"
+    },
     {
       "ts": 1789509799801,
       "kind": "book",
@@ -437,16 +447,6 @@
       "ts": 1789461793977,
       "kind": "book",
       "text": "Looked over 17 positions: The portfolio is lean, stable, and concentrated across a few high-conviction positions with a net worth around M$451. Spendable liquidity is M$0 due to our reserve, but imminent resolutions like the 'Robot Hand' market will naturally replenish cash. All active positions remain fundamentally sound. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1789460915564,
-      "kind": "analysis",
-      "text": "Analysed \"Will deepseek v5 release in september 2026?\": market 4%, my 2% (high). No trade, edge 0.024 below minimum 0.04."
-    },
-    {
-      "ts": 1789460773601,
-      "kind": "screen",
-      "text": "Escalated \"Will deepseek v5 release in september 2026?\" at 4%: quick estimate 45% vs market 4%"
     }
   ],
   "todos": [
@@ -955,6 +955,30 @@
   ],
   "decisions": [
     {
+      "ts": 1789510499612,
+      "kind": "no_trade",
+      "question": "Will bitcoin rise to 85k before the Strait of Hormuz is freely open?",
+      "url": "https://manifold.markets/apol/will-bitcoin-rise-to-85k-before-the",
+      "market_prob": 0.840344310917821,
+      "model_prob": 0.83,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With Hormuz ongoingly disrupted and active vessel attacks reported recently (Sept 13), an official 'freely open' declaration remains unlikely short term. The creator's pattern of extending the resolution window gives BTC additional time to reach $85k, though an unexpected diplomatic breakthrough or market expiry before BTC touches $85k remains a modest NO risk. Estimating YES at 83%.",
+      "uncertainty": "Whether the creator continues extending the resolution window as long as Hormuz remains closed, giving BTC an extended timeframe to hit $85k.",
+      "resolution_risk": "Ambiguity over what constitutes official designation of 'freely open' by maritime authorities versus market expiry.",
+      "evidence_for": [
+        "The Strait of Hormuz remains heavily disrupted with active vessel attacks reported as recently as September 13, 2026, making an official 'freely open' designation near-term unlikely.",
+        "The market creator has repeatedly extended the resolution window (now October 1, 2026) while Hormuz remains closed, giving Bitcoin more time to reach the $85k threshold.",
+        "Bitcoin trading in the $75k-$81k range requires only a modest rally to hit $85k."
+      ],
+      "evidence_against": [
+        "If diplomatic negotiations unexpectedly resolve the Hormuz blockade before BTC hits $85k, the market resolves NO.",
+        "If the market expires on October 1 without further extensions and BTC fails to touch $85k daily close on CoinMarketCap, it resolves NO."
+      ],
+      "reason": "edge 0.010 below minimum 0.04"
+    },
+    {
       "ts": 1789508018766,
       "kind": "no_trade",
       "question": "SpaceX closes at $150.00 or higher on Friday 18 September 2026?",
@@ -1273,30 +1297,6 @@
         "DeepSeek recently released V4.1-Flash on September 10, 2026, indicating they are currently iterating on the V4 model family."
       ],
       "reason": "edge 0.024 below minimum 0.04"
-    },
-    {
-      "ts": 1789458738166,
-      "kind": "no_trade",
-      "question": "Will a hurricane make landfall in the continental U.S. before October 1, 2026?",
-      "url": "https://manifold.markets/Terminator2/will-a-hurricane-make-landfall-in-t-gnCpnAPINQ",
-      "market_prob": 0.09240152807285527,
-      "model_prob": 0.09,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "",
-      "uncertainty": "Whether an unexpected tropical wave can rapidly spin up and reach true hurricane intensity before October 1.",
-      "resolution_risk": "A storm could reach hurricane intensity right at the coast while crossing, leading to ambiguous NHC advisory status at the exact moment of landfall.",
-      "evidence_for": [
-        "September is historically the peak month of the Atlantic hurricane season, giving the highest concentration of tropical activity.",
-        "A single rapidly developing system near the Gulf or East Coast could form, intensify to hurricane status, and make landfall within a short window."
-      ],
-      "evidence_against": [
-        "As of mid-September, the season has seen zero hurricanes, with several named storms failing to reach hurricane intensity.",
-        "NHC forecasts for the immediate 7-day outlook show zero formation expected, leaving less than two weeks for a system to form, intensify, and hit the coast.",
-        "NOAA's updated outlook indicates a below-normal season under a Super El Ni\u00f1o environment."
-      ],
-      "reason": "edge 0.002 below minimum 0.04"
     }
   ]
 }
