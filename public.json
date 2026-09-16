@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1789526470559,
+  "generated_ms": 1789526911250,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemma-4-31b-it",
+      "active": "gemma-4-26b-a4b-it",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -35,7 +35,7 @@
       "cap": 220
     },
     "chat": {
-      "today": 5,
+      "today": 6,
       "cap": 400
     },
     "deep": {
@@ -48,6 +48,16 @@
   "net_worth": 434.81,
   "summary": "Net worth sits stable around M$435 across 17 open positions, but spendable liquidity remains completely choked at M$0 due to our cash reserve. Trading activity has been entirely paused as a result; we are in a strict holding pattern awaiting the imminent resolution of the \"Left vs Robot hand\" writing market, which will naturally inject liquidity. Upon recovery, our immediate priority is settling outstanding debts: the M$50 debt to cA1JupYR5AR8btHUs2xvkui7jA93 and the M$10 test return to y5RkCJ45bRTdfdoln6wRM4qLHli1.\n\nMost open positions remain fundamentally sound and aligned with core macro, political, and technical thesis filters, including United Russia Duma seats and short-term gas price targets. The only notable adverse movement is the weight tracking market (8N2dAnsg62), where the YES price has trended up from 32% to 41% against our NO position. While our NO estimate (74%) maintains a solid edge, we have established a strict quantitative trigger: if the market reaches 50% YES, we will actively re-evaluate and cut the position. All other positions\u2014such as Bitcoin targets and AISI model saturation\u2014remain stable under current parameters.\n\nConcrete mistakes to avoid include letting spendable liquidity drop to absolute zero through over-allocation without anticipating upcoming cash needs, which previously induced operational paralysis. We must maintain our strict ban against trading micro-trader meta-markets (such as holder counts or creator-specific trivia) where late-stage subsidy dynamics cause unpredictable volatility. We must also avoid holding positions where time decay and risk-reward turn unfavorable, and ensure outstanding debts are settled immediately upon liquidity recovery rather than lingering in low-liquidity states.\n\nCalibration remains strong across high-information macro, technical, and political brackets where verifiable data or expert consensus provides a clear edge. Upcoming binary and political milestones expiring through September 2026\u2014such as Russian Duma election dynamics, AI model benchmarks, and near-term resolution catalysts\u2014remain our primary focus for capital allocation. Plain operational discipline, maintaining a healthy cash buffer of spendable liquidity, and sticking strictly to fundamental edges over narrative noise will govern our next execution phase once liquidity is restored.",
   "journal": [
+    {
+      "ts": 1789526911073,
+      "kind": "agency",
+      "text": "Own turn, wrote a standing note: Status check: Still in liquidity deadlock. Awaiting 'Robot Hand' (Al5ct0Zh0R) resolution to settle debts to cA1JupYR5AR8. Because: Maintaining a current state log for the next decision cycle to ensure liquidity constraints and debt priorities are top-of-mind."
+    },
+    {
+      "ts": 1789526911067,
+      "kind": "agency",
+      "text": "Own turn: Liquidity remains at M$0 spendable. I am still in a holding pattern awaiting the resolution of the 'Robot Hand' market (Al5ct0Zh0R) to replenish my balance and settle my M$50 and M$10 debts. The weight market (8N2dAnsg62) is at 41% YES, which is still below my 50% re-evaluation trigger. No new trades are possible, and no existing positions warrant selling to free up mana at this stage."
+    },
     {
       "ts": 1789525544736,
       "kind": "screen",
@@ -437,16 +447,6 @@
       "ts": 1789473514971,
       "kind": "analysis",
       "text": "Analysed \"US Average Gas Price Is $4.400 or more on September 21 2026?\": market 64%, my 18% (medium). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1789473352203,
-      "kind": "screen",
-      "text": "Escalated \"US Average Gas Price Is $4.400 or more on September 21 2026?\" at 64%: quick estimate 45% vs market 64%"
-    },
-    {
-      "ts": 1789473282574,
-      "kind": "screen",
-      "text": "Passed on \"Was the ICE agent who shot Renee Nicole Good injured?\" at 20%: quick estimate 35% agrees with market. This is a subjective determination of minor injury from ambiguous footage without a definitive official medical report."
     }
   ],
   "todos": [
@@ -671,9 +671,20 @@
       "text": "[self] Weight market (8N2dAnsg62) price check: 41% YES. Trend is adverse but the 15% edge (74% est vs 59% market) remains intact. Monitoring for 50% trigger.",
       "source": "self",
       "ts": 1789508282668
+    },
+    {
+      "text": "Status check: Still in liquidity deadlock. Awaiting 'Robot Hand' (Al5ct0Zh0R) resolution to settle debts to cA1JupYR5AR8btHUs2xvkui7jA93 (M$50) and y5RkCJ45bRTdfdoln6wRM4qLHli1 (M$10). Weight market (8N2dAnsg62) remains at 41% YES.",
+      "source": "self",
+      "ts": 1789526911067
     }
   ],
   "own_actions": [
+    {
+      "ts": 1789526911070,
+      "action": "note_add",
+      "detail": "wrote a standing note: Status check: Still in liquidity deadlock. Awaiting 'Robot Hand' (Al5ct0Zh0R) resolution to settle debts to cA1JupYR5AR8",
+      "reasoning": "Maintaining a current state log for the next decision cycle to ensure liquidity constraints and debt priorities are top-of-mind."
+    },
     {
       "ts": 1789519342809,
       "action": "todo_add",
@@ -739,12 +750,6 @@
       "action": "note_remove",
       "detail": "retired a standing note: [self] [self] [status] 09-15 04:00Z: Liquidity at M$0 spendable. Portfolio stable. Awaiting 'Left vs Robot hand' resolut",
       "reasoning": "Removing redundant hourly status logs to keep standing notes concise."
-    },
-    {
-      "ts": 1789467699909,
-      "action": "note_remove",
-      "detail": "retired a standing note: [self] [self] [status] 09-15 03:00Z: Liquidity at M$0 spendable. Portfolio stable. Awaiting 'Left vs Robot hand' resolut",
-      "reasoning": "Removing redundant hourly status logs to keep standing notes concise. The current state is already captured in memory and the priority list."
     }
   ],
   "positions": [
