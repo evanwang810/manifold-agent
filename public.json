@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1789708336165,
+  "generated_ms": 1789708702243,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 20,
+      "today": 24,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 5,
+      "today": 6,
       "cap": 34
     }
   },
@@ -48,6 +48,21 @@
   "net_worth": 458.78,
   "summary": "Net worth currently sits at around M$459 with 17 total positions, while spendable liquidity has recovered slightly to M$10. Out of 17 positions, 13 remain closed and awaiting resolution to unlock further cash. Our absolute priority upon liquidity restoration remains settling outstanding debts: M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3. \n\nOur four active tradable positions remain fundamentally sound and within monitoring parameters. United Russia Duma seats (2AhAupP25S) trades at 63% YES with 4 days until close, AISI saturation (uyO6lpyNAI) sits at 31% NO, and hello-lume (L0nQl9ppNs) holds at 9% NO. In the weight tracking market (8N2dAnsg62), the YES price drifted up to 41% against our NO position, generating a small negative P/L (M$-6). Despite this adverse movement, our 74% NO estimate maintains a solid quantitative edge, and we strictly adhere to our pre-defined trigger: if the market reaches 50% YES, we will actively re-evaluate and cut the position. No other positions have collapsed or warranted forced sales.\n\nConcrete mistakes to avoid include letting spendable liquidity drop to absolute zero through over-allocation without anticipating upcoming cash needs, which previously induced operational paralysis and debt accumulation. We must maintain our strict ban against trading micro-trader meta-markets (such as holder counts or creator trivia) where late-stage subsidy dynamics cause unpredictable volatility. We must also avoid holding lottery-ticket positions where time decay and risk-reward turn unfavorable, and ensure outstanding debts are settled immediately upon liquidity recovery rather than lingering in low-liquidity deadlocks.\n\nCalibration remains strong across high-information macro, technical, and political brackets where verifiable data or expert consensus provides a clear edge. Upcoming binary and political milestones expiring through September 2026\u2014such as Russian Duma election dynamics, AI model benchmarks, and near-term resolution catalysts\u2014remain our primary focus for capital allocation. Plain operational discipline, maintaining a healthy cash buffer of spendable liquidity, and sticking strictly to fundamental edges over narrative noise will govern our next execution phase once liquidity is fully restored.",
   "journal": [
+    {
+      "ts": 1789708701706,
+      "kind": "analysis",
+      "text": "Analysed \"Will the FY27 NASA Budget be larger than FY25?\": market 60%, my 68% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1789708541997,
+      "kind": "screen",
+      "text": "Escalated \"Will the FY27 NASA Budget be larger than FY25?\" at 60%: quick estimate 45% vs market 60%"
+    },
+    {
+      "ts": 1789708522012,
+      "kind": "screen",
+      "text": "Passed on \"US government shutdown on October 1st 2026?\" at 4%: quick estimate 15% agrees with market. The comments detail that the Senate cleared a bipartisan stopgap funding bill through December, making a shutdown on October 1 unlikely."
+    },
     {
       "ts": 1789707784579,
       "kind": "agency",
@@ -432,21 +447,6 @@
       "ts": 1789668769067,
       "kind": "screen",
       "text": "Passed on \"Elon Musk endorses a Democratic candidate for primary elections in 202\" at 5%: quick estimate 5% agrees with market. Musk's recent alignment with Republicans and the Trump administration makes a Democratic primary endorsement extremely unlikely."
-    },
-    {
-      "ts": 1789667075881,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: 2026-09-17 17:30Z: Deadlock check. Triggers unmet: Weight 41%, UR 4d to close, Liquidity M$0. No thesis collapse.. Because: Continuing the mandatory monitoring log to maintain active oversight during the ongoing liquidity deadlock."
-    },
-    {
-      "ts": 1789667075874,
-      "kind": "agency",
-      "text": "Own turn: The liquidity deadlock persists. 13 of 17 positions are closed and awaiting resolution. All four active tradable positions (Weight 41%, hello-lume 9%, AISI 31%, United Russia 63%) remain within monitoring parameters. No thesis collapses have occurred, so no forced sales are warranted. I am maintaining active oversight and waiting for market resolutions to restore spendable mana."
-    },
-    {
-      "ts": 1789666377373,
-      "kind": "analysis",
-      "text": "Analysed \"US Average Gas Price Is $4.400 or more on September 21 2026?\": market 97%, my 96% (high). No trade, edge 0.006 below minimum 0.04."
     }
   ],
   "todos": [
@@ -965,6 +965,31 @@
   ],
   "decisions": [
     {
+      "ts": 1789708701703,
+      "kind": "no_trade",
+      "question": "Will the FY27 NASA Budget be larger than FY25?",
+      "url": "https://manifold.markets/LarsOsborne/will-the-fy27-nasa-budget-be-larger",
+      "market_prob": 0.6018479484953069,
+      "model_prob": 0.68,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Congress has a long history of thoroughly rejecting steep executive cuts to NASA to protect local aerospace jobs and the Artemis program. While the $18.8B FY27 request is low, Congress is highly likely to restore funding to near-FY26 levels, which would comfortably exceed the FY25 baseline of $24.875B.",
+      "uncertainty": "Whether Congress will fully restore the proposed FY27 cuts to at least the FY25 baseline, or if they will accept a partial compromise that falls below $24.875B.",
+      "resolution_risk": "The definition of 'budget' (discretionary vs. total including reconciliation/OBBBA). The creator's description uses the $27.53B figure for FY26 (which includes OBBBA), suggesting they will use the same inclusive definition for FY27, but any ambiguity in final reporting could affect the outcome.",
+      "evidence_for": [
+        "Congress has a strong, consistent history of rejecting executive cuts to NASA; in FY26, the administration requested a 24% cut, but Congress ultimately passed a budget of $27.53B, which was larger than FY25.",
+        "Bipartisan support for the Artemis program and key NASA centers in Texas, Florida, and Alabama remains extremely robust.",
+        "A simple continuation or flat CR of FY26 levels ($27.53B total or $24.4B discretionary plus reconciliation) would keep the effective budget above the FY25 baseline of $24.875B."
+      ],
+      "evidence_against": [
+        "The White House FY27 request of $18.8B is an extremely steep cut (46% to science), which creates a very low starting point for negotiations.",
+        "If Congress agrees to a partial compromise cut rather than a full restoration, the final budget could easily land below the $24.875B threshold.",
+        "If the final resolution excludes OBBBA reconciliation funding and only counts discretionary spending, the baseline is harder to clear (FY26 discretionary was $24.4B)."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1789706170555,
       "kind": "no_trade",
       "question": "Opus 5.2 released in September?",
@@ -1298,30 +1323,6 @@
         "General public opposition to AI data centers is high, with 7 in 10 Americans opposed."
       ],
       "reason": "edge 0.014 below minimum 0.04"
-    },
-    {
-      "ts": 1789669023006,
-      "kind": "no_trade",
-      "question": "Bitcoin price reaches 75k USD at any point before the end of the month",
-      "url": "https://manifold.markets/rg26/bitcoin-price-reaches-75k-usd-at-an",
-      "market_prob": 0.7936966907334424,
-      "model_prob": 0.82,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Bitcoin is currently trading around $76.6k, having recently experienced dips near this zone. Given typical crypto volatility and 13 days remaining in the month, a drop to touch $75,000 is quite likely.",
-      "uncertainty": "Will short-term market fluctuations cause Bitcoin to retrace by ~2% to hit $75k before the end of September 2026?",
-      "resolution_risk": "The resolution criteria are explicit that the price must drop to $75k USD according to Google Finance, meaning it requires a downward touch.",
-      "evidence_for": [
-        "Bitcoin is currently trading around $76,600 to $76,700 on Google Finance / Coinbase, which is already above the $75k threshold.",
-        "The creator and commentators have confirmed that the resolution condition requires the price to drop to $75k USD based on Google Finance data.",
-        "Recent historical data from the past two weeks shows Bitcoin experienced a shakeout down to $74,913, demonstrating that volatility around the $75k mark occurs frequently."
-      ],
-      "evidence_against": [
-        "Bitcoin's current price is safely above $75k (~$76,600), and short-term trends or momentum could keep it above $75k for the remainder of September without dropping to that specific level.",
-        "Cryptocurrency markets are highly unpredictable, and a drop of roughly 2.2% from current levels within the next 13 days is not guaranteed, even if volatility is common."
-      ],
-      "reason": "edge 0.026 below minimum 0.04"
     }
   ]
 }
