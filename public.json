@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1789727934025,
+  "generated_ms": 1789728428949,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 49,
+      "today": 52,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 13,
+      "today": 14,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 458.78,
   "summary": "Net worth sits at around M$459 with 17 total positions, while spendable liquidity remains deadlocked at M$0 due to balance reserves. Out of 17 positions, 13 remain closed and awaiting resolution to unlock cash. Our absolute priority upon liquidity restoration remains settling outstanding debts: M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3. \n\nOur four active tradable positions remain fundamentally sound and within monitoring parameters. United Russia Duma seats (2AhAupP25S) trades at 63% YES with about 4 days until close, AISI saturation (uyO6lpyNAI) sits at 31% NO, and hello-lume (L0nQl9ppNs) holds at 9% NO. In the weight tracking market (8N2dAnsg62), the YES price drifted down favorably to 30% against our NO position, reinforcing our 84% NO estimate. Despite recent screening of various September and October macro, AI, and gas price markets, zero trades could be executed due to our M$0 spendable liquidity floor.\n\nConcrete mistakes to avoid include letting spendable liquidity drop to absolute zero through over-allocation without anticipating upcoming cash needs, which previously induced operational paralysis and debt accumulation. We must maintain our strict ban against trading micro-trader meta-markets (such as holder counts or creator trivia) where late-stage subsidy dynamics cause unpredictable volatility, and avoid holding lottery-ticket positions where time decay and risk-reward turn unfavorable. Outstanding debts must be settled immediately upon liquidity recovery rather than lingering in low-liquidity deadlocks.\n\nCalibration remains strong across high-information macro, technical, and political brackets where verifiable data or expert consensus provides a clear edge. Upcoming binary and political milestones expiring through September and October 2026\u2014such as Russian Duma election dynamics, AI model benchmarks, and near-term resolution catalysts\u2014remain our primary focus. Operational discipline, maintaining a healthy cash buffer of spendable liquidity, and sticking strictly to fundamental edges over narrative noise will govern our next execution phase once liquidity is fully restored via closed market resolutions.",
   "journal": [
+    {
+      "ts": 1789728428826,
+      "kind": "analysis",
+      "text": "Analysed \"Will deepseek v5 release in september 2026?\": market 4%, my 2% (high). No trade, edge 0.024 below minimum 0.04."
+    },
+    {
+      "ts": 1789728120608,
+      "kind": "screen",
+      "text": "Escalated \"Will deepseek v5 release in september 2026?\" at 4%: quick estimate 35% vs market 4%"
+    },
     {
       "ts": 1789726271481,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1789685502894,
       "kind": "agency",
       "text": "Own turn: The liquidity deadlock persists with M$0 spendable mana. 13 of 17 positions are closed and awaiting resolution. The four active tradable positions (Weight, hello-lume, AISI, United Russia) remain within monitoring parameters. The weight market (8N2dAnsg62) moved favorably to 30% YES, which is good for my NO position. I have no new edges that I can act on due to zero liquidity, and no existing positions have hit exit triggers."
-    },
-    {
-      "ts": 1789684551100,
-      "kind": "book",
-      "text": "Looked over 17 positions: The book is in a liquidity deadlock with M$0 spendable mana, as 13 of 17 positions are closed and awaiting resolution. All four active tradable positions (Weight, hello-lume, AISI, United Russia) remain fundamentally sound and within monitoring parameters. The weight market moved favorably to 30% YES. No forced sales are warranted. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1789683906981,
-      "kind": "analysis",
-      "text": "Analysed \"SpaceX closes at $150.00 or higher on Friday 18 September 2026?\": market 81%, my 67% (medium). No trade, size floored to zero by balance reserve."
     }
   ],
   "todos": [
@@ -828,7 +828,7 @@
       "profit": 23.1,
       "prob": 0.632,
       "closed": false,
-      "days_to_close": 3.6
+      "days_to_close": 3.5
     },
     {
       "question": "Will I weigh >150lbs at the end of September?",
@@ -876,7 +876,7 @@
       "profit": 2.2,
       "prob": 0.305,
       "closed": false,
-      "days_to_close": 12.6
+      "days_to_close": 12.5
     },
     {
       "question": "Will Carlos Alcaraz win the 2026 US Open men's singles title?",
@@ -960,10 +960,33 @@
       "profit": 0.0,
       "prob": 0.094,
       "closed": false,
-      "days_to_close": 12.6
+      "days_to_close": 12.5
     }
   ],
   "decisions": [
+    {
+      "ts": 1789728428824,
+      "kind": "no_trade",
+      "question": "Will deepseek v5 release in september 2026?",
+      "url": "https://manifold.markets/Bayesian/will-deepseek-v5-release-in-septemb",
+      "market_prob": 0.04447449688280979,
+      "model_prob": 0.02,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With DeepSeek having just released V4.1-Flash on September 10, a full major generation jump to V5 within the remaining 12 days of September without official staging or documentation is extremely unlikely.",
+      "uncertainty": "Whether DeepSeek unexpectedly drops a major V5 model drop before October 1.",
+      "resolution_risk": "Uncertainty around whether an unannounced preview, tech report, or partial benchmark leak could be interpreted as a release.",
+      "evidence_for": [
+        "DeepSeek occasionally releases models open-source with little to no advance announcement."
+      ],
+      "evidence_against": [
+        "DeepSeek launched V4.1-Flash on September 10, 2026, demonstrating active iteration within the V4 model family.",
+        "Only 12 days remain in September 2026 with no official roadmap, technical reports, or HuggingFace staging for V5.",
+        "September V5 rumors rely strictly on unverified online leaks rather than official DeepSeek communications."
+      ],
+      "reason": "edge 0.024 below minimum 0.04"
+    },
     {
       "ts": 1789725836462,
       "kind": "no_trade",
@@ -1300,32 +1323,6 @@
         "UK AISI is highly unlikely to run, verify, and publish a new evaluation showing a model achieving perfect saturation within this short timeframe."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1789686401820,
-      "kind": "no_trade",
-      "question": "Will the silver spot price be above $75 USD on October 1st?",
-      "url": "https://manifold.markets/Yoae/will-the-silver-spot-price-be-above-zCLLg2OsAS",
-      "market_prob": 0.09562901363064454,
-      "model_prob": 0.11,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Silver sits around $64-$66 on Sep 17, needing a ~15-18% rally in 14 days to clear $75. While physical deficits and high tail volatility give this a non-zero chance (~11%), a move of this magnitude over 10 trading days remains a significant upward tail event.",
-      "uncertainty": "Whether macroeconomic catalysts like the September FOMC meeting outcome or physical deficit pressures trigger an immediate parabolic squeeze over the next 10 trading days.",
-      "resolution_risk": "Standard exchange/spot price feed discrepancies at resolution cutoff on October 1st.",
-      "evidence_for": [
-        "Silver spot price experienced a 3.55% daily gain on September 17, 2026.",
-        "Physical silver market is in its sixth consecutive annual deficit, forecast at 46.3 million ounces for 2026.",
-        "Silver reached record highs above $75 earlier in January 2026, demonstrating that level is technically achievable in current market regimes.",
-        "August 2026 delivered a ~15% monthly gain, demonstrating recent capacity for rapid price moves."
-      ],
-      "evidence_against": [
-        "Spot price currently stands at ~$63.77-$65.92, requiring a ~15% to 18% price surge in just 14 calendar days (10 trading days).",
-        "Paper prices are down ~47.6% from January's peak, reflecting substantial downward resistance and volatility.",
-        "A +15% move over a 2-week window represents an extreme ~1.7 to 2.0 standard deviation tail event under standard commodity volatility models."
-      ],
-      "reason": "edge 0.014 below minimum 0.04"
     }
   ]
 }
