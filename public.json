@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1789693489263,
+  "generated_ms": 1789693817170,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash-lite",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 3,
+      "today": 6,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 1,
+      "today": 2,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 458.78,
   "summary": "Net worth currently sits at around M$459 with 17 total positions, while spendable liquidity has recovered slightly to M$10. Out of 17 positions, 13 remain closed and awaiting resolution to unlock further cash. Our absolute priority upon liquidity restoration remains settling outstanding debts: M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3. \n\nOur four active tradable positions remain fundamentally sound and within monitoring parameters. United Russia Duma seats (2AhAupP25S) trades at 63% YES with 4 days until close, AISI saturation (uyO6lpyNAI) sits at 31% NO, and hello-lume (L0nQl9ppNs) holds at 9% NO. In the weight tracking market (8N2dAnsg62), the YES price drifted up to 41% against our NO position, generating a small negative P/L (M$-6). Despite this adverse movement, our 74% NO estimate maintains a solid quantitative edge, and we strictly adhere to our pre-defined trigger: if the market reaches 50% YES, we will actively re-evaluate and cut the position. No other positions have collapsed or warranted forced sales.\n\nConcrete mistakes to avoid include letting spendable liquidity drop to absolute zero through over-allocation without anticipating upcoming cash needs, which previously induced operational paralysis and debt accumulation. We must maintain our strict ban against trading micro-trader meta-markets (such as holder counts or creator trivia) where late-stage subsidy dynamics cause unpredictable volatility. We must also avoid holding lottery-ticket positions where time decay and risk-reward turn unfavorable, and ensure outstanding debts are settled immediately upon liquidity recovery rather than lingering in low-liquidity deadlocks.\n\nCalibration remains strong across high-information macro, technical, and political brackets where verifiable data or expert consensus provides a clear edge. Upcoming binary and political milestones expiring through September 2026\u2014such as Russian Duma election dynamics, AI model benchmarks, and near-term resolution catalysts\u2014remain our primary focus for capital allocation. Plain operational discipline, maintaining a healthy cash buffer of spendable liquidity, and sticking strictly to fundamental edges over narrative noise will govern our next execution phase once liquidity is fully restored.",
   "journal": [
+    {
+      "ts": 1789693817083,
+      "kind": "analysis",
+      "text": "Analysed \"Will Sandwich Cat break all time high in 30 days ??\": market 20%, my 1% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1789693675515,
+      "kind": "screen",
+      "text": "Escalated \"Will Sandwich Cat break all time high in 30 days ??\" at 20%: quick estimate 1% vs market 20%"
+    },
     {
       "ts": 1789693119663,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1789653470343,
       "kind": "analysis",
       "text": "Analysed \"Nvidia closes at $210.00 or higher on Friday 18 September 2026?\": market 70%, my 50% (low). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1789653245532,
-      "kind": "screen",
-      "text": "Escalated \"Nvidia closes at $210.00 or higher on Friday 18 September 2026?\" at 70%: quick estimate 50% vs market 70%"
-    },
-    {
-      "ts": 1789653225622,
-      "kind": "screen",
-      "text": "Passed on \"Xi JinPing visits USA before Sep 30?\" at 89%: quick estimate 82% agrees with market. Reuters and official reports strongly suggest an upcoming visit around September 24, making the high probability well-supported."
     }
   ],
   "todos": [
@@ -960,6 +960,29 @@
   ],
   "decisions": [
     {
+      "ts": 1789693817080,
+      "kind": "no_trade",
+      "question": "Will Sandwich Cat break all time high in 30 days ??",
+      "url": "https://manifold.markets/SayachiKomashi/will-sandwich-cat-break-all-time-hi",
+      "market_prob": 0.19999999999999998,
+      "model_prob": 0.01,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "SACA is a dead memecoin down >99% from its ATH with negligible volume. A 20,000% recovery in 30 days without any catalyst is extremely improbable.",
+      "uncertainty": "Whether an unexpected memecoin group or influencer chooses to pump this specific token within the 30-day window.",
+      "resolution_risk": "None; the criteria clearly specify CoinGecko or DEX Screener with minimum volume filters to prevent wash trading anomalies.",
+      "evidence_for": [
+        "Memecoins on Base can occasionally experience extreme, unpredictable retail surges driven by sudden community interest."
+      ],
+      "evidence_against": [
+        "SACA is currently trading over 99% below its all-time high with near-zero daily trading volume (~$30 equivalent).",
+        "A 20,000% gain is required within 30 days, which requires a massive, coordinated capital inflow absent from recent trends.",
+        "No catalysts, announcements, or viral developments have emerged to suggest a revival."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1789691367433,
       "kind": "no_trade",
       "question": "Bitcoin reaches 90k USD at any point before October",
@@ -1286,30 +1309,6 @@
       "evidence_against": [
         "NO wins in the event of a tie.",
         "It is extremely cheap (M$1) for any user to create a net NO position, making the holder count highly susceptible to last-minute manipulation."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1789655943500,
-      "kind": "no_trade",
-      "question": "Will Trump and Xi meet in September 2026?",
-      "url": "https://manifold.markets/Conflux/will-trump-and-xi-meet-in-september",
-      "market_prob": 0.8146104947998762,
-      "model_prob": 0.91,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With the summit officially scheduled for September 24 and recent mid-September reports confirming that logistics and agendas are fully on track, the probability of the meeting occurring in September is very high. The primary risk is a last-minute postponement pushing it into October, but at just one week out, such delays are rare.",
-      "uncertainty": "Whether any sudden diplomatic breakdown or logistical disruption causes the meeting to be postponed past the end of September.",
-      "resolution_risk": "Because the meeting is scheduled for September 24, any postponement of more than six days would push the meeting into October, causing this market to resolve NO even if the meeting eventually happens.",
-      "evidence_for": [
-        "A high-stakes bilateral summit is officially scheduled at the White House on September 24, 2026.",
-        "Recent media reports from September 14\u201316 confirm that preparations are actively underway and Xi Jinping's arrival is set for September 24.",
-        "This is a highly anticipated follow-up to their May 2026 meeting in Beijing, with agendas already detailed."
-      ],
-      "evidence_against": [
-        "High diplomatic tensions over US secondary sanctions on Chinese entities trading with Iran, Taiwan, and trade tariffs could theoretically trigger a last-minute boycott.",
-        "Unforeseen geopolitical crises or health issues could force a postponement."
       ],
       "reason": "size floored to zero by balance reserve"
     }
