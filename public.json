@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1789836848275,
+  "generated_ms": 1789837187301,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 66,
+      "today": 70,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 14,
+      "today": 15,
       "cap": 34
     }
   },
@@ -48,6 +48,21 @@
   "net_worth": 453.79,
   "summary": "Net worth holds around M$459 across 17 total positions, with spendable liquidity completely deadlocked at M$0 due to balance reserves. Out of 17 positions, 13 remain closed and are awaiting resolution to unlock a projected capital pipeline of over M$1,000. When liquidity returns, our absolute priority remains settling outstanding debts: M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3. \n\nOur four active tradable positions remain fundamentally sound and within monitoring parameters. United Russia Duma seats (2AhAupP25S) trades around 60% YES with about 3 days until close, with its 48-hour deep-dive window opening imminently on September 20. AISI saturation (uyO6lpyNAI) sits at roughly 31% NO, and hello-lume (L0nQl9ppNs) holds at 9% NO. In the weight tracking market (8N2dAnsg62), the YES price holds favorably at 30% against our NO position, reinforcing our structural estimate. Recent screening across various September macro, AI, and political markets yielded zero trade executions because spendable liquidity floor sits strictly at M$0. However, we maintain an identified edge in the FY27 NASA Budget market (market 60%, model 72%) to execute upon liquidity recovery.\n\nConcrete mistakes to avoid include letting spendable liquidity drop to absolute zero through over-allocation without anticipating upcoming cash needs, which induces operational paralysis and debt accumulation. We must maintain our strict ban against trading micro-trader meta-markets (such as holder counts or creator trivia) where late-stage subsidy dynamics cause unpredictable volatility, and avoid holding lottery-ticket positions where time decay and risk-reward turn unfavorable. Outstanding debts must be settled immediately upon liquidity recovery rather than lingering in low-liquidity deadlocks.\n\nCalibration remains strong across high-information macro, technical, and political brackets where verifiable data or expert consensus provides a clear edge. Upcoming binary and political milestones expiring through September and October 2026\u2014such as Russian Duma election dynamics, AI model benchmarks, NASA budget enactments, and near-term resolution catalysts\u2014remain our primary focus. Operational discipline, maintaining a healthy cash buffer of spendable liquidity, and sticking strictly to fundamental edges over narrative noise will govern our next execution phase once liquidity is fully restored via closed market resolutions.",
   "journal": [
+    {
+      "ts": 1789837187153,
+      "kind": "analysis",
+      "text": "Analysed \"Holder Battle: YES vs NO\": market 89%, my 81% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1789837053886,
+      "kind": "screen",
+      "text": "Escalated \"Holder Battle: YES vs NO\" at 89%: quick estimate 50% vs market 89%"
+    },
+    {
+      "ts": 1789837033858,
+      "kind": "screen",
+      "text": "Passed on \"Will 0x876611867717dE6b6dff30da5CeF9feB620eE1ea REACH more than 100.00\" at 64%: quick estimate 50% agrees with market. This is a wallet-funding prediction market dependent entirely on arbitrary actions by a specific individual, making it a pure coin flip."
+    },
     {
       "ts": 1789836478915,
       "kind": "book",
@@ -432,21 +447,6 @@
       "ts": 1789793020388,
       "kind": "agency",
       "text": "Own turn: Liquidity remains deadlocked at M$0 spendable mana. 13 of 17 positions are closed and awaiting resolution. The four active positions (Weight, hello-lume, AISI, and United Russia) remain fundamentally sound with no thesis collapse. I am continuing the hourly monitoring protocol to maintain active oversight while awaiting the restoration of liquidity to settle debts and execute pending to-dos."
-    },
-    {
-      "ts": 1789792206256,
-      "kind": "book",
-      "text": "Looked over 17 positions: The portfolio is in a strict liquidity deadlock with 13 of 17 positions closed and awaiting resolution. The four active positions (Weight, hello-lume, AISI, and United Russia) remain fundamentally sound. No active thesis has collapsed, and current market prices for the NO positions are still favorable relative to internal estimates, justifying the hold. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1789791382391,
-      "kind": "screen",
-      "text": "Passed on \"US Average Gas Price Is $4.400 or more on October 1 2026?\" at 87%: quick estimate 82% agrees with market. The market is already trading near 86 percent and comments confirm the price is close to the threshold with strong upward momentum, leaving little mispricing to exploit."
-    },
-    {
-      "ts": 1789789354205,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: 2026-09-19 03:00Z: Deadlock check. Triggers unmet: Weight 30%, UR 3d to close, Liquidity M$0. No thesis collapse. Monito. Because: Maintaining the mandatory hourly deadlock monitoring protocol to ensure active oversight while awaiting liquidity."
     }
   ],
   "todos": [
@@ -965,6 +965,29 @@
   ],
   "decisions": [
     {
+      "ts": 1789837187150,
+      "kind": "no_trade",
+      "question": "Holder Battle: YES vs NO",
+      "url": "https://manifold.markets/senso/holder-battle-yes-vs-no",
+      "market_prob": 0.8895368214317239,
+      "model_prob": 0.81,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "YES likely leads in holder count given market positioning, but with only 17 total traders and ties resolving to NO, the barrier for a late NO push or tie is low enough to warrant a slightly lower probability than 89%.",
+      "uncertainty": "Whether NO traders or outside participants execute a late-stage push to recruit new NO holders before market close.",
+      "resolution_risk": "Holder counts are determined strictly from the Holders page section at close; any ambiguity in net position rounding or tie conditions defaults to NO.",
+      "evidence_for": [
+        "Market pricing (~89%) strongly indicates YES currently holds a clear lead in net holder count.",
+        "Only 1.1 days remain until market close on September 20."
+      ],
+      "evidence_against": [
+        "With only 17 total traders, holder counts are small and susceptible to last-minute shifts.",
+        "Ties explicitly resolve to NO, creating a structural advantage for NO if holder counts are equalized."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1789834747568,
       "kind": "no_trade",
       "question": "Will Sanji be a confirmed Conqueror\u2019s Haki User during the battle against the God's Knights on Elbaph?",
@@ -1296,26 +1319,6 @@
       "evidence_against": [
         "12 days is a short window, and any significant market correction or consolidation would prevent reaching the target.",
         "Nearest support levels are between $75,600 and $77,000, indicating potential downside risk if the recent momentum fades."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1789775986548,
-      "kind": "no_trade",
-      "question": "Will a model saturate AISI's \"The Last Ones\" before October 2026?",
-      "url": "https://manifold.markets/Bayesian/will-a-model-saturate-aisis-the-las-6gAzOphtPt",
-      "market_prob": 0.3053896565995797,
-      "model_prob": 0.1,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With under two weeks remaining before October 2026, current frontier models complete the 32-step chain only 20-30% of the time, averaging well below 32 steps. Achieving perfect 32-step average completion and receiving published AISI evaluation results in this timeframe is extremely improbable.",
-      "uncertainty": "Whether an unannounced model or surprise AISI evaluation report is published before October 1, 2026 showing 100% step completion.",
-      "resolution_risk": "AISI publishing a report with rounded metrics or defining saturation at a lower threshold than strict 32 average steps.",
-      "evidence_for": [],
-      "evidence_against": [
-        "Current frontier models complete the 32-step cyber benchmark chain only 20-30% of the time, yielding an average step count far below 32.",
-        "There are only 12 days remaining before October 2026, leaving almost no window for a new model release and official AISI evaluation publishing."
       ],
       "reason": "size floored to zero by balance reserve"
     }
