@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1789854308724,
+  "generated_ms": 1789854616720,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 93,
+      "today": 96,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 21,
+      "today": 22,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 453.79,
   "summary": "Net worth holds around M$459 across 17 total positions, with spendable liquidity completely deadlocked at M$0 due to balance reserves. Out of 17 positions, 13 remain closed and are awaiting resolution to unlock a projected capital pipeline of over M$1,000. When liquidity returns, our absolute priority remains settling outstanding debts: M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3. \n\nOur four active tradable positions remain fundamentally sound and within monitoring parameters. United Russia Duma seats (2AhAupP25S) trades around 60% YES with about 3 days until close, with its 48-hour deep-dive window opening imminently on September 20. AISI saturation (uyO6lpyNAI) sits at roughly 31% NO, and hello-lume (L0nQl9ppNs) holds at 9% NO. In the weight tracking market (8N2dAnsg62), the YES price holds favorably at 30% against our NO position, reinforcing our structural estimate. Recent screening across various September macro, AI, and political markets yielded zero trade executions because spendable liquidity floor sits strictly at M$0. However, we maintain an identified edge in the FY27 NASA Budget market (market 60%, model 72%) to execute upon liquidity recovery.\n\nConcrete mistakes to avoid include letting spendable liquidity drop to absolute zero through over-allocation without anticipating upcoming cash needs, which induces operational paralysis and debt accumulation. We must maintain our strict ban against trading micro-trader meta-markets (such as holder counts or creator trivia) where late-stage subsidy dynamics cause unpredictable volatility, and avoid holding lottery-ticket positions where time decay and risk-reward turn unfavorable. Outstanding debts must be settled immediately upon liquidity recovery rather than lingering in low-liquidity deadlocks.\n\nCalibration remains strong across high-information macro, technical, and political brackets where verifiable data or expert consensus provides a clear edge. Upcoming binary and political milestones expiring through September and October 2026\u2014such as Russian Duma election dynamics, AI model benchmarks, NASA budget enactments, and near-term resolution catalysts\u2014remain our primary focus. Operational discipline, maintaining a healthy cash buffer of spendable liquidity, and sticking strictly to fundamental edges over narrative noise will govern our next execution phase once liquidity is fully restored via closed market resolutions.",
   "journal": [
+    {
+      "ts": 1789854616667,
+      "kind": "analysis",
+      "text": "Analysed \"Will my YouTube Channel have 30 subscribers before the end of Septembe\": market 92%, my 90% (medium). No trade, edge 0.018 below minimum 0.04."
+    },
+    {
+      "ts": 1789854494022,
+      "kind": "screen",
+      "text": "Escalated \"Will my YouTube Channel have 30 subscribers before the end of Septembe\" at 92%: quick estimate 45% vs market 92%"
+    },
     {
       "ts": 1789852835883,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1789813933768,
       "kind": "screen",
       "text": "Escalated \"Will the address for math.eg.rego.re have a balance of more than $25 b\" at 92%: quick estimate 15% vs market 92%"
-    },
-    {
-      "ts": 1789813913582,
-      "kind": "screen",
-      "text": "Passed on \"Will Starship Ship 40 be recovered to shore?\" at 95%: quick estimate 85% agrees with market. Comments debate the exact definition of 'recovered to shore' versus floating on a ship, making it a semantic judgment call."
-    },
-    {
-      "ts": 1789811883899,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] 2026-09-19 10:00Z: Liquidity deadlock continues. Monitoring for resolution of closed markets to restore spendable. Because: Maintaining the hourly monitoring protocol and tracking the upcoming milestone for the United Russia position while awaiting liquidity."
     }
   ],
   "todos": [
@@ -965,6 +965,30 @@
   ],
   "decisions": [
     {
+      "ts": 1789854616664,
+      "kind": "no_trade",
+      "question": "Will my YouTube Channel have 30 subscribers before the end of September 2026?",
+      "url": "https://manifold.markets/JoshSnider/will-my-youtube-channel-have-30-sub",
+      "market_prob": 0.91767131421286,
+      "model_prob": 0.9,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "",
+      "uncertainty": "Whether YouTube's spam filters purge new subscriber accounts before the end of September.",
+      "resolution_risk": "The description requires 'more than 30' (31+) while the title says 'have 30' (30+), creating ambiguity if it ends at exactly 30.",
+      "evidence_for": [
+        "The channel was at 25 subscribers as of September 18, requiring only 5 to 6 more to meet the threshold.",
+        "The creator explicitly welcomed traders to subscribe to the channel to help resolve the market.",
+        "Traders have a direct financial incentive to subscribe using real accounts, which bypasses bot detection."
+      ],
+      "evidence_against": [
+        "YouTube actively purges inactive, alt, or low-engagement accounts, which previously caused the count to drop from 30 back to 25.",
+        "There is a discrepancy between the title ('have 30') and description ('more than 30'), which could cause resolution issues if the final count is exactly 30."
+      ],
+      "reason": "edge 0.018 below minimum 0.04"
+    },
+    {
       "ts": 1789852182770,
       "kind": "no_trade",
       "question": "Will Trump outlive DeSantis?",
@@ -1291,30 +1315,6 @@
       "evidence_against": [
         "Spider-Man historically has stronger Saturday surges compared to The Odyssey's weekday-heavy performance.",
         "Spider-Man was still ahead last weekend ($8.41M vs $7.59M)."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1789806529154,
-      "kind": "no_trade",
-      "question": "Will GTA 6 require more than 200gb of space on PC.",
-      "url": "https://manifold.markets/AndrewCrosse/will-gta-6-take-up-more-than-200gb",
-      "market_prob": 0.6951197381101281,
-      "model_prob": 0.38,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "System requirement listings on Steam tend to round to standard figures (150 GB or 200 GB). If Rockstar specifies '200 GB available space', this market resolves NO because it strictly requires *more than* 200 GB. Given modern asset compression and current estimates clustering around 150-200 GB, a requirement above 200 GB is under 40% likely.",
-      "uncertainty": "Whether Rockstar lists 200 GB or 250 GB on Steam system requirements, given standard publisher rounding conventions.",
-      "resolution_risk": "If Steam lists '200 GB available space', the market resolves NO because the question strictly requires *more than* 200 GB.",
-      "evidence_for": [
-        "GTA 6 is set to be one of the most detailed and expansive open-world games, potentially pushing asset size very high.",
-        "Some third-party hardware guides and gaming publications speculate total required SSD space could reach up to 250 GB."
-      ],
-      "evidence_against": [
-        "System requirement specs on Steam almost universally round to neat thresholds (e.g., 150 GB, 200 GB); a specification of exactly 200 GB resolves NO under 'more than 200gb'.",
-        "Rockstar's previous titles like Red Dead Redemption 2 launched around 150 GB, and modern asset compression tech helps prevent ballooning install sizes.",
-        "Current hardware estimates and rumors for GTA 6 PC predominantly cluster around 150 GB to 200 GB."
       ],
       "reason": "size floored to zero by balance reserve"
     }
