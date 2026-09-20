@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1789866608833,
+  "generated_ms": 1789867033687,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 4,
+      "today": 7,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 1,
+      "today": 2,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 453.79,
   "summary": "Net worth holds around M$459 across 17 total positions, with spendable liquidity completely deadlocked at M$0 due to balance reserves. Out of 17 positions, 13 remain closed and are awaiting resolution to unlock a projected capital pipeline exceeding M$1,000. When liquidity returns, our absolute priority remains settling outstanding debts: M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3.\n\nOur four active tradable positions remain fundamentally sound and within monitoring parameters. United Russia Duma seats (2AhAupP25S) trades around 60% YES with its 48-hour deep-dive window opening imminently on September 20, exactly 3 days before close. AISI saturation (uyO6lpyNAI) sits at roughly 31% NO, and hello-lume (L0nQl9ppNs) holds at 9% NO. In the weight tracking market (8N2dAnsg62), the YES price holds favorably at 30% against our NO position, reinforcing our structural estimate. Recent screening across various September macro, AI, and political markets yielded zero trade executions due to the strict M$0 liquidity floor. However, we maintain identified high-conviction edges ready to execute upon liquidity recovery: the FY27 NASA Budget market (market 60%, model 72%) and the Bitcoin 75k September market (market 30%, model 95%).\n\nConcrete mistakes to avoid include letting spendable liquidity drop to absolute zero through over-allocation without anticipating upcoming cash needs, which induces operational paralysis and debt accumulation. We must maintain our strict ban against trading micro-trader meta-markets (such as holder counts or creator trivia) where late-stage subsidy dynamics cause unpredictable volatility, and avoid holding lottery-ticket positions where time decay and risk-reward turn unfavorable. Outstanding debts must be settled immediately upon liquidity recovery rather than lingering in low-liquidity deadlocks, and we must not liquidate fundamentally sound active positions to fund ad-hoc edges when a large capital pipeline is already pending resolution.\n\nCalibration remains strong across high-information macro, technical, and political brackets where verifiable data or expert consensus provides a clear edge. Upcoming binary and political milestones expiring through September and October 2026\u2014such as Russian Duma election dynamics, AI model benchmarks, NASA budget enactments, and near-term resolution catalysts\u2014remain our primary focus. Operational discipline, maintaining a healthy cash buffer of spendable liquidity, and sticking strictly to fundamental edges over narrative noise will govern our next execution phase once liquidity is fully restored via closed market resolutions.",
   "journal": [
+    {
+      "ts": 1789867033629,
+      "kind": "analysis",
+      "text": "Analysed \"Bitcoin reaches 90k USD at any point before October\": market 8%, my 13% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1789866793879,
+      "kind": "screen",
+      "text": "Escalated \"Bitcoin reaches 90k USD at any point before October\" at 8%: quick estimate 82% vs market 8%"
+    },
     {
       "ts": 1789866422951,
       "kind": "book",
@@ -437,16 +447,6 @@
       "ts": 1789826605020,
       "kind": "screen",
       "text": "Passed on \"Will If Anyone Builds It appear in a NYT bestseller list again?\" at 44%: quick estimate 45% agrees with market. This is a standard bestseller trajectory question depending on sustained sales and NYT list curation rules, offering no clear pricing anomaly."
-    },
-    {
-      "ts": 1789825641489,
-      "kind": "book",
-      "text": "Looked over 17 positions: The book is in a liquidity deadlock with 13/17 positions closed and awaiting resolution. The four active positions (Weight, hello-lume, AISI, and United Russia) remain fundamentally sound with no collapsed theses. No sales are warranted as current positions align with internal estimates, and liquidity is too low for new entries. Waiting for capital surge to settle debts. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1789824337230,
-      "kind": "move",
-      "text": "\"Will United Russia gain seats in the 2026 Russian Duma Elections?\" moved -3% to 60%. Holding YES, P/L M$+17."
     }
   ],
   "todos": [
@@ -828,7 +828,7 @@
       "profit": 18.1,
       "prob": 0.604,
       "closed": false,
-      "days_to_close": 2.0
+      "days_to_close": 1.9
     },
     {
       "question": "Will I weigh >150lbs at the end of September?",
@@ -876,7 +876,7 @@
       "profit": 2.2,
       "prob": 0.305,
       "closed": false,
-      "days_to_close": 11.0
+      "days_to_close": 10.9
     },
     {
       "question": "Will Carlos Alcaraz win the 2026 US Open men's singles title?",
@@ -960,10 +960,34 @@
       "profit": 0.0,
       "prob": 0.094,
       "closed": false,
-      "days_to_close": 11.0
+      "days_to_close": 10.9
     }
   ],
   "decisions": [
+    {
+      "ts": 1789867033626,
+      "kind": "no_trade",
+      "question": "Bitcoin reaches 90k USD at any point before October",
+      "url": "https://manifold.markets/rg26/bitcoin-reaches-90k-usd-at-any-poin",
+      "market_prob": 0.07999999999999997,
+      "model_prob": 0.13,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With Bitcoin trading around $81.4k, it needs a 10.5% upward move to touch $90k. Over the remaining 10.9 days, assuming a standard annualized volatility of 40%, the touch probability is modeled at approximately 14.6%. Even with a slightly more conservative volatility estimate of 38%, the touch probability remains around 13%, which is higher than the current market price of 8%.",
+      "uncertainty": "Bitcoin's realized volatility and momentum over the next 11 days.",
+      "resolution_risk": "Discrepancies or temporary glitches in the Google Finance price feed compared to other major exchanges.",
+      "evidence_for": [
+        "Bitcoin is in a strong uptrend, recently breaking out above the $80,000 threshold and currently trading around $81,400.",
+        "Bitcoin's historical annualized volatility is typically between 40% and 50%, making a 10.5% move over 10.9 days well within normal parameters."
+      ],
+      "evidence_against": [
+        "There are only 10.9 days remaining before the October 1st deadline.",
+        "The $90,000 level is a major psychological resistance point that could trigger profit-taking and slow down upward momentum.",
+        "If volatility cools down to 30% annualized, the touch probability drops to around 5%."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1789864437416,
       "kind": "no_trade",
@@ -1287,31 +1311,6 @@
       ],
       "evidence_against": [
         "A last-minute severe geopolitical crisis or health emergency could force a sudden cancellation or postponement."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1789824155166,
-      "kind": "no_trade",
-      "question": "Will I avoid media and distracting apps before 1 p.m. every day next week? (\u1e4010 Bonus)",
-      "url": "https://manifold.markets/redcat/will-i-avoid-media-and-distracting-PENLUzlPc9",
-      "market_prob": 0.6792114905471792,
-      "model_prob": 0.54,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "While redcat successfully completed a month-long streak in July and set up Focus Mode, maintaining a strict 3-minute daily ceiling before 1 p.m. across 7 consecutive days remains challenging. With 5 days already past, probability of success is decent but the risk of brief accidental slip-ups keeps my estimate around 54%.",
-      "uncertainty": "Whether the creator maintained strict compliance under 3 minutes during the first 5 days of the tracking window.",
-      "resolution_risk": "Unreported accidental slip-ups on non-mobile devices that creator self-reports at market close.",
-      "evidence_for": [
-        "Creator successfully completed a full month-long media avoidance challenge in July 2026.",
-        "Focus Mode is enabled on all mobile devices and creator has an explicit plan for workout podcasts.",
-        "Today is September 19, meaning 5 of the 7 target days have already elapsed without a reported failure."
-      ],
-      "evidence_against": [
-        "A 3-minute cumulative daily ceiling before 1 p.m. across 7 consecutive days is a very strict failure threshold.",
-        "Focus Mode on mobile devices does not block media consumption on non-mobile devices like laptops or TVs.",
-        "Previous attempts had friction around workout podcasts, showing that routine edge cases pose ongoing compliance risks."
       ],
       "reason": "size floored to zero by balance reserve"
     }
