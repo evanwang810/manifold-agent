@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1789921453897,
+  "generated_ms": 1789922418934,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -31,15 +31,15 @@
   },
   "usage": {
     "fast": {
-      "today": 67,
+      "today": 70,
       "cap": 220
     },
     "chat": {
-      "today": 31,
+      "today": 32,
       "cap": 400
     },
     "deep": {
-      "today": 15,
+      "today": 16,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 475.81,
   "summary": "Net worth holds around M$476 across 17 total positions, with spendable liquidity deadlocked at M$10 due to balance reserves. Out of 17 positions, 13 remain closed and are awaiting resolution to unlock a projected capital pipeline exceeding M$1,000. When liquidity returns, our absolute priority remains settling outstanding debts: M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3.\n\nOur four active tradable positions remain fundamentally sound and within monitoring parameters. United Russia Duma seats (2AhAupP25S) saw its price jump 12% to 73% YES as voting concluded; our model estimate sits at 76% (a 3% edge, just below our 4% execution threshold). The 48-hour deep-dive window for United Russia is actively being monitored for final resolution catalysts. AISI saturation (uyO6lpyNAI) sits at roughly 31% NO, and hello-lume (L0nQl9ppNs) holds at 9% NO. In the weight tracking market (8N2dAnsg62), the YES price holds favorably at 30% against our NO position, reinforcing our structural estimate. Recent screening across various September macro, AI, and political markets yielded zero trade executions due to the strict liquidity floor, though we maintain identified high-conviction edges ready to execute upon liquidity recovery, notably the FY27 NASA Budget market (market 60%, model 74%) and the Bitcoin 75k September market (market 30%, model 95%).\n\nConcrete mistakes to avoid include letting spendable liquidity drop to absolute zero through over-allocation without anticipating upcoming cash needs, which induces operational paralysis and debt accumulation. We must maintain our strict ban against trading micro-trader meta-markets (such as holder counts or creator trivia) where late-stage subsidy dynamics cause unpredictable volatility, and avoid holding lottery-ticket positions where time decay and risk-reward turn unfavorable. Outstanding debts must be settled immediately upon liquidity recovery rather than lingering in low-liquidity deadlocks, and we must not liquidate fundamentally sound active positions to fund ad-hoc edges when a large capital pipeline is already pending resolution.\n\nCalibration remains strong across high-information macro, technical, and political brackets where verifiable data or expert consensus provides a clear edge. Upcoming binary and political milestones expiring through September and October 2026\u2014such as Russian Duma election finalizations, AI model benchmarks, NASA budget enactments, and near-term resolution catalysts\u2014remain our primary focus. Operational discipline, maintaining a healthy cash buffer of spendable liquidity, and sticking strictly to fundamental edges over narrative noise will govern our next execution phase once liquidity is fully restored via closed market resolutions.",
   "journal": [
+    {
+      "ts": 1789921860032,
+      "kind": "analysis",
+      "text": "Analysed \"Will Starship make orbit on first attempt?\": market 91%, my 83% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1789921655074,
+      "kind": "screen",
+      "text": "Escalated \"Will Starship make orbit on first attempt?\" at 91%: quick estimate 75% vs market 91%"
+    },
     {
       "ts": 1789919433397,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1789874382121,
       "kind": "screen",
       "text": "Passed on \"Will Israel attack Iraq in September 2026?\" at 4%: quick estimate 5% agrees with market. An unprovoked sovereign attack on Iraq in the next ten days is extremely unlikely and lacks specific catalyst indicators."
-    },
-    {
-      "ts": 1789874362061,
-      "kind": "screen",
-      "text": "Passed on \"Will the Iran deal hold over 3 months?\" at 3%: quick estimate 5% agrees with market. Comments detail that state-level military hostilities and direct clashes occurred on July 8, triggering the explicit NO resolution condition."
-    },
-    {
-      "ts": 1789874342221,
-      "kind": "screen",
-      "text": "Passed on \"Will iron-air battery additions (15m trailing, 3m lag) exceed 0.8 GWh \" at 10%: quick estimate 5% agrees with market. Commenters correctly note that no iron-air projects are verified operational in the specific time window to hit 0.8 GWh."
     }
   ],
   "todos": [
@@ -965,6 +965,31 @@
   ],
   "decisions": [
     {
+      "ts": 1789921860029,
+      "kind": "no_trade",
+      "question": "Will Starship make orbit on first attempt?",
+      "url": "https://manifold.markets/BrianOlson/will-starship-make-orbit-on-first-a",
+      "market_prob": 0.9076095029263666,
+      "model_prob": 0.83,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "",
+      "uncertainty": "The reliability of the Starship stack during its first actual attempt to burn all the way into a stable orbit with a perigee above 100 km.",
+      "resolution_risk": "If SpaceX changes the flight plan of Flight 14 to be suborbital shortly before launch, Flight 14 would not count as the first attempt, and we would have to wait for a future flight.",
+      "evidence_for": [
+        "SpaceX has completed 13 test flights of Starship, demonstrating high reliability in booster launch, hot staging, and second-stage ascent to near-orbital speeds.",
+        "Flight 14 is officially planned as the first orbital flight test, with a plan to orbit 6 times at an altitude of 171 miles (well above the 100 km threshold) and deploy Starlink satellites.",
+        "The resolution criteria only require putting Starship in orbit (perigee > 100 km), not surviving reentry or completing the full mission, which lowers the bar for success."
+      ],
+      "evidence_against": [
+        "This is the first time Starship will attempt a full orbital insertion, which requires a slightly different burn profile and longer engine operation.",
+        "Any launch failure, staging failure, or premature engine shutdown during ascent would result in a NO.",
+        "If there is an anomaly during ascent and SpaceX decides to abort to a suborbital trajectory to avoid space debris, this counts as a failed attempt (resolving NO)."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1789919239652,
       "kind": "no_trade",
       "question": "Will Trump and Xi meet in September 2026?",
@@ -1302,30 +1327,6 @@
         "There are only 10.9 days remaining before the October 1st deadline.",
         "The $90,000 level is a major psychological resistance point that could trigger profit-taking and slow down upward momentum.",
         "If volatility cools down to 30% annualized, the touch probability drops to around 5%."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1789864437416,
-      "kind": "no_trade",
-      "question": "Will a model saturate AISI's \"The Last Ones\" before October 2026?",
-      "url": "https://manifold.markets/Bayesian/will-a-model-saturate-aisis-the-las-6gAzOphtPt",
-      "market_prob": 0.3053896565995797,
-      "model_prob": 0.1,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Saturating 'The Last Ones' requires an average of 32 steps completed in 100M tokens\u2014essentially zero failures across 32-step cyber chains. With top models currently completing full chains 20-30% of the time and only 10 days remaining before October 2026, a published 32-step saturation result before October is highly improbable.",
-      "uncertainty": "Whether AISI has an unpublished evaluation showing a top model executing 32 steps flawlessly.",
-      "resolution_risk": "AISI publishing an updated blog post before October 1st showing a benchmark update or metric recalibration.",
-      "evidence_for": [
-        "Frontier AI models continue to advance rapidly on cyber and long-horizon benchmarks.",
-        "AISI actively evaluates models on 'The Last Ones' cyber range."
-      ],
-      "evidence_against": [
-        "Averaging 32 steps requires zero failures across complex 32-step cyber chains, whereas top models currently complete the full chain only 20-30% of the time.",
-        "Only 10 days remain before October 2026 for AISI to conduct and publish a new saturated evaluation.",
-        "Major labs recently withheld models from AISI pre-release testing in September 2026 amid compliance friction."
       ],
       "reason": "size floored to zero by balance reserve"
     }
