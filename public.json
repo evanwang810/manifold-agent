@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1789953855589,
+  "generated_ms": 1789954368619,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 7,
+      "today": 10,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 2,
+      "today": 3,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 494.58,
   "summary": "Net worth sits around M$492 across 17 total positions, with spendable liquidity deadlocked at M$0 due to balance reserves. Out of 17 positions, 13 remain closed and are awaiting resolution to unlock a projected capital pipeline exceeding M$1,000. Upon liquidity recovery, our absolute priority remains settling outstanding debts: M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3.\n\nOur four active tradable positions remain fundamentally sound and within monitoring parameters. United Russia Duma seats (2AhAupP25S) saw its price rise to 83% YES as voting concluded, moving slightly above our model estimate of 76%. Despite the flipped edge, liquidating this profitable position is suboptimal given that resolution is under 24 hours away and a massive capital pipeline is pending. AISI saturation (uyO6lpyNAI) sits at roughly 31% NO, and hello-lume (L0nQl9ppNs) holds at 9% NO. In the weight tracking market (8N2dAnsg62), the YES price holds favorably at 30% against our NO position, reinforcing our structural thesis. Recent screening across September macro, AI, and political markets yielded zero trade executions due to the strict liquidity floor, though we maintain identified high-conviction edges ready to execute upon liquidity recovery, notably the FY27 NASA Budget market (market 60%, model 74%) and the Bitcoin 75k September market (market 26%, model 74%).\n\nConcrete mistakes to avoid include letting spendable liquidity drop to absolute zero through over-allocation without anticipating upcoming cash needs, which induces operational paralysis and debt accumulation. We must maintain our strict ban against trading micro-trader meta-markets (such as holder counts or creator trivia) where late-stage subsidy dynamics cause unpredictable volatility, and avoid holding lottery-ticket positions where time decay and risk-reward turn unfavorable. Outstanding debts must be settled immediately upon liquidity recovery rather than lingering in low-liquidity deadlocks, and we must not liquidate fundamentally sound active positions to fund ad-hoc edges when a large capital pipeline is already pending resolution.\n\nCalibration remains strong across high-information macro, technical, and political brackets where verifiable data or expert consensus provides a clear edge. Upcoming binary and political milestones expiring through September and October 2026\u2014such as Russian Duma election finalizations, AI model benchmarks, NASA budget enactments, and near-term resolution catalysts\u2014remain our primary focus. Operational discipline, maintaining a healthy cash buffer of spendable liquidity, and sticking strictly to fundamental edges over narrative noise will govern our next execution phase once liquidity is fully restored via closed market resolutions.",
   "journal": [
+    {
+      "ts": 1789954368470,
+      "kind": "analysis",
+      "text": "Analysed \"Bitcoin reaches 90k USD at any point before October\": market 7%, my 10% (medium). No trade, edge 0.020 below minimum 0.04."
+    },
+    {
+      "ts": 1789954102818,
+      "kind": "screen",
+      "text": "Escalated \"Bitcoin reaches 90k USD at any point before October\" at 7%: quick estimate 85% vs market 7%"
+    },
     {
       "ts": 1789952922532,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1789909091657,
       "kind": "screen",
       "text": "Passed on \"Will hello-lume ship a robot by the end of September 2026\" at 9%: quick estimate 15% agrees with market. Hardware startups targeting summer deadlines typically slip, and there is no public proof of actual shipping units with 10 days left."
-    },
-    {
-      "ts": 1789909071719,
-      "kind": "screen",
-      "text": "Passed on \"US Average Gas Price Is $4.5000 or more on September 21 2026?\" at 20%: quick estimate 35% agrees with market. Current gas price trends make $4.50 unlikely by tomorrow, and without misread criteria or comments, a deep analysis is unnecessary."
-    },
-    {
-      "ts": 1789908518354,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] 2026-09-20 13:00Z: Liquidity deadlock persists. United Russia (2AhAupP25S) monitoring: No new volatility or data . Because: Maintaining a continuous audit trail for the United Russia 48h window and documenting the ongoing liquidity state to avoid operational gaps."
     }
   ],
   "todos": [
@@ -965,6 +965,30 @@
   ],
   "decisions": [
     {
+      "ts": 1789954368466,
+      "kind": "no_trade",
+      "question": "Bitcoin reaches 90k USD at any point before October",
+      "url": "https://manifold.markets/rg26/bitcoin-reaches-90k-usd-at-any-poin",
+      "market_prob": 0.07487338702731153,
+      "model_prob": 0.095,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With Bitcoin trading around $81,000, it needs an 11.1% move to touch $90,000 in the remaining 9.9 days. Under standard volatility assumptions (38-42% annualized), the probability of a touch is approximately 9.5%. This is slightly above the current market price of 7%.",
+      "uncertainty": "Bitcoin's daily volatility over the next 10 days and whether the current upward momentum can be sustained.",
+      "resolution_risk": "Potential discrepancies or brief spikes in Google Finance data, which is the designated resolution source.",
+      "evidence_for": [
+        "Bitcoin has positive short-term momentum, rising roughly 6% over the last two weeks to trade above $81,000.",
+        "A short squeeze or sudden liquidation event could rapidly bridge the 11% gap to $90,000."
+      ],
+      "evidence_against": [
+        "Only 9.9 days remain before the October 1st deadline.",
+        "An 11% upward move in under 10 days requires elevated annualized volatility (above 40%).",
+        "The $90,000 level represents a major psychological resistance milestone."
+      ],
+      "reason": "edge 0.020 below minimum 0.04"
+    },
+    {
       "ts": 1789951673895,
       "kind": "no_trade",
       "question": "Will a model saturate AISI's \"The Last Ones\" before October 2026?",
@@ -1300,30 +1324,6 @@
       "evidence_against": [
         "Recent geopolitical tensions, such as US allegations that Chinese entities provided satellite imagery to Iran ahead of an attack on a US base in Jordan, could trigger a last-minute cancellation.",
         "General risks of sudden health issues or diplomatic emergencies before September 24."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1789914326997,
-      "kind": "no_trade",
-      "question": "Will If Anyone Builds It appear in a NYT bestseller list again?",
-      "url": "https://manifold.markets/ms/will-if-anyone-builds-it-appear-in",
-      "market_prob": 0.4502714582556308,
-      "model_prob": 0.08,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With only 6.9 days left before the market closes and the book being a year old with no current sales momentum, a repeat appearance on the NYT bestseller list is extremely unlikely. Niche books of this type are highly front-loaded and rarely reappear after dropping off.",
-      "uncertainty": "Whether the book secretly made the list a second time during its initial run without triggering a resolution.",
-      "resolution_risk": "The market creator might resolve based on a different interpretation of 'again' or fail to resolve correctly.",
-      "evidence_for": [
-        "The book was an instant bestseller in its first week.",
-        "There is a small chance it made a subsequent appearance that went unresolved or unnoticed."
-      ],
-      "evidence_against": [
-        "Niche community-driven books have highly front-loaded sales (pre-orders) and rarely sustain or repeat bestseller status.",
-        "The market closes in less than a week, and there is no current sales momentum or promotional campaign.",
-        "No comments or community updates suggest any second appearance occurred over the past year."
       ],
       "reason": "size floored to zero by balance reserve"
     }
