@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1789996212687,
+  "generated_ms": 1789996719226,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash-lite",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 53,
+      "today": 56,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 12,
+      "today": 13,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 514.87,
   "summary": "Net worth remains approximately M$492 across 17 total positions, with spendable liquidity completely deadlocked at M$0 due to balance reserves. Out of 17 positions, 13 remain closed and are awaiting resolution to unlock a projected capital pipeline exceeding M$1,000. Upon liquidity recovery, absolute priority remains settling outstanding debts: M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3. \n\nOur four active tradable positions remain fundamentally sound. United Russia Duma seats (2AhAupP25S) has stabilized at 83% YES as voting concludes, moving above our model estimate of 76%. Despite this flipped edge, liquidating the position is suboptimal given that resolution is imminent (<24 hours) and a massive capital pipeline is pending. The other three active positions\u2014AISI saturation (~31% NO), hello-lume robot shipping (9% NO), and the weight tracking market (30% YES against our NO position)\u2014continue to align with our structural theses. Recent screening across September macro, AI, and political markets yielded zero trade executions due to the strict liquidity floor, though we maintain high-conviction targets ready to execute upon liquidity recovery, such as the FY27 NASA Budget (market 60%, model 75%) and Bitcoin 75k September (market 26%, model 74%).\n\nConcrete mistakes to avoid include letting spendable liquidity drop to absolute zero through over-allocation without anticipating upcoming cash needs, which induces operational paralysis and debt accumulation. We must strictly maintain our ban against trading micro-trader meta-markets (such as holder counts or creator trivia) where late-stage subsidy dynamics cause unpredictable volatility, and avoid holding lottery-ticket positions where time decay and risk-reward turn unfavorable. Outstanding debts must be settled immediately upon liquidity recovery rather than lingering in low-liquidity deadlocks, and we must not liquidate fundamentally sound active positions to fund ad-hoc edges when a large capital pipeline is already pending resolution.\n\nCalibration remains strong across high-information macro, technical, and political brackets where verifiable data or expert consensus provides a clear edge. Upcoming binary and political milestones expiring through September and October 2026\u2014such as Russian Duma election finalizations, AI model benchmarks, NASA budget enactments, and near-term resolution catalysts\u2014remain our primary focus. Operational discipline, maintaining a healthy cash buffer of spendable liquidity, and sticking strictly to fundamental edges over narrative noise will govern our next execution phase once liquidity is fully restored via closed market resolutions.",
   "journal": [
+    {
+      "ts": 1789996719089,
+      "kind": "analysis",
+      "text": "Analysed \"Will hello-lume ship a robot by the end of September 2026\": market 9%, my 15% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1789996399814,
+      "kind": "screen",
+      "text": "Escalated \"Will hello-lume ship a robot by the end of September 2026\" at 9%: quick estimate 25% vs market 9%"
+    },
     {
       "ts": 1789995652442,
       "kind": "move",
@@ -437,16 +447,6 @@
       "ts": 1789949187725,
       "kind": "analysis",
       "text": "Analysed \"Will the silver spot price be above $75 USD on October 1st?\": market 10%, my 9% (medium). No trade, edge 0.006 below minimum 0.04."
-    },
-    {
-      "ts": 1789949064329,
-      "kind": "screen",
-      "text": "Escalated \"Will the silver spot price be above $75 USD on October 1st?\" at 10%: quick estimate 28% vs market 10%"
-    },
-    {
-      "ts": 1789948505811,
-      "kind": "book",
-      "text": "Looked over 17 positions: The book remains in a strict liquidity deadlock with M$0 spendable mana, awaiting resolutions for 13 closed positions. Active open positions are fundamentally sound, close to resolution, and holding strong profits or rational pricing, so no sales are warranted. (0 change(s) proposed)"
     }
   ],
   "todos": [
@@ -824,11 +824,11 @@
       "side": "YES",
       "shares": 177.9,
       "invested": 89.3,
-      "value": 168.5,
-      "profit": 79.2,
-      "prob": 0.947,
+      "value": 171.7,
+      "profit": 82.4,
+      "prob": 0.965,
       "closed": false,
-      "days_to_close": 0.5
+      "days_to_close": 0.4
     },
     {
       "question": "Will I weigh >150lbs at the end of September?",
@@ -876,7 +876,7 @@
       "profit": 2.2,
       "prob": 0.305,
       "closed": false,
-      "days_to_close": 9.5
+      "days_to_close": 9.4
     },
     {
       "question": "Will Carlos Alcaraz win the 2026 US Open men's singles title?",
@@ -960,10 +960,33 @@
       "profit": 0.0,
       "prob": 0.094,
       "closed": false,
-      "days_to_close": 9.5
+      "days_to_close": 9.4
     }
   ],
   "decisions": [
+    {
+      "ts": 1789996719087,
+      "kind": "no_trade",
+      "question": "Will hello-lume ship a robot by the end of September 2026",
+      "url": "https://manifold.markets/jdilla/will-hellolume-ship-a-robot-by-the",
+      "market_prob": 0.09423595496456727,
+      "model_prob": 0.15,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "",
+      "uncertainty": "Whether the very first production batch can clear final assembly and actual dispatch before September 30, 2026, or slips into Q4/2027.",
+      "resolution_risk": "The creator intends to make a subjective judgment call if a partially featured or minimalist product ships, creating ambiguity in what constitutes a fulfilling delivery.",
+      "evidence_for": [
+        "Founder Tan stated in Fast Company that the first batch of U.S.-designed and assembled robots is moving into production, targeting shipments before the end of the year.",
+        "Pre-orders were taken with an original framing around Summer/late 2026."
+      ],
+      "evidence_against": [
+        "Notebookcheck reported that the Syncere Lume robotic floor lamp 'begins shipping in early 2027', contradicting a September 2026 delivery timeline.",
+        "Hardware startups almost universally experience production slippage pushing initial batch deliveries past initial self-imposed windows."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1789994044933,
       "kind": "no_trade",
@@ -1297,28 +1320,6 @@
         "Core issues around enriched uranium stockpiles and sanctions sequencing remain unresolved."
       ],
       "reason": "edge 0.027 below minimum 0.04"
-    },
-    {
-      "ts": 1789941818282,
-      "kind": "no_trade",
-      "question": "Will American opinion of AI improve in 2026, according to Gallup?",
-      "url": "https://manifold.markets/cash/will-american-opinion-of-ai-improve-zQqs2LEdCQ",
-      "market_prob": 0.03436117797642035,
-      "model_prob": 0.02,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "The 2026 Gallup/SCSP survey data shows public perception of AI doing 'more good than harm' declined to around 9%, well short of the 13% threshold required for a YES resolution.",
-      "uncertainty": "Whether Gallup releases another comprehensive national poll before resolution that measures the exact same question with a different result.",
-      "resolution_risk": "Ambiguity over whether subsequent 2026 sub-reports could be cited by the creator before the close date.",
-      "evidence_for": [
-        "General technological optimism or potential alternative survey releases could theoretically report higher figures before year-end."
-      ],
-      "evidence_against": [
-        "The 2026 Gallup/SCSP polling on artificial intelligence showed that the proportion of Americans believing AI will do 'more good than harm' dropped to 9%.",
-        "Resolution requires 13% or higher to resolve YES, which the 2026 Gallup data failed to meet."
-      ],
-      "reason": "edge 0.014 below minimum 0.04"
     }
   ]
 }
