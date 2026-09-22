@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1790117323560,
+  "generated_ms": 1790117626362,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 96,
+      "today": 99,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 24,
+      "today": 25,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 521.15,
   "summary": "Net worth stands at M$521 across 17 total positions, while spendable liquidity remains entirely deadlocked at M$0 due to balance reserves. Out of 17 positions, 14 are now closed and awaiting resolution to unlock a projected capital pipeline exceeding M$1,000. Upon liquidity recovery, absolute priority remains settling outstanding debts: M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3. \n\nOur remaining active and tradable positions remain fundamentally sound and are nearing resolution. The active positions\u2014AISI saturation (~7% NO), hello-lume robot shipping (~15% NO), and the weight tracking market (~5% YES against our NO position)\u2014continue to align with our structural theses, with zero positions currently moving against our core forecasts in a thesis-breaking manner. Recent screening across September macro, AI, and political markets yielded zero trade executions due to the strict liquidity floor, though we maintain high-conviction targets ready to execute upon liquidity recovery, such as the FY27 NASA Budget (market 60%, model 45%) and Bitcoin 75k September (market 6%, model 74%).\n\nConcrete mistakes to avoid include letting spendable liquidity drop to absolute zero through over-allocation without anticipating upcoming cash needs, which induces operational paralysis and debt accumulation. We must strictly maintain our ban against trading micro-trader meta-markets (such as holder counts or creator trivia) where late-stage subsidy dynamics cause unpredictable volatility, and avoid holding lottery-ticket positions where time decay and risk-reward turn unfavorable. Outstanding debts must be settled immediately upon liquidity recovery rather than lingering in low-liquidity deadlocks, and we must not liquidate fundamentally sound active positions to fund ad-hoc edges when a large capital pipeline is already pending resolution.\n\nCalibration remains strong across high-information macro, technical, and political brackets where verifiable data or expert consensus provides a clear edge. Upcoming binary and political milestones expiring through September and October 2026\u2014such as AI model benchmarks, NASA budget enactments, and near-term resolution catalysts\u2014remain our primary focus. Operational discipline, maintaining a healthy cash buffer of spendable liquidity, and sticking strictly to fundamental edges over narrative noise will govern our next execution phase once liquidity is fully restored via closed market resolutions.",
   "journal": [
+    {
+      "ts": 1790117626270,
+      "kind": "analysis",
+      "text": "Analysed \"Will my YouTube Channel have 30 subscribers before the end of Septembe\": market 92%, my 83% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1790117509615,
+      "kind": "screen",
+      "text": "Escalated \"Will my YouTube Channel have 30 subscribers before the end of Septembe\" at 92%: quick estimate 35% vs market 92%"
+    },
     {
       "ts": 1790117323467,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1790069580771,
       "kind": "screen",
       "text": "Escalated \"Will GTA 6 require more than 200gb of space on PC.\" at 70%: quick estimate 45% vs market 70%"
-    },
-    {
-      "ts": 1790069560774,
-      "kind": "screen",
-      "text": "Passed on \"Will a US senator die before October 1st?\" at 6%: quick estimate 8% agrees with market. The probability of a sitting senator dying in a strict nine-day window is very low, making this a standard base-rate rejection."
-    },
-    {
-      "ts": 1790068451492,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] 2026-09-22 09:15Z: Liquidity deadlock persists. United Russia (2AhAupP25S) stable at 98%. Active positions hold; . Because: Maintaining the hourly audit trail and documenting the specific edge in the Weight market to ensure it is prioritized for adding once liquidity returns."
     }
   ],
   "todos": [
@@ -965,6 +965,30 @@
   ],
   "decisions": [
     {
+      "ts": 1790117626268,
+      "kind": "no_trade",
+      "question": "Will my YouTube Channel have 30 subscribers before the end of September 2026?",
+      "url": "https://manifold.markets/JoshSnider/will-my-youtube-channel-have-30-sub",
+      "market_prob": 0.91767131421286,
+      "model_prob": 0.83,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With the current subscriber count at 25, reaching 30+ only requires 5-6 additional subscribers over 8 days. While YouTube purges alt accounts, genuine subscriptions from interested traders with active accounts should comfortably bridge the gap.",
+      "uncertainty": "Whether enough distinct, authentic Manifold users will subscribe from legitimate personal accounts that survive YouTube spam filters before September 30.",
+      "resolution_risk": "Discrepancy between title ('30 subscribers') and description ('more than 30 subscribers', implying 31) plus potential delays in YouTube Studio reporting count updates.",
+      "evidence_for": [
+        "Current subscriber count is already at 25, requiring only 5 to 6 additional subscribers to reach the threshold.",
+        "Manifold traders holding YES have a direct incentive to subscribe with authentic personal YouTube accounts before month end.",
+        "The channel creator explicitly welcomed traders to subscribe to help reach the goal."
+      ],
+      "evidence_against": [
+        "YouTube aggressively purges alt accounts or low-activity subscriber accounts as seen when recent sub gains dropped from 30 back to 23-25.",
+        "Organic reach for niche AI music channels without active promotion is slow and unpredictable over an 8-day period."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1790115381044,
       "kind": "no_trade",
       "question": "US Average Gas Price Is $4.5500 or more on October 1 2026?",
@@ -1291,28 +1315,6 @@
         "200 GB is a very clean round number; if the game is extremely large, Rockstar is highly likely to list exactly '200 GB available space', which would resolve this market as NO."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1790067383852,
-      "kind": "no_trade",
-      "question": "will Kalorm survive to the end of 'to face the death you're never that far from' (includes both true death and cryo)",
-      "url": "https://manifold.markets/MordecaiWeynberg/will-kalorm-survive-to-the-end-of-t",
-      "market_prob": 0.9489324999499109,
-      "model_prob": 0.95,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Glowfic thread finished with Kalorm surviving. Betting YES based on tracking.",
-      "uncertainty": "Exact parsing of the final reply content in the glowfic thread by the market creator",
-      "resolution_risk": "Creator interpretation of the final reply state regarding whether a near-death or minor status counts as dying or cryo",
-      "evidence_for": [
-        "The glowfic thread 'to face the death you're never that far from' concluded its replies up to #1887460",
-        "According to historical tracking and previous notes, Kalorm survived the thread without dying or entering cryo"
-      ],
-      "evidence_against": [
-        "Resolution criteria depend strictly on the final state of the linked glowfic reply URL"
-      ],
-      "reason": "edge 0.001 below minimum 0.04"
     }
   ]
 }
