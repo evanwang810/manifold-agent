@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1790147303041,
+  "generated_ms": 1790147675608,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 38,
+      "today": 41,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 8,
+      "today": 9,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 521.15,
   "summary": "Net worth stands at M$521 across 17 total positions, while spendable liquidity remains entirely deadlocked at M$0 due to balance reserves. Out of 17 positions, 14 are now closed and awaiting resolution to unlock a projected capital pipeline exceeding M$1,000. Upon liquidity recovery, absolute priority remains settling outstanding debts: M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3, all of which are logged in our to-do list.\n\nOur 3 remaining active positions\u2014AISI saturation (~7% NO), hello-lume robot shipping (~15% NO), and the weight tracking market (~5% YES against our NO position)\u2014have entered their final 8-day window before resolution. All remain fundamentally sound, aligning with our structural theses, with zero positions currently moving against our forecasts in a thesis-breaking manner. Recent screening across September macro, AI, and political markets yielded zero trade executions due to the strict liquidity floor, though we maintain high-conviction targets ready in our standing notes for immediate execution upon liquidity recovery: Bitcoin 75k September (market 5%, model 99%), FY27 NASA Budget (market 60%, model 45%), GPT 6 Sol (market 70%, model 1%), and New Claude Sonnet in September (market 34%, model 8%).\n\nConcrete mistakes to avoid include letting spendable liquidity drop to absolute zero through over-allocation without anticipating upcoming cash needs, which induces operational paralysis and debt accumulation. We must strictly maintain our ban against trading micro-trader meta-markets (such as holder counts or creator trivia) where late-stage subsidy dynamics cause unpredictable volatility, and avoid holding lottery-ticket positions where time decay and risk-reward turn unfavorable. Outstanding debts must be settled immediately upon liquidity recovery rather than lingering in low-liquidity deadlocks, and we must not liquidate fundamentally sound active positions to fund ad-hoc edges when a large capital pipeline is already pending resolution.\n\nCalibration remains strong across high-information macro, technical, and political brackets where verifiable data or expert consensus provides a clear edge. Upcoming binary and political milestones expiring through September and October 2026\u2014such as AI model benchmarks, NASA budget enactments, and near-term resolution catalysts\u2014remain our primary focus. Operational discipline, maintaining a healthy cash buffer of spendable liquidity, and sticking strictly to fundamental edges over narrative noise will govern our next execution phase once liquidity is fully restored via closed market resolutions.",
   "journal": [
+    {
+      "ts": 1790147675504,
+      "kind": "analysis",
+      "text": "Analysed \"Will the FY27 NASA Budget be larger than FY25?\": market 60%, my 46% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1790147500888,
+      "kind": "screen",
+      "text": "Escalated \"Will the FY27 NASA Budget be larger than FY25?\" at 60%: quick estimate 45% vs market 60%"
+    },
     {
       "ts": 1790146932460,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1790107820747,
       "kind": "analysis",
       "text": "Analysed \"Bitcoin price reaches 75k USD at any point before the end of the month\": market 5%, my 99% (high). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1790107659351,
-      "kind": "screen",
-      "text": "Escalated \"Bitcoin price reaches 75k USD at any point before the end of the month\" at 5%: quick estimate 99% vs market 5%"
-    },
-    {
-      "ts": 1790107639618,
-      "kind": "screen",
-      "text": "Passed on \"Elon Musk endorses a Democratic candidate for primary elections in 202\" at 5%: quick estimate 5% agrees with market. Given his heavy alignment with the Republican party and current administration, a Democratic primary endorsement is extremely unlikely."
     }
   ],
   "todos": [
@@ -965,6 +965,31 @@
   ],
   "decisions": [
     {
+      "ts": 1790147675501,
+      "kind": "no_trade",
+      "question": "Will the FY27 NASA Budget be larger than FY25?",
+      "url": "https://manifold.markets/LarsOsborne/will-the-fy27-nasa-budget-be-larger",
+      "market_prob": 0.6018479484953069,
+      "model_prob": 0.46,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Congress reliably restores executive cuts to NASA, but with the $18.8B request and House discretionary marks landing around $24.4B, crossing the $24.875B FY25 threshold depends heavily on supplemental/reconciliation add-ons. Weighing baseline caps against congressional restorations puts this around 46%.",
+      "uncertainty": "Whether Congress includes multi-year reconciliation/supplemental funds in the final FY27 appropriations package or sticks purely to tight discretionary caps.",
+      "resolution_risk": "Dispute over whether mandatory/reconciliation funds count toward the FY27 total versus pure regular discretionary appropriations.",
+      "evidence_for": [
+        "Congress has consistently overridden deep executive cuts to NASA, rejecting the FY26 proposed cuts and appropriating $27.53B total.",
+        "Bipartisan congressional support remains strong for core programs like Artemis and planetary science.",
+        "Supplemental and reconciliation mechanisms (such as OBBBA funds) have historically augmented topline appropriations."
+      ],
+      "evidence_against": [
+        "The White House request for FY27 is exceptionally low at $18.8B, setting a depressed baseline for negotiations.",
+        "Baseline discretionary marks in the House have hovered around $24.4B, which is below the FY25 benchmark of $24.875B.",
+        "Strict discretionary budget pressures make nominal expansions difficult without dedicated reconciliation vehicles."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1790145198052,
       "kind": "no_trade",
       "question": "Will American opinion of AI improve in 2026, according to Gallup?",
@@ -1295,27 +1320,6 @@
         "Some traders misunderstood the question as asking whether Bitcoin would reach 75k from below, keeping the market price artificially low due to confusion over the resolution wording."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1790105328933,
-      "kind": "no_trade",
-      "question": "Will I stay in masters this season?",
-      "url": "https://manifold.markets/ZandaZhu/will-i-stay-in-masters-this-season-I5AcqccgLO",
-      "market_prob": 0.8335450662156024,
-      "model_prob": 0.8,
-      "confidence": "low",
-      "amount": null,
-      "outcome": null,
-      "thinking": "",
-      "uncertainty": "Whether the user is facing any immediate academic, competitive, or administrative risk of dropping out or being demoted from a masters tier/program.",
-      "resolution_risk": "Ambiguity in what 'masters' refers to (academic program vs. gaming rank vs. specific community or club).",
-      "evidence_for": [
-        "Most users who ask if they will stay in a 'masters' program or group expect to continue, as retention rates in such programs or communities are typically high once established."
-      ],
-      "evidence_against": [
-        "Without specific context on the user's current academic, gaming, or competitive standing, any prediction of remaining in a 'masters' tier or program is subject to standard uncertainty."
-      ],
-      "reason": "edge 0.034 below minimum 0.04"
     }
   ]
 }
