@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1790177146243,
+  "generated_ms": 1790177666300,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash-lite",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 61,
+      "today": 64,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 12,
+      "today": 13,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 525.56,
   "summary": "Net worth stands at M$521 across 17 total positions, while spendable liquidity remains entirely deadlocked at M$0 due to balance reserves. Out of 17 positions, 14 are closed and awaiting resolution to unlock a projected capital pipeline exceeding M$1,000. Upon liquidity recovery, absolute priority remains settling outstanding debts: M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3. Our 3 remaining active positions\u2014AISI saturation (~7% NO), hello-lume robot shipping (~15% NO), and the weight tracking market (~5% YES against our NO position)\u2014have entered their final 7-8 day window before resolution. All remain fundamentally sound, aligning with our structural theses, with zero positions currently moving against our forecasts in a thesis-breaking manner. Recent screening across macro, AI, and political markets yielded zero trade executions due to the strict liquidity floor, though we maintain high-conviction targets ready in our standing notes for immediate execution upon liquidity recovery, including Bitcoin 75k September (market 5%, model 99%), Bitcoin reaches 90k before October (market 41%, model 65%), FY27 NASA Budget (market 60%, model 46%), Next full Gemini model frontier at coding (market 10%, model 25%), GPT 6 Sol (market 70%, model 1%), and New Claude Sonnet in September (market 34%, model 8%).\n\nConcrete mistakes to avoid include letting spendable liquidity drop to absolute zero through over-allocation without anticipating upcoming cash needs, which induces operational paralysis and debt accumulation. We must strictly maintain our ban against trading micro-trader meta-markets where late-stage subsidy dynamics cause unpredictable volatility, and avoid holding lottery-ticket positions where time decay and risk-reward turn unfavorable. Outstanding debts must be settled immediately upon liquidity recovery rather than lingering in low-liquidity deadlocks, and we must not liquidate fundamentally sound active positions to fund ad-hoc edges when a large capital pipeline is already pending resolution. \n\nCalibration remains strong across high-information macro, technical, and political brackets where verifiable data or expert consensus provides a clear edge. Upcoming binary and political milestones expiring through September and October 2026\u2014such as AI model benchmarks, NASA budget enactments, and near-term resolution catalysts\u2014remain our primary focus. Operational discipline, maintaining a healthy cash buffer of spendable liquidity, and sticking strictly to fundamental edges over narrative noise will govern our next execution phase once liquidity is fully restored via closed market resolutions.",
   "journal": [
+    {
+      "ts": 1790177666245,
+      "kind": "analysis",
+      "text": "Analysed \"Will If Anyone Builds It appear in a NYT bestseller list again?\": market 27%, my 38% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1790177368500,
+      "kind": "screen",
+      "text": "Escalated \"Will If Anyone Builds It appear in a NYT bestseller list again?\" at 27%: quick estimate 45% vs market 27%"
+    },
     {
       "ts": 1790176583618,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1790131954448,
       "kind": "agency",
       "text": "Own turn: The portfolio remains in a strict liquidity deadlock with M$0 spendable mana and 14/17 positions closed. The 3 active positions are sound NO bets nearing resolution. I identified a new edge regarding Bitcoin reaching 90k before October (Market 41%, Model 65%) during recent analysis. I will add this to my standing notes to ensure it is executed once the capital pipeline unlocks."
-    },
-    {
-      "ts": 1790131313872,
-      "kind": "book",
-      "text": "Looked over 17 positions: The portfolio is in a strict liquidity deadlock with 14 of 17 positions closed and awaiting resolution. The three remaining active positions (Weight, hello-lume, AISI) are all NO bets nearing their 7-8 day resolution window. All three remain fundamentally sound and aligned with my probability models; no thesis decay is present in the tradable book. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1790130169478,
-      "kind": "analysis",
-      "text": "Analysed \"Bitcoin reaches 90k USD at any point before October\": market 41%, my 65% (medium). No trade, size floored to zero by balance reserve."
     }
   ],
   "todos": [
@@ -965,6 +965,31 @@
   ],
   "decisions": [
     {
+      "ts": 1790177666241,
+      "kind": "no_trade",
+      "question": "Will If Anyone Builds It appear in a NYT bestseller list again?",
+      "url": "https://manifold.markets/ms/will-if-anyone-builds-it-appear-in",
+      "market_prob": 0.2707372469845815,
+      "model_prob": 0.38,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Initial sales were heavily pre-order driven, and niche AI books rarely sustain multi-week momentum once the initial wave clears.",
+      "uncertainty": "Whether the paperback release and ongoing organic interest are sufficient to push non-preorder weekly sales back above the threshold required for the NYT list.",
+      "resolution_risk": "The NYT bestseller list methodology is proprietary and can exclude books or include them based on opaque criteria beyond raw sales numbers alone.",
+      "evidence_for": [
+        "The book has strong word of mouth and high-profile online visibility in tech/AI circles.",
+        "A paperback edition was recently released in September 2026, which can provide a secondary sales bump.",
+        "Around two-thirds of books on the list spend more than one week there, showing repeat appearances are common overall."
+      ],
+      "evidence_against": [
+        "Publishers Weekly data showed initial sales of around 7k copies, heavily skewed by pre-orders, leaving very low ongoing weekly sales.",
+        "The initial week's appearance was largely driven by a massive pre-order wave from the LessWrong/AI community, which typically does not sustain multi-week momentum without mainstream crossover.",
+        "The NYT bestseller list turnover is high, and niche non-fiction books often drop off sharply after their debut week."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1790175155650,
       "kind": "no_trade",
       "question": "Will Google release \"Gemini 3.5 Pro\" to the public before October 1, 2026?",
@@ -1296,29 +1321,6 @@
       "evidence_against": [
         "YouTube aggressively purges alt accounts or low-activity subscriber accounts as seen when recent sub gains dropped from 30 back to 23-25.",
         "Organic reach for niche AI music channels without active promotion is slow and unpredictable over an 8-day period."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1790115381044,
-      "kind": "no_trade",
-      "question": "US Average Gas Price Is $4.5500 or more on October 1 2026?",
-      "url": "https://manifold.markets/Jack1/us-average-gas-price-is-45500-or-mo-cPPEzRUyIA",
-      "market_prob": 0.21748994290113927,
-      "model_prob": 0.45,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Current AAA average is $4.475, requiring a 7.5-cent jump in 9 days. While late-summer spikes can happen, the tight timeline makes $4.55 less likely than a stabilization.",
-      "uncertainty": "Whether wholesale gasoline price increases will fully pass through to retail pumps before October 1.",
-      "resolution_risk": "None; resolves cleanly based on the AAA national average website.",
-      "evidence_for": [
-        "The current AAA national average is sitting at $4.4750, leaving a gap of 7.5 cents to reach the $4.5500 threshold by October 1.",
-        "Gas prices have seen recent upward momentum, with weekly pumps showing increases as wholesale prices push higher."
-      ],
-      "evidence_against": [
-        "Only 9 days remain until October 1, giving limited time for a 7.5-cent rise unless momentum accelerates.",
-        "Seasonal patterns heading out of September often see stabilization or slight cooling in gasoline demand as summer driving winds down."
       ],
       "reason": "size floored to zero by balance reserve"
     }
