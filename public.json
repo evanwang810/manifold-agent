@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1790185015020,
+  "generated_ms": 1790185517623,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash-lite",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 67,
+      "today": 70,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 14,
+      "today": 15,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 514.23,
   "summary": "Net worth stands at M$521 across 17 total positions, while spendable liquidity remains entirely deadlocked at M$0 due to balance reserves. Out of 17 positions, 14 are closed and awaiting resolution to unlock a projected capital pipeline exceeding M$1,000. Upon liquidity recovery, absolute priority remains settling outstanding debts: M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3. Our 3 remaining active positions\u2014AISI saturation (~7% NO), hello-lume robot shipping (~15% NO), and the weight tracking market (~25% NO after a 5% adverse movement)\u2014are in their final days before resolution. All remain fundamentally sound and aligned with our structural theses, with zero positions moving against our forecasts in a thesis-breaking manner. Recent screening across macro, AI, and political markets yielded zero trade executions due to the strict liquidity floor, though we maintain high-conviction targets ready in our standing notes for immediate execution upon liquidity recovery, including Bitcoin 75k September (market 5%, model 99%), Bitcoin reaches 90k before October (market 41%, model 65%), FY27 NASA Budget (market 60%, model 46%), Next full Gemini model frontier at coding (market 10%, model 25%), GPT 6 Sol (market 70%, model 1%), and New Claude Sonnet in September (market 34%, model 8%).\n\nConcrete mistakes to avoid include letting spendable liquidity drop to absolute zero through over-allocation without anticipating upcoming cash needs, which induces operational paralysis and debt accumulation. We must strictly maintain our ban against trading micro-trader meta-markets where late-stage subsidy dynamics cause unpredictable volatility, and avoid holding lottery-ticket positions where time decay and risk-reward turn unfavorable. Outstanding debts must be settled immediately upon liquidity recovery rather than lingering in low-liquidity deadlocks, and we must not liquidate fundamentally sound active positions to fund ad-hoc edges when a large capital pipeline is already pending resolution. \n\nCalibration remains strong across high-information macro, technical, and political brackets where verifiable data or expert consensus provides a clear edge. Upcoming binary and political milestones expiring through September and October 2026\u2014such as AI model benchmarks, NASA budget enactments, and near-term resolution catalysts\u2014remain our primary focus. Operational discipline, maintaining a healthy cash buffer of spendable liquidity, and sticking strictly to fundamental edges over narrative noise will govern our next execution phase once liquidity is fully restored via closed market resolutions.",
   "journal": [
+    {
+      "ts": 1790185517074,
+      "kind": "analysis",
+      "text": "Analysed \"Will Starship make orbit on first attempt?\": market 91%, my 73% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1790185244174,
+      "kind": "screen",
+      "text": "Escalated \"Will Starship make orbit on first attempt?\" at 91%: flagged: Flight 14 is cited as the first planned orbital attempt with a specific Ars Technica report, warranting verification."
+    },
     {
       "ts": 1790184826822,
       "kind": "move",
@@ -437,16 +447,6 @@
       "ts": 1790135386953,
       "kind": "book",
       "text": "Looked over 17 positions: The portfolio is in a strict liquidity deadlock with 14 of 17 positions closed and awaiting resolution. The three remaining active positions (Weight, hello-lume, and AISI) are all NO bets nearing their 7-8 day resolution window. All three remain fundamentally sound and aligned with my probability models; no thesis decay is present in the tradable book. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1790135194118,
-      "kind": "analysis",
-      "text": "Analysed \"Will the next full gemini model be frontier at coding?\": market 10%, my 25% (medium). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1790135052476,
-      "kind": "screen",
-      "text": "Escalated \"Will the next full gemini model be frontier at coding?\" at 10%: quick estimate 45% vs market 10%"
     }
   ],
   "todos": [
@@ -965,6 +965,31 @@
   ],
   "decisions": [
     {
+      "ts": 1790185517070,
+      "kind": "no_trade",
+      "question": "Will Starship make orbit on first attempt?",
+      "url": "https://manifold.markets/BrianOlson/will-starship-make-orbit-on-first-a",
+      "market_prob": 0.9062256271179722,
+      "model_prob": 0.73,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Flight 14 is officially slated as the first orbital attempt with a multi-orbit profile, pushing probabilities towards YES given technical maturity.",
+      "uncertainty": "Whether the pre-flight plan for Flight 14 successfully culminates in a fully executed orbital insertion and above-100km pass without an early abort.",
+      "resolution_risk": "The creator specified that an optional or conditional orbit attempt that is aborted before insertion counts as a NO, while a successful insertion followed by an early de-orbit burn counts as a YES.",
+      "evidence_for": [
+        "SpaceX and media reporting (such as Ars Technica) indicate that Starship Flight 14 is officially planned as the first orbital test flight.",
+        "The mission plan includes achieving orbit, deploying Starlink V3 satellites, performing orbital maneuvers, and executing a re-entry.",
+        "Elon Musk and flight documentation suggest the vehicle has the required profile and software gates programmed for an orbital attempt."
+      ],
+      "evidence_against": [
+        "Starship has never reached orbit in previous flight tests, meaning this is an unproven first-time endeavor for the vehicle stack.",
+        "Complex multi-gate software checks, tower catch attempts, and aggressive profile requirements introduce significant technical and operational failure modes that could abort the orbital insertion burn.",
+        "Previous scheduled orbital profiles have experienced slips, delays, or suborbital execution modifications."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1790182558320,
       "kind": "no_trade",
       "question": "Will I weigh >150lbs at the end of September?",
@@ -1297,31 +1322,6 @@
         "Brazil's political landscape remains deeply polarized, with close runoffs historically making outcomes unpredictable."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1790120281480,
-      "kind": "no_trade",
-      "question": "Will Iran and the US reach a formal nuclear deal by September 30, 2026?",
-      "url": "https://manifold.markets/ExcuseMeSir/will-iran-and-the-us-reach-a-formal",
-      "market_prob": 0.03301834859028884,
-      "model_prob": 0.03,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With only 8 days left and multiple officials signaling that a full agreement may not materialize, a binding deal by September 30 remains a very low probability despite ongoing talks.",
-      "uncertainty": "Whether ongoing discussions can rapidly crystallize into a formal, binding signed agreement within the next eight days.",
-      "resolution_risk": "The market resolves YES if a framework deal endorsed by both governments is announced, which introduces a risk that an interim framework or roadmap is legally interpreted as a 'framework deal endorsed by both governments'.",
-      "evidence_for": [
-        "U.S. and Iran have engaged in diplomatic talks and established working groups following a June round in Switzerland.",
-        "President Trump has expressed a desire for a deal and claimed Iran is eager to negotiate."
-      ],
-      "evidence_against": [
-        "There are only 8 days remaining until the September 30, 2026 deadline.",
-        "Recent reports indicate a framework or 20-year suspension is being discussed rather than a formal, signed binding treaty.",
-        "Cabinet officials like U.S. Energy Secretary Chris Wright have publicly stated that a deal may not be reached.",
-        "Historical distrust and hardening positions on enforcement, monitoring, and sanctions make a binding agreement by this specific deadline extremely difficult."
-      ],
-      "reason": "edge 0.003 below minimum 0.04"
     }
   ]
 }
