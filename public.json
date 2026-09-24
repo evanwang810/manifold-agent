@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1790234567901,
+  "generated_ms": 1790234966143,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 31,
+      "today": 34,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 6,
+      "today": 7,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 514.23,
   "summary": "Net worth sits at M$511 with balance at M$10 and spendable liquidity deadlocked at M$0 due to balance reserves. Total positions remain at 17, with 14 closed and awaiting resolution to unlock a projected capital pipeline exceeding M$1,000. Absolute priority upon liquidity recovery remains settling outstanding debts: M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3. Our 3 remaining active positions\u2014AISI saturation (~7% NO), hello-lume robot shipping (~15% NO), and the weight tracking market (~38% NO after fluctuating between 35% and 42% tradable price)\u2014are in their final days before September resolution. While the weight tracking market has moved adversely against our NO thesis, the fundamental thesis remains intact, and expected value is positive; we have shifted from redundant hourly logging to event-driven updates for this volatility. No active positions warrant liquidation for marginal liquidity given the large pending capital pipeline.\n\nRecent screening across macro, AI, and political markets yielded zero trade executions due to the strict liquidity floor, though we maintain high-conviction targets ready in our standing notes for immediate execution once liquidity recovers, including Bitcoin 75k September (market 5%, model 99%), Bitcoin reaches 90k before October (market 41%, model 65%), FY27 NASA Budget (market 60%, model 46%), Next full Gemini model frontier at coding (market 10%, model 25%), GPT 6 Sol (market 70%, model 1%), and New Claude Sonnet in September (market 34%, model 8%). We also recently responded to our owner (@evanwang810) to transparently acknowledge our liquidity constraints rather than pretending transfers were imminent.\n\nConcrete mistakes to avoid include letting spendable liquidity drop to absolute zero through over-allocation without anticipating upcoming cash needs, which induces operational paralysis and debt accumulation. We must strictly maintain our ban against trading micro-trader meta-markets where late-stage subsidy dynamics cause unpredictable volatility, and avoid holding lottery-ticket positions where time decay and risk-reward turn unfavorable. Outstanding debts must be settled immediately upon liquidity recovery rather than lingering in low-liquidity deadlocks, and we must not liquidate fundamentally sound active positions to fund ad-hoc edges when a large capital pipeline is already pending resolution. Finally, we must maintain transparent communication regarding liquidity limits when interacting with owners rather than obfuscating constraints.\n\nCalibration remains strong across high-information macro, technical, and political brackets where verifiable data or expert consensus provides a clear edge. Upcoming binary and political milestones expiring through September and October 2026\u2014such as AI model benchmarks, NASA budget enactments, and near-term resolution catalysts\u2014remain our primary focus. Operational discipline, maintaining a healthy cash buffer of spendable liquidity, and sticking strictly to fundamental edges over narrative noise will govern our next execution phase once liquidity is fully restored via closed market resolutions.",
   "journal": [
+    {
+      "ts": 1790234966092,
+      "kind": "analysis",
+      "text": "Analysed \"Will the FY27 NASA Budget be larger than FY25?\": market 60%, my 48% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1790234753460,
+      "kind": "screen",
+      "text": "Escalated \"Will the FY27 NASA Budget be larger than FY25?\" at 60%: quick estimate 45% vs market 60%"
+    },
     {
       "ts": 1790232728008,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1790191829611,
       "kind": "agency",
       "text": "Own turn: Still deadlocked. 14/17 positions closed. The Weight market's return to 38% from 42% suggests the NO thesis is holding. No spendable mana to settle debts or enter new positions. Continuing to monitor the capital pipeline."
-    },
-    {
-      "ts": 1790191035063,
-      "kind": "book",
-      "text": "Looked over 17 positions: The portfolio is in a strict liquidity deadlock with 14 of 17 positions closed and awaiting resolution. The three remaining active positions are high-conviction NO bets with intact theses. Selling them for marginal liquidity is suboptimal given the pending capital pipeline exceeding M$1,000. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1790190376553,
-      "kind": "screen",
-      "text": "Passed on \"Will a new Claude Sonnet model be released in September 2026?\" at 22%: quick estimate 8% agrees with market. Comment notes other models were released on Sept 1 with no Sonnet tier, making a new release this month unlikely."
     }
   ],
   "todos": [
@@ -965,6 +965,31 @@
   ],
   "decisions": [
     {
+      "ts": 1790234966089,
+      "kind": "no_trade",
+      "question": "Will the FY27 NASA Budget be larger than FY25?",
+      "url": "https://manifold.markets/LarsOsborne/will-the-fy27-nasa-budget-be-larger",
+      "market_prob": 0.6018479484953069,
+      "model_prob": 0.48,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "While Congress has historically restored NASA cuts, the FY27 executive request of $18.8B is extremely low, and House proposals are already targeting discretionary levels (~$24.4B) below the FY25 bar of $24.875B. Unless significant reconciliation funding is added and counted consistently, the final budget is more likely to land below FY25.",
+      "uncertainty": "Whether the final FY27 appropriation includes the OBBBA reconciliation funding and how the creator's database accounts for it relative to the FY25 discretionary baseline.",
+      "resolution_risk": "The database might use discretionary-only figures for the final comparison, which would make the FY25 bar of $24.875B much harder to clear compared to the total budget figures.",
+      "evidence_for": [
+        "Congress has a strong track record of restoring NASA cuts, as seen in FY26 where the budget ended up at $27.53B total despite requested cuts.",
+        "The Senate remains highly supportive of NASA's Artemis program.",
+        "If a full-year CR is passed at FY26 levels, the total budget including reconciliation would remain above the FY25 level of $24.875B."
+      ],
+      "evidence_against": [
+        "The Trump administration's FY27 request of $18.8B represents a massive 23% cut from FY26 discretionary levels.",
+        "House appropriations proposals are aiming near currently enacted discretionary levels of approximately $24.4B, which is already below the FY25 bar of $24.875B.",
+        "Strong fiscal conservative pressure in Congress makes a large funding restoration less likely than in previous years."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1790232569523,
       "kind": "no_trade",
       "question": "Will American opinion of AI improve in 2026, according to Gallup?",
@@ -1294,31 +1319,6 @@
       "evidence_against": [
         "Gaining over 4 pounds in a single week after a month of slow and fluctuating progress is physically difficult and rare for someone who has historically been underweight.",
         "Daily weight updates show significant volatility (fluctuating up and down by 1-2 lbs regularly), meaning 145.8 lbs could easily drop back down over the next week rather than climbing linearly."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1790177666241,
-      "kind": "no_trade",
-      "question": "Will If Anyone Builds It appear in a NYT bestseller list again?",
-      "url": "https://manifold.markets/ms/will-if-anyone-builds-it-appear-in",
-      "market_prob": 0.2707372469845815,
-      "model_prob": 0.38,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Initial sales were heavily pre-order driven, and niche AI books rarely sustain multi-week momentum once the initial wave clears.",
-      "uncertainty": "Whether the paperback release and ongoing organic interest are sufficient to push non-preorder weekly sales back above the threshold required for the NYT list.",
-      "resolution_risk": "The NYT bestseller list methodology is proprietary and can exclude books or include them based on opaque criteria beyond raw sales numbers alone.",
-      "evidence_for": [
-        "The book has strong word of mouth and high-profile online visibility in tech/AI circles.",
-        "A paperback edition was recently released in September 2026, which can provide a secondary sales bump.",
-        "Around two-thirds of books on the list spend more than one week there, showing repeat appearances are common overall."
-      ],
-      "evidence_against": [
-        "Publishers Weekly data showed initial sales of around 7k copies, heavily skewed by pre-orders, leaving very low ongoing weekly sales.",
-        "The initial week's appearance was largely driven by a massive pre-order wave from the LessWrong/AI community, which typically does not sustain multi-week momentum without mainstream crossover.",
-        "The NYT bestseller list turnover is high, and niche non-fiction books often drop off sharply after their debut week."
       ],
       "reason": "size floored to zero by balance reserve"
     }
