@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1790379675917,
+  "generated_ms": 1790380061552,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 83,
+      "today": 86,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 20,
+      "today": 21,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 507.2,
   "summary": "My overall Brier score over 111 resolved forecasts is 0.128, compared to the market's 0.077, indicating that I forecast worse than the market price and my disagreements have mostly been me being wrong. Out of 111 resolutions, I was closer to the outcome than the market on 44 (and 35 of 86 on big disagreements). In resolved bets, backing favourites won 17 of 20, while longshots against favourites won 13 of 70. Net worth is M$507 with balance at M$10. I have 18 total positions, with 14 of them closed and awaiting resolution.\n\nThe portfolio is currently fully invested with M$0 spendable liquidity, as capital remains bottlenecked in the 14 closed markets awaiting resolution. Our remaining active book consists of 4 high-conviction 'NO' positions nearing late-September and October expirations: hello-lume robot shipping, Sydney Metro opening, NASA budget (supported by an executive request gap compared to FY25), and AISI benchmark saturation. Recent tactical actions included liquidating deteriorating short-term weight and Bitcoin positions to free up capital. \n\nCalibration remains heavily challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay, risk-reward, and overestimating edge against low-probability favourites have frequently proven incorrect (notably our 13/70 longshot win rate). Conversely, backing favourites has been much more reliable. \n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites, and allowing portfolio-memory mismatches to delay tactical exits. We must strictly maintain our ban against trading micro-trader meta-markets where time decay and risk-reward turn unfavorable. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to @EvanWang11j3, and M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1) must be settled immediately upon liquidity recovery from the 14 closed positions.",
   "journal": [
+    {
+      "ts": 1790380061368,
+      "kind": "analysis",
+      "text": "Analysed \"Will Mitch Mcconnell be declared dead by September 30, 2026?\": market 4%, my 1% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1790379861881,
+      "kind": "screen",
+      "text": "Escalated \"Will Mitch Mcconnell be declared dead by September 30, 2026?\" at 4%: quick estimate 1% backs the favourite at 4%"
+    },
     {
       "ts": 1790379123631,
       "kind": "book",
@@ -453,16 +463,6 @@
       "ts": 1790330057984,
       "kind": "screen",
       "text": "Escalated \"Will the Sydney Metro Sydenham-Bankstown line open as scheduled by the\" at 14%: quick estimate 5% backs the favourite at 14%"
-    },
-    {
-      "ts": 1790330038325,
-      "kind": "screen",
-      "text": "Passed on \"will Kalorm survive to the end of 'to face the death you're never that\" at 95%: quick estimate 50% agrees with market. This depends on specific fictional narrative events in an ongoing glowfic story that require deep text analysis to evaluate."
-    },
-    {
-      "ts": 1790330018320,
-      "kind": "agency",
-      "text": "Own turn: Spendable liquidity is M$18. Our portfolio remains heavily locked in 14 closed positions waiting to resolve, which will free up capital for debt repayments. Our active positions (hello-lume, NASA budget, and AISI saturation) are stable and nearing their late-September expirations. No immediate trades are necessary right now; we continue to monitor resolution statuses while maintaining our cash buffer."
     }
   ],
   "todos": [
@@ -958,6 +958,30 @@
   ],
   "decisions": [
     {
+      "ts": 1790380061364,
+      "kind": "no_trade",
+      "question": "Will Mitch Mcconnell be declared dead by September 30, 2026?",
+      "url": "https://manifold.markets/CombatWombat/will-mitch-mcconnell-be-declared-de",
+      "market_prob": 0.04169003198009951,
+      "model_prob": 0.01,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Mitch McConnell returned to the Senate on September 14, 2026, to resume his duties. Given he is currently active and there are only 5 days remaining until the September 30 deadline, the probability of him being declared dead in this extremely short window is very low.",
+      "uncertainty": "A sudden, acute, and fatal health event occurring within the next 5 days.",
+      "resolution_risk": "The lack of a description from the creator leaves minor ambiguity regarding how false reports or unconfirmed rumors of death would be handled.",
+      "evidence_for": [
+        "Mitch McConnell is 84 years old and has significant health issues, including lingering effects of childhood polio and a recent major fall in June 2026.",
+        "He noted upon his return to the Senate that he has not yet fully recovered."
+      ],
+      "evidence_against": [
+        "He returned to Capitol Hill on September 14, 2026, to cast votes and resume his Senate duties.",
+        "There are no reports of recent hospitalization or critical health events since his return.",
+        "The remaining timeframe is extremely short, with only 5 days left until the September 30, 2026 deadline."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1790377473666,
       "kind": "no_trade",
       "question": "Will I remain in Montreal past September?",
@@ -1283,31 +1307,6 @@
         "The 2022 election was historically close, demonstrating that conservative and anti-Lula sentiment in Brazil is robust and highly mobilized."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1790297394581,
-      "kind": "no_trade",
-      "question": "Will Elon Musk and Donald Trump appear together in the same new photo or video on X before October 1, 2026?",
-      "url": "https://manifold.markets/JaimeM/will-elon-musk-and-donald-trump-app",
-      "market_prob": 0.15222334701257695,
-      "model_prob": 0.12,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With only six days remaining and no official joint post on their accounts, the probability of them suddenly posting a new same-frame photo or video is low.",
-      "uncertainty": "Whether Musk and Trump will meet in person and capture a joint photo or video posted officially by either account within the next 6 days.",
-      "resolution_risk": "A third-party account might post a video of them together, which would incorrectly look like a YES to casual observers but resolve NO because it must be posted by @elonmusk, @realDonaldTrump, or @POTUS.",
-      "evidence_for": [
-        "Both Elon Musk and Donald Trump remain active political figures on X who frequently post media content.",
-        "They occasionally make joint public appearances (e.g., at events or meetings) which could be documented via photo or video.",
-        "There are only 6 days remaining until the deadline, leaving a narrow window where a sudden joint appearance or throwback/new post could occur."
-      ],
-      "evidence_against": [
-        "No official joint photo or video featuring both men has been posted by @elonmusk, @realDonaldTrump, or @POTUS in the days leading up to September 25, 2026.",
-        "Their schedules and media teams rarely coordinate spontaneous original posts directly on X featuring both men in the exact same frame unless a major coordinated political event takes place.",
-        "The strict resolution criteria require a new original post by one of their specific accounts, excluding third-party posts, split images, or old archives."
-      ],
-      "reason": "edge 0.032 below minimum 0.04"
     }
   ]
 }
