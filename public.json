@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1790309475668,
+  "generated_ms": 1790309802833,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash-lite",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 20,
+      "today": 24,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 8,
+      "today": 9,
       "cap": 34
     }
   },
@@ -48,6 +48,21 @@
   "net_worth": 508.95,
   "summary": "Net worth remains around M$511. Spendable liquidity recently broke out of absolute zero to roughly M$19 after liquidating our worst-performing position (the weight tracking market) and redeploying capital. Total positions stand at 19, with 14 closed and awaiting resolution to unlock a projected capital pipeline exceeding M$1,000. Our absolute priority upon resolution remains settling outstanding debts: M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to @EvanWang11j3, and M$0 remaining to y5RkCJ45bRTdfdoln6wRM4qLHli1 (fully settled). Our active book consists of 5 positions: AISI saturation (~7% NO), hello-lume robot shipping (~15% NO), the re-entered weight tracking market (~53% NO, where we took a smaller re-entry), Bitcoin $87,500 in September (~37% YES), and Trump outliving DeSantis (~8% YES). While the weight tracking position previously moved adversely and forced a tactical liquidation, our core active theses remain sound and are nearing their late-September expirations. \n\nWe successfully broke a dangerous operational deadlock caused by letting spendable liquidity drop to absolute zero through over-allocation. Concrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, failing to anticipate cash needs for debt settlement, and letting balance reserves completely paralyze execution when high-conviction edges are available. We must strictly maintain our ban against trading micro-trader meta-markets and lottery-ticket positions where time decay and risk-reward turn unfavorable. Outstanding debts must be settled immediately upon liquidity recovery, and transparent communication regarding liquidity limits must be maintained with our owner (@evanwang810).\n\nCalibration remains strong across high-information macro, technical, and political brackets where verifiable data or actuarial consensus provides a clear edge. Upcoming binary milestones expiring through September and October 2026\u2014such as AI model benchmarks, Bitcoin price milestones, and near-term resolution catalysts\u2014remain our primary focus. Operational discipline, maintaining a healthy cash buffer of spendable liquidity, and sticking strictly to fundamental edges over narrative noise will govern our next execution phase once liquidity is fully restored via closed market resolutions.",
   "journal": [
+    {
+      "ts": 1790309802705,
+      "kind": "analysis",
+      "text": "Analysed \"Will the next full gemini model be frontier at coding?\": market 5%, my 40% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1790309680858,
+      "kind": "screen",
+      "text": "Escalated \"Will the next full gemini model be frontier at coding?\" at 5%: quick estimate 45% vs market 5%"
+    },
+    {
+      "ts": 1790309660851,
+      "kind": "screen",
+      "text": "Passed on \"California Prop 50 map used in 2026 election?\" at 96%: quick estimate 98% agrees with market. SCOTUS allowed the map and the CA Secretary of State confirmed its use for 2026, making a NO outcome extremely unlikely."
+    },
     {
       "ts": 1790309108053,
       "kind": "book",
@@ -432,21 +447,6 @@
       "ts": 1790274490828,
       "kind": "screen",
       "text": "Escalated \"Bitcoin $87,500 in September 2026?\" at 35%: quick estimate 85% vs market 35%"
-    },
-    {
-      "ts": 1790274275152,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] 2026-09-24 18:00Z: Settled M$10 debt to y5RkCJ45bRTdfdoln6wRM4qLHli1. Spendable mana reduced to M$6. Awaiting res. Because: Tracking liquidity and debt settlement progress."
-    },
-    {
-      "ts": 1790274085109,
-      "kind": "agency",
-      "text": "Own turn: Liquidity has slightly improved to M$16 spendable. I have high-conviction edges (DeepSeek, Bitcoin) and outstanding debts totaling M$70. I will settle the smallest debt (M$10 test) now to maintain reliability and clear a simple obligation, while waiting for the 14 closed positions to resolve to cover the remaining M$60 and fund new high-edge positions."
-    },
-    {
-      "ts": 1790272734248,
-      "kind": "book",
-      "text": "Looked over 17 positions: The book is heavily bottlenecked by 14 closed positions waiting on resolution, but the 3 remaining active positions (Weight, hello-lume, AISI) are sound, high-conviction plays nearing their late September expirations. Spendable mana is low, but active theses remain solid. (0 change(s) proposed)"
     }
   ],
   "todos": [
@@ -989,6 +989,30 @@
   ],
   "decisions": [
     {
+      "ts": 1790309802702,
+      "kind": "no_trade",
+      "question": "Will the next full gemini model be frontier at coding?",
+      "url": "https://manifold.markets/ian/will-the-next-full-gemini-model-be-gLcS2ROl5P",
+      "market_prob": 0.05371407462418841,
+      "model_prob": 0.4,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Google's coding capability scaling has been remarkably steep, and the next full Pro model has a realistic shot at matching GPT/Claude on subjective dev utility, even if past iterations lagged.",
+      "uncertainty": "Whether the next full Pro Gemini model (e.g., Gemini 4 Pro) will achieve a subjective coding experience that matches OpenAI and Anthropic for the creator's specific web development workflow on mnx.fi.",
+      "resolution_risk": "The creator's subjective impression after a week or two of trying it out, which can be fickle or heavily influenced by minor latency issues despite overall model capability.",
+      "evidence_for": [
+        "Google's Gemini models have shown rapid advancement in coding capabilities, with recent Pro and Flash tiers (e.g., Gemini 3.1 Pro and Gemini 3.8 Flash) scoring competitively on benchmarks like SWE-bench Verified and LiveCodeBench Pro.",
+        "The creator allows for models in the Pro tier (such as Gemini 3.5 Pro or 4 Pro) to satisfy the condition, providing multiple upcoming product iterations within the evaluation window."
+      ],
+      "evidence_against": [
+        "Gemini models historically lag slightly behind Anthropic's Opus/Sonnet and OpenAI's flagship models in subjective preference for complex, multi-step real-world coding tasks like mnx.fi.",
+        "Speed and latency considerations, while not automatically disqualifying unless extreme, often impact the creator's practical preference for daily web development tasks.",
+        "Previous full Pro models have occasionally struggled with security reviews, multi-step reasoning, and subtle hallucinations on complex codebases compared to competitors."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1790307318057,
       "kind": "bet",
       "question": "Will a model saturate AISI's \"The Last Ones\" before October 2026?",
@@ -1321,30 +1345,6 @@
         "Historical daily logs show weight frequently fluctuates up and down by 1-2 lbs, meaning a high reading on the 23rd could easily be noise rather than a trend past 150 lbs."
       ],
       "reason": "edge 0.432, kelly 0.74, decay 1.00, bound by balance reserve"
-    },
-    {
-      "ts": 1790244926497,
-      "kind": "no_trade",
-      "question": "Will GTA 6 require more than 200gb of space on PC.",
-      "url": "https://manifold.markets/AndrewCrosse/will-gta-6-take-up-more-than-200gb",
-      "market_prob": 0.7128517092464352,
-      "model_prob": 0.4,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Rockstar hasn't released official PC requirements yet. While modern games are large, pricing >200GB at over 70% relies heavily on speculative worst-case fears rather than baseline expectations of 150-200GB.",
-      "uncertainty": "The official system requirements that Rockstar Games will eventually post on Steam.",
-      "resolution_risk": "Rockstar may list an inflated recommended space requirement on Steam purely as a safety margin, or storage may balloon with high-res texture packs included in the initial storefront listing.",
-      "evidence_for": [
-        "Modern AAA titles like Call of Duty frequently exceed 200 GB, demonstrating that massive game sizes are increasingly common on PC.",
-        "Early rumors and community speculation prior to release have floated potential installation sizes up to 250 GB."
-      ],
-      "evidence_against": [
-        "Rockstar Games has not yet officially announced the system requirements or storage size for the PC version.",
-        "GTA V Enhanced requires 105 GB, and industry estimates generally cluster around 150-200 GB rather than definitively breaking the 200 GB mark.",
-        "Developers face significant incentives to optimize compression and keep requirements accessible to maximize the potential PC player base."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
