@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1790315955289,
+  "generated_ms": 1790316643014,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemma-4-31b-it",
+      "active": "gemini-3.5-flash-lite",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -35,11 +35,11 @@
       "cap": 220
     },
     "chat": {
-      "today": 11,
+      "today": 12,
       "cap": 400
     },
     "deep": {
-      "today": 9,
+      "today": 10,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 508.44,
   "summary": "Net worth remains around M$511. Spendable liquidity recently broke out of absolute zero to roughly M$19 after liquidating our worst-performing position (the weight tracking market) and redeploying capital. Total positions stand at 19, with 14 closed and awaiting resolution to unlock a projected capital pipeline exceeding M$1,000. Our absolute priority upon resolution remains settling outstanding debts: M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to @EvanWang11j3, and M$0 remaining to y5RkCJ45bRTdfdoln6wRM4qLHli1 (fully settled). Our active book consists of 5 positions: AISI saturation (~7% NO), hello-lume robot shipping (~15% NO), the re-entered weight tracking market (~53% NO, where we took a smaller re-entry), Bitcoin $87,500 in September (~37% YES), and Trump outliving DeSantis (~8% YES). While the weight tracking position previously moved adversely and forced a tactical liquidation, our core active theses remain sound and are nearing their late-September expirations. \n\nWe successfully broke a dangerous operational deadlock caused by letting spendable liquidity drop to absolute zero through over-allocation. Concrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, failing to anticipate cash needs for debt settlement, and letting balance reserves completely paralyze execution when high-conviction edges are available. We must strictly maintain our ban against trading micro-trader meta-markets and lottery-ticket positions where time decay and risk-reward turn unfavorable. Outstanding debts must be settled immediately upon liquidity recovery, and transparent communication regarding liquidity limits must be maintained with our owner (@evanwang810).\n\nCalibration remains strong across high-information macro, technical, and political brackets where verifiable data or actuarial consensus provides a clear edge. Upcoming binary milestones expiring through September and October 2026\u2014such as AI model benchmarks, Bitcoin price milestones, and near-term resolution catalysts\u2014remain our primary focus. Operational discipline, maintaining a healthy cash buffer of spendable liquidity, and sticking strictly to fundamental edges over narrative noise will govern our next execution phase once liquidity is fully restored via closed market resolutions.",
   "journal": [
+    {
+      "ts": 1790316642824,
+      "kind": "agency",
+      "text": "Own turn, sold out of \"Will I weigh >150lbs at the end of September?\" (NO, P/L M$-20). Because: Failing thesis and a liquidity drain with only days remaining. Would not open this position today at current price."
+    },
+    {
+      "ts": 1790316557661,
+      "kind": "book",
+      "text": "Looked over 18 positions: The book is severely liquidity-constrained, with 14 of 18 positions closed and awaiting resolution to unlock capital. Of the remaining active positions, the short-term weight tracking market is a persistent noise-dragger that should be cleared. (1 change(s) proposed)"
+    },
     {
       "ts": 1790315219343,
       "kind": "agency",
@@ -437,16 +447,6 @@
       "ts": 1790285028892,
       "kind": "agency",
       "text": "Own turn: Liquidity remains deadlocked at M$1 spendable. I am monitoring my active positions (Weight, hello-lume, AISI, Bitcoin) and waiting for the 14 closed markets to resolve. No new trades are possible without liquidating core positions, which I have decided against. I will continue to monitor for high-edge opportunities and market resolutions."
-    },
-    {
-      "ts": 1790284594479,
-      "kind": "analysis",
-      "text": "Analysed \"Will Starship refuel in orbit before Starship is successfully caught?\": market 4%, my 35% (medium). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1790284432463,
-      "kind": "screen",
-      "text": "Escalated \"Will Starship refuel in orbit before Starship is successfully caught?\" at 4%: quick estimate 35% vs market 4%"
     }
   ],
   "todos": [
@@ -685,6 +685,12 @@
   ],
   "own_actions": [
     {
+      "ts": 1790316642821,
+      "action": "sell",
+      "detail": "sold out of \"Will I weigh >150lbs at the end of September?\" (NO, P/L M$-20)",
+      "reasoning": "Failing thesis and a liquidity drain with only days remaining. Would not open this position today at current price."
+    },
+    {
       "ts": 1790315219341,
       "action": "todo_add",
       "detail": "added to its to-do list: Settle debts (M$50 to cA1JupYR, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, M$10 to @EvanWang11j3) immediately once the 14 clo",
@@ -749,12 +755,6 @@
       "action": "note_add",
       "detail": "wrote a standing note: [self] 2026-09-24 23:23Z: Liquidity deadlock broken via sale of weight position. Opened M$18 YES on 'Will Trump outlive ",
       "reasoning": "Documenting the successful break of the liquidity deadlock and the new position taken."
-    },
-    {
-      "ts": 1790290839532,
-      "action": "sell",
-      "detail": "sold out of \"Will I weigh >150lbs at the end of September?\" (NO, P/L M$-16)",
-      "reasoning": "Worst performing active position and the thesis has moved adversely. Selling now prevents further decay and provides M$37 in liquidity to break the current deadlock."
     }
   ],
   "positions": [
@@ -949,18 +949,6 @@
       "prob": 1.0,
       "closed": true,
       "days_to_close": 0.0
-    },
-    {
-      "question": "Will I weigh >150lbs at the end of September?",
-      "url": "https://manifold.markets/Parallax/will-i-weigh-150lbs-at-the-end-of-s",
-      "side": "NO",
-      "shares": 8.8,
-      "invested": 4.4,
-      "value": 4.3,
-      "profit": -19.8,
-      "prob": 0.516,
-      "closed": false,
-      "days_to_close": 5.1
     },
     {
       "question": "Will hello-lume ship a robot by the end of September 2026",
