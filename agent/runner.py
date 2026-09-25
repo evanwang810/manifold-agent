@@ -165,10 +165,10 @@ class Runner:
         self.report.replies = await self._answer_messages(len(positions))
 
         if not replies_only:
-            await self._scan()
-
-            # Last, and only occasionally: the one thing it does because it wanted to
-            # rather than because something happened.
+            # Before the scan, not after. Its reviewer needs a deep call, and the scan
+            # would otherwise spend the tick's only one on a market first: that is why
+            # every mana transfer the agent ever proposed came back "review unavailable".
+            # It only fires about once an hour, so the scan rarely loses anything.
             agency = Agency(
                 self.cfg, client=self.client, chat=self.chat, deep=self.deep,
                 memory=self.memory, budget=self.budget, user_id=self.user_id,
@@ -181,6 +181,8 @@ class Runner:
             own = await agency.run(positions, self.report.balance, self.report.net_worth)
             if own:
                 self.report.notes.append(f"own turn: {own}")
+
+            await self._scan()
 
 
         if not self.budget.chat.spent:

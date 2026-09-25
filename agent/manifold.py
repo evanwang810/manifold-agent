@@ -50,7 +50,15 @@ class ManifoldClient:
         params: dict[str, Any] | None = None,
         json: dict[str, Any] | None = None,
         attempts: int = 4,
+        idempotent: bool = True,
     ) -> Any:
+        """Call the API, retrying what is safe to retry.
+
+        A write that moves mana or posts something is not idempotent. If it times out
+        or 5xxs after the server already acted, retrying sends the managram, the bet or
+        the comment a second time. Those only retry on 429, which is the one failure
+        that guarantees nothing happened.
+        """
         clean = {k: v for k, v in (params or {}).items() if v is not None}
         delay = 1.0
         last: Exception | None = None
@@ -59,11 +67,14 @@ class ManifoldClient:
             try:
                 resp = await self._client.request(method, path, params=clean, json=json)
             except httpx.HTTPError as exc:
+                if not idempotent:
+                    raise
                 last = exc
             else:
                 if resp.status_code < 400:
                     return resp.json() if resp.content else None
-                if resp.status_code not in RETRY_STATUSES:
+                retryable = RETRY_STATUSES if idempotent else {429}
+                if resp.status_code not in retryable:
                     raise ManifoldError(resp.status_code, resp.text)
                 last = ManifoldError(resp.status_code, resp.text)
 
@@ -231,7 +242,7 @@ class ManifoldClient:
             body["limitProb"] = round(min(0.99, max(0.01, limit_prob)), 2)
         if expires_at is not None:
             body["expiresAt"] = int(expires_at)
-        return await self._request("POST", "/bet", json=body)
+        return await self._request("POST", "/bet", json=body, idempotent=False)
 
     async def probe_impact(
         self, *, contract_id: str, amount: float, outcome: str
@@ -265,14 +276,19 @@ class ManifoldClient:
     async def post_comment(
         self, *, contract_id: str, content: str, reply_to: str | None = None
     ) -> Any:
-        """Post a markdown comment. Costs M$1 per the API docs."""
+        """Post a markdown comment. Costs M$1 per the API docs.
+
+        The text goes in `markdown`. The API's `content` field is TipTap JSON, and a
+        plain string there is a 400: every comment the agent ever tried to post went
+        that way, and since a failed comment only logs a warning, nothing noticed.
+        """
         if self.cfg.dry_run:
             log.info("[dry-run] would comment on %s: %s", contract_id, content[:200])
             return None
-        body: dict[str, Any] = {"contractId": contract_id, "content": content}
+        body: dict[str, Any] = {"contractId": contract_id, "markdown": content}
         if reply_to:
             body["replyToCommentId"] = reply_to
-        return await self._request("POST", "/comment", json=body)
+        return await self._request("POST", "/comment", json=body, idempotent=False)
 
     async def send_managram(self, *, to_ids: list[str], amount: float, message: str) -> Any:
         """Minimum transfer is M$10 per the API docs."""
@@ -283,4 +299,5 @@ class ManifoldClient:
             "POST",
             "/managram",
             json={"toIds": to_ids, "amount": round(amount, 2), "message": message},
+            idempotent=False,
         )

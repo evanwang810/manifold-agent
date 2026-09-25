@@ -223,24 +223,27 @@ class Agency:
             return {"approved": True, "amount": action.amount, "verdict": "review disabled"}
         if not self.budget.deep.take():
             log.info("No deep budget to review %s, so it does not happen", action.action)
-            return None
+            return {"approved": False, "verdict": "no deep-model budget left to review it"}
         try:
             response = await self.deep.generate(
                 build_review_prompt(
                     proposal=action.describe(),
-                    portfolio=(
-                        self._portfolio_line(positions, balance, net_worth)
-                    ),
+                    portfolio=self._portfolio_line(positions, balance, net_worth),
                     positions=_render_positions(positions),
                     owed=await self._incoming_mana(),
+                    owner_notes=self.memory.lessons_block(),
+                    todos=self.memory.todos_block(),
                 ),
                 system=REVIEW_SYSTEM,
                 json_schema=REVIEW_SCHEMA,
             )
-            return extract_json(response.text)
+            verdict = extract_json(response.text)
         except Exception as exc:  # noqa: BLE001
             log.warning("Review failed, so the action does not happen: %s", exc)
-            return None
+            return {"approved": False, "verdict": f"review call failed: {str(exc)[:120]}"}
+        if "approved" not in verdict:
+            return {"approved": False, "verdict": "reviewer answered without a verdict"}
+        return verdict
 
     def _clamp(
         self, action: Action, positions: list[Position], balance: float
