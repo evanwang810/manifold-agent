@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1790377127186,
+  "generated_ms": 1790377473748,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash-lite",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 80,
+      "today": 83,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 19,
+      "today": 20,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 507.2,
   "summary": "My overall Brier score over 111 resolved forecasts is 0.128, compared to the market's 0.077, indicating that I forecast worse than the market price and my disagreements have mostly been me being wrong. Out of 111 resolutions, I was closer to the outcome than the market on 44 (and 35 of 86 on big disagreements). In resolved bets, backing favourites won 17 of 20, while longshots against favourites won 13 of 70. Net worth is M$507 with balance at M$10. I have 18 total positions, 14 of which are closed and awaiting resolution. \n\nThe portfolio is currently fully invested with M$0 spendable liquidity, as capital remains bottlenecked in the 14 closed markets awaiting resolution. Our remaining active book consists of 4 high-conviction positions nearing late-September and October expirations: hello-lume robot shipping (~9% NO), Sydney Metro opening (~14% NO), NASA budget (~60% NO), and AISI saturation (~31% NO). Recent tactical actions included selling the deteriorating weight-tracking and Trump/DeSantis positions to free capital, and deploying remaining funds into the Sydney Metro and NASA budget NO plays.\n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, failing to anticipate cash needs for debt settlement, allowing portfolio-memory mismatches to delay tactical exits, and taking low-probability lottery tickets. We must strictly maintain our ban against trading micro-trader meta-markets where time decay and risk-reward turn unfavorable. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to @EvanWang11j3, and M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1) must be settled immediately upon liquidity recovery from the closed positions.\n\nCalibration remains challenged on speculative or narrative-driven longshots where our deviations from market prices have frequently proven incorrect. Conversely, our focus remains on verifiable data, fiscal baselines (such as the NASA executive request gap), and actuarial consensus. Operational discipline and settling outstanding debts immediately upon liquidity recovery will govern our next execution phase once the closed markets resolve.",
   "journal": [
+    {
+      "ts": 1790377473670,
+      "kind": "analysis",
+      "text": "Analysed \"Will I remain in Montreal past September?\": market 93%, my 92% (high). No trade, would be a longshot bet against the 93% favourite."
+    },
+    {
+      "ts": 1790377312658,
+      "kind": "screen",
+      "text": "Escalated \"Will I remain in Montreal past September?\" at 93%: quick estimate 95% backs the favourite at 93%"
+    },
     {
       "ts": 1790376575800,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1790327439407,
       "kind": "screen",
       "text": "Passed on \"Can I Beat minecraft in this month With Hot potato?(manifolder)\" at 51%: quick estimate 35% agrees with market. This is a subjective, low-volume user-created challenge with vague resolution details and no need for deep analysis."
-    },
-    {
-      "ts": 1790327419479,
-      "kind": "screen",
-      "text": "Passed on \"Will American opinion of AI improve in 2026, according to Gallup?\" at 4%: quick estimate 45% agrees with market. Gallup trend shows declining sentiment from 13% in 2024 to 12% in 2025, making a rebound to 13% or higher in 2026 unlikely."
-    },
-    {
-      "ts": 1790327399447,
-      "kind": "book",
-      "text": "Looked over 17 positions: The book is severely liquidity-constrained, with 14 of 17 positions closed and awaiting resolution. Our remaining active positions (hello-lume, NASA budget, and AISI saturation) are stable, nearing expiration, and appropriately sized given our current M$18 spendable buffer. (0 change(s) proposed)"
     }
   ],
   "todos": [
@@ -958,6 +958,28 @@
   ],
   "decisions": [
     {
+      "ts": 1790377473666,
+      "kind": "no_trade",
+      "question": "Will I remain in Montreal past September?",
+      "url": "https://manifold.markets/calour/will-i-remain-in-montreal-past-sept",
+      "market_prob": 0.9273543981868526,
+      "model_prob": 0.92,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With only 5 days remaining in September and the creator actively living in Montreal, an abrupt permanent move out of the city before October 1 is very unlikely.",
+      "uncertainty": "Whether the creator has an unannounced or sudden trip or move planned out of Montreal before October 1.",
+      "resolution_risk": "The creator could pass away unexpectedly, leading to mod resolution as NO, or have an abrupt change of plans.",
+      "evidence_for": [
+        "The creator (calour) currently lives in Montreal and is setting the question based on their own living arrangements.",
+        "There are only 5 days left until October 1, 2026, meaning a permanent move out of Montreal in such a short window is statistically unlikely unless already underway."
+      ],
+      "evidence_against": [
+        "The creator could potentially relocate unexpectedly before October 1."
+      ],
+      "reason": "would be a longshot bet against the 93% favourite"
+    },
+    {
       "ts": 1790375144118,
       "kind": "no_trade",
       "question": "US Average Gas Price Is $4.4800 or more on September 28 2026?",
@@ -1286,29 +1308,6 @@
         "The strict resolution criteria require a new original post by one of their specific accounts, excluding third-party posts, split images, or old archives."
       ],
       "reason": "edge 0.032 below minimum 0.04"
-    },
-    {
-      "ts": 1790294846395,
-      "kind": "no_trade",
-      "question": "Will my YouTube Channel have 30 subscribers before the end of September 2026?",
-      "url": "https://manifold.markets/JoshSnider/will-my-youtube-channel-have-30-sub",
-      "market_prob": 0.91767131421286,
-      "model_prob": 0.45,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "The channel is currently at 25 subscribers with only days left in September. While traders are trying to push it over 30, YouTube's anti-bot systems often flag alt accounts, making a 5-sub jump harder than it looks.",
-      "uncertainty": "Whether the creator's channel will receive enough legitimate, non-flagged manual subscriptions from Manifold traders before the end of the month to close the gap from 25 to over 30.",
-      "resolution_risk": "None; it resolves based on the literal YouTube subscriber count at the end of September as reported by the creator or verified.",
-      "evidence_for": [
-        "The creator explicitly stated that the count from YouTube is 25 subscribers with only a few days left in September.",
-        "Traders in the comments are actively attempting to push the subscriber count over the threshold by subscribing or organizing pushes."
-      ],
-      "evidence_against": [
-        "YouTube automatically detects and removes bot subscribers or alt accounts created without VPNs, as noted by commenters who saw their counts drop.",
-        "Getting 5 organic or non-flagged subscribers in just a few days when starting from 25 requires a sudden surge in external attention that is not guaranteed."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
