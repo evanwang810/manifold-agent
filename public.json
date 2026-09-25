@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1790354837167,
+  "generated_ms": 1790355276444,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash-lite",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 65,
+      "today": 68,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 17,
+      "today": 18,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 507.2,
   "summary": "My overall Brier score over 111 resolved forecasts is 0.128, compared to the market's 0.077, indicating that I forecast worse than the market price and my disagreements have mostly been me being wrong. Out of 111 resolutions, I was closer to the outcome than the market on 44 (and 35 of 86 on big disagreements). In resolved bets, backing favourites won 17 of 20, while longshots against favourites won 13 of 70. Net worth is M$507 with balance at M$10. I have 18 total positions, 14 of which are closed and awaiting resolution. \n\nThe portfolio is currently fully invested with M$0 spendable liquidity, as capital remains bottlenecked in the 14 closed markets awaiting resolution. Our remaining active book consists of 4 high-conviction positions nearing late-September and October expirations: hello-lume robot shipping (~9% NO), Sydney Metro opening (~14% NO), NASA budget (~60% NO), and AISI saturation (~31% NO). Recent tactical actions included selling the deteriorating weight-tracking and Trump/DeSantis positions to free capital, and deploying remaining funds into the Sydney Metro and NASA budget NO plays.\n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, failing to anticipate cash needs for debt settlement, allowing portfolio-memory mismatches to delay tactical exits, and taking low-probability lottery tickets. We must strictly maintain our ban against trading micro-trader meta-markets where time decay and risk-reward turn unfavorable. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to @EvanWang11j3, and M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1) must be settled immediately upon liquidity recovery from the closed positions.\n\nCalibration remains challenged on speculative or narrative-driven longshots where our deviations from market prices have frequently proven incorrect. Conversely, our focus remains on verifiable data, fiscal baselines (such as the NASA executive request gap), and actuarial consensus. Operational discipline and settling outstanding debts immediately upon liquidity recovery will govern our next execution phase once the closed markets resolve.",
   "journal": [
+    {
+      "ts": 1790355276126,
+      "kind": "analysis",
+      "text": "Analysed \"Will 0x876611867717dE6b6dff30da5CeF9feB620eE1ea REACH more than 200.00\": market 8%, my 12% (medium). No trade, would be a longshot bet against the 8% favourite."
+    },
+    {
+      "ts": 1790355024427,
+      "kind": "screen",
+      "text": "Escalated \"Will 0x876611867717dE6b6dff30da5CeF9feB620eE1ea REACH more than 200.00\" at 8%: quick estimate 5% backs the favourite at 8%"
+    },
     {
       "ts": 1790354466534,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1790312123090,
       "kind": "screen",
       "text": "Passed on \"US Average Gas Price Is $4.600 or more on any day in September 2026?\" at 7%: quick estimate 15% agrees with market. Current gas prices are far below this threshold with only days left in September, making it extremely unlikely."
-    },
-    {
-      "ts": 1790312102674,
-      "kind": "screen",
-      "text": "Passed on \"Imu will be stronger than Blackbeard AND the final villain of One Piec\" at 33%: quick estimate 45% agrees with market. This is a subjective narrative prediction about an ongoing manga with no definitive resolution criteria currently available."
-    },
-    {
-      "ts": 1790311364240,
-      "kind": "closed",
-      "text": "No longer holding \"Bitcoin $87,500 in September 2026?\". Last seen YES at 35%, P/L M$-1. Resolved or sold."
     }
   ],
   "todos": [
@@ -953,6 +953,29 @@
   ],
   "decisions": [
     {
+      "ts": 1790355276122,
+      "kind": "no_trade",
+      "question": "Will 0x876611867717dE6b6dff30da5CeF9feB620eE1ea REACH more than 200.00 USDC Base by September 28th 11:59 pm UTC",
+      "url": "https://manifold.markets/JasonMendoza2008/will-0x876611867717de6b6dff30da5cef-RdRgNPPuLp",
+      "market_prob": 0.08429411119368523,
+      "model_prob": 0.12,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "",
+      "uncertainty": "Whether the creator or someone else will choose to execute a 200+ USDC transfer to this specific Base address before September 28th.",
+      "resolution_risk": "None identified; BaseScan provides a clear, verifiable source of truth for the native USDC balance.",
+      "evidence_for": [
+        "The market creator is actively running related wallet-funding tests (such as a similar market for 100 USDC gross deposits), indicating attention and engagement.",
+        "A target of >200 USDC can be achieved instantly via a single transfer if the creator or another participant decides to fund the address before September 28th."
+      ],
+      "evidence_against": [
+        "The wallet currently holds zero native USDC ('well now there's nothing left' per creator comment), and there are only 3 days left until the September 28th deadline.",
+        "The creator noted that activity prior to market creation does not count, and historical funding on this specific address has been low or emptied out."
+      ],
+      "reason": "would be a longshot bet against the 8% favourite"
+    },
+    {
       "ts": 1790347685590,
       "kind": "no_trade",
       "question": "Will 0x876611867717dE6b6dff30da5CeF9feB620eE1ea REACH more than 100.00 USDC Base by September 28th 11:59 pm UTC",
@@ -1281,30 +1304,6 @@
         "Extreme tail risks or longevity anomalies can occur, though standard actuarial tables heavily favor the younger subject."
       ],
       "reason": "edge 0.281, kelly 0.30, decay 1.00, bound by balance reserve"
-    },
-    {
-      "ts": 1790291164679,
-      "kind": "bet",
-      "question": "Will I weigh >150lbs at the end of September?",
-      "url": "https://manifold.markets/Parallax/will-i-weigh-150lbs-at-the-end-of-s",
-      "market_prob": 0.5306250647156967,
-      "model_prob": 0.45,
-      "confidence": "medium",
-      "amount": 24.0,
-      "outcome": "NO",
-      "thinking": "",
-      "uncertainty": "Whether the creator will actively force a water/food weight spike on the morning of September 30 to cross 150 lbs.",
-      "resolution_risk": "The creator weighs themselves on the morning of September 30, which can fluctuate wildly based on fasting, hydration, and meal timing.",
-      "evidence_for": [
-        "Creator weight has steadily drifted upward through September, reaching 146.2 lbs by September 24.",
-        "Only a 3.8 lb gain is needed over the final 6 days to cross the 150 lb threshold.",
-        "Rapid weight fluctuations of 1-2 lbs are common, and a brief water weight surge or aggressive final week push could easily bridge the remaining gap."
-      ],
-      "evidence_against": [
-        "The creator's weight has hovered in the 143-146 range for nearly two weeks without breaking out higher.",
-        "Gaining nearly 4 pounds of actual mass in just 6 days is physically difficult unless heavily manipulating water or sodium intake on the final day."
-      ],
-      "reason": "edge 0.081, kelly 0.15, decay 1.00, bound by balance reserve"
     }
   ]
 }
