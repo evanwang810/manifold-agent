@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1790323196338,
+  "generated_ms": 1790323556112,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -35,11 +35,11 @@
       "cap": 220
     },
     "chat": {
-      "today": 15,
+      "today": 16,
       "cap": 400
     },
     "deep": {
-      "today": 12,
+      "today": 13,
       "cap": 34
     }
   },
@@ -48,6 +48,16 @@
   "net_worth": 508.6,
   "summary": "Net worth remains around M$511, with spendable liquidity recently recovering to roughly M$21 after finally cutting our persistent, adverse weight-tracking position and trimming low-conviction Bitcoin exposure. Total positions stand at 17, with 14 closed and awaiting resolution to unlock a projected capital pipeline exceeding M$600. Our absolute priority upon resolution remains settling outstanding debts: M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to @EvanWang11j3, and M$10 fully settled to y5RkCJ45bRTdfdoln6wRM4qLHli1. Our active book consists of 3 core positions: hello-lume robot shipping (~9% NO), AISI saturation (~31% NO), and Trump outliving DeSantis (~7% YES). While our late-September expiration windows are pressing, our active theses remain sound and focused on verifiable data and actuarial edges.\n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, failing to anticipate cash needs for debt settlement, and allowing portfolio-memory mismatches to delay tactical exits. We must strictly maintain our ban against trading micro-trader meta-markets and lottery-ticket positions where time decay and risk-reward turn unfavorable. Outstanding debts must be settled immediately upon liquidity recovery, and transparent communication regarding liquidity limits must be maintained with our owner (@evanwang810).\n\nCalibration remains strong across high-information macro, technical, and political brackets where verifiable data or actuarial consensus provides a clear edge. Upcoming binary milestones expiring through September and October 2026\u2014such as AI model benchmarks and near-term resolution catalysts\u2014remain our primary focus. Operational discipline, maintaining a healthy cash buffer of spendable liquidity, and sticking strictly to fundamental edges over narrative noise will govern our next execution phase once liquidity is fully restored via closed market resolutions.",
   "journal": [
+    {
+      "ts": 1790323556052,
+      "kind": "agency",
+      "text": "Own turn, sold out of \"Will Trump outlive DeSantis?\" (YES, P/L M$+1). Because: Low-probability lottery ticket (8% YES). I would not open this position today; it is a liquidity drain with minimal expected value."
+    },
+    {
+      "ts": 1790323452096,
+      "kind": "book",
+      "text": "Looked over 18 positions: The book is heavily locked in closed positions awaiting resolution. Active positions are generally high-conviction (AISI, NASA), but the Trump/DeSantis bet is a low-probability lottery ticket that no longer fits the risk profile or the ban on lottery-ticket positions. (1 change(s) proposed)"
+    },
     {
       "ts": 1790322643343,
       "kind": "position",
@@ -437,16 +447,6 @@
       "ts": 1790291164682,
       "kind": "trade",
       "text": "Limit order M$24 NO on \"Will I weigh >150lbs at the end of September?\" at 53%, my estimate 45% (medium). Because:"
-    },
-    {
-      "ts": 1790291022043,
-      "kind": "move",
-      "text": "\"Will I weigh >150lbs at the end of September?\" moved +12% to 53%. Holding NO, P/L M$-21."
-    },
-    {
-      "ts": 1790290839536,
-      "kind": "agency",
-      "text": "Own turn, sold out of \"Will I weigh >150lbs at the end of September?\" (NO, P/L M$-16). Because: Worst performing active position and the thesis has moved adversely. Selling now prevents further decay and provides M$37 in liquidity to break the current deadlock."
     }
   ],
   "todos": [
@@ -685,6 +685,12 @@
   ],
   "own_actions": [
     {
+      "ts": 1790323556049,
+      "action": "sell",
+      "detail": "sold out of \"Will Trump outlive DeSantis?\" (YES, P/L M$+1)",
+      "reasoning": "Low-probability lottery ticket (8% YES). I would not open this position today; it is a liquidity drain with minimal expected value."
+    },
+    {
       "ts": 1790322460653,
       "action": "note_add",
       "detail": "wrote a standing note: [self] 2026-09-25 08:00Z: Spendable liquidity is M$0 after entering NASA budget position. Portfolio is now fully investe",
@@ -749,12 +755,6 @@
       "action": "note_add",
       "detail": "wrote a standing note: [self] 2026-09-25 02:28Z: Monitoring 'Will I weigh >150lbs' (NO at 46%). Liquidity remains at M$1. Awaiting resolution o",
       "reasoning": "Maintaining a log of the current liquidity state and the status of the most volatile active position."
-    },
-    {
-      "ts": 1790300075089,
-      "action": "note_add",
-      "detail": "wrote a standing note: [self] 2026-09-25 01:30Z: Liquidity remains at M$1 spendable. Awaiting resolution of 14 closed markets to unlock M$600+ ",
-      "reasoning": "Maintaining the event-driven log of the liquidity state and current operational status during the deadlock."
     }
   ],
   "positions": [
@@ -925,18 +925,6 @@
       "prob": 0.589,
       "closed": false,
       "days_to_close": 6.7
-    },
-    {
-      "question": "Will Trump outlive DeSantis?",
-      "url": "https://manifold.markets/AndrewG/will-trump-outlive-desantis",
-      "side": "YES",
-      "shares": 240.2,
-      "invested": 18.0,
-      "value": 19.4,
-      "profit": 1.4,
-      "prob": 0.081,
-      "closed": false,
-      "days_to_close": 5.0
     },
     {
       "question": "Will the WTI Crude Oil Spot Price be above $78.50 on August 11, 2026?",
