@@ -114,7 +114,11 @@ class ScanConfig:
 class RiskConfig:
     default_max_bet: float = 10
     default_max_fraction: float = 0.10
-    min_edge: float = 0.04
+    # Minimum disagreement with the price, in log-odds (see models.logodds_gap).
+    min_edge_logodds: float = 0.2
+    # Only ever buy the side the market already favours. On the agent's resolved
+    # record, favourite bets won 17 of 20 and longshot bets won 13 of 70.
+    favourites_only: bool = True
     min_bet: float = 8
     kelly_fraction: float = 0.4
 
@@ -142,12 +146,11 @@ class ScreenConfig:
     """
 
     enabled: bool = True
-    # Escalate if the quick estimate is this far from the price. Calibrated against the
-    # 17 forecasts on record: their market/model gaps put the 75th percentile at 0.081
-    # and a 0.10 threshold passes 4 of 17, so this targets roughly a quarter of what is
-    # scanned. Both screen outcomes are logged with the gap that produced them, so this
-    # can be re-derived from the screener's own numbers once there are enough.
-    escalate_edge: float = 0.15
+    # Escalate when the quick estimate differs from the price by this much in
+    # log-odds. With favourites_only on, only a quick estimate that backs the
+    # favourite counts: escalating longshot disagreements spends a deep call on a
+    # trade the sizer will refuse. Over 2,126 logged screens this passes about 24%.
+    escalate_logodds: float = 0.2
 
 
 @dataclass

@@ -100,16 +100,15 @@ plan_queries = 3
 
 [screen]
 # The fast model forecasts each candidate blind, and the deep model only sees markets
-# where that quick number disagrees with the price or where the screener flagged
-# something worth reading properly. The screener is coarse, so the disagreement has to
-# be sizeable before it counts as evidence: at 0.03 nearly everything escalated and the
-# deep model's quota went on questions that were fairly priced all along.
+# where that quick number backs the market's favourite by enough, or where the
+# screener flagged something worth reading properly.
 enabled = true
-# Calibrated from the 17 forecasts on record: their market-versus-model gaps put the
-# 75th percentile at 0.081, and a 0.10 threshold passes 4 of 17. That targets roughly a
-# quarter of what gets scanned. Every screen now logs its own gap and verdict, so this
-# can be re-derived properly once there is enough screener data to beat the proxy.
-escalate_edge = 0.15
+# Measured in log-odds, not percentage points: 95% to 98% is a big move and 50% to 53%
+# is noise, and log-odds is the unit that says so. Over 2,126 logged screens, 0.2 with
+# [risk] favourites_only on passes about 24%. The old rule (a 15-point gap either way)
+# passed 42%, and mostly on the screener hedging a strong favourite toward 50%, which
+# the deep model then bought as a longshot.
+escalate_logodds = 0.2
 
 [budget]
 # The deep tier is the binding constraint on the whole agent, and this cap is what
@@ -178,10 +177,17 @@ blind = true
 # regardless of how strong the edge was, which is dull and learns nothing.
 default_max_bet = 10
 default_max_fraction = 0.10
-# A 4-point disagreement is a real, if weak, opinion and deserves a small position.
-# Kelly already scales the stake with the edge, so a marginal call gets marginal money
-# rather than nothing. Lower means more trades and a much faster calibration record.
-min_edge = 0.04
+# Only ever buy the side the market already favours, and only when the model is more
+# confident in it than the market is. On the agent's own resolved record to September
+# 2026, favourite bets won 17 of 20 and longshot bets against the favourite won 13 of
+# 70. Backtested on 111 resolved forecasts, every favourite-only threshold made money
+# and every rule that allowed longshots lost about 45% per bet. Set false to go back
+# to betting whichever way the model disagrees.
+favourites_only = true
+# Minimum disagreement, in log-odds. 0.2 is about 1.5 points at 95% and about 5 at 50%,
+# so it is loose where the model has been well calibrated (the tails) and strict where
+# it has not (the middle).
+min_edge_logodds = 0.2
 min_bet = 8                   # floor, so a thin edge is still a real position
 kelly_fraction = 0.4          # raise toward 0.7 if you want the conviction cap to bind
 

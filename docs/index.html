@@ -166,6 +166,7 @@
 
   /* memory */
   .recall{font-size:15px; color:var(--muted); margin:0 0 26px; max-width:64ch}
+  .recall.record{font-family:var(--mono); font-size:12.5px; white-space:pre-wrap; max-width:none}
   .sub{
     font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase;
     color:var(--faint); margin:0 0 10px;
@@ -257,6 +258,7 @@
       <div><span class="lbl">Mode</span><span class="v" id="s-mode">—</span></div>
       <div><span class="lbl">Balance</span><span class="v" id="s-bal">—</span></div>
       <div><span class="lbl">Net worth</span><span class="v" id="s-net">—</span></div>
+      <div><span class="lbl">Brier · model / market</span><span class="v" id="s-brier">—</span></div>
       <div><span class="lbl">Model</span><span class="v" id="s-model">—</span></div>
       <div><span class="lbl">Last tick</span><span class="v" id="s-tick">—</span></div>
     </div>
@@ -298,6 +300,11 @@
   <details class="sec" open>
     <summary><h2>What it remembers</h2></summary>
     <div class="inner pane">
+      <p class="sub">Track record</p>
+      <p class="recall record" id="record">Nothing resolved yet.</p>
+      <p class="sub">Where it thinks things stand</p>
+      <p class="recall" id="status">—</p>
+      <p class="sub">Long-term memory</p>
       <p class="recall" id="recall">Loading…</p>
       <div class="cols">
         <div>
@@ -501,6 +508,8 @@ function renderStream(data) {
 }
 
 function renderMemory(data) {
+  if (data.track_record) $('record').textContent = data.track_record;
+  $('status').textContent = data.status || 'Nothing yet.';
   $('recall').textContent = data.summary
     || 'Nothing compressed yet. Its memory is written after enough events accumulate.';
 
@@ -544,6 +553,13 @@ function esc(s) {
   $('s-mode').className = 'v ' + (data.dry_run ? 'dry' : 'live');
   $('s-bal').textContent = mana(data.balance);
   $('s-net').textContent = mana(data.net_worth);
+  const sc = data.score || {};
+  if (sc.n) {
+    // Lower is better. Green only when the model is actually beating the price.
+    $('s-brier').textContent = `${sc.model.toFixed(3)} / ${sc.market.toFixed(3)}`;
+    $('s-brier').className = 'v ' + (sc.model <= sc.market ? 'live' : 'neg');
+    $('s-brier').title = `over ${sc.n} resolved forecasts`;
+  }
   $('s-tick').textContent = data.generated_ms ? ago(data.generated_ms) : '—';
   $('s-model').textContent = (data.model || '').split('/').pop() || '—';
   if (data.username) {

@@ -8,6 +8,7 @@ context stays bounded no matter how long the agent runs.
 from __future__ import annotations
 
 import json
+import re
 import logging
 import time
 from pathlib import Path
@@ -46,6 +47,18 @@ class Memory:
             except json.JSONDecodeError:
                 log.error("state.json is corrupt, starting fresh (old file kept as .bak)")
                 self.state_path.rename(self.state_path.with_suffix(".json.bak"))
+        # Notes written before the status line existed include a run of dated
+        # "liquidity still at M$1" entries. They are status, not lessons, and they
+        # were crowding the real ones out, so they go on load rather than by hand.
+        kept = []
+        for lesson in state.get("lessons", []):
+            text, dated = _clean_note(lesson.get("text", ""))
+            if dated and lesson.get("source") != "owner":
+                continue
+            if any(_near_duplicate(text, k["text"]) for k in kept):
+                continue
+            kept.append({**lesson, "text": text})
+        state["lessons"] = kept
         return state
 
     @staticmethod
@@ -63,6 +76,10 @@ class Memory:
             "last_compress_ms": 0,
             "grounding_out_day": "",   # UTC day grounding quota ran out
             "todos": [],               # [{text, ts, done}]
+            "resolutions": {},         # slug -> {y, checked} once resolved; y None if N/A
+            "resolve_checked": {},     # slug -> ms, last time an open market was checked
+            "last_score_ms": 0,
+            "score": {},               # the latest scoreboard, see Runner._score_forecasts
             "last_own_action_ms": 0,
             "last_book_review_ms": 0,
             "own_actions": [],         # what it chose to do on its own turns
@@ -131,7 +148,7 @@ class Memory:
         return self.state["journal"][-n:]
 
     def journal_block(self, n: int) -> str:
-        entries = self.recent_journal(n)
+        entries = [e for e in self.state["journal"] if e.get("kind") not in _NOISY][-n:]
         if not entries:
             return "(nothing noted yet)"
         return "\n".join(f"- {_stamp(e['ts'])} {e['text']}" for e in entries)
@@ -272,7 +289,7 @@ class Memory:
         if len(text) < 4:
             return False
         todos = self.state["todos"]
-        if any(t["text"].lower() == text.lower() and not t["done"] for t in todos):
+        if any(not t["done"] and _near_duplicate(t["text"], text) for t in todos):
             return False
         todos.append({"text": text, "ts": int(time.time() * 1000), "done": False})
         self.state["todos"] = todos[-30:]
@@ -290,7 +307,16 @@ class Memory:
                 return True
         return False
 
+    def _expire_todos(self) -> None:
+        cutoff = time.time() * 1000 - TODO_MAX_AGE_DAYS * 86_400_000
+        todos = [t for t in self.state["todos"] if t["done"] or t["ts"] >= cutoff]
+        open_items = [t for t in todos if not t["done"]]
+        for stale in open_items[:-MAX_OPEN_TODOS] if len(open_items) > MAX_OPEN_TODOS else []:
+            todos.remove(stale)
+        self.state["todos"] = todos[-30:]
+
     def todos_block(self) -> str:
+        self._expire_todos()
         open_items = [t for t in self.state["todos"] if not t["done"]]
         if not open_items:
             return "(nothing on your list)"
@@ -383,11 +409,17 @@ class Memory:
         giving it advice in a thread, and the owner's instructions file. Only the last
         is authoritative, so the source travels with the text and the prompt says so.
         """
-        text = " ".join(text.split())[:280]
+        text, dated = _clean_note(text)
+        text = text[:280]
         if len(text) < 8:
             return False
+        if dated and source != "owner":
+            # A dated note is a status update. Keep it as the status line, where it
+            # replaces the last one instead of taking a permanent slot.
+            self.set_status(text)
+            return False
         lessons = self.state["lessons"]
-        if any(existing["text"].lower() == text.lower() for existing in lessons):
+        if any(_near_duplicate(existing["text"], text) for existing in lessons):
             return False
 
         lessons.append({"text": text, "source": source, "ts": int(time.time() * 1000)})
@@ -484,15 +516,38 @@ class Memory:
 
     # -- compression ------------------------------------------------------
 
+    def set_status(self, text: str) -> None:
+        """The agent's own read of where things stand, overwritten each own turn.
+
+        Status used to go into standing notes, one permanent slot per update, until
+        six of sixteen notes were "liquidity still low" at different timestamps. It is
+        one line that gets replaced.
+        """
+        text = " ".join(text.split())[:600]
+        if text:
+            self.state["status"] = {"text": text, "ts": int(time.time() * 1000)}
+
+    def track_record_block(self) -> str:
+        return self.state.get("track_record") or ""
+
     def context_block(self) -> str:
         """The memory the model sees on every decision.
 
-        The compressed summary is the long term. The journal tail is the last few hours,
-        which the summary will not have absorbed yet and which is usually the part that
-        matters for what to do right now.
+        Track record first, because an agent that does not know it has been losing to
+        the market has no reason to change anything. Then the compressed summary for
+        the long term, the status line, and the journal tail for the last few hours.
         """
+        parts = []
+        record = self.track_record_block()
+        if record:
+            parts.append(f"YOUR TRACK RECORD (computed from resolved markets, not "
+                         f"your own account of it):\n{record}")
         summary = self.state.get("summary", "").strip()
-        parts = [summary or "No compressed history yet. This is still early."]
+        parts.append(summary or "No compressed history yet. This is still early.")
+        status = self.state.get("status") or {}
+        if status.get("text"):
+            parts.append(f"Where things stood at your last own turn "
+                         f"({_stamp(status['ts'])}): {status['text']}")
         recent = self.journal_block(self.cfg.journal_in_context)
         if recent != "(nothing noted yet)":
             parts.append(f"Since that was written:\n{recent}")
@@ -504,7 +559,7 @@ class Memory:
             return float("inf")
         return (time.time() * 1000 - last) / 3_600_000
 
-    async def maybe_compress(self) -> None:
+    async def maybe_compress(self, facts: str = "") -> None:
         """Compress on whichever comes first: enough events, or enough time.
 
         Event count alone is the wrong trigger now that the journal fills up on quiet
@@ -521,9 +576,9 @@ class Memory:
         fresh = sum(1 for e in self.state["journal"] if e.get("ts", 0) > since)
         due_by_journal = fresh >= self.cfg.journal_in_context * 2
         if due_by_events or due_by_time or due_by_journal:
-            await self.compress()
+            await self.compress(facts)
 
-    async def compress(self) -> None:
+    async def compress(self, facts: str = "") -> None:
         events = self.recent_events(self.cfg.compress_after_events * 2)
         # Only fold in what has happened since the last compression. Entries stay in
         # the journal afterwards rather than being deleted: they are the only readable
@@ -539,7 +594,10 @@ class Memory:
             for e in events
         )
         observed = "\n".join(f"{_stamp(e['ts'])} [{e['kind']}] {e['text']}" for e in journal)
+        record = self.track_record_block()
         prompt = (
+            f"Hard facts, from the API and the resolution record rather than from "
+            f"memory:\n{facts or '(none supplied)'}\n{record}\n\n"
             f"Existing summary:\n{self.state.get('summary') or '(none)'}\n\n"
             f"Decisions and actions since then:\n{rendered}\n\n"
             f"Running observations since then:\n{observed or '(none)'}\n\n"
@@ -549,6 +607,11 @@ class Memory:
             "- Mistakes worth not repeating, stated concretely.\n"
             "- Categories or question styles where this agent has been well or badly calibrated.\n"
             "- Anything about specific still-open markets that matters.\n"
+            "Numbers: only state a figure that appears above, and where the hard facts "
+            "disagree with the existing summary, the hard facts win. No projections, no "
+            "'pipelines', no totals you worked out yourself. If the track record says "
+            "you are doing worse than the market, say so plainly; it is the most "
+            "useful sentence in the summary.\n"
             "Keep concrete details worth keeping and drop the rest: this summary is "
             "what you will still have once the observations above have scrolled out of "
             "reach. Write plainly. No headers, no bullet decoration, just tight prose."
@@ -565,6 +628,43 @@ class Memory:
         self.save()
         log.info("Compressed %d observations into %d chars of memory",
                  len(journal), len(self.state["summary"]))
+
+
+_TAG = re.compile(r"^\s*(\[[^\]]{1,20}\]\s*)+")
+_TIMESTAMP = re.compile(r"^\s*\d{4}-\d{2}-\d{2}([ T]\d{1,2}:\d{2}Z?)?\s*[:\-]?\s*")
+# Journal kinds that are too frequent to be worth reading back in every prompt. They
+# still go on the public log; they just crowd out everything else in a 30-line tail.
+_NOISY = {"screen"}
+# An open to-do this old has either been done without being ticked off or quietly
+# abandoned, and either way it is now noise in front of every decision.
+TODO_MAX_AGE_DAYS = 7
+MAX_OPEN_TODOS = 12
+
+
+def _clean_note(text: str) -> tuple[str, bool]:
+    """Strip copied-in tags and timestamps. The bool says whether it was dated.
+
+    The notes list is rendered as "- [self] text", and the model kept copying the tag
+    back into what it wrote, which is where "[self] [self]" came from. A leading
+    timestamp is the other tell: that is a diary entry about right now, not a rule to
+    carry forward, and it belongs in the status line instead.
+    """
+    text = _TAG.sub("", " ".join(text.split()))
+    dated = bool(_TIMESTAMP.match(text))
+    return _TIMESTAMP.sub("", text).strip(), dated
+
+
+def _near_duplicate(a: str, b: str) -> bool:
+    """Most of the shorter one's words already appear in the longer one.
+
+    Measured against the shorter text rather than the union, because the common
+    repeat is a trimmed restatement of an existing note, which a union-based score
+    rates as different simply because it is shorter.
+    """
+    wa, wb = set(a.lower().split()), set(b.lower().split())
+    if not wa or not wb:
+        return False
+    return len(wa & wb) / min(len(wa), len(wb)) >= 0.8
 
 
 def _stamp(ms: int) -> str:

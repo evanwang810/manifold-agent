@@ -118,6 +118,7 @@ class Agency:
         thinking, proposals = await self._propose(positions, balance, net_worth)
         if thinking:
             self.memory.observe("agency", f"Own turn: {thinking}")
+            self.memory.set_status(thinking)
         if not proposals:
             self.memory.log_event("own_action", action="nothing", reasoning=thinking)
             return "took a turn, nothing worth doing"
@@ -265,6 +266,13 @@ class Agency:
                     f"Wanted to {action.action} \"{held[action.market_id].question[:60]}\" "
                     f"but that market is closed; it can only be waited out.",
                 )
+                return None
+
+        if action.action == "add" and self.cfg.risk.favourites_only:
+            p = held[action.market_id]
+            side_price = p.last_prob if p.side == "YES" else 1.0 - p.last_prob
+            if side_price < 0.5:
+                log.info("Declining to add to a longshot position")
                 return None
 
         if action.action == "add":

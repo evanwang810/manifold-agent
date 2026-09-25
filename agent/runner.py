@@ -25,7 +25,7 @@ from .inbox import Inbox
 from .llm import build_llm
 from .manifold import ManifoldClient, ManifoldError
 from .memory import Memory
-from .models import Market
+from .models import Market, logodds_gap
 from .scanner import Scanner
 from .sizing import RiskEngine
 from .social import Social
@@ -185,8 +185,22 @@ class Runner:
             await self._scan()
 
 
+        # Scored first so a summary rewritten this tick is written against the fresh
+        # record, and handed the real numbers so it cannot drift into fiction: the old
+        # summary talked itself into "a capital pipeline exceeding M$1,000" on a
+        # M$510 account.
+        if not replies_only:
+            await self._score_forecasts()
+
         if not self.budget.chat.spent:
-            await self.memory.maybe_compress()
+            await self.memory.maybe_compress(
+                facts=(
+                    f"Balance M${self.report.balance:,.0f}. Net worth "
+                    f"M${self.report.net_worth:,.0f}. {len(positions)} open positions, "
+                    f"{sum(1 for p in positions if not p.tradable)} of them closed and "
+                    f"awaiting resolution."
+                )
+            )
 
         self.report.llm_calls = self.budget.used
         await self._write_snapshot()
@@ -238,6 +252,9 @@ class Runner:
                 )
             },
             "dry_run": self.cfg.manifold.dry_run,
+            "score": self.memory.state.get("score") or {},
+            "track_record": self.memory.track_record_block(),
+            "status": (self.memory.state.get("status") or {}).get("text", ""),
             "balance": round(self.report.balance, 2),
             "net_worth": round(self.report.net_worth, 2),
             "summary": self.memory.state.get("summary", ""),
@@ -508,6 +525,155 @@ class Runner:
                 "Re-forecast from scratch and decide whether the move reflects "
                 "information you missed.",
             )
+
+    async def _score_forecasts(self) -> None:
+        """Score every forecast on a resolved market against the market's own price.
+
+        This is how the agent finds out how it is actually doing. Brier is
+        mean squared error between probability and outcome, lower is better, 0.25 is a
+        coin flip. Both sides are scored on the same questions at the same moment, so
+        the comparison is fair: the model only has an edge if it beats the price it was
+        blind to. The latest forecast per market counts, since a re-evaluation replaces
+        the earlier view.
+
+        Hourly, and at most a hundred lookups, oldest-checked first, so open
+        markets rotate through without the whole backlog being fetched every time.
+        """
+        state = self.memory.state
+        now = int(time.time() * 1000)
+        if now - int(state.get("last_score_ms") or 0) < 3_600_000:
+            return
+        state["last_score_ms"] = now
+
+        latest: dict[str, dict[str, Any]] = {}
+        bets: list[dict[str, Any]] = []
+        for event in self.memory.recent_events(10**7):
+            if event.get("kind") == "bet" and not event.get("dry_run"):
+                bets.append(event)
+            if (
+                event.get("kind") in ("bet", "no_trade")
+                and event.get("market")
+                and event.get("model_prob") is not None
+                and event.get("market_prob") is not None
+            ):
+                latest[event["market"]] = event
+
+        resolved = state.setdefault("resolutions", {})
+        checked = state.setdefault("resolve_checked", {})
+        pending = sorted(
+            (slug for slug in latest if slug not in resolved),
+            key=lambda slug: checked.get(slug, 0),
+        )
+        for slug in pending[:100]:
+            checked[slug] = now
+            try:
+                data = await self.client.market_by_slug(slug)
+            except ManifoldError as exc:
+                log.info("Could not check %s for resolution: %s", slug, exc)
+                continue
+            if not data.get("isResolved"):
+                continue
+            result = data.get("resolution")
+            if result == "YES":
+                y = 1.0
+            elif result == "NO":
+                y = 0.0
+            elif result == "MKT" and data.get("resolutionProbability") is not None:
+                y = float(data["resolutionProbability"])
+            else:
+                y = None  # cancelled or N/A: nothing to score against
+            resolved[slug] = {"y": y}
+            checked.pop(slug, None)
+
+        scored = [
+            (s, float(e["model_prob"]), float(e["market_prob"]), resolved[s]["y"])
+            for s, e in latest.items()
+            if s in resolved and resolved[s]["y"] is not None
+        ]
+        pairs = [(p, q, y) for _, p, q, y in scored]
+        if not pairs:
+            state["score"] = {"n": 0}
+            return
+        n = len(pairs)
+        model = sum((p - y) ** 2 for p, _, y in pairs) / n
+        market = sum((q - y) ** 2 for _, q, y in pairs) / n
+        # The disagreements are the only forecasts a trade would ever have been made
+        # on, so this is the subset that says whether trading would have paid.
+        big = [(p, q, y) for p, q, y in pairs
+               if logodds_gap(p, q) >= self.cfg.screen.escalate_logodds]
+        state["score"] = {
+            "n": n,
+            "model": round(model, 4),
+            "market": round(market, 4),
+            "closer": sum(1 for p, q, y in pairs if abs(p - y) < abs(q - y)),
+            "disagree_n": len(big),
+            "disagree_closer": sum(1 for p, q, y in big if abs(p - y) < abs(q - y)),
+            "open": len(latest) - len(resolved),
+        }
+        # Bets split by direction. This is the single most useful fact the agent has
+        # about itself: backing the favourite has worked and betting on longshots has
+        # not, and it should be looking at that number rather than rediscovering it.
+        with_fav = against = with_won = against_won = 0
+        settled = 0
+        for bet in bets:
+            outcome = resolved.get(bet.get("market") or "", {}).get("y")
+            if outcome is None or bet.get("market_prob") is None:
+                continue
+            q = float(bet["market_prob"])
+            price = q if bet.get("outcome") == "YES" else 1.0 - q
+            paid = outcome if bet.get("outcome") == "YES" else 1.0 - outcome
+            if price <= 0:
+                continue
+            settled += 1
+            won = paid > 0.5
+            if price >= 0.5:
+                with_fav += 1
+                with_won += won
+            else:
+                against += 1
+                against_won += won
+        state["score"].update({
+            "bets": settled,
+            "fav_n": with_fav, "fav_won": with_won,
+            "long_n": against, "long_won": against_won,
+        })
+
+        verdict = (
+            "You forecast WORSE than the market price. Your disagreements have mostly "
+            "been you being wrong, not the market."
+            if model > market else
+            "You forecast better than the market price on this record."
+        )
+        recent = sorted(
+            scored, key=lambda row: int(latest[row[0]].get("ts") or 0), reverse=True
+        )[:6]
+        lines = [
+            f"Brier score over {n} resolved forecasts: yours {model:.3f}, the market's "
+            f"{market:.3f} (lower is better, 0.25 is a coin flip). {verdict}",
+            f"Closer to the outcome than the market on {state['score']['closer']} of "
+            f"{n}; on big disagreements, {state['score']['disagree_closer']} of "
+            f"{len(big)}.",
+        ]
+        if settled:
+            lines.append(
+                f"Resolved bets: {settled}. Backing the favourite: won {with_won} of "
+                f"{with_fav}. Longshots against the favourite: won {against_won} of "
+                f"{against}."
+            )
+        lines.append("Most recent resolutions:")
+        for slug, p, q, y in recent:
+            question = str(latest[slug].get("question") or slug)[:70]
+            result = "YES" if y >= 0.99 else "NO" if y <= 0.01 else f"{y:.0%}"
+            lines.append(f"- \"{question}\": you {p:.0%}, market {q:.0%}, resolved {result}")
+        state["track_record"] = "\n".join(lines)
+
+        log.info("Scoreboard: model Brier %.4f vs market %.4f over %d", model, market, n)
+        self.memory.observe(
+            "score",
+            f"Scored {n} resolved forecasts: my Brier {model:.3f}, the market's "
+            f"{market:.3f}. Closer than the market on {state['score']['closer']}/{n}.",
+        )
+        self.memory.save()
 
     async def _scan(self) -> None:
         if not self._can_evaluate:

@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import math
 import time
 from dataclasses import dataclass, field
 from typing import Any
@@ -11,6 +12,33 @@ MS_PER_DAY = 86_400_000
 
 def now_ms() -> int:
     return int(time.time() * 1000)
+
+
+def logit(p: float) -> float:
+    p = min(0.99, max(0.01, p))
+    return math.log(p / (1.0 - p))
+
+
+def logodds_gap(p: float, q: float) -> float:
+    """Disagreement between two probabilities, measured in log-odds.
+
+    Percentage points are the wrong unit at the extremes. 95% to 98% is the
+    difference between one failure in twenty and one in fifty, and a 3-point gap
+    there matters far more than 50% to 53%. Log-odds is looser at the tails and
+    stricter in the middle, which also happens to be where the model's forecasts
+    have been good and bad respectively.
+    """
+    return abs(logit(p) - logit(q))
+
+
+def backs_favourite(p: float, q: float) -> bool:
+    """True when the forecast agrees with the market's favourite and goes further.
+
+    On the agent's resolved record to September 2026, bets on the favourite won 17 of
+    20 and longshot bets against it won 13 of 70. Nearly all of the losses were the
+    model talking itself into a longshot.
+    """
+    return (q >= 0.5 and p > q) or (q < 0.5 and p < q)
 
 
 def tiptap_text(node: Any) -> str:

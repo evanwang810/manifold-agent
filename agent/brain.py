@@ -11,7 +11,9 @@ from .config import Config
 from .llm import LLMClient, QuotaError, extract_json
 from .manifold import ManifoldClient, ManifoldError
 from .memory import Memory
-from .models import Comment, Decision, Market, Position, Sizing
+from .models import (
+    Comment, Decision, Market, Position, Sizing, backs_favourite, logodds_gap,
+)
 from .prompts import (
     DECISION_SCHEMA,
     QUERY_SCHEMA,
@@ -175,8 +177,8 @@ class Brain:
                 "screened_in" if passed else "screened_out",
                 market=market.slug, question=market.question, url=market.url,
                 market_prob=market.probability, quick_prob=quick,
-                gap=None if quick is None else round(abs(quick - market.probability), 3),
-                threshold=self.cfg.screen.escalate_edge, reason=detail,
+                gap=None if quick is None else round(logodds_gap(quick, market.probability), 3),
+                threshold=self.cfg.screen.escalate_logodds, reason=detail,
             )
             self.memory.observe(
                 "screen",
@@ -288,12 +290,17 @@ class Brain:
             return False, "screen failed", None
 
         rough = min(0.99, max(0.01, float(data.get("probability", 0.5))))
-        gap = abs(rough - market.probability)
+        q = market.probability
+        gap = logodds_gap(rough, q)
         why = str(data.get("why", ""))[:200]
         interesting = bool(data.get("worth_a_look"))
+        # The screener hedges toward 50% on nearly every strong favourite, so without
+        # this almost everything it escalated was "the favourite might fail", which
+        # the deep model then bought as a longshot and mostly lost.
+        direction_ok = backs_favourite(rough, q) or not self.cfg.risk.favourites_only
 
-        if gap >= self.cfg.screen.escalate_edge:
-            return True, f"quick estimate {rough:.0%} vs market {market.probability:.0%}", rough
+        if gap >= self.cfg.screen.escalate_logodds and direction_ok:
+            return True, f"quick estimate {rough:.0%} backs the favourite at {q:.0%}", rough
         if interesting:
             return True, f"flagged: {why}", rough
         return False, f"quick estimate {rough:.0%} agrees with market. {why}", rough

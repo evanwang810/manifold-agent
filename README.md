@@ -43,8 +43,15 @@ going looking for new ones:
    Rate-limited to once an hour so the cron does not burn a free API tier.
 
 Scanned markets go through a cheap screen first. The fast model forecasts each one
-blind, and only markets where its number disagrees with the price, or where it flags
-something worth reading properly, reach the deep model. Screened-out markets cost one
+blind, and only markets where its number backs the market's favourite by enough, or
+where it flags something worth reading properly, reach the deep model.
+
+It only ever buys the favourite. That rule came out of its own record: favourite bets
+won 17 of 20, and longshot bets against the favourite won 13 of 70, which was nearly
+all of the losses. Disagreement is measured in log-odds rather than points, because
+95% to 98% is a real difference and 50% to 53% is noise. `[risk] favourites_only` turns
+the rule off. Every forecast is scored against the market once it resolves, and the
+agent reads that track record on every decision; it is also on the website. Screened-out markets cost one
 small call and do not count against the tick's evaluation budget, so a tick can look at
 a dozen questions and analyse the two that looked wrong. Fills and moves skip the screen:
 they are already news.

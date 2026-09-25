@@ -133,6 +133,10 @@ class ManifoldClient:
     async def market(self, market_id: str) -> Market:
         return Market.parse(await self._request("GET", f"/market/{market_id}"))
 
+    async def market_by_slug(self, slug: str) -> dict[str, Any]:
+        """Raw payload: the scorer needs resolution fields Market does not carry."""
+        return await self._request("GET", f"/slug/{slug}", attempts=2)
+
     async def comments(self, contract_id: str, limit: int = 200) -> list[Comment]:
         data = await self._request(
             "GET", "/comments", params={"contractId": contract_id, "limit": limit}

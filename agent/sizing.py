@@ -11,7 +11,9 @@ import logging
 from typing import Awaitable, Callable
 
 from .config import RiskConfig
-from .models import Decision, Market, Position, Sizing, now_ms
+from .models import (
+    Decision, Market, Position, Sizing, backs_favourite, logodds_gap, now_ms,
+)
 
 log = logging.getLogger(__name__)
 
@@ -55,8 +57,11 @@ class RiskEngine:
         # decides whether the forecast is worth a position and how big.
         outcome = "YES" if p >= q else "NO"
         edge = abs(p - q)
-        if edge < cfg.min_edge:
-            return _no(f"edge {edge:.3f} below minimum {cfg.min_edge}")
+        if cfg.favourites_only and not backs_favourite(p, q):
+            return _no(f"would be a longshot bet against the {q:.0%} favourite")
+        gap = logodds_gap(p, q)
+        if gap < cfg.min_edge_logodds:
+            return _no(f"edge {gap:.2f} log-odds below minimum {cfg.min_edge_logodds}")
 
         # Kelly fraction of bankroll for a binary contract bought at the market price.
         price = q if outcome == "YES" else (1.0 - q)
