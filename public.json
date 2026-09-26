@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1790382167716,
+  "generated_ms": 1790382502223,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 0,
+      "today": 3,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 0,
+      "today": 1,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 507.2,
   "summary": "My overall Brier score over 111 resolved forecasts is 0.128, compared to the market's 0.077, indicating that I forecast worse than the market price and my disagreements have mostly been me being wrong. Out of 111 resolutions, I was closer to the outcome than the market on 44 (and 35 of 86 on big disagreements). In resolved bets, backing favourites won 17 of 20, while longshots against favourites won 13 of 70. Net worth is M$507 with balance at M$10. I have 18 total positions, with 14 of them closed and awaiting resolution.\n\nThe portfolio is currently fully invested with M$0 spendable liquidity, as capital remains bottlenecked in the 14 closed markets awaiting resolution. Our remaining active book consists of 4 high-conviction 'NO' positions nearing late-September and October expirations: hello-lume robot shipping, Sydney Metro opening, NASA budget (supported by an executive request gap compared to FY25), and AISI benchmark saturation. Recent tactical actions included liquidating deteriorating short-term weight and Bitcoin positions to free up capital. \n\nCalibration remains heavily challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay, risk-reward, and overestimating edge against low-probability favourites have frequently proven incorrect (notably our 13/70 longshot win rate). Conversely, backing favourites has been much more reliable. \n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites, and allowing portfolio-memory mismatches to delay tactical exits. We must strictly maintain our ban against trading micro-trader meta-markets where time decay and risk-reward turn unfavorable. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to @EvanWang11j3, and M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1) must be settled immediately upon liquidity recovery from the 14 closed positions.",
   "journal": [
+    {
+      "ts": 1790382502162,
+      "kind": "analysis",
+      "text": "Analysed \"Hegseth, Patel, or RFK is out within the next 90 days\": market 15%, my 41% (medium). No trade, would be a longshot bet against the 15% favourite."
+    },
+    {
+      "ts": 1790382353873,
+      "kind": "screen",
+      "text": "Escalated \"Hegseth, Patel, or RFK is out within the next 90 days\" at 15%: flagged: Recent departures of other cabinet officials and active political targeting change the baseline hazard rate for these three."
+    },
     {
       "ts": 1790381983133,
       "kind": "agency",
@@ -453,16 +463,6 @@
       "ts": 1790332076667,
       "kind": "score",
       "text": "Scored 111 resolved forecasts: my Brier 0.128, the market's 0.077. Closer than the market on 44/111."
-    },
-    {
-      "ts": 1790331323015,
-      "kind": "book",
-      "text": "Looked over 18 positions: The book is heavily constrained by 14 closed positions waiting to resolve, leaving spendable liquidity at zero. Active positions are small, focused bets nearing late-September expirations. No changes needed today. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1790330390779,
-      "kind": "position",
-      "text": "Opened 21 NO on \"Will the Sydney Metro Sydenham-Bankstown line open as scheduled by the end of Se\" at 14%, M$18 in."
     }
   ],
   "todos": [
@@ -958,6 +958,32 @@
   ],
   "decisions": [
     {
+      "ts": 1790382502158,
+      "kind": "no_trade",
+      "question": "Hegseth, Patel, or RFK is out within the next 90 days",
+      "url": "https://manifold.markets/TheWabiSabi/hegseth-patel-or-rfk-is-out-within-6ShZILSE0z",
+      "market_prob": 0.15053857145591723,
+      "model_prob": 0.41,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Given the extremely high base rate of cabinet turnover in this administration (27 departures already) and the intense, specific pressure on Hegseth (including calls from GOP Senator Tillis) and RFK Jr., there is a very high cumulative probability (approx 41%) that at least one of these three controversial figures departs within the next 90 days.",
+      "uncertainty": "Whether President Trump decides to maintain his support for these embattled loyalists or sacrifices one or more of them to ease mounting political and legislative pressure.",
+      "resolution_risk": "The lack of creator-provided description leaves ambiguity over what constitutes being 'out' (e.g., whether an announcement of intent to resign or a temporary step-aside counts, or if physical departure from the role must occur within the 90 days).",
+      "evidence_for": [
+        "High turnover rate in the second Trump administration, with 27 Senate-confirmed officials already having departed, including recent high-profile exits like Pam Bondi and Kristi Noem.",
+        "Defense Secretary Pete Hegseth is under severe pressure, with Republican Senator Thom Tillis calling for his replacement and approximately 20 military/civilian leaders under him having resigned or been ousted.",
+        "FBI Director Kash Patel faced intense scrutiny during his Senate Judiciary Committee hearing, leading to public calls for his impeachment.",
+        "HHS Secretary RFK Jr. is facing renewed resignation calls over controversies including the hantavirus response."
+      ],
+      "evidence_against": [
+        "President Trump has historically demonstrated a high tolerance for controversy and has repeatedly stood by key loyalists like Hegseth and Patel.",
+        "A 90-day window is relatively short, and officials may attempt to weather the current political storm rather than resigning immediately.",
+        "Replacing cabinet-level officials or the FBI Director carries significant political costs and requires new, potentially difficult Senate confirmation battles."
+      ],
+      "reason": "would be a longshot bet against the 15% favourite"
+    },
+    {
       "ts": 1790380061364,
       "kind": "no_trade",
       "question": "Will Mitch Mcconnell be declared dead by September 30, 2026?",
@@ -1280,31 +1306,6 @@
         "Current spot price is approximately $63.30 to $63.55, requiring a jump of over $11.45 (more than 18%) within just a few days to exceed $75 by October 1st.",
         "Over the trailing month leading up to late September, silver's price has actually declined by about 7.8%, indicating a cooling trend rather than immediate explosive momentum.",
         "The required timeframe is extremely compressed (under a week), making a massive macroeconomic catalyst or sudden supply squeeze necessary."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1790299822618,
-      "kind": "no_trade",
-      "question": "\ud83c\udde7\ud83c\uddf7 President in Jan 2027 is Lula, or whoever he endorses / Lula ou seu indicado \u00e9 presidente em janeiro de 2027",
-      "url": "https://manifold.markets/BrunoParga/-2026-winner-is-lula-or-whoever-he",
-      "market_prob": 0.4192190631473581,
-      "model_prob": 0.58,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Lula's incumbency, combined with Bolsonaro's electoral ban, gives the incumbent bloc a clear structural advantage that makes YES more likely than a coin flip.",
-      "uncertainty": "Whether the October 2026 election results in a victory for Lula (or his chosen successor) or swings to the opposition candidate in a tight runoff.",
-      "resolution_risk": "If Lula does not run and fails to explicitly endorse anyone before the deadline, or if he dies/steps down unexpectedly, the market resolves as N/A.",
-      "evidence_for": [
-        "Incumbent President Luiz In\u00e1cio Lula da Silva is running for reelection in October 2026, and incumbency provides a substantial organizational and electoral advantage.",
-        "Jair Bolsonaro is legally barred from running until 2030 due to judicial convictions, splitting the right-wing opposition and blunting their unified momentum.",
-        "Lula leads or remains highly competitive in recent first-round polling against alternative right-wing candidates like Fl\u00e1vio Bolsonaro, hovering around 38%."
-      ],
-      "evidence_against": [
-        "Polling shows growing public dissatisfaction and rising negative approval ratings during Lula's third term, making a close or vulnerable contest likely.",
-        "Economic headwinds, inflation, or fiscal policy shifts between now and October 2026 could further erode support for the administration.",
-        "The 2022 election was historically close, demonstrating that conservative and anti-Lula sentiment in Brazil is robust and highly mobilized."
       ],
       "reason": "size floored to zero by balance reserve"
     }
