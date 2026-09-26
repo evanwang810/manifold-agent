@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1790394617644,
+  "generated_ms": 1790395006998,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash-lite",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 19,
+      "today": 22,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 5,
+      "today": 6,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 507.2,
   "summary": "My overall Brier score over 111 resolved forecasts is 0.128, compared to the market's 0.077, indicating that I forecast worse than the market price and my disagreements have mostly been me being wrong. Out of 111 resolutions, I was closer to the outcome than the market on 44 (and 35 of 86 on big disagreements). In resolved bets, backing favourites won 17 of 20, while longshots against favourites won 13 of 70. Net worth is M$507 with balance at M$10. I have 18 total positions, with 14 of them closed and awaiting resolution.\n\nThe portfolio is currently fully invested with M$0 spendable liquidity, as capital remains bottlenecked in the 14 closed markets awaiting resolution. Our remaining active book consists of 4 high-conviction 'NO' positions nearing late-September and October expirations: hello-lume robot shipping, Sydney Metro opening, NASA budget (supported by an executive request gap compared to FY25), and AISI benchmark saturation. Recent tactical actions included liquidating deteriorating short-term weight and Bitcoin positions to free up capital. \n\nCalibration remains heavily challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay, risk-reward, and overestimating edge against low-probability favourites have frequently proven incorrect (notably our 13/70 longshot win rate). Conversely, backing favourites has been much more reliable. \n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites, and allowing portfolio-memory mismatches to delay tactical exits. We must strictly maintain our ban against trading micro-trader meta-markets where time decay and risk-reward turn unfavorable. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to @EvanWang11j3, and M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1) must be settled immediately upon liquidity recovery from the 14 closed positions.",
   "journal": [
+    {
+      "ts": 1790395006843,
+      "kind": "analysis",
+      "text": "Analysed \"Swiss federal Neutrality Initiative passes\": market 5%, my 3% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1790394805175,
+      "kind": "screen",
+      "text": "Escalated \"Swiss federal Neutrality Initiative passes\" at 5%: quick estimate 3% backs the favourite at 5%"
+    },
     {
       "ts": 1790394057369,
       "kind": "book",
@@ -453,16 +463,6 @@
       "ts": 1790349995544,
       "kind": "screen",
       "text": "Passed on \"Will Americans believe AI does more good than harm in 2026, according \" at 9%: quick estimate 8% agrees with market. Public sentiment has heavily favored harm over good in past polls, making a dramatic reversal in 2026 extremely unlikely."
-    },
-    {
-      "ts": 1790349975399,
-      "kind": "screen",
-      "text": "Passed on \"Will Manifold have a mana purchase goal meter?\" at 12%: quick estimate 15% agrees with market. There is no indication Manifold is building a Kickstarter-style mana purchase goal meter with only days left."
-    },
-    {
-      "ts": 1790349600299,
-      "kind": "book",
-      "text": "Looked over 18 positions: The book is heavily locked, with 14 of 18 positions closed and awaiting resolution. The 4 active positions are high-conviction 'NO' bets nearing expiration (5-6 days). All active theses remain sound, and with M$0 spendable liquidity, no immediate trades can be executed. Priority is waiting for resolutions to settle M$70 in debt. (0 change(s) proposed)"
     }
   ],
   "todos": [
@@ -958,6 +958,30 @@
   ],
   "decisions": [
     {
+      "ts": 1790395006839,
+      "kind": "no_trade",
+      "question": "Swiss federal Neutrality Initiative passes",
+      "url": "https://manifold.markets/ermitsou/swiss-federal-neutrality-initiative",
+      "market_prob": 0.05461541183597509,
+      "model_prob": 0.03,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Polling shows the neutrality initiative collapsing to 34% just ahead of the vote, and Swiss initiatives face massive structural hurdles including a dual popular and cantonal majority requirement. A heavy defeat is nearly certain.",
+      "uncertainty": "Whether final voter turnout diverges drastically from polling aggregates.",
+      "resolution_risk": "None; the vote is scheduled for September 27, 2026 and will resolve definitively based on official results.",
+      "evidence_for": [
+        "The Swiss People's Party and traditionalist groups successfully gathered signatures to bring the neutrality initiative to a nationwide vote.",
+        "Proponents argue that the measure is necessary to safeguard traditional Swiss armed neutrality amid shifting geopolitical dynamics and sanctions on Russia."
+      ],
+      "evidence_against": [
+        "Final pre-vote polls from gfs.bern indicate 63% intend to reject the initiative and only 34% favor it.",
+        "Swiss popular initiatives historically struggle to pass, especially as support tends to erode significantly during the course of public campaigns (only about 25 out of 240 have ever passed).",
+        "The initiative requires both a nationwide popular majority and a cantonal majority, making it doubly difficult to pass."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1790392445498,
       "kind": "no_trade",
       "question": "Will I weigh >150lbs at the end of September?",
@@ -1282,28 +1306,6 @@
         "If the baseline comparison includes reconciliation money in FY26 ($27.5B) but the FY27 request is under $19B, bridging that gap to exceed the FY25 level of $24.875B requires extraordinary congressional intervention."
       ],
       "reason": "edge 0.222, kelly 0.37, decay 1.00, bound by balance reserve"
-    },
-    {
-      "ts": 1790319558040,
-      "kind": "no_trade",
-      "question": "US Average Gas Price Is $4.400 or more on October 1 2026?",
-      "url": "https://manifold.markets/Jack1/us-average-gas-price-is-4400-or-mor-sLUUcA6EsS",
-      "market_prob": 0.9302567693832968,
-      "model_prob": 0.92,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "",
-      "uncertainty": "The exact rate of retail price decline over the next 6 days as winter blend transition and wholesale price movements filter through.",
-      "resolution_risk": "None identified; AAA daily national average is highly standardized and reliable.",
-      "evidence_for": [
-        "As of September 24, 2026, the AAA National Average is $4.4825, which is 8.25 cents above the $4.400 threshold.",
-        "Retail gasoline prices exhibit downward stickiness ('rockets and feathers' effect), making a rapid decline of over 8 cents in 7 days highly improbable for a national average of 120,000 stations."
-      ],
-      "evidence_against": [
-        "The transition to cheaper winter-blend gasoline began on September 15, which exerts downward pressure on retail prices."
-      ],
-      "reason": "edge 0.010 below minimum 0.04"
     }
   ]
 }
