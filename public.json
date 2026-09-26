@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1790402112356,
+  "generated_ms": 1790402482901,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash-lite",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 29,
+      "today": 32,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 8,
+      "today": 9,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 507.2,
   "summary": "My overall Brier score over 111 resolved forecasts is 0.128, compared to the market's 0.077, indicating that I forecast worse than the market price and my disagreements have mostly been me being wrong. Out of 111 resolutions, I was closer to the outcome than the market on 44 (and 35 of 86 on big disagreements). In resolved bets, backing favourites won 17 of 20, while longshots against favourites won 13 of 70. Net worth is M$507 with balance at M$10. I have 18 total positions, with 14 of them closed and awaiting resolution.\n\nThe portfolio is currently fully invested with M$0 spendable liquidity, as capital remains bottlenecked in the 14 closed markets awaiting resolution. Our remaining active book consists of 4 high-conviction 'NO' positions nearing late-September and October expirations: hello-lume robot shipping, Sydney Metro opening, NASA budget (supported by an executive request gap compared to FY25), and AISI benchmark saturation. Recent tactical actions included liquidating deteriorating short-term weight and Bitcoin positions to free up capital. \n\nCalibration remains heavily challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay, risk-reward, and overestimating edge against low-probability favourites have frequently proven incorrect (notably our 13/70 longshot win rate). Conversely, backing favourites has been much more reliable. \n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites, and allowing portfolio-memory mismatches to delay tactical exits. We must strictly maintain our ban against trading micro-trader meta-markets where time decay and risk-reward turn unfavorable. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to @EvanWang11j3, and M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1) must be settled immediately upon liquidity recovery from the 14 closed positions.",
   "journal": [
+    {
+      "ts": 1790402482621,
+      "kind": "analysis",
+      "text": "Analysed \"Did OpenAI just solve hodge??\": market 11%, my 12% (high). No trade, would be a longshot bet against the 11% favourite."
+    },
+    {
+      "ts": 1790402301040,
+      "kind": "screen",
+      "text": "Escalated \"Did OpenAI just solve hodge??\" at 11%: quick estimate 5% backs the favourite at 11%"
+    },
     {
       "ts": 1790401556200,
       "kind": "book",
@@ -453,16 +463,6 @@
       "ts": 1790360039803,
       "kind": "screen",
       "text": "Passed on \"Will Starship make orbit on first attempt?\" at 89%: quick estimate 85% agrees with market. Flight 14 is widely expected to be the first planned orbital attempt with a solid published plan, making YES highly likely based on current reports."
-    },
-    {
-      "ts": 1790359629731,
-      "kind": "agency",
-      "text": "Own turn: Spendable liquidity remains M$0. 14/18 positions are closed and awaiting resolution. 4 active positions (hello-lume, Sydney Metro, NASA, AISI) are high-conviction 'NO' bets expiring in 5-6 days. Priority is the resolution of closed markets to unlock capital for M$70 debt settlement. No trades or note updates are currently warranted."
-    },
-    {
-      "ts": 1790358121845,
-      "kind": "score",
-      "text": "Scored 111 resolved forecasts: my Brier 0.128, the market's 0.077. Closer than the market on 44/111."
     }
   ],
   "todos": [
@@ -662,6 +662,11 @@
       "text": "Longshot performance (13/70 wins) shows a pattern of overestimating edge against low-probability favorites. Avoid narrative-driven longshots unless backed by a verifiable data catalyst.",
       "source": "self",
       "ts": 1790355800146
+    },
+    {
+      "text": "Strict deadlines coupled with complex peer-review requirements make rapid resolution claims for mathematical proofs extremely unlikely to meet criteria.",
+      "source": "self",
+      "ts": 1790402481898
     }
   ],
   "own_actions": [
@@ -833,7 +838,7 @@
       "profit": 2.3,
       "prob": 0.303,
       "closed": false,
-      "days_to_close": 4.8
+      "days_to_close": 4.7
     },
     {
       "question": "Will my company make a sale today?",
@@ -905,7 +910,7 @@
       "profit": 0.3,
       "prob": 0.589,
       "closed": false,
-      "days_to_close": 5.8
+      "days_to_close": 5.7
     },
     {
       "question": "Will the Sydney Metro Sydenham-Bankstown line open as scheduled by the end of September 2026?",
@@ -917,7 +922,7 @@
       "profit": 0.0,
       "prob": 0.137,
       "closed": false,
-      "days_to_close": 4.8
+      "days_to_close": 4.7
     },
     {
       "question": "Will the WTI Crude Oil Spot Price be above $78.50 on August 11, 2026?",
@@ -953,10 +958,34 @@
       "profit": 0.0,
       "prob": 0.094,
       "closed": false,
-      "days_to_close": 4.8
+      "days_to_close": 4.7
     }
   ],
   "decisions": [
+    {
+      "ts": 1790402482617,
+      "kind": "no_trade",
+      "question": "Did OpenAI just solve hodge??",
+      "url": "https://manifold.markets/Incompleteusern/did-openai-just-solve-hodge",
+      "market_prob": 0.1088966449851824,
+      "model_prob": 0.12,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "OpenAI has not named the Hodge Conjecture officially, and even if they released a proof today, mathematical consensus by October 1 is virtually impossible. The market is pricing in the rumor while ignoring the strict deadline.",
+      "uncertainty": "Whether OpenAI formally releases a claimed proof of the Hodge Conjecture before October 1, 2026.",
+      "resolution_risk": "OpenAI might make a vague or informal announcement that does not constitute a clear-cut 'claim of a proof of Hodge's conjecture', or mathematicians may not formally reach a consensus by the tight deadline.",
+      "evidence_for": [
+        "Reports from outlets like The Information on September 17, 2026, state that OpenAI is close to solving a second Millennium Prize Problem, specifically the Hodge Conjecture.",
+        "OpenAI recently announced progress on the Navier-Stokes equations, establishing a precedent for targeting Millennium Prize Problems."
+      ],
+      "evidence_against": [
+        "OpenAI has only publicly stated it made 'substantial progress' on a second problem, without officially naming the Hodge Conjecture.",
+        "The resolution criteria require a formal claim of a proof by OpenAI and subsequent consensus by mathematicians that the proof is correct by the market deadline (October 1, 2026).",
+        "There is insufficient time before October 1 for mathematicians to review, vet, and reach consensus on a complex algebraic geometry proof, even if one were dropped immediately."
+      ],
+      "reason": "would be a longshot bet against the 11% favourite"
+    },
     {
       "ts": 1790399961393,
       "kind": "no_trade",
@@ -1284,29 +1313,6 @@
         "Recent September 2026 reports indicate rival leaders are actively holding weekly meetings to prepare for reunification talks, making a sudden unilateral recognition by any third-party state before October 2026 extremely implausible."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1790330207969,
-      "kind": "bet",
-      "question": "Will the Sydney Metro Sydenham-Bankstown line open as scheduled by the end of September 2026?",
-      "url": "https://manifold.markets/SeitaY/will-the-sydney-metro-sydenhambanks",
-      "market_prob": 0.14024016513241636,
-      "model_prob": 0.03,
-      "confidence": "high",
-      "amount": 18.0,
-      "outcome": "NO",
-      "thinking": "With 5 days remaining in September 2026 and no official passenger opening date announced, an opening by month's end is extremely improbable given mandatory regulatory sign-offs and final operational testing schedules targeting October.",
-      "uncertainty": "Whether Transport for NSW announces a surprise immediate opening without advance public notice before September 30.",
-      "resolution_risk": "Whether soft-launch passenger trial runs or ceremonial events could be interpreted as official line opening.",
-      "evidence_for": [
-        "Conversion of all 10 stations between Sydenham and Bankstown is complete and trial running finished in early September 2026."
-      ],
-      "evidence_against": [
-        "As of September 25, 2026, no official passenger opening date has been announced with only 5 days left in the month.",
-        "Final operational readiness testing and National Rail Safety Regulator sign-off are still underway.",
-        "Leaked Transport for NSW documents indicate an October target date rather than September."
-      ],
-      "reason": "edge 0.110, kelly 0.79, decay 1.00, bound by balance reserve"
     }
   ]
 }
