@@ -2,16 +2,6 @@
   "summary": "My overall Brier score over 111 resolved forecasts is 0.128, compared to the market's 0.077. I forecast worse than the market price, and my disagreements have mostly been me being wrong. Out of 111 resolutions, I was closer to the outcome than the market on 44 (and 35 of 86 on big disagreements). In resolved bets, backing favourites won 17 of 20, while longshots against favourites won 13 of 70. Net worth is M$507 with balance at M$10. I have 18 total positions, with 14 of them closed and awaiting resolution.\n\nThe portfolio is entirely liquidity-locked with M$0 spendable mana, as capital remains bottlenecked in the 14 closed markets awaiting resolution. Our remaining active book consists of 4 high-conviction 'NO' positions nearing late-September and early-October expirations: hello-lume robot shipping, Sydney Metro opening, NASA budget, and AISI benchmark saturation. All active theses remain sound, and holding them to resolution is optimal rather than selling for marginal liquidity.\n\nCalibration remains heavily challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay, risk-reward, and overestimating edge against low-probability favourites have frequently proven incorrect, notably our 13/70 longshot win rate. Conversely, backing favourites has been much more reliable. \n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites, and allowing portfolio-memory mismatches to delay tactical exits. We must strictly maintain our ban against trading micro-trader meta-markets where time decay and risk-reward turn unfavorable. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery from the 14 closed positions, prioritizing returning M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 first for the specific test request.",
   "journal": [
     {
-      "ts": 1790286937023,
-      "kind": "screen",
-      "text": "Passed on \"US Average Gas Price Is $4.4800 or more on September 28 2026?\" at 78%: quick estimate 82% agrees with market. The current AAA price is already above the threshold and four days is too short for a major reversal."
-    },
-    {
-      "ts": 1790288658953,
-      "kind": "agency",
-      "text": "Own turn: Liquidity remains deadlocked at M$1 spendable. No closed markets have resolved yet. My active positions (Weight, hello-lume, AISI, Bitcoin) are high-conviction and nearing their late-September expirations. I cannot execute any trades or settle remaining debts until the capital pipeline from the 14 closed positions is unlocked. I will continue the hourly log to signal active monitoring."
-    },
-    {
       "ts": 1790288658960,
       "kind": "agency",
       "text": "Own turn, wrote a standing note: [self] 2026-09-24 23:00Z: Liquidity deadlock persists (M$1 spendable). Monitoring active positions (Weight, hello-lume, . Because: Maintaining the event-driven log of the liquidity state to avoid redundant 'nothing' turns and ensure operational consistency during the deadlock."
@@ -1500,6 +1490,16 @@
       "ts": 1790444597180,
       "kind": "agency",
       "text": "Own turn: Liquidity remains locked (M$0 spendable) as 14/18 positions are closed and awaiting resolution. The 4 active NO positions (hello-lume, Sydney Metro, NASA, AISI) are high-conviction and near expiry (4-5 days). Selling them now is suboptimal. The priority is the resolution of closed markets to unlock capital to settle M$70 in debt."
+    },
+    {
+      "ts": 1790445341589,
+      "kind": "screen",
+      "text": "Escalated \"AI beats human baseline on PostTrainBench by 1 Oct 2026?\" at 19%: flagged: Conflicting claims on baseline scores and recent model capabilities warrant a deep dive into the PostTrainBench data."
+    },
+    {
+      "ts": 1790445426564,
+      "kind": "analysis",
+      "text": "Analysed \"AI beats human baseline on PostTrainBench by 1 Oct 2026?\": market 19%, my 15% (medium). No trade, size floored to zero by balance reserve."
     }
   ],
   "lessons": [
@@ -2941,6 +2941,12 @@
       "question": "Will Apple announce new iPhone 18 features at September 2026 event?",
       "url": "https://manifold.markets/subhamsingh/will-apple-announce-new-iphone-18-f",
       "ts": 1790412188740
+    },
+    "2ttlAtUQ5I": {
+      "note": "PostTrainBench SOTA is GLM-5.3 at 39.8% vs 61.77% human baseline target expiring Oct 1.",
+      "question": "AI beats human baseline on PostTrainBench by 1 Oct 2026?",
+      "url": "https://manifold.markets/ZviMowshowitz/ai-beats-human-baseline-on-posttrai",
+      "ts": 1790445426370
     }
   },
   "seen": {
@@ -3239,7 +3245,8 @@
     "c6tPzy5UpU": 1790357445591,
     "EqunyqdqOZ": 1790357501816,
     "UQOnCcqQsz": 1790387388954,
-    "R8spSZE6NP": 1790404811177
+    "R8spSZE6NP": 1790404811177,
+    "2ttlAtUQ5I": 1790445340610
   },
   "budget": {
     "day": "2026-09-25",
@@ -3248,10 +3255,10 @@
   "llm_usage": {
     "day": "2026-09-26",
     "chat": 35,
-    "fast": 69,
-    "deep": 15
+    "fast": 72,
+    "deep": 16
   },
-  "last_scan_ms": 1790442839658,
+  "last_scan_ms": 1790445340501,
   "last_compress_ms": 1790434827819,
   "grounding_out_day": "2026-09-26",
   "todos": [
@@ -4308,7 +4315,7 @@
   },
   "replied_to": [],
   "tracked_orders": {},
-  "events_since_compress": 11,
+  "events_since_compress": 13,
   "watch_probs": {
     "Ln5EgOhAty": 0.4726684393929348,
     "dCP8cP0CLL": 0.19410275640601396,
