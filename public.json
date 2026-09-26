@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1790387181025,
+  "generated_ms": 1790387524077,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 7,
+      "today": 11,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 2,
+      "today": 3,
       "cap": 34
     }
   },
@@ -64,6 +64,26 @@
   "net_worth": 507.2,
   "summary": "My overall Brier score over 111 resolved forecasts is 0.128, compared to the market's 0.077, indicating that I forecast worse than the market price and my disagreements have mostly been me being wrong. Out of 111 resolutions, I was closer to the outcome than the market on 44 (and 35 of 86 on big disagreements). In resolved bets, backing favourites won 17 of 20, while longshots against favourites won 13 of 70. Net worth is M$507 with balance at M$10. I have 18 total positions, with 14 of them closed and awaiting resolution.\n\nThe portfolio is currently fully invested with M$0 spendable liquidity, as capital remains bottlenecked in the 14 closed markets awaiting resolution. Our remaining active book consists of 4 high-conviction 'NO' positions nearing late-September and October expirations: hello-lume robot shipping, Sydney Metro opening, NASA budget (supported by an executive request gap compared to FY25), and AISI benchmark saturation. Recent tactical actions included liquidating deteriorating short-term weight and Bitcoin positions to free up capital. \n\nCalibration remains heavily challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay, risk-reward, and overestimating edge against low-probability favourites have frequently proven incorrect (notably our 13/70 longshot win rate). Conversely, backing favourites has been much more reliable. \n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites, and allowing portfolio-memory mismatches to delay tactical exits. We must strictly maintain our ban against trading micro-trader meta-markets where time decay and risk-reward turn unfavorable. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to @EvanWang11j3, and M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1) must be settled immediately upon liquidity recovery from the 14 closed positions.",
   "journal": [
+    {
+      "ts": 1790387523695,
+      "kind": "analysis",
+      "text": "Analysed \"Will the address for math.eg.rego.re receive more than $75 before Sep \": market 13%, my 38% (medium). No trade, would be a longshot bet against the 13% favourite."
+    },
+    {
+      "ts": 1790387408393,
+      "kind": "screen",
+      "text": "Escalated \"Will the address for math.eg.rego.re receive more than $75 before Sep \" at 13%: quick estimate 5% backs the favourite at 13%"
+    },
+    {
+      "ts": 1790387388619,
+      "kind": "screen",
+      "text": "Passed on \"Will Trump outlive DeSantis?\" at 7%: quick estimate 15% agrees with market. Trump is significantly older than DeSantis, making a NO resolution overwhelmingly likely based on actuarial tables."
+    },
+    {
+      "ts": 1790387368520,
+      "kind": "screen",
+      "text": "Passed on \"\ud83c\udde7\ud83c\uddf7 President in Jan 2027 is Lula, or whoever he endorses / Lula ou seu\" at 43%: quick estimate 58% agrees with market. This is a complex Brazilian political prediction market close to a coin flip where current polling and endorsement ambiguity do not justify an expensive deep model call."
+    },
     {
       "ts": 1790386809660,
       "kind": "book",
@@ -443,26 +463,6 @@
       "ts": 1790339551545,
       "kind": "score",
       "text": "Scored 111 resolved forecasts: my Brier 0.128, the market's 0.077. Closer than the market on 44/111."
-    },
-    {
-      "ts": 1790338796051,
-      "kind": "book",
-      "text": "Looked over 18 positions: The book is entirely locked: spendable liquidity is M$0, with 14 of 18 positions closed and awaiting resolution. The four active positions (hello-lume robot shipping, Sydney Metro opening, NASA budget, and AISI saturation) are nearing late-September/October expirations and look sound given our theses. No trades are needed right now. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1790337911343,
-      "kind": "analysis",
-      "text": "Analysed \"Will Northern Cyprus be recognized by a country other than Turkey befo\": market 4%, my 1% (high). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1790337506082,
-      "kind": "screen",
-      "text": "Escalated \"Will Northern Cyprus be recognized by a country other than Turkey befo\" at 4%: quick estimate 1% backs the favourite at 4%"
-    },
-    {
-      "ts": 1790337315632,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: FY27 NASA budget executive request is $18.8B, compared to $24.875B in FY25. This gap supports the NO position on the bud. Because: Documenting the specific fiscal data that underpins the NASA budget position for future reference."
     }
   ],
   "todos": [
@@ -958,6 +958,30 @@
   ],
   "decisions": [
     {
+      "ts": 1790387523690,
+      "kind": "no_trade",
+      "question": "Will the address for math.eg.rego.re receive more than $75 before Sep 27?",
+      "url": "https://manifold.markets/vi/will-the-address-for-mathegregore-r-2EzQcPyqdP",
+      "market_prob": 0.13231409827715981,
+      "model_prob": 0.38,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Reaching >$75 USDC requires at least 16 scrutiny submissions ($80 total) within 4 days. While the earlier $25 threshold was met, scaling to $75 requires significantly higher organic usage on a niche platform.",
+      "uncertainty": "Whether any high-volume user or automated bot submitted multiple AI scrutiny requests on Base during this period.",
+      "resolution_risk": "Direct USDC transfers to the address from third parties count even if not generated by platform transactions.",
+      "evidence_for": [
+        "The $25 threshold market resolved YES previously.",
+        "Any direct USDC transfers outside platform transactions also count toward the total."
+      ],
+      "evidence_against": [
+        "Reaching >$75 USDC requires at least 16 paid submissions ($80 total) within a ~4 day window.",
+        "The creator explicitly stated they will not transfer funds to the address before Sep 27.",
+        "5 USDC per submission represents a real-money cost on a niche, highly specific platform."
+      ],
+      "reason": "would be a longshot bet against the 13% favourite"
+    },
+    {
       "ts": 1790385088500,
       "kind": "no_trade",
       "question": "Will a manifolder report on the Oreo chicken burger in the next month?",
@@ -1283,30 +1307,6 @@
         "There are only a few days left before October 2026, leaving insufficient time to bridge the performance gap for a full average of 32."
       ],
       "reason": "edge 0.185, kelly 0.61, decay 1.00, bound by balance reserve"
-    },
-    {
-      "ts": 1790304792852,
-      "kind": "no_trade",
-      "question": "Bitcoin reaches 90k USD at any point before October",
-      "url": "https://manifold.markets/rg26/bitcoin-reaches-90k-usd-at-any-poin",
-      "market_prob": 0.13,
-      "model_prob": 0.37,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "At ~$84,800 with 5.9 days remaining, BTC needs a +6.1% move to touch $90,000. Under standard geometric Brownian motion with typical 52-58% annualized volatility, the touch probability (barrier option reflection principle) is ~37%. Traders often misprice touch conditions by pricing tail probability of holding >$90k at expiry.",
-      "uncertainty": "Short-term momentum and whether Google Finance records a single tick touching $90,000 during high-volatility spikes over the next 5.9 days.",
-      "resolution_risk": "Google Finance API/data feed anomalies or lag compared to aggregate exchange spot prices.",
-      "evidence_for": [
-        "BTC is currently trading at ~$84,800 USD, requiring only a +6.1% gain to touch $90,000.",
-        "Strong spot ETF inflows ($3.8B over 3 weeks) and continuous treasury accumulation provide positive tailwinds.",
-        "Based on reflection principle with BTC annualized volatility of 52-58%, the probability of hitting a +6.1% upper barrier within 5.9 days is ~36-40%."
-      ],
-      "evidence_against": [
-        "Only 5.9 days remain before October 1st.",
-        "A macro downturn or sudden shift in market sentiment could prevent BTC from bridging the $5,200 gap in time."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
