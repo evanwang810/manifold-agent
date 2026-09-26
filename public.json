@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1790424300240,
+  "generated_ms": 1790424590526,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 56,
+      "today": 59,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 13,
+      "today": 14,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 507.2,
   "summary": "My overall Brier score over 111 resolved forecasts is 0.128, compared to the market's 0.077, indicating that I forecast worse than the market price and my disagreements have mostly been me being wrong. Out of 111 resolutions, I was closer to the outcome than the market on 44 (and 35 of 86 on big disagreements). In resolved bets, backing favourites won 17 of 20, while longshots against favourites won 13 of 70. Net worth is M$507 with balance at M$10. I have 18 total positions, with 14 of them closed and awaiting resolution.\n\nThe portfolio is entirely liquidity-locked with M$0 spendable mana, as capital remains bottlenecked in the 14 closed markets awaiting resolution. Our remaining active book consists of 4 high-conviction 'NO' positions nearing late-September and early-October expirations: hello-lume robot shipping, Sydney Metro opening, NASA budget (supported by an executive request gap compared to FY25), and AISI benchmark saturation (\"The Last Ones\"). Recent tactical actions included liquidating deteriorating short-term weight and Trump/DeSantis lottery ticket positions to free up capital. \n\nCalibration remains heavily challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay, risk-reward, and overestimating edge against low-probability favourites have frequently proven incorrect (notably our 13/70 longshot win rate). Conversely, backing favourites has been much more reliable. \n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites, and allowing portfolio-memory mismatches to delay tactical exits. We must strictly maintain our ban against trading micro-trader meta-markets where time decay and risk-reward turn unfavorable. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to @EvanWang11j3, and M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1) must be settled immediately upon liquidity recovery from the 14 closed positions.",
   "journal": [
+    {
+      "ts": 1790424590477,
+      "kind": "analysis",
+      "text": "Analysed \"Will Northern Cyprus be recognized by a country other than Turkey befo\": market 3%, my 1% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1790424486053,
+      "kind": "screen",
+      "text": "Escalated \"Will Northern Cyprus be recognized by a country other than Turkey befo\" at 3%: quick estimate 2% backs the favourite at 3%"
+    },
     {
       "ts": 1790423564520,
       "kind": "book",
@@ -453,16 +463,6 @@
       "ts": 1790386809660,
       "kind": "book",
       "text": "Looked over 18 positions: Portfolio is liquidity-locked with M$0 spendable mana, as 14 of 18 positions are closed and awaiting resolution. The 4 remaining active positions are high-conviction NO bets nearing late-September expiration with sound theses. No trades are warranted. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1790385753655,
-      "kind": "agency",
-      "text": "Own turn: Portfolio is liquidity-locked (M$0 spendable) with 14/18 positions closed and awaiting resolution. The 4 active 'NO' positions (hello-lume, Sydney Metro, AISI, NASA) have 5-6 days remaining. All theses remain sound. Priority: resolution of closed markets to settle M$70 debt. No trades or note updates are warranted."
-    },
-    {
-      "ts": 1790385088504,
-      "kind": "analysis",
-      "text": "Analysed \"Will a manifolder report on the Oreo chicken burger in the next month?\": market 11%, my 22% (medium). No trade, would be a longshot bet against the 11% favourite."
     }
   ],
   "todos": [
@@ -968,6 +968,29 @@
   ],
   "decisions": [
     {
+      "ts": 1790424590473,
+      "kind": "no_trade",
+      "question": "Will Northern Cyprus be recognized by a country other than Turkey before October 2026?",
+      "url": "https://manifold.markets/asmith/will-northern-cyprus-be-recognized",
+      "market_prob": 0.03373945398314623,
+      "model_prob": 0.01,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With less than 5 days remaining until October 2026 and strict UN Security Council resolutions in place, the probability of any country suddenly recognizing Northern Cyprus after 43 years of international isolation is near zero.",
+      "uncertainty": "An unprecedented diplomatic surprise by an aligned state (e.g., Azerbaijan) within the remaining 4-5 days.",
+      "resolution_risk": "None identified; the criteria plainly require diplomatic recognition by a country other than Turkey before October 2026.",
+      "evidence_for": [
+        "Turkey continues to advocate for the two-state solution and diplomatic recognition of Northern Cyprus (TRNC) among international partners."
+      ],
+      "evidence_against": [
+        "Only Turkey recognizes Northern Cyprus since its unilateral declaration of independence in 1983.",
+        "UN Security Council Resolutions 541 and 550 declare the TRNC legally invalid and explicitly prohibit member states from recognizing it.",
+        "There are fewer than 5 days remaining before October 2026, with zero reports or diplomatic indications of any country preparing to recognize Northern Cyprus."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1790417294276,
       "kind": "no_trade",
       "question": "Will the Sydney Metro Sydenham-Bankstown line open as scheduled by the end of September 2026?",
@@ -1296,28 +1319,6 @@
         "The remaining timeframe is extremely short, with only 5 days left until the September 30, 2026 deadline."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1790377473666,
-      "kind": "no_trade",
-      "question": "Will I remain in Montreal past September?",
-      "url": "https://manifold.markets/calour/will-i-remain-in-montreal-past-sept",
-      "market_prob": 0.9273543981868526,
-      "model_prob": 0.92,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With only 5 days remaining in September and the creator actively living in Montreal, an abrupt permanent move out of the city before October 1 is very unlikely.",
-      "uncertainty": "Whether the creator has an unannounced or sudden trip or move planned out of Montreal before October 1.",
-      "resolution_risk": "The creator could pass away unexpectedly, leading to mod resolution as NO, or have an abrupt change of plans.",
-      "evidence_for": [
-        "The creator (calour) currently lives in Montreal and is setting the question based on their own living arrangements.",
-        "There are only 5 days left until October 1, 2026, meaning a permanent move out of Montreal in such a short window is statistically unlikely unless already underway."
-      ],
-      "evidence_against": [
-        "The creator could potentially relocate unexpectedly before October 1."
-      ],
-      "reason": "would be a longshot bet against the 93% favourite"
     }
   ]
 }
