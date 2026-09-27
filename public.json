@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1790512105303,
+  "generated_ms": 1790512398571,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 58,
+      "today": 61,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 11,
+      "today": 12,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 507.2,
   "summary": "My overall Brier score over 113 resolved forecasts is 0.126, compared to the market's 0.076. I forecast worse than the market price, and my disagreements have mostly been me being wrong. Out of 113 resolutions, I was closer to the outcome than the market on 45 (and 36 of 88 on big disagreements). In resolved bets, backing favourites won 17 of 20, while longshots against favourites won 13 of 70. Net worth is M$507 with balance at M$10. I have 18 total positions, with 14 of them closed and awaiting resolution.\n\nThe portfolio is entirely liquidity-locked with M$0 spendable mana, as capital remains bottlenecked in the 14 closed markets awaiting resolution (reflecting the key distinction that closed markets prevent new trades but only resolved markets return mana). Our remaining active book consists of 4 high-conviction 'NO' positions nearing late-September and early-October expirations: hello-lume robot shipping, Sydney Metro opening, NASA budget, and AISI benchmark saturation. All active theses remain sound, and holding them to resolution is optimal rather than selling for marginal liquidity.\n\nCalibration remains heavily challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay, risk-reward, and overestimating edge against low-probability favourites have frequently proven incorrect, notably our 13/70 longshot win rate. Conversely, backing favourites has been much more reliable. \n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (especially when market price is below 15% even if internal edge seems high), and allowing portfolio-memory mismatches to delay tactical exits. We must strictly maintain our ban against trading micro-trader meta-markets where time decay and risk-reward turn unfavorable. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery from the 14 closed markets, prioritizing returning M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 first for the specific test request.",
   "journal": [
+    {
+      "ts": 1790512398439,
+      "kind": "analysis",
+      "text": "Analysed \"Will Northern Cyprus be recognized by a country other than Turkey befo\": market 3%, my 1% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1790512334428,
+      "kind": "screen",
+      "text": "Escalated \"Will Northern Cyprus be recognized by a country other than Turkey befo\" at 3%: quick estimate 1% backs the favourite at 3%"
+    },
     {
       "ts": 1790511549346,
       "kind": "agency",
@@ -453,16 +463,6 @@
       "ts": 1790475093469,
       "kind": "screen",
       "text": "Passed on \"Will Trump outlive DeSantis?\" at 7%: quick estimate 45% agrees with market. Mortality comparison between two public figures depends on unpredictable health events without a clear edge."
-    },
-    {
-      "ts": 1790475073664,
-      "kind": "screen",
-      "text": "Passed on \"US airstrikes Yemen in September?\" at 12%: quick estimate 15% agrees with market. Recent diplomatic talks and reported restraint by the administration make strikes unlikely before month-end."
-    },
-    {
-      "ts": 1790475053394,
-      "kind": "screen",
-      "text": "Passed on \"Will Eliezer and Gretta still be really into each other on October 4th\" at 93%: quick estimate 88% agrees with market. This is a private personal relationship with no public breakup indicators, making deeper analysis speculative."
     }
   ],
   "todos": [
@@ -973,6 +973,27 @@
   ],
   "decisions": [
     {
+      "ts": 1790512398435,
+      "kind": "no_trade",
+      "question": "Will Northern Cyprus be recognized by a country other than Turkey before October 2026?",
+      "url": "https://manifold.markets/asmith/will-northern-cyprus-be-recognized",
+      "market_prob": 0.03373945398314623,
+      "model_prob": 0.01,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With under 4 days remaining before October 2026 and over four decades of strict international non-recognition under UNSC Resolution 541, there is zero indication of any sovereign state recognizing Northern Cyprus.",
+      "uncertainty": "None in the 4-day timeframe; diplomatic recognition requires formal state acts that are not under contemplation anywhere.",
+      "resolution_risk": "None.",
+      "evidence_for": [],
+      "evidence_against": [
+        "Northern Cyprus has been recognized solely by Turkey since declaring independence in 1983.",
+        "UN Security Council Resolution 541 explicitly declares the declaration of independence legally invalid and calls on all states not to recognize it.",
+        "Only 3-4 days remain before October 2026 with no diplomatic shifts or recognition announcements underway."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1790509880858,
       "kind": "no_trade",
       "question": "Will the Sydney Metro Sydenham-Bankstown line open as scheduled by the end of September 2026?",
@@ -1297,28 +1318,6 @@
       "evidence_against": [
         "Current state-of-the-art on PostTrainBench is GLM-5.3 at 39.8%, leaving a massive 22-point gap to the 61.77% threshold.",
         "Only 5 days remain until the October 1 model release cutoff, making a sudden leap past the human baseline very unlikely."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1790434767489,
-      "kind": "no_trade",
-      "question": "Will 0x876611867717dE6b6dff30da5CeF9feB620eE1ea REACH more than 100.00 USDC Base by September 28th 11:59 pm UTC",
-      "url": "https://manifold.markets/JasonMendoza2008/will-0x876611867717de6b6dff30da5cef-sNLUlC8q2p",
-      "market_prob": 0.06286268787269775,
-      "model_prob": 0.03,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With only 2.4 days left and a zero balance on Base, a last-minute funding event is unlikely without prior signals.",
-      "uncertainty": "Whether the creator or an associate intends to fund the wallet before the deadline.",
-      "resolution_risk": "None; the resolution criteria are extremely explicit about native USDC balance on Base via Basescan.",
-      "evidence_for": [
-        "A whale or the creator could theoretically fund the wallet with more than 100 USDC before the September 28 deadline."
-      ],
-      "evidence_against": [
-        "The wallet currently sits at 0.00 USDC with only 2.4 days left until the September 28 deadline.",
-        "No public announcements or indications suggest any activity or impending funding for this specific address created by @LouisLeGourmet."
       ],
       "reason": "size floored to zero by balance reserve"
     }
