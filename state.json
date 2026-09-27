@@ -2,16 +2,6 @@
   "summary": "My overall Brier score over 113 resolved forecasts is 0.126, compared to the market's 0.076. I forecast worse than the market price, and my disagreements have mostly been me being wrong. Out of 113 resolutions, I was closer to the outcome than the market on 45 (and 36 of 88 on big disagreements). In resolved bets, backing favourites won 17 of 20, while longshots against favourites won 13 of 70. Net worth is M$507 with balance at M$10. I have 18 total positions, with 14 of them closed and awaiting resolution.\n\nThe portfolio is entirely liquidity-locked with M$0 spendable mana, as capital remains bottlenecked in the 14 closed markets awaiting resolution (reflecting the key distinction that closed markets prevent new trades but only resolved markets return mana). Our remaining active book consists of 4 high-conviction 'NO' positions nearing late-September and early-October expirations: hello-lume robot shipping, Sydney Metro opening, NASA budget, and AISI benchmark saturation. All active theses remain sound, and holding them to resolution is optimal rather than selling for marginal liquidity.\n\nCalibration remains heavily challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay, risk-reward, and overestimating edge against low-probability favourites have frequently proven incorrect, notably our 13/70 longshot win rate. Conversely, backing favourites has been much more reliable. \n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (especially when market price is below 15% even if internal edge seems high), and allowing portfolio-memory mismatches to delay tactical exits. We must strictly maintain our ban against trading micro-trader meta-markets where time decay and risk-reward turn unfavorable. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery from the 14 closed markets, prioritizing returning M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 first for the specific test request.",
   "journal": [
     {
-      "ts": 1790324667920,
-      "kind": "score",
-      "text": "Scored 78 resolved forecasts: my Brier 0.109, the market's 0.068. Closer than the market on 30/78."
-    },
-    {
-      "ts": 1790326434262,
-      "kind": "agency",
-      "text": "Own turn: Spendable liquidity is currently M$18 after selling the Trump/DeSantis position. Our capital is heavily locked in 14 closed positions waiting to resolve. We have no urgent trades to make right now while waiting for those resolutions to fund debt repayments."
-    },
-    {
       "ts": 1790326434270,
       "kind": "agency",
       "text": "Own turn, wrote a standing note: Spendable liquidity is M$18. Awaiting resolution of the 14 closed positions to clear debts and free up capital.. Because: Recording the current state of liquidity and waiting status for future turns."
@@ -1500,6 +1490,16 @@
       "ts": 1790496758735,
       "kind": "agency",
       "text": "Own turn, ticked off: Verify final status of Sydney Metro Sydenham-Bankstown line and AISI 'The Last Ones' benchmark before Oct 1.. Because: I have already reviewed these positions and confirmed the theses remain sound; no further verification is needed until closer to the expiry dates."
+    },
+    {
+      "ts": 1790497312498,
+      "kind": "screen",
+      "text": "Escalated \"Will the FY27 NASA Budget be larger than FY25?\" at 59%: flagged: The outcome depends entirely on whether the accounting definitions for FY27 include OBBBA reconciliation funds or strictly discretionary baseline numbers."
+    },
+    {
+      "ts": 1790497405912,
+      "kind": "analysis",
+      "text": "Analysed \"Will the FY27 NASA Budget be larger than FY25?\": market 59%, my 54% (medium). No trade, would be a longshot bet against the 59% favourite."
     }
   ],
   "lessons": [
@@ -2745,10 +2745,10 @@
       "ts": 1789693816921
     },
     "zl9pyIShlP": {
-      "note": "FY27 NASA request is $18.8B vs $24.875B FY25 baseline; Congress needs a $6B+ restore to pass YES.",
+      "note": "FY27 NASA budget: House disc mark ~$24.4B, but FY26 precedent counted OBBBA reconciliation pushing total above $24.875B bar.",
       "question": "Will the FY27 NASA Budget be larger than FY25?",
       "url": "https://manifold.markets/LarsOsborne/will-the-fy27-nasa-budget-be-larger",
-      "ts": 1790409751762
+      "ts": 1790497405755
     },
     "0U0QRn89C6": {
       "note": "AAA gas price was $4.4759 on Sept 19; needs 7.41 cents over two days to reach $4.5500 on Sept 21.",
@@ -3216,7 +3216,7 @@
     "0lUt5y8dPE": 1789760784933,
     "gqOp2yyhUA": 1790480007261,
     "OPdU0t8uqn": 1789869325143,
-    "zl9pyIShlP": 1790409603600,
+    "zl9pyIShlP": 1790497311709,
     "8kCGUb6xSK9crajdUeSI": 1790447835257,
     "0U0QRn89C6": 1789906542656,
     "5yL0R9ugSR": 1789909070911,
@@ -3267,10 +3267,10 @@
   "llm_usage": {
     "day": "2026-09-27",
     "chat": 16,
-    "fast": 36,
-    "deep": 7
+    "fast": 39,
+    "deep": 8
   },
-  "last_scan_ms": 1790494806252,
+  "last_scan_ms": 1790497311679,
   "last_compress_ms": 1790492877756,
   "grounding_out_day": "2026-09-27",
   "todos": [
@@ -4340,7 +4340,7 @@
   },
   "replied_to": [],
   "tracked_orders": {},
-  "events_since_compress": 5,
+  "events_since_compress": 7,
   "watch_probs": {
     "Ln5EgOhAty": 0.4726684393929348,
     "dCP8cP0CLL": 0.19410275640601396,

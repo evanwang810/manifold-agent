@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1790497126508,
+  "generated_ms": 1790497406052,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 36,
+      "today": 39,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 7,
+      "today": 8,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 507.2,
   "summary": "My overall Brier score over 113 resolved forecasts is 0.126, compared to the market's 0.076. I forecast worse than the market price, and my disagreements have mostly been me being wrong. Out of 113 resolutions, I was closer to the outcome than the market on 45 (and 36 of 88 on big disagreements). In resolved bets, backing favourites won 17 of 20, while longshots against favourites won 13 of 70. Net worth is M$507 with balance at M$10. I have 18 total positions, with 14 of them closed and awaiting resolution.\n\nThe portfolio is entirely liquidity-locked with M$0 spendable mana, as capital remains bottlenecked in the 14 closed markets awaiting resolution (reflecting the key distinction that closed markets prevent new trades but only resolved markets return mana). Our remaining active book consists of 4 high-conviction 'NO' positions nearing late-September and early-October expirations: hello-lume robot shipping, Sydney Metro opening, NASA budget, and AISI benchmark saturation. All active theses remain sound, and holding them to resolution is optimal rather than selling for marginal liquidity.\n\nCalibration remains heavily challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay, risk-reward, and overestimating edge against low-probability favourites have frequently proven incorrect, notably our 13/70 longshot win rate. Conversely, backing favourites has been much more reliable. \n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (especially when market price is below 15% even if internal edge seems high), and allowing portfolio-memory mismatches to delay tactical exits. We must strictly maintain our ban against trading micro-trader meta-markets where time decay and risk-reward turn unfavorable. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery from the 14 closed markets, prioritizing returning M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 first for the specific test request.",
   "journal": [
+    {
+      "ts": 1790497405912,
+      "kind": "analysis",
+      "text": "Analysed \"Will the FY27 NASA Budget be larger than FY25?\": market 59%, my 54% (medium). No trade, would be a longshot bet against the 59% favourite."
+    },
+    {
+      "ts": 1790497312498,
+      "kind": "screen",
+      "text": "Escalated \"Will the FY27 NASA Budget be larger than FY25?\" at 59%: flagged: The outcome depends entirely on whether the accounting definitions for FY27 include OBBBA reconciliation funds or strictly discretionary baseline numbers."
+    },
     {
       "ts": 1790496758735,
       "kind": "agency",
@@ -453,16 +463,6 @@
       "ts": 1790454139752,
       "kind": "score",
       "text": "Scored 112 resolved forecasts: my Brier 0.127, the market's 0.076. Closer than the market on 44/112."
-    },
-    {
-      "ts": 1790453938840,
-      "kind": "book",
-      "text": "Looked over 18 positions: The book remains liquidity-locked with M$0 spendable mana, as 14 of 18 positions are closed and awaiting resolution. The remaining 4 active NO positions are high-conviction, near-expiry, and sound. Holding them to resolution is optimal. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1790452845503,
-      "kind": "screen",
-      "text": "Passed on \"Will Sanji be a confirmed Conqueror\u2019s Haki User during the battle agai\" at 87%: quick estimate 70% agrees with market. This is a purely creative manga plot point depending on upcoming chapter releases that cannot be deduced with external data."
     }
   ],
   "todos": [
@@ -848,7 +848,7 @@
       "profit": 2.3,
       "prob": 0.303,
       "closed": false,
-      "days_to_close": 3.7
+      "days_to_close": 3.6
     },
     {
       "question": "Will my company make a sale today?",
@@ -920,7 +920,7 @@
       "profit": 0.3,
       "prob": 0.589,
       "closed": false,
-      "days_to_close": 4.7
+      "days_to_close": 4.6
     },
     {
       "question": "Will the Sydney Metro Sydenham-Bankstown line open as scheduled by the end of September 2026?",
@@ -932,7 +932,7 @@
       "profit": 0.0,
       "prob": 0.137,
       "closed": false,
-      "days_to_close": 3.7
+      "days_to_close": 3.6
     },
     {
       "question": "Will the WTI Crude Oil Spot Price be above $78.50 on August 11, 2026?",
@@ -968,10 +968,34 @@
       "profit": 0.0,
       "prob": 0.094,
       "closed": false,
-      "days_to_close": 3.7
+      "days_to_close": 3.6
     }
   ],
   "decisions": [
+    {
+      "ts": 1790497405909,
+      "kind": "no_trade",
+      "question": "Will the FY27 NASA Budget be larger than FY25?",
+      "url": "https://manifold.markets/LarsOsborne/will-the-fy27-nasa-budget-be-larger",
+      "market_prob": 0.5891447937878568,
+      "model_prob": 0.54,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "While the White House requested $18.8B and House discretionary marks sit around $24.4B, the FY26 precedent established counting OBBBA reconciliation additions (which span through FY31) alongside discretionary funds, making an enacted total above the $24.875B FY25 baseline slightly favored.",
+      "uncertainty": "Whether final FY27 appropriations count OBBBA reconciliation funding alongside base discretionary spending in the resolved comparison figure.",
+      "resolution_risk": "Dispute over whether mandatory/reconciliation funds count towards the FY27 budget comparison against the FY25 discretionary baseline.",
+      "evidence_for": [
+        "In FY26, Congress rejected steep White House budget cuts and funded NASA at $24.4B discretionary plus multi-year OBBBA reconciliation funding, totaling over $27.5B.",
+        "The creator explicitly adopted the $27.53B figure (including reconciliation) for FY26 in the market description.",
+        "Multi-year reconciliation authority stretches through FY2031, providing a multi-billion annual buffer over the $24.875B threshold."
+      ],
+      "evidence_against": [
+        "The White House FY27 budget request is only $18.8B.",
+        "House FY27 discretionary appropriations mark NASA at approximately $24.4B, which sits just below the $24.875B FY25 baseline if reconciliation funds are excluded."
+      ],
+      "reason": "would be a longshot bet against the 59% favourite"
+    },
     {
       "ts": 1790494994225,
       "kind": "no_trade",
@@ -1295,30 +1319,6 @@
         "The market creator has not yet resolved the market."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1790409752047,
-      "kind": "no_trade",
-      "question": "Will the FY27 NASA Budget be larger than FY25?",
-      "url": "https://manifold.markets/LarsOsborne/will-the-fy27-nasa-budget-be-larger",
-      "market_prob": 0.5891447937878568,
-      "model_prob": 0.28,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "While Congress frequently restores executive cuts to NASA, overcoming an $18.8B initial request to exceed the $24.875B FY25 benchmark requires an unusually large $6B+ add-back under ongoing fiscal constraints.",
-      "uncertainty": "The extent to which Congress will restore the $18.8B request in final FY27 appropriations and whether mandatory/reconciliation funds count towards the total.",
-      "resolution_risk": "Disagreements over whether 'budget' includes discretionary spending alone or supplemental/reconciliation funds.",
-      "evidence_for": [
-        "Congress historically overrides major executive cuts to NASA due to strong bipartisan support in key states (AL, TX, FL, CA).",
-        "In FY26, Congress restored substantial funding above executive requests, reaching $27.53B total ($24.44B discretionary)."
-      ],
-      "evidence_against": [
-        "The White House FY27 budget request is $18.8B, representing a 24% cut from FY25 baseline ($24.875B).",
-        "Restoring funding to >$24.875B requires Congress to add back over $6B during tight fiscal constraints.",
-        "FY26 discretionary budget ($24.438B) was already below FY25 levels ($24.875B)."
-      ],
-      "reason": "would be a longshot bet against the 59% favourite"
     }
   ]
 }
