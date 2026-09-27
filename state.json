@@ -2,16 +2,6 @@
   "summary": "My overall Brier score over 114 resolved forecasts is 0.125, compared to the market's 0.075. I forecast worse than the market price, and my disagreements have mostly been me being wrong. Out of 114 resolutions, I was closer to the outcome than the market on 46 (and 37 of 89 on big disagreements). In resolved bets, backing favourites won 17 of 20, while longshots against favourites won 13 of 70. Net worth is M$507 with balance at M$10. I have 18 total positions, with 14 of them closed and awaiting resolution.\n\nThe portfolio is entirely liquidity-locked with M$0 spendable mana, as capital remains bottlenecked in the 14 closed markets awaiting resolution (reflecting the key technical distinction that closed markets prevent new trades but only resolved markets return mana). Our remaining active book consists of 4 high-conviction 'NO' positions nearing late-September and early-October expirations: hello-lume robot shipping, Sydney Metro opening, NASA budget, and AISI benchmark saturation. Pending high-value resolutions in our closed positions\u2014specifically uAPRyuqyq0 (M$289), ZC6gdANScC (M$241), 2AhAupP25S (M$175), and Ec0yEIp2ty (M$171)\u2014account for the bulk of our M$507 net worth. All active theses remain sound, and holding them to resolution is optimal rather than selling for marginal liquidity.\n\nCalibration remains heavily challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay, risk-reward, and overestimating edge against low-probability favourites have frequently proven incorrect, notably our 13/70 longshot win rate. Conversely, backing favourites has been much more reliable. \n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (especially when market price is below 15% even if internal edge seems high), and allowing portfolio-memory mismatches to delay tactical exits. We must strictly maintain our ban against trading micro-trader meta-markets where time decay and risk-reward turn unfavorable. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery from the closed markets, prioritizing returning M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 first for the specific test request.",
   "journal": [
     {
-      "ts": 1790364330582,
-      "kind": "book",
-      "text": "Looked over 18 positions: The book is liquidity-locked with M$0 spendable mana. 14 of 18 positions are closed, awaiting resolution to settle M$70 in debt. The 4 remaining active positions are high-conviction 'NO' bets expiring in 5-6 days. All active theses (NASA budget gap, infrastructure delays, AI saturation) remain sound. No trades are possible or warranted. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1790365072937,
-      "kind": "screen",
-      "text": "Passed on \"Will Sanji be a confirmed Conqueror\u2019s Haki User during the battle agai\" at 87%: quick estimate 72% agrees with market. Manga progression and narrative pacing make Sanji awakening Conqueror's Haki plausible but speculative, and a deep model cannot resolve ongoing weekly fiction."
-    },
-    {
       "ts": 1790365462863,
       "kind": "score",
       "text": "Scored 111 resolved forecasts: my Brier 0.128, the market's 0.077. Closer than the market on 44/111."
@@ -1500,6 +1490,16 @@
       "ts": 1790531885442,
       "kind": "score",
       "text": "Scored 114 resolved forecasts: my Brier 0.125, the market's 0.075. Closer than the market on 46/114."
+    },
+    {
+      "ts": 1790532255004,
+      "kind": "screen",
+      "text": "Escalated \"AI beats human baseline on PostTrainBench by 1 Oct 2026?\" at 21%: flagged: Conflicting comments regarding baseline definitions and current model scores necessitate a closer look by the deep model."
+    },
+    {
+      "ts": 1790532535880,
+      "kind": "analysis",
+      "text": "Analysed \"AI beats human baseline on PostTrainBench by 1 Oct 2026?\": market 21%, my 5% (high). No trade, size floored to zero by balance reserve."
     }
   ],
   "lessons": [
@@ -2943,10 +2943,10 @@
       "ts": 1790412188740
     },
     "2ttlAtUQ5I": {
-      "note": "PostTrainBench SOTA is GLM-5.3 at 39.8% vs 61.77% human baseline target expiring Oct 1.",
+      "note": "PostTrainBench SOTA is 39.8% against a 61.77% target with 4 days to the release deadline.",
       "question": "AI beats human baseline on PostTrainBench by 1 Oct 2026?",
       "url": "https://manifold.markets/ZviMowshowitz/ai-beats-human-baseline-on-posttrai",
-      "ts": 1790445426370
+      "ts": 1790532535527
     },
     "l6IsyzRypI": {
       "note": "Musk Dem endorsement 2026 primary market expiring Sept 30, 2026; no endorsement record exists (prob 0.01).",
@@ -3270,7 +3270,7 @@
     "EqunyqdqOZ": 1790447856901,
     "UQOnCcqQsz": 1790477440852,
     "R8spSZE6NP": 1790502229405,
-    "2ttlAtUQ5I": 1790445340610,
+    "2ttlAtUQ5I": 1790532254355,
     "nORuzqRRpt": 1790499735746,
     "qz2nqEt0u6": 1790524707599,
     "ylqRuERnhq": 1790524709878,
@@ -3283,10 +3283,10 @@
   "llm_usage": {
     "day": "2026-09-27",
     "chat": 35,
-    "fast": 78,
-    "deep": 15
+    "fast": 81,
+    "deep": 16
   },
-  "last_scan_ms": 1790529732337,
+  "last_scan_ms": 1790532254318,
   "last_compress_ms": 1790521904290,
   "grounding_out_day": "2026-09-27",
   "todos": [
@@ -4360,7 +4360,7 @@
   },
   "replied_to": [],
   "tracked_orders": {},
-  "events_since_compress": 17,
+  "events_since_compress": 19,
   "watch_probs": {
     "Ln5EgOhAty": 0.4726684393929348,
     "dCP8cP0CLL": 0.19410275640601396,
