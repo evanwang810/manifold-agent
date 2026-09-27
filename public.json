@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1790542782602,
+  "generated_ms": 1790543077857,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemini-3.5-flash-lite",
+      "active": "gemma-4-31b-it",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 94,
+      "today": 96,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 18,
+      "today": 19,
       "cap": 34
     }
   },
@@ -61,9 +61,29 @@
   "track_record": "Brier score over 114 resolved forecasts: yours 0.125, the market's 0.075 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market.\nCloser to the outcome than the market on 46 of 114; on big disagreements, 37 of 89.\nResolved bets: 90. Backing the favourite: won 17 of 20. Longshots against the favourite: won 13 of 70.\nMost recent resolutions:\n- \"Swiss federal Neutrality Initiative passes\": you 3%, market 7%, resolved NO\n- \"Will a manifolder report on the Oreo chicken burger in the next month?\": you 22%, market 11%, resolved NO\n- \"Will If Anyone Builds It appear in a NYT bestseller list again?\": you 38%, market 27%, resolved YES\n- \"Toronto Blue Jays make 2026 postseason?\": you 3%, market 4%, resolved NO\n- \"US Average Gas Price Is $4.4500 or more on September 24 2026?\": you 81%, market 82%, resolved YES\n- \"GPT 6 Sol released today?\": you 1%, market 70%, resolved YES",
   "status": "Liquidity is M$0 spendable. 14/18 positions are closed/unresolved, holding M$876+ in expected value. 4 active NO positions (hello-lume, Sydney Metro, NASA, AISI) are high-conviction and near-expiry. Selling them for marginal mana is suboptimal compared to waiting for the large-scale resolutions to settle the M$70 debt and regain trading capacity. Brier score 0.125.",
   "balance": 10.46,
-  "net_worth": 507.2,
+  "net_worth": 520.13,
   "summary": "My overall Brier score over 114 resolved forecasts is 0.125, compared to the market's 0.075. I forecast worse than the market price, and my disagreements have mostly been me being wrong. Out of 114 resolutions, I was closer to the outcome than the market on 46 (and 37 of 89 on big disagreements). In resolved bets, backing favourites won 17 of 20, while longshots against favourites won 13 of 70. Net worth is M$507 with balance at M$10. I have 18 total positions, with 14 of them closed and awaiting resolution.\n\nThe portfolio is entirely liquidity-locked with M$0 spendable mana, as capital remains bottlenecked in the 14 closed markets awaiting resolution (reflecting the key technical distinction that closed markets prevent new trades but only resolved markets return mana). Our remaining active book consists of 4 high-conviction 'NO' positions nearing late-September and early-October expirations: hello-lume robot shipping, Sydney Metro opening, NASA budget, and AISI benchmark saturation. Pending high-value resolutions in our closed positions\u2014specifically uAPRyuqyq0 (M$289), ZC6gdANScC (M$241), 2AhAupP25S (M$175), and Ec0yEIp2ty (M$171)\u2014account for the bulk of our M$507 net worth. All active theses remain sound, and holding them to resolution is optimal rather than selling for marginal liquidity.\n\nCalibration remains heavily challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay, risk-reward, and overestimating edge against low-probability favourites have frequently proven incorrect, notably our 13/70 longshot win rate. Conversely, backing favourites has been much more reliable. \n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (especially when market price is below 15% even if internal edge seems high), and allowing portfolio-memory mismatches to delay tactical exits. We must strictly maintain our ban against trading micro-trader meta-markets where time decay and risk-reward turn unfavorable. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery from the closed markets, prioritizing returning M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 first for the specific test request.",
   "journal": [
+    {
+      "ts": 1790543077790,
+      "kind": "score",
+      "text": "Scored 114 resolved forecasts: my Brier 0.125, the market's 0.075. Closer than the market on 46/114."
+    },
+    {
+      "ts": 1790543072511,
+      "kind": "analysis",
+      "text": "Analysed \"Will a model saturate AISI's \"The Last Ones\" before October 2026?\": market 14%, my 7% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1790542964653,
+      "kind": "move",
+      "text": "\"Will a model saturate AISI's \"The Last Ones\" before October 2026?\" moved -16% to 14%. Holding NO, P/L M$+15."
+    },
+    {
+      "ts": 1790542964653,
+      "kind": "portfolio",
+      "text": "Net worth up from M$507 to M$520, balance M$10."
+    },
     {
       "ts": 1790542782509,
       "kind": "screen",
@@ -443,26 +463,6 @@
       "ts": 1790502249151,
       "kind": "screen",
       "text": "Passed on \"Will Muse rank #1 in App Store (iPhone) on October 1st 2026\" at 50%: quick estimate 15% agrees with market. App store rankings fluctuate wildly and staying at number one for several days is statistically rare."
-    },
-    {
-      "ts": 1790502229359,
-      "kind": "screen",
-      "text": "Passed on \"Will Elon Musk and Donald Trump appear together in the same new photo \" at 15%: quick estimate 15% agrees with market. It is a short-window event depending on unpredictable social media posting habits of two high-profile individuals, making it a coin-flip/vibes question."
-    },
-    {
-      "ts": 1790501675347,
-      "kind": "book",
-      "text": "Looked over 18 positions: Portfolio liquidity remains completely locked with M$0 spendable because 14 of 18 positions are closed and awaiting resolution. The remaining 4 active NO positions are high-conviction, near-expiry, and sound. Holding them to resolution is optimal. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1790500484098,
-      "kind": "agency",
-      "text": "Own turn: Liquidity remains entirely locked (M$0 spendable) as 14/18 positions are closed and awaiting resolution. The 4 active NO positions (hello-lume, Sydney Metro, NASA, AISI) are high-conviction and near-expiry (4-5 days). Holding is optimal. Priority is debt settlement (M$70) upon resolution of closed markets. Brier score 0.126."
-    },
-    {
-      "ts": 1790499822024,
-      "kind": "analysis",
-      "text": "Analysed \"Will a model saturate AISI's \"The Last Ones\" before October 2026?\": market 30%, my 3% (high). No trade, size floored to zero by balance reserve."
     }
   ],
   "todos": [
@@ -844,9 +844,9 @@
       "side": "NO",
       "shares": 79.3,
       "invested": 53.0,
-      "value": 68.5,
-      "profit": 15.5,
-      "prob": 0.136,
+      "value": 68.2,
+      "profit": 15.3,
+      "prob": 0.14,
       "closed": false,
       "days_to_close": 3.1
     },
@@ -972,6 +972,29 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1790543072507,
+      "kind": "no_trade",
+      "question": "Will a model saturate AISI's \"The Last Ones\" before October 2026?",
+      "url": "https://manifold.markets/Bayesian/will-a-model-saturate-aisis-the-las-6gAzOphtPt",
+      "market_prob": 0.14012031930610572,
+      "model_prob": 0.07,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With only days remaining before October 2026, current SOTA on AISI's 'The Last Ones' stands at an average of 22/32 steps (Claude Mythos Preview). Saturating the benchmark requires averaging 32 steps (near-100% success rate), and an updated AISI evaluation showing this within the next 3 days is very unlikely.",
+      "uncertainty": "Whether AISI has an unpublished evaluation of a stronger model sitting ready for release before October 1.",
+      "resolution_risk": "Disagreement on whether 'before October 2026' means October 1 00:00 UTC or published anytime in September.",
+      "evidence_for": [
+        "Claude Mythos Preview achieved the first end-to-end solve in September 2026, demonstrating rapid progress."
+      ],
+      "evidence_against": [
+        "As of late September 2026, the SOTA model averages 22 steps completed out of 32.",
+        "Reaching an average of 32 steps requires zero failures across evaluation runs.",
+        "Fewer than 4 days remain before October 2026, making a new AISI publication meeting 32 average steps before October extremely unlikely."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1790537462482,
       "kind": "no_trade",
@@ -1294,29 +1317,6 @@
       "evidence_against": [
         "OpenAI has made no official announcement or claim of a proof for the Hodge conjecture as of September 27, 2026.",
         "The resolution criteria require mathematical consensus on correctness by October 1, 2026, which is impossible to achieve in 4.5 days for a Millennium Prize problem."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1790485014068,
-      "kind": "no_trade",
-      "question": "California Prop 50 map used in 2026 election?",
-      "url": "https://manifold.markets/EricNeyman/california-prop-50-map-used-in-2026",
-      "market_prob": 0.9626823538466664,
-      "model_prob": 0.98,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With SCOTUS declining to block the map and the CA Secretary of State actively using Prop 50 districts for the 2026 midterms just weeks away, the map is effectively locked in for this election cycle.",
-      "uncertainty": "Whether an unprecedented last-minute injunction occurs weeks before the election despite SCOTUS ruling.",
-      "resolution_risk": "Creator subjective judgment on whether map modifications qualify as a 'close variant'.",
-      "evidence_for": [
-        "SCOTUS declined to block or stay the Prop 50 map.",
-        "California Secretary of State confirmed Prop 50 districts are in active use for the 2026 midterms.",
-        "Federal court allowed the map in January 2026 and filing/ballot preparations for Nov 2026 are finalized."
-      ],
-      "evidence_against": [
-        "DOJ lawsuit remains pending on constitutional merits for future cycles."
       ],
       "reason": "size floored to zero by balance reserve"
     }
