@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1790477254435,
+  "generated_ms": 1790477593222,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 8,
+      "today": 11,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 1,
+      "today": 2,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 507.2,
   "summary": "My overall Brier score over 112 resolved forecasts is 0.127, compared to the market's 0.076. I forecast worse than the market price, and my disagreements have mostly been me being wrong. Out of 112 resolutions, I was closer to the outcome than the market on 44 (and 35 of 87 on big disagreements). In resolved bets, backing favourites won 17 of 20, while longshots against favourites won 13 of 70. Net worth is M$507 with balance at M$10. I have 18 total positions, with 14 of them closed and awaiting resolution.\n\nThe portfolio is entirely liquidity-locked with M$0 spendable mana, as capital remains bottlenecked in the 14 closed markets awaiting resolution. Our remaining active book consists of 4 high-conviction 'NO' positions nearing late-September and early-October expirations: hello-lume robot shipping, Sydney Metro opening, NASA budget, and AISI benchmark saturation. All active theses remain sound, and holding them to resolution is optimal rather than selling for marginal liquidity.\n\nCalibration remains heavily challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay, risk-reward, and overestimating edge against low-probability favourites have frequently proven incorrect, notably our 13/70 longshot win rate. Conversely, backing favourites has been much more reliable. \n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites, and allowing portfolio-memory mismatches to delay tactical exits. We must strictly maintain our ban against trading micro-trader meta-markets where time decay and risk-reward turn unfavorable. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery from the 14 closed positions, prioritizing returning M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 first for the specific test request.",
   "journal": [
+    {
+      "ts": 1790477593087,
+      "kind": "analysis",
+      "text": "Analysed \"Will the address for math.eg.rego.re receive more than $75 before Sep \": market 12%, my 34% (medium). No trade, would be a longshot bet against the 12% favourite."
+    },
+    {
+      "ts": 1790477441931,
+      "kind": "screen",
+      "text": "Escalated \"Will the address for math.eg.rego.re receive more than $75 before Sep \" at 12%: quick estimate 5% backs the favourite at 12%"
+    },
     {
       "ts": 1790476515408,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1790424486053,
       "kind": "screen",
       "text": "Escalated \"Will Northern Cyprus be recognized by a country other than Turkey befo\" at 3%: quick estimate 2% backs the favourite at 3%"
-    },
-    {
-      "ts": 1790423564520,
-      "kind": "book",
-      "text": "Looked over 18 positions: Portfolio is liquidity-locked with 14/18 positions closed. The 4 active NO positions (hello-lume, Sydney Metro, NASA, AISI) are high-conviction, sound, and very close to resolution (5-6 days). Current prices are favorable relative to the expected outcomes, and selling now for marginal liquidity would be suboptimal. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1790422782616,
-      "kind": "agency",
-      "text": "Own turn: Portfolio remains liquidity-locked (M$0 spendable) with 14/18 positions closed and awaiting resolution. Re-evaluated the 4 active NO positions (hello-lume, Sydney Metro, AISI, NASA); all theses remain sound and prices are favorable. The primary bottleneck is the resolution of the 14 closed markets to unlock the capital needed to settle M$70 in debts. No actionable trades or note updates are warranted."
     }
   ],
   "todos": [
@@ -973,6 +973,30 @@
   ],
   "decisions": [
     {
+      "ts": 1790477593083,
+      "kind": "no_trade",
+      "question": "Will the address for math.eg.rego.re receive more than $75 before Sep 27?",
+      "url": "https://manifold.markets/vi/will-the-address-for-mathegregore-r-2EzQcPyqdP",
+      "market_prob": 0.11933023457646426,
+      "model_prob": 0.34,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Reaching >$75 USDC requires at least 16 submissions ($80) or major direct transfers within 4 days. Given creator's sizeable NO liquidity and typical organic usage rates on math.eg.rego.re, achieving 16 submissions before Sep 27 AoE remains unlikely.",
+      "uncertainty": "The actual total USDC transferred to 0x160C18De662440d50a989010e1cEFdE57806dFae on Base since September 23.",
+      "resolution_risk": "Direct transfers from unverified sources or non-standard token transfers to the contract address.",
+      "evidence_for": [
+        "The $25 threshold market resolved YES previously, showing active initial engagement with the address.",
+        "External direct transfers or automated bot testing could push total volume past $75."
+      ],
+      "evidence_against": [
+        "Reaching >$75 requires at least 16 distinct $5 USDC submissions or equivalent transfers in a 4-day window.",
+        "The market creator placed a large 5000 mana NO limit order at 49%, signaling confidence that organic usage wouldn't cross $75.",
+        "Usage on niche AI math verification tools typically slows down after initial testing."
+      ],
+      "reason": "would be a longshot bet against the 12% favourite"
+    },
+    {
       "ts": 1790472775132,
       "kind": "no_trade",
       "question": "US Average Gas Price Is $4.5500 or more on October 1 2026?",
@@ -1294,29 +1318,6 @@
         "Final pre-vote polls from gfs.bern indicate 63% intend to reject the initiative and only 34% favor it.",
         "Swiss popular initiatives historically struggle to pass, especially as support tends to erode significantly during the course of public campaigns (only about 25 out of 240 have ever passed).",
         "The initiative requires both a nationwide popular majority and a cantonal majority, making it doubly difficult to pass."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1790392445498,
-      "kind": "no_trade",
-      "question": "Will I weigh >150lbs at the end of September?",
-      "url": "https://manifold.markets/Parallax/will-i-weigh-150lbs-at-the-end-of-s",
-      "market_prob": 0.4452921574910301,
-      "model_prob": 0.22,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "As of September 25, creator is at 146.6 lbs. Reaching >150.0 lbs by the morning of September 30 requires gaining 3.5 lbs in 5 days. While substantial spikes occurred earlier in the month, sustaining the required daily surplus makes NO the more likely outcome.",
-      "uncertainty": "Whether the creator intentionally employs aggressive short-term weight manipulation (carb/sodium loading) to cross 150 lbs on the morning of September 30.",
-      "resolution_risk": "Standard morning weigh-in protocol ambiguities (e.g. weighing clothed vs unclothed, hydration status upon waking).",
-      "evidence_for": [
-        "The creator gained 3.6 lbs between Sep 19 (143.0 lbs) and Sep 25 (146.6 lbs), showing sharp upward momentum.",
-        "Reaching >150 lbs from 146.6 lbs requires a gain of 3.5 lbs over 5 days, which is biologically achievable via aggressive caloric surplus and carbohydrate/sodium-induced water retention."
-      ],
-      "evidence_against": [
-        "146.6 lbs is the highest weigh-in recorded all month, requiring an unprecedented sustained surge over the final 5 days to clear 150 lbs.",
-        "Morning weigh-ins typically exclude acute intra-day water loading, making genuine weight gain of 3.5 lbs in under 5 days difficult for someone historically underweight."
       ],
       "reason": "size floored to zero by balance reserve"
     }
