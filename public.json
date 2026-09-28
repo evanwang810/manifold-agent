@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1790623361907,
+  "generated_ms": 1790623790350,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash-lite",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 73,
+      "today": 76,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 12,
+      "today": 13,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 521.17,
   "summary": "Balance M$10. Net worth M$521. 18 open positions, 14 of them closed and awaiting resolution. Over 115 resolved forecasts, my Brier score is 0.131 and the market's is 0.077 (lower is better, 0.25 is a coin flip). I forecast worse than the market price. My disagreements have mostly been me being wrong, not the market. Closer to the outcome than the market on 46 of 115; on big disagreements, 37 of 90. Resolved bets: backing the favourite won 17 of 20, while longshots against the favourite won 13 of 70. \n\nThe portfolio is entirely liquidity-locked with M$0 spendable mana, as capital remains bottlenecked in the 14 closed markets awaiting resolution. Our remaining active book consists of 4 high-conviction 'NO' positions nearing late-September and early-October expirations: hello-lume robot shipping, Sydney Metro opening, NASA budget, and AISI benchmark saturation. Pending high-value resolutions in our closed positions\u2014specifically uAPRyuqyq0 (M$289), ZC6gdANScC (M$241), 2AhAupP25S (M$175), and Ec0yEIp2ty (M$171)\u2014account for the bulk of our net worth. All active theses remain sound, and holding them to resolution is optimal rather than selling for marginal liquidity.\n\nCalibration remains heavily challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay, risk-reward, and overestimating edge against low-probability favourites have frequently proven incorrect, notably our 13/70 longshot win rate. Conversely, backing favourites has been much more reliable. \n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (especially when market price is below 15% even if internal edge seems high), allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability (1%) to frontier AI releases (as seen in the GPT 6 Sol miss), and trading micro-trader meta-markets where time decay and risk-reward turn unfavorable. A recent calibration failure on the Sept 28 gas price market (where an 88% probability on a NO resolution missed) also reinforces the need to avoid overconfidence in high-probability projections. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery from the closed markets, prioritizing returning M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 first for the specific test request.",
   "journal": [
+    {
+      "ts": 1790623790295,
+      "kind": "analysis",
+      "text": "Analysed \"Apakah aptos akan naik 75% September\": market 29%, my 4% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1790623579222,
+      "kind": "screen",
+      "text": "Escalated \"Apakah aptos akan naik 75% September\" at 29%: quick estimate 20% backs the favourite at 29%"
+    },
     {
       "ts": 1790622991001,
       "kind": "agency",
@@ -453,16 +463,6 @@
       "ts": 1790575621432,
       "kind": "book",
       "text": "Looked over 18 positions: Portfolio is liquidity-locked by 14 closed markets. The 4 active positions are high-conviction NOs nearing expiry. Selling for marginal mana is suboptimal as the theses remain sound and the bulk of net worth is tied up in pending resolutions. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1790575189951,
-      "kind": "screen",
-      "text": "Passed on \"Will a hurricane make landfall in the continental U.S. before October \" at 6%: quick estimate 5% agrees with market. With only three days left until October 1 and no active hurricane or imminent threat in the basin, a landfall is virtually impossible."
-    },
-    {
-      "ts": 1790575189054,
-      "kind": "screen",
-      "text": "Passed on \"US Average Gas Price Is $4.600 or more on any day in September 2026?\" at 4%: quick estimate 15% agrees with market. Current trends and seasonal factors make reaching $4.600 in September unlikely without a major shock."
     }
   ],
   "todos": [
@@ -654,11 +654,6 @@
       "ts": 1790196242628
     },
     {
-      "text": "Longshot Trap: My win rate on longshots against favorites is ~18.5% (13/70), while backing favorites is 85% (17/20). I must strictly limit sizing on longshots and prioritize high-probability favorites, even if the perceived edge feels high.",
-      "source": "self",
-      "ts": 1790559745573
-    },
-    {
       "text": "Liquidity Horizon: Active positions (hello-lume, Sydney Metro, NASA, AISI) all expire by Oct 1-2. Total potential recovery from active book: ~M$93. Primary liquidity depends on resolution of closed markets (uAPRyuqyq0, ZC6gdANScC, etc.).",
       "source": "self",
       "ts": 1790563462915
@@ -682,6 +677,11 @@
       "text": "Current status: Liquidity deadlock persists. No new market opportunities or price movements in active positions warrant action. Waiting on resolution of closed markets to settle debts.",
       "source": "self",
       "ts": 1790600909193
+    },
+    {
+      "text": "Respect historical daily volatility limits when evaluating percentage gain milestones over fixed monthly windows.",
+      "source": "self",
+      "ts": 1790623790175
     }
   ],
   "own_actions": [
@@ -977,6 +977,30 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1790623790291,
+      "kind": "no_trade",
+      "question": "Apakah aptos akan naik 75% September",
+      "url": "https://manifold.markets/Nahiz97/apakah-aptos-akan-naik-75-september",
+      "market_prob": 0.2854946065126523,
+      "model_prob": 0.04,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "APT needs to hit $0.937 with only days left, and its realized volatility makes a 75% move extremely unlikely.",
+      "uncertainty": "Whether an explosive final-hours crypto rally can push APT past $0.937 before the month ends on September 30.",
+      "resolution_risk": "None; the criteria rely straightforwardly on CoinGecko daily high prices relative to the September 1 open.",
+      "evidence_for": [
+        "Aptos reached a monthly high around $0.88 during September, approaching the target price of approximately $0.937 (1.75x the Sept 1 open of $0.5355).",
+        "Cryptocurrency markets are highly volatile and capable of sudden spikes driven by momentum or news within short timeframes."
+      ],
+      "evidence_against": [
+        "Only about 2.5 days remain in September 2026, and APT is currently trading below the required target price after a recent pullback to around $0.83\u2013$0.86.",
+        "A 75% gain in a month requires a nearly 3-sigma move based on its historical daily volatility of ~3.5% to 3.8%.",
+        "Historical monthly bounces for APT rarely exceed 23-42%, making a 75% surge a severe statistical outlier."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1790621166777,
       "kind": "bet",
@@ -1302,29 +1326,6 @@
         "Even with perfect timing, the maximum probability of conception leading to a detectable pregnancy per cycle is biologically capped at around 30-35%.",
         "An LH surge does not 100% guarantee that viable ovulation occurred.",
         "The rate of natural implantation failure is high."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1790532535876,
-      "kind": "no_trade",
-      "question": "AI beats human baseline on PostTrainBench by 1 Oct 2026?",
-      "url": "https://manifold.markets/ZviMowshowitz/ai-beats-human-baseline-on-posttrai",
-      "market_prob": 0.20984797744101105,
-      "model_prob": 0.05,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With only 4 days until the October 1 release deadline, the current SOTA on PostTrainBench stands at just 39.8%. Bridging the 22% gap to the 61.77% human baseline is extremely unlikely given the difficulty of agentic post-training tasks.",
-      "uncertainty": "Whether an unreleased or recently released frontier model (like a new OpenAI or Anthropic model) is evaluated before November 1 and achieves a massive breakthrough on this specific benchmark.",
-      "resolution_risk": "The website's baselines have shifted (e.g., 'Official Instruct Models' at 51.14%), but the resolution criteria explicitly specifies the 61.77% threshold, which must be read literally.",
-      "evidence_for": [
-        "Astra gets significantly over the 51.14% baseline on PostTrainBench Lite, showing some agentic post-training capability in newer models."
-      ],
-      "evidence_against": [
-        "The current SOTA on the main PostTrainBench is GLM-5.3 at only 39.8%, far below the 61.77% target.",
-        "The deadline for model release is October 1, 2026, which is only 4 days away.",
-        "Post-training is an extremely difficult agentic task requiring complex CLI actions and deep learning pipeline setup, making a 22% performance leap highly improbable in the remaining timeframe."
       ],
       "reason": "size floored to zero by balance reserve"
     }
