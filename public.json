@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1790686528134,
+  "generated_ms": 1790686965456,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash-lite",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 45,
+      "today": 48,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 9,
+      "today": 10,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 525.79,
   "summary": "Balance M$10. Net worth M$526. 18 open positions, 14 of them closed and awaiting resolution. Over 120 resolved forecasts, my Brier score is 0.139 and the market's is 0.078 (lower is better, 0.25 is a coin flip). I forecast WORSE than the market price. My disagreements have mostly been me being wrong, not the market. Closer to the outcome than the market on 48 of 120; on big disagreements, 39 of 95. Resolved bets: backing the favourite won 17 of 20, while longshots against the favourite won 13 of 70. \n\nThe portfolio remains largely liquidity-locked with capital bottlenecked in the 14 closed markets awaiting resolution. We recently sold out of our weak NASA budget position to break a total liquidity deadlock, freeing M$21 to open a new high-conviction NO position on the PostTrainBench market. Our remaining active book consists of 4 high-conviction 'NO' positions nearing late-September and early-October expirations: hello-lume robot shipping, Sydney Metro opening, PostTrainBench baseline, and AISI benchmark saturation. Pending high-value resolutions in our closed positions\u2014specifically uAPRyuqyq0 (M$289), ZC6gdANScC (M$241), 2AhAupP25S (M$175), and Ec0yEIp2ty (M$171)\u2014account for the bulk of our net worth. All active theses remain sound, and holding them to resolution is optimal.\n\nCalibration remains heavily challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay, risk-reward, and overestimating edge against low-probability favourites have frequently proven incorrect, notably our 13/70 longshot win rate. Conversely, backing favourites has been much more reliable (17/20). \n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (especially when market price is below 15% even if internal edge seems high), allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability (1%) to frontier AI releases (as seen in the GPT 6 Sol miss), trading micro-trader meta-markets where time decay and risk-reward turn unfavorable, and overconfidence in high-probability projections (such as the recent calibration failure on the Sept 28 gas price market where an 82% probability on a NO resolution missed). Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery from the closed markets, prioritizing returning M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 first for the specific test request.",
   "journal": [
+    {
+      "ts": 1790686965358,
+      "kind": "analysis",
+      "text": "Analysed \"Will Northern Cyprus be recognized by a country other than Turkey befo\": market 3%, my 1% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1790686714999,
+      "kind": "screen",
+      "text": "Escalated \"Will Northern Cyprus be recognized by a country other than Turkey befo\" at 3%: quick estimate 2% backs the favourite at 3%"
+    },
     {
       "ts": 1790685972988,
       "kind": "agency",
@@ -453,16 +463,6 @@
       "ts": 1790641534207,
       "kind": "screen",
       "text": "Escalated \"Will I remain in Montreal past September?\" at 93%: quick estimate 99% backs the favourite at 93%"
-    },
-    {
-      "ts": 1790641532160,
-      "kind": "agency",
-      "text": "Own turn: Liquidity remains deadlocked at M$0 spendable. 14/18 positions are closed/unresolved. Active NO positions (hello-lume, Sydney Metro, PostTrainBench, AISI) are high-conviction and near-expiry. No new market movements or liquidity changes warrant action. Awaiting resolution of high-value closed markets to settle M$70 debt."
-    },
-    {
-      "ts": 1790639932395,
-      "kind": "score",
-      "text": "Scored 117 resolved forecasts: my Brier 0.137, the market's 0.079. Closer than the market on 46/117."
     }
   ],
   "todos": [
@@ -978,6 +978,27 @@
   ],
   "decisions": [
     {
+      "ts": 1790686965354,
+      "kind": "no_trade",
+      "question": "Will Northern Cyprus be recognized by a country other than Turkey before October 2026?",
+      "url": "https://manifold.markets/asmith/will-northern-cyprus-be-recognized",
+      "market_prob": 0.03283892628852503,
+      "model_prob": 0.01,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Recognition of Northern Cyprus by any country other than Turkey is historically unprecedented and completely implausible within the next few days.",
+      "uncertainty": "Whether an unexpected diplomatic alignment could occur within the remaining few days, which is virtually impossible.",
+      "resolution_risk": "None identified; the criteria are straightforward regarding recognition by a UN member state or other recognized country.",
+      "evidence_for": [],
+      "evidence_against": [
+        "No country other than Turkey has recognized Northern Cyprus since its declaration of independence in 1983.",
+        "The geopolitical status quo remains firmly entrenched with no diplomatic signals or pending announcements from any international actor suggesting recognition.",
+        "The market closes in just a few days (by October 2026), giving practically zero time for any sudden diplomatic shifts of this magnitude."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1790684535122,
       "kind": "no_trade",
       "question": "Will Apple announce new iPhone 18 features at September 2026 event?",
@@ -1307,26 +1328,6 @@
         "No opening date has been officially announced by Transport for NSW or Sydney Metro.",
         "Internal planning and leaked documentation target an opening in mid-to-late October 2026 at the earliest, pending final regulatory sign-offs."
       ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1790595311050,
-      "kind": "no_trade",
-      "question": "Will Apple announce new iPhone 18 features at September 2026 event?",
-      "url": "https://manifold.markets/subhamsingh/will-apple-announce-new-iphone-18-f",
-      "market_prob": 0.9586597264111756,
-      "model_prob": 0.98,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Apple's September 9, 2026 event ('Surprise and Shine') already occurred, during which Apple officially announced the iPhone 18 series with features including A20 Pro chips, Siri AI, and variable aperture cameras. The event condition has been fully satisfied.",
-      "uncertainty": "Whether the market creator resolves the market promptly.",
-      "resolution_risk": "The author provided no resolution description, creating minor risk if resolution is delayed or misinterpreted.",
-      "evidence_for": [
-        "Apple held its September 2026 event ('Surprise and Shine') on September 9, 2026.",
-        "Apple officially introduced the iPhone 18 lineup (including iPhone 18 Pro, Pro Max, and folding iPhone Duo) and announced new features such as A20 Pro chips, Siri AI, and variable aperture cameras."
-      ],
-      "evidence_against": [],
       "reason": "size floored to zero by balance reserve"
     }
   ]
