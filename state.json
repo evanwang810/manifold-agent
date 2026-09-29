@@ -2,16 +2,6 @@
   "summary": "Balance M$10. Net worth M$526. 18 open positions, 14 of them closed and awaiting resolution. Over 120 resolved forecasts, my Brier score is 0.139 and the market's is 0.078 (lower is better, 0.25 is a coin flip). I forecast WORSE than the market price. My disagreements have mostly been me being wrong, not the market. Closer to the outcome than the market on 48 of 120; on big disagreements, 39 of 95. Resolved bets: backing the favourite won 17 of 20, while longshots against the favourite won 13 of 70. \n\nThe portfolio remains largely liquidity-locked with capital bottlenecked in the 14 closed markets awaiting resolution. We recently sold out of our weak NASA budget position to break a total liquidity deadlock, freeing M$21 to open a new high-conviction NO position on the PostTrainBench market. Our remaining active book consists of 4 high-conviction 'NO' positions nearing late-September and early-October expirations: hello-lume robot shipping, Sydney Metro opening, PostTrainBench baseline, and AISI benchmark saturation. Pending high-value resolutions in our closed positions\u2014specifically uAPRyuqyq0 (M$289), ZC6gdANScC (M$241), 2AhAupP25S (M$175), and Ec0yEIp2ty (M$171)\u2014account for the bulk of our net worth. All active theses remain sound, and holding them to resolution is optimal.\n\nCalibration remains heavily challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay, risk-reward, and overestimating edge against low-probability favourites have frequently proven incorrect, notably our 13/70 longshot win rate. Conversely, backing favourites has been much more reliable (17/20). \n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (especially when market price is below 15% even if internal edge seems high), allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability (1%) to frontier AI releases (as seen in the GPT 6 Sol miss), trading micro-trader meta-markets where time decay and risk-reward turn unfavorable, and overconfidence in high-probability projections (such as the recent calibration failure on the Sept 28 gas price market where an 82% probability on a NO resolution missed). Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery from the closed markets, prioritizing returning M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 first for the specific test request.",
   "journal": [
     {
-      "ts": 1790520005802,
-      "kind": "book",
-      "text": "Looked over 18 positions: The portfolio is in a liquidity deadlock with 14 of 18 positions closed and awaiting resolution. The 4 remaining open positions are high-conviction NO bets nearing expiry. Selling these for marginal mana is suboptimal compared to waiting for the high-value closed markets to resolve and unlock the bulk of the net worth. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1790520753018,
-      "kind": "score",
-      "text": "Scored 114 resolved forecasts: my Brier 0.125, the market's 0.075. Closer than the market on 46/114."
-    },
-    {
       "ts": 1790522314873,
       "kind": "screen",
       "text": "Escalated \"Will 0x876611867717dE6b6dff30da5CeF9feB620eE1ea REACH more than 100.00\" at 6%: quick estimate 5% backs the favourite at 6%"
@@ -1500,6 +1490,16 @@
       "ts": 1790689505259,
       "kind": "analysis",
       "text": "Analysed \"Will the Sydney Metro Sydenham-Bankstown line open as scheduled by the\": market 14%, my 3% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1790689873287,
+      "kind": "agency",
+      "text": "Own turn: Liquidity deadlocked (M$0 spendable). 4 active NO positions (AISI, PostTrainBench, Sydney Metro, hello-lume) are high-conviction and nearing expiry (1-7 days). 14 closed positions await resolution. Holding is optimal as selling for marginal mana is inefficient. Awaiting resolution of uAPRyuqyq0, ZC6gdANScC, etc., to settle M$70 debt."
+    },
+    {
+      "ts": 1790689873296,
+      "kind": "agency",
+      "text": "Own turn, wrote a standing note: [self] Resolution Bottleneck: A significant portion of net worth is currently locked in 'Closed' but 'Unresolved' market. Because: To formally record the systemic risk of having capital tied up in admin-dependent resolutions, which currently dictates all my tactical constraints."
     }
   ],
   "lessons": [
@@ -1554,11 +1554,6 @@
       "ts": 1790196242628
     },
     {
-      "text": "Resolution Lag: Several high-value positions from August (uAPRyuqyq0, ZC6gdANScC) remain 'Closed' but not 'Resolved'. Liquidity recovery is dependent on admin action, not just the passage of time.",
-      "source": "self",
-      "ts": 1790570878942
-    },
-    {
       "text": "Calibration Failure (Gas Prices): Overestimated probability (88%) on the Sept 28 gas price market (resolved NO). This highlights a tendency to over-confidently project trends or data points where the market is more uncertain.",
       "source": "self",
       "ts": 1790585961972
@@ -1582,6 +1577,11 @@
       "text": "Brier Gap Analysis: The significant delta between my Brier (0.137) and the market's (0.079) is primarily driven by the 13/70 longshot win rate. This confirms that my perceived 'edge' in low-probability events is often a calibration error. I must treat any 'longshot' (YES < 15%) w",
       "source": "self",
       "ts": 1790652784889
+    },
+    {
+      "text": "Resolution Bottleneck: A significant portion of net worth is currently locked in 'Closed' but 'Unresolved' markets. This creates a disconnect between theoretical net worth and actual liquidity, making the portfolio vulnerable to sudden needs or opportunities until admin resolutio",
+      "source": "self",
+      "ts": 1790689873287
     }
   ],
   "conversations": {
@@ -3324,7 +3324,7 @@
   },
   "llm_usage": {
     "day": "2026-09-29",
-    "chat": 26,
+    "chat": 27,
     "fast": 51,
     "deep": 11
   },
@@ -3956,15 +3956,9 @@
     "long_n": 70,
     "long_won": 13
   },
-  "last_own_action_ms": 1790685844709,
+  "last_own_action_ms": 1790689691326,
   "last_book_review_ms": 1790687150179,
   "own_actions": [
-    {
-      "ts": 1790305296288,
-      "action": "sell",
-      "detail": "sold out of \"Will I weigh >150lbs at the end of September?\" (NO, P/L M$-19)",
-      "reasoning": "Worst active position. Thesis is failing/unclear and the position is a liquidity drain."
-    },
     {
       "ts": 1790307429629,
       "action": "note_add",
@@ -4198,6 +4192,12 @@
       "action": "note_add",
       "detail": "wrote a standing note: [self] Brier Gap Analysis: The significant delta between my Brier (0.137) and the market's (0.079) is primarily driven b",
       "reasoning": "Formalizing the lesson from my track record to prevent future 'longshot trap' entries during the current liquidity deadlock."
+    },
+    {
+      "ts": 1790689873292,
+      "action": "note_add",
+      "detail": "wrote a standing note: [self] Resolution Bottleneck: A significant portion of net worth is currently locked in 'Closed' but 'Unresolved' market",
+      "reasoning": "To formally record the systemic risk of having capital tied up in admin-dependent resolutions, which currently dictates all my tactical constraints."
     }
   ],
   "portfolio_mark": {
@@ -4428,7 +4428,7 @@
   },
   "replied_to": [],
   "tracked_orders": {},
-  "events_since_compress": 24,
+  "events_since_compress": 25,
   "watch_probs": {
     "Ln5EgOhAty": 0.4726684393929348,
     "dCP8cP0CLL": 0.19410275640601396,
@@ -4510,7 +4510,7 @@
   },
   "track_record": "Brier score over 122 resolved forecasts: yours 0.137, the market's 0.077 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market.\nCloser to the outcome than the market on 49 of 122; on big disagreements, 40 of 97.\nResolved bets: 90. Backing the favourite: won 17 of 20. Longshots against the favourite: won 13 of 70.\nMost recent resolutions:\n- \"Will 0x876611867717dE6b6dff30da5CeF9feB620eE1ea REACH more than 200.00\": you 2%, market 8%, resolved NO\n- \"Will 0x876611867717dE6b6dff30da5CeF9feB620eE1ea REACH more than 100.00\": you 3%, market 6%, resolved NO\n- \"US Average Gas Price Is $4.4900 or more on September 29 2026?\": you 82%, market 26%, resolved NO\n- \"Swiss federal Neutrality Initiative passes\": you 3%, market 7%, resolved NO\n- \"Will the address for math.eg.rego.re receive more than $75 before Sep \": you 34%, market 12%, resolved NO\n- \"Will a manifolder report on the Oreo chicken burger in the next month?\": you 22%, market 11%, resolved NO",
   "status": {
-    "text": "Liquidity remains deadlocked (M$0 spendable) due to 14 closed positions awaiting resolution. The 4 active NO positions (AISI, PostTrainBench, Sydney Metro, hello-lume) are high-conviction, near-expiry, and priced low (8-16%). Selling them for marginal mana is inefficient compared to their high probability of payout. Awaiting large resolutions to settle M$70 debt. The book is in good shape.",
-    "ts": 1790685972988
+    "text": "Liquidity deadlocked (M$0 spendable). 4 active NO positions (AISI, PostTrainBench, Sydney Metro, hello-lume) are high-conviction and nearing expiry (1-7 days). 14 closed positions await resolution. Holding is optimal as selling for marginal mana is inefficient. Awaiting resolution of uAPRyuqyq0, ZC6gdANScC, etc., to settle M$70 debt.",
+    "ts": 1790689873287
   }
 }
