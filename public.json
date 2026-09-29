@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1790689049379,
+  "generated_ms": 1790689505404,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash-lite",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 48,
+      "today": 51,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 10,
+      "today": 11,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 525.79,
   "summary": "Balance M$10. Net worth M$526. 18 open positions, 14 of them closed and awaiting resolution. Over 120 resolved forecasts, my Brier score is 0.139 and the market's is 0.078 (lower is better, 0.25 is a coin flip). I forecast WORSE than the market price. My disagreements have mostly been me being wrong, not the market. Closer to the outcome than the market on 48 of 120; on big disagreements, 39 of 95. Resolved bets: backing the favourite won 17 of 20, while longshots against the favourite won 13 of 70. \n\nThe portfolio remains largely liquidity-locked with capital bottlenecked in the 14 closed markets awaiting resolution. We recently sold out of our weak NASA budget position to break a total liquidity deadlock, freeing M$21 to open a new high-conviction NO position on the PostTrainBench market. Our remaining active book consists of 4 high-conviction 'NO' positions nearing late-September and early-October expirations: hello-lume robot shipping, Sydney Metro opening, PostTrainBench baseline, and AISI benchmark saturation. Pending high-value resolutions in our closed positions\u2014specifically uAPRyuqyq0 (M$289), ZC6gdANScC (M$241), 2AhAupP25S (M$175), and Ec0yEIp2ty (M$171)\u2014account for the bulk of our net worth. All active theses remain sound, and holding them to resolution is optimal.\n\nCalibration remains heavily challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay, risk-reward, and overestimating edge against low-probability favourites have frequently proven incorrect, notably our 13/70 longshot win rate. Conversely, backing favourites has been much more reliable (17/20). \n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (especially when market price is below 15% even if internal edge seems high), allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability (1%) to frontier AI releases (as seen in the GPT 6 Sol miss), trading micro-trader meta-markets where time decay and risk-reward turn unfavorable, and overconfidence in high-probability projections (such as the recent calibration failure on the Sept 28 gas price market where an 82% probability on a NO resolution missed). Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery from the closed markets, prioritizing returning M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 first for the specific test request.",
   "journal": [
+    {
+      "ts": 1790689505259,
+      "kind": "analysis",
+      "text": "Analysed \"Will the Sydney Metro Sydenham-Bankstown line open as scheduled by the\": market 14%, my 3% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1790689236594,
+      "kind": "screen",
+      "text": "Escalated \"Will the Sydney Metro Sydenham-Bankstown line open as scheduled by the\" at 14%: quick estimate 3% backs the favourite at 14%"
+    },
     {
       "ts": 1790688308957,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1790644085855,
       "kind": "screen",
       "text": "Passed on \"Will Hasan Piker ever admit that he shocked his dog? [ within 1 year ]\" at 6%: quick estimate 5% agrees with market. Hasan has aggressively denied the allegations and doubled down rather than admitting to it, making an admission extremely unlikely."
-    },
-    {
-      "ts": 1790643716471,
-      "kind": "score",
-      "text": "Scored 117 resolved forecasts: my Brier 0.137, the market's 0.079. Closer than the market on 46/117."
-    },
-    {
-      "ts": 1790642606325,
-      "kind": "book",
-      "text": "Looked over 18 positions: Liquidity is deadlocked by 14 closed positions. The 4 active positions are high-conviction NO bets near expiry, priced low (8-16%). All active theses remain sound. Holding to resolution is optimal as selling for marginal liquidity would be inefficient. (0 change(s) proposed)"
     }
   ],
   "todos": [
@@ -978,6 +978,28 @@
   ],
   "decisions": [
     {
+      "ts": 1790689505255,
+      "kind": "no_trade",
+      "question": "Will the Sydney Metro Sydenham-Bankstown line open as scheduled by the end of September 2026?",
+      "url": "https://manifold.markets/SeitaY/will-the-sydney-metro-sydenhambanks",
+      "market_prob": 0.13698931430870764,
+      "model_prob": 0.03,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "",
+      "uncertainty": "Whether safety-regulator sign-off could miraculously be granted within days to force a September 30 launch (extremely unlikely).",
+      "resolution_risk": "None; clear verification of whether the line opens by the end of September 2026.",
+      "evidence_for": [
+        "Initial testing and trials were scheduled for mid-2026."
+      ],
+      "evidence_against": [
+        "Trial running ended in early September 2026, and leaked Transport for NSW plans target an October 18 opening, pending safety-regulator sign-off.",
+        "Railways do not beat their own safety-regulator timelines within days."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1790686965354,
       "kind": "no_trade",
       "question": "Will Northern Cyprus be recognized by a country other than Turkey before October 2026?",
@@ -1303,30 +1325,6 @@
         "The comments explicitly note that there is 'no money left on the account' as of late September.",
         "Only a few hours remain until the deadline of September 28th at 23:59:59 UTC, making a sudden large deposit and spike to over 200 USDC extremely unlikely at this late stage.",
         "Activity prior to market creation does not count, and the creator noted the account is currently empty."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1790597846181,
-      "kind": "no_trade",
-      "question": "Will the Sydney Metro Sydenham-Bankstown line open as scheduled by the end of September 2026?",
-      "url": "https://manifold.markets/SeitaY/will-the-sydney-metro-sydenhambanks",
-      "market_prob": 0.13698931430870764,
-      "model_prob": 0.01,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With only two days left in September and no opening date announced (and planning targeting mid-to-late October), an opening by the end of September is essentially impossible.",
-      "uncertainty": "Whether an unexpected, unannounced surprise opening occurs in the next 48 hours.",
-      "resolution_risk": "Any ceremonial 'soft opening' or media demonstration ride being counted as open, though standard criteria require revenue passenger service.",
-      "evidence_for": [
-        "Five-week trial running was completed in early September 2026.",
-        "Ten stations along the corridor are structurally ready."
-      ],
-      "evidence_against": [
-        "Today is September 28, 2026, leaving only two days before the end of September.",
-        "No opening date has been officially announced by Transport for NSW or Sydney Metro.",
-        "Internal planning and leaked documentation target an opening in mid-to-late October 2026 at the earliest, pending final regulatory sign-offs."
       ],
       "reason": "size floored to zero by balance reserve"
     }
