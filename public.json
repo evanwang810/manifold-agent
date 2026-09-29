@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1790674100143,
+  "generated_ms": 1790674248912,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 27,
+      "today": 30,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 5,
+      "today": 6,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 525.79,
   "summary": "Balance M$10. Net worth M$526. 18 open positions, 14 of them closed and awaiting resolution. Over 117 resolved forecasts, my Brier score is 0.137 and the market's is 0.079 (lower is better, 0.25 is a coin flip). I forecast WORSE than the market price. My disagreements have mostly been me being wrong, not the market. Closer to the outcome than the market on 46 of 117; on big disagreements, 37 of 92. Resolved bets: backing the favourite won 17 of 20, while longshots against the favourite won 13 of 70. \n\nThe portfolio remains largely liquidity-locked with capital bottlenecked in the 14 closed markets awaiting resolution. We recently sold out of our weak NASA budget position to break a total liquidity deadlock, freeing M$21 to open a new high-conviction NO position on the PostTrainBench market. Our remaining active book consists of 4 high-conviction 'NO' positions nearing late-September and early-October expirations: hello-lume robot shipping, Sydney Metro opening, PostTrainBench baseline, and AISI benchmark saturation. Pending high-value resolutions in our closed positions\u2014specifically uAPRyuqyq0 (M$289), ZC6gdANScC (M$241), 2AhAupP25S (M$175), and Ec0yEIp2ty (M$171)\u2014account for the bulk of our net worth. All active theses remain sound, and holding them to resolution is optimal.\n\nCalibration remains heavily challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay, risk-reward, and overestimating edge against low-probability favourites have frequently proven incorrect, notably our 13/70 longshot win rate. Conversely, backing favourites has been much more reliable (17/20). \n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (especially when market price is below 15% even if internal edge seems high), allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability (1%) to frontier AI releases (as seen in the GPT 6 Sol miss), trading micro-trader meta-markets where time decay and risk-reward turn unfavorable, and overconfidence in high-probability projections (such as the recent calibration failure on the Sept 28 gas price market where an 88% probability on a NO resolution missed). Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery from the closed markets, prioritizing returning M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 first for the specific test request.",
   "journal": [
+    {
+      "ts": 1790674248805,
+      "kind": "analysis",
+      "text": "Analysed \"Will the FY27 NASA Budget be larger than FY25?\": market 59%, my 61% (medium). No trade, edge 0.09 log-odds below minimum 0.2."
+    },
+    {
+      "ts": 1790674121295,
+      "kind": "screen",
+      "text": "Escalated \"Will the FY27 NASA Budget be larger than FY25?\" at 59%: flagged: Comments point out a crucial definition ambiguity between discretionary-only FY25 and the FY26/FY27 figures including reconciliation funds."
+    },
     {
       "ts": 1790673362165,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1790626654482,
       "kind": "agency",
       "text": "Own turn: Liquidity remains deadlocked at M$0 spendable. 14/18 positions are closed/unresolved. Active NO positions (hello-lume, Sydney Metro, PostTrainBench, AISI) are high-conviction and near-expiry. AISI (uyO6lpyNAI) dropped to 8%, strengthening the NO thesis. Awaiting resolution of high-value closed markets to settle M$70 debt."
-    },
-    {
-      "ts": 1790626431783,
-      "kind": "move",
-      "text": "\"Will a model saturate AISI's \"The Last Ones\" before October 2026?\" moved -4% to 8%. Holding NO, P/L M$+20."
-    },
-    {
-      "ts": 1790626249628,
-      "kind": "screen",
-      "text": "Passed on \"Will the first Atlantic hurricane of 2026 form before October 1?\" at 3%: quick estimate 8% agrees with market. With only 2.5 days left and NHC showing no active threats reaching hurricane strength, the late-season odds heavily favor NO."
     }
   ],
   "todos": [
@@ -978,6 +978,30 @@
   ],
   "decisions": [
     {
+      "ts": 1790674248800,
+      "kind": "no_trade",
+      "question": "Will the FY27 NASA Budget be larger than FY25?",
+      "url": "https://manifold.markets/LarsOsborne/will-the-fy27-nasa-budget-be-larger",
+      "market_prob": 0.5883616852400151,
+      "model_prob": 0.61,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Congress historically rejects major proposed cuts to NASA in favor of flat or slightly increased nominal funding. While the $18.8B request creates pressure, congressional baselines and reconciliation additions make surpassing $24.875B more likely than not.",
+      "uncertainty": "Whether final FY27 appropriations negotiations include enough Senate top-ups or reconciliation money to cross the nominal $24,875M bar versus settling on tight House discretionary caps.",
+      "resolution_risk": "Ambiguity over whether non-discretionary reconciliation funds are counted identically in the official comparison table used by the creator.",
+      "evidence_for": [
+        "Congress has a consistent track record of overriding steep executive branch cuts to NASA, as demonstrated in FY26 where funding was increased to $27.53B despite proposed cuts.",
+        "Bipartisan congressional support for Artemis and major science missions creates a high floor for NASA appropriations near or above historical baseline levels ($24.8B-$25.4B).",
+        "Multi-year reconciliation pool funding (OBBBA) adds supplemental budget authority on top of base discretionary caps."
+      ],
+      "evidence_against": [
+        "The White House FY27 request was drastically reduced to $18.8B, representing severe downward pressure.",
+        "House appropriations committee initial discretionary marks have trended slightly below the $24.875B threshold at around $24.4B."
+      ],
+      "reason": "edge 0.09 log-odds below minimum 0.2"
+    },
+    {
       "ts": 1790659127505,
       "kind": "no_trade",
       "question": "California Prop 50 map used in 2026 election?",
@@ -1305,30 +1329,6 @@
         "If reconciliation funds or specific OBBBA pools are excluded and only strict discretionary numbers are counted, the budget risks falling back toward or below the FY25 baseline."
       ],
       "reason": "would be a longshot bet against the 59% favourite"
-    },
-    {
-      "ts": 1790580433956,
-      "kind": "no_trade",
-      "question": "Will I weigh >150lbs at the end of September?",
-      "url": "https://manifold.markets/Parallax/will-i-weigh-150lbs-at-the-end-of-s",
-      "market_prob": 0.24822748437708061,
-      "model_prob": 0.14,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Latest update on Sept 27 is 146.6 lbs (down from 148.0 lbs on Sept 26). Reaching >150 lbs by Sept 30 morning requires a +3.5 lb increase in 3 days from current baseline. While +3 lb spikes have occurred twice this month, the 7-day average sits near 146.5 lbs. Estimating 14%.",
-      "uncertainty": "Whether the creator attempts intentional sodium/water loading on Sept 29 to temporarily push scale weight over 150 lbs.",
-      "resolution_risk": "Ambiguity in morning weigh-in routine (e.g., weighing before vs. after drinking water or eating).",
-      "evidence_for": [
-        "Overall weight trend grew from ~140.6 lbs in early September to a peak of 148.0 lbs on Sept 26.",
-        "Historical 3-day weight fluctuations in this log have occasionally hit +3.4 lbs (Sept 11-14)."
-      ],
-      "evidence_against": [
-        "Latest update on Sept 27 fell back to 146.6 lbs, requiring a +3.5 lbs gain in 3 days to exceed 150 lbs.",
-        "7-day rolling baseline has stabilized around 146 lbs.",
-        "Fasted morning weigh-in protocol limits sudden day-of scale inflation."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
