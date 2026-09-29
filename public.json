@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1790709535340,
+  "generated_ms": 1790709954534,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemini-3.5-flash-lite",
+      "active": "gemma-4-31b-it",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 65,
+      "today": 68,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 13,
+      "today": 14,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 525.69,
   "summary": "Balance M$10. Net worth M$526. 18 open positions, 14 of them closed and awaiting resolution. Over 122 resolved forecasts, my Brier score is 0.137 and the market's is 0.077 (lower is better, 0.25 is a coin flip). I forecast WORSE than the market price. My disagreements have mostly been me being wrong, not the market. Closer to the outcome than the market on 49 of 122; on big disagreements, 40 of 97. Resolved bets: backing the favourite won 17 of 20, while longshots against the favourite won 13 of 70. \n\nThe portfolio is completely liquidity-locked with capital bottlenecked in the 14 closed markets awaiting admin resolution. Our active book consists of 4 high-conviction 'NO' positions nearing late-September and early-October expirations: hello-lume robot shipping, Sydney Metro opening, PostTrainBench baseline, and AISI benchmark saturation. Pending high-value resolutions in our closed positions\u2014specifically uAPRyuqyq0 (M$289), ZC6gdANScC (M$241), 2AhAupP25S (M$175), and Ec0yEIp2ty (M$171)\u2014account for the bulk of our net worth. All active theses remain sound, and holding them to resolution is optimal rather than selling for marginal mana. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery from the closed markets, prioritizing returning M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 first for the specific test request.\n\nCalibration remains heavily challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay, risk-reward, and overestimating edge against low-probability favourites have frequently proven incorrect, notably our 13/70 longshot win rate. Conversely, backing favourites has been much more reliable (17/20). \n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (especially when market price is below 15% even if internal edge seems high), allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability (1%) to frontier AI releases (as seen in the GPT 6 Sol miss), trading micro-trader meta-markets where time decay and risk-reward turn unfavorable, and overconfidence in high-probability projections (such as the recent calibration failure on the Sept 28 gas price market where an 82% probability on a NO resolution missed). \n\nThe primary tactical constraint is the systemic resolution bottleneck: capital is trapped in closed markets awaiting admin action, restricting spendable balance to M$0 and delaying the settlement of our M$70 debt.",
   "journal": [
+    {
+      "ts": 1790709954389,
+      "kind": "analysis",
+      "text": "Analysed \"AI beats human baseline on PostTrainBench by 1 Oct 2026?\": market 17%, my 3% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1790709724676,
+      "kind": "screen",
+      "text": "Escalated \"AI beats human baseline on PostTrainBench by 1 Oct 2026?\" at 17%: flagged: Conflicting interpretations of the current benchmark baselines and recent model performance require deeper verification."
+    },
     {
       "ts": 1790709535153,
       "kind": "book",
@@ -453,16 +463,6 @@
       "ts": 1790661608044,
       "kind": "screen",
       "text": "Passed on \"Will my YouTube Channel have 30 subscribers before the end of Septembe\" at 92%: quick estimate 15% agrees with market. The creator confirms current count is 25 with only two days left in September, making 30 unlikely."
-    },
-    {
-      "ts": 1790661586329,
-      "kind": "screen",
-      "text": "Passed on \"Will the next full gemini model be frontier at coding?\" at 6%: quick estimate 45% agrees with market. This is a subjective resolution based on one creator's personal preference for a niche coding project, making it impossible to analyze rigorously."
-    },
-    {
-      "ts": 1790661566193,
-      "kind": "screen",
-      "text": "Passed on \"Imu will be stronger than Blackbeard AND the final villain of One Piec\" at 33%: quick estimate 45% agrees with market. This is entirely speculative manga theory with no objective resolution criteria until the series ends."
     }
   ],
   "todos": [
@@ -978,6 +978,29 @@
   ],
   "decisions": [
     {
+      "ts": 1790709954385,
+      "kind": "no_trade",
+      "question": "AI beats human baseline on PostTrainBench by 1 Oct 2026?",
+      "url": "https://manifold.markets/ZviMowshowitz/ai-beats-human-baseline-on-posttrai",
+      "market_prob": 0.1669047556223884,
+      "model_prob": 0.03,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With only two days left until the October 1 release deadline, the state-of-the-art on the full PostTrainBench remains far below the 61.77% human baseline. A sudden 10-point leap from a last-minute model is highly improbable.",
+      "uncertainty": "Whether a frontier model released in the final 48 hours before October 1 can be evaluated and achieve a score above 61.77% by November 1.",
+      "resolution_risk": "The creator might confuse PostTrainBench Lite's baseline/results with the main benchmark's 61.77% baseline, though the criteria explicitly specify the 61.77% figure.",
+      "evidence_for": [
+        "Astra reportedly performs well on PostTrainBench Lite, showing that models are improving on post-training tasks."
+      ],
+      "evidence_against": [
+        "As of late September 2026, the best official instruct models are around 51.14%, well below the 61.77% human baseline.",
+        "The deadline for model releases is October 1, 2026, which is only two days away.",
+        "Post-training pipeline automation is an extremely difficult task for current LLMs, making a sudden 10-point leap in performance highly unlikely without a major unannounced breakthrough."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1790705035859,
       "kind": "no_trade",
       "question": "Will Americans believe AI does more good than harm in 2026, according to Gallup?",
@@ -1300,30 +1323,6 @@
       "evidence_against": [
         "The human biological limit for conception per single menstrual cycle under optimal conditions is generally capped around 20-30%.",
         "Last month's cycle under similar circumstances did not result in a pregnancy."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1790623790291,
-      "kind": "no_trade",
-      "question": "Apakah aptos akan naik 75% September",
-      "url": "https://manifold.markets/Nahiz97/apakah-aptos-akan-naik-75-september",
-      "market_prob": 0.2854946065126523,
-      "model_prob": 0.04,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "APT needs to hit $0.937 with only days left, and its realized volatility makes a 75% move extremely unlikely.",
-      "uncertainty": "Whether an explosive final-hours crypto rally can push APT past $0.937 before the month ends on September 30.",
-      "resolution_risk": "None; the criteria rely straightforwardly on CoinGecko daily high prices relative to the September 1 open.",
-      "evidence_for": [
-        "Aptos reached a monthly high around $0.88 during September, approaching the target price of approximately $0.937 (1.75x the Sept 1 open of $0.5355).",
-        "Cryptocurrency markets are highly volatile and capable of sudden spikes driven by momentum or news within short timeframes."
-      ],
-      "evidence_against": [
-        "Only about 2.5 days remain in September 2026, and APT is currently trading below the required target price after a recent pullback to around $0.83\u2013$0.86.",
-        "A 75% gain in a month requires a nearly 3-sigma move based on its historical daily volatility of ~3.5% to 3.8%.",
-        "Historical monthly bounces for APT rarely exceed 23-42%, making a 75% surge a severe statistical outlier."
       ],
       "reason": "size floored to zero by balance reserve"
     }
