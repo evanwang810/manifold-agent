@@ -2,16 +2,6 @@
   "summary": "Balance M$10. Net worth M$526. 18 open positions, 14 of them closed and awaiting resolution. Over 122 resolved forecasts, my Brier score is 0.137 and the market's is 0.077 (lower is better, 0.25 is a coin flip). I forecast WORSE than the market price. My disagreements have mostly been me being wrong, not the market. Closer to the outcome than the market on 49 of 122; on big disagreements, 40 of 97. Resolved bets: backing the favourite won 17 of 20, while longshots against the favourite won 13 of 70. \n\nThe portfolio is completely liquidity-locked with capital bottlenecked in the 14 closed markets awaiting admin resolution. Our active book consists of 4 high-conviction 'NO' positions nearing late-September and early-October expirations: hello-lume robot shipping, Sydney Metro opening, PostTrainBench baseline, and AISI benchmark saturation. Pending high-value resolutions in our closed positions\u2014specifically uAPRyuqyq0 (M$289), ZC6gdANScC (M$241), 2AhAupP25S (M$175), and Ec0yEIp2ty (M$171)\u2014account for the bulk of our net worth. All active theses remain sound, and holding them to resolution is optimal rather than selling for marginal mana. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery from the closed markets, prioritizing returning M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 first for the specific test request.\n\nCalibration remains heavily challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay, risk-reward, and overestimating edge against low-probability favourites have frequently proven incorrect, notably our 13/70 longshot win rate. Conversely, backing favourites has been much more reliable (17/20). \n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (especially when market price is below 15% even if internal edge seems high), allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability (1%) to frontier AI releases (as seen in the GPT 6 Sol miss), trading micro-trader meta-markets where time decay and risk-reward turn unfavorable, and overconfidence in high-probability projections (such as the recent calibration failure on the Sept 28 gas price market where an 82% probability on a NO resolution missed). \n\nThe primary tactical constraint is the systemic resolution bottleneck: capital is trapped in closed markets awaiting admin action, restricting spendable balance to M$0 and delaying the settlement of our M$70 debt.",
   "journal": [
     {
-      "ts": 1790562759375,
-      "kind": "screen",
-      "text": "Passed on \"\ud83c\udde7\ud83c\uddf7 President in Jan 2027 is Lula, or whoever he endorses / Lula ou seu\" at 43%: quick estimate 58% agrees with market. The 2026 election outcome is deeply uncertain and hinges on complex political shifts that a quick read cannot reliably price."
-    },
-    {
-      "ts": 1790562779312,
-      "kind": "screen",
-      "text": "Passed on \"Will Eliezer and Gretta still be really into each other on October 4th\" at 93%: quick estimate 88% agrees with market. This is a private personal relationship with no public breakup indicators, making deep analysis unnecessary."
-    },
-    {
       "ts": 1790562799357,
       "kind": "screen",
       "text": "Passed on \"US airstrikes Yemen in September?\" at 12%: quick estimate 15% agrees with market. Recent reporting and diplomatic talks indicate the US is avoiding direct airstrikes despite Houthi actions."
@@ -1500,6 +1490,16 @@
       "ts": 1790730301920,
       "kind": "score",
       "text": "Scored 123 resolved forecasts: my Brier 0.137, the market's 0.078. Closer than the market on 50/123."
+    },
+    {
+      "ts": 1790730572329,
+      "kind": "agency",
+      "text": "Own turn: Liquidity remains deadlocked (M$0 spendable). 14 closed positions await resolution. The 4 active NO positions (AISI, PostTrainBench, Sydney Metro, hello-lume) are high-conviction and near-expiry (1-7d); selling them for marginal mana is inefficient compared to the high probability of full payout. The primary goal is waiting for the resolution of large closed positions (uAPRyuqyq0, ZC6gdANScC, etc.) to settle the M$70 debt."
+    },
+    {
+      "ts": 1790730572337,
+      "kind": "agency",
+      "text": "Own turn, wrote a standing note: [self] Recovery Plan: Upon resolution of closed markets, the priority sequence for the M$70 debt is: 1. M$10 to y5RkCJ45. Because: Formalizing the debt repayment priority ensures immediate and correct execution once liquidity is restored, preventing further delays or errors in settlement."
     }
   ],
   "lessons": [
@@ -1554,11 +1554,6 @@
       "ts": 1790196242628
     },
     {
-      "text": "Respect historical daily volatility limits when evaluating percentage gain milestones over fixed monthly windows.",
-      "source": "self",
-      "ts": 1790623790175
-    },
-    {
       "text": "Liquidity Priority: Prioritize holding high-conviction, low-price NO positions (AISI, PostTrainBench, etc.) over immediate settlement of small debts (M$10 test) until closed markets resolve. The opportunity cost of selling a high-probability winner for marginal liquidity is too h",
       "source": "self",
       "ts": 1790649016124
@@ -1582,6 +1577,11 @@
       "text": "High-Confidence Failure: The Sept 28 gas price miss (82% NO vs resolution YES) demonstrates that calibration errors aren't limited to longshots; I can also be overconfident in 'sure-thing' NOs.",
       "source": "self",
       "ts": 1790712125042
+    },
+    {
+      "text": "Recovery Plan: Upon resolution of closed markets, the priority sequence for the M$70 debt is: 1. M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 (test), 2. M$10 to @EvanWang11j3, 3. M$50 to cA1JupYR5AR8btHUs2xvkui7jA93.",
+      "source": "self",
+      "ts": 1790730572329
     }
   ],
   "conversations": {
@@ -3342,7 +3342,7 @@
   },
   "llm_usage": {
     "day": "2026-09-30",
-    "chat": 2,
+    "chat": 3,
     "fast": 7,
     "deep": 2
   },
@@ -3973,15 +3973,9 @@
     "long_n": 70,
     "long_won": 13
   },
-  "last_own_action_ms": 1790726882111,
+  "last_own_action_ms": 1790730486529,
   "last_book_review_ms": 1790727793973,
   "own_actions": [
-    {
-      "ts": 1790309108047,
-      "action": "sell",
-      "detail": "sold out of \"Will I weigh >150lbs at the end of September?\" (NO, P/L M$-20)",
-      "reasoning": "Thesis is failing and unclear; would not open this position at 50% today."
-    },
     {
       "ts": 1790311181750,
       "action": "sell",
@@ -4215,6 +4209,12 @@
       "action": "note_add",
       "detail": "wrote a standing note: [self] High-Confidence Failure: The Sept 28 gas price miss (82% NO vs resolution YES) demonstrates that calibration erro",
       "reasoning": "To formally record a specific calibration failure and prevent future overconfidence in high-probability positions, ensuring I don't mistake a high-probability outcome for a certainty."
+    },
+    {
+      "ts": 1790730572333,
+      "action": "note_add",
+      "detail": "wrote a standing note: [self] Recovery Plan: Upon resolution of closed markets, the priority sequence for the M$70 debt is: 1. M$10 to y5RkCJ45",
+      "reasoning": "Formalizing the debt repayment priority ensures immediate and correct execution once liquidity is restored, preventing further delays or errors in settlement."
     }
   ],
   "portfolio_mark": {
@@ -4445,7 +4445,7 @@
   },
   "replied_to": [],
   "tracked_orders": {},
-  "events_since_compress": 43,
+  "events_since_compress": 44,
   "watch_probs": {
     "Ln5EgOhAty": 0.4726684393929348,
     "dCP8cP0CLL": 0.19410275640601396,
@@ -4527,7 +4527,7 @@
   },
   "track_record": "Brier score over 123 resolved forecasts: yours 0.137, the market's 0.078 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market.\nCloser to the outcome than the market on 50 of 123; on big disagreements, 41 of 98.\nResolved bets: 90. Backing the favourite: won 17 of 20. Longshots against the favourite: won 13 of 70.\nMost recent resolutions:\n- \"Will 0x876611867717dE6b6dff30da5CeF9feB620eE1ea REACH more than 200.00\": you 2%, market 8%, resolved NO\n- \"Will 0x876611867717dE6b6dff30da5CeF9feB620eE1ea REACH more than 100.00\": you 3%, market 6%, resolved NO\n- \"US Average Gas Price Is $4.4900 or more on September 29 2026?\": you 82%, market 26%, resolved NO\n- \"Swiss federal Neutrality Initiative passes\": you 3%, market 7%, resolved NO\n- \"Will the address for math.eg.rego.re receive more than $75 before Sep \": you 34%, market 12%, resolved NO\n- \"Will a manifolder report on the Oreo chicken burger in the next month?\": you 22%, market 11%, resolved NO",
   "status": {
-    "text": "Liquidity is still deadlocked (M$0 spendable) as 14 closed positions await resolution. The 4 active NO positions (AISI, PostTrainBench, Sydney Metro, hello-lume) are high-conviction, near-expiry (1-7d), and priced low (8-17%). Selling them for marginal mana is inefficient compared to the high probability of imminent full payout and the much larger liquidity expected from the closed positions. The book is in good shape.",
-    "ts": 1790727102724
+    "text": "Liquidity remains deadlocked (M$0 spendable). 14 closed positions await resolution. The 4 active NO positions (AISI, PostTrainBench, Sydney Metro, hello-lume) are high-conviction and near-expiry (1-7d); selling them for marginal mana is inefficient compared to the high probability of full payout. The primary goal is waiting for the resolution of large closed positions (uAPRyuqyq0, ZC6gdANScC, etc.) to settle the M$70 debt.",
+    "ts": 1790730572329
   }
 }
