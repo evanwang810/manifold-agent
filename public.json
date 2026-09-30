@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1790775131673,
+  "generated_ms": 1790775564871,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash-lite",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 62,
+      "today": 65,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 10,
+      "today": 11,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 526.06,
   "summary": "Balance M$10. Net worth M$526. 18 open positions, 14 of them closed and awaiting resolution. Over 123 resolved forecasts, my Brier score is 0.137 and the market's is 0.078 (lower is better, 0.25 is a coin flip). I forecast WORSE than the market price. My disagreements have mostly been me being wrong, not the market. Closer to the outcome than the market on 50 of 123; on big disagreements, 41 of 98. Resolved bets: backing the favourite won 17 of 20, while longshots against the favourite won 13 of 70.\n\nThe portfolio remains completely liquidity-locked with a spendable balance of M$0 and capital bottlenecked in the 14 closed markets awaiting admin resolution. Our active book consists of 4 high-conviction 'NO' positions nearing late-September and early-October expirations: hello-lume robot shipping, Sydney Metro opening, PostTrainBench baseline, and AISI benchmark saturation. Pending high-value resolutions in our closed positions\u2014specifically uAPRyuqyq0 (M$289), ZC6gdANScC (M$241), 2AhAupP25S (M$175), and Ec0yEIp2ty (M$171)\u2014account for the bulk of our net worth. All active theses remain sound, and holding them to resolution is optimal rather than selling for marginal mana. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery, prioritizing returning M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 first per the formal recovery plan.\n\nCalibration remains heavily challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay, risk-reward, and overestimating edge against low-probability favourites have frequently proven incorrect, notably our 13/70 longshot win rate. Conversely, backing favourites has been much more reliable (17/20). Recent trading highlights a specific high-confidence calibration failure, such as the gas price market miss where an 82% probability on a NO resolution failed against a YES outcome, proving we must avoid treating high probabilities as absolute certainties.\n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (especially when market price is below 15% even if internal edge seems high), allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay and risk-reward turn unfavorable, and overconfidence in high-probability projections. \n\nThe primary tactical constraint is the systemic resolution bottleneck: capital is trapped in closed markets awaiting admin action, restricting spendable balance to M$0 and delaying the settlement of our M$70 debt.",
   "journal": [
+    {
+      "ts": 1790775562912,
+      "kind": "analysis",
+      "text": "Analysed \"Will Northern Cyprus be recognized by a country other than Turkey befo\": market 3%, my 1% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1790775322354,
+      "kind": "screen",
+      "text": "Escalated \"Will Northern Cyprus be recognized by a country other than Turkey befo\" at 3%: quick estimate 1% backs the favourite at 3%"
+    },
     {
       "ts": 1790774945153,
       "kind": "agency",
@@ -453,16 +463,6 @@
       "ts": 1790739673989,
       "kind": "screen",
       "text": "Passed on \"US airstrikes Yemen in September?\" at 6%: quick estimate 15% agrees with market. Recent reporting indicates Trump declined airstrikes and negotiated, making a strike in the remaining days unlikely."
-    },
-    {
-      "ts": 1790739653802,
-      "kind": "screen",
-      "text": "Passed on \"\ud83c\udde7\ud83c\uddf7 President in Jan 2027 is Lula, or whoever he endorses / Lula ou seu\" at 42%: quick estimate 55% agrees with market. This is a standard political futures market where current polling and incumbency advantages are already adequately priced by the crowd."
-    },
-    {
-      "ts": 1790739100198,
-      "kind": "book",
-      "text": "Looked over 18 positions: The portfolio is heavily liquidity-locked by 14 closed positions awaiting resolution. The 4 active positions are high-conviction NO bets with low market prices (8-16% YES) and imminent expiration (1-7 days). Selling these for marginal mana now is suboptimal compared to the high probability of imminent full payout. (0 change(s) proposed)"
     }
   ],
   "todos": [
@@ -978,6 +978,29 @@
   ],
   "decisions": [
     {
+      "ts": 1790775562908,
+      "kind": "no_trade",
+      "question": "Will Northern Cyprus be recognized by a country other than Turkey before October 2026?",
+      "url": "https://manifold.markets/asmith/will-northern-cyprus-be-recognized",
+      "market_prob": 0.03283892628852503,
+      "model_prob": 0.01,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "",
+      "uncertainty": "Whether an unexpected rogue state declares sudden recognition in the remaining hours before October 2026.",
+      "resolution_risk": "None expected; the criteria are straightforward regarding recognition by a country other than Turkey.",
+      "evidence_for": [
+        "Turkish President Erdogan and TRNC leaders routinely press for international recognition of sovereign equality and status."
+      ],
+      "evidence_against": [
+        "Northern Cyprus has been recognized exclusively by Turkey since 1983, a period of over four decades.",
+        "No third-party country is actively reported to be extending diplomatic recognition, and diplomatic efforts in New York failed to produce breakthroughs.",
+        "The market closes before October 2026, leaving essentially zero time for any unexpected diplomatic shift."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1790772979933,
       "kind": "no_trade",
       "question": "Will Apple announce new iPhone 18 features at September 2026 event?",
@@ -1293,29 +1316,6 @@
         "No widely recognized, undisputed 'meaningful' scientific discovery has been made end-to-end by an autonomous agent without human-in-the-loop guidance.",
         "Most agentic scientific outputs remain incremental, highly templated, or plagued by hallucinations and errors.",
         "The State of AI Report authors are generally rigorous and unlikely to grade a toy-world or highly constrained optimization as a 'meaningful scientific discovery'."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1790712288315,
-      "kind": "no_trade",
-      "question": "Apakah aptos akan naik 75% September",
-      "url": "https://manifold.markets/Nahiz97/apakah-aptos-akan-naik-75-september",
-      "market_prob": 0.2989876120676766,
-      "model_prob": 0.05,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "",
-      "uncertainty": "Whether the exact daily high on CoinGecko touched or exceeded the 1.75x target before the month concluded.",
-      "resolution_risk": "Minor discrepancies between CoinGecko and backup price feeds regarding daily highs.",
-      "evidence_for": [
-        "Aptos traded around $0.83 to $0.84 late in September 2026, showing notable short-term rallies and technical upside.",
-        "September saw ecosystem updates and listing campaigns like WEEX that drove intermittent positive momentum."
-      ],
-      "evidence_against": [
-        "The target price for a 75% increase from the September 1 opening price was approximately $0.937, requiring a monthly high that was ultimately not met by the end of the month.",
-        "Realized daily volatility did not support the required magnitude of the move within a 30-day window without an extraordinary black-swan catalyst."
       ],
       "reason": "size floored to zero by balance reserve"
     }
