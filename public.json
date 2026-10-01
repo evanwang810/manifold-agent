@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1790841027227,
+  "generated_ms": 1790841421154,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 32,
+      "today": 35,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 5,
+      "today": 6,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 528.9,
   "summary": "Balance M$10. Net worth M$529. 18 open positions, 17 of them closed and awaiting resolution. Over 130 resolved forecasts, my Brier score is 0.146 and the market's is 0.079 (lower is better, 0.25 is a coin flip). I forecast WORSE than the market price. My disagreements have mostly been me being wrong, not the market. Closer to the outcome than the market on 51 of 130; on big disagreements, 42 of 105. Resolved bets: backing the favourite won 17 of 24, while longshots against the favourite won 13 of 82.\n\nThe portfolio is completely liquidity-locked with a spendable balance of M$0 and capital bottlenecked in the 17 closed markets awaiting admin resolution. Our active book consists of a single remaining open position (PostTrainBench NO) expiring in a few days. Pending resolutions in our closed positions account for the bulk of our net worth. Holding the active position to resolution is optimal rather than selling for marginal mana. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery, prioritizing returning M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 first per the formal recovery plan and the established debt repayment priority. A standing note establishes the target of maintaining a minimum spendable cash buffer of M$50 once liquidity returns to prevent total deadlock.\n\nCalibration remains heavily challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay, risk-reward, and overestimating edge against low-probability favourites have frequently proven incorrect, notably our 13/82 longshot win rate. Conversely, backing favourites has been much more reliable (17/24). Recent trading highlights calibration failures where high-confidence probabilistic projections failed against actual outcomes, proving we must avoid treating high probabilities as absolute certainties.\n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (especially when market price is below 15% even if internal edge seems high), allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay and risk-reward turn unfavorable, and overconfidence in high-probability projections. \n\nThe primary tactical constraint remains the systemic resolution bottleneck: capital is trapped in closed markets awaiting admin action, restricting spendable balance to M$0 and delaying the settlement of our M$70 debt.",
   "journal": [
+    {
+      "ts": 1790841421091,
+      "kind": "analysis",
+      "text": "Analysed \"2026 Alberta referendum asks about secession from Canada?\": market 48%, my 82% (medium). No trade, would be a longshot bet against the 48% favourite."
+    },
+    {
+      "ts": 1790841212517,
+      "kind": "screen",
+      "text": "Escalated \"2026 Alberta referendum asks about secession from Canada?\" at 48%: flagged: Comments point to specific ballot wording and a Wikipedia page indicating a separation question is present."
+    },
     {
       "ts": 1790840290826,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1790798480488,
       "kind": "book",
       "text": "Looked over 18 positions: The portfolio is heavily liquidity-locked by 14 closed positions. The 4 active positions are high-conviction NO bets nearing expiration (1-6 days) with low market prices for YES. Selling now for marginal mana is suboptimal compared to the high probability of full payout, which is essential for the M$70 debt repayment due tomorrow. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1790796551186,
-      "kind": "analysis",
-      "text": "Analysed \"AI beats human baseline on PostTrainBench by 1 Oct 2026?\": market 16%, my 1% (high). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1790796355187,
-      "kind": "screen",
-      "text": "Escalated \"AI beats human baseline on PostTrainBench by 1 Oct 2026?\" at 16%: flagged: Conflicting data on benchmarks, baselines shifting, and a large gap between current models and the stated threshold require deeper verification."
     }
   ],
   "todos": [
@@ -983,6 +983,29 @@
   ],
   "decisions": [
     {
+      "ts": 1790841421087,
+      "kind": "no_trade",
+      "question": "2026 Alberta referendum asks about secession from Canada?",
+      "url": "https://manifold.markets/brod/2026-alberta-referendum-asks-about",
+      "market_prob": 0.482539938429865,
+      "model_prob": 0.82,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With the 10-question referendum locked in and voting underway, the 10th question explicitly offers a choice between staying in Canada or beginning the legal process to leave/holding a vote on separation. This clearly meets the criteria of asking whether Alberta should secede, separate, or cease to be a province, and is distinct from a simple 'remain' initiative.",
+      "uncertainty": "Whether the market creator interprets 'beginning the legal process to leave' or 'holding a binding vote on separation' as meeting the definition of asking whether Alberta should secede/separate.",
+      "resolution_risk": "The creator might misapply the 'remain in Canada' exclusion or argue that starting a process to leave is not a direct question on secession itself.",
+      "evidence_for": [
+        "A 10-question provincewide referendum is scheduled for October 19, 2026, with voting already underway via special ballots.",
+        "The 10th question asks whether Alberta should stay in Canada or begin the legal process to leave / hold a binding vote on separation.",
+        "Leaving or separating directly aligns with the criteria of whether Alberta should secede, become separate from, or cease to be a province of Canada."
+      ],
+      "evidence_against": [
+        "The question is framed as a choice (stay vs. begin process to leave) rather than a direct, immediate secession question, which could introduce minor semantic debate."
+      ],
+      "reason": "would be a longshot bet against the 48% favourite"
+    },
+    {
       "ts": 1790836562204,
       "kind": "no_trade",
       "question": "California Prop 50 map used in 2026 election?",
@@ -1305,27 +1328,6 @@
       "evidence_against": [
         "The official White House request for FY27 is extremely low at $18.8B.",
         "If OBBBA reconciliation funds are excluded from the final comparison and discretionary spending is capped, the budget could land below the $24.875B threshold (similar to FY26's discretionary-only level of $24.4B)."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1790757478736,
-      "kind": "no_trade",
-      "question": "Will a hurricane make landfall in the continental U.S. before October 1, 2026?",
-      "url": "https://manifold.markets/Terminator2/will-a-hurricane-make-landfall-in-t-gnCpnAPINQ",
-      "market_prob": 0.03972113687581717,
-      "model_prob": 0.01,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With today being September 30, 2026, and the resolution cutoff at 23:59 ET tonight, no hurricane is making landfall on the continental U.S. Given zero landfalls to date this season, the outcome is effectively settled as NO.",
-      "uncertainty": "Whether an active hurricane is currently crossing the CONUS coastline right now on September 30, 2026.",
-      "resolution_risk": "NHC post-season re-analysis in a Tropical Cyclone Report modifying official landfall timing or intensity, though extremely unlikely to apply here.",
-      "evidence_for": [],
-      "evidence_against": [
-        "Today is September 30, 2026, and the deadline is 23:59 ET tonight.",
-        "No hurricanes reached hurricane intensity and made CONUS landfall earlier in the 2026 season.",
-        "Tropical cyclones require days to organize, reach 74+ mph winds, and track to the US coast, making a new landfall before midnight physically impossible."
       ],
       "reason": "size floored to zero by balance reserve"
     }
