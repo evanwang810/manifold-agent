@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1790818649994,
+  "generated_ms": 1790818953021,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 6,
+      "today": 10,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 1,
+      "today": 2,
       "cap": 34
     }
   },
@@ -64,6 +64,21 @@
   "net_worth": 529.1,
   "summary": "Balance M$10. Net worth M$529. 18 open positions, 17 of them closed and awaiting resolution. Over 130 resolved forecasts, my Brier score is 0.146 and the market's is 0.079 (lower is better, 0.25 is a coin flip). I forecast WORSE than the market price. My disagreements have mostly been me being wrong, not the market. Closer to the outcome than the market on 51 of 130; on big disagreements, 42 of 105. Resolved bets: backing the favourite won 17 of 24, while longshots against the favourite won 13 of 82.\n\nThe portfolio is completely liquidity-locked with a spendable balance of M$0 and capital bottlenecked in the 17 closed markets awaiting admin resolution. Our active book consists of a single remaining open position (PostTrainBench NO) expiring in a few days. Pending resolutions in our closed positions account for the bulk of our net worth. Holding the active position to resolution is optimal rather than selling for marginal mana. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery, prioritizing returning M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 first per the formal recovery plan and the established debt repayment priority. A standing note establishes the target of maintaining a minimum spendable cash buffer of M$50 once liquidity returns to prevent total deadlock.\n\nCalibration remains heavily challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay, risk-reward, and overestimating edge against low-probability favourites have frequently proven incorrect, notably our 13/82 longshot win rate. Conversely, backing favourites has been much more reliable (17/24). Recent trading highlights calibration failures where high-confidence probabilistic projections failed against actual outcomes, proving we must avoid treating high probabilities as absolute certainties.\n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (especially when market price is below 15% even if internal edge seems high), allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay and risk-reward turn unfavorable, and overconfidence in high-probability projections. \n\nThe primary tactical constraint remains the systemic resolution bottleneck: capital is trapped in closed markets awaiting admin action, restricting spendable balance to M$0 and delaying the settlement of our M$70 debt.",
   "journal": [
+    {
+      "ts": 1790818952924,
+      "kind": "analysis",
+      "text": "Analysed \"Will I win a game of chess against Manifold? (see other poll)\": market 34%, my 74% (medium). No trade, would be a longshot bet against the 34% favourite."
+    },
+    {
+      "ts": 1790818857810,
+      "kind": "screen",
+      "text": "Escalated \"Will I win a game of chess against Manifold? (see other poll)\" at 34%: quick estimate 5% backs the favourite at 34%"
+    },
+    {
+      "ts": 1790818837420,
+      "kind": "screen",
+      "text": "Passed on \"Will Hasan Piker ever admit that he shocked his dog? [ within 1 year ]\" at 6%: quick estimate 5% agrees with market. He has repeatedly denied and doubled down on sarcasm, making a genuine admission within the remaining time extremely unlikely."
+    },
     {
       "ts": 1790817869298,
       "kind": "score",
@@ -448,21 +463,6 @@
       "ts": 1790769021411,
       "kind": "book",
       "text": "Looked over 18 positions: The book remains completely liquidity-locked with M$0 spendable and 14 closed positions awaiting resolution. Four active NO positions are within days of closing. The theses are sound, and holding them for imminent full payout is optimal to fund debt repayment. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1790767530735,
-      "kind": "screen",
-      "text": "Passed on \"Will a new US-Iran ceasefire take effect before October 1, 2026?\" at 5%: quick estimate 19% agrees with market. Comments show active escalation and failure of prior tracks with neither government acknowledging a new ceasefire before the deadline."
-    },
-    {
-      "ts": 1790767510553,
-      "kind": "screen",
-      "text": "Passed on \"Will Elon Musk and Donald Trump appear together in the same new photo \" at 15%: quick estimate 15% agrees with market. This is a low-probability event dependent on a specific social media post within hours, making it effectively a coin flip based on daily schedules."
-    },
-    {
-      "ts": 1790767490847,
-      "kind": "screen",
-      "text": "Passed on \"Will Muse rank #1 in App Store (iPhone) on October 1st 2026\" at 89%: quick estimate 82% agrees with market. It has held #1 for nearly two weeks and momentum strongly favors holding the top spot for two more days."
     }
   ],
   "todos": [
@@ -978,6 +978,31 @@
   ],
   "decisions": [
     {
+      "ts": 1790818952920,
+      "kind": "no_trade",
+      "question": "Will I win a game of chess against Manifold? (see other poll)",
+      "url": "https://manifold.markets/DracksathAudio/will-i-win-a-game-of-chess-against",
+      "market_prob": 0.3357061484606516,
+      "model_prob": 0.74,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Since Manifold controls Black through crowdsourced move-selection polls, Black is extremely vulnerable to single-move sabotage or meme blunders by market whales. A single forced blunder gives Dracksath an easy win, making White a heavy favourite despite draws resolving as NO.",
+      "uncertainty": "Whether market griefers and trolls will consistently win the move-selection polls for Black or if serious engine users will outspend them.",
+      "resolution_risk": "If the game is abandoned or unfinished before market resolution, it could resolve N/A or NO depending on creator interpretation.",
+      "evidence_for": [
+        "Dracksath plays as White individually, while Manifold controls Black via crowdsourced move selection polls.",
+        "Crowdsourced move polls on Manifold are highly vulnerable to whale trolling, meme plays, and deliberate blunders (e.g., losing a queen early was previously ranked #1 move).",
+        "A single blundered move forced on Black by a market troll gives White an overwhelming winning advantage."
+      ],
+      "evidence_against": [
+        "Draws resolve to NO.",
+        "Dracksath could abandon the game or intentionally play joke moves himself.",
+        "If engine users manage to consistently outvote trolls on every single move, Stockfish-level play for Black could outmatch Dracksath."
+      ],
+      "reason": "would be a longshot bet against the 34% favourite"
+    },
+    {
       "ts": 1790816519187,
       "kind": "no_trade",
       "question": "Will our Steam game Heartseeker surpass 1000 sales by Oct 5th 2026 (5th anniversary of release)?",
@@ -1293,29 +1318,6 @@
         "Only 20 days remain before the October 20, 2026 cutoff, leaving very little time for a genuine multi-lab strategic pivot to materialize."
       ],
       "reason": "edge 0.04 log-odds below minimum 0.2"
-    },
-    {
-      "ts": 1790732326782,
-      "kind": "no_trade",
-      "question": "Will I win a game of chess against Manifold? (see other poll)",
-      "url": "https://manifold.markets/DracksathAudio/will-i-win-a-game-of-chess-against",
-      "market_prob": 0.3357061484606516,
-      "model_prob": 0.15,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "",
-      "uncertainty": "Whether the crowd can organize around functional chess engine moves or if meme/sabotage votes will completely derail the game.",
-      "resolution_risk": "A draw resolves as NO, meaning the crowd must win outright, increasing the difficulty of a YES outcome.",
-      "evidence_for": [
-        "Crowdsourced chess games (like Kasparov versus the World) often suffer from lack of unified strategy and internal division.",
-        "Meme moves and deliberate sabotage (such as playing the bongcloud or throwing pieces) are actively encouraged by some participants for fun or mana."
-      ],
-      "evidence_against": [
-        "A sufficiently motivated group of strong players or chess engine users could theoretically coordinate good moves to win or draw.",
-        "If the opponent plays poorly or makes blunders, the collective might accidentally win even with suboptimal coordination."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
