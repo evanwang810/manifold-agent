@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1790893115650,
+  "generated_ms": 1790893534842,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 76,
+      "today": 79,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 14,
+      "today": 15,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 530.96,
   "summary": "Balance M$10. Net worth M$529. 18 open positions, 17 of them closed and awaiting resolution. Over 139 resolved forecasts, my Brier score is 0.149 and the market's is 0.086 (lower is better, 0.25 is a coin flip). I forecast WORSE than the market price. My disagreements have mostly been me being wrong, not the market. Closer to the outcome than the market on 56 of 139; on big disagreements, 47 of 113. Resolved bets: backing the favourite won 17 of 24, while longshots against the favourite won 15 of 85.\n\nThe portfolio is completely liquidity-locked with a spendable balance of M$0 and capital bottlenecked in the 17 closed markets awaiting admin resolution. Our active book consists of a single remaining open position (PostTrainBench NO) expiring in a few days. Holding the active position to resolution is optimal rather than selling for marginal mana, as pending resolutions account for the bulk of our net worth. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery, prioritizing returning M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 first per the formal recovery plan and the established debt repayment priority. A standing note establishes the target of maintaining a minimum spendable cash buffer of M$50 once liquidity returns to prevent total deadlock.\n\nCalibration remains heavily challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay, risk-reward, and overestimating edge against low-probability favourites have frequently proven incorrect, notably our 15/85 longshot win rate. Conversely, backing favourites has been much more reliable (17/24). Recent trading highlights calibration failures where high-confidence probabilistic projections failed against actual outcomes, proving we must avoid treating high probabilities as absolute certainties and avoid narrative-driven longshots.\n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (especially when market price is below 15% even if internal edge seems high), falling for the 'Narrative Trap' where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay and risk-reward turn unfavorable, and overconfidence in high-probability projections. \n\nThe primary tactical constraint remains the systemic resolution bottleneck: capital is trapped in closed markets awaiting admin action, restricting spendable balance to M$0 and delaying the settlement of our M$70 debt.",
   "journal": [
+    {
+      "ts": 1790893534705,
+      "kind": "analysis",
+      "text": "Analysed \"Will I get a positive pregnancy test in the next two weeks?\": market 9%, my 4% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1790893303529,
+      "kind": "screen",
+      "text": "Escalated \"Will I get a positive pregnancy test in the next two weeks?\" at 9%: quick estimate 3% backs the favourite at 9%"
+    },
     {
       "ts": 1790892373791,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1790843702564,
       "kind": "screen",
       "text": "Passed on \"Will tailcalled think that the Infrabayesianism alignment research pro\" at 11%: quick estimate 15% agrees with market. The creator remains skeptical and sees it as insufficiently compositional, making a sudden positive reversal unlikely by the deadline."
-    },
-    {
-      "ts": 1790843682601,
-      "kind": "screen",
-      "text": "Passed on \"Will the worst-case ELK problem be solved by Oct 20, 2026?\" at 4%: quick estimate 3% agrees with market. Solving worst-case ELK robustly in under three weeks is practically impossible given the extreme difficulty of AI alignment."
-    },
-    {
-      "ts": 1790843496388,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] Narrative Trap: Avoid bets based on a compelling story or 'feeling' of an edge when the market price is very low . Because: Track record (13/83 longshots) shows systemic failure in low-probability markets, often driven by narratives. Formalizing this as a 'Narrative Trap' prevents future repetitions once liquidity returns."
     }
   ],
   "todos": [
@@ -983,6 +983,31 @@
   ],
   "decisions": [
     {
+      "ts": 1790893534701,
+      "kind": "no_trade",
+      "question": "Will I get a positive pregnancy test in the next two weeks?",
+      "url": "https://manifold.markets/abcde/will-i-get-a-positive-pregnancy-tes-zEEl6pCAPc",
+      "market_prob": 0.09213771106072921,
+      "model_prob": 0.04,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With negative tests at 9 DPO and 11/12 DPO, and no further exposure to sperm after September 18, the probability of a positive pregnancy test this cycle is extremely low. Most viable pregnancies would have registered a positive by now.",
+      "uncertainty": "The exact day of the second test and whether a late-implanting embryo could still produce a positive result.",
+      "resolution_risk": "A late chemical pregnancy or a false positive test result.",
+      "evidence_for": [
+        "Had well-timed intercourse on September 17 and 18.",
+        "Positive LH surge detected on September 17.",
+        "Creator is 20 years old and highly fertile (already has a 1.5-year-old)."
+      ],
+      "evidence_against": [
+        "Tested negative on September 27 (~9 DPO) and 'yesterday' (likely September 29 or 30, ~11-12 DPO).",
+        "Husband left on September 19, meaning any delayed ovulation would fall outside the conception window.",
+        "Base rate of conception per cycle is only 25-30% under optimal conditions."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1790888622211,
       "kind": "no_trade",
       "question": "SOAI#3: Open-ended agents make a meaningful scientific discovery end-to-end (hypothesis, expt, iteration, paper).",
@@ -1313,29 +1338,6 @@
         "Creator confirmed sales were at 741 units in comments.",
         "Historical sales rate is ~15-20 units per month, requiring an unprecedented spike of ~259 sales in 4 days to reach 1000.",
         "Release is 5 years old (Oct 2021) with minimal ongoing organic growth."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1790801442284,
-      "kind": "no_trade",
-      "question": "SOAI#3: Open-ended agents make a meaningful scientific discovery end-to-end (hypothesis, expt, iteration, paper).",
-      "url": "https://manifold.markets/ZviMowshowitz/soai3-openended-agents-make-a-meani",
-      "market_prob": 0.49181973472583757,
-      "model_prob": 0.18,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "",
-      "uncertainty": "How strictly the authors of the 2026 State of AI Report will interpret 'meaningful' versus incremental automated research tasks.",
-      "resolution_risk": "The 2026 State of AI Report may define any automated paper-writing pipeline as a 'discovery' or conversely set an unattainable bar.",
-      "evidence_for": [
-        "AI agents have demonstrated sophisticated abilities in planning, literature reviews, and executing code in sandbox environments.",
-        "Projects like Zochi and various autonomous lab assistants have made incremental strides toward end-to-end scientific workflows."
-      ],
-      "evidence_against": [
-        "The 2026 State of AI Report has a high bar for 'meaningful scientific discovery end-to-end' which requires a complete cycle from hypothesis to peer-reviewed-level paper without heavy human intervention.",
-        "Current AI systems remain heavily dependent on human direction, prompt engineering, and curation for validation and debugging."
       ],
       "reason": "size floored to zero by balance reserve"
     }
