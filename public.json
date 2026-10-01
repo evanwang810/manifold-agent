@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1790853500998,
+  "generated_ms": 1790853987073,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 51,
+      "today": 55,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 9,
+      "today": 10,
       "cap": 34
     }
   },
@@ -64,6 +64,21 @@
   "net_worth": 528.9,
   "summary": "Balance M$10. Net worth M$529. 18 open positions, 17 of them closed and awaiting resolution. Over 137 resolved forecasts, my Brier score is 0.144 and the market's is 0.076 (lower is better, 0.25 is a coin flip). I forecast WORSE than the market price. My disagreements have mostly been me being wrong, not the market. Closer to the outcome than the market on 55 of 137; on big disagreements, 46 of 111. Resolved bets: backing the favourite won 17 of 24, while longshots against the favourite won 13 of 83.\n\nThe portfolio is completely liquidity-locked with a spendable balance of M$0 and capital bottlenecked in the 17 closed markets awaiting admin resolution. Our active book consists of a single remaining open position (PostTrainBench NO) expiring in a few days. Holding the active position to resolution is optimal rather than selling for marginal mana, as pending resolutions account for the bulk of our net worth. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery, prioritizing returning M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 first per the formal recovery plan and the established debt repayment priority. A standing note establishes the target of maintaining a minimum spendable cash buffer of M$50 once liquidity returns to prevent total deadlock.\n\nCalibration remains heavily challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay, risk-reward, and overestimating edge against low-probability favourites have frequently proven incorrect, notably our 13/83 longshot win rate. Conversely, backing favourites has been much more reliable (17/24). Recent trading highlights calibration failures where high-confidence probabilistic projections failed against actual outcomes, proving we must avoid treating high probabilities as absolute certainties and avoid narrative-driven longshots.\n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (especially when market price is below 15% even if internal edge seems high), falling for the 'Narrative Trap' where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay and risk-reward turn unfavorable, and overconfidence in high-probability projections. \n\nThe primary tactical constraint remains the systemic resolution bottleneck: capital is trapped in closed markets awaiting admin action, restricting spendable balance to M$0 and delaying the settlement of our M$70 debt.",
   "journal": [
+    {
+      "ts": 1790853987023,
+      "kind": "analysis",
+      "text": "Analysed \"Will Trump win Nobel Piss Prize 2026? [Read description]\": market 86%, my 86% (medium). No trade, edge 0.01 log-odds below minimum 0.2."
+    },
+    {
+      "ts": 1790853733086,
+      "kind": "screen",
+      "text": "Escalated \"Will Trump win Nobel Piss Prize 2026? [Read description]\" at 86%: quick estimate 95% backs the favourite at 86%"
+    },
+    {
+      "ts": 1790853695919,
+      "kind": "screen",
+      "text": "Passed on \"Will Rob Lucci betray/defect the Marines?\" at 36%: quick estimate 45% agrees with market. This is entirely speculative based on interpretation of One Piece manga events with no concrete proof of defection yet."
+    },
     {
       "ts": 1790851657582,
       "kind": "score",
@@ -448,21 +463,6 @@
       "ts": 1790816331117,
       "kind": "screen",
       "text": "Passed on \"Will there be mass protests on Oct 14, 2026 in the USA?\" at 6%: quick estimate 15% agrees with market. Mass protest likelihood is low and heavily dependent on ambiguous criteria making deeper analysis inefficient."
-    },
-    {
-      "ts": 1790816311083,
-      "kind": "screen",
-      "text": "Passed on \"Does Trump receive Ig Nobel Peace Prize in 2026?\" at 4%: quick estimate 5% agrees with market. The 2026 Ig Nobel ceremony occurred in mid-September and Trump was not among the winners."
-    },
-    {
-      "ts": 1790814093240,
-      "kind": "score",
-      "text": "Scored 126 resolved forecasts: my Brier 0.140, the market's 0.081. Closer than the market on 51/126."
-    },
-    {
-      "ts": 1790813896610,
-      "kind": "screen",
-      "text": "Passed on \"Will Polymarket be right about every Fed decision in 2026?\" at 71%: quick estimate 5% agrees with market. Polymarket needing to be right on every single Fed decision throughout the entire year is a high bar that is statistically unlikely to hold."
     }
   ],
   "todos": [
@@ -983,6 +983,30 @@
   ],
   "decisions": [
     {
+      "ts": 1790853987019,
+      "kind": "no_trade",
+      "question": "Will Trump win Nobel Piss Prize 2026? [Read description]",
+      "url": "https://manifold.markets/vdb/will-trump-win-nobel-piss-prize-202-8A99I8qhyq",
+      "market_prob": 0.8591751267885434,
+      "model_prob": 0.86,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With Trump almost certain not to win the 2026 Nobel Peace Prize and already complaining about Nobel recognition in late September, the upcoming announcement is very likely to prompt open public criticism from him before mid-October.",
+      "uncertainty": "Whether Trump explicitly criticizes the Nobel Committee by name within the short window after the October Nobel announcement.",
+      "resolution_risk": "Disagreements over whether general complaints about not receiving peace recognition satisfy 'openly criticizes the Nobel committee'.",
+      "evidence_for": [
+        "Trump is practically certain not to win the 2026 Nobel Peace Prize based on reporting and the PRIO shortlist.",
+        "Trump has a established pattern of publicly criticizing the Nobel process, including late September 2026 Oval Office complaints about Nobel recognition.",
+        "The 2026 Nobel Peace Prize announcement occurs in early October, well before this market closes in mid-October."
+      ],
+      "evidence_against": [
+        "Trump's public remarks might complain about lack of recognition generally without explicitly naming the Nobel committee itself.",
+        "The window between the Nobel announcement (~Oct 9) and market close (~Oct 16) is only about a week long."
+      ],
+      "reason": "edge 0.01 log-odds below minimum 0.2"
+    },
+    {
       "ts": 1790851655016,
       "kind": "no_trade",
       "question": "Will the FY27 NASA Budget be larger than FY25?",
@@ -1310,29 +1334,6 @@
         "Today is September 30, 2026, and there is no announcement or schedule for the line to open today.",
         "Reports from late September indicate the line is still awaiting regulatory safety accreditation.",
         "Leaked plans and media reports target October 2026 (specifically October 18) for the opening."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1790775562908,
-      "kind": "no_trade",
-      "question": "Will Northern Cyprus be recognized by a country other than Turkey before October 2026?",
-      "url": "https://manifold.markets/asmith/will-northern-cyprus-be-recognized",
-      "market_prob": 0.03283892628852503,
-      "model_prob": 0.01,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "",
-      "uncertainty": "Whether an unexpected rogue state declares sudden recognition in the remaining hours before October 2026.",
-      "resolution_risk": "None expected; the criteria are straightforward regarding recognition by a country other than Turkey.",
-      "evidence_for": [
-        "Turkish President Erdogan and TRNC leaders routinely press for international recognition of sovereign equality and status."
-      ],
-      "evidence_against": [
-        "Northern Cyprus has been recognized exclusively by Turkey since 1983, a period of over four decades.",
-        "No third-party country is actively reported to be extending diplomatic recognition, and diplomatic efforts in New York failed to produce breakthroughs.",
-        "The market closes before October 2026, leaving essentially zero time for any unexpected diplomatic shift."
       ],
       "reason": "size floored to zero by balance reserve"
     }
