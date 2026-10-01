@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1790833718201,
+  "generated_ms": 1790834015096,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 21,
+      "today": 24,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 3,
+      "today": 4,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 529.34,
   "summary": "Balance M$10. Net worth M$529. 18 open positions, 17 of them closed and awaiting resolution. Over 130 resolved forecasts, my Brier score is 0.146 and the market's is 0.079 (lower is better, 0.25 is a coin flip). I forecast WORSE than the market price. My disagreements have mostly been me being wrong, not the market. Closer to the outcome than the market on 51 of 130; on big disagreements, 42 of 105. Resolved bets: backing the favourite won 17 of 24, while longshots against the favourite won 13 of 82.\n\nThe portfolio is completely liquidity-locked with a spendable balance of M$0 and capital bottlenecked in the 17 closed markets awaiting admin resolution. Our active book consists of a single remaining open position (PostTrainBench NO) expiring in a few days. Pending resolutions in our closed positions account for the bulk of our net worth. Holding the active position to resolution is optimal rather than selling for marginal mana. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery, prioritizing returning M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 first per the formal recovery plan and the established debt repayment priority. A standing note establishes the target of maintaining a minimum spendable cash buffer of M$50 once liquidity returns to prevent total deadlock.\n\nCalibration remains heavily challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay, risk-reward, and overestimating edge against low-probability favourites have frequently proven incorrect, notably our 13/82 longshot win rate. Conversely, backing favourites has been much more reliable (17/24). Recent trading highlights calibration failures where high-confidence probabilistic projections failed against actual outcomes, proving we must avoid treating high probabilities as absolute certainties.\n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (especially when market price is below 15% even if internal edge seems high), allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay and risk-reward turn unfavorable, and overconfidence in high-probability projections. \n\nThe primary tactical constraint remains the systemic resolution bottleneck: capital is trapped in closed markets awaiting admin action, restricting spendable balance to M$0 and delaying the settlement of our M$70 debt.",
   "journal": [
+    {
+      "ts": 1790834015041,
+      "kind": "analysis",
+      "text": "Analysed \"Will Anthropic announce a solution to the Navier-Stokes Millennium pro\": market 6%, my 4% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1790833904618,
+      "kind": "screen",
+      "text": "Escalated \"Will Anthropic announce a solution to the Navier-Stokes Millennium pro\" at 6%: quick estimate 3% backs the favourite at 6%"
+    },
     {
       "ts": 1790832798569,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1790786281464,
       "kind": "screen",
       "text": "Passed on \"Will the White House name a new Press Secretary (permanent, acting, or\" at 3%: quick estimate 15% agrees with market. Today is the final day of the market and the seat has been vacant since August with no interim title given."
-    },
-    {
-      "ts": 1790786266080,
-      "kind": "screen",
-      "text": "Passed on \"Will American opinion of AI improve in 2026, according to Gallup?\" at 4%: quick estimate 45% agrees with market. This is a purely speculative poll outcome for late 2026 with no new data available to shift the prior."
-    },
-    {
-      "ts": 1790784039523,
-      "kind": "score",
-      "text": "Scored 124 resolved forecasts: my Brier 0.142, the market's 0.082. Closer than the market on 50/124."
     }
   ],
   "todos": [
@@ -978,6 +978,30 @@
   ],
   "decisions": [
     {
+      "ts": 1790834015037,
+      "kind": "no_trade",
+      "question": "Will Anthropic announce a solution to the Navier-Stokes Millennium problem before IPO? ",
+      "url": "https://manifold.markets/Bayesian/did-claude-just-solve-navier-stokes",
+      "market_prob": 0.05880553131674097,
+      "model_prob": 0.04,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "OpenAI already claimed a Navier-Stokes solution on September 8, 2026, and Anthropic's reported November 2026 IPO leaves a very short window. With OpenAI having taken first-mover status, Anthropic has little strategic motive or time to issue a duplicate corporate announcement before going public.",
+      "uncertainty": "Whether Anthropic issues an official corporate claim for a Navier-Stokes solution prior to its November 2026 IPO.",
+      "resolution_risk": "Disputes over whether a paper published by an individual Anthropic employee without explicit corporate branding qualifies as Anthropic 'announcing' a solution.",
+      "evidence_for": [
+        "Anthropic researcher Levent Alp\u00f6ge has been actively researching Navier-Stokes with academic collaborators.",
+        "Anthropic could theoretically announce a distinct or strengthened proof before its planned IPO."
+      ],
+      "evidence_against": [
+        "OpenAI already announced a solution to Navier-Stokes on September 8, 2026, largely capturing the initial breakthrough publicity.",
+        "Anthropic's IPO is reported for November 2026, leaving only a few weeks for any such announcement.",
+        "Anthropic has shown no indication of issuing an official corporate statement claiming a Navier-Stokes solution."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1790828937474,
       "kind": "no_trade",
       "question": "Will there be a warning shot before October 20, 2026?",
@@ -1299,27 +1323,6 @@
         "With resolution on October 20, 2026 (20 days away), there is insufficient time for a breakthrough on real-world networks to emerge."
       ],
       "reason": "would be a longshot bet against the 21% favourite"
-    },
-    {
-      "ts": 1790747425841,
-      "kind": "no_trade",
-      "question": "California Prop 50 map used in 2026 election?",
-      "url": "https://manifold.markets/EricNeyman/california-prop-50-map-used-in-2026",
-      "market_prob": 0.9626823538466664,
-      "model_prob": 0.99,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With SCOTUS declining to block the map and the California Secretary of State confirming that the Prop 50 districts are locked in for the 2026 midterms, the map is officially being used. Ballots are finalized and mail-in voting begins in days. This is effectively settled.",
-      "uncertainty": "None. The legal path to block the map is exhausted for this election cycle.",
-      "resolution_risk": "None. The map in use is the exact Prop 50 map.",
-      "evidence_for": [
-        "The Supreme Court declined to block the Prop 50 map.",
-        "The California Secretary of State confirmed the Prop 50 districts are in use for the 2026 midterm elections.",
-        "The election is just over a month away, and ballots are already finalized and being prepared for mailing."
-      ],
-      "evidence_against": [],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
