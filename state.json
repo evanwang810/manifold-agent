@@ -2,16 +2,6 @@
   "summary": "Balance M$10. Net worth M$529. 18 open positions, 17 of them closed and awaiting resolution. Over 139 resolved forecasts, my Brier score is 0.149 and the market's is 0.086 (lower is better, 0.25 is a coin flip). I forecast WORSE than the market price. My disagreements have mostly been me being wrong, not the market. Closer to the outcome than the market on 56 of 139; on big disagreements, 47 of 113. Resolved bets: backing the favourite won 17 of 24, while longshots against the favourite won 15 of 85.\n\nThe portfolio is completely liquidity-locked with a spendable balance of M$0 and capital bottlenecked in the 17 closed markets awaiting admin resolution. Our active book consists of a single remaining open position (PostTrainBench NO) expiring in a few days. Holding the active position to resolution is optimal rather than selling for marginal mana, as pending resolutions account for the bulk of our net worth. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery, prioritizing returning M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 first per the formal recovery plan and the established debt repayment priority. A standing note establishes the target of maintaining a minimum spendable cash buffer of M$50 once liquidity returns to prevent total deadlock.\n\nCalibration remains heavily challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay, risk-reward, and overestimating edge against low-probability favourites have frequently proven incorrect, notably our 15/85 longshot win rate. Conversely, backing favourites has been much more reliable (17/24). Recent trading highlights calibration failures where high-confidence probabilistic projections failed against actual outcomes, proving we must avoid treating high probabilities as absolute certainties and avoid narrative-driven longshots.\n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (especially when market price is below 15% even if internal edge seems high), falling for the 'Narrative Trap' where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay and risk-reward turn unfavorable, and overconfidence in high-probability projections. \n\nThe primary tactical constraint remains the systemic resolution bottleneck: capital is trapped in closed markets awaiting admin action, restricting spendable balance to M$0 and delaying the settlement of our M$70 debt.",
   "journal": [
     {
-      "ts": 1790729920301,
-      "kind": "analysis",
-      "text": "Analysed \"Will I remain in Montreal past September?\": market 93%, my 88% (medium). No trade, would be a longshot bet against the 93% favourite."
-    },
-    {
-      "ts": 1790730301920,
-      "kind": "score",
-      "text": "Scored 123 resolved forecasts: my Brier 0.137, the market's 0.078. Closer than the market on 50/123."
-    },
-    {
       "ts": 1790730572329,
       "kind": "agency",
       "text": "Own turn: Liquidity remains deadlocked (M$0 spendable). 14 closed positions await resolution. The 4 active NO positions (AISI, PostTrainBench, Sydney Metro, hello-lume) are high-conviction and near-expiry (1-7d); selling them for marginal mana is inefficient compared to the high probability of full payout. The primary goal is waiting for the resolution of large closed positions (uAPRyuqyq0, ZC6gdANScC, etc.) to settle the M$70 debt."
@@ -1500,6 +1490,16 @@
       "ts": 1790898830107,
       "kind": "book",
       "text": "Looked over 18 positions: The portfolio is almost entirely liquidity-locked, with 17 of 18 positions closed and awaiting admin resolution. The only active position (PostTrainBench NO) is high-conviction and priced at 2% YES. Selling it for marginal mana would be suboptimal compared to the high probability of full payout needed for debt repayment. (0 change(s) proposed)"
+    },
+    {
+      "ts": 1790899078812,
+      "kind": "agency",
+      "text": "Own turn: Liquidity deadlocked at M$0. PostTrainBench expires today, transitioning the portfolio to 100% awaiting admin resolution. Net worth M$531. Priority remains the M$70 debt repayment plan immediately upon any resolution."
+    },
+    {
+      "ts": 1790899078820,
+      "kind": "agency",
+      "text": "Own turn, wrote a standing note: Portfolio Status: As of 2026-10-01, all positions are closed or expiring, leaving the portfolio 100% dependent on admin . Because: Documenting the total liquidity lock to maintain clarity on why no active trading is occurring and to track the transition to a purely resolution-dependent state."
     }
   ],
   "lessons": [
@@ -1554,11 +1554,6 @@
       "ts": 1790196242628
     },
     {
-      "text": "Liquidity Risk: Admin resolution delays can cause total liquidity deadlock regardless of net worth; maintain a larger cash buffer or diversify across resolution types to avoid being unable to settle debts or exit positions.",
-      "source": "self",
-      "ts": 1790835973118
-    },
-    {
       "text": "Narrative Trap: Avoid bets based on a compelling story or 'feeling' of an edge when the market price is very low (<15%), as these have historically been my worst performing trades.",
       "source": "self",
       "ts": 1790843496380
@@ -1582,6 +1577,11 @@
       "text": "PostTrainBench (2ttlAtUQ5I) NO position: Held to resolution at 2% YES. This represents the final active bet before the portfolio becomes entirely dependent on admin resolutions.",
       "source": "self",
       "ts": 1790895432675
+    },
+    {
+      "text": "Portfolio Status: As of 2026-10-01, all positions are closed or expiring, leaving the portfolio 100% dependent on admin resolutions for liquidity.",
+      "source": "self",
+      "ts": 1790899078812
     }
   ],
   "conversations": {
@@ -3422,7 +3422,7 @@
   },
   "llm_usage": {
     "day": "2026-10-01",
-    "chat": 47,
+    "chat": 48,
     "fast": 84,
     "deep": 16
   },
@@ -4112,15 +4112,9 @@
     "long_n": 85,
     "long_won": 15
   },
-  "last_own_action_ms": 1790895260348,
+  "last_own_action_ms": 1790899015084,
   "last_book_review_ms": 1790898790209,
   "own_actions": [
-    {
-      "ts": 1790415115281,
-      "action": "todo_done",
-      "detail": "ticked off: Search for recent hello-lume founder updates and pre-order community posts to verify if shipping has commenced (L0nQl9pp",
-      "reasoning": "Thesis for L0nQl9ppNs was confirmed as sound in recent reviews, indicating the verification check has been performed."
-    },
     {
       "ts": 1790440774719,
       "action": "note_add",
@@ -4354,6 +4348,12 @@
       "action": "note_add",
       "detail": "wrote a standing note: PostTrainBench (2ttlAtUQ5I) NO position: Held to resolution at 2% YES. This represents the final active bet before the p",
       "reasoning": "Recording the final state of the last active position to document the transition to a purely resolution-dependent portfolio."
+    },
+    {
+      "ts": 1790899078816,
+      "action": "note_add",
+      "detail": "wrote a standing note: Portfolio Status: As of 2026-10-01, all positions are closed or expiring, leaving the portfolio 100% dependent on admin ",
+      "reasoning": "Documenting the total liquidity lock to maintain clarity on why no active trading is occurring and to track the transition to a purely resolution-dependent state."
     }
   ],
   "portfolio_mark": {
@@ -4584,7 +4584,7 @@
   },
   "replied_to": [],
   "tracked_orders": {},
-  "events_since_compress": 29,
+  "events_since_compress": 30,
   "watch_probs": {
     "Ln5EgOhAty": 0.4726684393929348,
     "dCP8cP0CLL": 0.19410275640601396,
@@ -4666,7 +4666,7 @@
   },
   "track_record": "Brier score over 142 resolved forecasts: yours 0.149, the market's 0.089 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market.\nCloser to the outcome than the market on 59 of 142; on big disagreements, 50 of 116.\nResolved bets: 109. Backing the favourite: won 17 of 24. Longshots against the favourite: won 15 of 85.\nMost recent resolutions:\n- \"Did OpenAI just solve hodge??\": you 1%, market 4%, resolved NO\n- \"Will Northern Cyprus be recognized by a country other than Turkey befo\": you 1%, market 3%, resolved NO\n- \"Will a hurricane make landfall in the continental U.S. before October \": you 1%, market 4%, resolved NO\n- \"Will 0x876611867717dE6b6dff30da5CeF9feB620eE1ea REACH more than 200.00\": you 2%, market 8%, resolved NO\n- \"Will I weigh >150lbs at the end of September?\": you 14%, market 25%, resolved YES\n- \"Will 0x876611867717dE6b6dff30da5CeF9feB620eE1ea REACH more than 100.00\": you 3%, market 6%, resolved NO",
   "status": {
-    "text": "Liquidity deadlocked at M$0. 17 closed positions await resolution. Active position 2ttlAtUQ5I (PostTrainBench NO) is at 2% YES and expires today. Holding to resolution is the only way to maximize capital for the M$70 debt repayment.",
-    "ts": 1790895432675
+    "text": "Liquidity deadlocked at M$0. PostTrainBench expires today, transitioning the portfolio to 100% awaiting admin resolution. Net worth M$531. Priority remains the M$70 debt repayment plan immediately upon any resolution.",
+    "ts": 1790899078812
   }
 }
