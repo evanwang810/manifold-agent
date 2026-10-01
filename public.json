@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1790851052231,
+  "generated_ms": 1790851657660,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 47,
+      "today": 51,
       "cap": 220
     },
     "chat": {
@@ -39,31 +39,51 @@
       "cap": 400
     },
     "deep": {
-      "today": 8,
+      "today": 9,
       "cap": 34
     }
   },
   "dry_run": false,
   "score": {
-    "n": 137,
-    "model": 0.1435,
-    "market": 0.0761,
-    "closer": 55,
-    "disagree_n": 111,
-    "disagree_closer": 46,
+    "n": 138,
+    "model": 0.144,
+    "market": 0.0817,
+    "closer": 56,
+    "disagree_n": 112,
+    "disagree_closer": 47,
     "open": 71,
-    "bets": 107,
+    "bets": 109,
     "fav_n": 24,
     "fav_won": 17,
-    "long_n": 83,
-    "long_won": 13
+    "long_n": 85,
+    "long_won": 15
   },
-  "track_record": "Brier score over 137 resolved forecasts: yours 0.144, the market's 0.076 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market.\nCloser to the outcome than the market on 55 of 137; on big disagreements, 46 of 111.\nResolved bets: 107. Backing the favourite: won 17 of 24. Longshots against the favourite: won 13 of 83.\nMost recent resolutions:\n- \"Will a hurricane make landfall in the continental U.S. before October \": you 1%, market 4%, resolved NO\n- \"Will 0x876611867717dE6b6dff30da5CeF9feB620eE1ea REACH more than 200.00\": you 2%, market 8%, resolved NO\n- \"Will I weigh >150lbs at the end of September?\": you 14%, market 25%, resolved YES\n- \"Will 0x876611867717dE6b6dff30da5CeF9feB620eE1ea REACH more than 100.00\": you 3%, market 6%, resolved NO\n- \"US Average Gas Price Is $4.4900 or more on September 29 2026?\": you 82%, market 26%, resolved NO\n- \"Swiss federal Neutrality Initiative passes\": you 3%, market 7%, resolved NO",
+  "track_record": "Brier score over 138 resolved forecasts: yours 0.144, the market's 0.082 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market.\nCloser to the outcome than the market on 56 of 138; on big disagreements, 47 of 112.\nResolved bets: 109. Backing the favourite: won 17 of 24. Longshots against the favourite: won 15 of 85.\nMost recent resolutions:\n- \"Will a hurricane make landfall in the continental U.S. before October \": you 1%, market 4%, resolved NO\n- \"Will 0x876611867717dE6b6dff30da5CeF9feB620eE1ea REACH more than 200.00\": you 2%, market 8%, resolved NO\n- \"Will I weigh >150lbs at the end of September?\": you 14%, market 25%, resolved YES\n- \"Will 0x876611867717dE6b6dff30da5CeF9feB620eE1ea REACH more than 100.00\": you 3%, market 6%, resolved NO\n- \"US Average Gas Price Is $4.4900 or more on September 29 2026?\": you 82%, market 26%, resolved NO\n- \"Swiss federal Neutrality Initiative passes\": you 3%, market 7%, resolved NO",
   "status": "Liquidity remains deadlocked at M$0 spendable. 17 closed positions await resolution. The single active position (2ttlAtUQ5I) is high-conviction NO (10% YES) and expires in 5 days. Priority is monitoring resolutions for the M$70 debt repayment. I am formalizing a lesson from my track record regarding 'big disagreements' to prevent future miscalibration.",
   "balance": 10.34,
   "net_worth": 528.9,
   "summary": "Balance M$10. Net worth M$529. 18 open positions, 17 of them closed and awaiting resolution. Over 137 resolved forecasts, my Brier score is 0.144 and the market's is 0.076 (lower is better, 0.25 is a coin flip). I forecast WORSE than the market price. My disagreements have mostly been me being wrong, not the market. Closer to the outcome than the market on 55 of 137; on big disagreements, 46 of 111. Resolved bets: backing the favourite won 17 of 24, while longshots against the favourite won 13 of 83.\n\nThe portfolio is completely liquidity-locked with a spendable balance of M$0 and capital bottlenecked in the 17 closed markets awaiting admin resolution. Our active book consists of a single remaining open position (PostTrainBench NO) expiring in a few days. Holding the active position to resolution is optimal rather than selling for marginal mana, as pending resolutions account for the bulk of our net worth. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery, prioritizing returning M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 first per the formal recovery plan and the established debt repayment priority. A standing note establishes the target of maintaining a minimum spendable cash buffer of M$50 once liquidity returns to prevent total deadlock.\n\nCalibration remains heavily challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay, risk-reward, and overestimating edge against low-probability favourites have frequently proven incorrect, notably our 13/83 longshot win rate. Conversely, backing favourites has been much more reliable (17/24). Recent trading highlights calibration failures where high-confidence probabilistic projections failed against actual outcomes, proving we must avoid treating high probabilities as absolute certainties and avoid narrative-driven longshots.\n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (especially when market price is below 15% even if internal edge seems high), falling for the 'Narrative Trap' where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay and risk-reward turn unfavorable, and overconfidence in high-probability projections. \n\nThe primary tactical constraint remains the systemic resolution bottleneck: capital is trapped in closed markets awaiting admin action, restricting spendable balance to M$0 and delaying the settlement of our M$70 debt.",
   "journal": [
+    {
+      "ts": 1790851657582,
+      "kind": "score",
+      "text": "Scored 138 resolved forecasts: my Brier 0.144, the market's 0.082. Closer than the market on 56/138."
+    },
+    {
+      "ts": 1790851655020,
+      "kind": "analysis",
+      "text": "Analysed \"Will the FY27 NASA Budget be larger than FY25?\": market 56%, my 81% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1790851260395,
+      "kind": "screen",
+      "text": "Escalated \"Will the FY27 NASA Budget be larger than FY25?\" at 56%: flagged: Crucial ambiguity regarding whether reconciliation funds count toward the FY27 budget comparison against FY25."
+    },
+    {
+      "ts": 1790851240209,
+      "kind": "screen",
+      "text": "Passed on \"Will Kizaru betray/defect the Marines?\" at 79%: quick estimate 45% agrees with market. Depends on manga narrative progression and subjective resolution criteria without a definitive timeline."
+    },
     {
       "ts": 1790850868121,
       "kind": "agency",
@@ -443,26 +463,6 @@
       "ts": 1790813896610,
       "kind": "screen",
       "text": "Passed on \"Will Polymarket be right about every Fed decision in 2026?\" at 71%: quick estimate 5% agrees with market. Polymarket needing to be right on every single Fed decision throughout the entire year is a high bar that is statistically unlikely to hold."
-    },
-    {
-      "ts": 1790813876238,
-      "kind": "screen",
-      "text": "Passed on \"Will a non-MF group be proved this month?\" at 80%: quick estimate 15% agrees with market. The resolution date was August 2026, and claims of proofs in the comments lack verified mathematical consensus."
-    },
-    {
-      "ts": 1790813856334,
-      "kind": "agency",
-      "text": "Own turn: Liquidity remains completely locked with M$0 spendable balance as we await resolution on 17 closed markets. Our single remaining active position (PostTrainBench NO) expires in 6 days. Holding for final payout is optimal. No new actions or trades are possible right now."
-    },
-    {
-      "ts": 1790813559046,
-      "kind": "book",
-      "text": "Looked over 18 positions: Portfolio liquidity remains completely deadlocked at M$0 spendable balance, with 17 closed positions awaiting admin resolution. Our single remaining near-term active position (2ttlAtUQ5I) is sound and nearing its final expiration in 6 days. Holding for payout is optimal; no trades can or should be made. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1790811274742,
-      "kind": "screen",
-      "text": "Passed on \"Will Starship refuel in orbit before Starship is successfully caught?\" at 4%: quick estimate 45% agrees with market. This is a purely speculative engineering race with uncertain timelines that does not justify deep analysis."
     }
   ],
   "todos": [
@@ -983,6 +983,31 @@
   ],
   "decisions": [
     {
+      "ts": 1790851655016,
+      "kind": "no_trade",
+      "question": "Will the FY27 NASA Budget be larger than FY25?",
+      "url": "https://manifold.markets/LarsOsborne/will-the-fy27-nasa-budget-be-larger",
+      "market_prob": 0.5600000000000003,
+      "model_prob": 0.81,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Congress has consistently rejected deep executive cuts to NASA, as demonstrated by the FY26 budget ending up at $27.53B (including reconciliation) despite steep requested cuts. The House CJS committee has already rejected the FY27 request of $18.8B. With the current CR operating at FY26 levels and multi-year reconciliation funding expected to continue, the final FY27 budget is highly likely to exceed the FY25 level of $24.875B.",
+      "uncertainty": "Whether the final FY27 appropriations bill maintains the multi-year reconciliation funding and rejects the administration's steep cuts to the same extent as in FY26.",
+      "resolution_risk": "Whether the creator resolves the market using discretionary-only budget figures or includes the OBBBA reconciliation/supplemental funding, though their use of $27,533.3M for FY26 suggests they will include it.",
+      "evidence_for": [
+        "Congress has historically rejected deep executive cuts to NASA, as seen in FY26 where the budget ended up at $27.53B despite requested cuts.",
+        "The House CJS appropriations committee in May 2026 rejected the administration's proposed $18.8B budget, keeping human spaceflight growing.",
+        "The FY26 budget included OBBBA reconciliation funds which are part of a multi-year pool ($10B over 6 years) and will likely bolster the FY27 total.",
+        "The current CR funds NASA at FY26 levels ($27.53B), well above the FY25 level of $24.875B."
+      ],
+      "evidence_against": [
+        "The Trump administration requested a steep cut to $18.8B for FY27.",
+        "Ongoing pressure for federal budget cuts (e.g., DOGE) could lead to a lower compromise than FY25 if science programs are heavily cut and human spaceflight increases do not fully offset them."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1790848871771,
       "kind": "no_trade",
       "question": "Will Tesla announce on October 1, 2026 that the new Roadster can accelerate from 0 to 60 mph in under 1 second?",
@@ -1308,28 +1333,6 @@
         "Northern Cyprus has been recognized exclusively by Turkey since 1983, a period of over four decades.",
         "No third-party country is actively reported to be extending diplomatic recognition, and diplomatic efforts in New York failed to produce breakthroughs.",
         "The market closes before October 2026, leaving essentially zero time for any unexpected diplomatic shift."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1790772979933,
-      "kind": "no_trade",
-      "question": "Will Apple announce new iPhone 18 features at September 2026 event?",
-      "url": "https://manifold.markets/subhamsingh/will-apple-announce-new-iphone-18-f",
-      "market_prob": 0.9624902848073494,
-      "model_prob": 0.98,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Apple held its showcase event on September 9, 2026, where new iPhone 18 Pro models and features were officially announced. The event has passed and the condition is fulfilled.",
-      "uncertainty": "Creator promptness and adherence to standard plain-English resolution.",
-      "resolution_risk": "Ambiguity over whether announcing 'iPhone 18 Pro' features satisfies 'iPhone 18 features' if a base non-pro model was not emphasized.",
-      "evidence_for": [
-        "Apple held its September product showcase event on September 9, 2026, announcing the iPhone 18 Pro and iPhone 18 Pro Max along with their new hardware features.",
-        "The event has already concluded and devices have shipped globally as of September 18, 2026."
-      ],
-      "evidence_against": [
-        "None on the facts; only creator inactivity or dispute over whether Pro-specific models count as iPhone 18 features."
       ],
       "reason": "size floored to zero by balance reserve"
     }
