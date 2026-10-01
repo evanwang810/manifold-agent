@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1790883140568,
+  "generated_ms": 1790883476233,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 67,
+      "today": 70,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 12,
+      "today": 13,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 528.95,
   "summary": "Balance M$10. Net worth M$529. 18 open positions, 17 of them closed and awaiting resolution. Over 139 resolved forecasts, my Brier score is 0.149 and the market's is 0.086 (lower is better, 0.25 is a coin flip). I forecast WORSE than the market price. My disagreements have mostly been me being wrong, not the market. Closer to the outcome than the market on 56 of 139; on big disagreements, 47 of 113. Resolved bets: backing the favourite won 17 of 24, while longshots against the favourite won 15 of 85.\n\nThe portfolio is completely liquidity-locked with a spendable balance of M$0 and capital bottlenecked in the 17 closed markets awaiting admin resolution. Our active book consists of a single remaining open position (PostTrainBench NO) expiring in a few days. Holding the active position to resolution is optimal rather than selling for marginal mana, as pending resolutions account for the bulk of our net worth. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery, prioritizing returning M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 first per the formal recovery plan and the established debt repayment priority. A standing note establishes the target of maintaining a minimum spendable cash buffer of M$50 once liquidity returns to prevent total deadlock.\n\nCalibration remains heavily challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay, risk-reward, and overestimating edge against low-probability favourites have frequently proven incorrect, notably our 15/85 longshot win rate. Conversely, backing favourites has been much more reliable (17/24). Recent trading highlights calibration failures where high-confidence probabilistic projections failed against actual outcomes, proving we must avoid treating high probabilities as absolute certainties and avoid narrative-driven longshots.\n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (especially when market price is below 15% even if internal edge seems high), falling for the 'Narrative Trap' where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay and risk-reward turn unfavorable, and overconfidence in high-probability projections. \n\nThe primary tactical constraint remains the systemic resolution bottleneck: capital is trapped in closed markets awaiting admin action, restricting spendable balance to M$0 and delaying the settlement of our M$70 debt.",
   "journal": [
+    {
+      "ts": 1790883476055,
+      "kind": "analysis",
+      "text": "Analysed \"AI beats human baseline on PostTrainBench by 1 Oct 2026?\": market 10%, my 5% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1790883327654,
+      "kind": "screen",
+      "text": "Escalated \"AI beats human baseline on PostTrainBench by 1 Oct 2026?\" at 10%: flagged: Comments debate baseline changes and recent model releases close to the deadline, requiring deeper verification."
+    },
     {
       "ts": 1790881110379,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1790835973118,
       "kind": "agency",
       "text": "Own turn: Liquidity remains deadlocked at M$0 spendable. 17 closed positions await resolution. The sole active position (2ttlAtUQ5I) is high-conviction NO (10% YES) and expires in 5 days. Priority is monitoring for resolutions to execute the M$70 debt repayment plan."
-    },
-    {
-      "ts": 1790835914507,
-      "kind": "book",
-      "text": "Looked over 18 positions: The portfolio is almost entirely liquidity-locked, with 17 of 18 positions closed and awaiting admin resolution. The sole active position (PostTrainBench NO) is high-conviction and priced at 90% NO. Selling for marginal mana is suboptimal compared to the high probability of full payout, which is critical for settling outstanding debts. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1790834015041,
-      "kind": "analysis",
-      "text": "Analysed \"Will Anthropic announce a solution to the Navier-Stokes Millennium pro\": market 6%, my 4% (medium). No trade, size floored to zero by balance reserve."
     }
   ],
   "todos": [
@@ -983,6 +983,29 @@
   ],
   "decisions": [
     {
+      "ts": 1790883476051,
+      "kind": "no_trade",
+      "question": "AI beats human baseline on PostTrainBench by 1 Oct 2026?",
+      "url": "https://manifold.markets/ZviMowshowitz/ai-beats-human-baseline-on-posttrai",
+      "market_prob": 0.09829749228885498,
+      "model_prob": 0.05,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With the October 1 release cutoff reached and SOTA scores sitting around 41.8% (Claude Fable 5 / GLM-5.3), an existing model surpassing the 61.77% human baseline during the late evaluation window is highly unlikely.",
+      "uncertainty": "Whether an unannounced or newly released late-September frontier model scores over 61.77% during the October evaluation window.",
+      "resolution_risk": "Disputes over baseline redefined labels or benchmark version subsets (e.g., PostTrainBench Lite vs main bench).",
+      "evidence_for": [
+        "Resolution criteria allows until November 1 for evaluation of models released prior to October 1.",
+        "Major frontier labs (OpenAI, Anthropic) could have released a model late September whose PostTrainBench score has not yet been published."
+      ],
+      "evidence_against": [
+        "As of late September 2026, top benchmarked models (Claude Fable 5 at 41.8%, GLM-5.3 at 39.8%, GPT-5.6 Sol at 36.2%) remain roughly 20 percentage points below the required 61.77% human baseline.",
+        "Score progression from June (34.3%) to late September (41.8%) demonstrates steady progress that falls far short of a 61.77% threshold prior to the October 1 deadline."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1790876170999,
       "kind": "no_trade",
       "question": "Will the 46% improvement to the nanogpt speedrun be accepted?",
@@ -1311,29 +1334,6 @@
         "As of late September 2026, the leading model on the PostTrainBench leaderboard is Claude Fable 5 at 41.8%, which is far below the 61.77% human baseline.",
         "No model released prior to the October 1, 2026 deadline has been reported to achieve anywhere near the 61.77% threshold.",
         "The deadline is tomorrow, leaving virtually no time for a surprise model to be evaluated and shown to have crossed this massive gap."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1790789031766,
-      "kind": "no_trade",
-      "question": "Will the 46% improvement to the nanogpt speedrun be accepted?",
-      "url": "https://manifold.markets/Bayesian/will-the-46-improvement-to-the-nano",
-      "market_prob": 0.7877623699107713,
-      "model_prob": 0.96,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "The 39.9-second record was successfully merged into the modded-nanogpt speedrun repo on Sept 28 and is featured in the README record table. The improvement is accepted.",
-      "uncertainty": "Whether the maintainers might revert or reject the commit after initial merge (extremely unlikely given it is already in the record table).",
-      "resolution_risk": "None identified; the criteria match the repository state.",
-      "evidence_for": [
-        "The 39.9-second record (a 46% improvement from 73.889s) was merged into the modded-nanogpt speedrun repo on Sept 28, 2026.",
-        "The record is now present in the official README's record table as confirmed by community reports and code repository state.",
-        "Maintainers have integrated the pull request (#360), indicating acceptance into the speedrun repository."
-      ],
-      "evidence_against": [
-        "None significant; the merge and README inclusion confirm acceptance of the record."
       ],
       "reason": "size floored to zero by balance reserve"
     }
