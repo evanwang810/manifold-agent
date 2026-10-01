@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1790888211102,
+  "generated_ms": 1790888630644,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash-lite",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 71,
+      "today": 74,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 13,
+      "today": 14,
       "cap": 34
     }
   },
@@ -64,6 +64,21 @@
   "net_worth": 531.32,
   "summary": "Balance M$10. Net worth M$529. 18 open positions, 17 of them closed and awaiting resolution. Over 139 resolved forecasts, my Brier score is 0.149 and the market's is 0.086 (lower is better, 0.25 is a coin flip). I forecast WORSE than the market price. My disagreements have mostly been me being wrong, not the market. Closer to the outcome than the market on 56 of 139; on big disagreements, 47 of 113. Resolved bets: backing the favourite won 17 of 24, while longshots against the favourite won 15 of 85.\n\nThe portfolio is completely liquidity-locked with a spendable balance of M$0 and capital bottlenecked in the 17 closed markets awaiting admin resolution. Our active book consists of a single remaining open position (PostTrainBench NO) expiring in a few days. Holding the active position to resolution is optimal rather than selling for marginal mana, as pending resolutions account for the bulk of our net worth. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery, prioritizing returning M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 first per the formal recovery plan and the established debt repayment priority. A standing note establishes the target of maintaining a minimum spendable cash buffer of M$50 once liquidity returns to prevent total deadlock.\n\nCalibration remains heavily challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay, risk-reward, and overestimating edge against low-probability favourites have frequently proven incorrect, notably our 15/85 longshot win rate. Conversely, backing favourites has been much more reliable (17/24). Recent trading highlights calibration failures where high-confidence probabilistic projections failed against actual outcomes, proving we must avoid treating high probabilities as absolute certainties and avoid narrative-driven longshots.\n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (especially when market price is below 15% even if internal edge seems high), falling for the 'Narrative Trap' where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay and risk-reward turn unfavorable, and overconfidence in high-probability projections. \n\nThe primary tactical constraint remains the systemic resolution bottleneck: capital is trapped in closed markets awaiting admin action, restricting spendable balance to M$0 and delaying the settlement of our M$70 debt.",
   "journal": [
+    {
+      "ts": 1790888630437,
+      "kind": "score",
+      "text": "Scored 142 resolved forecasts: my Brier 0.149, the market's 0.089. Closer than the market on 59/142."
+    },
+    {
+      "ts": 1790888622216,
+      "kind": "analysis",
+      "text": "Analysed \"SOAI#3: Open-ended agents make a meaningful scientific discovery end-t\": market 49%, my 22% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1790888399818,
+      "kind": "screen",
+      "text": "Escalated \"SOAI#3: Open-ended agents make a meaningful scientific discovery end-t\" at 49%: quick estimate 35% backs the favourite at 49%"
+    },
     {
       "ts": 1790888025273,
       "kind": "agency",
@@ -448,21 +463,6 @@
       "ts": 1790839734703,
       "kind": "agency",
       "text": "Own turn: Liquidity remains deadlocked at M$0 spendable. 17 closed positions await resolution. The single active position (2ttlAtUQ5I) is a high-conviction NO (10% YES) expiring in 5 days. Priority remains monitoring for resolutions to execute the M$70 debt repayment plan."
-    },
-    {
-      "ts": 1790839638131,
-      "kind": "book",
-      "text": "Looked over 18 positions: Portfolio is almost entirely liquidity-locked with 17/18 positions closed and awaiting resolution. The sole active position (PostTrainBench NO) is high-conviction and nearing expiration. Holding for full payout is the optimal strategy to maximize capital for outstanding debt repayments. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1790838836247,
-      "kind": "screen",
-      "text": "Passed on \"Will Anthropic\u2019s IPO S-1 be public by 16 October 2026?\" at 53%: quick estimate 15% agrees with market. There is no public indication of an impending S-1 filing by mid-October, making a filing in the next two weeks unlikely."
-    },
-    {
-      "ts": 1790838816261,
-      "kind": "screen",
-      "text": "Passed on \"Will we know who Satoshi Nakamoto is within two years of Tyler Cowen\u2019s\" at 5%: quick estimate 15% agrees with market. Unlikely that definitive proof emerges before the close date despite ongoing speculation."
     }
   ],
   "todos": [
@@ -983,6 +983,29 @@
   ],
   "decisions": [
     {
+      "ts": 1790888622211,
+      "kind": "no_trade",
+      "question": "SOAI#3: Open-ended agents make a meaningful scientific discovery end-to-end (hypothesis, expt, iteration, paper).",
+      "url": "https://manifold.markets/ZviMowshowitz/soai3-openended-agents-make-a-meani",
+      "market_prob": 0.49181973472583757,
+      "model_prob": 0.22,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "While agentic workflows have made impressive strides in 2026, meeting the strict bar for a meaningful end-to-end scientific discovery without significant human scaffolding remains a stretch for this year.",
+      "uncertainty": "Whether the creators of the State of AI Report will judge current experimental multi-agent research prototypes as meeting their formal criteria for a 'meaningful scientific discovery' by the end of 2026.",
+      "resolution_risk": "The market resolves based on the report's self-grading or Anthropic's best model evaluation, introducing subjectivity regarding what constitutes 'meaningful' and 'end-to-end'.",
+      "evidence_for": [
+        "Recent 2026 preprints and studies (such as in Advanced Science and Stanford Medicine's manuscript-turned-agent systems) demonstrate that multi-agent systems are rapidly approaching end-to-end scientific workflows spanning hypothesis formulation to manuscript preparation.",
+        "Automated research frameworks and benchmarks like DISCERN and OSWorld-Science are actively pushing the boundary of autonomous computer use and scientific software execution."
+      ],
+      "evidence_against": [
+        "The 2026 State of AI Report's prediction requires a 'meaningful' scientific discovery end-to-end (hypothesis, experiment, iteration, paper), which sets an extraordinarily high bar for autonomy without human intervention.",
+        "Real-world scientific discovery typically requires extensive tacit knowledge, physical lab validation, and rigorous peer review that fully autonomous agents have not reliably achieved at scale by late 2026."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1790883476051,
       "kind": "no_trade",
       "question": "AI beats human baseline on PostTrainBench by 1 Oct 2026?",
@@ -1313,27 +1336,6 @@
       "evidence_against": [
         "The 2026 State of AI Report has a high bar for 'meaningful scientific discovery end-to-end' which requires a complete cycle from hypothesis to peer-reviewed-level paper without heavy human intervention.",
         "Current AI systems remain heavily dependent on human direction, prompt engineering, and curation for validation and debugging."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1790796551182,
-      "kind": "no_trade",
-      "question": "AI beats human baseline on PostTrainBench by 1 Oct 2026?",
-      "url": "https://manifold.markets/ZviMowshowitz/ai-beats-human-baseline-on-posttrai",
-      "market_prob": 0.1556876743466488,
-      "model_prob": 0.01,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With only one day left before the October 1 deadline, the state-of-the-art on PostTrainBench remains at 41.8%, nearly 20 percentage points below the 61.77% human baseline. There is no credible evidence of any model closing this gap in time.",
-      "uncertainty": "Whether a secret or unindexed model released before October 1 is evaluated during the grace period and achieves an unprecedented leap of over 20 percentage points.",
-      "resolution_risk": "If the creator decides to resolve based on a different baseline (like the 51.14% 'Official Instruct Models' or PostTrainBench Lite) despite the explicit 61.77% target in the description.",
-      "evidence_for": [],
-      "evidence_against": [
-        "As of late September 2026, the leading model on the PostTrainBench leaderboard is Claude Fable 5 at 41.8%, which is far below the 61.77% human baseline.",
-        "No model released prior to the October 1, 2026 deadline has been reported to achieve anywhere near the 61.77% threshold.",
-        "The deadline is tomorrow, leaving virtually no time for a surprise model to be evaluated and shown to have crossed this massive gap."
       ],
       "reason": "size floored to zero by balance reserve"
     }
