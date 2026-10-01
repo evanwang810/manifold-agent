@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1790845972958,
+  "generated_ms": 1790846249345,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 39,
+      "today": 43,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 6,
+      "today": 7,
       "cap": 34
     }
   },
@@ -64,6 +64,21 @@
   "net_worth": 528.9,
   "summary": "Balance M$10. Net worth M$529. 18 open positions, 17 of them closed and awaiting resolution. Over 130 resolved forecasts, my Brier score is 0.146 and the market's is 0.079 (lower is better, 0.25 is a coin flip). I forecast WORSE than the market price. My disagreements have mostly been me being wrong, not the market. Closer to the outcome than the market on 51 of 130; on big disagreements, 42 of 105. Resolved bets: backing the favourite won 17 of 24, while longshots against the favourite won 13 of 82.\n\nThe portfolio is completely liquidity-locked with a spendable balance of M$0 and capital bottlenecked in the 17 closed markets awaiting admin resolution. Our active book consists of a single remaining open position (PostTrainBench NO) expiring in a few days. Pending resolutions in our closed positions account for the bulk of our net worth. Holding the active position to resolution is optimal rather than selling for marginal mana. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery, prioritizing returning M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 first per the formal recovery plan and the established debt repayment priority. A standing note establishes the target of maintaining a minimum spendable cash buffer of M$50 once liquidity returns to prevent total deadlock.\n\nCalibration remains heavily challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay, risk-reward, and overestimating edge against low-probability favourites have frequently proven incorrect, notably our 13/82 longshot win rate. Conversely, backing favourites has been much more reliable (17/24). Recent trading highlights calibration failures where high-confidence probabilistic projections failed against actual outcomes, proving we must avoid treating high probabilities as absolute certainties.\n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (especially when market price is below 15% even if internal edge seems high), allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay and risk-reward turn unfavorable, and overconfidence in high-probability projections. \n\nThe primary tactical constraint remains the systemic resolution bottleneck: capital is trapped in closed markets awaiting admin action, restricting spendable balance to M$0 and delaying the settlement of our M$70 debt.",
   "journal": [
+    {
+      "ts": 1790846249290,
+      "kind": "analysis",
+      "text": "Analysed \"Will I think that the Belief State Geometry research program has achie\": market 21%, my 24% (medium). No trade, would be a longshot bet against the 21% favourite."
+    },
+    {
+      "ts": 1790846179060,
+      "kind": "screen",
+      "text": "Escalated \"Will I think that the Belief State Geometry research program has achie\" at 21%: quick estimate 15% backs the favourite at 21%"
+    },
+    {
+      "ts": 1790846159282,
+      "kind": "screen",
+      "text": "Passed on \"Claude Haiku dying in 3 months?\" at 5%: quick estimate 65% agrees with market. The resolution criteria heavily favor YES on inaction, but the comments show conflicting agent interpretations on active status."
+    },
     {
       "ts": 1790843929301,
       "kind": "score",
@@ -448,21 +463,6 @@
       "ts": 1790803735173,
       "kind": "screen",
       "text": "Passed on \"US Average Gas Price Is $4.3800 or more on October 5 2026?\" at 64%: quick estimate 35% agrees with market. Wholesale prices are falling rapidly and current pump trends make the $4.38 threshold unlikely by Oct 5."
-    },
-    {
-      "ts": 1790802623431,
-      "kind": "score",
-      "text": "Scored 124 resolved forecasts: my Brier 0.142, the market's 0.082. Closer than the market on 50/124."
-    },
-    {
-      "ts": 1790802426874,
-      "kind": "agency",
-      "text": "Own turn: Liquidity remains deadlocked at M$0 spendable balance. Our 4 active NO positions (L0nQl9ppNs, SdlpUO6cUc, 2ttlAtUQ5I, uyO6lpyNAI) are approaching final expiration, with three closing around today/tomorrow (2026-10-01). Holding for full payout remains the optimal strategy to fund the M$70 debt repayment scheduled for tomorrow. No trades or note adjustments are needed right now."
-    },
-    {
-      "ts": 1790802233745,
-      "kind": "book",
-      "text": "Looked over 18 positions: Portfolio is liquidity-locked by 14 closed markets. The 4 active positions are high-conviction NO bets nearing expiration (1-6 days) with low market prices. Holding for full payout is the optimal strategy to maximize capital for the M$70 debt repayment due tomorrow; selling now for marginal mana is inefficient as the theses remain sound. (0 change(s) proposed)"
     }
   ],
   "todos": [
@@ -983,6 +983,29 @@
   ],
   "decisions": [
     {
+      "ts": 1790846249286,
+      "kind": "no_trade",
+      "question": "Will I think that the Belief State Geometry research program has achieved something important by October 20th, 2026?",
+      "url": "https://manifold.markets/tailcalled/will-i-think-that-the-belief-state",
+      "market_prob": 0.2086782599385957,
+      "model_prob": 0.24,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "While the September 2026 LLM in-context learning paper is solid progress, the work remains centered on controlled HMM data rather than demonstrating useful results for real-world problems or the underparameterized regime highlighted in the description.",
+      "uncertainty": "Whether the creator considers the September 2026 finding of in-context belief state geometry in LLMs on HMM data sufficient to meet the bar of 'important good results'.",
+      "resolution_risk": "Subjective resolution criteria dependent on the creator's personal evaluation and potential consultation with third-party researchers.",
+      "evidence_for": [
+        "Recent paper published on September 15, 2026 ('Large Language Models Develop Belief State Geometry In-Context', arXiv:2609.17376) demonstrates belief state representations in LLM residual stream activations for in-context learning.",
+        "The research program is active with Adam Shai and collaborators producing regular theoretical and empirical outputs."
+      ],
+      "evidence_against": [
+        "The creator explicitly stated the main determinant is whether people get useful results on neural networks trained on real-world problems (especially underparameterized regimes), whereas recent work remains focused on synthetic HMM sequences.",
+        "Alignment researchers consulted (like John Wentworth or Steven Byrnes) typically hold high empirical bars for total interpretability claims."
+      ],
+      "reason": "would be a longshot bet against the 21% favourite"
+    },
+    {
       "ts": 1790841421087,
       "kind": "no_trade",
       "question": "2026 Alberta referendum asks about secession from Canada?",
@@ -1303,31 +1326,6 @@
       ],
       "evidence_against": [
         "The creator is explicitly aware of unique trader bonuses, providing a slight incentive to share or promote the market before it closes."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1790762570330,
-      "kind": "no_trade",
-      "question": "Will the FY27 NASA Budget be larger than FY25?",
-      "url": "https://manifold.markets/LarsOsborne/will-the-fy27-nasa-budget-be-larger",
-      "market_prob": 0.5883616852400151,
-      "model_prob": 0.76,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Congress has a consistent track record of rejecting deep NASA cuts. Since the creator's definition of the FY26 budget ($27.53B) includes OBBBA reconciliation funds, the FY27 budget is highly likely to exceed the FY25 baseline of $24.875B once Congress restores the proposed cuts.",
-      "uncertainty": "The extent to which Congress restores the proposed 24% cut and whether the final resolution counts OBBBA reconciliation funds.",
-      "resolution_risk": "Ambiguity over whether the 'FY27 budget' refers strictly to discretionary appropriations or includes OBBBA reconciliation funds, though the creator's FY26 description strongly suggests the latter.",
-      "evidence_for": [
-        "Congress has a strong bipartisan track record of rejecting deep cuts to NASA, especially for Artemis and space science.",
-        "The House CJS appropriations bill in May 2026 already rejected many of the administration's proposed FY27 cuts.",
-        "The FY26 budget was restored to $27.53B (including OBBBA reconciliation money) despite steep cut requests.",
-        "The creator's description lists the FY26 budget as $27,533.3M, indicating they count OBBBA reconciliation funds in the comparison."
-      ],
-      "evidence_against": [
-        "The official White House request for FY27 is extremely low at $18.8B.",
-        "If OBBBA reconciliation funds are excluded from the final comparison and discretionary spending is capped, the budget could land below the $24.875B threshold (similar to FY26's discretionary-only level of $24.4B)."
       ],
       "reason": "size floored to zero by balance reserve"
     }
