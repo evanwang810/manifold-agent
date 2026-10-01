@@ -2,16 +2,6 @@
   "summary": "Balance M$10. Net worth M$529. 18 open positions, 17 of them closed and awaiting resolution. Over 130 resolved forecasts, my Brier score is 0.146 and the market's is 0.079 (lower is better, 0.25 is a coin flip). I forecast WORSE than the market price. My disagreements have mostly been me being wrong, not the market. Closer to the outcome than the market on 51 of 130; on big disagreements, 42 of 105. Resolved bets: backing the favourite won 17 of 24, while longshots against the favourite won 13 of 82.\n\nThe portfolio is completely liquidity-locked with a spendable balance of M$0 and capital bottlenecked in the 17 closed markets awaiting admin resolution. Our active book consists of a single remaining open position (PostTrainBench NO) expiring in a few days. Pending resolutions in our closed positions account for the bulk of our net worth. Holding the active position to resolution is optimal rather than selling for marginal mana. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery, prioritizing returning M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 first per the formal recovery plan and the established debt repayment priority. A standing note establishes the target of maintaining a minimum spendable cash buffer of M$50 once liquidity returns to prevent total deadlock.\n\nCalibration remains heavily challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay, risk-reward, and overestimating edge against low-probability favourites have frequently proven incorrect, notably our 13/82 longshot win rate. Conversely, backing favourites has been much more reliable (17/24). Recent trading highlights calibration failures where high-confidence probabilistic projections failed against actual outcomes, proving we must avoid treating high probabilities as absolute certainties.\n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (especially when market price is below 15% even if internal edge seems high), allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay and risk-reward turn unfavorable, and overconfidence in high-probability projections. \n\nThe primary tactical constraint remains the systemic resolution bottleneck: capital is trapped in closed markets awaiting admin action, restricting spendable balance to M$0 and delaying the settlement of our M$70 debt.",
   "journal": [
     {
-      "ts": 1790658452688,
-      "kind": "score",
-      "text": "Scored 117 resolved forecasts: my Brier 0.137, the market's 0.079. Closer than the market on 46/117."
-    },
-    {
-      "ts": 1790659006074,
-      "kind": "screen",
-      "text": "Escalated \"California Prop 50 map used in 2026 election?\" at 96%: quick estimate 99% backs the favourite at 96%"
-    },
-    {
       "ts": 1790659127509,
       "kind": "analysis",
       "text": "Analysed \"California Prop 50 map used in 2026 election?\": market 96%, my 98% (high). No trade, size floored to zero by balance reserve."
@@ -1500,6 +1490,16 @@
       "ts": 1790824630239,
       "kind": "book",
       "text": "Looked over 18 positions: The book is almost entirely liquidity-locked, with 17 of 18 positions closed and awaiting resolution. The sole active position (PostTrainBench NO) is high-conviction and priced at 9% YES. Holding for full payout is the optimal strategy to maximize capital for the M$70 debt repayment. (0 change(s) proposed)"
+    },
+    {
+      "ts": 1790824990535,
+      "kind": "agency",
+      "text": "Own turn: Liquidity remains deadlocked at M$0 spendable. 17 positions are closed and awaiting resolution. The single active position (2ttlAtUQ5I) is sound and held for full payout. The priority remains monitoring these resolutions to settle the M$70 debt. The expected 'imminent' liquidity from the end-of-September markets has transitioned into the general admin resolution queue."
+    },
+    {
+      "ts": 1790824990544,
+      "kind": "agency",
+      "text": "Own turn, retired a standing note: [self] Imminent Liquidity: The resolution of uyO6lpyNAI, SdlpUO6cUc, and L0nQl9ppNs (all closing within ~24h) is expecte. Because: These markets have now closed and are awaiting resolution; the 'imminent' window has passed, and they are now part of the systemic resolution bottleneck."
     }
   ],
   "lessons": [
@@ -1562,11 +1562,6 @@
       "text": "Recovery Plan: Upon resolution of closed markets, the priority sequence for the M$70 debt is: 1. M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 (test), 2. M$10 to @EvanWang11j3, 3. M$50 to cA1JupYR5AR8btHUs2xvkui7jA93.",
       "source": "self",
       "ts": 1790730572329
-    },
-    {
-      "text": "Imminent Liquidity: The resolution of uyO6lpyNAI, SdlpUO6cUc, and L0nQl9ppNs (all closing within ~24h) is expected to provide ~M$92, which is sufficient to settle the M$70 debt independently of the 14 closed/unresolved markets.",
-      "source": "self",
-      "ts": 1790734445846
     },
     {
       "text": "Maintain a minimum spendable balance of M$50 to avoid total liquidity deadlock during admin resolution delays.",
@@ -3381,7 +3376,7 @@
   },
   "llm_usage": {
     "day": "2026-10-01",
-    "chat": 7,
+    "chat": 8,
     "fast": 13,
     "deep": 2
   },
@@ -4037,15 +4032,9 @@
     "long_n": 82,
     "long_won": 13
   },
-  "last_own_action_ms": 1790821064810,
+  "last_own_action_ms": 1790824814247,
   "last_book_review_ms": 1790824579846,
   "own_actions": [
-    {
-      "ts": 1790322460653,
-      "action": "note_add",
-      "detail": "wrote a standing note: [self] 2026-09-25 08:00Z: Spendable liquidity is M$0 after entering NASA budget position. Portfolio is now fully investe",
-      "reasoning": "Recording the current liquidity state (M$0) to ensure continuity and awareness of the zero-buffer situation."
-    },
     {
       "ts": 1790323556049,
       "action": "sell",
@@ -4279,6 +4268,12 @@
       "action": "note_add",
       "detail": "wrote a standing note: [self] Favourite Success: A 17/20 win rate when backing favourites suggests my calibration is strongest when aligned wit",
       "reasoning": "To balance the 'Longshot Failure' note with a positive pattern identified in the track record, ensuring a more balanced approach to risk and sizing once liquidity is restored."
+    },
+    {
+      "ts": 1790824990540,
+      "action": "note_remove",
+      "detail": "retired a standing note: [self] Imminent Liquidity: The resolution of uyO6lpyNAI, SdlpUO6cUc, and L0nQl9ppNs (all closing within ~24h) is expecte",
+      "reasoning": "These markets have now closed and are awaiting resolution; the 'imminent' window has passed, and they are now part of the systemic resolution bottleneck."
     }
   ],
   "portfolio_mark": {
@@ -4509,7 +4504,7 @@
   },
   "replied_to": [],
   "tracked_orders": {},
-  "events_since_compress": 9,
+  "events_since_compress": 10,
   "watch_probs": {
     "Ln5EgOhAty": 0.4726684393929348,
     "dCP8cP0CLL": 0.19410275640601396,
@@ -4591,7 +4586,7 @@
   },
   "track_record": "Brier score over 131 resolved forecasts: yours 0.144, the market's 0.078 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market.\nCloser to the outcome than the market on 52 of 131; on big disagreements, 43 of 106.\nResolved bets: 106. Backing the favourite: won 17 of 24. Longshots against the favourite: won 13 of 82.\nMost recent resolutions:\n- \"Will 0x876611867717dE6b6dff30da5CeF9feB620eE1ea REACH more than 200.00\": you 2%, market 8%, resolved NO\n- \"Will I weigh >150lbs at the end of September?\": you 14%, market 25%, resolved YES\n- \"Will 0x876611867717dE6b6dff30da5CeF9feB620eE1ea REACH more than 100.00\": you 3%, market 6%, resolved NO\n- \"US Average Gas Price Is $4.4900 or more on September 29 2026?\": you 82%, market 26%, resolved NO\n- \"Swiss federal Neutrality Initiative passes\": you 3%, market 7%, resolved NO\n- \"Will the address for math.eg.rego.re receive more than $75 before Sep \": you 34%, market 12%, resolved NO",
   "status": {
-    "text": "Liquidity remains deadlocked at M$0 spendable. 17 positions are closed and awaiting resolution. The single active position (2ttlAtUQ5I) is a high-conviction NO bet expiring in 6 days. The priority remains waiting for resolutions to fund the M$70 debt repayment.",
-    "ts": 1790821372766
+    "text": "Liquidity remains deadlocked at M$0 spendable. 17 positions are closed and awaiting resolution. The single active position (2ttlAtUQ5I) is sound and held for full payout. The priority remains monitoring these resolutions to settle the M$70 debt. The expected 'imminent' liquidity from the end-of-September markets has transitioned into the general admin resolution queue.",
+    "ts": 1790824990535
   }
 }
