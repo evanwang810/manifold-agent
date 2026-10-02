@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1790908143649,
+  "generated_ms": 1790908446724,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 12,
+      "today": 15,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 2,
+      "today": 3,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 530.96,
   "summary": "Balance M$10. Net worth M$531. 18 open positions, 17 of them closed and awaiting resolution. Over 143 resolved forecasts, my Brier score is 0.148 and the market's is 0.089 (lower is better, 0.25 is a coin flip). I forecast WORSE than the market price. My disagreements have mostly been me being wrong, not the market. Closer to the outcome than the market on 60 of 143; on big disagreements, 51 of 117. Resolved bets: backing the favourite won 17 of 24, while longshots against the favourite won 15 of 85.\n\nThe portfolio is completely liquidity-locked with a spendable balance of M$0 and capital bottlenecked in the 17 closed markets awaiting admin resolution. The active book consists of a single remaining open position (PostTrainBench NO) expiring or expired today. Holding the active position to resolution is optimal rather than selling for marginal mana, as pending resolutions account for the bulk of our net worth. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery, prioritizing returning M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 first per the formal recovery plan and the established debt repayment priority. A standing note establishes the target of maintaining a minimum spendable cash buffer of M$50 once liquidity returns to prevent total deadlock.\n\nCalibration remains heavily challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay, risk-reward, and overestimating edge against low-probability favourites have frequently proven incorrect, notably our longshot win rate. Conversely, backing favourites has been much more reliable. Recent trading highlights calibration failures where high-confidence probabilistic projections failed against actual outcomes, proving we must avoid treating high probabilities as absolute certainties and avoid narrative-driven longshots.\n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (especially when market price is below 15% even if internal edge seems high), falling for the 'Narrative Trap' where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay and risk-reward turn unfavorable, and overconfidence in high-probability projections. \n\nThe primary tactical constraint remains the systemic resolution bottleneck: capital is trapped in closed markets awaiting admin action, restricting spendable balance to M$0 and delaying the settlement of our M$70 debt.",
   "journal": [
+    {
+      "ts": 1790908446598,
+      "kind": "analysis",
+      "text": "Analysed \"Hegseth, Patel, or RFK is out within the next 90 days\": market 6%, my 26% (medium). No trade, would be a longshot bet against the 6% favourite."
+    },
+    {
+      "ts": 1790908331799,
+      "kind": "screen",
+      "text": "Escalated \"Hegseth, Patel, or RFK is out within the next 90 days\" at 6%: flagged: High political volatility and recent cabinet departures suggest a deeper look at the 90-day survival odds for these specific officials is warranted."
+    },
     {
       "ts": 1790907030383,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1790859113641,
       "kind": "score",
       "text": "Scored 139 resolved forecasts: my Brier 0.149, the market's 0.086. Closer than the market on 56/139."
-    },
-    {
-      "ts": 1790858188075,
-      "kind": "agency",
-      "text": "Own turn, ticked off: Re-evaluate AISI 'The Last Ones' (uyO6lpyNAI) if price hits 20% to ensure NO thesis holds.. Because: The market is closed and awaiting resolution; it is no longer possible to trade or re-evaluate based on price movements."
-    },
-    {
-      "ts": 1790858188068,
-      "kind": "agency",
-      "text": "Own turn: Liquidity remains deadlocked at M$0 spendable. 17 closed positions await resolution. The sole active position (2ttlAtUQ5I) is high-conviction NO and expires in 5 days. Priority is monitoring resolutions for the M$70 debt repayment. Removing obsolete to-do regarding uyO6lpyNAI as it is now closed and cannot be traded."
     }
   ],
   "todos": [
@@ -983,6 +983,31 @@
   ],
   "decisions": [
     {
+      "ts": 1790908446594,
+      "kind": "no_trade",
+      "question": "Hegseth, Patel, or RFK is out within the next 90 days",
+      "url": "https://manifold.markets/TheWabiSabi/hegseth-patel-or-rfk-is-out-within-6ShZILSE0z",
+      "market_prob": 0.05992256637677939,
+      "model_prob": 0.26,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Assessing 90-day departure risks across all three officials: Hegseth (~12%) maintains strong backing despite legislative friction, Patel (~5%) shows no exit indicators, and RFK Jr. (~10%) faces noise without clear signs of forced exit. Combining these independent risks yields a ~26% chance at least one exits within 90 days.",
+      "uncertainty": "Whether congressional pressure or public embarrassment surrounding Hegseth or RFK Jr. reaches a threshold where White House support collapses within 90 days.",
+      "resolution_risk": "The author left no description, creating ambiguity over what constitutes being 'out' (e.g. stepping down vs lateral transfer vs leave of absence).",
+      "evidence_for": [
+        "High baseline turnover rate among political appointees in the administration, with recent departures of other senior figures.",
+        "Hegseth faces ongoing friction with lawmakers and calls for resignation over Defense Department decisions.",
+        "RFK Jr. faces public calls for resignation from health staff and lawmakers over HHS policies."
+      ],
+      "evidence_against": [
+        "Recent reporting from late September 2026 highlights Hegseth as one of the most influential senior officials in the administration.",
+        "Hegseth was recently assigned new leadership roles, including chairing the Homeland Defense Advisory Board.",
+        "No reports or indications of potential departure exist for Kash Patel."
+      ],
+      "reason": "would be a longshot bet against the 6% favourite"
+    },
+    {
       "ts": 1790905989921,
       "kind": "no_trade",
       "question": "Will our Steam game Heartseeker surpass 1000 sales by Oct 5th 2026 (5th anniversary of release)?",
@@ -1309,30 +1334,6 @@
       ],
       "evidence_against": [
         "The underlying federal lawsuit on the merits of the map is still ongoing."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1790834015037,
-      "kind": "no_trade",
-      "question": "Will Anthropic announce a solution to the Navier-Stokes Millennium problem before IPO? ",
-      "url": "https://manifold.markets/Bayesian/did-claude-just-solve-navier-stokes",
-      "market_prob": 0.05880553131674097,
-      "model_prob": 0.04,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "OpenAI already claimed a Navier-Stokes solution on September 8, 2026, and Anthropic's reported November 2026 IPO leaves a very short window. With OpenAI having taken first-mover status, Anthropic has little strategic motive or time to issue a duplicate corporate announcement before going public.",
-      "uncertainty": "Whether Anthropic issues an official corporate claim for a Navier-Stokes solution prior to its November 2026 IPO.",
-      "resolution_risk": "Disputes over whether a paper published by an individual Anthropic employee without explicit corporate branding qualifies as Anthropic 'announcing' a solution.",
-      "evidence_for": [
-        "Anthropic researcher Levent Alp\u00f6ge has been actively researching Navier-Stokes with academic collaborators.",
-        "Anthropic could theoretically announce a distinct or strengthened proof before its planned IPO."
-      ],
-      "evidence_against": [
-        "OpenAI already announced a solution to Navier-Stokes on September 8, 2026, largely capturing the initial breakthrough publicity.",
-        "Anthropic's IPO is reported for November 2026, leaving only a few weeks for any such announcement.",
-        "Anthropic has shown no indication of issuing an official corporate statement claiming a Navier-Stokes solution."
       ],
       "reason": "size floored to zero by balance reserve"
     }
