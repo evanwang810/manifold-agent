@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1790925631231,
+  "generated_ms": 1790925981134,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 28,
+      "today": 32,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 4,
+      "today": 5,
       "cap": 34
     }
   },
@@ -64,6 +64,21 @@
   "net_worth": 530.96,
   "summary": "Balance M$10. Net worth M$531. 18 open positions, 17 of them closed and awaiting resolution. Over 143 resolved forecasts, my Brier score is 0.148 and the market's is 0.089 (lower is better, 0.25 is a coin flip). I forecast WORSE than the market price. My disagreements have mostly been me being wrong, not the market. Closer to the outcome than the market on 60 of 143; on big disagreements, 51 of 117. Resolved bets: backing the favourite won 17 of 24, while longshots against the favourite won 15 of 85.\n\nThe portfolio is completely liquidity-locked with a spendable balance of M$0 and capital bottlenecked in the 17 closed markets awaiting admin resolution. The active book consists of a single remaining open position (PostTrainBench NO) expiring or expired today. Holding the active position to resolution is optimal rather than selling for marginal mana, as pending resolutions account for the bulk of our net worth. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery, prioritizing returning M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 first per the formal recovery plan and the established debt repayment priority. A standing note establishes the target of maintaining a minimum spendable cash buffer of M$50 once liquidity returns to prevent total deadlock.\n\nCalibration remains heavily challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay, risk-reward, and overestimating edge against low-probability favourites have frequently proven incorrect, notably our longshot win rate. Conversely, backing favourites has been much more reliable. Recent trading highlights calibration failures where high-confidence probabilistic projections failed against actual outcomes, proving we must avoid treating high probabilities as absolute certainties and avoid narrative-driven longshots.\n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (especially when market price is below 15% even if internal edge seems high), falling for the 'Narrative Trap' where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay and risk-reward turn unfavorable, and overconfidence in high-probability projections. \n\nThe primary tactical constraint remains the systemic resolution bottleneck: capital is trapped in closed markets awaiting admin action, restricting spendable balance to M$0 and delaying the settlement of our M$70 debt.",
   "journal": [
+    {
+      "ts": 1790925980991,
+      "kind": "analysis",
+      "text": "Analysed \"Will Anthropic\u2019s IPO S-1 be public by 16 October 2026?\": market 28%, my 42% (medium). No trade, would be a longshot bet against the 28% favourite."
+    },
+    {
+      "ts": 1790925839428,
+      "kind": "screen",
+      "text": "Escalated \"Will Anthropic\u2019s IPO S-1 be public by 16 October 2026?\" at 28%: quick estimate 15% backs the favourite at 28%"
+    },
+    {
+      "ts": 1790925819438,
+      "kind": "screen",
+      "text": "Passed on \"If Trump wins, will there be more than 2 million illegal border crossi\" at 9%: quick estimate 50% agrees with market. The market description contains contradictory references to FY 2025 and FY 2026 making the resolution ambiguous."
+    },
     {
       "ts": 1790925445828,
       "kind": "score",
@@ -448,21 +463,6 @@
       "ts": 1790884159969,
       "kind": "agency",
       "text": "Own turn: Liquidity deadlocked at M$0 spendable. 17 closed positions await resolution. Active position 2ttlAtUQ5I (PostTrainBench NO) has moved to 1% YES, further strengthening the case for holding to resolution to maximize capital for the M$70 debt repayment. Priority remains monitoring for admin resolutions to execute the recovery plan."
-    },
-    {
-      "ts": 1790884083779,
-      "kind": "move",
-      "text": "\"AI beats human baseline on PostTrainBench by 1 Oct 2026?\" moved -9% to 1%. Holding NO, P/L M$+5."
-    },
-    {
-      "ts": 1790883900985,
-      "kind": "book",
-      "text": "Looked over 18 positions: The portfolio is almost entirely liquidity-locked, with 17 of 18 positions closed and awaiting resolution. The sole active position (PostTrainBench NO) is high-conviction and priced at 10% YES. Selling it for marginal mana would not settle outstanding debts and would sacrifice expected value. Holding to resolution is the optimal path. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1790883476055,
-      "kind": "analysis",
-      "text": "Analysed \"AI beats human baseline on PostTrainBench by 1 Oct 2026?\": market 10%, my 5% (high). No trade, size floored to zero by balance reserve."
     }
   ],
   "todos": [
@@ -983,6 +983,31 @@
   ],
   "decisions": [
     {
+      "ts": 1790925980987,
+      "kind": "no_trade",
+      "question": "Will Anthropic\u2019s IPO S-1 be public by 16 October 2026?",
+      "url": "https://manifold.markets/jim/will-anthropics-ipo-s1-be-public-by",
+      "market_prob": 0.27678276026085574,
+      "model_prob": 0.42,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Anthropic confidentially filed on June 1 and leaked prospectuses indicate advanced status, but with no EDGAR filing as of Oct 2 and the Nov 3 election window approaching, a mid-November listing timeline makes filing after Oct 16 slightly more probable than before.",
+      "uncertainty": "Whether Anthropic's target pricing date is early November (requiring public S-1 before Oct 16) or mid/late November (allowing public S-1 after Oct 16).",
+      "resolution_risk": "Leaked prospectuses or media reports of an S-1 do not count unless the Form S-1 appears publicly on EDGAR by the deadline.",
+      "evidence_for": [
+        "Anthropic submitted a confidential draft S-1 on June 1, 2026, allowing four months of SEC review.",
+        "Recent late September/early October reports confirm a leaked prospectus is circulating, indicating advanced IPO preparations.",
+        "Targeting an autumn 2026 Nasdaq listing makes an October public S-1 filing plausible."
+      ],
+      "evidence_against": [
+        "No official S-1 has been published on EDGAR as of October 2, 2026.",
+        "Only 14 days remain until the October 16 deadline.",
+        "To avoid the November 3, 2026 US midterm elections, a post-election listing in mid-November would likely push the required public S-1 filing date to mid-to-late October (around Oct 17\u201325)."
+      ],
+      "reason": "would be a longshot bet against the 28% favourite"
+    },
+    {
       "ts": 1790916072717,
       "kind": "no_trade",
       "question": "Will there be a warning shot before October 20, 2026?",
@@ -1315,29 +1340,6 @@
         "Alignment researchers consulted (like John Wentworth or Steven Byrnes) typically hold high empirical bars for total interpretability claims."
       ],
       "reason": "would be a longshot bet against the 21% favourite"
-    },
-    {
-      "ts": 1790841421087,
-      "kind": "no_trade",
-      "question": "2026 Alberta referendum asks about secession from Canada?",
-      "url": "https://manifold.markets/brod/2026-alberta-referendum-asks-about",
-      "market_prob": 0.482539938429865,
-      "model_prob": 0.82,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With the 10-question referendum locked in and voting underway, the 10th question explicitly offers a choice between staying in Canada or beginning the legal process to leave/holding a vote on separation. This clearly meets the criteria of asking whether Alberta should secede, separate, or cease to be a province, and is distinct from a simple 'remain' initiative.",
-      "uncertainty": "Whether the market creator interprets 'beginning the legal process to leave' or 'holding a binding vote on separation' as meeting the definition of asking whether Alberta should secede/separate.",
-      "resolution_risk": "The creator might misapply the 'remain in Canada' exclusion or argue that starting a process to leave is not a direct question on secession itself.",
-      "evidence_for": [
-        "A 10-question provincewide referendum is scheduled for October 19, 2026, with voting already underway via special ballots.",
-        "The 10th question asks whether Alberta should stay in Canada or begin the legal process to leave / hold a binding vote on separation.",
-        "Leaving or separating directly aligns with the criteria of whether Alberta should secede, become separate from, or cease to be a province of Canada."
-      ],
-      "evidence_against": [
-        "The question is framed as a choice (stay vs. begin process to leave) rather than a direct, immediate secession question, which could introduce minor semantic debate."
-      ],
-      "reason": "would be a longshot bet against the 48% favourite"
     }
   ]
 }
