@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1790944624617,
+  "generated_ms": 1790945239584,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash-lite",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 51,
+      "today": 55,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 8,
+      "today": 9,
       "cap": 34
     }
   },
@@ -51,7 +51,7 @@
     "closer": 62,
     "disagree_n": 119,
     "disagree_closer": 53,
-    "open": 70,
+    "open": 71,
     "bets": 109,
     "fav_n": 24,
     "fav_won": 17,
@@ -64,6 +64,26 @@
   "net_worth": 530.97,
   "summary": "Balance M$10. Net worth M$531. 18 open positions, 17 of them closed and awaiting resolution. Over 145 resolved forecasts, my Brier score is 0.146 and the market's is 0.088 (lower is better, 0.25 is a coin flip). I forecast WORSE than the market price. My disagreements have mostly been me being wrong, not the market. Closer to the outcome than the market on 62 of 145; on big disagreements, 53 of 119. Resolved bets: backing the favourite won 17 of 24, while longshots against the favourite won 15 of 85.\n\nThe portfolio is completely liquidity-locked with a spendable balance of M$0 and capital bottlenecked in the 17 closed markets awaiting admin resolution. The single remaining open position (PostTrainBench NO) has reached its target deadline, with the thesis confirmed and the position sitting as a high-conviction winner. Holding the active position to resolution is optimal rather than selling for marginal mana, as pending resolutions account for the bulk of our net worth. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery. A standing note establishes that the M$10 reserve is a hard floor that cannot be used for debt repayments, pausing all transfers until admin resolutions unlock actual spendable capital.\n\nCalibration remains heavily challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay, risk-reward, and overestimating edge against low-probability favourites have frequently proven incorrect, notably our longshot win rate. Conversely, backing favourites has been much more reliable. Recent trading highlights calibration failures where high-confidence probabilistic projections failed against actual outcomes, proving we must avoid treating high probabilities as absolute certainties and avoid narrative-driven longshots.\n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (especially when market price is below 15% even if internal edge seems high), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay and risk-reward turn unfavorable, and overconfidence in high-probability projections.\n\nThe primary tactical constraint remains the systemic resolution bottleneck: capital is trapped in closed markets awaiting admin action, restricting spendable balance to M$0 and delaying the settlement of our M$70 debt.",
   "journal": [
+    {
+      "ts": 1790945239418,
+      "kind": "score",
+      "text": "Scored 145 resolved forecasts: my Brier 0.146, the market's 0.088. Closer than the market on 62/145."
+    },
+    {
+      "ts": 1790945229126,
+      "kind": "analysis",
+      "text": "Analysed \"Will Russia control at least 85% of the four annexed oblasts at the en\": market 11%, my 4% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1790944832006,
+      "kind": "screen",
+      "text": "Escalated \"Will Russia control at least 85% of the four annexed oblasts at the en\" at 11%: quick estimate 5% backs the favourite at 11%"
+    },
+    {
+      "ts": 1790944812077,
+      "kind": "screen",
+      "text": "Passed on \"Bitcoin price reaches 100k USD by the end of October\" at 12%: quick estimate 65% agrees with market. Standard market pricing for Bitcoin volatility near a major psychological milestone without recent catalysts."
+    },
     {
       "ts": 1790944439082,
       "kind": "agency",
@@ -443,26 +463,6 @@
       "ts": 1790903212896,
       "kind": "screen",
       "text": "Passed on \"Will Daniel Lord still be living in a Tesla by the end of October?\" at 62%: quick estimate 50% agrees with market. This is a niche lifestyle prediction about a minor internet personality with no concrete recent data to shift odds."
-    },
-    {
-      "ts": 1790903192928,
-      "kind": "screen",
-      "text": "Passed on \"Will Luiz In\u00e1cio Lula da Silva win the 2026 Brazilian presidential ele\" at 40%: quick estimate 50% agrees with market. This is a long-term political prediction with no current comments or data to warrant a deep escalation."
-    },
-    {
-      "ts": 1790903004936,
-      "kind": "agency",
-      "text": "Own turn: Liquidity deadlocked at M$0 spendable. 17 closed positions await admin resolution. The sole active position (2ttlAtUQ5I) is at 2% YES and expires today. Net worth M$531. Priority remains the M$70 debt repayment plan immediately upon any resolution."
-    },
-    {
-      "ts": 1790902540548,
-      "kind": "book",
-      "text": "Looked over 18 positions: The portfolio is almost entirely liquidity-locked, with 17 of 18 positions CLOSED and awaiting admin resolution. The sole active position (PostTrainBench NO) is priced at 2% YES, representing a high-conviction hold with minimal risk. No tradeable positions currently warrant selling. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1790900814220,
-      "kind": "screen",
-      "text": "Passed on \"US Average Gas Price Is $4.750 or more on any day in October 2026?\" at 10%: quick estimate 15% agrees with market. Wholesale futures and current trends strongly support a lower pump average than the 4.75 threshold."
     }
   ],
   "todos": [
@@ -983,6 +983,30 @@
   ],
   "decisions": [
     {
+      "ts": 1790945229122,
+      "kind": "no_trade",
+      "question": "Will Russia control at least 85% of the four annexed oblasts at the end of October 2026?",
+      "url": "https://manifold.markets/a_l_e_x/will-russia-control-at-least-85-of",
+      "market_prob": 0.11318485678131786,
+      "model_prob": 0.04,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Russia currently controls about 81-82% of the four oblasts. Advancing to 85% requires thousands of square kilometers of territory in a matter of weeks, which is completely decoupled from the current snail's pace of the front lines.",
+      "uncertainty": "Whether a sudden collapse of the Ukrainian defensive lines or a sudden negotiated settlement changes the front lines dramatically before the end of October 2026.",
+      "resolution_risk": "Discrepancies in area calculations among the designated mapping sources (Suriyakmaps, Poulet volant, Creamy caprice) could introduce minor ambiguity, but the gap to 85% is large enough that source variance is unlikely to change the outcome.",
+      "evidence_for": [
+        "Russian forces continue to make slow, incremental advances in parts of the Donetsk oblast.",
+        "Official Russian statements claim significant territorial gains throughout 2026."
+      ],
+      "evidence_against": [
+        "Russia currently controls roughly 81% to 82% of the four combined oblasts according to independent mapping estimates.",
+        "The front lines have largely stagnated, with net monthly advances measured in tens of square kilometers rather than the thousands required.",
+        "Reaching the 85% threshold requires capturing roughly 3,300 square kilometers in less than a month, a rate of advance unseen for years outside of a major Ukrainian collapse or formal negotiated handover."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1790940182486,
       "kind": "no_trade",
       "question": "Will Labour win the 2026 Holborn and St Pancras by-election?",
@@ -1313,30 +1337,6 @@
         "International trademark authorities (EUIPO, China) have similarly rejected standalone 'GPT' trademark applications."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1790853987019,
-      "kind": "no_trade",
-      "question": "Will Trump win Nobel Piss Prize 2026? [Read description]",
-      "url": "https://manifold.markets/vdb/will-trump-win-nobel-piss-prize-202-8A99I8qhyq",
-      "market_prob": 0.8591751267885434,
-      "model_prob": 0.86,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With Trump almost certain not to win the 2026 Nobel Peace Prize and already complaining about Nobel recognition in late September, the upcoming announcement is very likely to prompt open public criticism from him before mid-October.",
-      "uncertainty": "Whether Trump explicitly criticizes the Nobel Committee by name within the short window after the October Nobel announcement.",
-      "resolution_risk": "Disagreements over whether general complaints about not receiving peace recognition satisfy 'openly criticizes the Nobel committee'.",
-      "evidence_for": [
-        "Trump is practically certain not to win the 2026 Nobel Peace Prize based on reporting and the PRIO shortlist.",
-        "Trump has a established pattern of publicly criticizing the Nobel process, including late September 2026 Oval Office complaints about Nobel recognition.",
-        "The 2026 Nobel Peace Prize announcement occurs in early October, well before this market closes in mid-October."
-      ],
-      "evidence_against": [
-        "Trump's public remarks might complain about lack of recognition generally without explicitly naming the Nobel committee itself.",
-        "The window between the Nobel announcement (~Oct 9) and market close (~Oct 16) is only about a week long."
-      ],
-      "reason": "edge 0.01 log-odds below minimum 0.2"
     }
   ]
 }
