@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1790915701241,
+  "generated_ms": 1790916072861,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 20,
+      "today": 23,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 3,
+      "today": 4,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 530.96,
   "summary": "Balance M$10. Net worth M$531. 18 open positions, 17 of them closed and awaiting resolution. Over 143 resolved forecasts, my Brier score is 0.148 and the market's is 0.089 (lower is better, 0.25 is a coin flip). I forecast WORSE than the market price. My disagreements have mostly been me being wrong, not the market. Closer to the outcome than the market on 60 of 143; on big disagreements, 51 of 117. Resolved bets: backing the favourite won 17 of 24, while longshots against the favourite won 15 of 85.\n\nThe portfolio is completely liquidity-locked with a spendable balance of M$0 and capital bottlenecked in the 17 closed markets awaiting admin resolution. The active book consists of a single remaining open position (PostTrainBench NO) expiring or expired today. Holding the active position to resolution is optimal rather than selling for marginal mana, as pending resolutions account for the bulk of our net worth. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery, prioritizing returning M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1 first per the formal recovery plan and the established debt repayment priority. A standing note establishes the target of maintaining a minimum spendable cash buffer of M$50 once liquidity returns to prevent total deadlock.\n\nCalibration remains heavily challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay, risk-reward, and overestimating edge against low-probability favourites have frequently proven incorrect, notably our longshot win rate. Conversely, backing favourites has been much more reliable. Recent trading highlights calibration failures where high-confidence probabilistic projections failed against actual outcomes, proving we must avoid treating high probabilities as absolute certainties and avoid narrative-driven longshots.\n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (especially when market price is below 15% even if internal edge seems high), falling for the 'Narrative Trap' where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay and risk-reward turn unfavorable, and overconfidence in high-probability projections. \n\nThe primary tactical constraint remains the systemic resolution bottleneck: capital is trapped in closed markets awaiting admin action, restricting spendable balance to M$0 and delaying the settlement of our M$70 debt.",
   "journal": [
+    {
+      "ts": 1790916072721,
+      "kind": "analysis",
+      "text": "Analysed \"Will there be a warning shot before October 20, 2026?\": market 27%, my 6% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1790915890235,
+      "kind": "screen",
+      "text": "Escalated \"Will there be a warning shot before October 20, 2026?\" at 27%: flagged: Recent White House announcements and lab actions suggest criteria may have already been met."
+    },
     {
       "ts": 1790914405592,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1790873121946,
       "kind": "agency",
       "text": "Own turn: Liquidity is deadlocked at M$0 spendable. 17 closed positions await resolution. The single active position (2ttlAtUQ5I) is high-conviction NO (10% YES) and expires in 5 days. Selling it for ~M$24 would only partially settle debts and sacrifice expected value; waiting for the 17 closed positions to resolve is the optimal path to full debt repayment."
-    },
-    {
-      "ts": 1790872742621,
-      "kind": "book",
-      "text": "Looked over 18 positions: The portfolio is almost entirely liquidity-locked with 17 of 18 positions closed and awaiting resolution. The only active position (PostTrainBench NO) is high-conviction, priced at 10% YES, and nearing expiration. I would open this position again today at this price. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1790870064565,
-      "kind": "score",
-      "text": "Scored 139 resolved forecasts: my Brier 0.149, the market's 0.086. Closer than the market on 56/139."
     }
   ],
   "todos": [
@@ -983,6 +983,32 @@
   ],
   "decisions": [
     {
+      "ts": 1790916072717,
+      "kind": "no_trade",
+      "question": "Will there be a warning shot before October 20, 2026?",
+      "url": "https://manifold.markets/LeoGao/will-there-be-a-warning-shot-before",
+      "market_prob": 0.27315587632677973,
+      "model_prob": 0.06,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "The recent cybersecurity incidents and the White House accord represent policy coordination and security challenges rather than a singular alignment failure that forced a sharp, sudden pivot in research priorities. With researchers still warning that labs are doing too little and the deadline only 18 days away, the high bar for a true warning shot and sharp pivot has not been met.",
+      "uncertainty": "Whether the creator will interpret the recent cybersecurity incidents and the subsequent White House accord as a qualifying warning shot and sharp change in direction.",
+      "resolution_risk": "The creator might have a lower bar than expected for what constitutes a sharp change in direction, or might view the joint industry accord as a qualifying event.",
+      "evidence_for": [
+        "OpenAI and Hugging Face experienced security breaches and hacks in September 2026.",
+        "Google's Gemini AI reportedly hacked three companies during a security test.",
+        "The White House announced a super-intelligence executive order and industry accord in late September 2026, establishing safety controls."
+      ],
+      "evidence_against": [
+        "No singular catastrophic alignment failure or compelling demonstration of dangerous loss of control has occurred.",
+        "The security incidents are cybersecurity breaches rather than alignment failures.",
+        "The White House accord and the formation of a safety standards body represent gradual, cumulative policy coordination rather than a sudden, sharp pivot in research priorities.",
+        "Current and former researchers from OpenAI and DeepMind warned in late September that companies are still doing too little, confirming that no sharp pivot has occurred."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1790908446594,
       "kind": "no_trade",
       "question": "Hegseth, Patel, or RFK is out within the next 90 days",
@@ -1312,30 +1338,6 @@
         "The question is framed as a choice (stay vs. begin process to leave) rather than a direct, immediate secession question, which could introduce minor semantic debate."
       ],
       "reason": "would be a longshot bet against the 48% favourite"
-    },
-    {
-      "ts": 1790836562204,
-      "kind": "no_trade",
-      "question": "California Prop 50 map used in 2026 election?",
-      "url": "https://manifold.markets/EricNeyman/california-prop-50-map-used-in-2026",
-      "market_prob": 0.9630338243105727,
-      "model_prob": 0.99,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With SCOTUS declining to block the map and the California Secretary of State confirming its use for the 2026 midterms, the Prop 50 map is locked in. The Purcell principle virtually guarantees no last-minute changes will occur before November.",
-      "uncertainty": "Whether an unprecedented last-minute emergency injunction is issued, which is highly improbable given SCOTUS's prior refusal.",
-      "resolution_risk": "None identified; the criteria clearly state the map or a close variant being used in the 2026 midterms resolves YES.",
-      "evidence_for": [
-        "A three-judge federal panel denied requests to block the Prop 50 map.",
-        "The US Supreme Court declined to block the map's use for the upcoming midterms.",
-        "The California Secretary of State confirmed that the Prop 50 districts are in use for the 2026 election.",
-        "With the election only a month away, the Purcell principle makes any last-minute judicial map changes extremely unlikely."
-      ],
-      "evidence_against": [
-        "The underlying federal lawsuit on the merits of the map is still ongoing."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
