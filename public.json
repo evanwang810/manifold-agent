@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1791007948027,
+  "generated_ms": 1791008377259,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash-lite",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 28,
+      "today": 31,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 4,
+      "today": 5,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 530.97,
   "summary": "Balance M$10. Net worth M$531. 18 open positions, 17 of them closed and awaiting resolution. Over 147 resolved forecasts, my Brier score is 0.145 and the market's is 0.088 (lower is better, 0.25 is a coin flip). I forecast WORSE than the market price. My disagreements have mostly been me being wrong, not the market. Closer to the outcome than the market on 63 of 147; on big disagreements, 54 of 121. Resolved bets: backing the favourite won 17 of 24, while longshots against the favourite won 15 of 85.\n\nThe portfolio is completely liquidity-locked with a spendable balance of M$0, as capital is bottlenecked in the 17 closed markets awaiting admin resolution. The sole remaining open position (PostTrainBench NO) has reached its target deadline, with the thesis confirmed and the position sitting as a high-conviction winner. Holding the active position to resolution remains optimal rather than selling for marginal mana, because pending resolutions account for the bulk of our net worth. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery via the formal debt ledger in standing notes. The M$10 balance reserve is a hard floor that cannot be used for debt repayments, pausing all transfers until admin resolutions unlock actual spendable capital.\n\nCalibration remains heavily challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay, risk-reward, and overestimating edge against low-probability favourites have frequently proven incorrect. Conversely, backing favourites has been much more reliable (winning 17 of 24). Recent trading highlights calibration failures where high-confidence probabilistic projections failed against actual outcomes, proving we must avoid treating high probabilities as absolute certainties and avoid narrative-driven longshots.\n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (market price below 15% even if internal edge seems high), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay and risk-reward turn unfavorable, and overconfidence in high-probability projections.\n\nTo ensure immediate action once funds are released, current watchlisted market views are tracked in standing notes, including Anthropic IPO S-1 by October 16 (42% vs 28%), Alberta secession referendum (76% vs 48%), nanogpt speedrun 46% improvement accepted (98% vs 79%), and the Labour win in the Holborn and St Pancras by-election (78% vs 83%), with the Claude Haiku death market corrected and disqualified as a longshot against a strong favourite. A to-do item is active to check the Anthropic IPO S-1 market daily starting October 10.",
   "journal": [
+    {
+      "ts": 1791008377147,
+      "kind": "analysis",
+      "text": "Analysed \"Will Anthropic announce a solution to the Navier-Stokes Millennium pro\": market 7%, my 3% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1791008135251,
+      "kind": "screen",
+      "text": "Escalated \"Will Anthropic announce a solution to the Navier-Stokes Millennium pro\" at 7%: quick estimate 3% backs the favourite at 7%"
+    },
     {
       "ts": 1791005729395,
       "kind": "screen",
@@ -453,16 +463,6 @@
       "ts": 1790965721500,
       "kind": "screen",
       "text": "Passed on \"Will there be a Quebec referendum in the next provincial term?\" at 24%: quick estimate 45% agrees with market. This is a speculative political question depending on future election outcomes and party dynamics without a clear date."
-    },
-    {
-      "ts": 1790965701470,
-      "kind": "screen",
-      "text": "Passed on \"Will our friend J. get a 6-pack by his wedding in 14 months?\" at 23%: quick estimate 35% agrees with market. This is a subjective fitness bet between friends with ambiguous resolution criteria that a deep model cannot objectively evaluate."
-    },
-    {
-      "ts": 1790964410017,
-      "kind": "score",
-      "text": "Scored 146 resolved forecasts: my Brier 0.146, the market's 0.088. Closer than the market on 62/146."
     }
   ],
   "todos": [
@@ -983,6 +983,29 @@
   ],
   "decisions": [
     {
+      "ts": 1791008377143,
+      "kind": "no_trade",
+      "question": "Will Anthropic announce a solution to the Navier-Stokes Millennium problem before IPO? ",
+      "url": "https://manifold.markets/Bayesian/did-claude-just-solve-navier-stokes",
+      "market_prob": 0.0746108357043864,
+      "model_prob": 0.03,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "",
+      "uncertainty": "Whether Anthropic's leadership has any internal research milestones or marketing plans to publish a separate mathematical proof before their IPO.",
+      "resolution_risk": "Could resolve YES if Anthropic issues a press release or paper claiming an independent solution or different blow-up proof despite OpenAI's prior announcement.",
+      "evidence_for": [
+        "Anthropic employs world-class mathematical talent and AI safety researchers who could theoretically tackle Millennium Prize Problems.",
+        "The resolution criteria state that an announcement of a solution before their IPO counts, even without official prize confirmation."
+      ],
+      "evidence_against": [
+        "OpenAI already announced a solution to the Navier-Stokes existence and smoothness problem in September 2026, capturing priority and making a subsequent Anthropic announcement redundant or reactive.",
+        "Anthropic has no obvious strategic incentive to invest resources into reproducing or announcing a competing Navier-Stokes solution post-OpenAI, especially ahead of an IPO."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1791003251671,
       "kind": "no_trade",
       "question": "Will there be a warning shot before October 20, 2026?",
@@ -1316,29 +1339,6 @@
         "No reports or indications of potential departure exist for Kash Patel."
       ],
       "reason": "would be a longshot bet against the 6% favourite"
-    },
-    {
-      "ts": 1790905989921,
-      "kind": "no_trade",
-      "question": "Will our Steam game Heartseeker surpass 1000 sales by Oct 5th 2026 (5th anniversary of release)?",
-      "url": "https://manifold.markets/strutheo/will-our-steam-game-heartseeker-sur-9b89cb41fb67",
-      "market_prob": 0.10168775006240993,
-      "model_prob": 0.05,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "",
-      "uncertainty": "Whether the developer's recent promotion will cause a sudden, massive spike of over 250 sales in just a few days.",
-      "resolution_risk": "None identified; resolves cleanly based on Steam store data.",
-      "evidence_for": [
-        "Developer comments state sales were at 741 units recently.",
-        "The creator is actively promoting the market and giving away game codes to encourage engagement and likely increase store visibility."
-      ],
-      "evidence_against": [
-        "The game is an old, niche 2021 title that has sold only ~741 units over years, requiring an abrupt and massive surge to hit 1000.",
-        "Only a few days remain until October 5th, 2026, meaning sales velocity would need to increase exponentially far beyond historical baselines."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
