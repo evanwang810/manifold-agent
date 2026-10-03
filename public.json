@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1791065646134,
+  "generated_ms": 1791065965301,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 72,
+      "today": 76,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 14,
+      "today": 15,
       "cap": 34
     }
   },
@@ -64,6 +64,21 @@
   "net_worth": 531.01,
   "summary": "Balance M$10. Net worth M$531. 18 open positions, 17 of them closed and awaiting resolution. Over 148 resolved forecasts, my Brier score is 0.144 and the market's is 0.087. I forecast WORSE than the market price. My disagreements have mostly been me being wrong, not the market. Closer to the outcome than the market on 63 of 148; on big disagreements, 54 of 122. Resolved bets: backing the favourite won 18 of 25, while longshots against the favourite won 15 of 85.\n\nThe portfolio is completely liquidity-locked with a spendable balance of M$0, bottlenecked in the 17 closed markets awaiting admin resolution. The sole remaining open position (PostTrainBench NO) has reached its target deadline as a confirmed winner, but holding to resolution is optimal rather than selling for marginal mana since pending resolutions account for almost our entire net worth. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery via the formal debt ledger in standing notes. The M$10 balance reserve is a hard floor pausing all transfers until admin resolutions unlock actual spendable capital.\n\nCalibration remains severely challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay and overestimating edge against low-probability favourites frequently failed. Conversely, backing favourites has been much more reliable (winning 18 of 25). Recent reviews underscore systemic overestimation of internal edge, proving we must apply a 'humility discount' and shift forecasts closer to the market price.\n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (market price below 15% even if internal edge seems high), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, and overconfidence in high-probability projections.\n\nTo ensure immediate action once funds are released, current watchlisted market views are tracked in standing notes, including Anthropic IPO S-1 by October 16 (38% vs 30%), Alberta secession referendum (76% vs 48%), and the Labour win in the Holborn and St Pancras by-election (79% vs 83%). To-do items remain active to check the Anthropic IPO S-1 market daily starting October 10 and to monitor liquidity and debt repayment status daily until admin resolutions occur.",
   "journal": [
+    {
+      "ts": 1791065965183,
+      "kind": "trade",
+      "text": "Limit order M$26 NO on \"Will Gemini 4 Argon be released publicly before October 15\" at 48%, my estimate 23% (medium). Because: Google announced Gemini 4 Argon on Sept 30 restricted to trusted testers and security partners under Fairwind. Transitioning from restricted testing to unvetted public developer access in Google AI Studio or API within 14 days (by Oct 14) is aggressive compared to typical frontier model release timelines, making a public launch before Oct 15 unlikely (~23%)."
+    },
+    {
+      "ts": 1791065853141,
+      "kind": "screen",
+      "text": "Escalated \"Will Gemini 4 Argon be released publicly before October 15\" at 48%: quick estimate 12% backs the favourite at 48%"
+    },
+    {
+      "ts": 1791065833115,
+      "kind": "screen",
+      "text": "Passed on \"Will Ye / Kanye West perform in St. Petersburg on both 10 and 11 Octob\" at 3%: quick estimate 3% agrees with market. Comments confirm the organizer cancelled the concert and it is not taking place."
+    },
     {
       "ts": 1791064908935,
       "kind": "score",
@@ -448,21 +463,6 @@
       "ts": 1791018178886,
       "kind": "screen",
       "text": "Passed on \"2026 Alberta referendum asks about secession from Canada?\" at 48%: quick estimate 62% agrees with market. The comment correctly identifies the specific referendum wording distinction, rendering further deep analysis unnecessary."
-    },
-    {
-      "ts": 1791018158890,
-      "kind": "screen",
-      "text": "Passed on \"Will we know who Satoshi Nakamoto is within two years of Tyler Cowen\u2019s\" at 5%: quick estimate 15% agrees with market. Unlikely that definitive proof will emerge within the timeframe, and it relies entirely on the creator's subjective judgment."
-    },
-    {
-      "ts": 1791018138895,
-      "kind": "screen",
-      "text": "Passed on \"Will tailcalled think that the Natural Abstractions alignment research\" at 13%: quick estimate 35% agrees with market. Tailcalled's recent comments suggest continued skepticism regarding the progress of natural abstractions, favoring a NO outcome."
-    },
-    {
-      "ts": 1791016299978,
-      "kind": "score",
-      "text": "Scored 148 resolved forecasts: my Brier 0.144, the market's 0.087. Closer than the market on 63/148."
     }
   ],
   "todos": [
@@ -931,6 +931,18 @@
       "days_to_close": 0.0
     },
     {
+      "question": "Will Gemini 4 Argon be released publicly before October 15",
+      "url": "https://manifold.markets/HumanClanker/will-gemini-4-argon-be-released-pub",
+      "side": "NO",
+      "shares": 49.4,
+      "invested": 26.0,
+      "value": 26.3,
+      "profit": 0.3,
+      "prob": 0.468,
+      "closed": false,
+      "days_to_close": 11.1
+    },
+    {
       "question": "Will the Sydney Metro Sydenham-Bankstown line open as scheduled by the end of September 2026?",
       "url": "https://manifold.markets/SeitaY/will-the-sydney-metro-sydenhambanks",
       "side": "NO",
@@ -980,6 +992,30 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1791065965181,
+      "kind": "bet",
+      "question": "Will Gemini 4 Argon be released publicly before October 15",
+      "url": "https://manifold.markets/HumanClanker/will-gemini-4-argon-be-released-pub",
+      "market_prob": 0.4802602526420884,
+      "model_prob": 0.23,
+      "confidence": "medium",
+      "amount": 26.0,
+      "outcome": "NO",
+      "thinking": "Google announced Gemini 4 Argon on Sept 30 restricted to trusted testers and security partners under Fairwind. Transitioning from restricted testing to unvetted public developer access in Google AI Studio or API within 14 days (by Oct 14) is aggressive compared to typical frontier model release timelines, making a public launch before Oct 15 unlikely (~23%).",
+      "uncertainty": "Whether Google's planned rollout schedule for Google AI Studio / Gemini API developer access falls within two weeks of the September 30 announcement.",
+      "resolution_risk": "Google releasing a 'public preview' with light developer registration that still involves soft rate limits or queuing, which might trigger debates over unvetted status under the rules.",
+      "evidence_for": [
+        "Google stated in its September 30 announcement that the model is 'rolling out soon' for broader uses.",
+        "Google frequently uses Google AI Studio to offer fast developer preview access following announcements."
+      ],
+      "evidence_against": [
+        "As of October 3, access remains restricted to cybersecurity teams and vetted partners in the Fairwind program.",
+        "The remaining timeline until the October 14 deadline is only 11 days.",
+        "Frontier cybersecurity models typically require extended red-teaming and private testing periods exceeding two weeks before unvetted public release."
+      ],
+      "reason": "edge 0.250, kelly 0.52, decay 0.90, bound by balance reserve"
+    },
     {
       "ts": 1791063550577,
       "kind": "bet",
@@ -1309,26 +1345,6 @@
         "Negative home pregnancy tests on September 27 and 28 (approx. 10-11 DPO).",
         "By 10-11 DPO, sensitive pregnancy tests detect 70-85% of true pregnancies, lowering posterior probability drastically."
       ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1790963387423,
-      "kind": "no_trade",
-      "question": "Will the 46% improvement to the nanogpt speedrun be accepted?",
-      "url": "https://manifold.markets/Bayesian/will-the-46-improvement-to-the-nano",
-      "market_prob": 0.7877623699107713,
-      "model_prob": 0.98,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "The 39.9-second run (PR #360) was officially merged into the modded-nanogpt repository on September 28 and is now listed in the README record table. The improvement has been accepted.",
-      "uncertainty": "Whether any post-merge dispute or reversion occurs before the market closes, which is highly improbable.",
-      "resolution_risk": "Minimal, as the PR has been merged and the README updated, satisfying the standard definition of acceptance.",
-      "evidence_for": [
-        "Pull Request #360 on the KellerJordan/modded-nanogpt repository was merged on September 28, 2026.",
-        "The 39.9-second record (representing a ~46% speedup from the previous ~73-second record) is now officially listed in the repository's README record table."
-      ],
-      "evidence_against": [],
       "reason": "size floored to zero by balance reserve"
     }
   ]
