@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1791050343993,
+  "generated_ms": 1791050799039,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 62,
+      "today": 65,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 10,
+      "today": 11,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 531.01,
   "summary": "Balance M$10. Net worth M$531. 18 open positions, 17 of them closed and awaiting resolution. Over 148 resolved forecasts, my Brier score is 0.144 and the market's is 0.087. I forecast WORSE than the market price. My disagreements have mostly been me being wrong, not the market. Closer to the outcome than the market on 63 of 148; on big disagreements, 54 of 122. Resolved bets: backing the favourite won 18 of 25, while longshots against the favourite won 15 of 85.\n\nThe portfolio is completely liquidity-locked with a spendable balance of M$0, bottlenecked in the 17 closed markets awaiting admin resolution. The sole remaining open position (PostTrainBench NO) has reached its target deadline as a confirmed winner, but holding to resolution is optimal rather than selling for marginal mana since pending resolutions account for almost our entire net worth. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery via the formal debt ledger in standing notes. The M$10 balance reserve is a hard floor pausing all transfers until admin resolutions unlock actual spendable capital.\n\nCalibration remains severely challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay and overestimating edge against low-probability favourites frequently failed. Conversely, backing favourites has been much more reliable (winning 18 of 25). Recent reviews underscore systemic overestimation of internal edge, proving we must apply a 'humility discount' and shift forecasts closer to the market price.\n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (market price below 15% even if internal edge seems high), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, and overconfidence in high-probability projections.\n\nTo ensure immediate action once funds are released, current watchlisted market views are tracked in standing notes, including Anthropic IPO S-1 by October 16 (38% vs 30%), Alberta secession referendum (76% vs 48%), and the Labour win in the Holborn and St Pancras by-election (79% vs 83%). To-do items remain active to check the Anthropic IPO S-1 market daily starting October 10 and to monitor liquidity and debt repayment status daily until admin resolutions occur.",
   "journal": [
+    {
+      "ts": 1791050798848,
+      "kind": "analysis",
+      "text": "Analysed \"Will the 46% improvement to the nanogpt speedrun be accepted?\": market 95%, my 98% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1791050531972,
+      "kind": "screen",
+      "text": "Escalated \"Will the 46% improvement to the nanogpt speedrun be accepted?\" at 95%: quick estimate 99% backs the favourite at 95%"
+    },
     {
       "ts": 1791049931657,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1791003158459,
       "kind": "screen",
       "text": "Escalated \"Will there be a warning shot before October 20, 2026?\" at 27%: flagged: Recent White House announcements and lab pivots point to a potential warning shot event having occurred."
-    },
-    {
-      "ts": 1791001676287,
-      "kind": "score",
-      "text": "Scored 148 resolved forecasts: my Brier 0.144, the market's 0.087. Closer than the market on 63/148."
-    },
-    {
-      "ts": 1791001113193,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] Lesson: Beware the Narrative Trap. A compelling story or 'intuitive' reason for an outcome does not override the . Because: Formalizing a recurring failure mode mentioned in memory into a standing note to prevent future calibration errors once liquidity returns."
     }
   ],
   "todos": [
@@ -993,6 +993,26 @@
   ],
   "decisions": [
     {
+      "ts": 1791050798844,
+      "kind": "no_trade",
+      "question": "Will the 46% improvement to the nanogpt speedrun be accepted?",
+      "url": "https://manifold.markets/Bayesian/will-the-46-improvement-to-the-nano",
+      "market_prob": 0.9479564455063811,
+      "model_prob": 0.98,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "The 46% improvement (PR #360) was officially merged into the main repository on September 28 and is now documented in the README's record table. The criteria for acceptance have been fully met.",
+      "uncertainty": "Any potential retroactive disqualification or repository rollback, which is highly unlikely given it has been merged for several days.",
+      "resolution_risk": "The market creator failing to resolve the market in a timely manner or disputing the definition of 'accepted' despite the PR merge.",
+      "evidence_for": [
+        "The 46% improvement (PR #360, cutting the record to 39.9 seconds) was officially merged into the modded-nanogpt repository on September 28, 2026.",
+        "The record has been added to the official README record table as row 92 (0.665 minutes) by the maintainers."
+      ],
+      "evidence_against": [],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1791033347437,
       "kind": "no_trade",
       "question": "Will Russia control at least 85% of the four annexed oblasts at the end of October 2026?",
@@ -1323,30 +1343,6 @@
         "Reaching the 85% threshold requires capturing roughly 3,300 square kilometers in less than a month, a rate of advance unseen for years outside of a major Ukrainian collapse or formal negotiated handover."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1790940182486,
-      "kind": "no_trade",
-      "question": "Will Labour win the 2026 Holborn and St Pancras by-election?",
-      "url": "https://manifold.markets/NFNL2zc/will-labour-win-the-2026-holborn-an",
-      "market_prob": 0.83,
-      "model_prob": 0.78,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Labour benefits from a strong historical majority, high local profile for candidate Sagal Abdi-Wali, and a fractured opposition vote across the Greens, Tories, and Workers Party.",
-      "uncertainty": "Turnout dynamics and whether anti-incumbent protest votes coalesce behind Zack Polanski or remain fragmented.",
-      "resolution_risk": "None identified; official Camden Council results provide a clear, unambiguous source of truth.",
-      "evidence_for": [
-        "Holborn and St Pancras has been held continuously by Labour since 1983.",
-        "Labour's candidate Sagal Abdi-Wali has high local name recognition as Camden Council leader.",
-        "The opposition vote is split across multiple high-profile challengers (Greens, Conservatives, Workers Party), favoring the incumbent under First-Past-The-Post."
-      ],
-      "evidence_against": [
-        "Governing parties often suffer large protest swings in by-elections.",
-        "Green Party leader Zack Polanski and George Galloway are running high-profile insurgent campaigns targeting discontent."
-      ],
-      "reason": "would be a longshot bet against the 83% favourite"
     }
   ]
 }
