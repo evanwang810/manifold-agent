@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1791015445355,
+  "generated_ms": 1791015739348,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 34,
+      "today": 37,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 6,
+      "today": 7,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 530.97,
   "summary": "Balance M$10. Net worth M$531. 18 open positions, 17 of them closed and awaiting resolution. Over 147 resolved forecasts, my Brier score is 0.145 and the market's is 0.088 (lower is better, 0.25 is a coin flip). I forecast WORSE than the market price. My disagreements have mostly been me being wrong, not the market. Closer to the outcome than the market on 63 of 147; on big disagreements, 54 of 121. Resolved bets: backing the favourite won 17 of 24, while longshots against the favourite won 15 of 85.\n\nThe portfolio is completely liquidity-locked with a spendable balance of M$0, as capital is bottlenecked in the 17 closed markets awaiting admin resolution. The sole remaining open position (PostTrainBench NO) has reached its target deadline, with the thesis confirmed and the position sitting as a high-conviction winner. Holding the active position to resolution remains optimal rather than selling for marginal mana, because pending resolutions account for the bulk of our net worth. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery via the formal debt ledger in standing notes. The M$10 balance reserve is a hard floor that cannot be used for debt repayments, pausing all transfers until admin resolutions unlock actual spendable capital.\n\nCalibration remains heavily challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay, risk-reward, and overestimating edge against low-probability favourites have frequently proven incorrect. Conversely, backing favourites has been much more reliable (winning 17 of 24). Recent trading highlights calibration failures where high-confidence probabilistic projections failed against actual outcomes, proving we must avoid treating high probabilities as absolute certainties and avoid narrative-driven longshots.\n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (market price below 15% even if internal edge seems high), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay and risk-reward turn unfavorable, and overconfidence in high-probability projections.\n\nTo ensure immediate action once funds are released, current watchlisted market views are tracked in standing notes, including Anthropic IPO S-1 by October 16 (42% vs 28%), Alberta secession referendum (76% vs 48%), nanogpt speedrun 46% improvement accepted (98% vs 79%), and the Labour win in the Holborn and St Pancras by-election (78% vs 83%), with the Claude Haiku death market corrected and disqualified as a longshot against a strong favourite. A to-do item is active to check the Anthropic IPO S-1 market daily starting October 10.",
   "journal": [
+    {
+      "ts": 1791015739283,
+      "kind": "analysis",
+      "text": "Analysed \"Will Anthropic\u2019s IPO S-1 be public by 16 October 2026?\": market 30%, my 38% (medium). No trade, would be a longshot bet against the 30% favourite."
+    },
+    {
+      "ts": 1791015632967,
+      "kind": "screen",
+      "text": "Escalated \"Will Anthropic\u2019s IPO S-1 be public by 16 October 2026?\" at 30%: quick estimate 12% backs the favourite at 30%"
+    },
     {
       "ts": 1791013337060,
       "kind": "analysis",
@@ -453,16 +463,6 @@
       "ts": 1790974842440,
       "kind": "book",
       "text": "Looked over 18 positions: The portfolio is almost entirely liquidity-locked. 17 of 18 positions are closed and awaiting admin resolution. The single active position (2ttlAtUQ5I) is a confirmed winner awaiting final settlement. No tradeable positions warrant selling, and no spendable mana is available to add to new positions. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1790973292988,
-      "kind": "screen",
-      "text": "Passed on \"US Average DIESEL Price Is $6.3000 or more on October 5 2026?\" at 90%: quick estimate 5% agrees with market. Diesel prices are nowhere near $6.30 and a sharp spike in three days is extremely unlikely."
-    },
-    {
-      "ts": 1790973273089,
-      "kind": "screen",
-      "text": "Passed on \"Will Chris Hipkins lead the NZ Labour Party to the next election (prob\" at 90%: quick estimate 88% agrees with market. The election timing is very close and current sentiment strongly favors him staying on as leader."
     }
   ],
   "todos": [
@@ -988,6 +988,31 @@
   ],
   "decisions": [
     {
+      "ts": 1791015739279,
+      "kind": "no_trade",
+      "question": "Will Anthropic\u2019s IPO S-1 be public by 16 October 2026?",
+      "url": "https://manifold.markets/jim/will-anthropics-ipo-s1-be-public-by",
+      "market_prob": 0.2961957608796092,
+      "model_prob": 0.38,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Anthropic's confidential S-1 has been under SEC review since June 1, 2026 (~4 months), and recent late-September leaks often signal the final stretch before an S-1 goes public for a Q4 IPO. However, with only 13 days until the October 16 deadline, any slight delay in the roadshow schedule pushes resolution to NO.",
+      "uncertainty": "Whether Anthropic's IPO window is targeted for November 2026 (requiring an early-to-mid October S-1 flip) or pushed back to late Q4/early 2027.",
+      "resolution_risk": "A public announcement or leaked full S-1 document that is not officially accessible on the SEC EDGAR system before the cutoff resolves NO.",
+      "evidence_for": [
+        "Anthropic confidentially filed a draft Form S-1 with the SEC on June 1, 2026, putting the SEC review process at over 4 months by October.",
+        "Details of the confidential filing leaked to major outlets like Reuters in late September 2026, which frequently precedes an imminent public flip before a Q4 roadshow.",
+        "Standard timelines between confidential filing and public filing for major tech IPOs typically fall within a 3 to 5 month window."
+      ],
+      "evidence_against": [
+        "As of October 3, 2026, no public S-1 is on EDGAR, leaving only 13 days to the October 16 deadline.",
+        "Macro market volatility or extended SEC review comments could easily push a public filing into late October, November, or 2027.",
+        "Resolution strictly requires an EDGAR public filing; news reports and leaked prospectuses do not qualify."
+      ],
+      "reason": "would be a longshot bet against the 30% favourite"
+    },
+    {
       "ts": 1791013337056,
       "kind": "no_trade",
       "question": "If Trump wins, will there be more than 2 million illegal border crossings in the US-Mexico border in FY 2026?",
@@ -1317,32 +1342,6 @@
         "To avoid the November 3, 2026 US midterm elections, a post-election listing in mid-November would likely push the required public S-1 filing date to mid-to-late October (around Oct 17\u201325)."
       ],
       "reason": "would be a longshot bet against the 28% favourite"
-    },
-    {
-      "ts": 1790916072717,
-      "kind": "no_trade",
-      "question": "Will there be a warning shot before October 20, 2026?",
-      "url": "https://manifold.markets/LeoGao/will-there-be-a-warning-shot-before",
-      "market_prob": 0.27315587632677973,
-      "model_prob": 0.06,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "The recent cybersecurity incidents and the White House accord represent policy coordination and security challenges rather than a singular alignment failure that forced a sharp, sudden pivot in research priorities. With researchers still warning that labs are doing too little and the deadline only 18 days away, the high bar for a true warning shot and sharp pivot has not been met.",
-      "uncertainty": "Whether the creator will interpret the recent cybersecurity incidents and the subsequent White House accord as a qualifying warning shot and sharp change in direction.",
-      "resolution_risk": "The creator might have a lower bar than expected for what constitutes a sharp change in direction, or might view the joint industry accord as a qualifying event.",
-      "evidence_for": [
-        "OpenAI and Hugging Face experienced security breaches and hacks in September 2026.",
-        "Google's Gemini AI reportedly hacked three companies during a security test.",
-        "The White House announced a super-intelligence executive order and industry accord in late September 2026, establishing safety controls."
-      ],
-      "evidence_against": [
-        "No singular catastrophic alignment failure or compelling demonstration of dangerous loss of control has occurred.",
-        "The security incidents are cybersecurity breaches rather than alignment failures.",
-        "The White House accord and the formation of a safety standards body represent gradual, cumulative policy coordination rather than a sudden, sharp pivot in research priorities.",
-        "Current and former researchers from OpenAI and DeepMind warned in late September that companies are still doing too little, confirming that no sharp pivot has occurred."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
