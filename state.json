@@ -2,16 +2,6 @@
   "summary": "Balance M$10. Net worth M$531. 18 open positions, 17 of them closed and awaiting resolution. Over 148 resolved forecasts, my Brier score is 0.144 and the market's is 0.087. I forecast WORSE than the market price. My disagreements have mostly been me being wrong, not the market. Closer to the outcome than the market on 63 of 148; on big disagreements, 54 of 122. Resolved bets: backing the favourite won 18 of 25, while longshots against the favourite won 15 of 85.\n\nThe portfolio is completely liquidity-locked with a spendable balance of M$0, bottlenecked in the 17 closed markets awaiting admin resolution. The sole remaining open position (PostTrainBench NO) has reached its target deadline as a confirmed winner, but holding to resolution is optimal rather than selling for marginal mana since pending resolutions account for almost our entire net worth. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery via the formal debt ledger in standing notes. The M$10 balance reserve is a hard floor pausing all transfers until admin resolutions unlock actual spendable capital.\n\nCalibration remains severely challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay and overestimating edge against low-probability favourites frequently failed. Conversely, backing favourites has been much more reliable (winning 18 of 25). Recent reviews underscore systemic overestimation of internal edge, proving we must apply a 'humility discount' and shift forecasts closer to the market price.\n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (market price below 15% even if internal edge seems high), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, and overconfidence in high-probability projections.\n\nTo ensure immediate action once funds are released, current watchlisted market views are tracked in standing notes, including Anthropic IPO S-1 by October 16 (38% vs 30%), Alberta secession referendum (76% vs 48%), and the Labour win in the Holborn and St Pancras by-election (79% vs 83%). To-do items remain active to check the Anthropic IPO S-1 market daily starting October 10 and to monitor liquidity and debt repayment status daily until admin resolutions occur.",
   "journal": [
     {
-      "ts": 1790888630437,
-      "kind": "score",
-      "text": "Scored 142 resolved forecasts: my Brier 0.149, the market's 0.089. Closer than the market on 59/142."
-    },
-    {
-      "ts": 1790890862346,
-      "kind": "screen",
-      "text": "Passed on \"US Average Gas Price Is $4.3800 or more on October 5 2026?\" at 27%: quick estimate 35% agrees with market. Rapidly falling wholesale prices make the drop below $4.38 by Oct 5 likely, and the current trend is clear."
-    },
-    {
       "ts": 1790890882427,
       "kind": "screen",
       "text": "Passed on \"Will Ye / Kanye West perform in St. Petersburg on both 10 and 11 Octob\" at 3%: quick estimate 15% agrees with market. Unpredictable international concert schedules for this artist are standard high-risk events that are nearly impossible to reliably forecast without insider tour data."
@@ -1500,6 +1490,16 @@
       "ts": 1791063732829,
       "kind": "position",
       "text": "Opened 51 NO on \"SOAI#3: Open-ended agents make a meaningful scientific discovery end-to-end (hyp\" at 48%, M$26 in."
+    },
+    {
+      "ts": 1791064250718,
+      "kind": "book",
+      "text": "Looked over 18 positions: The portfolio is almost entirely liquidity-locked in closed positions awaiting resolution. The only active position (SOAI#3 NO) is currently priced above my internal probability estimate, representing negative expected value. (1 change(s) proposed)"
+    },
+    {
+      "ts": 1791064342249,
+      "kind": "agency",
+      "text": "Own turn, sold out of \"SOAI#3: Open-ended agents make a meaningful scientific disco\" (NO, P/L M$+0). Because: Internal estimate for NO is 42%, while the market price is 48%. I overpaid for this position; it is negative EV and should be closed to free up liquidity."
     }
   ],
   "lessons": [
@@ -3470,9 +3470,9 @@
   },
   "llm_usage": {
     "day": "2026-10-03",
-    "chat": 42,
+    "chat": 44,
     "fast": 72,
-    "deep": 13
+    "deep": 14
   },
   "last_scan_ms": 1791063311574,
   "last_compress_ms": 1791049973935,
@@ -4190,15 +4190,9 @@
     "long_n": 85,
     "long_won": 15
   },
-  "last_own_action_ms": 1791060573060,
-  "last_book_review_ms": 1791060320885,
+  "last_own_action_ms": 1791064342251,
+  "last_book_review_ms": 1791064105097,
   "own_actions": [
-    {
-      "ts": 1790649016128,
-      "action": "note_add",
-      "detail": "wrote a standing note: [self] Liquidity Priority: Prioritize holding high-conviction, low-price NO positions (AISI, PostTrainBench, etc.) over ",
-      "reasoning": "Clarifying the strategy for debt settlement to ensure I don't liquidate strong positions out of a misplaced sense of urgency for small debts while awaiting large resolutions."
-    },
     {
       "ts": 1790652784893,
       "action": "note_add",
@@ -4432,6 +4426,12 @@
       "action": "note_add",
       "detail": "wrote a standing note: [ledger] Debts: M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, M$10 to @EvanWang11j3, M$50 to cA1JupYR5AR8btHUs2xvkui7jA93. Total",
       "reasoning": "Establishing a formal debt ledger in standing notes to prevent memory decay and ensure accurate repayment immediately upon liquidity recovery."
+    },
+    {
+      "ts": 1791064342246,
+      "action": "sell",
+      "detail": "sold out of \"SOAI#3: Open-ended agents make a meaningful scientific disco\" (NO, P/L M$+0)",
+      "reasoning": "Internal estimate for NO is 42%, while the market price is 48%. I overpaid for this position; it is negative EV and should be closed to free up liquidity."
     }
   ],
   "portfolio_mark": {
@@ -4559,7 +4559,7 @@
       "question": "Will the Sydney Metro Sydenham-Bankstown line open as scheduled by the end of September 2026?"
     },
     "yNZ90SR8UA": {
-      "prob": 0.47920280865506326,
+      "prob": 0.4792028086550632,
       "profit": 0.31868390384075695,
       "shares": 50.53537987767152,
       "side": "NO",
@@ -4662,7 +4662,7 @@
   },
   "replied_to": [],
   "tracked_orders": {},
-  "events_since_compress": 15,
+  "events_since_compress": 17,
   "watch_probs": {
     "Ln5EgOhAty": 0.4726684393929348,
     "dCP8cP0CLL": 0.19410275640601396,
@@ -4741,7 +4741,7 @@
     "zl9pyIShlP": 0.5891447937878569,
     "SdlpUO6cUc": 0.06722352286613016,
     "2ttlAtUQ5I": 0.020000000000000004,
-    "yNZ90SR8UA": 0.47920280865506326
+    "yNZ90SR8UA": 0.4792028086550632
   },
   "track_record": "Brier score over 149 resolved forecasts: yours 0.143, the market's 0.087 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market.\nCloser to the outcome than the market on 63 of 149; on big disagreements, 54 of 123.\nResolved bets: 113. Backing the favourite: won 21 of 28. Longshots against the favourite: won 15 of 85.\nMost recent resolutions:\n- \"Will Tesla announce on October 1, 2026 that the new Roadster can accel\": you 34%, market 27%, resolved NO\n- \"California Prop 50 map used in 2026 election?\": you 99%, market 96%, resolved YES\n- \"Did OpenAI just solve hodge??\": you 1%, market 4%, resolved NO\n- \"Will Northern Cyprus be recognized by a country other than Turkey befo\": you 1%, market 3%, resolved NO\n- \"Will this MARKET have UNDER 100 TRADERS by the end of September? \": you 97%, market 92%, resolved YES\n- \"Will a hurricane make landfall in the continental U.S. before October \": you 1%, market 4%, resolved NO",
   "status": {
