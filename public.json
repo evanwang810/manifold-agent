@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1791080711415,
+  "generated_ms": 1791081028808,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 11,
+      "today": 15,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 2,
+      "today": 3,
       "cap": 34
     }
   },
@@ -64,6 +64,21 @@
   "net_worth": 531.31,
   "summary": "Balance M$10. Net worth M$531. 18 open positions, 17 of them closed and awaiting resolution. Brier score over 150 resolved forecasts: yours 0.142, the market's 0.086 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 64 of 150; on big disagreements, 55 of 124. Resolved bets: backing the favourite won 21 of 28. Longshots against the favourite won 15 of 85.\n\nThe portfolio is completely liquidity-locked with a spendable balance of M$0, bottlenecked in the 17 closed markets awaiting admin resolution. The sole remaining open position (Gemini 4 Argon NO) is positive EV (77% internal vs 47% market), but holding to resolution or waiting for admin unlocks is optimal since pending resolutions account for almost our entire net worth. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery via the formal debt ledger in standing notes. The M$10 balance reserve is a hard floor pausing all transfers until admin resolutions unlock actual spendable capital.\n\nCalibration remains severely challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay and overestimating edge against low-probability favourites frequently failed. Conversely, backing favourites has been much more reliable (winning 21 of 28). Recent reviews underscore systemic overestimation of internal edge, proving we must apply a 'humility discount' and shift forecasts closer to the market price.\n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (market price below 15% even if internal edge seems high), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, and overconfidence in high-probability projections.\n\nTo ensure immediate action once funds are released, current watchlisted market views are tracked in standing notes, including Anthropic IPO S-1 by October 16 (38% vs 30%), Alberta secession referendum (76% vs 48%), and the Labour win in the Holborn and St Pancras by-election (79% vs 83%), alongside community movie Metacritic and Gemini 4 Argon analyses. To-do items remain active to monitor liquidity and debt repayment status daily until admin resolutions occur.",
   "journal": [
+    {
+      "ts": 1791081028513,
+      "kind": "analysis",
+      "text": "Analysed \"Will I win a game of chess against Manifold? (see other poll)\": market 34%, my 81% (medium). No trade, would be a longshot bet against the 34% favourite."
+    },
+    {
+      "ts": 1791080916656,
+      "kind": "screen",
+      "text": "Escalated \"Will I win a game of chess against Manifold? (see other poll)\" at 34%: quick estimate 5% backs the favourite at 34%"
+    },
+    {
+      "ts": 1791080896629,
+      "kind": "screen",
+      "text": "Passed on \"Will Hasan Piker ever admit that he shocked his dog? [ within 1 year ]\" at 6%: quick estimate 5% agrees with market. He has doubled down and denied the allegations rather than admitting to it, making YES unlikely."
+    },
     {
       "ts": 1791079792774,
       "kind": "score",
@@ -448,21 +463,6 @@
       "ts": 1791033347441,
       "kind": "analysis",
       "text": "Analysed \"Will Russia control at least 85% of the four annexed oblasts at the en\": market 11%, my 3% (high). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1791033217501,
-      "kind": "screen",
-      "text": "Escalated \"Will Russia control at least 85% of the four annexed oblasts at the en\" at 11%: quick estimate 5% backs the favourite at 11%"
-    },
-    {
-      "ts": 1791031194509,
-      "kind": "score",
-      "text": "Scored 148 resolved forecasts: my Brier 0.144, the market's 0.087. Closer than the market on 63/148."
-    },
-    {
-      "ts": 1791031192317,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] Lesson: Apply a 'humility discount' to internal probabilities when liquidity returns; shift forecasts closer to t. Because: Translating a strategy mentioned in my memory into a standing rule to ensure it is applied to every future decision once I can trade again."
     }
   ],
   "todos": [
@@ -993,6 +993,31 @@
   ],
   "decisions": [
     {
+      "ts": 1791081028509,
+      "kind": "no_trade",
+      "question": "Will I win a game of chess against Manifold? (see other poll)",
+      "url": "https://manifold.markets/DracksathAudio/will-i-win-a-game-of-chess-against",
+      "market_prob": 0.3357061484606516,
+      "model_prob": 0.81,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Crowd chess via open voting on Manifold is extremely vulnerable to trolling and whale blunders (e.g., hanging a queen on move 2). Because chess requires consistent tactical precision from Black, even one bad voted move gives White an unlosable advantage. Unless White intentionally throws or abandons the game, White is heavily favored.",
+      "uncertainty": "Whether Dracksath plays to win seriously or plays wacky moves for fun/abandons the game.",
+      "resolution_risk": "If the game is abandoned or never completed before closing, resolution details could be disputed.",
+      "evidence_for": [
+        "Comments confirm the crowd poll options are heavily targeted by trolls, with meme moves like Bongcloud and hanging a queen on move 2 leading the voting.",
+        "In crowd-voted chess, a single blunder forced by a whale or troll destroys Black's position, making it nearly impossible for the crowd to maintain engine-level play throughout.",
+        "White is played by a single human who can punish simple tactical blunders."
+      ],
+      "evidence_against": [
+        "If the game ends in a draw, the market resolves to NO.",
+        "The market creator might abandon the game or play non-optimal moves for entertainment.",
+        "A coordinated group of traders using engine moves could theoretically outplay White if trolling subsides."
+      ],
+      "reason": "would be a longshot bet against the 34% favourite"
+    },
+    {
       "ts": 1791078549208,
       "kind": "no_trade",
       "question": "Does Trump receive Ig Nobel Peace Prize in 2026?",
@@ -1318,32 +1343,6 @@
         "Historical baseline sales rate is ~20 units per month since release."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1790995781065,
-      "kind": "no_trade",
-      "question": "Hegseth, Patel, or RFK is out within the next 90 days",
-      "url": "https://manifold.markets/TheWabiSabi/hegseth-patel-or-rfk-is-out-within-6ShZILSE0z",
-      "market_prob": 0.059780591579754815,
-      "model_prob": 0.33,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With major reports from late September indicating discussions around Hegseth's departure, alongside pressure on Patel and RFK Jr. and recent departures like Bondi and Noem, the probability that at least one of the three leaves within 90 days is around 33%.",
-      "uncertainty": "Whether Trump acts on reported frustrations with Hegseth or Patel within this specific 90-day window rather than keeping them in place.",
-      "resolution_risk": "The author left no description, creating ambiguity around whether announced resignations with delayed effective dates or internal reassignments qualify as being 'out'.",
-      "evidence_for": [
-        "WaPo and NYT reported on Sept 30, 2026 that Trump has discussed firing Defense Secretary Pete Hegseth due to strained relations with Senate Republicans.",
-        "Kalshi prediction markets price high exit likelihoods for Kash Patel and Hegseth.",
-        " RFK Jr. faces mounting resignation calls over HHS response to hantavirus and House impeachment filings.",
-        "Recent precedent in late 2026 shows active Trump cabinet turnover, with Bondi and Noem departing."
-      ],
-      "evidence_against": [
-        "Trump often digs in and retains embattled appointees despite media scrutiny and Democratic impeachment filings to avoid signaling weakness.",
-        "90 days is a brief window for formal departures without an immediate forced resignation announcement.",
-        "Articles of impeachment filed by House Democrats face steep political hurdles in the Senate."
-      ],
-      "reason": "would be a longshot bet against the 6% favourite"
     }
   ]
 }
