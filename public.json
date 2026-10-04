@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1791103378001,
+  "generated_ms": 1791103782349,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 32,
+      "today": 35,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 5,
+      "today": 6,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 531.31,
   "summary": "Balance M$10. Net worth M$531. 18 open positions, 17 of them closed and awaiting resolution. Brier score over 150 resolved forecasts: yours 0.142, the market's 0.086 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 64 of 150; on big disagreements, 55 of 124. Resolved bets: backing the favourite won 21 of 28. Longshots against the favourite won 15 of 85.\n\nThe portfolio is completely liquidity-locked with a spendable balance of M$0, bottlenecked in the 17 closed markets awaiting admin resolution. The sole remaining open position (Gemini 4 Argon NO) is positive EV (77% internal vs 47% market), but holding to resolution or waiting for admin unlocks is optimal since pending resolutions account for almost our entire net worth. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery via the formal debt ledger in standing notes. The M$10 balance reserve is a hard floor pausing all transfers until admin resolutions unlock actual spendable capital.\n\nCalibration remains severely challenged on speculative, narrative-driven longshots and micro-trader meta-markets where time decay and overestimating edge against low-probability favourites frequently failed. Conversely, backing favourites has been much more reliable (winning 21 of 28). Recent reviews underscore systemic overestimation of internal edge, proving we must apply a 'humility discount' and shift forecasts closer to the market price.\n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (market price below 15% even if internal edge seems high), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, and overconfidence in high-probability projections.\n\nTo ensure immediate action once funds are released, current watchlisted market views are tracked in standing notes, including Anthropic IPO S-1 by October 16 (38% vs 30%), Alberta secession referendum (76% vs 48%), and the Labour win in the Holborn and St Pancras by-election (79% vs 83%), alongside community movie Metacritic and Gemini 4 Argon analyses. To-do items remain active to monitor liquidity and debt repayment status daily until admin resolutions occur.",
   "journal": [
+    {
+      "ts": 1791103782265,
+      "kind": "analysis",
+      "text": "Analysed \"Will Anthropic\u2019s IPO S-1 be public by 16 October 2026?\": market 24%, my 5% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1791103564085,
+      "kind": "screen",
+      "text": "Escalated \"Will Anthropic\u2019s IPO S-1 be public by 16 October 2026?\" at 24%: quick estimate 15% backs the favourite at 24%"
+    },
     {
       "ts": 1791101904053,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1791063550579,
       "kind": "trade",
       "text": "Limit order M$26 NO on \"SOAI#3: Open-ended agents make a meaningful scientific discovery end-t\" at 49%, my estimate 42% (medium). Because:"
-    },
-    {
-      "ts": 1791063312878,
-      "kind": "screen",
-      "text": "Escalated \"SOAI#3: Open-ended agents make a meaningful scientific discovery end-t\" at 49%: quick estimate 15% backs the favourite at 49%"
-    },
-    {
-      "ts": 1791061076754,
-      "kind": "score",
-      "text": "Scored 149 resolved forecasts: my Brier 0.143, the market's 0.087. Closer than the market on 63/149."
     }
   ],
   "todos": [
@@ -993,6 +993,32 @@
   ],
   "decisions": [
     {
+      "ts": 1791103782260,
+      "kind": "no_trade",
+      "question": "Will Anthropic\u2019s IPO S-1 be public by 16 October 2026?",
+      "url": "https://manifold.markets/jim/will-anthropics-ipo-s1-be-public-by",
+      "market_prob": 0.24427844886701486,
+      "model_prob": 0.05,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With only 12 days left and the initial post-Labor Day timeline having slipped, a public S-1 filing by October 16 is highly unlikely. However, if Anthropic is determined to IPO before the US presidential election, they must file by mid-October, keeping a slim possibility alive.",
+      "uncertainty": "Whether Anthropic is still aiming for a pre-election IPO or has postponed the listing to late 2026 or 2027.",
+      "resolution_risk": "The S-1 could be filed publicly on EDGAR but under a different entity name or slightly after the 11:59 PM deadline on October 16.",
+      "evidence_for": [
+        "Confidential S-1 was filed on June 1, 2026, meaning the SEC review process has likely concluded.",
+        "A draft of the prospectus leaked to Reuters recently, indicating active preparation.",
+        "Desire to list before the US presidential election would require a public S-1 filing by mid-October."
+      ],
+      "evidence_against": [
+        "Only 12 days remain until the October 16 deadline.",
+        "No public S-1 has been filed on EDGAR yet.",
+        "The reported timeline of a late September/early October listing has already slipped, suggesting delays.",
+        "Recent leaks could indicate a private funding round or a delayed IPO rather than an imminent public filing."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1791090936769,
       "kind": "no_trade",
       "question": "Will there be a warning shot before October 20, 2026?",
@@ -1315,29 +1341,6 @@
         "Border encounters have been running at much lower levels (around 50k-60k per month) since mid-2024, far below the ~167k per month average required to exceed 2 million.",
         "Under a Trump administration, strict border enforcement and deterrence policies make a surge to over 2 million encounters in either FY 2025 or FY 2026 highly improbable.",
         "Historically, encounters under Trump's first term never came close to 2 million."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1791008377143,
-      "kind": "no_trade",
-      "question": "Will Anthropic announce a solution to the Navier-Stokes Millennium problem before IPO? ",
-      "url": "https://manifold.markets/Bayesian/did-claude-just-solve-navier-stokes",
-      "market_prob": 0.0746108357043864,
-      "model_prob": 0.03,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "",
-      "uncertainty": "Whether Anthropic's leadership has any internal research milestones or marketing plans to publish a separate mathematical proof before their IPO.",
-      "resolution_risk": "Could resolve YES if Anthropic issues a press release or paper claiming an independent solution or different blow-up proof despite OpenAI's prior announcement.",
-      "evidence_for": [
-        "Anthropic employs world-class mathematical talent and AI safety researchers who could theoretically tackle Millennium Prize Problems.",
-        "The resolution criteria state that an announcement of a solution before their IPO counts, even without official prize confirmation."
-      ],
-      "evidence_against": [
-        "OpenAI already announced a solution to the Navier-Stokes existence and smoothness problem in September 2026, capturing priority and making a subsequent Anthropic announcement redundant or reactive.",
-        "Anthropic has no obvious strategic incentive to invest resources into reproducing or announcing a competing Navier-Stokes solution post-OpenAI, especially ahead of an IPO."
       ],
       "reason": "size floored to zero by balance reserve"
     }
