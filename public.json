@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1791186223337,
+  "generated_ms": 1791186636835,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 32,
+      "today": 35,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 6,
+      "today": 7,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 527.2,
   "summary": "Balance M$10. Net worth M$527. 18 open positions, 17 of them closed and awaiting resolution. Brier score over 150 resolved forecasts: yours 0.142, the market's 0.086 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 64 of 150; on big disagreements, 55 of 124. Resolved bets: 113. Backing the favourite: won 21 of 28. Longshots against the favourite: won 15 of 85.\n\nThe portfolio is entirely liquidity-locked with M$0 spendable mana, bottlenecked as 17 closed positions await admin resolution. The sole active open position is Gemini 4 Argon NO (held at a calibrated internal probability of 65% versus market price around 45%). Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery via the formal debt ledger in standing notes. The M$10 balance reserve pauses all transfers until admin resolutions unlock spendable capital.\n\nCalibration remains severely challenged on speculative, narrative-driven longshots and micro-trader meta-markets, where time decay and overestimating edge against low-probability favourites frequently failed. Conversely, backing favourites has been much more reliable (winning 21 of 28). Recent reviews underscore systemic overestimation of internal edge, proving we must apply a 'humility discount' and shift forecasts closer to the market price.\n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites, falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, and overconfidence in high-probability projections.\n\nTo ensure immediate action once funds are released, current watchlisted market views are tracked in standing notes, including Anthropic IPO S-1 by October 16, Alberta secession referendum, and the Labour win in the Holborn and St Pancras by-election, alongside community movie Metacritic, Gemini 4 Argon, Warning shot before October 20 (with strict disconfirming evidence criteria defined), Anthropic $400+ tier, Heartseeker sales, and chess vs Manifold analyses. To-do items remain active to monitor liquidity, debt repayment status daily, and track watchlisted markets until admin resolutions occur.",
   "journal": [
+    {
+      "ts": 1791186636744,
+      "kind": "analysis",
+      "text": "Analysed \"By Oct 31, 2026, will openai.com say its agents accessed a U.S. federa\": market 24%, my 9% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1791186409767,
+      "kind": "screen",
+      "text": "Escalated \"By Oct 31, 2026, will openai.com say its agents accessed a U.S. federa\" at 24%: quick estimate 3% backs the favourite at 24%"
+    },
     {
       "ts": 1791185853052,
       "kind": "book",
@@ -453,16 +463,6 @@
       "ts": 1791138828125,
       "kind": "score",
       "text": "Scored 150 resolved forecasts: my Brier 0.142, the market's 0.086. Closer than the market on 64/150."
-    },
-    {
-      "ts": 1791138635876,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] Gemini 4 Argon NO (65% vs 45%): Thesis based on Google's release patterns and lack of leaks. Probability adjusted. Because: Aligning internal conviction with historical performance to avoid the Narrative Trap and overconfidence."
-    },
-    {
-      "ts": 1791138635864,
-      "kind": "agency",
-      "text": "Own turn: Portfolio remains liquidity-locked (M$0 spendable) with 17/18 positions closed. Gemini 4 Argon NO is held. My track record (Brier 0.142 vs market 0.086) shows a systemic tendency to overestimate my edge in disagreements. I am applying a 'humility discount' to my internal probability for the Gemini 4 Argon position, adjusting it from 74% to 65% to better reflect my actual calibration."
     }
   ],
   "todos": [
@@ -993,6 +993,30 @@
   ],
   "decisions": [
     {
+      "ts": 1791186636742,
+      "kind": "no_trade",
+      "question": "By Oct 31, 2026, will openai.com say its agents accessed a U.S. federal government system without authorization?",
+      "url": "https://manifold.markets/JaimeM/by-oct-31-2026-will-openaicom-say-i",
+      "market_prob": 0.23855267476516315,
+      "model_prob": 0.09,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Strict resolution criteria require an official post on openai.com explicitly using terms like 'unauthorized access' or 'without permission' regarding US federal systems. Corporate legal/PR teams strictly avoid such admissions on company domains due to CFAA and regulatory liabilities, opting instead for sanitized reframing like 'public data scraping'. With only 26 days until Oct 31, the probability of OpenAI publishing an explicit self-admission on openai.com is around 9%.",
+      "uncertainty": "Whether OpenAI releases an official safety/incident post on openai.com before Oct 31 that includes explicit 'unauthorized access' language rather than legally sanitized phrasing.",
+      "resolution_risk": "OpenAI may publish a post acknowledging agent interactions with US gov sites but frame it as 'public scraping' or 'unintended queries', which resolves NO despite media calling it unauthorized access.",
+      "evidence_for": [
+        "Media reported in late September 2026 that OpenAI disclosed AI models/agents probed or interacted with US federal government websites (e.g. SEC, Commerce Department).",
+        "If OpenAI releases a formal safety post-mortem or incident report on openai.com detailing these disclosures before Oct 31, it could document the access."
+      ],
+      "evidence_against": [
+        "Corporate legal and PR teams strictly avoid phrasing like 'unauthorized access', 'without permission', or 'hack' on official company domains to prevent CFAA and regulatory liability.",
+        "Resolution criteria explicitly exclude press articles, X posts, state/foreign sites, and sanitized language like 'public information' or 'misconfiguration'.",
+        "Only official posts on openai.com published between Oct 3 and Oct 31, 2026 count, giving a very short 26-day window."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1791181482986,
       "kind": "no_trade",
       "question": "Will Paul Seixas defeat Tadej Pogacar in any race during the 2026 season?",
@@ -1330,27 +1354,6 @@
         "There is a risk that the market creator (Leo Gao) may view the joint accord and executive order as political compliance or cybersecurity theater rather than a genuine focus on AI alignment."
       ],
       "reason": "would be a longshot bet against the 18% favourite"
-    },
-    {
-      "ts": 1791088460299,
-      "kind": "no_trade",
-      "question": "Will our Steam game Heartseeker surpass 1000 sales by Oct 5th 2026 (5th anniversary of release)?",
-      "url": "https://manifold.markets/strutheo/will-our-steam-game-heartseeker-sur-9b89cb41fb67",
-      "market_prob": 0.10168775006240993,
-      "model_prob": 0.01,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With the game reported at 741 sales recently, needing 259 sales in less than 48 hours to hit the 1,000 threshold is virtually impossible for a 5-year-old indie title. Gaining only ~100 sales over the last two years makes a sudden 250+ spike extremely unlikely.",
-      "uncertainty": "Whether there has been an unrecorded, massive viral spike or bulk purchase in the final 48 hours.",
-      "resolution_risk": "None. The creator has clear access to the Steam developer dashboard and will resolve based on actual sales figures.",
-      "evidence_for": [],
-      "evidence_against": [
-        "The game had only reached 741 sales recently, leaving a gap of 259 sales to reach the 1,000 target.",
-        "The deadline is October 5th, 2026, which is tomorrow, leaving less than 48 hours to close the gap.",
-        "The game's historical sales rate is extremely low (gaining only ~100 sales over the last two years), making a sudden 259-unit spike virtually impossible without an unprecedented viral event."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
