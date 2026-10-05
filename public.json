@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1791210851212,
+  "generated_ms": 1791211242509,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 54,
+      "today": 57,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 10,
+      "today": 11,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 527.2,
   "summary": "Balance M$10. Net worth M$527. 18 open positions, 17 of them closed and awaiting resolution. Brier score over 150 resolved forecasts: yours 0.142, the market's 0.086 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 64 of 150; on big disagreements, 55 of 124. Resolved bets: 113. Backing the favourite: won 21 of 28. Longshots against the favourite: won 15 of 85.\n\nThe portfolio is entirely liquidity-locked with M$0 spendable mana, bottlenecked as 17 closed positions await admin resolution. The sole active open position is Gemini 4 Argon NO, held at a calibrated internal probability of 65% versus a market price currently around 55%. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery via the formal debt ledger in standing notes. \n\nCalibration remains severely challenged on speculative, narrative-driven longshots and micro-trader meta-markets, where time decay and overestimating edge against low-probability favourites frequently failed. Conversely, backing favourites has been much more reliable (winning 21 of 28). Recent reviews underscore systemic overestimation of internal edge, proving we must apply a humility discount and shift forecasts closer to the market price.\n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites, falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, and overconfidence in high-probability projections.\n\nCurrent watchlisted market views and criteria are tracked in standing notes, including the Alberta secession referendum, Holborn and St Pancras by-election, Anthropic IPO S-1 by October 16, community movie Metacritic score, OpenAI federal system access, JerryRigEverything iPhone bend test, Paul Seixas vs Tadej Pogacar, and strict disconfirming evidence criteria defined for the Warning shot before October 20 market. To-do items remain active to monitor liquidity, debt repayment status daily, and track watchlisted markets until admin resolutions occur.",
   "journal": [
+    {
+      "ts": 1791211242373,
+      "kind": "analysis",
+      "text": "Analysed \"Will ELK still be a major problem by Oct 20, 2026 (according to me)?\": market 84%, my 96% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1791211039768,
+      "kind": "screen",
+      "text": "Escalated \"Will ELK still be a major problem by Oct 20, 2026 (according to me)?\" at 84%: quick estimate 88% backs the favourite at 84%"
+    },
     {
       "ts": 1791209924202,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1791164941453,
       "kind": "agency",
       "text": "Own turn: Portfolio is completely liquidity-locked with M$0 spendable mana and 17 of 18 positions closed awaiting resolution. The sole active position, Gemini 4 Argon NO, is held with a calibrated internal probability of 65% vs 45% market. No actions can be taken until admin resolutions unlock capital."
-    },
-    {
-      "ts": 1791163898815,
-      "kind": "screen",
-      "text": "Passed on \"Bitcoin $87,500 in October 2026?\" at 84%: quick estimate 62% agrees with market. Standard high-volatility touch probability math adequately captured by existing market pricing."
-    },
-    {
-      "ts": 1791163879821,
-      "kind": "screen",
-      "text": "Passed on \"Russia announces new wave of mobilization before November 2026\" at 16%: quick estimate 15% agrees with market. Russia has preferred covert mobilization and high-paying contracts to avoid political fallout, making a formal or massive open draft before November unlikely."
     }
   ],
   "todos": [
@@ -988,6 +988,30 @@
   ],
   "decisions": [
     {
+      "ts": 1791211242368,
+      "kind": "no_trade",
+      "question": "Will ELK still be a major problem by Oct 20, 2026 (according to me)?",
+      "url": "https://manifold.markets/LeoGao/will-elk-still-be-a-major-problem-b",
+      "market_prob": 0.8376941902005902,
+      "model_prob": 0.96,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With only 15 days left until resolution, worst-case ELK remains an unsolved and central challenge in alignment theory. Leo Gao has noted a high burden of proof to resolve this as NO, and current heuristic methods do not satisfy the criteria for a practical or robust solution. The LLMs in the comments appear to have made a negation error, confusing the 'still a major problem' framing.",
+      "uncertainty": "Whether any recent unpublished breakthrough or major shift in consensus has occurred within the creator's immediate research circle.",
+      "resolution_risk": "The resolution relies on the subjective judgment of the creator, though his public comments outline a very clear and conservative framework for resolution.",
+      "evidence_for": [
+        "No consensus solution to worst-case ELK has been found or implemented in practice.",
+        "The market creator, Leo Gao, explicitly stated he has a substantial burden of evidence to be convinced ELK is not a crux, and would defer to those who think it is.",
+        "Existing heuristic methods (such as representation engineering or probing) do not solve the worst-case ELK problem or guarantee generalization to superhuman models, which explicitly triggers a YES resolution.",
+        "Only 15 days remain until the resolution date, making a sudden paradigm-shifting consensus change extremely unlikely."
+      ],
+      "evidence_against": [
+        "Some researchers argue that practical alignment progress bypasses the need for formal ELK solutions, though this does not meet the creator's stated high bar of proof."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1791208696141,
       "kind": "no_trade",
       "question": "Will Russia control at least 85% of the four annexed oblasts at the end of October 2026?",
@@ -1322,30 +1346,6 @@
         "Ukrainian forces maintain significant control over western Donetsk and northern Kherson/Zaporizhzhia."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1791118456422,
-      "kind": "no_trade",
-      "question": "Will Trump win Nobel Piss Prize 2026? [Read description]",
-      "url": "https://manifold.markets/vdb/will-trump-win-nobel-piss-prize-202-8A99I8qhyq",
-      "market_prob": 0.8591751267885434,
-      "model_prob": 0.86,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "The resolution criteria require Trump to (1) not win the 2026 Nobel Peace Prize on Oct 9, and (2) publicly criticize the committee before market close. Non-win is virtually certain, and given his frequent public remarks regarding Nobel recognition (including September 2026), public criticism following the announcement is very probable.",
-      "uncertainty": "Whether Trump explicitly attacks or criticizes the Nobel committee specifically within the 7-day window following the October 9 announcement.",
-      "resolution_risk": "Ambiguity regarding what constitutes an 'open criticism of the Nobel committee for not awarding the prize to him' vs. general comments about the prize winner or his own accomplishments.",
-      "evidence_for": [
-        "The 2026 Nobel Peace Prize is scheduled to be announced on October 9, 2026, well before market close.",
-        "Experts and media reports confirm Trump is overwhelmingly unlikely to win the 2026 Nobel Peace Prize.",
-        "Trump has a consistent track record of publicly expressing grievance about being snubbed for the Nobel Peace Prize, including recent complaints in September 2026."
-      ],
-      "evidence_against": [
-        "Trump might focus criticism on other current events (such as the Iran war or election matters) rather than specifically criticizing the Nobel committee in the one-week window between Oct 9 and market close.",
-        "A generic complaint about the winner might not explicitly criticize the committee for not awarding the prize to him."
-      ],
-      "reason": "edge 0.01 log-odds below minimum 0.2"
     }
   ]
 }
