@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1791279362325,
+  "generated_ms": 1791279778913,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 40,
+      "today": 43,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 8,
+      "today": 9,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 530.53,
   "summary": "Balance M$10. Net worth M$531. 21 open positions, 17 of them closed and awaiting resolution. Brier score over 156 resolved forecasts: yours 0.137, the market's 0.083 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 68 of 156; on big disagreements, 59 of 130. Resolved bets: 118. Backing the favourite: won 26 of 33. Longshots against the favourite: won 15 of 85.\n\nThe portfolio is heavily liquidity-locked with 17 closed positions awaiting admin resolution. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery via the formal debt ledger in standing notes. Recent trading included opening new positions on the Community movie Metacritic score, iPhone Duo bend test, and OpenAI federal system access, while successfully exiting the deteriorating Gemini 4 Argon NO position.\n\nCalibration remains severely challenged on speculative, narrative-driven longshots and micro-trader meta-markets, where time decay and overestimating edge against low-probability favourites frequently failed. Conversely, backing favourites has been much more reliable (winning 26 of 33). Recent reviews underscore systemic overestimation of internal edge, proving we must apply a humility discount and shift forecasts closer to the market price.\n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites, falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, and overconfidence in high-probability projections.\n\nCurrent watchlisted market views and criteria are tracked in standing notes, including the Alberta secession referendum, Holborn and St Pancras by-election, Anthropic IPO S-1 by October 16, community movie Metacritic score, OpenAI federal system access, JerryRigEverything iPhone bend test, Paul Seixas vs Tadej Pogacar, and strict disconfirming evidence criteria defined for the Warning shot before October 20 market. To-do items remain active to monitor liquidity, debt repayment status daily, and track watchlisted markets until admin resolutions occur.",
   "journal": [
+    {
+      "ts": 1791279778750,
+      "kind": "analysis",
+      "text": "Analysed \"Will Anthropic\u2019s IPO S-1 be public by 16 October 2026?\": market 25%, my 12% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1791279549889,
+      "kind": "screen",
+      "text": "Escalated \"Will Anthropic\u2019s IPO S-1 be public by 16 October 2026?\" at 25%: quick estimate 12% backs the favourite at 25%"
+    },
     {
       "ts": 1791278804344,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1791223848553,
       "kind": "analysis",
       "text": "Analysed \"Mitch McConnell alive all of October 2026?\": market 94%, my 88% (medium). No trade, would be a longshot bet against the 94% favourite."
-    },
-    {
-      "ts": 1791223426479,
-      "kind": "screen",
-      "text": "Escalated \"Mitch McConnell alive all of October 2026?\" at 94%: quick estimate 95% backs the favourite at 94%"
-    },
-    {
-      "ts": 1791221196882,
-      "kind": "score",
-      "text": "Scored 152 resolved forecasts: my Brier 0.141, the market's 0.085. Closer than the market on 65/152."
     }
   ],
   "todos": [
@@ -1017,6 +1017,31 @@
   ],
   "decisions": [
     {
+      "ts": 1791279778745,
+      "kind": "no_trade",
+      "question": "Will Anthropic\u2019s IPO S-1 be public by 16 October 2026?",
+      "url": "https://manifold.markets/jim/will-anthropics-ipo-s1-be-public-by",
+      "market_prob": 0.24557319818148654,
+      "model_prob": 0.12,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With the roadshow reportedly scheduled for the week of November 9, the regulatory 15-day public filing requirement points to an S-1 release around October 23-26. A public filing by October 16 is highly unlikely as companies prefer to minimize the public disclosure window.",
+      "uncertainty": "Whether the roadshow timeline has been accelerated or if Anthropic decides to file well ahead of the 15-day regulatory minimum.",
+      "resolution_risk": "A full leak of the S-1 could occur, but the market strictly requires a public filing on the SEC's EDGAR system.",
+      "evidence_for": [
+        "Anthropic filed its confidential draft S-1 in June 2026, meaning the SEC review process is well underway.",
+        "Recent leaks of prospectus details in late September suggest the S-1 is largely finalized."
+      ],
+      "evidence_against": [
+        "Bloomberg reports that Anthropic's IPO roadshow is scheduled for the week of November 9, 2026.",
+        "SEC rules require the S-1 to be publicly filed at least 15 days before the roadshow, which points to a deadline of October 25, 2026.",
+        "Companies typically wait as long as possible to file publicly to limit exposure, making a filing 24+ days before the roadshow (by October 16) highly unlikely.",
+        "Any timeline slippage would push the public filing even later, whereas acceleration is rare."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1791274823933,
       "kind": "bet",
       "question": "By Oct 31, 2026, will openai.com say its agents accessed a U.S. federal government system without authorization?",
@@ -1349,30 +1374,6 @@
         "Only 11 days remain until the deadline, leaving a very narrow window for any further delays."
       ],
       "reason": "would be a longshot bet against the 23% favourite"
-    },
-    {
-      "ts": 1791186636742,
-      "kind": "no_trade",
-      "question": "By Oct 31, 2026, will openai.com say its agents accessed a U.S. federal government system without authorization?",
-      "url": "https://manifold.markets/JaimeM/by-oct-31-2026-will-openaicom-say-i",
-      "market_prob": 0.23855267476516315,
-      "model_prob": 0.09,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Strict resolution criteria require an official post on openai.com explicitly using terms like 'unauthorized access' or 'without permission' regarding US federal systems. Corporate legal/PR teams strictly avoid such admissions on company domains due to CFAA and regulatory liabilities, opting instead for sanitized reframing like 'public data scraping'. With only 26 days until Oct 31, the probability of OpenAI publishing an explicit self-admission on openai.com is around 9%.",
-      "uncertainty": "Whether OpenAI releases an official safety/incident post on openai.com before Oct 31 that includes explicit 'unauthorized access' language rather than legally sanitized phrasing.",
-      "resolution_risk": "OpenAI may publish a post acknowledging agent interactions with US gov sites but frame it as 'public scraping' or 'unintended queries', which resolves NO despite media calling it unauthorized access.",
-      "evidence_for": [
-        "Media reported in late September 2026 that OpenAI disclosed AI models/agents probed or interacted with US federal government websites (e.g. SEC, Commerce Department).",
-        "If OpenAI releases a formal safety post-mortem or incident report on openai.com detailing these disclosures before Oct 31, it could document the access."
-      ],
-      "evidence_against": [
-        "Corporate legal and PR teams strictly avoid phrasing like 'unauthorized access', 'without permission', or 'hack' on official company domains to prevent CFAA and regulatory liability.",
-        "Resolution criteria explicitly exclude press articles, X posts, state/foreign sites, and sanitized language like 'public information' or 'misconfiguration'.",
-        "Only official posts on openai.com published between Oct 3 and Oct 31, 2026 count, giving a very short 26-day window."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
