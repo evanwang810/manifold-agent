@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1791256816032,
+  "generated_ms": 1791257155739,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 10,
+      "today": 14,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 3,
+      "today": 4,
       "cap": 34
     }
   },
@@ -64,6 +64,21 @@
   "net_worth": 523.41,
   "summary": "Balance M$11. Net worth M$524. 19 open positions, 17 of them closed and awaiting resolution. Brier score over 153 resolved forecasts: yours 0.140, the market's 0.085 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 66 of 153; on big disagreements, 57 of 127. Resolved bets: 114. Backing the favourite: won 22 of 29. Longshots against the favourite: won 15 of 85.\n\nThe portfolio is heavily liquidity-locked with 17 closed positions awaiting admin resolution. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery via the formal debt ledger in standing notes. Recent trading included a successful small bet on a low-probability personal outcome, while the active Gemini 4 Argon NO position has faced upward market price movement against our thesis.\n\nCalibration remains severely challenged on speculative, narrative-driven longshots and micro-trader meta-markets, where time decay and overestimating edge against low-probability favourites frequently failed. Conversely, backing favourites has been much more reliable (winning 22 of 29). Recent reviews underscore systemic overestimation of internal edge, proving we must apply a humility discount and shift forecasts closer to the market price.\n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites, falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, and overconfidence in high-probability projections.\n\nCurrent watchlisted market views and criteria are tracked in standing notes, including the Alberta secession referendum, Holborn and St Pancras by-election, Anthropic IPO S-1 by October 16, community movie Metacritic score, OpenAI federal system access, JerryRigEverything iPhone bend test, Paul Seixas vs Tadej Pogacar, and strict disconfirming evidence criteria defined for the Warning shot before October 20 market. To-do items remain active to monitor liquidity, debt repayment status daily, and track watchlisted markets until admin resolutions occur.",
   "journal": [
+    {
+      "ts": 1791257155603,
+      "kind": "analysis",
+      "text": "Analysed \"Will I win a game of chess against Manifold? (see other poll)\": market 34%, my 81% (medium). No trade, would be a longshot bet against the 34% favourite."
+    },
+    {
+      "ts": 1791257022917,
+      "kind": "screen",
+      "text": "Escalated \"Will I win a game of chess against Manifold? (see other poll)\" at 34%: quick estimate 15% backs the favourite at 34%"
+    },
+    {
+      "ts": 1791257003043,
+      "kind": "screen",
+      "text": "Passed on \"Will Hasan Piker ever admit that he shocked his dog? [ within 1 year ]\" at 6%: quick estimate 5% agrees with market. Hasan has strongly and consistently denied the allegations, making a definitive public admission extremely unlikely."
+    },
     {
       "ts": 1791255707174,
       "kind": "score",
@@ -448,21 +463,6 @@
       "ts": 1791193790498,
       "kind": "screen",
       "text": "Escalated \"2026 Alberta referendum asks about secession from Canada?\" at 48%: quick estimate 5% backs the favourite at 48%"
-    },
-    {
-      "ts": 1791193771088,
-      "kind": "screen",
-      "text": "Passed on \"Will tailcalled think that the Natural Abstractions alignment research\" at 13%: quick estimate 25% agrees with market. Tailcalled's recent comments indicate skepticism and no major breakthroughs have occurred."
-    },
-    {
-      "ts": 1791193750606,
-      "kind": "screen",
-      "text": "Passed on \"Will we know who Satoshi Nakamoto is within two years of Tyler Cowen\u2019s\" at 4%: quick estimate 15% agrees with market. Unlikely that definitive proof will emerge given decades of anonymity, making this mostly speculation."
-    },
-    {
-      "ts": 1791193192905,
-      "kind": "book",
-      "text": "Looked over 18 positions: The portfolio is almost entirely liquidity-locked with 17 of 18 positions closed and awaiting resolution. The sole active position, Gemini 4 Argon NO, remains positive EV (65% internal vs 55% market) and the thesis is intact. I would open this position today, so no changes are warranted. (0 change(s) proposed)"
     }
   ],
   "todos": [
@@ -988,6 +988,32 @@
   ],
   "decisions": [
     {
+      "ts": 1791257155598,
+      "kind": "no_trade",
+      "question": "Will I win a game of chess against Manifold? (see other poll)",
+      "url": "https://manifold.markets/DracksathAudio/will-i-win-a-game-of-chess-against",
+      "market_prob": 0.3357061484606516,
+      "model_prob": 0.81,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "OP has a massive structural advantage playing as a single human against a crowd-voted opponent. Crowd chess on Manifold is highly vulnerable to coordination failure, intentional trolling, and financial sabotage from YES-holders who can easily buy up terrible moves. Since chess is highly sensitive to single blunders, the crowd is extremely likely to drop the game.",
+      "uncertainty": "The level of active sabotage on the crowd's move-selection market versus the presence of a dedicated whale defending correct engine moves.",
+      "resolution_risk": "If OP abandons the game or the market is resolved N/A due to inactivity.",
+      "evidence_for": [
+        "OP plays as a single human (White), avoiding coordination failure and trolling.",
+        "The crowd (Black) is highly vulnerable to trolling and intentional sabotage.",
+        "Traders who bet YES have a financial incentive to buy up terrible moves in the move-selection market.",
+        "Chess is highly unforgiving of single blunders, which are almost guaranteed to occur over a multi-move crowd-voted game."
+      ],
+      "evidence_against": [
+        "OP's chess skill is unknown and they could theoretically make game-losing blunders or play poorly.",
+        "A motivated whale could use a chess engine and out-bet trolls to keep Black on a perfect play path.",
+        "If the game ends in a draw, it resolves as NO."
+      ],
+      "reason": "would be a longshot bet against the 34% favourite"
+    },
+    {
       "ts": 1791254571526,
       "kind": "no_trade",
       "question": "Will Ye / Kanye West perform in St. Petersburg on both 10 and 11 October 2026, as planned?",
@@ -1318,27 +1344,6 @@
         "If serious traders coordinate and outvote troll options with top engine moves, Black could gain an advantage."
       ],
       "reason": "would be a longshot bet against the 34% favourite"
-    },
-    {
-      "ts": 1791166531695,
-      "kind": "no_trade",
-      "question": "Does Trump receive Ig Nobel Peace Prize in 2026?",
-      "url": "https://manifold.markets/NayutaIto/does-trump-receive-ig-nobel-peace-p",
-      "market_prob": 0.037652021047767686,
-      "model_prob": 0.01,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "The 2026 Ig Nobel Prizes were awarded on September 3, 2026. The Peace Prize went to Jaimie Arona Krems et al., and Donald Trump was not among the winners. This should resolve as NO.",
-      "uncertainty": "None, the event has already occurred and the official winners have been announced.",
-      "resolution_risk": "Extremely low, unless there is an unprecedented retroactive award or correction to the official list before the end of 2026.",
-      "evidence_for": [],
-      "evidence_against": [
-        "The 2026 Ig Nobel Prizes were awarded on September 3, 2026 in Zurich.",
-        "The 2026 Ig Nobel Peace Prize was awarded to Jaimie Arona Krems et al.",
-        "Donald Trump was not among the winners of any 2026 Ig Nobel Prize."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
