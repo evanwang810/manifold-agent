@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1791402958039,
+  "generated_ms": 1791403218691,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 79,
+      "today": 82,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 14,
+      "today": 15,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 538.6,
   "summary": "Balance M$10. Net worth M$539. 21 open positions, 16 of them closed and awaiting resolution. Brier score over 158 resolved forecasts: yours 0.136, the market's 0.082 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 69 of 158; on big disagreements, 60 of 132. Resolved bets: 119. Backing the favourite: won 27 of 34. Longshots against the favourite: won 15 of 85.\n\nThe portfolio is severely liquidity-locked with 16 closed positions awaiting admin resolution and M$0 spendable mana. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery via the formal debt ledger in standing notes. Five open positions remain active: OpenAI federal system access NO, pregnancy test NO, Community movie Metacritic NO, iPhone Duo bend NO, and one-arm chinup NO. All active positions are high-conviction NO bets where market prices exceed internal probability estimates.\n\nCalibration remains severely challenged on speculative, narrative-driven longshots and micro-trader meta-markets, where time decay and overestimating edge against low-probability favourites frequently failed. Conversely, backing favourites has been much more reliable (winning 27 of 34). Recent reviews underscore systemic overestimation of internal edge, proving we must apply a humility discount and shift forecasts closer to the market price. The \"Longshot Leak\" rule formalizes that when forecasting <20% against strong favourites, win rates collapse (15/85), requiring extreme caution.\n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (the Longshot Leak), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, and overconfidence in high-probability projections.\n\nCurrent watchlisted market views and criteria are tracked in standing notes, including the Alberta secession referendum, Holborn and St Pancras by-election, Anthropic IPO S-1 by October 16, community movie Metacritic score, OpenAI federal system access, JerryRigEverything iPhone bend test, Paul Seixas vs Tadej Pogacar, Russia 85% oblasts control, Belief State Geometry, and strict disconfirming evidence criteria defined for the Warning shot before October 20 market. To-do items remain active to monitor liquidity, debt repayment status daily, and track watchlisted markets (specifically the upcoming resolution of the Pregnancy test and Community movie markets) until admin resolutions occur.",
   "journal": [
+    {
+      "ts": 1791403218541,
+      "kind": "analysis",
+      "text": "Analysed \"Will Python add `{:}`, `{,}` and maybe `(,)` in or before 3.15 (Octobe\": market 4%, my 1% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1791403146056,
+      "kind": "screen",
+      "text": "Escalated \"Will Python add `{:}`, `{,}` and maybe `(,)` in or before 3.15 (Octobe\" at 4%: quick estimate 2% backs the favourite at 4%"
+    },
     {
       "ts": 1791400713291,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1791360882332,
       "kind": "analysis",
       "text": "Analysed \"Will JerryRigEveryting be able to bend the iPhone Duo in half with his\": market 46%, my 18% (medium). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1791360642059,
-      "kind": "screen",
-      "text": "Escalated \"Will JerryRigEveryting be able to bend the iPhone Duo in half with his\" at 46%: quick estimate 35% backs the favourite at 46%"
-    },
-    {
-      "ts": 1791360622251,
-      "kind": "screen",
-      "text": "Passed on \"Will MNX commission a new longform piece about AI by a Manifold user b\" at 60%: quick estimate 15% agrees with market. No comments or activity indicate a commission is imminent before the short November deadline."
     }
   ],
   "todos": [
@@ -1017,6 +1017,29 @@
   ],
   "decisions": [
     {
+      "ts": 1791403218537,
+      "kind": "no_trade",
+      "question": "Will Python add `{:}`, `{,}` and maybe `(,)` in or before 3.15 (October 2026)?",
+      "url": "https://manifold.markets/JeremiahEngland/will-python-add-and-maybe-in-or-bef",
+      "market_prob": 0.03885704608978786,
+      "model_prob": 0.01,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Python 3.15 feature development has concluded with no accepted PEP or implementation adding '{:}', '{,}', or '(,)' literals.",
+      "uncertainty": "Whether any obscure or alternative syntax PEP was quietly accepted and merged into 3.15 without broader publicity (extremely unlikely for language grammar changes).",
+      "resolution_risk": "Ambiguity around partial implementation or experimental grammar flags not enabled by default.",
+      "evidence_for": [
+        "Syntax proposals for empty set and empty dict literals have periodically been discussed on Discuss Python (such as PEP 802 exploring empty set display syntax)."
+      ],
+      "evidence_against": [
+        "No PEP proposing '{:}', '{,}', or '(,)' has been accepted or scheduled for inclusion in Python 3.14 or 3.15.",
+        "Python 3.15 feature freeze occurred earlier in 2026, and Python core developers / Steering Council have historically resisted adding alternative empty collection literals when `set()` and `{}` / `dict()` suffice.",
+        "No core release documentation or alpha/beta changelogs for 3.14/3.15 include these syntax additions."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1791395882811,
       "kind": "no_trade",
       "question": "Will Anthropic announce a $400+/month tier before November 2026?",
@@ -1340,31 +1363,6 @@
         "She had a positive LH test on September 17, placing ovulation around September 18.",
         "She tested negative on September 27 and September 28 (approximately 9-10 DPO).",
         "As of October 7, it is 19 days post-ovulation, and no positive test has been reported; her period would have arrived by now if she were not pregnant."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1791322899775,
-      "kind": "no_trade",
-      "question": "Will Anthropic release a new Claude Fable model before October 12, 2026?",
-      "url": "https://manifold.markets/winged_one/will-anthropic-release-a-new-claude-8sCn2czguE",
-      "market_prob": 0.25191272347257504,
-      "model_prob": 0.1,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With only 5 days left and no official teasers, a new Fable release is highly unlikely. Fable 5.1 is a frontier-class model that launched just over a month ago, and Anthropic's major September 22 release of Opus/Sonnet 5.5 makes another flagship launch this week improbable. Rumors and hidden-routing reports do not satisfy the resolution criteria.",
-      "uncertainty": "Whether Anthropic has a surprise, unannounced launch scheduled for the mid-week release windows (Tuesday/Thursday) before October 12.",
-      "resolution_risk": "None identified; the criteria strictly require an official release available to general users and exclude limited partner tests or leaks.",
-      "evidence_for": [
-        "Unverified rumors, leaks, and hidden-routing reports of Claude Fable 5.2 or 5.5 have circulated in late September and early October.",
-        "Anthropic has maintained a rapid release cadence recently, shipping Fable 5.1 on September 1 and Opus/Sonnet 5.5 on September 22."
-      ],
-      "evidence_against": [
-        "Only 5.5 days remain before the October 12, 2026 deadline.",
-        "There has been no official announcement, teaser, or documentation update from Anthropic regarding an imminent Fable release.",
-        "Fable 5.1 is a highly advanced model (with Opus 5.5 only matching its performance), and frontier-class models typically require longer than a 40-day cycle between versions.",
-        "The resolution criteria explicitly exclude rumors, leaks, and hidden-routing reports."
       ],
       "reason": "size floored to zero by balance reserve"
     }
