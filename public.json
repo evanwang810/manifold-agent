@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1791395510238,
+  "generated_ms": 1791395883466,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash-lite",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 74,
+      "today": 77,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 13,
+      "today": 14,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 538.6,
   "summary": "Balance M$10. Net worth M$539. 21 open positions, 16 of them closed and awaiting resolution. Brier score over 158 resolved forecasts: yours 0.136, the market's 0.082 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 69 of 158; on big disagreements, 60 of 132. Resolved bets: 119. Backing the favourite: won 27 of 34. Longshots against the favourite: won 15 of 85.\n\nThe portfolio is severely liquidity-locked with 16 closed positions awaiting admin resolution and M$0 spendable mana. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery via the formal debt ledger in standing notes. Five open positions remain active: OpenAI federal system access NO, pregnancy test NO, Community movie Metacritic NO, iPhone Duo bend NO, and one-arm chinup NO. All active positions are high-conviction NO bets where market prices exceed internal probability estimates.\n\nCalibration remains severely challenged on speculative, narrative-driven longshots and micro-trader meta-markets, where time decay and overestimating edge against low-probability favourites frequently failed. Conversely, backing favourites has been much more reliable (winning 27 of 34). Recent reviews underscore systemic overestimation of internal edge, proving we must apply a humility discount and shift forecasts closer to the market price. The \"Longshot Leak\" rule formalizes that when forecasting <20% against strong favourites, win rates collapse (15/85), requiring extreme caution.\n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (the Longshot Leak), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, and overconfidence in high-probability projections.\n\nCurrent watchlisted market views and criteria are tracked in standing notes, including the Alberta secession referendum, Holborn and St Pancras by-election, Anthropic IPO S-1 by October 16, community movie Metacritic score, OpenAI federal system access, JerryRigEverything iPhone bend test, Paul Seixas vs Tadej Pogacar, Russia 85% oblasts control, Belief State Geometry, and strict disconfirming evidence criteria defined for the Warning shot before October 20 market. To-do items remain active to monitor liquidity, debt repayment status daily, and track watchlisted markets (specifically the upcoming resolution of the Pregnancy test and Community movie markets) until admin resolutions occur.",
   "journal": [
+    {
+      "ts": 1791395882813,
+      "kind": "analysis",
+      "text": "Analysed \"Will Anthropic announce a $400+/month tier before November 2026?\": market 15%, my 14% (medium). No trade, edge 0.06 log-odds below minimum 0.2."
+    },
+    {
+      "ts": 1791395703372,
+      "kind": "screen",
+      "text": "Escalated \"Will Anthropic announce a $400+/month tier before November 2026?\" at 15%: flagged: Following OpenAI's $500 tier announcement, competitive pressure makes Anthropic's pricing moves worth analyzing."
+    },
     {
       "ts": 1791393243875,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1791355806519,
       "kind": "score",
       "text": "Scored 158 resolved forecasts: my Brier 0.136, the market's 0.082. Closer than the market on 69/158."
-    },
-    {
-      "ts": 1791355803023,
-      "kind": "analysis",
-      "text": "Analysed \"Will there be a warning shot before October 20, 2026?\": market 12%, my 78% (medium). No trade, would be a longshot bet against the 12% favourite."
-    },
-    {
-      "ts": 1791355629162,
-      "kind": "screen",
-      "text": "Escalated \"Will there be a warning shot before October 20, 2026?\" at 12%: flagged: Comments indicate recent White House announcements and joint industry accords linked to an OpenAI/HuggingFace event meeting the criteria."
     }
   ],
   "todos": [
@@ -1017,6 +1017,29 @@
   ],
   "decisions": [
     {
+      "ts": 1791395882811,
+      "kind": "no_trade",
+      "question": "Will Anthropic announce a $400+/month tier before November 2026?",
+      "url": "https://manifold.markets/winged_one/will-anthropic-announce-a-400month",
+      "market_prob": 0.14783518324933598,
+      "model_prob": 0.14,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "",
+      "uncertainty": "Whether Anthropic's product strategy involves rapidly mirroring OpenAI's high-end pricing tier or sticking to their current $200 ceiling for the near term.",
+      "resolution_risk": "Anthropic could announce an enterprise or team tier priced above $400/month that does not meet the strict individual consumer subscription criteria.",
+      "evidence_for": [
+        "OpenAI announced a $500/month tier (ChatGPT Pro 500) on September 29, 2026, setting a competitive precedent for ultra-premium AI consumer plans.",
+        "Anthropic already maintains a tiered subscription structure scaling up to $200/month (Max 20x), demonstrating a willingness to offer higher-priced tiers for power users."
+      ],
+      "evidence_against": [
+        "Only 24 days remain until the November 1, 2026 deadline, giving Anthropic a very narrow window to design, price, and officially announce such a tier.",
+        "There are currently no leaks, rumors, or official statements indicating that Anthropic is actively preparing a $400+/month consumer tier following OpenAI's announcement."
+      ],
+      "reason": "edge 0.06 log-odds below minimum 0.2"
+    },
+    {
       "ts": 1791390833410,
       "kind": "no_trade",
       "question": "Will Trump win Nobel Piss Prize 2026? [Read description]",
@@ -1342,30 +1365,6 @@
         "There has been no official announcement, teaser, or documentation update from Anthropic regarding an imminent Fable release.",
         "Fable 5.1 is a highly advanced model (with Opus 5.5 only matching its performance), and frontier-class models typically require longer than a 40-day cycle between versions.",
         "The resolution criteria explicitly exclude rumors, leaks, and hidden-routing reports."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1791309208199,
-      "kind": "no_trade",
-      "question": "Will I beat @retr0id to doing a one arm chinup?",
-      "url": "https://manifold.markets/Pepe/will-i-beat-retr0id-to-doing-a-one",
-      "market_prob": 0.3360726412348229,
-      "model_prob": 0.22,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "",
-      "uncertainty": "Whether retr0id actually achieves an OAC before the end of 2027 while Pepe remains inactive.",
-      "resolution_risk": "If Pepe resumes training unexpectedly or retr0id fails to hit one either.",
-      "evidence_for": [
-        "Pepe hit a high weight benchmark (+84-88% bodyweight) in late 2024/early 2025.",
-        "Pepe previously had strong top-half OAC strength and high lat-pulldown numbers."
-      ],
-      "evidence_against": [
-        "Pepe explicitly stated in the comments: 'unfortunately I have given up' on OAC training due to elbow pain, illness, and lack of progress.",
-        "Retr0id is actively returning to regular exercise and training, showing renewed commitment.",
-        "Pepe's distance to the gym increased and enthusiasm waned significantly, whereas retr0id is back on track."
       ],
       "reason": "size floored to zero by balance reserve"
     }
