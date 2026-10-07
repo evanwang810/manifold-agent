@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1791387912798,
+  "generated_ms": 1791388341579,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash-lite",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 62,
+      "today": 66,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 11,
+      "today": 12,
       "cap": 34
     }
   },
@@ -64,6 +64,21 @@
   "net_worth": 538.6,
   "summary": "Balance M$10. Net worth M$539. 21 open positions, 16 of them closed and awaiting resolution. Brier score over 158 resolved forecasts: yours 0.136, the market's 0.082 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 69 of 158; on big disagreements, 60 of 132. Resolved bets: 119. Backing the favourite: won 27 of 34. Longshots against the favourite: won 15 of 85.\n\nThe portfolio is severely liquidity-locked with 16 closed positions awaiting admin resolution and M$0 spendable mana. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery via the formal debt ledger in standing notes. Five open positions remain active: OpenAI federal system access NO, pregnancy test NO, Community movie Metacritic NO, iPhone Duo bend NO, and one-arm chinup NO. All active positions are high-conviction NO bets where market prices exceed internal probability estimates.\n\nCalibration remains severely challenged on speculative, narrative-driven longshots and micro-trader meta-markets, where time decay and overestimating edge against low-probability favourites frequently failed. Conversely, backing favourites has been much more reliable (winning 27 of 34). Recent reviews underscore systemic overestimation of internal edge, proving we must apply a humility discount and shift forecasts closer to the market price. The \"Longshot Leak\" rule formalizes that when forecasting <20% against strong favourites, win rates collapse (15/85), requiring extreme caution.\n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (the Longshot Leak), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, and overconfidence in high-probability projections.\n\nCurrent watchlisted market views and criteria are tracked in standing notes, including the Alberta secession referendum, Holborn and St Pancras by-election, Anthropic IPO S-1 by October 16, community movie Metacritic score, OpenAI federal system access, JerryRigEverything iPhone bend test, Paul Seixas vs Tadej Pogacar, Russia 85% oblasts control, and strict disconfirming evidence criteria defined for the Warning shot before October 20 market. To-do items remain active to monitor liquidity, debt repayment status daily, and track watchlisted markets (specifically the upcoming resolution of the Pregnancy test and Community movie markets) until admin resolutions occur.",
   "journal": [
+    {
+      "ts": 1791388341225,
+      "kind": "analysis",
+      "text": "Analysed \"Will Russia control at least 85% of the four annexed oblasts at the en\": market 11%, my 4% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1791388119644,
+      "kind": "screen",
+      "text": "Escalated \"Will Russia control at least 85% of the four annexed oblasts at the en\" at 11%: quick estimate 5% backs the favourite at 11%"
+    },
+    {
+      "ts": 1791388099661,
+      "kind": "screen",
+      "text": "Passed on \"Will Labour win the 2026 Holborn and St Pancras by-election?\" at 97%: quick estimate 3% agrees with market. Holborn and St Pancras is one of Labour's safest historical seats and a defeat is extremely unlikely."
+    },
     {
       "ts": 1791385839723,
       "kind": "score",
@@ -448,21 +463,6 @@
       "ts": 1791345561034,
       "kind": "analysis",
       "text": "Analysed \"Will I win a game of chess against Manifold? (see other poll)\": market 23%, my 65% (medium). No trade, would be a longshot bet against the 23% favourite."
-    },
-    {
-      "ts": 1791345379814,
-      "kind": "screen",
-      "text": "Escalated \"Will I win a game of chess against Manifold? (see other poll)\" at 23%: quick estimate 5% backs the favourite at 23%"
-    },
-    {
-      "ts": 1791345359594,
-      "kind": "screen",
-      "text": "Passed on \"Will Hasan Piker ever admit that he shocked his dog? [ within 1 year ]\" at 6%: quick estimate 5% agrees with market. He has continuously denied it and doubled down; an admission is extremely unlikely given his past statements."
-    },
-    {
-      "ts": 1791344805462,
-      "kind": "score",
-      "text": "Scored 158 resolved forecasts: my Brier 0.136, the market's 0.082. Closer than the market on 69/158."
     }
   ],
   "todos": [
@@ -1017,6 +1017,30 @@
   ],
   "decisions": [
     {
+      "ts": 1791388341223,
+      "kind": "no_trade",
+      "question": "Will Russia control at least 85% of the four annexed oblasts at the end of October 2026?",
+      "url": "https://manifold.markets/a_l_e_x/will-russia-control-at-least-85-of",
+      "market_prob": 0.11318485678131786,
+      "model_prob": 0.04,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Russia controls roughly 81-82% of the four oblasts. Reaching 85% requires an advance of ~3,300 km\u00b2 in one month\u2014nearly a full year's worth of recent front-line movement. Without a massive, unexpected collapse or signed handover, YES is practically impossible.",
+      "uncertainty": "Whether any sudden, large-scale negotiated territorial handover occurs before the close date.",
+      "resolution_risk": "None significant, as the criteria explicitly rely on specific mapping sources (Suriyakmaps, Poulet volant, Creamy caprice) and clear geographic percentages.",
+      "evidence_for": [
+        "Russia maintains slow, grinding tactical advances in portions of the Donetsk oblast.",
+        "The baseline control is already quite high, hovering around 80-82% across the four oblasts."
+      ],
+      "evidence_against": [
+        "Reaching the 85% threshold requires acquiring roughly 3,300 square kilometres of territory within a single month.",
+        "Recent monthly net gains across the entire front have been measured in tens of square kilometres, making the required advance practically impossible without a sudden, unheralded collapse or formal handover.",
+        "No credible operational shifts or major offensives suggest a breakthrough of this magnitude is imminent before October 31, 2026."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1791381063833,
       "kind": "no_trade",
       "question": "Will I think that the Belief State Geometry research program has achieved something important by October 20th, 2026?",
@@ -1344,29 +1368,6 @@
         "Frontlines remain largely static with minimal net territorial changes."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1791292674513,
-      "kind": "no_trade",
-      "question": "Will I think that the Belief State Geometry research program has achieved something important by October 20th, 2026?",
-      "url": "https://manifold.markets/tailcalled/will-i-think-that-the-belief-state",
-      "market_prob": 0.2086782599385957,
-      "model_prob": 0.42,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "",
-      "uncertainty": "How the creator and their advisors evaluate the recent LLM papers against the 'underparameterized regime' and 'real-world problems' criteria.",
-      "resolution_risk": "The creator might resolve the market NO based on a strict interpretation of 'useful results', discounting the LLM/HMM paper as too synthetic or not sufficiently practical.",
-      "evidence_for": [
-        "The publication of 'Large Language Models Develop Belief State Geometry In-Context' in late September 2026, which directly validates that LLMs represent belief state geometry.",
-        "The publication of 'Belief-State Engine: Augmenting LLMs for Principled...' in September 2026, showing active academic engagement with the program's core concepts."
-      ],
-      "evidence_against": [
-        "The recent papers focus on overparameterized LLMs and often use synthetic HMM data, which may not satisfy the creator's specific interest in the underparameterized regime or real-world problems.",
-        "Alignment researchers like John Wentworth or Steven Byrnes may remain skeptical of the practical alignment utility of these findings, influencing the creator's subjective evaluation."
-      ],
-      "reason": "would be a longshot bet against the 21% favourite"
     }
   ]
 }
