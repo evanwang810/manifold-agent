@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1791420061528,
+  "generated_ms": 1791420352486,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 0,
+      "today": 3,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 0,
+      "today": 1,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 538.6,
   "summary": "Balance M$10. Net worth M$539. 21 open positions, 16 of them closed and awaiting resolution. Brier score over 158 resolved forecasts: yours 0.136, the market's 0.082 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 69 of 158; on big disagreements, 60 of 132. Resolved bets: 119. Backing the favourite: won 27 of 34. Longshots against the favourite: won 15 of 85.\n\nThe portfolio is severely liquidity-locked with 16 closed positions awaiting admin resolution and M$0 spendable mana. Outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3) must be settled immediately upon liquidity recovery via the formal debt ledger in standing notes. Five open positions remain active: OpenAI federal system access NO, pregnancy test NO, Community movie Metacritic NO, iPhone Duo bend NO, and one-arm chinup NO. All active positions are high-conviction NO bets where market prices exceed internal probability estimates.\n\nCalibration remains severely challenged on speculative, narrative-driven longshots and micro-trader meta-markets, where time decay and overestimating edge against low-probability favourites frequently failed. Conversely, backing favourites has been much more reliable (winning 27 of 34). Recent reviews underscore systemic overestimation of internal edge, proving we must apply a humility discount and shift forecasts closer to the market price. The \"Longshot Leak\" rule formalizes that when forecasting <20% against strong favourites, win rates collapse (15/85), requiring extreme caution.\n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (the Longshot Leak), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, and overconfidence in high-probability projections.\n\nCurrent watchlisted market views and criteria are tracked in standing notes, including the Alberta secession referendum, Holborn and St Pancras by-election, Anthropic IPO S-1 by October 16, community movie Metacritic score, OpenAI federal system access, JerryRigEverything iPhone bend test, Paul Seixas vs Tadej Pogacar, Russia 85% oblasts control, Belief State Geometry, and strict disconfirming evidence criteria defined for the Warning shot before October 20 market. To-do items remain active to monitor liquidity, debt repayment status daily, and track watchlisted markets (specifically the upcoming resolution of the Pregnancy test and Community movie markets) until admin resolutions occur.",
   "journal": [
+    {
+      "ts": 1791420352176,
+      "kind": "analysis",
+      "text": "Analysed \"Will any game during Week 5 of the 2026 NFL Season end in a scorigami?\": market 23%, my 34% (medium). No trade, would be a longshot bet against the 23% favourite."
+    },
+    {
+      "ts": 1791420251283,
+      "kind": "screen",
+      "text": "Escalated \"Will any game during Week 5 of the 2026 NFL Season end in a scorigami?\" at 23%: quick estimate 12% backs the favourite at 23%"
+    },
     {
       "ts": 1791419132904,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1791370973442,
       "kind": "score",
       "text": "Scored 158 resolved forecasts: my Brier 0.136, the market's 0.082. Closer than the market on 69/158."
-    },
-    {
-      "ts": 1791370963902,
-      "kind": "analysis",
-      "text": "Analysed \"2026 Alberta referendum asks about secession from Canada?\": market 45%, my 72% (medium). No trade, would be a longshot bet against the 45% favourite."
-    },
-    {
-      "ts": 1791370776915,
-      "kind": "screen",
-      "text": "Escalated \"2026 Alberta referendum asks about secession from Canada?\" at 45%: quick estimate 5% backs the favourite at 45%"
     }
   ],
   "todos": [
@@ -1017,6 +1017,30 @@
   ],
   "decisions": [
     {
+      "ts": 1791420352172,
+      "kind": "no_trade",
+      "question": "Will any game during Week 5 of the 2026 NFL Season end in a scorigami?",
+      "url": "https://manifold.markets/TheDucksFan/will-any-game-during-week-5-of-the",
+      "market_prob": 0.23377378936778553,
+      "model_prob": 0.34,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Modern NFL seasons average approximately 6-9 scorigamis across 272 games (a per-game rate of ~2.5-3.2%). Across a 14-game Week 5 schedule, the binomial probability of at least one scorigami is roughly 30-36%. Estimating 34%.",
+      "uncertainty": "Whether any individual Week 5 matchup produces an outlier scoreline via safeties, defensive two-point conversions, or unusually lopsided blowouts.",
+      "resolution_risk": "Data discrepancy between the Scorigami tracker (@nflscorigami) and Pro-Football-Reference's game score archives.",
+      "evidence_for": [
+        "14 NFL games in Week 5 provide multiple independent opportunities for an unusual scoreline.",
+        "Modern NFL rules, kicking dynamics, and frequent two-point conversion attempts sustain an average of roughly 6 to 9 scorigamis per 272-game regular season."
+      ],
+      "evidence_against": [
+        "Per-game scorigami probability in the modern NFL is low, historically between 2.5% and 3.2%.",
+        "Over 1,070 unique final scorelines have already been recorded in NFL history, making realistic low-to-mid scoring combinations increasingly saturated.",
+        "A 14-game slate historically sees zero scorigamis roughly 65% to 68% of the time."
+      ],
+      "reason": "would be a longshot bet against the 23% favourite"
+    },
+    {
       "ts": 1791410563486,
       "kind": "no_trade",
       "question": "Will Anthropic release a new Claude Fable model before October 12, 2026?",
@@ -1343,30 +1367,6 @@
         "Filming schedules have faced persistent delays and conflicts, making a release before 2028 uncertain"
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1791345561030,
-      "kind": "no_trade",
-      "question": "Will I win a game of chess against Manifold? (see other poll)",
-      "url": "https://manifold.markets/DracksathAudio/will-i-win-a-game-of-chess-against",
-      "market_prob": 0.22625859584653288,
-      "model_prob": 0.65,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Crowd-sourced chess is heavily vulnerable to coordination failures and sabotage, giving the individual creator a distinct structural advantage.",
-      "uncertainty": "Whether the crowd voting mechanism falls into total chaos/sabotage or manages to run a cohesive chess engine.",
-      "resolution_risk": "Draws resolve as NO, so even if the crowd manages to defend perfectly, it counts as a win for the creator only if they win outright.",
-      "evidence_for": [
-        "Crowd voters can coordinate using chess engines to play high-level moves.",
-        "Creator motives and chess skill level are unverified, meaning a human opponent can blunder or play sub-optimally."
-      ],
-      "evidence_against": [
-        "Crowdsourced decision-making in chess games via voting is notoriously susceptible to sabotage, trolling, and deliberate submission of bad moves (e.g. bongcloud, hanging queens).",
-        "Coordination friction among random internet voters prevents deep tactical lines from being consistently selected.",
-        "The creator plays as White, giving them the initiative, whereas the crowd is constrained to react or suffer vote-splitting."
-      ],
-      "reason": "would be a longshot bet against the 23% favourite"
     }
   ]
 }
