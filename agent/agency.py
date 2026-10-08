@@ -100,6 +100,10 @@ class Agency:
         self.memory = memory
         self.budget = budget
         self.user_id = user_id
+        # Filled once per turn by _incoming_mana. Usernames, lowercased, to the mana
+        # of theirs still held: the ceiling on what a repayment may send.
+        self._owed: dict[str, float] = {}
+        self._ledger_text: str | None = None
 
     async def run(self, positions: list[Position], balance: float, net_worth: float) -> str:
         cfg = self.cfg.agency
@@ -285,6 +289,13 @@ class Agency:
             if not cfg.allow_send_mana or not action.recipient:
                 return None
             spendable = max(0.0, balance - self.cfg.risk.min_balance_reserve)
+            # Paying back someone who sent mana is not a risk the reserve exists to
+            # limit, and with the reserve applied the agent sat on the owner's M$10
+            # for weeks because its balance was M$10.35. Capped at what that person
+            # actually sent and has not had back, so this cannot be talked into a gift.
+            owed = self._owed.get(action.recipient.lower(), 0.0)
+            if owed >= MANAGRAM_MINIMUM:
+                spendable = max(spendable, min(owed, balance))
             if action.amount > spendable or action.amount < MANAGRAM_MINIMUM:
                 log.info("Own turn wanted to send M$%.0f, which is not affordable or "
                          "under the M$%d minimum", action.amount, MANAGRAM_MINIMUM)
@@ -452,21 +463,55 @@ class Agency:
         return "; ".join(done) if done else "reviewed the book, nothing survived review"
 
     async def _incoming_mana(self) -> str:
-        """Who has sent it mana lately, so it can pay people back."""
+        """Everyone it has exchanged mana with, by username, netted.
+
+        This used to list incoming transfers by raw user id and nothing it had sent.
+        The agent could not tell that an id was the same person as a username it
+        already knew, counted its owner twice, and had no way to see a repayment.
+        Computed from the API every time, so its own notes are never the ledger.
+        """
+        if self._ledger_text is not None:
+            return self._ledger_text
         try:
-            txns = await self.client.incoming_managrams(self.user_id, 0)
+            received, sent = await self.client.managrams(self.user_id)
         except ManifoldError:
-            return "(could not read transactions)"
-        if not txns:
-            return "(nobody has sent you any)"
+            self._ledger_text = "(could not read transactions)"
+            return self._ledger_text
+        if not received and not sent:
+            self._ledger_text = "(nobody has sent you any, and you have sent none)"
+            return self._ledger_text
+
+        names: dict[str, str] = {}
+        people: dict[str, dict[str, Any]] = {}
+        for txn, direction in [(t, "in") for t in received] + [(t, "out") for t in sent]:
+            other = txn.get("fromId") if direction == "in" else txn.get("toId")
+            if not other:
+                continue
+            if other not in names:
+                names[other] = await self.client.username_for(other)
+            row = people.setdefault(names[other], {"in": 0.0, "out": 0.0, "notes": []})
+            row[direction] += float(txn.get("amount") or 0)
+            message = str((txn.get("data") or {}).get("message") or "").strip()
+            if message:
+                arrow = "they sent" if direction == "in" else "you sent"
+                row["notes"].append(f"{arrow} M${float(txn.get('amount') or 0):.0f}: "
+                                    f"\"{message[:140]}\"")
+
         lines = []
-        for txn in sorted(txns, key=lambda t: int(t.get("createdTime") or 0))[-8:]:
-            message = (txn.get("data") or {}).get("message") or "(no message)"
+        for name, row in people.items():
+            net = row["in"] - row["out"]
+            self._owed[name.lower()] = max(0.0, net)
             lines.append(
-                f"- M${float(txn.get('amount') or 0):.0f} from user {txn.get('fromId')}: "
-                f"{str(message)[:160]}"
+                f"- @{name}: sent you M${row['in']:.0f}, you have returned "
+                f"M${row['out']:.0f}, so M${net:.0f} of theirs is still with you."
             )
-        return "\n".join(lines)
+            lines += [f"    {note}" for note in row["notes"][-3:]]
+        lines.append(
+            "Read the messages to tell a loan from a gift. A repayment to someone who "
+            "sent you mana may dip into the cash reserve; nothing else can."
+        )
+        self._ledger_text = "\n".join(lines)
+        return self._ledger_text
 
 
 def _render_positions(positions: list[Position]) -> str:

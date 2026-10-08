@@ -166,6 +166,7 @@ class Position:
     days_to_close: float
     creator_username: str = ""
     is_closed: bool = False
+    close_time: int | None = None
 
     @property
     def side(self) -> str:

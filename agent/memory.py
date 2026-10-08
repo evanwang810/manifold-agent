@@ -58,6 +58,9 @@ class Memory:
             if any(_near_duplicate(text, k["text"]) for k in kept):
                 continue
             kept.append({**lesson, "text": text})
+        own = [le for le in kept if le.get("source") == "self"]
+        for stale in own[:-MAX_SELF_NOTES] if len(own) > MAX_SELF_NOTES else []:
+            kept.remove(stale)
         state["lessons"] = kept
         return state
 
@@ -423,6 +426,9 @@ class Memory:
             return False
 
         lessons.append({"text": text, "source": source, "ts": int(time.time() * 1000)})
+        own = [i for i, le in enumerate(lessons) if le["source"] == "self"]
+        if len(own) > MAX_SELF_NOTES:
+            lessons.pop(own[0])
         if len(lessons) > self.cfg.max_lessons:
             # Owner instructions outlast everything else; otherwise oldest goes first.
             expendable = [i for i, le in enumerate(lessons) if le["source"] != "owner"]
@@ -632,6 +638,16 @@ class Memory:
 
 _TAG = re.compile(r"^\s*(\[[^\]]{1,20}\]\s*)+")
 _TIMESTAMP = re.compile(r"^\s*\d{4}-\d{2}-\d{2}([ T]\d{1,2}:\d{2}Z?)?\s*[:\-]?\s*")
+# Once dated notes were turned away it carried on under labels instead. These are
+# all things that change by the hour, which is what the status line is for.
+_STATUS_LABEL = re.compile(
+    r"^\s*(status|ledger|update|liquidity|portfolio|market views?|current state)\s*:\s*",
+    re.I,
+)
+# Of the standing notes, at most this many may be the agent's own. Owner notes are
+# never evicted; the agent's own rotate oldest-first, so a run of bad ones cannot
+# quietly take every slot the way they did twice.
+MAX_SELF_NOTES = 6
 # Journal kinds that are too frequent to be worth reading back in every prompt. They
 # still go on the public log; they just crowd out everything else in a 30-line tail.
 _NOISY = {"screen"}
@@ -650,8 +666,9 @@ def _clean_note(text: str) -> tuple[str, bool]:
     carry forward, and it belongs in the status line instead.
     """
     text = _TAG.sub("", " ".join(text.split()))
-    dated = bool(_TIMESTAMP.match(text))
-    return _TIMESTAMP.sub("", text).strip(), dated
+    dated = bool(_TIMESTAMP.match(text) or _STATUS_LABEL.match(text))
+    text = _STATUS_LABEL.sub("", _TIMESTAMP.sub("", text))
+    return text.strip(), dated
 
 
 def _near_duplicate(a: str, b: str) -> bool:

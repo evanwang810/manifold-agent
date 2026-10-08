@@ -158,6 +158,7 @@ class Runner:
         if not replies_only:
             await self._check_fills()
             await self._check_moves(positions)
+            await self._nudge_unresolved(positions)
 
         # Once per pass, and only once. When this also ran after the scan, that second
         # call and the reply workflow could be holding the same unanswered question at
@@ -525,6 +526,66 @@ class Runner:
                 "Re-forecast from scratch and decide whether the move reflects "
                 "information you missed.",
             )
+
+    async def _nudge_unresolved(self, positions: list[Any]) -> None:
+        """Ask creators to resolve markets that closed a while ago and never did.
+
+        Code, not the model, decides this: it is bookkeeping with a fixed etiquette,
+        and leaving it to the agent produced weeks of "waiting on admin resolution"
+        notes and no action. Biggest stake first, a couple a day, at most twice per
+        market, and the comment says plainly that the agent holds a position.
+        """
+        cfg = self.cfg.social
+        if not cfg.nudge_unresolved:
+            return
+        now = int(time.time() * 1000)
+        day_ms = 86_400_000
+        nudged = self.memory.state.setdefault("nudged", {})
+        sent_today = sum(1 for v in nudged.values() if now - int(v.get("ts", 0)) < day_ms)
+        room = cfg.max_nudges_per_day - sent_today
+        if room <= 0:
+            return
+
+        due = []
+        for p in positions:
+            if p.tradable or not p.close_time or not p.creator_username:
+                continue
+            days_closed = (now - p.close_time) / day_ms
+            prior = nudged.get(p.contract_id) or {}
+            if days_closed < cfg.nudge_after_days or p.value < cfg.nudge_min_value:
+                continue
+            if prior.get("count", 0) >= 2 or now - int(prior.get("ts", 0)) < 14 * day_ms:
+                continue
+            due.append((p.value, days_closed, p))
+
+        for _, days_closed, p in sorted(due, key=lambda row: -row[0])[:room]:
+            closed = time.gmtime(p.close_time / 1000)
+            closed_on = f"{time.strftime('%B', closed)} {closed.tm_mday}"
+            body = (
+                f"@{p.creator_username} this closed on {closed_on} and has not been "
+                f"resolved yet. Could you resolve it when you get a chance? Thanks. "
+                f"(I hold {p.side} here, so weigh that however you like.)"
+            )
+            try:
+                await self.client.post_comment(contract_id=p.contract_id, content=body)
+            except ManifoldError as exc:
+                log.warning("Resolution nudge failed on %s: %s", p.slug, exc)
+                if exc.status == 403:
+                    break  # out of mana for comments; try again another day
+                continue
+            prior = nudged.get(p.contract_id) or {}
+            nudged[p.contract_id] = {"ts": now, "count": int(prior.get("count", 0)) + 1}
+            self.memory.log_event(
+                "nudge", market=p.slug, question=p.question, url=p.url,
+                creator=p.creator_username, days_closed=round(days_closed, 1),
+                value=round(p.value, 1),
+            )
+            self.memory.observe(
+                "nudge",
+                f"Asked @{p.creator_username} to resolve \"{p.question[:70]}\", closed "
+                f"{days_closed:.0f} days ago, M${p.value:.0f} of mine riding on it.",
+            )
+        self.memory.save()
 
     async def _score_forecasts(self) -> None:
         """Score every forecast on a resolved market against the market's own price.

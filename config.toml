@@ -228,6 +228,13 @@ reply_to_comments = true
 reply_to_managrams = false
 # Questions asked through the website arrive as labelled GitHub issues.
 answer_github_issues = true
+# Ask creators to resolve markets that closed and never did, with a polite comment
+# that says the agent holds a position. M$1 each, biggest stake first, at most twice
+# per market and a couple a day. There is no API for requesting a resolution.
+nudge_unresolved = true
+nudge_after_days = 3
+nudge_min_value = 15
+max_nudges_per_day = 2
 # Minimum gap between replies in the same thread. Without it a busy thread gets one
 # reply per message, because every answer draws another comment which triggers another
 # answer. It only ever answers the newest message anyway, so waiting costs nothing but

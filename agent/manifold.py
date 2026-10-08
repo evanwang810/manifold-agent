@@ -185,6 +185,13 @@ class ManifoldClient:
             if has_yes < 1e-6 and has_no < 1e-6:
                 continue
             market = contracts.get(contract_id)
+            # The endpoint keeps returning a market after it resolves, shares and all,
+            # even though the payout has already landed in the balance. Left in, those
+            # rows were twelve ghost positions the agent read as "closed, awaiting
+            # resolution": it spent weeks waiting on a M$1,000 "pipeline" it had in
+            # fact already been paid and had already spent.
+            if market is not None and market.is_resolved:
+                continue
             out.append(
                 Position(
                     contract_id=contract_id,
@@ -198,6 +205,7 @@ class ManifoldClient:
                     last_prob=market.probability if market else 0.0,
                     days_to_close=market.days_to_close if market else float("inf"),
                     creator_username=market.creator_username if market else "",
+                    close_time=market.close_time if market else None,
                     is_closed=bool(market and (market.is_resolved or market.days_to_close <= 0)),
                 )
             )
@@ -209,6 +217,24 @@ class ManifoldClient:
             return await self._request("GET", f"/user/{username}", attempts=1)
         except ManifoldError:
             return None
+
+    async def managrams(self, user_id: str) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+        """(received, sent). Both directions, because a ledger built only from what
+        came in cannot know what has already been paid back."""
+        received = await self._request(
+            "GET", "/txns", params={"toId": user_id, "category": "MANA_PAYMENT", "limit": 100}
+        )
+        sent = await self._request(
+            "GET", "/txns", params={"fromId": user_id, "category": "MANA_PAYMENT", "limit": 100}
+        )
+        return list(received or []), list(sent or [])
+
+    async def username_for(self, user_id: str) -> str:
+        try:
+            data = await self._request("GET", f"/user/by-id/{user_id}", attempts=1)
+            return str((data or {}).get("username") or user_id)
+        except ManifoldError:
+            return user_id
 
     async def incoming_managrams(self, user_id: str, after_ms: int) -> list[dict[str, Any]]:
         data = await self._request(

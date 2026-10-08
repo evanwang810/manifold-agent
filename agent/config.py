@@ -198,6 +198,13 @@ class SocialConfig:
     # big enough to be worth the fee, and only once per market.
     comment_decisions: bool = True
     comment_min_amount: float = 50
+    # Ask the creator of a closed, unresolved market to resolve it. There is no API
+    # for requesting a resolution, and a polite comment is how it is done on Manifold
+    # anyway. Once, then once more a fortnight later, never more.
+    nudge_unresolved: bool = True
+    nudge_after_days: float = 3
+    nudge_min_value: float = 15     # the mana at stake has to be worth the M$1 comment
+    max_nudges_per_day: int = 2
     reply_to_comments: bool = True
     reply_to_managrams: bool = False
     answer_github_issues: bool = True
