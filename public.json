@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1791540994224,
+  "generated_ms": 1791541438468,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,15 +31,15 @@
   },
   "usage": {
     "fast": {
-      "today": 35,
+      "today": 38,
       "cap": 220
     },
     "chat": {
-      "today": 124,
+      "today": 125,
       "cap": 400
     },
     "deep": {
-      "today": 5,
+      "today": 6,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 537.2,
   "summary": "Balance M$8. Net worth M$538. 8 open positions, 3 of them closed and awaiting resolution. Brier score over 163 resolved forecasts: yours 0.135, the market's 0.080 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 71 of 163; on big disagreements, 62 of 136. Resolved bets: 119. Backing the favourite: won 27 of 34. Longshots against the favourite: won 15 of 85.\n\nThe portfolio is severely liquidity-locked with M$0 spendable mana, heavily dependent on the admin resolution of closed and awaiting-resolution positions to recover funds and settle outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3). The remaining active positions are high-conviction NO bets with intact theses and positive expected value relative to current market prices, so no positions are being sold.\n\nCalibration remains severely challenged on speculative, narrative-driven longshots and micro-trader meta-markets, where time decay and overestimating edge against low-probability favourites frequently failed. Conversely, backing favourites has been much more reliable, winning 27 of 34. The Longshot Leak rule formalizes that when forecasting <20% against strong favourites, win rates collapse (15 of 85), requiring extreme caution.\n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (the Longshot Leak), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, and overconfidence in high-probability projections.\n\nSpecific watchlisted market views and criteria are tracked in standing notes, including the Alberta secession referendum, Holborn and St Pancras by-election, Anthropic IPO S-1 by October 16, community movie Metacritic score, OpenAI federal system access, JerryRigEverything iPhone bend test, Paul Seixas vs Tadej Pogacar, Russia 85% oblasts control, Belief State Geometry, Python 3.15 syntax, Claude Fable release, warning shot before October 20, NFL Week 5 scorigami, Chess vs Manifold, Bitcoin $87,500, Serbia parliamentary election, and Trump Nobel Piss Prize. To-do items remain active to monitor liquidity, debt repayment status daily, and track watchlisted markets until admin resolutions occur.",
   "journal": [
+    {
+      "ts": 1791541438401,
+      "kind": "analysis",
+      "text": "Analysed \"If Trump wins, will there be more than 2 million illegal border crossi\": market 9%, my 3% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1791541247313,
+      "kind": "screen",
+      "text": "Escalated \"If Trump wins, will there be more than 2 million illegal border crossi\" at 9%: quick estimate 5% backs the favourite at 9%"
+    },
     {
       "ts": 1791539388958,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1791497343452,
       "kind": "score",
       "text": "Scored 162 resolved forecasts: my Brier 0.136, the market's 0.080. Closer than the market on 70/162."
-    },
-    {
-      "ts": 1791497053654,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] Market Views: Irkutsk plague reported outside Irkutsk NO (8% vs 15%). No trade: liquidity locked.. Because: Recording the analysis performed at 21:32Z to preserve the internal probability estimate and ensure consistency once liquidity is restored."
-    },
-    {
-      "ts": 1791497053649,
-      "kind": "agency",
-      "text": "Own turn: Portfolio remains liquidity-locked (M$0 spendable, 16/21 closed). Active positions are high-conviction NOs. Debt ledger (M$70) is ready. Recording Irkutsk plague analysis to standing notes to maintain the audit trail. Priority remains admin resolution of closed positions."
     }
   ],
   "todos": [
@@ -848,6 +848,29 @@
   ],
   "decisions": [
     {
+      "ts": 1791541438397,
+      "kind": "no_trade",
+      "question": "If Trump wins, will there be more than 2 million illegal border crossings in the US-Mexico border in FY 2026?",
+      "url": "https://manifold.markets/Shump/if-trump-wins-will-there-be-more-th",
+      "market_prob": 0.09053322663658912,
+      "model_prob": 0.03,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With border crossings plummeting significantly under the Trump administration (with monthly encounters far below the levels needed to reach 2 million annually), both FY 2025 and FY 2026 are extremely likely to remain well under the 2 million threshold. The typo in the description is a minor resolution risk but unlikely to change the outcome.",
+      "uncertainty": "Whether the creator resolves N/A or strictly by the typo in the description, though both years are well below the threshold.",
+      "resolution_risk": "The creator might resolve based on the description's 'FY 2025' instead of the title's 'FY 2026', but both are highly likely to resolve NO.",
+      "evidence_for": [
+        "The description contains a typo mentioning 'FY 2025' instead of 'FY 2026', which introduces slight ambiguity in resolution."
+      ],
+      "evidence_against": [
+        "Border crossings plummeted significantly after Trump took office and suspended asylum.",
+        "Monthly encounters in late FY 2026 are extremely low (e.g., ~8.9K in August 2026), making the annual total far below the 2 million threshold.",
+        "Even if the market resolves based on FY 2025 due to the description typo, that year is also expected to be well under 2 million."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1791538826713,
       "kind": "no_trade",
       "question": "\ud83c\uddf7\ud83c\uddf8 Will the SNS-led list win the most seats in Serbia\u2019s 2026 parliamentary election?",
@@ -1181,29 +1204,6 @@
         "Admitting unauthorized access to federal systems creates severe legal liability under the Computer Fraud and Abuse Act (CFAA); corporate legal counsel consistently frames such events as interactions with public endpoints, misconfigurations, or unintentional queries.",
         "Third-party reports, press coverage, social media posts, and foreign government incidents do not qualify.",
         "Only 23 days remain until the October 31 deadline."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1791450346004,
-      "kind": "no_trade",
-      "question": "\ud83c\uddf7\ud83c\uddf8 Will the SNS-led list win the most seats in Serbia\u2019s 2026 parliamentary election?",
-      "url": "https://manifold.markets/MAKER/-will-the-snsled-list-win-the-most",
-      "market_prob": 0.5709073866581276,
-      "model_prob": 0.95,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "The SNS-led list has dominated Serbian politics for over a decade, winning the most seats in six consecutive elections. Given their structural advantages, media control, and a fragmented opposition, they are virtually guaranteed to win the most seats again, even if they face a tighter race for an absolute majority.",
-      "uncertainty": "The potential for an unprecedented, fully unified opposition list to emerge and consolidate the anti-SNS vote, combined with extreme shifts in public sentiment.",
-      "resolution_risk": "None identified; the criteria strictly rely on the final official seat allocation by the Republic Electoral Commission (RIK).",
-      "evidence_for": [
-        "The SNS-led list has won the most seats in every Serbian parliamentary election since 2012 (2012, 2014, 2016, 2020, 2022, 2023).",
-        "The SNS maintains overwhelming control over state resources, media, and campaign infrastructure in Serbia.",
-        "The Serbian opposition remains highly fragmented, making it extremely unlikely for any other single list to outpoll the SNS-led coalition."
-      ],
-      "evidence_against": [
-        "Potential political instability or public backlash following recent political developments, such as reports of Vu\u010di\u0107's resignation."
       ],
       "reason": "size floored to zero by balance reserve"
     }
