@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1791563296644,
+  "generated_ms": 1791563780837,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,15 +31,15 @@
   },
   "usage": {
     "fast": {
-      "today": 63,
+      "today": 66,
       "cap": 220
     },
     "chat": {
-      "today": 201,
+      "today": 202,
       "cap": 400
     },
     "deep": {
-      "today": 11,
+      "today": 12,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 537.2,
   "summary": "Balance M$8. Net worth M$538. 8 open positions, 3 of them closed and awaiting resolution. Brier score over 163 resolved forecasts: yours 0.135, the market's 0.080 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 71 of 163; on big disagreements, 62 of 136. Resolved bets: 119. Backing the favourite: won 27 of 34. Longshots against the favourite: won 15 of 85.\n\nThe portfolio is severely liquidity-locked with M$0 spendable mana, heavily dependent on the admin resolution of closed and awaiting-resolution positions to recover funds and settle outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3). The remaining active positions are high-conviction NO bets with intact theses and positive expected value relative to current market prices, so no positions are being sold.\n\nCalibration remains severely challenged on speculative, narrative-driven longshots and micro-trader meta-markets, where time decay and overestimating edge against low-probability favourites frequently failed. Conversely, backing favourites has been much more reliable, winning 27 of 34. The Longshot Leak rule formalizes that when forecasting <20% against strong favourites, win rates collapse (15 of 85), requiring extreme caution.\n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (the Longshot Leak), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, and overconfidence in high-probability projections.\n\nSpecific watchlisted market views and criteria are tracked in standing notes, including the Alberta secession referendum, Holborn and St Pancras by-election, Anthropic IPO S-1 by October 16, community movie Metacritic score, OpenAI federal system access, JerryRigEverything iPhone bend test, Paul Seixas vs Tadej Pogacar, Russia 85% oblasts control, Belief State Geometry, Python 3.15 syntax, Claude Fable release, warning shot before October 20, NFL Week 5 scorigami, Chess vs Manifold, Bitcoin $87,500, Serbia parliamentary election, and Trump Nobel Piss Prize. To-do items remain active to monitor liquidity, debt repayment status daily, and track watchlisted markets until admin resolutions occur.",
   "journal": [
+    {
+      "ts": 1791563780772,
+      "kind": "analysis",
+      "text": "Analysed \"Will Russia control at least 85% of the four annexed oblasts at the en\": market 11%, my 2% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1791563604221,
+      "kind": "screen",
+      "text": "Escalated \"Will Russia control at least 85% of the four annexed oblasts at the en\" at 11%: quick estimate 5% backs the favourite at 11%"
+    },
     {
       "ts": 1791562203755,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1791516270432,
       "kind": "score",
       "text": "Scored 163 resolved forecasts: my Brier 0.135, the market's 0.080. Closer than the market on 71/163."
-    },
-    {
-      "ts": 1791516258208,
-      "kind": "analysis",
-      "text": "Analysed \"Will I get a positive pregnancy test in the next two weeks?\": market 12%, my 1% (high). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1791516191396,
-      "kind": "screen",
-      "text": "Escalated \"Will I get a positive pregnancy test in the next two weeks?\" at 12%: quick estimate 3% backs the favourite at 12%"
     }
   ],
   "todos": [
@@ -853,6 +853,29 @@
   ],
   "decisions": [
     {
+      "ts": 1791563780768,
+      "kind": "no_trade",
+      "question": "Will Russia control at least 85% of the four annexed oblasts at the end of October 2026?",
+      "url": "https://manifold.markets/a_l_e_x/will-russia-control-at-least-85-of",
+      "market_prob": 0.11318485678131786,
+      "model_prob": 0.02,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Russia currently holds ~81-82% of the four oblasts (~88,000-89,000 km\u00b2 out of 108,842 km\u00b2). Reaching 85.00% requires taking over 3,300 km\u00b2 in 22 days. Given net monthly frontline movements of 0 to 36 km\u00b2 in recent months, an advance of this scale by October 31 is near impossible without an immediate, total military collapse or signed handover.",
+      "uncertainty": "Whether an unprecedented structural collapse of Ukrainian lines or an abrupt diplomatic cessation of hostilities occurs in the next 22 days.",
+      "resolution_risk": "Disagreements or mapping delays among the primary mapper sources (Suriyakmaps, Poulet volant, Creamy caprice) at the end of October 2026.",
+      "evidence_for": [
+        "Russia controls nearly all of Luhansk and substantial portions of Donetsk, Zaporizhzhia, and Kherson, totaling roughly 81-82% of the combined area."
+      ],
+      "evidence_against": [
+        "Reaching 85.00% control requires capturing an additional ~3,300 to 4,000 km\u00b2 in under 23 days.",
+        "Frontline movement in September 2026 resulted in zero net territorial gain for Russia, and July 2026 net gain was only 36 km\u00b2.",
+        "A massive, sudden collapse of Ukrainian lines or a formal peace treaty transferring major territory before October 31, 2026 is extremely improbable in the timeframe."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1791556298555,
       "kind": "no_trade",
       "question": "Will I think that the Belief State Geometry research program has achieved something important by October 20th, 2026?",
@@ -1183,29 +1206,6 @@
         "No official announcements, leaks, or credible rumors suggest Anthropic is planning a $400+/month individual tier in the next 23 days.",
         "Anthropic's current highest individual tier is Claude Pro at $20/month; jumping directly to $400+/month is a massive pricing leap that they may not feel ready to make without a major model release.",
         "The remaining window before the November 1, 2026 deadline is extremely short (only 23.2 days)."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1791477836886,
-      "kind": "no_trade",
-      "question": "Will Trump win Nobel Piss Prize 2026? [Read description]",
-      "url": "https://manifold.markets/vdb/will-trump-win-nobel-piss-prize-202-8A99I8qhyq",
-      "market_prob": 0.7968902538481745,
-      "model_prob": 0.88,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Trump did not win the 2026 Nobel Peace Prize, and he has a long history of publicly complaining about the Nobel committee snubbing him. Even under a strict reading, the announcement of the 2026 prize is highly likely to trigger his usual grievances before the market closes.",
-      "uncertainty": "Whether the resolution source requires a specific mention of the 2026 prize or accepts general complaints about being snubbed by the Nobel committee.",
-      "resolution_risk": "The creator might interpret 'the prize' strictly as the 2026 iteration, whereas Trump's complaints are often generalized or reference past years.",
-      "evidence_for": [
-        "Trump did not win the 2026 Nobel Peace Prize.",
-        "Trump has a well-documented history of openly criticizing the Nobel committee for not awarding him the Peace Prize.",
-        "The Nobel Peace Prize 2026 was announced in early October, providing a fresh trigger for Trump to air his usual grievances before the market closes."
-      ],
-      "evidence_against": [
-        "If the creator strictly requires Trump to explicitly name the '2026' prize in his criticism rather than complaining about the Nobel committee generally, he might not use those exact words before the close."
       ],
       "reason": "size floored to zero by balance reserve"
     }
