@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1791585632800,
+  "generated_ms": 1791586206023,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemma-4-31b-it",
+      "active": "gemma-4-26b-a4b-it",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,15 +31,15 @@
   },
   "usage": {
     "fast": {
-      "today": 84,
+      "today": 87,
       "cap": 220
     },
     "chat": {
-      "today": 273,
+      "today": 274,
       "cap": 400
     },
     "deep": {
-      "today": 16,
+      "today": 17,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 537.2,
   "summary": "Balance M$8. Net worth M$537. 8 open positions, 3 of them closed and awaiting resolution. Brier score over 163 resolved forecasts: yours 0.135, the market's 0.080 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 71 of 163; on big disagreements, 62 of 136. Resolved bets: 119. Backing the favourite: won 27 of 34. Longshots against the favourite: won 15 of 85.\n\nThe portfolio is severely liquidity-locked with M$0 spendable mana, heavily dependent on the admin resolution of closed and awaiting-resolution positions to recover funds and settle outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3). The remaining active positions are high-conviction NO bets with intact theses and positive expected value relative to current market prices, so no positions are being sold.\n\nCalibration remains severely challenged on speculative, narrative-driven longshots and micro-trader meta-markets, where time decay and overestimating edge against low-probability favourites frequently failed. Conversely, backing favourites has been much more reliable, winning 27 of 34. The Longshot Leak rule formalizes that when forecasting <20% against strong favourites, win rates collapse (15 of 85), requiring extreme caution.\n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (the Longshot Leak), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, and overconfidence in high-probability projections.\n\nSpecific watchlisted market views and criteria are tracked in standing notes, including the Alberta secession referendum, Holborn and St Pancras by-election, Anthropic IPO S-1 by October 16, community movie Metacritic score, OpenAI federal system access, JerryRigEverything iPhone bend test, Paul Seixas vs Tadej Pogacar, Russia 85% oblasts control, Belief State Geometry, Python 3.15 syntax, Claude Fable release, warning shot before October 20, NFL Week 5 scorigami, Chess vs Manifold, Bitcoin $87,500, Serbia parliamentary election, and Trump Nobel Piss Prize. To-do items remain active to monitor liquidity, debt repayment status daily, and track watchlisted markets until admin resolutions occur.",
   "journal": [
+    {
+      "ts": 1791586205887,
+      "kind": "analysis",
+      "text": "Analysed \"Will Anthropic release a new Claude Fable model before October 12, 202\": market 5%, my 2% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1791586118696,
+      "kind": "screen",
+      "text": "Escalated \"Will Anthropic release a new Claude Fable model before October 12, 202\" at 5%: quick estimate 3% backs the favourite at 5%"
+    },
     {
       "ts": 1791584759624,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1791538710392,
       "kind": "agency",
       "text": "Own turn: Liquidity-locked (M$0 spendable). 3 positions closed/awaiting resolution. Active positions are high-conviction NOs. Returning M$10 test payment to @EvanWang11j3 as priority, as the current state shows M$0 returned. Recording recent market views to standing notes to ensure they are acted upon once mana is available."
-    },
-    {
-      "ts": 1791535746192,
-      "kind": "score",
-      "text": "Scored 163 resolved forecasts: my Brier 0.135, the market's 0.080. Closer than the market on 71/163."
-    },
-    {
-      "ts": 1791535234514,
-      "kind": "screen",
-      "text": "Passed on \"Will MNX commission a new longform piece about AI by a Manifold user b\" at 60%: quick estimate 20% agrees with market. Too little time left before November and no current indication of progress or a commissioned piece."
     }
   ],
   "todos": [
@@ -831,7 +831,7 @@
       "profit": 0.3,
       "prob": 0.121,
       "closed": false,
-      "days_to_close": 0.3
+      "days_to_close": 0.2
     },
     {
       "question": "By Oct 31, 2026, will openai.com say its agents accessed a U.S. federal government system without authorization?",
@@ -843,10 +843,32 @@
       "profit": 0.0,
       "prob": 0.165,
       "closed": false,
-      "days_to_close": 22.1
+      "days_to_close": 22.0
     }
   ],
   "decisions": [
+    {
+      "ts": 1791586205884,
+      "kind": "no_trade",
+      "question": "Will Anthropic release a new Claude Fable model before October 12, 2026?",
+      "url": "https://manifold.markets/winged_one/will-anthropic-release-a-new-claude-8sCn2czguE",
+      "market_prob": 0.05335563890887343,
+      "model_prob": 0.02,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With less than 3 days until October 12 and Haiku 5.5 having just launched on Oct 7, there are no SDK updates, model IDs, or docs suggesting an imminent Fable release. Investor event points to Oct 14 instead.",
+      "uncertainty": "Surprise announcement before October 12 without prior SDK commits or leaks.",
+      "resolution_risk": "Limited preview or partner access misconstrued as official general release.",
+      "evidence_for": [],
+      "evidence_against": [
+        "Haiku 5.5 was released October 7, 2026 with no mention of Fable updates.",
+        "No model IDs or SDK documentation for a Fable successor have appeared.",
+        "Anthropic investor event is scheduled for October 14, after the deadline.",
+        "Anthropic rarely releases new models on weekends."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1791583596453,
       "kind": "no_trade",
@@ -1173,28 +1195,6 @@
         "There is a small risk of the creator abandoning the game or losing on time, which might resolve as NO."
       ],
       "reason": "would be a longshot bet against the 21% favourite"
-    },
-    {
-      "ts": 1791516258204,
-      "kind": "no_trade",
-      "question": "Will I get a positive pregnancy test in the next two weeks?",
-      "url": "https://manifold.markets/abcde/will-i-get-a-positive-pregnancy-tes-zEEl6pCAPc",
-      "market_prob": 0.12065042816397524,
-      "model_prob": 0.01,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With negative tests at 10-11 DPO, no partner contact after September 18th, and the creator's comments about planning future markets for when she successfully gets pregnant, this cycle is clearly negative.",
-      "uncertainty": "None, the cycle is complete and she is not pregnant.",
-      "resolution_risk": "None identified.",
-      "evidence_for": [],
-      "evidence_against": [
-        "Negative pregnancy tests on September 27th and 28th (10-11 DPO).",
-        "No partner contact after September 18th as husband left on a trip on the 19th.",
-        "Creator's comment on October 1st about making a market for 'when I will successfully get pregnant' strongly implies she is not pregnant this cycle.",
-        "Today is October 9th, three weeks after ovulation, with no positive test reported."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
