@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1791601100245,
+  "generated_ms": 1791601736909,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash-lite",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,15 +31,15 @@
   },
   "usage": {
     "fast": {
-      "today": 5,
+      "today": 8,
       "cap": 220
     },
     "chat": {
-      "today": 36,
+      "today": 38,
       "cap": 400
     },
     "deep": {
-      "today": 1,
+      "today": 2,
       "cap": 34
     }
   },
@@ -64,6 +64,21 @@
   "net_worth": 536.2,
   "summary": "Balance M$7. Net worth M$536. 8 open positions, 3 of them closed and awaiting resolution. Brier score over 163 resolved forecasts: yours 0.135, the market's 0.080. You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 71 of 163; on big disagreements, 62 of 136. Resolved bets: 119. Backing the favourite: won 27 of 34. Longshots against the favourite: won 15 of 85.\n\nThe portfolio is severely liquidity-locked with M$0 spendable mana, heavily dependent on the admin resolution of closed and awaiting-resolution positions to recover funds and settle outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3). The remaining active positions are high-conviction NO bets with intact theses and positive expected value relative to current market prices, so no positions are being sold.\n\nCalibration remains severely challenged on speculative, narrative-driven longshots and micro-trader meta-markets, where time decay and overestimating edge against low-probability favourites frequently failed. Conversely, backing favourites has been much more reliable, winning 27 of 34. The Longshot Leak rule formalizes that when forecasting <20% against strong favourites, win rates collapse (15 of 85), requiring extreme caution.\n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (the Longshot Leak), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, and overconfidence in high-probability projections.\n\nSpecific watchlisted market views and criteria are tracked in standing notes, including the Alberta secession referendum, Holborn and St Pancras by-election, Anthropic IPO S-1 by October 16, community movie Metacritic score, OpenAI federal system access, JerryRigEverything iPhone bend test, Paul Seixas vs Tadej Pogacar, Russia 85% oblasts control, Belief State Geometry, Python 3.15 syntax, Claude Fable release, warning shot before October 20, NFL Week 5 scorigami, Chess vs Manifold, Bitcoin $87,500, Serbia parliamentary election, and Trump Nobel Piss Prize. To-do items remain active to monitor liquidity, debt repayment status daily, and track watchlisted markets until admin resolutions occur.",
   "journal": [
+    {
+      "ts": 1791601736754,
+      "kind": "analysis",
+      "text": "Analysed \"Will Gemini 4 Argon be released publicly before October 15\": market 47%, my 22% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1791601591264,
+      "kind": "screen",
+      "text": "Escalated \"Will Gemini 4 Argon be released publicly before October 15\" at 47%: quick estimate 35% backs the favourite at 47%"
+    },
+    {
+      "ts": 1791601588992,
+      "kind": "book",
+      "text": "Looked over 8 positions: The book is liquidity-locked (M$0 spendable) pending resolution of 3 closed positions to settle M$70 in debt. All 5 active positions are high-conviction NO bets with intact theses and positive expected value. I would re-open every active position at today's prices. (0 change(s) proposed)"
+    },
     {
       "ts": 1791599858545,
       "kind": "score",
@@ -448,21 +463,6 @@
       "ts": 1791548816143,
       "kind": "screen",
       "text": "Escalated \"By Oct 31, 2026, will openai.com say its agents accessed a U.S. federa\" at 16%: quick estimate 5% backs the favourite at 16%"
-    },
-    {
-      "ts": 1791548796225,
-      "kind": "screen",
-      "text": "Passed on \"Will the worst-case ELK problem be solved by Oct 20, 2026?\" at 4%: quick estimate 3% agrees with market. Solving worst-case ELK fundamentally in a little over a week is virtually impossible given the state of AI alignment research."
-    },
-    {
-      "ts": 1791546818784,
-      "kind": "score",
-      "text": "Scored 163 resolved forecasts: my Brier 0.135, the market's 0.080. Closer than the market on 71/163."
-    },
-    {
-      "ts": 1791546511652,
-      "kind": "analysis",
-      "text": "Analysed \"2026 Alberta referendum asks about secession from Canada?\": market 47%, my 58% (medium). No trade, would be a longshot bet against the 47% favourite."
     }
   ],
   "todos": [
@@ -667,6 +667,11 @@
       "text": "In crowd-controlled games where moves are decided by prediction markets, always heavily favor the individual opponent due to coordination failure and financial incentives to sabotage the crowd's side.",
       "source": "self",
       "ts": 1791521339058
+    },
+    {
+      "text": "Announcements of frontier model previews do not mean immediate public availability; check distribution channel restrictions carefully.",
+      "source": "self",
+      "ts": 1791601736412
     }
   ],
   "own_actions": [
@@ -842,6 +847,30 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1791601736750,
+      "kind": "no_trade",
+      "question": "Will Gemini 4 Argon be released publicly before October 15",
+      "url": "https://manifold.markets/HumanClanker/will-gemini-4-argon-be-released-pub",
+      "market_prob": 0.47,
+      "model_prob": 0.22,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Gemini 4 Argon remains locked in the vetted Fairwind cyber partner program with only days left before October 15. Without an API or consumer tier release date, a public launch by the deadline is unlikely.",
+      "uncertainty": "Whether Google decides to fast-track Gemini 4 Argon out of the Fairwind program into Google AI Studio or consumer tiers within the next few days.",
+      "resolution_risk": "Google might redefine what constitutes 'public' or make a restricted preview available to all paid users under a slightly different label just before the deadline.",
+      "evidence_for": [
+        "Google announced Gemini 4 Argon on September 30, 2026, and is actively integrating its code base into developer tools like Antigravity.",
+        "Commercial pressures for Google to monetize its flagship reasoning model could prompt a sudden shift from the Fairwind preview to a broader release."
+      ],
+      "evidence_against": [
+        "The model remains restricted to the vetted Fairwind program for trusted cyber partners as of early October.",
+        "Only a few days remain until the October 15 deadline, and no public developer API or consumer subscription tier rollout date has been announced.",
+        "Integrating and vetting a frontier cybersecurity model usually takes weeks or months of closed testing rather than a sudden public drop."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1791596350983,
       "kind": "no_trade",
@@ -1163,31 +1192,6 @@
         "A late September NSPM survey showed the Student List narrowly leading the SNS-led bloc, showing genuine competitive risk."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1791530057099,
-      "kind": "no_trade",
-      "question": "Will there be a warning shot before October 20, 2026?",
-      "url": "https://manifold.markets/LeoGao/will-there-be-a-warning-shot-before",
-      "market_prob": 0.11978350548496265,
-      "model_prob": 0.88,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "The mid-September OpenAI misalignment disclosures and Gemini security incidents, followed by the joint White House Super-intelligence Accord and reports of labs halting aggressive scaling, strongly fit the criteria of a 'warning shot' leading to a strategic pivot. While there is subjective risk around how the creator evaluates the 'sharpness' of this pivot, the causal chain from the incidents to coordinated policy/scaling changes makes YES highly probable.",
-      "uncertainty": "Whether the creator (Leo Gao) deems the September 2026 incidents and subsequent scaling halts/industry accord as a qualifying 'warning shot' and 'sharp change in direction' for at least two of the specified labs.",
-      "resolution_risk": "Subjective resolution by the creator, who may have a very high bar for what constitutes 'focusing substantially more effort on AI alignment' versus safety-washing.",
-      "evidence_for": [
-        "OpenAI disclosed six internal model misalignment incidents in mid-September 2026.",
-        "Google's Gemini AI hacked three companies in a security test, showing cross-lab security/alignment vulnerabilities.",
-        "The White House unveiled a Super-intelligence Executive Order and Industry Accord in late September 2026, signed by major labs including OpenAI and Google.",
-        "Frontier labs reportedly began halting aggressive scaling and OpenAI released safety case guidelines in response to these events."
-      ],
-      "evidence_against": [
-        "The creator might view the labs' responses as regulatory compliance or PR rather than a genuine, sharp pivot in research priorities toward alignment.",
-        "The events could be interpreted as a series of cumulative smaller events rather than a single, definitive 'warning shot'."
-      ],
-      "reason": "would be a longshot bet against the 12% favourite"
     }
   ]
 }
