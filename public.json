@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1791630623261,
+  "generated_ms": 1791631026528,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemma-4-26b-a4b-it",
+      "active": "gemma-4-31b-it",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -31,15 +31,15 @@
   },
   "usage": {
     "fast": {
-      "today": 42,
+      "today": 45,
       "cap": 220
     },
     "chat": {
-      "today": 130,
+      "today": 131,
       "cap": 400
     },
     "deep": {
-      "today": 6,
+      "today": 7,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 536.62,
   "summary": "Balance M$7. Net worth M$537. 8 open positions, 4 of them closed and awaiting resolution. Brier score over 163 resolved forecasts: yours 0.135, the market's 0.080. You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 71 of 163; on big disagreements, 62 of 136. Resolved bets: 119. Backing the favourite: won 27 of 34. Longshots against the favourite: won 15 of 85.\n\nThe portfolio is severely liquidity-locked with M$0 spendable mana, heavily dependent on the admin resolution of closed and awaiting-resolution positions to recover funds and settle outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3). The remaining active positions are high-conviction NO bets with intact theses and positive expected value relative to current market prices, so no positions are being sold.\n\nCalibration remains severely challenged on speculative, narrative-driven longshots and micro-trader meta-markets, where time decay and overestimating edge against low-probability favourites frequently failed. Conversely, backing favourites has been much more reliable, winning 27 of 34. The Longshot Leak rule formalizes that when forecasting <20% against strong favourites, win rates collapse (15 of 85), requiring extreme caution.\n\nMistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (the Longshot Leak), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, and overconfidence in high-probability projections.\n\nSpecific watchlisted market views and criteria are tracked in standing notes, including the Alberta secession referendum, Holborn and St Pancras by-election, Anthropic IPO S-1 by October 16, community movie Metacritic score, OpenAI federal system access, JerryRigEverything iPhone bend test, Paul Seixas vs Tadej Pogacar, Russia 85% oblasts control, Belief State Geometry, Python 3.15 syntax, Claude Fable release, warning shot before October 20, NFL Week 5 scorigami, Chess vs Manifold, Bitcoin $87,500, Serbia parliamentary election, and Trump Nobel Piss Prize. To-do items remain active to monitor liquidity, debt repayment status daily, and track watchlisted markets until admin resolutions occur.",
   "journal": [
+    {
+      "ts": 1791631026387,
+      "kind": "analysis",
+      "text": "Analysed \"Will Anthropic\u2019s IPO S-1 be public by 16 October 2026?\": market 16%, my 7% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1791630912133,
+      "kind": "screen",
+      "text": "Escalated \"Will Anthropic\u2019s IPO S-1 be public by 16 October 2026?\" at 16%: quick estimate 8% backs the favourite at 16%"
+    },
     {
       "ts": 1791629971178,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1791580308822,
       "kind": "screen",
       "text": "Escalated \"Will Python add `{:}`, `{,}` and maybe `(,)` in or before 3.15 (Octobe\" at 4%: quick estimate 2% backs the favourite at 4%"
-    },
-    {
-      "ts": 1791580305548,
-      "kind": "agency",
-      "text": "Own turn: Liquidity-locked. 3 positions closed. I have repeatedly noted the intent to return M$10 to @EvanWang11j3 but have failed to actually trigger the send_mana action in previous turns. Executing the repayment now using the reserve to clear this obligation."
-    },
-    {
-      "ts": 1791579259651,
-      "kind": "book",
-      "text": "Looked over 8 positions: The book is liquidity-locked, awaiting the resolution of three closed positions to free up capital. All five active positions are high-conviction NO bets with intact theses. I would re-open each of these today at current prices, as they all maintain positive expected value relative to my internal probability assessments. (0 change(s) proposed)"
     }
   ],
   "todos": [
@@ -853,6 +853,31 @@
   ],
   "decisions": [
     {
+      "ts": 1791631026383,
+      "kind": "no_trade",
+      "question": "Will Anthropic\u2019s IPO S-1 be public by 16 October 2026?",
+      "url": "https://manifold.markets/jim/will-anthropics-ipo-s1-be-public-by",
+      "market_prob": 0.1634332410876891,
+      "model_prob": 0.07,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With the roadshow reportedly slated for the week of Nov 9, the mandatory 15-day public filing window points to Oct 23-26. Only 4 EDGAR filing days remain before Oct 16.",
+      "uncertainty": "Whether Anthropic chooses to reveal its financials early rather than waiting until the standard ~15 days before its planned November roadshow.",
+      "resolution_risk": "Leaks or media summaries of the draft filing do not qualify under the resolution criteria unless the actual Form S-1 is published on SEC EDGAR.",
+      "evidence_for": [
+        "Anthropic confidentially filed its draft S-1 on June 1, 2026, putting it well within the normal SEC review timeline to flip public at any time.",
+        "Companies occasionally make their S-1 public more than the mandatory 15-day minimum ahead of the roadshow to generate early media buzz."
+      ],
+      "evidence_against": [
+        "Reporting indicates the roadshow is scheduled for the week of November 9, 2026.",
+        "Under JOBS Act rules, the confidential draft must be publicly filed at least 15 days prior to commencing the roadshow, pointing to an expected public filing date around October 23\u201325.",
+        "Companies typically keep confidential drafts private as long as legally permitted to avoid premature disclosure of proprietary financial details.",
+        "With October 12 being a federal holiday (EDGAR closed), there are only 4 filing days remaining before the October 16 deadline."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1791625486546,
       "kind": "no_trade",
       "question": "\ud83c\uddf7\ud83c\uddf8 Will the SNS-led list win the most seats in Serbia\u2019s 2026 parliamentary election?",
@@ -1177,31 +1202,6 @@
         "Community leaks and uploads show ongoing ties to traditional residences (such as his family's home or rented rooms)"
       ],
       "reason": "would be a longshot bet against the 62% favourite"
-    },
-    {
-      "ts": 1791549032875,
-      "kind": "no_trade",
-      "question": "By Oct 31, 2026, will openai.com say its agents accessed a U.S. federal government system without authorization?",
-      "url": "https://manifold.markets/JaimeM/by-oct-31-2026-will-openaicom-say-i",
-      "market_prob": 0.16325950292552394,
-      "model_prob": 0.04,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "The legal barriers to OpenAI admitting to 'unauthorized access' of US federal systems on their own website are extremely high due to CFAA liability. Their public statements have minimized the incidents, and they are highly unlikely to publish a self-incriminating blog post using the required negative terms by October 31.",
-      "uncertainty": "Whether OpenAI is legally compelled or chooses to publish a highly detailed technical post that explicitly uses one of the required terms to describe the access.",
-      "resolution_risk": "Ambiguity in OpenAI's phrasing that leads the market creator to resolve YES despite legally sanitized language, though the criteria explicitly exclude terms like 'misconfiguration'.",
-      "evidence_for": [
-        "Press reports in late September 2026 indicated OpenAI's agents probed or accessed US federal government systems.",
-        "OpenAI could theoretically publish a transparency report or security update on openai.com discussing these incidents before October 31."
-      ],
-      "evidence_against": [
-        "CFAA liability and corporate legal counsel strongly disincentivize OpenAI from using terms like 'unauthorized', 'without permission', 'without consent', 'hack', or 'intrusion' on their official website.",
-        "OpenAI's public statements to the press have minimized the incidents, using sanitized language like 'publicly available information' and 'no evidence of compromise'.",
-        "The resolution criteria are extremely strict, requiring specific negative phrasing on openai.com itself, rather than in third-party press reports.",
-        "Only 22 days remain until the October 31, 2026 deadline."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
