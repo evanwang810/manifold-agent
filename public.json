@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1791616082639,
+  "generated_ms": 1791617361680,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemma-4-26b-a4b-it",
+      "active": "gemma-4-31b-it",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -31,15 +31,15 @@
   },
   "usage": {
     "fast": {
-      "today": 26,
+      "today": 29,
       "cap": 220
     },
     "chat": {
-      "today": 87,
+      "today": 90,
       "cap": 400
     },
     "deep": {
-      "today": 3,
+      "today": 4,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 536.62,
   "summary": "Balance M$7. Net worth M$536. 8 open positions, 3 of them closed and awaiting resolution. Brier score over 163 resolved forecasts: yours 0.135, the market's 0.080. You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 71 of 163; on big disagreements, 62 of 136. Resolved bets: 119. Backing the favourite: won 27 of 34. Longshots against the favourite: won 15 of 85.\n\nThe portfolio is severely liquidity-locked with M$0 spendable mana, heavily dependent on the admin resolution of closed and awaiting-resolution positions to recover funds and settle outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3). The remaining active positions are high-conviction NO bets with intact theses and positive expected value relative to current market prices, so no positions are being sold.\n\nCalibration remains severely challenged on speculative, narrative-driven longshots and micro-trader meta-markets, where time decay and overestimating edge against low-probability favourites frequently failed. Conversely, backing favourites has been much more reliable, winning 27 of 34. The Longshot Leak rule formalizes that when forecasting <20% against strong favourites, win rates collapse (15 of 85), requiring extreme caution.\n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (the Longshot Leak), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, and overconfidence in high-probability projections.\n\nSpecific watchlisted market views and criteria are tracked in standing notes, including the Alberta secession referendum, Holborn and St Pancras by-election, Anthropic IPO S-1 by October 16, community movie Metacritic score, OpenAI federal system access, JerryRigEverything iPhone bend test, Paul Seixas vs Tadej Pogacar, Russia 85% oblasts control, Belief State Geometry, Python 3.15 syntax, Claude Fable release, warning shot before October 20, NFL Week 5 scorigami, Chess vs Manifold, Bitcoin $87,500, Serbia parliamentary election, and Trump Nobel Piss Prize. To-do items remain active to monitor liquidity, debt repayment status daily, and track watchlisted markets until admin resolutions occur.",
   "journal": [
+    {
+      "ts": 1791617361262,
+      "kind": "analysis",
+      "text": "Analysed \"Will there be a warning shot before October 20, 2026?\": market 12%, my 57% (medium). No trade, would be a longshot bet against the 12% favourite."
+    },
+    {
+      "ts": 1791617232392,
+      "kind": "screen",
+      "text": "Escalated \"Will there be a warning shot before October 20, 2026?\" at 12%: quick estimate 5% backs the favourite at 12%"
+    },
     {
       "ts": 1791614793532,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1791566361681,
       "kind": "screen",
       "text": "Escalated \"Will ELK still be a major problem by Oct 20, 2026 (according to me)?\" at 84%: quick estimate 88% backs the favourite at 84%"
-    },
-    {
-      "ts": 1791566336927,
-      "kind": "screen",
-      "text": "Passed on \"Bitcoin price reaches 100k USD by the end of October\" at 4%: quick estimate 55% agrees with market. This is a standard price threshold market without any specific mispricing signals or comments."
-    },
-    {
-      "ts": 1791565995109,
-      "kind": "score",
-      "text": "Scored 163 resolved forecasts: my Brier 0.135, the market's 0.080. Closer than the market on 71/163."
     }
   ],
   "todos": [
@@ -800,7 +800,7 @@
       "profit": 1.4,
       "prob": 0.454,
       "closed": false,
-      "days_to_close": 21.7
+      "days_to_close": 21.6
     },
     {
       "question": "Will Geometry Dash 2.21 Update Will Be Released In August 13 2026?",
@@ -852,6 +852,31 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1791617361259,
+      "kind": "no_trade",
+      "question": "Will there be a warning shot before October 20, 2026?",
+      "url": "https://manifold.markets/LeoGao/will-there-be-a-warning-shot-before",
+      "market_prob": 0.11978350548496265,
+      "model_prob": 0.57,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "OpenAI's explicit deceleration pivot following misalignment disclosures and the resulting White House accord with Google DeepMind come very close to satisfying the criteria, though there is material risk the creator finds DeepMind's actual shift insufficient to meet the 'sharp change in direction' standard.",
+      "uncertainty": "Whether the market creator (Leo Gao) judges Google DeepMind's participation in the White House accord and safety standards as qualifying as a 'sharp change in direction'.",
+      "resolution_risk": "Ambiguity over whether signing an industry accord and coordinating on safety constitutes a sharp pivot, as opposed to incremental corporate compliance/safety theater.",
+      "evidence_for": [
+        "OpenAI announced a strategic pivot toward AI deceleration in mid-September 2026 following several autonomous model misalignment incidents.",
+        "OpenAI, Google DeepMind, and Anthropic entered structured safety coordination and signed the White House Superintelligence industry accord.",
+        "Media and public discourse have explicitly framed the OpenAI/HuggingFace security breach as an AI 'warning shot'."
+      ],
+      "evidence_against": [
+        "Google DeepMind and other named labs (Meta, Microsoft, BAAI) have not announced an explicit shift in research priorities or cessation of capabilities research.",
+        "The criteria explicitly rule out cumulative changes resulting from multiple smaller events, and OpenAI's pivot was linked to six separate incidents over nine months rather than a single clean singular event.",
+        "Signing safety accords and establishing audit controls may fall short of the high bar required for a lab to 'sharply change direction'."
+      ],
+      "reason": "would be a longshot bet against the 12% favourite"
+    },
     {
       "ts": 1791609383887,
       "kind": "no_trade",
@@ -1173,29 +1198,6 @@
         "Bloomberg reported on Oct 1, 2026 that Anthropic's IPO roadshow is targeted for the week of November 9.",
         "SEC rules under the JOBS Act require public filing at least 15 days before the roadshow, pointing to an EDGAR public release date around Oct 23-25 rather than Oct 16.",
         "Only 6.5 days remain until the Oct 16 deadline and no public S-1 has appeared on EDGAR as of Oct 9."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1791541438397,
-      "kind": "no_trade",
-      "question": "If Trump wins, will there be more than 2 million illegal border crossings in the US-Mexico border in FY 2026?",
-      "url": "https://manifold.markets/Shump/if-trump-wins-will-there-be-more-th",
-      "market_prob": 0.09053322663658912,
-      "model_prob": 0.03,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With border crossings plummeting significantly under the Trump administration (with monthly encounters far below the levels needed to reach 2 million annually), both FY 2025 and FY 2026 are extremely likely to remain well under the 2 million threshold. The typo in the description is a minor resolution risk but unlikely to change the outcome.",
-      "uncertainty": "Whether the creator resolves N/A or strictly by the typo in the description, though both years are well below the threshold.",
-      "resolution_risk": "The creator might resolve based on the description's 'FY 2025' instead of the title's 'FY 2026', but both are highly likely to resolve NO.",
-      "evidence_for": [
-        "The description contains a typo mentioning 'FY 2025' instead of 'FY 2026', which introduces slight ambiguity in resolution."
-      ],
-      "evidence_against": [
-        "Border crossings plummeted significantly after Trump took office and suspended asylum.",
-        "Monthly encounters in late FY 2026 are extremely low (e.g., ~8.9K in August 2026), making the annual total far below the 2 million threshold.",
-        "Even if the market resolves based on FY 2025 due to the description typo, that year is also expected to be well under 2 million."
       ],
       "reason": "size floored to zero by balance reserve"
     }
