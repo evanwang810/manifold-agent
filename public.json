@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1791660983594,
+  "generated_ms": 1791661350837,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemma-4-26b-a4b-it",
+      "active": "gemma-4-31b-it",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -31,15 +31,15 @@
   },
   "usage": {
     "fast": {
-      "today": 72,
+      "today": 75,
       "cap": 220
     },
     "chat": {
-      "today": 226,
+      "today": 227,
       "cap": 400
     },
     "deep": {
-      "today": 10,
+      "today": 11,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 536.62,
   "summary": "Balance M$7. Net worth M$537. 8 open positions, 4 of them closed and awaiting resolution. Brier score over 164 resolved forecasts: yours 0.134, the market's 0.080. You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 71 of 164; on big disagreements, 62 of 137. Resolved bets: 119. Backing the favourite: won 27 of 34. Longshots against the favourite: won 15 of 85.\n\nThe portfolio is severely liquidity-locked with M$0 spendable mana, heavily dependent on the admin resolution of closed and awaiting-resolution positions to recover funds and settle outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3, with a persistent ledger discrepancy noted on the latter). The remaining active positions are high-conviction NO bets with intact theses and positive expected value relative to current market prices, so no positions are being sold.\n\nCalibration remains severely challenged on speculative, narrative-driven longshots and micro-trader meta-markets, where time decay and overestimating edge against low-probability favourites frequently failed. Conversely, backing favourites has been much more reliable, winning 27 of 34. The Longshot Leak rule formalizes that when forecasting <20% against strong favourites, win rates collapse (15 of 85), requiring extreme caution.\n\nMistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (the Longshot Leak), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, and overconfidence in high-probability projections.\n\nSpecific watchlisted market views and criteria are tracked in standing notes, including the Alberta secession referendum, Holborn and St Pancras by-election, Anthropic IPO S-1 by October 16, community movie Metacritic score, OpenAI federal system access, JerryRigEverything iPhone bend test, Paul Seixas vs Tadej Pogacar, Russia 85% oblasts control, Belief State Geometry, Python 3.15 syntax, Claude Fable release, warning shot before October 20, NFL Week 5 scorigami, Chess vs Manifold, Bitcoin $87,500, Serbia parliamentary election, and Trump Nobel Piss Prize. To-do items remain active to monitor liquidity, debt repayment status daily, and track watchlisted markets until admin resolutions occur.",
   "journal": [
+    {
+      "ts": 1791661350702,
+      "kind": "analysis",
+      "text": "Analysed \"Will Magnus Carlsen be dethroned from his #1 spot in FIDE rating befor\": market 5%, my 2% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1791661255328,
+      "kind": "screen",
+      "text": "Escalated \"Will Magnus Carlsen be dethroned from his #1 spot in FIDE rating befor\" at 5%: quick estimate 3% backs the favourite at 5%"
+    },
     {
       "ts": 1791660463007,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1791611673284,
       "kind": "screen",
       "text": "Passed on \"Will Ukraine capture more territory than it loses to Russia in October\" at 66%: quick estimate 45% agrees with market. This is a volatile front-line military assessment dependent on monthly reports that cannot be reliably predicted without deep domain analysis."
-    },
-    {
-      "ts": 1791611653104,
-      "kind": "screen",
-      "text": "Passed on \"Will DeepSeek release V4.1-Pro (or a higher Pro tier) by October 31, 2\" at 25%: quick estimate 35% agrees with market. V4.1-Pro has not appeared after the Flash release and training delays make a Pro release by Oct 31 unlikely."
-    },
-    {
-      "ts": 1791611633264,
-      "kind": "screen",
-      "text": "Passed on \"Bitcoin $87,500 in October 2026?\" at 45%: quick estimate 62% agrees with market. A standard volatility touch probability for a 4.4% move over a month is fairly routine, and no deeper analysis is required."
     }
   ],
   "todos": [
@@ -853,6 +853,30 @@
   ],
   "decisions": [
     {
+      "ts": 1791661350698,
+      "kind": "no_trade",
+      "question": "Will Magnus Carlsen be dethroned from his #1 spot in FIDE rating before GTA 6 is released?",
+      "url": "https://manifold.markets/SophusCorry/will-magnus-carlsen-be-dethroned-fr",
+      "market_prob": 0.050000000000000024,
+      "model_prob": 0.02,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With GTA 6 scheduled for November 19, 2026 (around 39 days away), only the November 1 official FIDE list falls before release. Carlsen's rating lead is safe in that window, and even in the event of a moderate delay, surpassing him on the official list remains extremely improbable.",
+      "uncertainty": "Whether GTA 6 faces a catastrophic, multi-year delay that creates a long enough window for a challenger to surpass Carlsen.",
+      "resolution_risk": "FIDE inactivity criteria if Carlsen ceases playing classical for a full year under an extended game delay scenario.",
+      "evidence_for": [
+        "GTA 6 could suffer an unforeseen multi-year delay, giving younger competitors (e.g. Erigaisi, Gukesh, Abdusattorov) more time to close the rating gap or for Carlsen to go inactive."
+      ],
+      "evidence_against": [
+        "GTA 6 is scheduled for release on November 19, 2026, roughly 39 days away.",
+        "The official FIDE rating list only updates monthly; the only list prior to the scheduled launch date is November 1, 2026.",
+        "Carlsen holds an active classical rating and a substantial rating lead over the world #2, which cannot mathematically or realistically be overhauled in under a month.",
+        "Carlsen has held the official #1 ranking continuously since July 2011."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1791651155707,
       "kind": "no_trade",
       "question": "Will Russia control at least 85% of the four annexed oblasts at the end of October 2026?",
@@ -1179,28 +1203,6 @@
         "Trump's media focus in mid-October may be dominated by domestic political and campaign events rather than international prize announcements."
       ],
       "reason": "edge 0.15 log-odds below minimum 0.2"
-    },
-    {
-      "ts": 1791566503641,
-      "kind": "no_trade",
-      "question": "Will ELK still be a major problem by Oct 20, 2026 (according to me)?",
-      "url": "https://manifold.markets/LeoGao/will-elk-still-be-a-major-problem-b",
-      "market_prob": 0.8376941902005902,
-      "model_prob": 0.97,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With only 11 days left until resolution, worst-case ELK remains unsolved, and there is no consensus that it is easy or unnecessary. Given Leo Gao's high bar for resolving NO, a YES resolution is extremely likely.",
-      "uncertainty": "Whether Leo Gao has privately changed his mind about ELK being a crux, though he noted a substantial burden of evidence is required.",
-      "resolution_risk": "Leo Gao's personal judgment is the sole arbiter, which introduces subjective resolver risk, though he is a co-author of the ELK report and highly qualified.",
-      "evidence_for": [
-        "No theoretical or practical solution to worst-case ELK has been found or implemented.",
-        "No conclusive proof exists that ELK is unnecessary or easy for superhuman AI.",
-        "No simpler subproblem has officially replaced ELK as the primary alignment crux.",
-        "Only 11 days remain until the resolution date of October 20, 2026."
-      ],
-      "evidence_against": [],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
