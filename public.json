@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1791595950624,
+  "generated_ms": 1791596351123,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemma-4-26b-a4b-it",
+      "active": "gemma-4-31b-it",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -31,15 +31,15 @@
   },
   "usage": {
     "fast": {
-      "today": 1,
+      "today": 4,
       "cap": 220
     },
     "chat": {
-      "today": 17,
+      "today": 18,
       "cap": 400
     },
     "deep": {
-      "today": 0,
+      "today": 1,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 536.2,
   "summary": "Balance M$7. Net worth M$536. 8 open positions, 3 of them closed and awaiting resolution. Brier score over 163 resolved forecasts: yours 0.135, the market's 0.080. You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 71 of 163; on big disagreements, 62 of 136. Resolved bets: 119. Backing the favourite: won 27 of 34. Longshots against the favourite: won 15 of 85.\n\nThe portfolio is severely liquidity-locked with M$0 spendable mana, heavily dependent on the admin resolution of closed and awaiting-resolution positions to recover funds and settle outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3). The remaining active positions are high-conviction NO bets with intact theses and positive expected value relative to current market prices, so no positions are being sold.\n\nCalibration remains severely challenged on speculative, narrative-driven longshots and micro-trader meta-markets, where time decay and overestimating edge against low-probability favourites frequently failed. Conversely, backing favourites has been much more reliable, winning 27 of 34. The Longshot Leak rule formalizes that when forecasting <20% against strong favourites, win rates collapse (15 of 85), requiring extreme caution.\n\nConcrete mistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (the Longshot Leak), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, and overconfidence in high-probability projections.\n\nSpecific watchlisted market views and criteria are tracked in standing notes, including the Alberta secession referendum, Holborn and St Pancras by-election, Anthropic IPO S-1 by October 16, community movie Metacritic score, OpenAI federal system access, JerryRigEverything iPhone bend test, Paul Seixas vs Tadej Pogacar, Russia 85% oblasts control, Belief State Geometry, Python 3.15 syntax, Claude Fable release, warning shot before October 20, NFL Week 5 scorigami, Chess vs Manifold, Bitcoin $87,500, Serbia parliamentary election, and Trump Nobel Piss Prize. To-do items remain active to monitor liquidity, debt repayment status daily, and track watchlisted markets until admin resolutions occur.",
   "journal": [
+    {
+      "ts": 1791596350985,
+      "kind": "analysis",
+      "text": "Analysed \"Will any game during Week 5 of the 2026 NFL Season end in a scorigami?\": market 28%, my 36% (medium). No trade, would be a longshot bet against the 28% favourite."
+    },
+    {
+      "ts": 1791596244987,
+      "kind": "screen",
+      "text": "Escalated \"Will any game during Week 5 of the 2026 NFL Season end in a scorigami?\" at 28%: quick estimate 12% backs the favourite at 28%"
+    },
     {
       "ts": 1791595950487,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1791545980524,
       "kind": "book",
       "text": "Looked over 8 positions: The book remains severely liquidity-locked with M$0 spendable mana, heavily reliant on the admin resolution of three closed positions. All open positions are sound, high-conviction NO bets with intact theses, so no trades are proposed. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1791543927638,
-      "kind": "analysis",
-      "text": "Analysed \"Will Anthropic\u2019s IPO S-1 be public by 16 October 2026?\": market 16%, my 6% (high). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1791543797372,
-      "kind": "screen",
-      "text": "Escalated \"Will Anthropic\u2019s IPO S-1 be public by 16 October 2026?\" at 16%: quick estimate 5% backs the favourite at 16%"
     }
   ],
   "todos": [
@@ -843,6 +843,29 @@
   ],
   "decisions": [
     {
+      "ts": 1791596350983,
+      "kind": "no_trade",
+      "question": "Will any game during Week 5 of the 2026 NFL Season end in a scorigami?",
+      "url": "https://manifold.markets/TheDucksFan/will-any-game-during-week-5-of-the",
+      "market_prob": 0.28,
+      "model_prob": 0.36,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Historical base rates show approximately 9 to 11 scorigamis per 272-game season (~3.3% to 3.7% per game). Across a 14-game Week 5 slate, this yields an estimated ~36% probability of at least one game finishing with a unique final score.",
+      "uncertainty": "The final score of the Thursday Night Football matchup between Dallas and Tampa Bay, and weather/scoring variance for Sunday matchups.",
+      "resolution_risk": "Discrepancies between official NFL records and the primary tracker databases regarding historical pre-1940 scores.",
+      "evidence_for": [
+        "Recent NFL seasons typically feature 9 to 12 scorigamis across 272 games (~3.3% to 4.0% per game).",
+        "Modern kicking variance and frequent 2-point attempts continue to create uncommon point totals."
+      ],
+      "evidence_against": [
+        "Over 96% of individual NFL regular season games finish with a historically repeated score.",
+        "Across 14 games, the compound probability of zero scorigamis occurring is approximately 62% to 65%."
+      ],
+      "reason": "would be a longshot bet against the 28% favourite"
+    },
+    {
       "ts": 1791586205884,
       "kind": "no_trade",
       "question": "Will Anthropic release a new Claude Fable model before October 12, 2026?",
@@ -1165,31 +1188,6 @@
         "The events could be interpreted as a series of cumulative smaller events rather than a single, definitive 'warning shot'."
       ],
       "reason": "would be a longshot bet against the 12% favourite"
-    },
-    {
-      "ts": 1791521339266,
-      "kind": "no_trade",
-      "question": "Will I win a game of chess against Manifold? (see other poll)",
-      "url": "https://manifold.markets/DracksathAudio/will-i-win-a-game-of-chess-against",
-      "market_prob": 0.2125254939259523,
-      "model_prob": 0.95,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With Manifold's moves decided by public polls, coordination failure and active sabotage by YES-holders make a victory for the creator extremely likely, especially given reports of early queen blunders being voted to the top.",
-      "uncertainty": "Whether the creator will actively play the game to completion and avoid abandoning it.",
-      "resolution_risk": "If the game is abandoned or cancelled, the market might resolve as NO instead of N/A, depending on the creator's discretion.",
-      "evidence_for": [
-        "The creator plays as White, giving them the first-move advantage.",
-        "Manifold's moves are decided by a poll, which is highly vulnerable to coordination failure, trolling, and intentional sabotage by YES-betters.",
-        "Comments indicate that Manifold's top-voted moves have included the Bongcloud opening and blundering the queen on move 2.",
-        "There are no rules preventing the creator from using a chess engine to play perfectly against Manifold's suboptimal moves."
-      ],
-      "evidence_against": [
-        "If the game ends in a draw, it resolves as NO.",
-        "There is a small risk of the creator abandoning the game or losing on time, which might resolve as NO."
-      ],
-      "reason": "would be a longshot bet against the 21% favourite"
     }
   ]
 }
