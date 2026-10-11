@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1791756103626,
+  "generated_ms": 1791756575478,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -31,15 +31,15 @@
   },
   "usage": {
     "fast": {
-      "today": 80,
+      "today": 83,
       "cap": 220
     },
     "chat": {
-      "today": 261,
+      "today": 262,
       "cap": 400
     },
     "deep": {
-      "today": 13,
+      "today": 14,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 536.62,
   "summary": "Balance M$7. Net worth M$537. 8 open positions, 4 of them closed and awaiting resolution. Brier score over 167 resolved forecasts: yours 0.132, the market's 0.081. You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 74 of 167; on big disagreements, 64 of 139. Resolved bets: 123. Backing the favourite: won 27 of 37. Longshots against the favourite: won 16 of 86.\n\nThe portfolio is severely liquidity-locked with M$0 spendable mana, heavily dependent on admin resolutions of closed and awaiting-resolution positions to recover funds and settle outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3). Active open positions are high-conviction NO bets with intact theses and positive expected value relative to current market prices, so no positions are being sold.\n\nCalibration remains severely challenged on speculative, narrative-driven longshots and micro-trader meta-markets, where time decay and overestimating edge against low-probability favourites frequently failed. Conversely, backing favourites has been much more reliable, winning 27 of 37. The Longshot Leak rule formalizes that when forecasting <20% against strong favourites, win rates collapse (16 of 86), requiring extreme caution.\n\nMistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (the Longshot Leak), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, and overconfidence in high-probability projections.\n\nSpecific watchlisted market views and criteria are tracked in standing notes, including the Alberta secession referendum, Holborn and St Pancras by-election, Anthropic IPO S-1 by October 16, community movie Metacritic score, OpenAI federal system access, JerryRigEverything iPhone bend test, Paul Seixas vs Tadej Pogacar, Russia 85% oblasts control, Belief State Geometry, Python 3.15 syntax, Claude Fable release, warning shot before October 20, NFL Week 5 scorigami, Chess vs Manifold, Bitcoin $87,500, Serbia parliamentary election, and Trump Nobel Piss Prize. To-do items remain active to monitor liquidity and debt repayment status daily, and track watchlisted markets until admin resolutions occur.",
   "journal": [
+    {
+      "ts": 1791756575313,
+      "kind": "analysis",
+      "text": "Analysed \"Will Python add `{:}`, `{,}` and maybe `(,)` in or before 3.15 (Octobe\": market 4%, my 1% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1791756441888,
+      "kind": "screen",
+      "text": "Escalated \"Will Python add `{:}`, `{,}` and maybe `(,)` in or before 3.15 (Octobe\" at 4%: quick estimate 2% backs the favourite at 4%"
+    },
     {
       "ts": 1791754952468,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1791707659616,
       "kind": "screen",
       "text": "Passed on \"Will Paul Seixas defeat Tadej Pogacar in any race during the 2026 seas\" at 5%: quick estimate 82% agrees with market. Pogacar is dominant, but over a long calendar and multiple head-to-head races in 2026, Seixas only needs to beat him once or have Pogacar DNF."
-    },
-    {
-      "ts": 1791707639582,
-      "kind": "screen",
-      "text": "Passed on \"Will tailcalled think that the Brain-Like AGI alignment research progr\" at 11%: quick estimate 35% agrees with market. This is a subjective evaluation of a specific forecaster's opinion, making it a coin flip based on personal judgment rather than checkable data."
-    },
-    {
-      "ts": 1791705593454,
-      "kind": "score",
-      "text": "Scored 167 resolved forecasts: my Brier 0.132, the market's 0.081. Closer than the market on 74/167."
     }
   ],
   "todos": [
@@ -848,6 +848,27 @@
   ],
   "decisions": [
     {
+      "ts": 1791756575311,
+      "kind": "no_trade",
+      "question": "Will Python add `{:}`, `{,}` and maybe `(,)` in or before 3.15 (October 2026)?",
+      "url": "https://manifold.markets/JeremiahEngland/will-python-add-and-maybe-in-or-bef",
+      "market_prob": 0.03885704608978786,
+      "model_prob": 0.01,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Python 3.15 has reached its release milestone without any PEP or grammar changes implementing `{:}`, `{,}`, or `(,)`. Empty dict remains `{}` and empty set remains `set()`.",
+      "uncertainty": "None; Python 3.15 syntax is locked and release-ready as of October 2026 without these literals.",
+      "resolution_risk": "Ambiguity in market resolution if creator interprets unofficial patch or discussion thread as adoption, though criteria specifically ask whether Python adds it.",
+      "evidence_for": [],
+      "evidence_against": [
+        "Python 3.15 feature freeze occurred earlier in 2026, and no PEP adopting `{:}`, `{,}`, or `(,)` was accepted or implemented into CPython.",
+        "Official documentation and active CPython grammar in Python 3.14 and 3.15 retain standard `{}` for empty dict and `set()` for empty set.",
+        "No Steering Council approval or core development activity exists supporting this syntax modification."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1791747951100,
       "kind": "no_trade",
       "question": "Will Magnus Carlsen be dethroned from his #1 spot in FIDE rating before GTA 6 is released?",
@@ -1179,30 +1200,6 @@
         "Core developers did not implement or schedule '{:}', '{,}', or '(,)' literals for Python 3.15."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1791663901775,
-      "kind": "no_trade",
-      "question": "Will Trump win Nobel Piss Prize 2026? [Read description]",
-      "url": "https://manifold.markets/vdb/will-trump-win-nobel-piss-prize-202-8A99I8qhyq",
-      "market_prob": 0.8421287082496205,
-      "model_prob": 0.81,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Given that Trump will almost certainly not win the 2026 Nobel Peace Prize and regularly attacks the committee on Truth Social or at rallies (either historically or around announcement week), YES is strongly favoured, though the strictness of the creator's interpretation of the timing and phrasing of the criticism leaves some residual uncertainty.",
-      "uncertainty": "Whether the creator interprets the condition as requiring a response directly to the 2026 award announcement or accepts ongoing/past public complaints by Trump.",
-      "resolution_risk": "The market creator may rule that standard rally complaints about past Nobel snubs do not count as criticizing the committee for 'not awarding the prize to him' in 2026.",
-      "evidence_for": [
-        "Trump is virtually certain not to win the 2026 Nobel Peace Prize.",
-        "Trump has a well-documented history of publicly complaining about the Nobel committee and perceived slights regarding the Peace Prize.",
-        "If earlier 2026 statements about not being awarded the Nobel qualify under the wording, the condition is already met or close to satisfied."
-      ],
-      "evidence_against": [
-        "If the resolver strictly requires an explicit criticism of the specific 2026 decision within the narrow 6-day remaining window, Trump may simply not bring it up amid other news cycles.",
-        "Ambiguity in market description regarding whether past complaints count or only post-announcement 2026 complaints."
-      ],
-      "reason": "would be a longshot bet against the 84% favourite"
     }
   ]
 }
