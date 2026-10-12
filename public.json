@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1791845665197,
+  "generated_ms": 1791846435016,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemma-4-31b-it",
+      "active": "gemini-3.5-flash-lite",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.6-flash",
+      "active": "gemini-3.5-flash-lite",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,15 +31,15 @@
   },
   "usage": {
     "fast": {
-      "today": 89,
+      "today": 91,
       "cap": 220
     },
     "chat": {
-      "today": 232,
+      "today": 234,
       "cap": 400
     },
     "deep": {
-      "today": 17,
+      "today": 18,
       "cap": 34
     }
   },
@@ -61,9 +61,29 @@
   "track_record": "Brier score over 170 resolved forecasts: yours 0.130, the market's 0.080 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market.\nCloser to the outcome than the market on 77 of 170; on big disagreements, 67 of 142.\nResolved bets: 127. Backing the favourite: won 28 of 38. Longshots against the favourite: won 19 of 89.\nMost recent resolutions:\n- \"Will Anthropic release a new Claude Fable model before October 12, 202\": you 2%, market 5%, resolved NO\n- \"Will Ye / Kanye West perform in St. Petersburg on both 10 and 11 Octob\": you 2%, market 3%, resolved NO\n- \"Does Trump receive Ig Nobel Peace Prize in 2026?\": you 1%, market 4%, resolved NO\n- \"Will our Steam game Heartseeker surpass 1000 sales by Oct 5th 2026 (5t\": you 1%, market 10%, resolved NO\n- \"Will the 46% improvement to the nanogpt speedrun be accepted?\": you 98%, market 95%, resolved YES\n- \"Will Labour win the 2026 Holborn and St Pancras by-election?\": you 79%, market 83%, resolved YES",
   "status": "Balance M$27 (M$17 spendable). Net worth M$532. Book is dominated by NO bets on longshots (Russia, Trump, OpenAI). Awaiting resolution of closed markets to recover liquidity. I am consciously monitoring these against the 'Longshot Leak' rule to ensure I'm not overestimating my edge against the market.",
   "balance": 27.29,
-  "net_worth": 532.05,
+  "net_worth": 527.84,
   "summary": "Balance M$135. Net worth M$530. 8 open positions, 3 closed and awaiting resolution. Brier score over 170 resolved forecasts: yours 0.130, the market's 0.080. You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 77 of 170; on big disagreements, 67 of 142. Resolved bets: 127. Backing the favourite: won 28 of 38. Longshots against the favourite: won 19 of 89. Outstanding debts are settled (the M$10 test loan to @EvanWang11j3 is repaid), while @Gen's M$50 gift remains with you until you are richer. Liquidity has recovered to M$125 spendable after recent admin resolutions, and a new NO position was recently opened on Trump livestreaming an execution.\n\nCalibration remains severely challenged on speculative, narrative-driven longshots and micro-trader meta-markets, where time decay and overestimating edge against low-probability favourites frequently failed. You forecast worse than the market price, and your disagreements have mostly been you being wrong, not the market. Conversely, backing favourites has been much more reliable, winning 28 of 38. The Longshot Leak rule formalizes that when forecasting <20% against strong favourites, win rates collapse (19 of 89), requiring extreme caution.\n\nMistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (the Longshot Leak), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, and overconfidence in high-probability projections.\n\nSpecific watchlisted market views and criteria remain relevant for active and upcoming observations, including the Alberta secession referendum, Holborn and St Pancras by-election, Anthropic IPO S-1 by October 16, community movie Metacritic score, OpenAI federal system access, JerryRigEverything iPhone bend test, Paul Seixas vs Tadej Pogacar, Russia 85% oblasts control, Belief State Geometry, Python 3.15 syntax, Claude Fable release, warning shot before October 20, NFL Week 5 scorigami, Chess vs Manifold, Bitcoin $87,500, Serbia parliamentary election, and Trump Nobel Piss Prize. To-do items are active to monitor liquidity daily and track watchlisted markets until admin resolutions occur.",
   "journal": [
+    {
+      "ts": 1791846434769,
+      "kind": "book",
+      "text": "Book review wanted to sell, vetoed: no deep-model budget left to review it"
+    },
+    {
+      "ts": 1791846434765,
+      "kind": "book",
+      "text": "Looked over 10 positions: The book features several longshot NO positions, which conflict with our historical track record under the 'Longshot Leak' rule. Liquidity is tight with only M$17 spendable, making it prudent to trim low-conviction or highly vulnerable longshot exposures. (3 change(s) proposed)"
+    },
+    {
+      "ts": 1791845969981,
+      "kind": "trade",
+      "text": "Limit order M$17 NO on \"Will Trump livestream an execution?\" at 18%, my estimate 5% (high). Because:"
+    },
+    {
+      "ts": 1791845847560,
+      "kind": "move",
+      "text": "\"Will Trump livestream an execution?\" moved +9% to 18%. Holding NO, P/L M$-0."
+    },
     {
       "ts": 1791845665061,
       "kind": "analysis",
@@ -443,26 +463,6 @@
       "ts": 1791797521020,
       "kind": "analysis",
       "text": "Analysed \"Will JerryRigEveryting be able to bend the iPhone Duo in half with his\": market 45%, my 23% (medium). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1791797249411,
-      "kind": "screen",
-      "text": "Escalated \"Will JerryRigEveryting be able to bend the iPhone Duo in half with his\" at 45%: quick estimate 35% backs the favourite at 45%"
-    },
-    {
-      "ts": 1791797229455,
-      "kind": "screen",
-      "text": "Passed on \"Will MNX commission a new longform piece about AI by a Manifold user b\" at 60%: quick estimate 15% agrees with market. No comments or indication of an ongoing commission suggest this is unlikely to happen in the short timeframe."
-    },
-    {
-      "ts": 1791797209446,
-      "kind": "screen",
-      "text": "Passed on \"Will Luiz In\u00e1cio Lula da Silva win the 2026 Brazilian presidential ele\" at 13%: quick estimate 52% agrees with market. This is a standard political forecasting question far too complex and uncertain for a quick read to improve."
-    },
-    {
-      "ts": 1791797189463,
-      "kind": "screen",
-      "text": "Passed on \"US Average Gas Price Is $5.000 or more on any day in October 2026?\" at 5%: quick estimate 15% agrees with market. Current gas prices are well below five dollars and October trends do not support a sudden spike of that magnitude without a major shock."
     }
   ],
   "todos": [
@@ -767,6 +767,18 @@
       "days_to_close": 0.0
     },
     {
+      "question": "Will Trump livestream an execution?",
+      "url": "https://manifold.markets/Velaris/will-trump-livestream-an-execution",
+      "side": "NO",
+      "shares": 68.7,
+      "invested": 57.0,
+      "value": 58.1,
+      "profit": 1.1,
+      "prob": 0.155,
+      "closed": false,
+      "days_to_close": 5.5
+    },
+    {
       "question": "Will ELK still be a major problem by Oct 20, 2026 (according to me)?",
       "url": "https://manifold.markets/LeoGao/will-elk-still-be-a-major-problem-b",
       "side": "YES",
@@ -800,7 +812,7 @@
       "profit": 0.9,
       "prob": 0.246,
       "closed": false,
-      "days_to_close": 445.3
+      "days_to_close": 445.2
     },
     {
       "question": "Will JerryRigEveryting be able to bend the iPhone Duo in half with his bare hands?",
@@ -813,18 +825,6 @@
       "prob": 0.454,
       "closed": false,
       "days_to_close": 19.0
-    },
-    {
-      "question": "Will Trump livestream an execution?",
-      "url": "https://manifold.markets/Velaris/will-trump-livestream-an-execution",
-      "side": "NO",
-      "shares": 48.3,
-      "invested": 40.0,
-      "value": 42.7,
-      "profit": 2.7,
-      "prob": 0.116,
-      "closed": false,
-      "days_to_close": 5.6
     },
     {
       "question": "Will Geometry Dash 2.21 Update Will Be Released In August 13 2026?",
@@ -876,6 +876,30 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1791845969978,
+      "kind": "bet",
+      "question": "Will Trump livestream an execution?",
+      "url": "https://manifold.markets/Velaris/will-trump-livestream-an-execution",
+      "market_prob": 0.17562630929677572,
+      "model_prob": 0.05,
+      "confidence": "high",
+      "amount": 17.0,
+      "outcome": "NO",
+      "thinking": "",
+      "uncertainty": "Whether Trump will ultimately override legal and military restrictions to order a public broadcast.",
+      "resolution_risk": "Resolves YES if public live footage is obtainable, or NO if Trump explicitly states he is not going through with it.",
+      "evidence_for": [
+        "Defense Secretary Pete Hegseth announced in early October 2026 that Nidal Malik Hasan's execution would be broadcast live.",
+        "President Trump stated that the final decision on whether to livestream the execution is up to him, keeping the possibility alive."
+      ],
+      "evidence_against": [
+        "Military executions in the U.S. have not occurred since 1961, and federal/military protocols strictly prohibit broadcasting executions to the general public.",
+        "Extensive legal challenges, appeals, and court stays are virtually guaranteed for a military death penalty case, making the scheduled December 3, 2026 date highly uncertain.",
+        "Severe domestic and international pushback from lawmakers and the UN makes actual implementation politically toxic and logistically difficult."
+      ],
+      "reason": "edge 0.126, kelly 0.72, decay 1.00, bound by balance reserve"
+    },
     {
       "ts": 1791845665057,
       "kind": "no_trade",
@@ -1201,30 +1225,6 @@
       "evidence_against": [
         "Brent crude recently dropped after geopolitical strikes on Iran were paused, which could accelerate wholesale gasoline price declines.",
         "Potential emergency government interventions or Strategic Petroleum Reserve releases before the midterms could accelerate downward pressure."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1791766744916,
-      "kind": "no_trade",
-      "question": "Will Pentagon get $200 billion in funds for the Iran War before the 2026 midterms?",
-      "url": "https://manifold.markets/MikkoN/will-pentagon-get-200-billion-in-fu",
-      "market_prob": 0.05040139329233256,
-      "model_prob": 0.01,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With 22 days until the midterms, Congress is in recess operating under a continuing resolution through December. The formal supplemental request was downscaled to $87.6B ($67.1B for defense), and no legal mechanism exists for the executive branch to approve $200B independently.",
-      "uncertainty": "Whether Congress holds an unprecedented emergency session before November 3 and passes more than double the White House's requested defense supplemental.",
-      "resolution_risk": "Broad interpretation of non-appropriated authorizations or emergency executive actions, though the criteria specifically require 'legally binding approval for at least $200 billion'.",
-      "evidence_for": [
-        "The Pentagon initially floated a $200 billion supplemental request in March 2026."
-      ],
-      "evidence_against": [
-        "With only 22 days until the 2026 midterms, Congress is in campaign recess after passing continuing resolutions through December 2026.",
-        "The actual formal supplemental request submitted to Congress was scaled down to $87.6 billion ($67.1 billion for defense), far below the $200 billion threshold.",
-        "Congress has not passed any Iran War supplemental or AUMF to date.",
-        "Executive reprogramming mechanisms are capped at single-digit billions, making non-congressional legally binding funding of $200 billion legally impossible."
       ],
       "reason": "size floored to zero by balance reserve"
     }
