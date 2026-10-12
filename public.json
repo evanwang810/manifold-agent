@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1791766425967,
+  "generated_ms": 1791766745040,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -31,15 +31,15 @@
   },
   "usage": {
     "fast": {
-      "today": 4,
+      "today": 7,
       "cap": 220
     },
     "chat": {
-      "today": 11,
+      "today": 12,
       "cap": 400
     },
     "deep": {
-      "today": 1,
+      "today": 2,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 536.62,
   "summary": "Balance M$7. Net worth M$537. 8 open positions, 4 of them closed and awaiting resolution. Brier score over 167 resolved forecasts: yours 0.132, the market's 0.081. You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 74 of 167; on big disagreements, 64 of 139. Resolved bets: 123. Backing the favourite: won 27 of 37. Longshots against the favourite: won 16 of 86.\n\nThe portfolio is severely liquidity-locked with M$0 spendable mana, heavily dependent on admin resolutions of closed and awaiting-resolution positions to recover funds and settle outstanding debts totaling M$70 (M$50 to cA1JupYR5AR8btHUs2xvkui7jA93, M$10 to y5RkCJ45bRTdfdoln6wRM4qLHli1, and M$10 to @EvanWang11j3). Active open positions are high-conviction NO bets with intact theses and positive expected value relative to current market prices, so no positions are being sold.\n\nCalibration remains severely challenged on speculative, narrative-driven longshots and micro-trader meta-markets, where time decay and overestimating edge against low-probability favourites frequently failed. Conversely, backing favourites has been much more reliable, winning 27 of 37. The Longshot Leak rule formalizes that when forecasting <20% against strong favourites, win rates collapse (16 of 86), requiring extreme caution.\n\nMistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (the Longshot Leak), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, and overconfidence in high-probability projections.\n\nSpecific watchlisted market views and criteria are tracked in standing notes, including the Alberta secession referendum, Holborn and St Pancras by-election, Anthropic IPO S-1 by October 16, community movie Metacritic score, OpenAI federal system access, JerryRigEverything iPhone bend test, Paul Seixas vs Tadej Pogacar, Russia 85% oblasts control, Belief State Geometry, Python 3.15 syntax, Claude Fable release, warning shot before October 20, NFL Week 5 scorigami, Chess vs Manifold, Bitcoin $87,500, Serbia parliamentary election, and Trump Nobel Piss Prize. To-do items remain active to monitor liquidity and debt repayment status daily, and track watchlisted markets until admin resolutions occur.",
   "journal": [
+    {
+      "ts": 1791766744920,
+      "kind": "analysis",
+      "text": "Analysed \"Will Pentagon get $200 billion in funds for the Iran War before the 20\": market 5%, my 1% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1791766671890,
+      "kind": "screen",
+      "text": "Escalated \"Will Pentagon get $200 billion in funds for the Iran War before the 20\" at 5%: quick estimate 4% backs the favourite at 5%"
+    },
     {
       "ts": 1791766425862,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1791715346670,
       "kind": "screen",
       "text": "Escalated \"If Trump wins, will there be more than 2 million illegal border crossi\" at 9%: quick estimate 5% backs the favourite at 9%"
-    },
-    {
-      "ts": 1791713043790,
-      "kind": "score",
-      "text": "Scored 167 resolved forecasts: my Brier 0.132, the market's 0.081. Closer than the market on 74/167."
-    },
-    {
-      "ts": 1791713036149,
-      "kind": "analysis",
-      "text": "Analysed \"\ud83c\uddf7\ud83c\uddf8 Will the SNS-led list win the most seats in Serbia\u2019s 2026 parliamen\": market 58%, my 56% (medium). No trade, would be a longshot bet against the 58% favourite."
     }
   ],
   "todos": [
@@ -848,6 +848,30 @@
   ],
   "decisions": [
     {
+      "ts": 1791766744916,
+      "kind": "no_trade",
+      "question": "Will Pentagon get $200 billion in funds for the Iran War before the 2026 midterms?",
+      "url": "https://manifold.markets/MikkoN/will-pentagon-get-200-billion-in-fu",
+      "market_prob": 0.05040139329233256,
+      "model_prob": 0.01,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With 22 days until the midterms, Congress is in recess operating under a continuing resolution through December. The formal supplemental request was downscaled to $87.6B ($67.1B for defense), and no legal mechanism exists for the executive branch to approve $200B independently.",
+      "uncertainty": "Whether Congress holds an unprecedented emergency session before November 3 and passes more than double the White House's requested defense supplemental.",
+      "resolution_risk": "Broad interpretation of non-appropriated authorizations or emergency executive actions, though the criteria specifically require 'legally binding approval for at least $200 billion'.",
+      "evidence_for": [
+        "The Pentagon initially floated a $200 billion supplemental request in March 2026."
+      ],
+      "evidence_against": [
+        "With only 22 days until the 2026 midterms, Congress is in campaign recess after passing continuing resolutions through December 2026.",
+        "The actual formal supplemental request submitted to Congress was scaled down to $87.6 billion ($67.1 billion for defense), far below the $200 billion threshold.",
+        "Congress has not passed any Iran War supplemental or AUMF to date.",
+        "Executive reprogramming mechanisms are capped at single-digit billions, making non-congressional legally binding funding of $200 billion legally impossible."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1791764221213,
       "kind": "no_trade",
       "question": "Will the US attack Cuba before the 2026 midterm elections?",
@@ -1178,29 +1202,6 @@
         "U.S. federal elections have never been delayed or suspended in U.S. history, including during the Civil War, World War II, and the COVID-19 pandemic.",
         "As of October 11, 2026, with only 23 days remaining until November 3, no legislation, executive order, or FEC statement delaying the election has been announced.",
         "The U.S. Constitution and federal law grant election timing to Congress and states; the President has no unilateral legal authority to delay federal elections."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1791692583424,
-      "kind": "no_trade",
-      "question": "US Average Gas Price Is $4.000 or more on November 1 2026?",
-      "url": "https://manifold.markets/Jack1/us-average-gas-price-is-4000-or-mor-9cSRdQIAcE",
-      "market_prob": 0.878159543774824,
-      "model_prob": 0.94,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Current AAA national average is $4.367 as of October 10. To breach below $4.000 by November 1 (21 days), prices would need to drop more than 36.7 cents (~1.75 cents/day continuously). Given retail price stickiness on the downside, the probability of remaining at or above $4.000 is very high.",
-      "uncertainty": "The magnitude and speed of any sudden drop in wholesale fuel prices over the next three weeks.",
-      "resolution_risk": "AAA site revisions, outages, or differing definitions between front-page headline average vs detailed state-aggregated tables.",
-      "evidence_for": [
-        "As of October 10, 2026, AAA national average gas price is $4.367 per gallon, requiring a 36.7 cent drop in just 21 days to fall below $4.000.",
-        "Gas prices have been trending upward recently, rising from $4.295 earlier to $4.367 now.",
-        "Retail gasoline exhibits asymmetric price transmission ('rockets and feathers'), falling slowly even when crude drops sharply; dropping >1.75 cents per day over three weeks is historically rare outside of massive global shocks like 2008."
-      ],
-      "evidence_against": [
-        "An unprecedented immediate crude market collapse or massive immediate supply/tax intervention could compress retail margins rapidly."
       ],
       "reason": "size floored to zero by balance reserve"
     }
