@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1791875207086,
+  "generated_ms": 1791875846794,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemma-4-31b-it",
+      "active": "gemma-4-26b-a4b-it",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -31,15 +31,15 @@
   },
   "usage": {
     "fast": {
-      "today": 22,
+      "today": 25,
       "cap": 220
     },
     "chat": {
-      "today": 80,
+      "today": 82,
       "cap": 400
     },
     "deep": {
-      "today": 9,
+      "today": 10,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 524.53,
   "summary": "Balance M$119. Net worth M$527. 8 open positions, 3 of them closed and awaiting resolution. Brier score over 170 resolved forecasts: yours 0.130, the market's 0.080. You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 77 of 170; on big disagreements, 67 of 142. Resolved bets: 127. Backing the favourite: won 28 of 38. Longshots against the favourite: won 19 of 89. Outstanding debts are settled, while @Gen's M$50 gift remains with you until you are richer.\n\nCalibration remains severely challenged on speculative, narrative-driven longshots and micro-trader meta-markets, where time decay and overestimating edge against low-probability favourites frequently failed. You forecast worse than the market price, and your disagreements have mostly been you being wrong, not the market. Conversely, backing favourites has been much more reliable, winning 28 of 38. The Longshot Leak rule formalizes that when forecasting <20% against strong favourites, win rates collapse (19 of 89), requiring extreme caution. To counteract this, recent portfolio risk management actions actively targeted and sold off vulnerable <20% NO positions such as the Trump livestream execution, Irkutsk plague, Russia 85% control, and Python syntax additions to recover spendable liquidity and align holdings with historical failure modes.\n\nMistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (the Longshot Leak), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, and overconfidence in high-probability projections.\n\nSpecific watchlisted market views and criteria remain relevant for active and upcoming observations, including the Alberta secession referendum, Holborn and St Pancras by-election, Anthropic IPO S-1 by October 16 and October 31, community movie Metacritic score, OpenAI federal system access, JerryRigEverything iPhone bend test, Paul Seixas vs Tadej Pogacar, Russia 85% and 95% oblasts control, Belief State Geometry, Python 3.15 syntax, Claude Fable release, warning shot before October 20, NFL Week 5 scorigami, Chess vs Manifold, Bitcoin $87,500, Serbia parliamentary election, Trump Nobel Peace Prize, Magnus Carlsen FIDE rating, and ELK problem resolution. To-do items are active to monitor liquidity daily and track watchlisted markets until admin resolutions occur.",
   "journal": [
+    {
+      "ts": 1791875846654,
+      "kind": "trade",
+      "text": "Limit order M$41 YES on \"Bitcoin $87,500 in October 2026?\" at 54%, my estimate 71% (medium). Because: With spot trading in the mid-80k range and 18 days left in October, BTC needs roughly a 2-5% move to tap $87,500 on a 1-minute Binance candle. At normal crypto volatility, an intraday touch is considerably more likely than not."
+    },
+    {
+      "ts": 1791875742804,
+      "kind": "screen",
+      "text": "Escalated \"Bitcoin $87,500 in October 2026?\" at 54%: quick estimate 62% backs the favourite at 54%"
+    },
     {
       "ts": 1791874047810,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1791841895475,
       "kind": "move",
       "text": "\"Will Trump livestream an execution?\" moved -6% to 9%. Holding NO, P/L M$+4."
-    },
-    {
-      "ts": 1791832796137,
-      "kind": "book",
-      "text": "Looked over 10 positions: The book is well-balanced across high-conviction positions with intact theses, mostly NO bets on improbable events and a strong YES on ELK. Given the recent Brier scores and the Longshot Leak standing note, all open positions continue to look correct at current prices. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1791831084149,
-      "kind": "position",
-      "text": "Opened 63 YES on \"Will ELK still be a major problem by Oct 20, 2026 (according to me)?\" at 84%, M$53 in."
     }
   ],
   "todos": [
@@ -803,6 +803,18 @@
       "days_to_close": 18.7
     },
     {
+      "question": "Bitcoin $87,500 in October 2026?",
+      "url": "https://manifold.markets/Jack1/bitcoin-87500-in-october-2026",
+      "side": "YES",
+      "shares": 74.7,
+      "invested": 41.0,
+      "value": 41.7,
+      "profit": 0.7,
+      "prob": 0.558,
+      "closed": false,
+      "days_to_close": 18.7
+    },
+    {
       "question": "Will Geometry Dash 2.21 Update Will Be Released In August 13 2026?",
       "url": "https://manifold.markets/BetBeginner_098/will-geometry-dash-221-update-will",
       "side": "NO",
@@ -840,6 +852,31 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1791875846650,
+      "kind": "bet",
+      "question": "Bitcoin $87,500 in October 2026?",
+      "url": "https://manifold.markets/Jack1/bitcoin-87500-in-october-2026",
+      "market_prob": 0.54,
+      "model_prob": 0.71,
+      "confidence": "medium",
+      "amount": 41.0,
+      "outcome": "YES",
+      "thinking": "With spot trading in the mid-80k range and 18 days left in October, BTC needs roughly a 2-5% move to tap $87,500 on a 1-minute Binance candle. At normal crypto volatility, an intraday touch is considerably more likely than not.",
+      "uncertainty": "Bitcoin short-term price trend and volatility over the remaining 18 days of October.",
+      "resolution_risk": "Discrepancies in Binance 1m candle reporting or exchange wick anomalies relative to other spot exchanges.",
+      "evidence_for": [
+        "Bitcoin is trading within 2% to 5% of the $87,500 threshold ($83.1k\u2013$86.2k) with 18 days remaining in October 2026.",
+        "The resolution criteria only require a single 1-minute candle high on Binance BTC/USDT to reach $87,500.00, making an intraday wick sufficient.",
+        "Typical Bitcoin volatility over an 18-day horizon comfortably encompasses a 2-5% upward touch under standard barrier-option models."
+      ],
+      "evidence_against": [
+        "Price experienced downward pressure from $86.2k on October 5-6 down toward $83.1k by October 11.",
+        "Federal Reserve meeting on October 27-28 with high expectations of a rate hike could constrain crypto upside.",
+        "Each passing day without a rally decreases remaining time variance."
+      ],
+      "reason": "edge 0.170, kelly 0.37, decay 0.53, bound by kelly target"
+    },
     {
       "ts": 1791873066524,
       "kind": "no_trade",
@@ -1163,30 +1200,6 @@
         "The market closes and resolves in just 8 days on October 20, 2026.",
         "Worst-case ELK is a major unsolved theoretical problem in AI alignment with no known general solution.",
         "Resolution criteria explicitly exclude practical heuristics, weakened problem statements, or specific NN architecture shortcuts."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1791805218638,
-      "kind": "no_trade",
-      "question": "Will Anthropic\u2019s IPO S-1 be public by 16 October 2026?",
-      "url": "https://manifold.markets/jim/will-anthropics-ipo-s1-be-public-by",
-      "market_prob": 0.15315924146259863,
-      "model_prob": 0.09,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With reporting indicating the IPO roadshow was pushed to the week of November 9, the mandatory 15-day pre-roadshow public filing window points toward October 23\u201326. While an early release around the October 14 investor day is possible, late October remains substantially more likely.",
-      "uncertainty": "Whether Anthropic decides to file the S-1 publicly in conjunction with its October 14 investor day rather than waiting for the standard 15-day pre-roadshow window around October 23.",
-      "resolution_risk": "A partial or preliminary filing on EDGAR counts as YES, even if pricing terms are incomplete or postponed later.",
-      "evidence_for": [
-        "Anthropic already submitted a confidential draft S-1 on June 1, 2026, so the document is mature and SEC review rounds may be completed.",
-        "Anthropic has an investor day scheduled for October 14, 2026, which could coincide with or trigger a public filing to provide disclosure transparency."
-      ],
-      "evidence_against": [
-        "Under SEC JOBS Act rules, public filing is only required 15 days before commencing the roadshow; reporting points to a roadshow start the week of November 9, implying a public filing target between October 23 and 26.",
-        "Financial reporting specifically indicates the IPO timeline has slipped into November, with public S-1 filing targeted for late October rather than mid-October.",
-        "There are only 4 days remaining until the October 16 deadline and no public filing has appeared on EDGAR as of October 12."
       ],
       "reason": "size floored to zero by balance reserve"
     }
