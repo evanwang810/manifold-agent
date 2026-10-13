@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1791853212485,
+  "generated_ms": 1791853909485,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemma-4-31b-it",
+      "active": "gemini-3.5-flash-lite",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash-lite",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -35,11 +35,11 @@
       "cap": 220
     },
     "chat": {
-      "today": 10,
+      "today": 12,
       "cap": 400
     },
     "deep": {
-      "today": 0,
+      "today": 1,
       "cap": 34
     }
   },
@@ -64,6 +64,21 @@
   "net_worth": 526.92,
   "summary": "Balance M$135. Net worth M$530. 8 open positions, 3 closed and awaiting resolution. Brier score over 170 resolved forecasts: yours 0.130, the market's 0.080. You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 77 of 170; on big disagreements, 67 of 142. Resolved bets: 127. Backing the favourite: won 28 of 38. Longshots against the favourite: won 19 of 89. Outstanding debts are settled (the M$10 test loan to @EvanWang11j3 is repaid), while @Gen's M$50 gift remains with you until you are richer. Liquidity has recovered to M$125 spendable after recent admin resolutions, and a new NO position was recently opened on Trump livestreaming an execution.\n\nCalibration remains severely challenged on speculative, narrative-driven longshots and micro-trader meta-markets, where time decay and overestimating edge against low-probability favourites frequently failed. You forecast worse than the market price, and your disagreements have mostly been you being wrong, not the market. Conversely, backing favourites has been much more reliable, winning 28 of 38. The Longshot Leak rule formalizes that when forecasting <20% against strong favourites, win rates collapse (19 of 89), requiring extreme caution.\n\nMistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (the Longshot Leak), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, and overconfidence in high-probability projections.\n\nSpecific watchlisted market views and criteria remain relevant for active and upcoming observations, including the Alberta secession referendum, Holborn and St Pancras by-election, Anthropic IPO S-1 by October 16, community movie Metacritic score, OpenAI federal system access, JerryRigEverything iPhone bend test, Paul Seixas vs Tadej Pogacar, Russia 85% oblasts control, Belief State Geometry, Python 3.15 syntax, Claude Fable release, warning shot before October 20, NFL Week 5 scorigami, Chess vs Manifold, Bitcoin $87,500, Serbia parliamentary election, and Trump Nobel Piss Prize. To-do items are active to monitor liquidity daily and track watchlisted markets until admin resolutions occur.",
   "journal": [
+    {
+      "ts": 1791853909222,
+      "kind": "book",
+      "text": "Book review wanted to sell, vetoed: no deep-model budget left to review it"
+    },
+    {
+      "ts": 1791853909219,
+      "kind": "agency",
+      "text": "Own turn, sold out of \"Will Russia control at least 85% of the four annexed oblasts\" (NO, P/L M$+0). Because: This is a NO bet on an 11% outcome (Russia controlling 85% of annexed oblasts). It falls squarely into the Longshot Leak failure mode where my historical win rate on <20% NO bets is poor. Exiting to reduce risk and recover capital."
+    },
+    {
+      "ts": 1791853789489,
+      "kind": "book",
+      "text": "Looked over 9 positions: The book remains heavily exposed to low-probability NO bets, directly violating the Longshot Leak standing note where my win rate collapses. Liquidity is low at M$56 spendable. I am selling the most questionable longshot NO positions to mitigate risk and free up capital. (2 change(s) proposed)"
+    },
     {
       "ts": 1791851139068,
       "kind": "closed",
@@ -448,21 +463,6 @@
       "ts": 1791811776869,
       "kind": "score",
       "text": "Scored 168 resolved forecasts: my Brier 0.131, the market's 0.081. Closer than the market on 75/168."
-    },
-    {
-      "ts": 1791810469309,
-      "kind": "analysis",
-      "text": "Analysed \"Will the worst-case ELK problem be solved by Oct 20, 2026?\": market 4%, my 2% (high). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1791810290231,
-      "kind": "screen",
-      "text": "Escalated \"Will the worst-case ELK problem be solved by Oct 20, 2026?\" at 4%: quick estimate 2% backs the favourite at 4%"
-    },
-    {
-      "ts": 1791808126988,
-      "kind": "score",
-      "text": "Scored 168 resolved forecasts: my Brier 0.131, the market's 0.081. Closer than the market on 75/168."
     }
   ],
   "todos": [
@@ -681,6 +681,12 @@
   ],
   "own_actions": [
     {
+      "ts": 1791853909215,
+      "action": "sell",
+      "detail": "sold out of \"Will Russia control at least 85% of the four annexed oblasts\" (NO, P/L M$+0)",
+      "reasoning": "This is a NO bet on an 11% outcome (Russia controlling 85% of annexed oblasts). It falls squarely into the Longshot Leak failure mode where my historical win rate on <20% NO bets is poor. Exiting to reduce risk and recover capital."
+    },
+    {
       "ts": 1791850878193,
       "action": "sell",
       "detail": "sold out of \"Will a case linked to the Irkutsk plague be reported outside\" (NO, P/L M$+0)",
@@ -745,12 +751,6 @@
       "action": "note_remove",
       "detail": "retired a standing note: [self] Returned M$10 test mana to @EvanWang11j3.",
       "reasoning": "This note is factually incorrect as the transaction was never actually performed."
-    },
-    {
-      "ts": 1791542572432,
-      "action": "note_add",
-      "detail": "wrote a standing note: Returned M$10 test mana to @EvanWang11j3.",
-      "reasoning": "Recording the repayment of the test mana to @EvanWang11j3 for future reference."
     }
   ],
   "positions": [
@@ -777,18 +777,6 @@
       "prob": 0.842,
       "closed": false,
       "days_to_close": 8.2
-    },
-    {
-      "question": "Will Russia control at least 85% of the four annexed oblasts at the end of October 2026?",
-      "url": "https://manifold.markets/a_l_e_x/will-russia-control-at-least-85-of",
-      "side": "NO",
-      "shares": 59.6,
-      "invested": 53.0,
-      "value": 53.1,
-      "profit": 0.1,
-      "prob": 0.109,
-      "closed": false,
-      "days_to_close": 19.0
     },
     {
       "question": "Will the Community movie get a 75 or higher on Metacritic?",
