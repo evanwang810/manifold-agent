@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1791872101335,
+  "generated_ms": 1791872707646,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemma-4-26b-a4b-it",
+      "active": "gemma-4-31b-it",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash-lite",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -35,11 +35,11 @@
       "cap": 220
     },
     "chat": {
-      "today": 70,
+      "today": 72,
       "cap": 400
     },
     "deep": {
-      "today": 7,
+      "today": 8,
       "cap": 34
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 524.53,
   "summary": "Balance M$119. Net worth M$527. 8 open positions, 3 of them closed and awaiting resolution. Brier score over 170 resolved forecasts: yours 0.130, the market's 0.080. You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 77 of 170; on big disagreements, 67 of 142. Resolved bets: 127. Backing the favourite: won 28 of 38. Longshots against the favourite: won 19 of 89. Outstanding debts are settled, while @Gen's M$50 gift remains with you until you are richer.\n\nCalibration remains severely challenged on speculative, narrative-driven longshots and micro-trader meta-markets, where time decay and overestimating edge against low-probability favourites frequently failed. You forecast worse than the market price, and your disagreements have mostly been you being wrong, not the market. Conversely, backing favourites has been much more reliable, winning 28 of 38. The Longshot Leak rule formalizes that when forecasting <20% against strong favourites, win rates collapse (19 of 89), requiring extreme caution. To counteract this, recent portfolio risk management actions actively targeted and sold off vulnerable <20% NO positions such as the Trump livestream execution, Irkutsk plague, Russia 85% control, and Python syntax additions to recover spendable liquidity and align holdings with historical failure modes.\n\nMistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (the Longshot Leak), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, and overconfidence in high-probability projections.\n\nSpecific watchlisted market views and criteria remain relevant for active and upcoming observations, including the Alberta secession referendum, Holborn and St Pancras by-election, Anthropic IPO S-1 by October 16 and October 31, community movie Metacritic score, OpenAI federal system access, JerryRigEverything iPhone bend test, Paul Seixas vs Tadej Pogacar, Russia 85% and 95% oblasts control, Belief State Geometry, Python 3.15 syntax, Claude Fable release, warning shot before October 20, NFL Week 5 scorigami, Chess vs Manifold, Bitcoin $87,500, Serbia parliamentary election, Trump Nobel Peace Prize, Magnus Carlsen FIDE rating, and ELK problem resolution. To-do items are active to monitor liquidity daily and track watchlisted markets until admin resolutions occur.",
   "journal": [
+    {
+      "ts": 1791872707424,
+      "kind": "agency",
+      "text": "Own turn, sold out of \"U.S. federal government announces delay or suspension of 202\" (NO, P/L M$+0). Because: Violates Longshot Leak rule (<20% NO). Historical win rates on these positions are too low to justify the risk, even with a strong thesis."
+    },
+    {
+      "ts": 1791872600601,
+      "kind": "book",
+      "text": "Looked over 8 positions: The book is generally healthy, focusing on high-probability favorites. However, the Midterm delay position is a textbook 'Longshot Leak' (<20% NO), which historically leads to poor win rates regardless of the apparent edge. (1 change(s) proposed)"
+    },
     {
       "ts": 1791870614998,
       "kind": "position",
@@ -453,16 +463,6 @@
       "ts": 1791829049083,
       "kind": "book",
       "text": "Looked over 9 positions: Portfolio consists primarily of high-conviction NO positions on longshot outcomes, backed by solid current performance and stable liquidity. No changes are warranted today as all theses remain intact. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1791828567214,
-      "kind": "position",
-      "text": "Opened 60 NO on \"Will Russia control at least 85% of the four annexed oblasts at the end of Octob\" at 11%, M$53 in."
-    },
-    {
-      "ts": 1791828380608,
-      "kind": "trade",
-      "text": "Limit order M$53 NO on \"Will Russia control at least 85% of the four annexed oblasts at the en\" at 11%, my estimate 2% (high). Because: Russia controls roughly 81-82% of the four oblasts. Advancing to 85% requires thousands of square kilometers in weeks\u2014far beyond the current pace of advances."
     }
   ],
   "todos": [
@@ -681,6 +681,12 @@
   ],
   "own_actions": [
     {
+      "ts": 1791872707420,
+      "action": "sell",
+      "detail": "sold out of \"U.S. federal government announces delay or suspension of 202\" (NO, P/L M$+0)",
+      "reasoning": "Violates Longshot Leak rule (<20% NO). Historical win rates on these positions are too low to justify the risk, even with a strong thesis."
+    },
+    {
       "ts": 1791869926108,
       "action": "add",
       "detail": "added M$25 YES to \"US Average Gas Price Is $4.000 or more on November 1 2026?\"",
@@ -745,12 +751,6 @@
       "action": "note_remove",
       "detail": "retired a standing note: [self] Persistent ledger discrepancy: attempted to repay @EvanWang11j3 M$10 multiple times using the reserve, but the le",
       "reasoning": "This note is redundant and superseded by the more definitive note that the failure to update the ledger is a systemic issue."
-    },
-    {
-      "ts": 1791648206615,
-      "action": "todo_done",
-      "detail": "ticked off: Seek disconfirming evidence for 'Warning shot before October 20' market to avoid Narrative Trap before liquidity returns",
-      "reasoning": "I analyzed this market at 07:29Z and determined the current price is unattractive for a YES bet and not worth a NO bet given my liquidity constraints."
     }
   ],
   "positions": [
@@ -789,18 +789,6 @@
       "prob": 0.842,
       "closed": false,
       "days_to_close": 8.0
-    },
-    {
-      "question": "U.S. federal government announces delay or suspension of 2026 midterm elections before November 3, 2026",
-      "url": "https://manifold.markets/jgyou/us-federal-government-announces-del",
-      "side": "NO",
-      "shares": 53.6,
-      "invested": 52.0,
-      "value": 52.0,
-      "profit": 0.0,
-      "prob": 0.03,
-      "closed": false,
-      "days_to_close": 19.7
     },
     {
       "question": "Will JerryRigEveryting be able to bend the iPhone Duo in half with his bare hands?",
