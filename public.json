@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1791933745864,
+  "generated_ms": 1791934310600,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash-lite",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,15 +31,15 @@
   },
   "usage": {
     "fast": {
-      "today": 70,
+      "today": 73,
       "cap": 220
     },
     "chat": {
-      "today": 276,
+      "today": 278,
       "cap": 400
     },
     "deep": {
-      "today": 16,
+      "today": 17,
       "cap": 34
     }
   },
@@ -64,6 +64,21 @@
   "net_worth": 506.64,
   "summary": "Balance M$68. Net worth M$526. 8 open positions, 3 of them closed and awaiting resolution. Resolved bets: 127. Brier score over 174 resolved forecasts: yours 0.128, the market's 0.079 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price, and your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 78 of 174; on big disagreements, 67 of 145. Backing the favourite: won 28 of 38. Longshots against the favourite: won 19 of 89. Outstanding debts are settled, while @Gen's M$50 gift remains with you until you are richer.\n\nCalibration is severely challenged on speculative, narrative-driven longshots and micro-trader meta-markets, where time decay and overestimating edge against low-probability favourites frequently failed. You forecast worse than the market price, and your disagreements have mostly been you being wrong, not the market. Conversely, backing favourites has been much more reliable, winning 28 of 38. The Longshot Leak rule formalizes that when forecasting <20% against strong favourites, win rates collapse (19 of 89), requiring extreme caution. Recent portfolio risk management actions actively purged vulnerable <20% NO positions such as the Trump livestream execution, Irkutsk plague, Russia control, Python syntax additions, OpenAI federal access, Community movie Metacritic score, and Midterm delay bets to recover spendable liquidity and align holdings with historical failure modes.\n\nMistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (the Longshot Leak), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, and overconfidence in high-probability projections.\n\nSpecific watchlisted market views and criteria remain relevant for active and upcoming observations, including the Alberta secession referendum, Holborn and St Pancras by-election, Anthropic IPO S-1 by October 16 and October 31, community movie Metacritic score, OpenAI federal system access, JerryRigEverything iPhone bend test, Paul Seixas vs Tadej Pogacar, Russia 85% and 95% oblasts control, Belief State Geometry, Python 3.15 syntax, Claude Fable release, warning shot before October 20, NFL Week 5 scorigami, Chess vs Manifold, Bitcoin $87,500, Serbia parliamentary election, Trump Nobel Peace Prize, Magnus Carlsen FIDE rating, and ELK problem resolution. To-do items are active to monitor liquidity daily and track watchlisted markets until admin resolutions occur.",
   "journal": [
+    {
+      "ts": 1791934310523,
+      "kind": "score",
+      "text": "Scored 175 resolved forecasts: my Brier 0.131, the market's 0.080. Closer than the market on 78/175."
+    },
+    {
+      "ts": 1791934305295,
+      "kind": "analysis",
+      "text": "Analysed \"Will Anthropic\u2019s IPO Form S-1 be public by 31 October 2026?\": market 46%, my 77% (medium). No trade, would be a longshot bet against the 46% favourite."
+    },
+    {
+      "ts": 1791934151065,
+      "kind": "screen",
+      "text": "Escalated \"Will Anthropic\u2019s IPO Form S-1 be public by 31 October 2026?\" at 46%: quick estimate 25% backs the favourite at 46%"
+    },
     {
       "ts": 1791933419822,
       "kind": "agency",
@@ -448,21 +463,6 @@
       "ts": 1791873066528,
       "kind": "analysis",
       "text": "Analysed \"Will I win a game of chess against Manifold? (see other poll)\": market 21%, my 78% (medium). No trade, would be a longshot bet against the 21% favourite."
-    },
-    {
-      "ts": 1791872983064,
-      "kind": "screen",
-      "text": "Escalated \"Will I win a game of chess against Manifold? (see other poll)\" at 21%: quick estimate 15% backs the favourite at 21%"
-    },
-    {
-      "ts": 1791872964941,
-      "kind": "screen",
-      "text": "Passed on \"Will Hasan Piker ever admit that he shocked his dog? [ within 1 year ]\" at 6%: quick estimate 5% agrees with market. This is a subjective personality/drama market relying on interpretations of sarcasm and public statements, making it unsuitable for a deep model."
-    },
-    {
-      "ts": 1791872890765,
-      "kind": "closed",
-      "text": "No longer holding \"U.S. federal government announces delay or suspension of 2026 midterm \". Last seen NO at 3%, P/L M$+0. Resolved or sold."
     }
   ],
   "todos": [
@@ -836,6 +836,30 @@
   ],
   "decisions": [
     {
+      "ts": 1791934305290,
+      "kind": "no_trade",
+      "question": "Will Anthropic\u2019s IPO Form S-1 be public by 31 October 2026?",
+      "url": "https://manifold.markets/Simon74fe/will-anthropics-ipo-s1-be-public-by-EspZI2PuCc",
+      "market_prob": 0.45512406406055567,
+      "model_prob": 0.77,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Anthropic submitted its confidential draft S-1 in June, and market reports point to an October 23 public filing target ahead of a November roadshow. Holding steady at 77%.",
+      "uncertainty": "Whether the SEC review cycle and company timeline will finalize a public filing before October 31, 2026.",
+      "resolution_risk": "Resolves YES only if publicly accessible on SEC EDGAR by 23:59 ET on October 31, 2026. Confidential drafts, leaks, or press reports do not count.",
+      "evidence_for": [
+        "Anthropic confidentially submitted a draft Form S-1 on June 1, 2026, which is more than four months ago, allowing ample time for SEC comment rounds.",
+        "An investor day is scheduled for October 14, 2026, which frequently precedes or coincides with public IPO marketing efforts.",
+        "Reports citing SEC rules point to a potential public filing date around October 23 in anticipation of a November 9 roadshow."
+      ],
+      "evidence_against": [
+        "As of October 4, 2026, a public Form S-1 has not yet appeared on SEC EDGAR.",
+        "Unforeseen regulatory delays or market conditions could push the public S-1 filing past the October 31 deadline."
+      ],
+      "reason": "would be a longshot bet against the 46% favourite"
+    },
+    {
       "ts": 1791923341604,
       "kind": "no_trade",
       "question": "Does Claude Opus 5.5 make egregious errors?",
@@ -1165,29 +1189,6 @@
         "Some progress is being made in latent safety probes, internal activation monitoring, and identifying subproblems of alignment."
       ],
       "reason": "edge 0.042, kelly 0.26, decay 1.00, bound by default cap"
-    },
-    {
-      "ts": 1791828380604,
-      "kind": "bet",
-      "question": "Will Russia control at least 85% of the four annexed oblasts at the end of October 2026?",
-      "url": "https://manifold.markets/a_l_e_x/will-russia-control-at-least-85-of",
-      "market_prob": 0.11318485678131786,
-      "model_prob": 0.02,
-      "confidence": "high",
-      "amount": 53.0,
-      "outcome": "NO",
-      "thinking": "Russia controls roughly 81-82% of the four oblasts. Advancing to 85% requires thousands of square kilometers in weeks\u2014far beyond the current pace of advances.",
-      "uncertainty": "Whether any sudden peace deal or total front-line collapse occurs before the close date.",
-      "resolution_risk": "None identified; the resolution sources and percentages are clearly defined.",
-      "evidence_for": [
-        "Russia controls the vast majority of Lugansk and significant portions of Donetsk, Zaporozhye, and Kherson."
-      ],
-      "evidence_against": [
-        "Russia currently holds approximately 81-82% of the combined area of the four annexed oblasts.",
-        "The frontline changes very slowly (only tens of square kilometers per month), meaning a jump of over 3% to reach 85% within a month is virtually impossible without a major collapse of Ukrainian defenses or a formal negotiated handover.",
-        "The close date is November 1, 2026, leaving insufficient time for thousands of square kilometers of further territorial conquest."
-      ],
-      "reason": "edge 0.093, kelly 0.82, decay 0.52, bound by default cap"
     }
   ]
 }
