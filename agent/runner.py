@@ -395,6 +395,7 @@ class Runner:
                         f"M${position.profit:+.0f} without much price change.",
                     )
             seen[position.contract_id] = {
+                "opened": (before or {}).get("opened") or int(time.time() * 1000),
                 "prob": position.last_prob,
                 "profit": position.profit,
                 "shares": position.shares,

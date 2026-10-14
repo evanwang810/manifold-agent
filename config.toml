@@ -199,8 +199,9 @@ conviction_max_days = 14
 conviction_min_edge = 0.12
 conviction_min_confidence = "medium"
 
-max_market_impact = 0.05      # never move the price more than 5pp with one order
-max_share_of_volume = 0.05
+# Every order is a limit order, so its price impact is capped by its own limit price.
+# That replaced the old impact and share-of-volume caps, which were what kept
+# positions small in thin markets.
 max_open_positions = 40
 daily_mana_budget = 500
 # Cash held back from every order. At 50 against a balance that had drifted down to

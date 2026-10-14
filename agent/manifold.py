@@ -274,17 +274,6 @@ class ManifoldClient:
             body["expiresAt"] = int(expires_at)
         return await self._request("POST", "/bet", json=body, idempotent=False)
 
-    async def probe_impact(
-        self, *, contract_id: str, amount: float, outcome: str
-    ) -> float | None:
-        """Return the probability this order would leave behind, without executing it."""
-        result = await self.place_bet(
-            contract_id=contract_id, amount=amount, outcome=outcome, dry_run=True
-        )
-        if not isinstance(result, dict):
-            return None
-        after = result.get("probAfter")
-        return float(after) if after is not None else None
 
     async def cancel_bet(self, bet_id: str) -> Any:
         if self.cfg.dry_run:

@@ -149,12 +149,29 @@ class Social:
         if not text:
             return False
 
+        # Manifold threads are one level deep: a reply has to hang off the top-level
+        # comment, and replying to a reply is a 400. Every answer the agent wrote to
+        # someone replying under its own comment failed that way, every tick, for
+        # weeks, and only ever reached a log warning. It now attaches to the root and
+        # @-mentions the person, which is how a threaded answer reads on Manifold.
+        by_id = {c.id: c for c in thread}
+        root = self._root_of(comment, by_id)
+        if root != comment.id and f"@{comment.username}".lower() not in text.lower():
+            text = f"@{comment.username} {text}"
         try:
             result = await self.client.post_comment(
-                contract_id=market.id, content=text, reply_to=comment.id
+                contract_id=market.id, content=text, reply_to=root
             )
         except ManifoldError as exc:
             log.warning("Reply failed on %s: %s", market.slug, exc)
+            self.memory.log_event(
+                "reply_failed", market=market.slug, to=comment.username,
+                error=str(exc)[:200],
+            )
+            if 400 <= exc.status < 500 and exc.status != 429:
+                # A request the API rejects will be rejected again next tick. Mark it
+                # handled so the same failure is not regenerated every three minutes.
+                self.memory.mark_replied(comment.id)
             return False
 
         self.memory.mark_replied(comment.id)

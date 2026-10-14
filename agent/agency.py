@@ -14,6 +14,7 @@ way, by the balance reserve and the daily mana budget.
 from __future__ import annotations
 
 import logging
+import time
 from dataclasses import dataclass
 from typing import Any
 
@@ -264,6 +265,20 @@ class Agency:
             # A closed market still appears in the book but the API answers 403 to any
             # order on it. Without this the agent proposes the same doomed sell every
             # turn, burns the turn on it, and learns nothing from the error.
+            if action.action == "sell":
+                opened = int(
+                    (self.memory.state.get("position_mark", {})
+                     .get(action.market_id) or {}).get("opened") or 0
+                )
+                held_hours = (time.time() * 1000 - opened) / 3_600_000 if opened else 1e9
+                if held_hours < self.cfg.agency.min_hold_hours:
+                    # The scan bought this hours ago on a deep, researched forecast.
+                    # The own turn runs on the cheap model with no research, and was
+                    # reversing those calls within the hour: Russia bought and sold
+                    # three times in three days, Trump twice in a day.
+                    log.info("Not selling %s: held %.0fh, minimum is %.0fh",
+                             action.market_id, held_hours, self.cfg.agency.min_hold_hours)
+                    return None
             if not held[action.market_id].tradable:
                 self.memory.observe(
                     "agency",
@@ -532,10 +547,17 @@ def _render_positions(positions: list[Position]) -> str:
             state = "closes within a day"
         else:
             state = f"{p.days_to_close:.0f}d to close"
+        # "60 NO at 20%" read as buying NO at 20%, i.e. a longshot, when it meant NO
+        # shares in a market at 20% YES, i.e. the favourite. The agent was selling the
+        # favourites the scanner had just bought because its track record says
+        # longshots lose. The price of the side held is stated outright now.
+        side_price = p.last_prob if p.side == "YES" else 1.0 - p.last_prob
+        kind = "the favourite" if side_price >= 0.5 else "a longshot"
         out.append(
-            f"- {p.contract_id} | \"{p.question[:70]}\" | {p.shares:.0f} {p.side} at "
-            f"{p.last_prob:.0%} | invested M${p.invested:.0f}, now worth M${p.value:.0f}, "
-            f"P/L M${p.profit:+.0f} ({pct:+.0f}%) | {state}"
+            f"- {p.contract_id} | \"{p.question[:70]}\" | {p.shares:.0f} {p.side} shares, "
+            f"{p.side} trading at {side_price:.0%} ({kind}) | invested "
+            f"M${p.invested:.0f}, now worth M${p.value:.0f}, P/L M${p.profit:+.0f} "
+            f"({pct:+.0f}%) | {state}"
         )
     return "\n".join(out)
 

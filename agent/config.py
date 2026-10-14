@@ -128,8 +128,6 @@ class RiskConfig:
     conviction_min_edge: float = 0.12
     conviction_min_confidence: str = "medium"
 
-    max_market_impact: float = 0.05
-    max_share_of_volume: float = 0.05
     max_open_positions: int = 40
     daily_mana_budget: float = 500
     min_balance_reserve: float = 50
@@ -168,6 +166,10 @@ class AgencyConfig:
     # A sweep over every open position, separate from the free turn and narrower: it may
     # only sell or add on markets already held, and each trade still goes to the reviewer.
     review_positions: bool = True
+    # A position the scan opened on a researched forecast cannot be sold by the own
+    # turn or book review, which run without research, until it has been held this
+    # long. Re-evaluation after a big price move still can, through the normal path.
+    min_hold_hours: float = 24
     min_minutes_between_book_reviews: float = 60
     # Sell and note actions skip the deep reviewer; only outgoing mana needs it.
     # The deep model reviews anything touching mana and can veto it or cut the amount.

@@ -21,6 +21,8 @@ CONFIDENCE_RANK = {"low": 0, "medium": 1, "high": 2}
 
 # Fraction of the theoretical edge we are willing to give up to the limit price.
 EDGE_GIVEBACK = 0.4
+# Conviction trades are the ones worth getting filled, so they reach further.
+CONVICTION_GIVEBACK = 0.65
 MAX_LIMIT_ORDER_HOURS = 24
 
 
@@ -94,8 +96,9 @@ class RiskEngine:
             ("kelly target", target),
             ("conviction cap" if conviction else "default cap", cap),
         ]
+        # No share-of-volume cap: every order is a limit order now, and a limit
+        # cannot move the price past itself, which is the thing that cap was for.
         hard: list[tuple[str, float]] = [
-            ("share of volume", cfg.max_share_of_volume * market.volume),
             ("daily budget", cfg.daily_mana_budget - budget_spent),
             ("balance reserve", balance - cfg.min_balance_reserve),
         ]
@@ -147,18 +150,21 @@ class RiskEngine:
     def _limit_terms(
         self, *, outcome: str, p: float, q: float, market: Market, conviction: bool
     ) -> tuple[float | None, int | None]:
-        """Conviction trades cross the spread. Everything else rests as a limit order.
+        """Every order is a limit order.
 
-        The limit price is set so a fill still leaves us most of the estimated edge,
-        which means a market that has already moved past us simply does not fill.
+        A limit order fills immediately against the market up to its limit price and
+        rests the remainder, so its price impact is capped by construction. That is
+        what lets it take a real position in a thin market, where a market order of
+        the same size would mostly be paying itself. Conviction trades used to cross
+        the spread as market orders, and the impact trimmer then cut several from
+        M$100-200 down to a fraction; now they simply accept a worse limit, giving up
+        more of the edge in exchange for filling more of the order.
         """
-        if conviction:
-            return None, None
-
+        giveback = CONVICTION_GIVEBACK if conviction else EDGE_GIVEBACK
         if outcome == "YES":
-            limit = q + EDGE_GIVEBACK * (p - q)
+            limit = q + giveback * (p - q)
         else:
-            limit = q - EDGE_GIVEBACK * (q - p)
+            limit = q - giveback * (q - p)
         limit = min(0.99, max(0.01, limit))
 
         horizon = now_ms() + MAX_LIMIT_ORDER_HOURS * 3_600_000
@@ -166,41 +172,3 @@ class RiskEngine:
             horizon = min(horizon, market.close_time - 3_600_000)
         return round(limit, 2), int(horizon)
 
-    async def fit_to_impact(
-        self,
-        sizing: Sizing,
-        *,
-        market: Market,
-        probe: Callable[[float], Awaitable[float | None]],
-    ) -> Sizing:
-        """Shrink an order until its price impact is acceptable.
-
-        Uses Manifold's dryRun bet to measure impact exactly rather than modelling the
-        AMM ourselves. Manifold's markets are thin, so a large order can move a price
-        several points on its own and then we are just trading against ourselves.
-        """
-        if sizing.limit_prob is not None:
-            # Resting orders cannot move the price past their own limit.
-            return sizing
-
-        amount = sizing.amount
-        for _ in range(6):
-            after = await probe(amount)
-            if after is None:
-                return sizing
-            impact = abs(after - market.probability)
-            if impact <= self.cfg.max_market_impact:
-                if amount != sizing.amount:
-                    log.info(
-                        "Trimmed order on %s from M$%.0f to M$%.0f to cap impact at %.1fpp",
-                        market.slug, sizing.amount, amount, self.cfg.max_market_impact * 100,
-                    )
-                    sizing.reason += f", trimmed from M${sizing.amount:.0f} for impact"
-                sizing.amount = amount
-                return sizing
-            amount = float(int(amount * 0.6))
-            if amount < 1:
-                return _no("any executable size would move the market too far")
-
-        sizing.amount = amount
-        return sizing

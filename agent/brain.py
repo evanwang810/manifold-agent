@@ -422,19 +422,7 @@ class Brain:
             budget_spent=self.memory.budget_spent(),
             open_position_count=open_positions,
         )
-        if not sizing.is_trade:
-            return sizing
-
-        async def probe(amount: float) -> float | None:
-            try:
-                return await self.client.probe_impact(
-                    contract_id=market.id, amount=amount, outcome=sizing.outcome
-                )
-            except ManifoldError as exc:
-                log.warning("Impact probe failed on %s: %s", market.slug, exc)
-                return None
-
-        return await self.risk.fit_to_impact(sizing, market=market, probe=probe)
+        return sizing
 
     async def _execute(
         self, market: Market, decision: Decision, sizing: Sizing
