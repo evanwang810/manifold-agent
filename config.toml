@@ -70,8 +70,13 @@ fallbacks = ["gemma-4-26b-a4b-it", "gemini-3.5-flash-lite"]
 [llm.deep]
 # Each of these carries its own daily quota, so the chain is also what the agent falls
 # back onto once the day's 20 on the newest model are gone rather than going dark.
-model = "gemini-3.7-flash"
-fallbacks = ["gemini-3.6-flash", "gemini-3.5-flash", "gemini-3.5-flash-lite"]
+# Probed 2026-10-14 with `check` (Actions tab, probe input): gemini-4-argon, both Pro
+# models and gemini-omni answer 429 on the first request, i.e. no free quota. They are
+# deliberately not in the chain: a model that always 429s costs a wasted request and a
+# throttle wait on every single call before the chain moves on. With billing enabled,
+# gemini-4-argon is the one to put first.
+model = "gemini-3.8-flash"
+fallbacks = ["gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash"]
 
 [search]
 # The fallback used when the LLM provider has no search of its own. Providers that do
@@ -114,16 +119,16 @@ escalate_logodds = 0.2
 # The deep tier is the binding constraint on the whole agent, and this cap is what
 # stops it before the provider does. Count the quota of every model in the deep chain,
 # not just the first: each has its own 20 a day, and the chain only advances once a
-# model actually answers 429. Two models means about 40, so 34 leaves headroom for
-# retries and for the reviewer calls the agency turn makes. At 34 analyses a day that
-# is roughly 130 markets screened at a 25% pass rate.
+# model actually answers 429. 3.8, 3.7 and 3.6 make about 60 (3.5 Flash is shared with
+# the fast tier's fallback, so it is not counted), and 54 leaves headroom for retries.
+# Every sell, add and transfer on the own turn now goes through this tier too.
 max_evaluations_per_tick = 2
 max_fast_calls_per_tick = 4
 max_chat_calls_per_tick = 4
 max_deep_calls_per_tick = 1
 max_fast_calls_per_day = 220
 max_chat_calls_per_day = 400
-max_deep_calls_per_day = 34
+max_deep_calls_per_day = 54
 # Without pacing a daily cap is gone in the first ten minutes and the agent is dark
 # until midnight. Calls are released against the clock instead, and the burst is how
 # far ahead of it a tier may run so it can still react to something immediately.

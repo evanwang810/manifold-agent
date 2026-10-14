@@ -107,8 +107,8 @@ fallbacks = ["gemini-3.5-flash"]
 model = "gemini-3.5-flash-lite"    # or a Gemma, e.g. "gemma-3-27b-it"
 
 [llm.deep]
-model = "gemini-3.7-flash"
-fallbacks = ["gemini-3.6-flash", "gemini-3.5-flash", "gemini-3.5-flash-lite"]
+model = "gemini-3.8-flash"
+fallbacks = ["gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash"]
 ```
 
 `fallbacks` is tried in order whenever the preferred model is out of quota or refuses the
@@ -138,10 +138,14 @@ per-day one is tracked in durable state across ticks, and on a free tier it is t
 that decides what the agent can do at all.
 
 Count the quota of every model in the deep chain, not just the first, since the chain
-only advances once a model actually answers 429. The defaults assume two models at 20 a
-day each: 34 analyses, which at a 25% screen pass rate is about 130 markets looked at.
-If your quota is larger, raise `max_deep_calls_per_day` and drop
-`min_minutes_between_scans` together.
+only advances once a model actually answers 429. The defaults assume three models at 20
+a day each, so 54 deep calls a day after headroom, shared between market analyses and
+reviewing every trade the own turn proposes. If your quota is larger, raise
+`max_deep_calls_per_day` and drop `min_minutes_between_scans` together.
+
+Being listed is not the same as being callable on a free key. Run the `check` workflow
+from the Actions tab with model names in its `probe` box to test-call them with your own
+key before putting them in a chain.
 
 Daily allowances are released against the clock rather than first-come, because a cap with
 no pacing is spent in the first ten minutes and then the agent is dark until midnight.
