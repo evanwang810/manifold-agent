@@ -59,6 +59,60 @@ class TickReport:
         return "\n".join(lines)
 
 
+def _trades(events: list[dict[str, Any]], limit: int = 40) -> list[dict[str, Any]]:
+    """Every buy, sell, add and mana transfer, newest first, each with its reasoning.
+
+    The site leads with this. Bets come from the scan with a full researched
+    forecast; sells and adds from the own turn carry the agent's stated reason.
+    """
+    out: list[dict[str, Any]] = []
+    for e in events:
+        if e.get("dry_run"):
+            continue
+        kind = e.get("kind")
+        if kind == "bet":
+            row = {
+                "kind": "buy", "side": e.get("outcome"), "amount": e.get("amount"),
+                "limit": e.get("limit_prob"), "market_prob": e.get("market_prob"),
+                "model_prob": e.get("model_prob"), "confidence": e.get("confidence"),
+                "why": e.get("thinking") or "",
+                "evidence_for": (e.get("evidence_for") or [])[:4],
+                "evidence_against": (e.get("evidence_against") or [])[:4],
+                "uncertainty": e.get("uncertainty") or "",
+            }
+        elif kind == "sell":
+            row = {
+                "kind": "sell", "side": e.get("side"), "profit": e.get("profit"),
+                "market_prob": e.get("market_prob"), "model_prob": e.get("model_prob"),
+                "why": e.get("thinking") or "",
+            }
+        elif kind == "own_action" and e.get("approved") and e.get("action") in (
+            "sell", "add", "send_mana"
+        ):
+            action = e.get("action")
+            question = e.get("question") or ""
+            detail = str(e.get("detail") or "")
+            if not question and '"' in detail:
+                # Older events carried the market only inside the detail string.
+                question = detail.split('"')[1]
+            row = {
+                "kind": {"sell": "sell", "add": "add", "send_mana": "send"}[action],
+                "side": e.get("side"), "amount": e.get("amount"),
+                "profit": e.get("profit"), "recipient": e.get("recipient"),
+                "detail": detail, "why": e.get("reasoning") or "",
+            }
+            e = {**e, "question": question}
+        else:
+            continue
+        row.update({
+            "ts": e.get("ts"), "question": e.get("question") or "",
+            "url": e.get("url") or "",
+        })
+        row["why"] = str(row.get("why") or "")[:2000]
+        out.append(row)
+    return out[-limit:][::-1]
+
+
 class Runner:
     def __init__(self, cfg: Config) -> None:
         self.cfg = cfg
@@ -302,6 +356,7 @@ class Runner:
                 ),
                 key=lambda row: -abs(row["invested"]),
             )[:20],
+            "trades": _trades(self.memory.recent_events(4000)),
             "decisions": [
                 {
                     "ts": e.get("ts"),

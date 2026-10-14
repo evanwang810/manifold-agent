@@ -387,9 +387,13 @@ class Agency:
         log.info("Own turn: %s%s", detail, " [dry-run]" if dry else "")
         self.memory.record_own_action(action.action, detail, action.reasoning)
         self.memory.observe("agency", f"Own turn, {detail}. Because: {action.reasoning[:450]}")
+        pos = held.get(action.market_id)
         self.memory.log_event(
             "own_action", action=action.action, approved=True, detail=detail,
             amount=action.amount, reasoning=action.reasoning, dry_run=dry,
+            question=pos.question if pos else "", url=pos.url if pos else "",
+            side=pos.side if pos else "", recipient=action.recipient,
+            profit=round(pos.profit, 1) if pos else None,
         )
         return detail
 

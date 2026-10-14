@@ -4,382 +4,184 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>manifold-agent</title>
-<meta name="description" content="An LLM that trades prediction markets on Manifold and shows its reasoning. Runs on a GitHub Actions cron. Fork it and run your own.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23fbfaf8'/><rect x='4' y='15' width='13' height='2' fill='%2316181c'/><rect x='19' y='11' width='2' height='10' fill='%231f6f5c'/></svg>">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<meta name="description" content="An LLM trading play money on Manifold. Every trade it makes, and why.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2316181c'/><rect x='7' y='15' width='11' height='2.5' fill='%23fafaf9'/><rect x='21' y='9' width='2.5' height='14' fill='%2334d399'/></svg>">
 <style>
   :root{
-    --paper:#fbfaf8; --ink:#16181c; --muted:#6f747c; --faint:#9aa0a7;
-    --line:#e4e1dc; --line-2:#efedea; --panel:#f5f3f0;
-    --accent:#1f6f5c; --no:#a2402f;
-    --sans:"Public Sans",-apple-system,sans-serif;
-    --mono:"IBM Plex Mono",ui-monospace,monospace;
+    --bg:#fafaf9; --ink:#1c1917; --muted:#6b6862; --faint:#a19d96;
+    --line:#e7e5e1; --soft:#f2f1ee;
+    --yes:#15803d; --no:#b42318; --accent:#15803d;
+    --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    --mono:ui-monospace,"SF Mono","Cascadia Mono",Consolas,monospace;
   }
-  @media(prefers-color-scheme:dark){
+  @media (prefers-color-scheme:dark){
     :root{
-      --paper:#121316; --ink:#e6e4e0; --muted:#8d9198; --faint:#6a6e75;
-      --line:#26282d; --line-2:#1d1f23; --panel:#191b1f;
-      --accent:#5fbfa3; --no:#d97a66;
+      --bg:#121212; --ink:#ebe9e4; --muted:#9a968f; --faint:#6b6863;
+      --line:#2a2927; --soft:#1b1a19;
+      --yes:#4ade80; --no:#f87171; --accent:#4ade80;
     }
   }
   *{box-sizing:border-box}
-  body{
-    margin:0; background:var(--paper); color:var(--ink); font-family:var(--sans);
-    font-weight:300; font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased;
+  body{margin:0; background:var(--bg); color:var(--ink); font:15px/1.55 var(--sans)}
+  .wrap{max-width:860px; margin:0 auto; padding:48px 22px 64px}
+  a{color:inherit; text-decoration-color:var(--faint); text-underline-offset:2px}
+  a:hover{text-decoration-color:var(--ink)}
+  .mono{font-family:var(--mono)}
+  .muted{color:var(--muted)}
+  .yes{color:var(--yes)} .no{color:var(--no)}
+
+  header h1{font:600 18px var(--mono); margin:0}
+  header p{margin:6px 0 0; color:var(--muted)}
+  .top{display:flex; justify-content:space-between; align-items:baseline; gap:16px; flex-wrap:wrap}
+  .links{display:flex; gap:14px; font-size:13.5px}
+  .stats{display:flex; flex-wrap:wrap; gap:6px 18px; margin:22px 0 0; padding:12px 0;
+         border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+         font:13px var(--mono); color:var(--muted)}
+  .stats b{color:var(--ink); font-weight:600}
+
+  h2{font:600 12px var(--mono); letter-spacing:.08em; text-transform:uppercase;
+     color:var(--muted); margin:44px 0 10px}
+  h2 .n{color:var(--faint); font-weight:400}
+
+  /* trades */
+  .trade{border-bottom:1px solid var(--line)}
+  .trade summary{list-style:none; cursor:pointer; padding:11px 0;
+                 display:grid; grid-template-columns:62px 74px 1fr auto; gap:0 12px; align-items:baseline}
+  .trade summary::-webkit-details-marker{display:none}
+  .trade summary:hover .q{text-decoration:underline; text-decoration-color:var(--faint)}
+  .when{font:12.5px var(--mono); color:var(--faint)}
+  .act{font:600 12px var(--mono); text-transform:uppercase; letter-spacing:.03em}
+  .amt{font:13.5px var(--mono); text-align:right; white-space:nowrap}
+  .sub{grid-column:3 / 5; font:12.5px var(--mono); color:var(--muted); margin-top:2px}
+  .body{padding:2px 0 18px 148px}
+  .body p{margin:0 0 10px; max-width:68ch}
+  .ev{display:grid; grid-template-columns:1fr 1fr; gap:4px 24px; margin:6px 0 10px; font-size:13.5px}
+  .ev h4{font:600 11px var(--mono); text-transform:uppercase; letter-spacing:.06em; color:var(--faint); margin:0 0 4px}
+  .ev ul{margin:0; padding-left:16px; color:var(--muted)}
+  .ev li{margin-bottom:3px}
+  @media (max-width:640px){
+    .trade summary{grid-template-columns:52px 1fr auto}
+    .trade .act{grid-column:2} .trade .q{grid-column:1 / 4; grid-row:2; margin-top:2px}
+    .sub{grid-column:1 / 4}
+    .body{padding-left:0} .ev{grid-template-columns:1fr}
   }
-  .wrap{max-width:1080px; margin:0 auto; padding:0 28px}
-  a{color:var(--ink); text-underline-offset:2px; text-decoration-color:var(--line)}
-  a:hover{text-decoration-color:var(--accent)}
-  h1,h2{font-weight:400; letter-spacing:-.01em; margin:0}
-  p{margin:0 0 14px; max-width:64ch}
-  .lbl{font-family:var(--mono); font-size:11px; letter-spacing:.13em; text-transform:uppercase; color:var(--faint)}
 
-  /* masthead */
-  header{padding:64px 0 34px}
-  h1{font-family:var(--mono); font-size:20px; font-weight:500; letter-spacing:-.01em}
-  header p{font-size:19px; font-weight:300; color:var(--muted); margin:14px 0 26px; max-width:56ch}
-  header p b{color:var(--ink); font-weight:400}
-  .links{display:flex; gap:10px; flex-wrap:wrap}
-  .lnk{
-    font-family:var(--mono); font-size:12px; padding:8px 14px; border:1px solid var(--line);
-    text-decoration:none; color:var(--ink); transition:border-color .15s,background .15s;
-  }
-  .lnk:hover{border-color:var(--accent)}
-  .lnk.solid{background:var(--ink); color:var(--paper); border-color:var(--ink)}
-  .lnk.solid:hover{background:var(--accent); border-color:var(--accent)}
-
-  /* status strip */
-  .status{
-    display:flex; flex-wrap:wrap; gap:0; border:1px solid var(--line);
-    margin:34px 0 0; background:var(--panel);
-  }
-  .status div{flex:1 1 120px; padding:12px 16px; border-right:1px solid var(--line)}
-  .status div:last-child{border-right:0}
-  .status .v{font-family:var(--mono); font-size:15px; margin-top:3px; display:block}
-  .status .v.dry{color:var(--muted)}
-  .status .v.live{color:var(--accent)}
-
-  section{padding:0; border-top:1px solid var(--line-2)}
-
-  /* Whole sections collapse, so the page opens as a short index of itself rather than
-     a wall you have to scroll past to find the one thing you came for. */
-  .sec>summary{
-    padding:20px 0; display:flex; align-items:center; gap:12px; cursor:pointer;
-    list-style:none;
-  }
-  .sec>summary::-webkit-details-marker{display:none}
-  .sec>summary::after{
-    content:""; margin-left:auto; width:7px; height:7px; border-right:1px solid var(--faint);
-    border-bottom:1px solid var(--faint); transform:rotate(45deg) translateY(-2px);
-    transition:transform .15s;
-  }
-  .sec[open]>summary::after{transform:rotate(225deg) translateY(-2px)}
-  .sec>summary:hover h2{color:var(--ink)}
-  .sec>.inner{padding:0 0 44px}
-
-  /* The long lists open by default but are capped and scroll inside themselves. Fully
-     collapsed hid what the agent was doing behind a click; fully expanded made the page
-     several screens of one section before you reached the next. */
-  .pane{
-    max-height:min(58vh,540px); overflow-y:auto; overscroll-behavior:contain;
-    padding-right:14px; margin-right:-14px;
-  }
-  .pane::-webkit-scrollbar{width:9px}
-  .pane::-webkit-scrollbar-track{background:transparent}
-  .pane::-webkit-scrollbar-thumb{background:var(--line); border-radius:9px}
-  .pane::-webkit-scrollbar-thumb:hover{background:var(--faint)}
-  .pane{scrollbar-width:thin; scrollbar-color:var(--line) transparent}
-  .count{font-family:var(--mono); font-size:11px; color:var(--faint)}
-  h2{font-family:var(--mono); font-size:12px; letter-spacing:.13em; text-transform:uppercase; color:var(--faint); margin:0; transition:color .15s}
-
-  /* Two columns once there is room for them. The page was one narrow strip on a wide
-     screen, which made everything feel longer than it is. */
-  .cols{display:grid; grid-template-columns:1fr 1fr; gap:0 40px; align-items:start}
-  @media(max-width:820px){.cols{grid-template-columns:1fr; gap:0}}
-
-  /* positions */
-  #positions{overflow-x:auto}   /* market questions are long; never push the page wide */
+  /* tables */
+  .scroll{overflow-x:auto}
   table{width:100%; border-collapse:collapse; font-size:14px}
-  th{
-    font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase;
-    color:var(--faint); font-weight:400; text-align:left; padding:0 10px 8px 0;
-    border-bottom:1px solid var(--line);
-  }
-  td{padding:11px 10px 11px 0; border-bottom:1px solid var(--line-2); vertical-align:top}
-  td.n{font-family:var(--mono); text-align:right; white-space:nowrap; padding-right:0}
-  th.r{text-align:right; padding-right:0}
-  .pos{color:var(--accent)} .neg{color:var(--no)}
-  .side{font-family:var(--mono); font-size:11px; padding:2px 6px; border:1px solid var(--line)}
+  th{font:600 11px var(--mono); text-transform:uppercase; letter-spacing:.06em; color:var(--faint);
+     text-align:left; padding:0 10px 8px 0; border-bottom:1px solid var(--line)}
+  td{padding:9px 10px 9px 0; border-bottom:1px solid var(--line); vertical-align:top}
+  td.n, th.n{text-align:right; font-family:var(--mono); white-space:nowrap; padding-right:0}
 
-  /* decisions */
-  .dec{padding:22px 0; border-bottom:1px solid var(--line-2)}
-  .dec:last-child{border-bottom:0}
-  .dec-q{font-size:16px; margin-bottom:12px; display:block; text-decoration:none; line-height:1.45}
-  .dec-q:hover{text-decoration:underline; text-decoration-color:var(--accent)}
-  .gauge{position:relative; height:3px; background:var(--line); margin:14px 0 9px}
-  .gauge i{position:absolute; top:-4px; width:2px; height:11px}
-  .gauge i.m{background:var(--faint)}
-  .gauge i.p{background:var(--accent)}
-  .gauge .span{position:absolute; top:0; height:3px; background:var(--accent); opacity:.45}
-  .gmeta{display:flex; justify-content:space-between; font-family:var(--mono); font-size:11px; color:var(--muted); margin-bottom:12px}
-  .think{font-size:14.5px; color:var(--muted); margin:0; max-width:none}
-  .verdict{font-family:var(--mono); font-size:11px; color:var(--faint); margin-top:14px}
-  .evidence{display:grid; grid-template-columns:1fr 1fr; gap:0 24px; margin-top:14px}
-  @media(max-width:560px){.evidence{grid-template-columns:1fr; gap:14px}}
-  .evidence h4,.unknown b{
-    font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase;
-    color:var(--faint); font-weight:400; margin:0 0 6px; display:block;
-  }
-  .evidence ul{margin:0; padding-left:16px}
-  .evidence li{font-size:13.5px; color:var(--muted); margin-bottom:5px}
-  .evidence .for li::marker{color:var(--accent)}
-  .evidence .against li::marker{color:var(--no)}
-  .unknown{font-size:13.5px; color:var(--muted); margin-top:14px}
-
-  .empty{font-family:var(--mono); font-size:13px; color:var(--faint); padding:26px 0}
+  /* record */
+  .cards{display:grid; grid-template-columns:repeat(3,1fr); gap:10px}
+  @media (max-width:640px){.cards{grid-template-columns:1fr}}
+  .card{background:var(--soft); border:1px solid var(--line); border-radius:8px; padding:12px 14px}
+  .card .k{font:12px var(--mono); color:var(--muted)}
+  .card .v{font:600 20px var(--mono); margin-top:2px}
+  .card .d{font-size:12.5px; color:var(--muted); margin-top:2px}
+  .lines{font:13px/1.6 var(--mono); color:var(--muted); margin:14px 0 0; white-space:pre-wrap}
 
   /* collapsibles */
-  details{border-bottom:1px solid var(--line-2)}
-  details:last-child{border-bottom:0}
-  summary{
-    cursor:pointer; list-style:none; padding:15px 0; display:grid;
-    grid-template-columns:auto 1fr auto; gap:12px; align-items:baseline;
-  }
-  summary::-webkit-details-marker{display:none}
-  summary:hover .sum-t{text-decoration:underline; text-decoration-color:var(--accent)}
-  .sum-t{font-size:15px; line-height:1.45}
-  .sum-w{font-family:var(--mono); font-size:11px; color:var(--faint); white-space:nowrap}
-  .tag{
-    font-family:var(--mono); font-size:10.5px; color:var(--faint);
-    border:1px solid var(--line); padding:2px 6px; white-space:nowrap;
-  }
-  .tag.buy{color:var(--accent); border-color:var(--accent)}
-  .tag.out{color:var(--no); border-color:var(--no)}
-  details[open] summary{border-bottom:1px solid var(--line-2)}
-  .body{padding:16px 0 20px}
-  @media(max-width:560px){
-    summary{grid-template-columns:auto 1fr; }
-    .sum-w{grid-column:2; }
-  }
+  details.more{border-top:1px solid var(--line); margin-top:36px}
+  details.more > summary{cursor:pointer; list-style:none; padding:14px 0;
+                         font:600 12px var(--mono); letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
+  details.more > summary::-webkit-details-marker{display:none}
+  details.more > summary::before{content:"+ "; color:var(--faint)}
+  details.more[open] > summary::before{content:"− "}
+  .feed{font-size:14px; max-height:520px; overflow-y:auto}
+  .feed div{padding:7px 0; border-bottom:1px solid var(--line); display:grid; grid-template-columns:88px 1fr; gap:10px}
+  .status{background:var(--soft); border-left:3px solid var(--line); padding:10px 14px; margin:0 0 6px; border-radius:0 6px 6px 0}
+  .list{margin:0; padding-left:18px} .list li{margin-bottom:5px}
+  .tag{font:11px var(--mono); color:var(--faint)}
+  .empty{color:var(--faint); font:13px var(--mono); padding:14px 0}
 
-  /* memory */
-  .recall{font-size:15px; color:var(--muted); margin:0 0 26px; max-width:64ch}
-  .recall.record{font-family:var(--mono); font-size:12.5px; white-space:pre-wrap; max-width:none}
-  .sub{
-    font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase;
-    color:var(--faint); margin:0 0 10px;
-  }
-  .lessons{list-style:none; margin:0 0 26px; padding:0}
-  .lessons li{
-    display:grid; grid-template-columns:auto 1fr; gap:12px; align-items:baseline;
-    font-size:14px; color:var(--muted); padding:9px 0; border-top:1px solid var(--line-2);
-  }
-  .lessons li:first-child{border-top:0}
-  .src{
-    font-family:var(--mono); font-size:10.5px; color:var(--faint);
-    border:1px solid var(--line); padding:2px 6px; white-space:nowrap;
-  }
-  .src.owner{color:var(--accent); border-color:var(--accent)}
-  .on{font-size:12.5px; color:var(--faint)}
-  .on a{color:var(--faint)}
-  #models table{margin-bottom:26px}
-  .chat{border-top:1px solid var(--line-2); padding:14px 0}
-  .chat .who{font-family:var(--mono); font-size:11px; color:var(--faint); margin-bottom:8px}
-  .chat .who a{color:var(--faint)}
-  .turn{font-size:14px; color:var(--muted); margin:0 0 7px; padding-left:14px;
-        border-left:2px solid var(--line)}
-  .turn.me{border-left-color:var(--accent); color:var(--ink)}
-
-  /* how */
-  dl{margin:0; display:grid; grid-template-columns:132px 1fr; gap:0 22px}
-  dt{font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--faint); padding:13px 0; border-top:1px solid var(--line-2)}
-  dd{margin:0; padding:13px 0; border-top:1px solid var(--line-2); font-size:15px; color:var(--muted)}
-  dd b{color:var(--ink); font-weight:400}
-  dt:first-of-type,dt:first-of-type+dd{border-top:0}
-  @media(max-width:560px){
-    dl{grid-template-columns:1fr; gap:0}
-    dd{padding-top:0; border-top:0}
-    dt{padding-bottom:4px}
-  }
-
-  /* steps */
-  .step{display:grid; grid-template-columns:24px 1fr; gap:16px; padding:16px 0; border-top:1px solid var(--line-2)}
-  .step:first-of-type{border-top:0; padding-top:0}
-  .step .i{font-family:var(--mono); font-size:12px; color:var(--faint); padding-top:2px}
-  .step p{font-size:15px; color:var(--muted); margin:0 0 10px}
-  .step p b{color:var(--ink); font-weight:400}
-  pre{
-    margin:0; background:var(--panel); border:1px solid var(--line); padding:12px 14px;
-    font-family:var(--mono); font-size:12.5px; line-height:1.65; overflow-x:auto;
-    position:relative;
-  }
-  pre button{
-    position:absolute; top:7px; right:7px; font-family:var(--mono); font-size:10px;
-    background:var(--paper); color:var(--muted); border:1px solid var(--line);
-    padding:3px 7px; cursor:pointer;
-  }
-  pre button:hover{color:var(--accent); border-color:var(--accent)}
-  code{font-family:var(--mono); font-size:.9em}
-
-  /* ask */
-  form{display:grid; gap:10px; max-width:520px}
-  input,textarea{
-    font-family:var(--sans); font-size:15px; font-weight:300; color:var(--ink);
-    background:var(--paper); border:1px solid var(--line); padding:10px 12px; width:100%;
-  }
-  textarea{min-height:96px; resize:vertical}
-  input:focus,textarea:focus{outline:none; border-color:var(--accent)}
-  button.send{
-    font-family:var(--mono); font-size:12px; background:var(--ink); color:var(--paper);
-    border:1px solid var(--ink); padding:10px 16px; cursor:pointer; justify-self:start;
-  }
-  button.send:hover{background:var(--accent); border-color:var(--accent)}
-  .hint{font-size:13.5px; color:var(--faint); margin:0}
-
-  footer{padding:34px 0 60px; border-top:1px solid var(--line-2); font-family:var(--mono); font-size:11.5px; color:var(--faint); display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px}
-  footer a{color:var(--muted); text-decoration:none}
-  footer a:hover{color:var(--accent)}
+  form{display:grid; gap:8px; max-width:560px}
+  input, textarea{font:inherit; color:inherit; background:var(--soft); border:1px solid var(--line);
+                  border-radius:6px; padding:9px 11px}
+  textarea{min-height:90px; resize:vertical}
+  button{font:600 13px var(--sans); background:var(--ink); color:var(--bg); border:0; border-radius:6px;
+         padding:9px 14px; cursor:pointer; justify-self:start}
+  pre{position:relative; background:var(--soft); border:1px solid var(--line); border-radius:6px;
+      padding:10px 12px; font:13px var(--mono); overflow-x:auto}
+  pre button{position:absolute; top:6px; right:6px; padding:3px 8px; font-size:11px}
+  ol.steps{padding-left:20px} ol.steps li{margin-bottom:14px}
+  footer{margin-top:48px; font-size:12.5px; color:var(--faint); display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap}
 </style>
 </head>
 <body>
-<div class="wrap">
 
+<div class="wrap">
   <header>
-    <h1>manifold-agent</h1>
-    <p>An LLM that takes positions on <b>Manifold</b> prediction markets and publishes its reasoning. It runs on a GitHub Actions cron, with <b>no server</b> and no host. Fork it and it runs yours.</p>
-    <div class="links">
-      <a class="lnk solid" href="#fork">Fork and run it</a>
-      <a class="lnk" href="https://github.com/evanwang810/manifold-agent">Source</a>
-      <a class="lnk" id="profile" href="https://manifold.markets" hidden>Manifold profile</a>
+    <div class="top">
+      <h1>manifold-agent</h1>
+      <nav class="links">
+        <a id="profile" href="https://manifold.markets" hidden>Manifold</a>
+        <a id="source" href="https://github.com/evanwang810/manifold-agent">Source</a>
+        <a href="#ask-it">Ask it</a>
+      </nav>
     </div>
-    <div class="status">
-      <div><span class="lbl">Mode</span><span class="v" id="s-mode">—</span></div>
-      <div><span class="lbl">Balance</span><span class="v" id="s-bal">—</span></div>
-      <div><span class="lbl">Net worth</span><span class="v" id="s-net">—</span></div>
-      <div><span class="lbl">Brier · model / market</span><span class="v" id="s-brier">—</span></div>
-      <div><span class="lbl">Model</span><span class="v" id="s-model">—</span></div>
-      <div><span class="lbl">Last tick</span><span class="v" id="s-tick">—</span></div>
-    </div>
+    <p>An LLM trading play money on Manifold. Every trade it makes, and why.</p>
+    <div class="stats" id="stats"><span>Loading…</span></div>
   </header>
 
-  <details class="sec">
-    <summary><h2>Ask it something</h2></summary>
-    <div class="inner">
-      <p class="hint" style="margin-bottom:16px">This goes to the bot as a GitHub issue. It answers publicly, usually within a few minutes, and leaves the thread open so you can reply and keep going. It remembers who it has spoken to, across markets and across threads.</p>
-      <form id="ask">
-        <input id="q-title" maxlength="120" placeholder="Short version of your question" required>
-        <textarea id="q-body" maxlength="1500" placeholder="The rest of it, if there is more"></textarea>
-        <button class="send" type="submit">Open the issue →</button>
-      </form>
-    </div>
+  <h2>Trades <span class="n" id="n-trades"></span></h2>
+  <div id="trades"><p class="empty">Loading…</p></div>
+
+  <h2>Holding <span class="n" id="n-pos"></span></h2>
+  <div class="scroll" id="positions"><p class="empty">Loading…</p></div>
+
+  <h2>Track record</h2>
+  <div id="record"><p class="empty">Nothing resolved yet.</p></div>
+
+  <h2>What it's thinking</h2>
+  <p class="status" id="status">Nothing yet.</p>
+
+  <details class="more">
+    <summary>Recent activity</summary>
+    <div class="feed" id="feed"></div>
   </details>
 
-  <details class="sec" open>
-    <summary><h2>Stream of thought</h2><span class="count" id="c-stream"></span></summary>
-    <div class="inner">
-      <div class="pane" id="stream"><p class="empty">Nothing yet.</p></div>
-    </div>
+  <details class="more">
+    <summary>Markets it looked at and passed on</summary>
+    <div id="passed"></div>
   </details>
 
-  <details class="sec" open>
-    <summary><h2>Open positions</h2><span class="count" id="c-pos"></span></summary>
-    <div class="inner">
-      <div class="pane" id="positions"><p class="empty">Loading…</p></div>
-    </div>
+  <details class="more">
+    <summary>Memory</summary>
+    <p class="muted" id="summary"></p>
+    <h2 style="margin-top:20px">Standing notes</h2>
+    <ul class="list" id="notes"></ul>
+    <h2 style="margin-top:20px">To do</h2>
+    <ul class="list" id="todos"></ul>
   </details>
 
-  <details class="sec" open>
-    <summary><h2>Decisions</h2><span class="count" id="c-dec"></span></summary>
-    <div class="inner">
-      <div class="pane" id="decisions"><p class="empty">Loading…</p></div>
-    </div>
+  <details class="more" id="ask-it">
+    <summary>Ask it something</summary>
+    <p class="muted">Opens a GitHub issue. It answers publicly, usually within a few minutes, and keeps the thread open so you can reply.</p>
+    <form id="ask">
+      <input id="q-title" maxlength="120" placeholder="Your question, short" required>
+      <textarea id="q-body" maxlength="1500" placeholder="More detail, if any"></textarea>
+      <button type="submit">Open the issue</button>
+    </form>
   </details>
 
-  <details class="sec" open>
-    <summary><h2>What it remembers</h2></summary>
-    <div class="inner pane">
-      <p class="sub">Track record</p>
-      <p class="recall record" id="record">Nothing resolved yet.</p>
-      <p class="sub">Where it thinks things stand</p>
-      <p class="recall" id="status">—</p>
-      <p class="sub">Long-term memory</p>
-      <p class="recall" id="recall">Loading…</p>
-      <div class="cols">
-        <div>
-          <p class="sub">On its list</p>
-          <div id="todos"><p class="empty">Nothing on the list.</p></div>
-        </div>
-        <div>
-          <p class="sub">Standing notes</p>
-          <div id="lessons"><p class="empty">Nothing learned yet.</p></div>
-        </div>
-      </div>
-    </div>
-  </details>
-
-  <details class="sec">
-    <summary><h2>How it decides</h2></summary>
-    <div class="inner">
-      <dl>
-        <dt>Each tick</dt>
-        <dd>Reacts before it explores: <b>filled limit orders</b>, then <b>held markets that moved 8 points</b>, then <b>replies</b>, then a scan for new markets. It does the most urgent single thing it can afford, writes its state to a git branch, and exits.</dd>
-  
-        <dt>What it looks at</dt>
-        <dd>Markets with 25+ traders, M$3k+ volume, resolving inside a month. Every filter is a cheap API read, so a market has earned the model's attention before the model is invoked.</dd>
-  
-        <dt>Two models</dt>
-        <dd>A cheap model forecasts every candidate <b>blind</b>, without being shown the price. Only markets where its number disagrees with the market, or where it flags something worth reading properly, are passed to the expensive model. Most candidates die here for the price of one small call.</dd>
-  
-        <dt>Then two calls</dt>
-        <dd>A research pass with live search that is forbidden from stating a probability, then a structured decision that reads the market, the whole comment thread, the research, its standing notes, and its own memory. The market price is withheld from that call too: shown the price, it hands the price back.</dd>
-  
-        <dt>Evidence first</dt>
-        <dd>The response schema forces evidence for, evidence against, and resolution risk to be written <b>before</b> the number. Left alone, small models put every answer on 0.7 or 0.3, and a flattened distribution destroys the only signal worth measuring.</dd>
-  
-        <dt>Sizing</dt>
-        <dd>Fractional Kelly on the gap between its estimate and the price, shrunk for distant resolution dates, capped at 10% of net worth and 5% of market volume, then trimmed until a <code>dryRun</code> bet shows it moves the price under 5 points. Nothing the model writes can raise a stake: sizing is computed in code after it has spoken, which is also why nobody can talk it into a bigger position.</dd>
-  
-        <dt>What it keeps</dt>
-        <dd>A compressed narrative of what it has done, a note on each market it has looked at, every conversation it has had, and a short list of <b>standing notes</b> that sit in front of every decision. It writes most of those notes itself after a trade. The only other source is the person who runs it. Anyone else can argue with it and change its mind about a checkable fact, but a market full of anonymous accounts holding positions does not get to write rules into the thing placing the orders.</dd>
-  
-        <dt>The point</dt>
-        <dd>Not profit. Once enough people run LLMs on the same markets the model consensus <b>is</b> the price. Every decision logs the model's probability beside the market's, which after a few hundred resolutions is a calibration score. That is the actual output.</dd>
-      </dl>
-    </div>
-  </details>
-
-  <details class="sec" id="fork">
-    <summary><h2>Run your own</h2></summary>
-    <div class="inner">
-  <div class="step">
-        <span class="i">01</span>
-        <div>
-          <p><b>Fork the repo.</b> Keep it public: Actions minutes are unlimited there, and the agent's memory branch is what keeps the schedule alive.</p>
-          <pre><code>gh repo fork evanwang810/manifold-agent</code><button>copy</button></pre>
-        </div>
-      </div>
-      <div class="step">
-        <span class="i">02</span>
-        <div>
-          <p><b>Add two secrets.</b> In your fork: <em>Settings → Secrets and variables → Actions → New repository secret</em>. One Manifold API key from your bot account's <em>Edit profile</em> page, one LLM key. Gemini is the default and its free tier includes the search grounding the research pass uses.</p>
-          <pre><code>MANIFOLD_API_KEY
-  LLM_API_KEY</code><button>copy</button></pre>
-        </div>
-      </div>
-      <div class="step">
-        <span class="i">03</span>
-        <div>
-          <p><b>That is it.</b> The workflow creates its own state branch on the first run and starts ticking. It stays in dry run, placing no orders and posting nothing, until you set <code>dry_run = false</code> in <code>config.toml</code>. Steer it any time by editing <code>instructions.md</code>, which is injected into its prompt on every tick.</p>
-        </div>
-      </div>
-    </div>
+  <details class="more" id="fork">
+    <summary>Run your own</summary>
+    <ol class="steps">
+      <li><b>Fork the repo.</b> Keep it public: Actions minutes are unlimited there.
+        <pre><code>gh repo fork evanwang810/manifold-agent</code><button>copy</button></pre></li>
+      <li><b>Add two secrets</b> under Settings, Secrets and variables, Actions: a Manifold API key from your bot account's profile page, and an LLM key. Gemini is the default; <code>config.toml</code> lists the other providers.
+        <pre><code>MANIFOLD_API_KEY
+LLM_API_KEY</code><button>copy</button></pre></li>
+      <li><b>Decide on dry run.</b> This repo's <code>config.toml</code> has <code>dry_run = false</code>, so a fork trades for real from its first tick. Set it to <code>true</code> first if you would rather watch it think before it spends anything. It creates its own state branch and this page picks your fork up automatically once GitHub Pages is on.</li>
+    </ol>
   </details>
 
   <footer>
-    <span>Play money. A calibration experiment, not investment advice.</span>
-    <a href="https://github.com/evanwang810/manifold-agent">github.com/evanwang810/manifold-agent</a>
+    <span>Play money. Not advice.</span>
+    <span id="updated"></span>
   </footer>
 </div>
 
@@ -392,9 +194,13 @@ const OWNER = host ? host[1] : FALLBACK.owner;
 const REPO = host && seg ? seg : FALLBACK.repo;
 
 const $ = id => document.getElementById(id);
+const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c =>
+  ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const mana = n => 'M$' + Math.round(n).toLocaleString();
-const pct = p => (p * 100).toFixed(0) + '%';
-
+const signed = n => (n >= 0 ? '+' : '−') + 'M$' + Math.abs(Math.round(n));
+const pct = p => Math.round(p * 100) + '%';
+const day = ms => new Date(ms).toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
+const empty = (el, msg) => { el.innerHTML = `<p class="empty">${msg}</p>`; };
 function ago(ms) {
   const m = Math.round((Date.now() - ms) / 60000);
   if (m < 1) return 'just now';
@@ -402,180 +208,157 @@ function ago(ms) {
   const h = Math.round(m / 60);
   return h < 48 ? h + 'h ago' : Math.round(h / 24) + 'd ago';
 }
+// Prices are always shown for the side held, never as the YES probability. "NO at 20%"
+// reads as a 20% longshot when it means the 80% favourite, and that misreading is
+// exactly what once had the bot selling its own good positions.
+const sidePrice = (yesProb, side) => side === 'NO' ? 1 - yesProb : yesProb;
 
-function empty(el, msg) { el.innerHTML = '<p class="empty">' + msg + '</p>'; }
+function renderStats(d) {
+  const sc = d.score || {};
+  const bits = [
+    `<span><b>${mana(d.net_worth)}</b> net worth</span>`,
+    `<span><b>${mana(d.balance)}</b> cash</span>`,
+    `<span><b>${(d.positions || []).length}</b> positions</span>`,
+  ];
+  if (sc.n) bits.push(`<span>Brier <b class="${sc.model <= sc.market ? 'yes' : 'no'}">${sc.model.toFixed(3)}</b> vs market ${sc.market.toFixed(3)}</span>`);
+  bits.push(`<span>${d.dry_run ? 'dry run' : '<b class="yes">live</b>'} · ${d.generated_ms ? ago(d.generated_ms) : '—'}</span>`);
+  $('stats').innerHTML = bits.join('');
+}
+
+function tradeRow(t) {
+  const side = t.side || '';
+  const tone = side === 'YES' ? 'yes' : side === 'NO' ? 'no' : 'muted';
+  let act, amt = '', sub = '';
+  if (t.kind === 'buy') {
+    act = `<span class="act ${tone}">Buy ${side}</span>`;
+    amt = mana(t.amount);
+    if (typeof t.market_prob === 'number' && typeof t.model_prob === 'number') {
+      sub = `paid ${pct(sidePrice(t.market_prob, side))} · thinks ${pct(sidePrice(t.model_prob, side))}`
+        + (t.limit != null ? ` · limit ${pct(sidePrice(t.limit, side))}` : ' · market order')
+        + (t.confidence ? ` · ${t.confidence} confidence` : '');
+    }
+  } else if (t.kind === 'add') {
+    act = `<span class="act ${tone}">Add ${side}</span>`;
+    amt = mana(t.amount);
+    sub = 'added to an existing position';
+  } else if (t.kind === 'sell') {
+    act = `<span class="act muted">Sell${side ? ' ' + side : ''}</span>`;
+    const pl = typeof t.profit === 'number' ? t.profit
+      : (t.detail && /P\/L M\$([+-]?\d+)/.exec(t.detail) || [])[1];
+    if (pl != null && pl !== undefined) amt = `<span class="${+pl >= 0 ? 'yes' : 'no'}">${signed(+pl)}</span>`;
+    sub = 'closed the position';
+  } else {
+    act = `<span class="act muted">Sent</span>`;
+    amt = mana(t.amount);
+    sub = t.recipient ? `to @${esc(t.recipient)}` : esc(t.detail);
+  }
+  const q = t.question ? esc(t.question) : esc(t.detail || '');
+  const list = (xs, title) => xs && xs.length
+    ? `<div><h4>${title}</h4><ul>${xs.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>` : '';
+  const ev = (t.evidence_for?.length || t.evidence_against?.length)
+    ? `<div class="ev">${list(t.evidence_for, 'For')}${list(t.evidence_against, 'Against')}</div>` : '';
+  const body = [
+    t.why ? `<p>${esc(t.why)}</p>` : '<p class="muted">No reasoning recorded.</p>',
+    ev,
+    t.uncertainty ? `<p class="muted"><b>Biggest unknown:</b> ${esc(t.uncertainty)}</p>` : '',
+    t.url ? `<p><a href="${esc(t.url)}" target="_blank" rel="noopener">Open the market ↗</a></p>` : '',
+  ].join('');
+  return `<details class="trade"><summary>
+      <span class="when">${day(t.ts)}</span>${act}<span class="q">${q}</span><span class="amt">${amt}</span>
+      ${sub ? `<span class="sub">${sub}</span>` : ''}
+    </summary><div class="body">${body}</div></details>`;
+}
+
+function renderTrades(rows) {
+  $('n-trades').textContent = rows && rows.length ? rows.length : '';
+  if (!rows || !rows.length) return empty($('trades'), 'No trades yet.');
+  $('trades').innerHTML = rows.map(tradeRow).join('');
+}
 
 function renderPositions(rows) {
-  const el = $('positions');
-  if (!rows || !rows.length) return empty(el, 'No open positions.');
-  el.innerHTML = `<table><thead><tr>
-      <th>Market</th><th>Side</th><th class="r">Now</th><th class="r">Invested</th>
-      <th class="r">P/L</th><th class="r">Closes</th>
-    </tr></thead><tbody>${rows.map(r => `<tr>
-      <td>${r.url ? `<a href="${r.url}">${esc(r.question)}</a>` : esc(r.question)}</td>
-      <td><span class="side">${r.side}</span></td>
-      <td class="n">${typeof r.prob === 'number' ? pct(r.prob) : '—'}</td>
-      <td class="n">${mana(r.invested)}</td>
-      <td class="n ${r.profit >= 0 ? 'pos' : 'neg'}">${r.profit >= 0 ? '+' : ''}${mana(r.profit)}</td>
-      <td class="n">${r.closed ? 'closed'
-        : r.days_to_close == null ? '—' : r.days_to_close.toFixed(0) + 'd'}</td>
+  $('n-pos').textContent = rows && rows.length ? rows.length : '';
+  if (!rows || !rows.length) return empty($('positions'), 'Nothing held.');
+  const sorted = [...rows].sort((a, b) => (b.value || 0) - (a.value || 0));
+  $('positions').innerHTML = `<table><thead><tr>
+      <th>Market</th><th>Side</th><th class="n">Price</th><th class="n">Value</th>
+      <th class="n">P/L</th><th class="n">Closes</th></tr></thead><tbody>${sorted.map(r => `<tr>
+      <td>${r.url ? `<a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.question)}</a>` : esc(r.question)}</td>
+      <td class="mono ${r.side === 'YES' ? 'yes' : 'no'}">${r.side}</td>
+      <td class="n">${pct(sidePrice(r.prob, r.side))}</td>
+      <td class="n">${mana(r.value ?? r.invested)}</td>
+      <td class="n ${r.profit >= 0 ? 'yes' : 'no'}">${signed(r.profit)}</td>
+      <td class="n">${r.closed ? 'closed' : r.days_to_close == null ? '—' : Math.round(r.days_to_close) + 'd'}</td>
     </tr>`).join('')}</tbody></table>`;
 }
 
-function renderDecisions(rows) {
-  const el = $('decisions');
-  if (!rows || !rows.length) return empty(el, 'Nothing decided yet.');
-  el.innerHTML = rows.map(d => {
-    const mp = d.market_prob, pp = d.model_prob;
-    let gauge = '';
-    if (typeof mp === 'number' && typeof pp === 'number') {
-      const lo = Math.min(mp, pp) * 100, hi = Math.max(mp, pp) * 100;
-      gauge = `<div class="gauge">
-          <div class="span" style="left:${lo}%;width:${hi - lo}%"></div>
-          <i class="m" style="left:${mp * 100}%"></i>
-          <i class="p" style="left:${pp * 100}%"></i>
-        </div>
-        <div class="gmeta"><span>market ${pct(mp)}</span>
-          <span>model ${pct(pp)}${d.confidence ? ' · ' + d.confidence + ' confidence' : ''}</span></div>`;
-    }
-    const verdict = d.kind === 'bet'
-      ? `Took M$${Math.round(d.amount)} ${d.outcome}`
-      : d.kind === 'sell' ? 'Closed the position' : 'No trade, ' + esc(d.reason || 'held');
-
-    const list = (items, cls, label) => (items && items.length)
-      ? `<div class="${cls}"><h4>${label}</h4><ul>${
-          items.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>`
-      : '';
-    const evidence = (d.evidence_for?.length || d.evidence_against?.length)
-      ? `<div class="evidence">${list(d.evidence_for, 'for', 'Evidence for')}${
-          list(d.evidence_against, 'against', 'Evidence against')}</div>`
-      : '';
-    const unknown = d.uncertainty
-      ? `<p class="unknown"><b>Biggest unknown</b>${esc(d.uncertainty)}</p>` : '';
-    const risk = d.resolution_risk
-      ? `<p class="unknown"><b>Resolution risk</b>${esc(d.resolution_risk)}</p>` : '';
-
-    const tag = d.kind === 'bet' ? 'buy' : d.kind === 'sell' ? 'out' : '';
-    const label = d.kind === 'bet' ? `${d.outcome} ${Math.round(d.amount)}`
-                : d.kind === 'sell' ? 'sold' : 'no trade';
-
-    return `<details>
-      <summary>
-        <span class="tag ${tag}">${esc(label)}</span>
-        <span class="sum-t">${esc(d.question)}</span>
-        <span class="sum-w">${d.ts ? ago(d.ts) : ''}</span>
-      </summary>
-      <div class="body">
-        ${d.url ? `<a class="dec-q" href="${d.url}">Open the market →</a>` : ''}
-        ${gauge}
-        ${d.thinking ? `<p class="think">${esc(d.thinking)}</p>` : ''}
-        ${evidence}
-        ${unknown}
-        ${risk}
-        <div class="verdict">${verdict}</div>
-      </div>
-    </details>`;
-  }).join('');
+function renderRecord(d) {
+  const sc = d.score || {};
+  if (!sc.n) return;
+  const won = (a, b) => b ? `${a} of ${b}` : '—';
+  const rate = (a, b) => b ? Math.round(100 * a / b) + '% won' : '';
+  const recent = (d.track_record || '').split('Most recent resolutions:')[1] || '';
+  $('record').innerHTML = `<div class="cards">
+      <div class="card"><div class="k">Forecast accuracy (Brier)</div>
+        <div class="v ${sc.model <= sc.market ? 'yes' : 'no'}">${sc.model.toFixed(3)}</div>
+        <div class="d">market ${sc.market.toFixed(3)} over ${sc.n} resolved. Lower is better.</div></div>
+      <div class="card"><div class="k">Backing the favourite</div>
+        <div class="v">${won(sc.fav_won, sc.fav_n)}</div><div class="d">${rate(sc.fav_won, sc.fav_n)}</div></div>
+      <div class="card"><div class="k">Longshots</div>
+        <div class="v">${won(sc.long_won, sc.long_n)}</div><div class="d">${rate(sc.long_won, sc.long_n)}. It no longer takes these.</div></div>
+    </div>${recent.trim() ? `<div class="lines">Recently resolved\n${esc(recent.trim())}</div>` : ''}`;
 }
 
-function renderStream(data) {
-  const el = $('stream');
-  const rows = data.journal || [];
-  if (!rows.length) return empty(el, 'Nothing recorded yet.');
-
-  // Own-turn reasoning is keyed by timestamp so an agency line in the journal can be
-  // expanded to show why it did it, without duplicating the entry.
-  const why = {};
-  (data.own_actions || []).forEach(a => {
-    if (a.reasoning) why[a.action + '|' + (a.detail || '').slice(0, 40)] = a.reasoning;
-  });
-
-  const shade = { trade: 'buy', agency: 'buy', book: 'buy', closed: 'out', screen: '' };
-  el.innerHTML = rows.map(j => {
-    const text = j.text || '';
-    const detail = Object.entries(why).find(([k]) => text.includes(k.split('|')[1]));
-    const head = text.length > 110 ? text.slice(0, 110) + '…' : text;
-    const more = detail ? detail[1] : (text.length > 110 ? text : '');
-    return `<details>
-      <summary>
-        <span class="tag ${shade[j.kind] || ''}">${esc(j.kind || '')}</span>
-        <span class="sum-t">${esc(head)}</span>
-        <span class="sum-w">${j.ts ? ago(j.ts) : ''}</span>
-      </summary>
-      <div class="body"><p class="think">${esc(more || text)}</p></div>
-    </details>`;
-  }).join('');
+function renderThinking(d) {
+  if (d.status) $('status').textContent = d.status;
+  const feed = (d.journal || []).filter(e => e.kind !== 'screen').slice().reverse();
+  $('feed').innerHTML = feed.length
+    ? feed.map(e => `<div><span class="when">${day(e.ts)} ${new Date(e.ts).toTimeString().slice(0, 5)}</span><span>${esc(e.text)}</span></div>`).join('')
+    : '<p class="empty">Nothing yet.</p>';
+  const passed = (d.decisions || []).filter(x => x.kind === 'no_trade');
+  $('passed').innerHTML = passed.length ? `<table><tbody>${passed.map(x => `<tr>
+      <td class="when">${day(x.ts)}</td>
+      <td>${x.url ? `<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.question)}</a>` : esc(x.question)}
+        <div class="tag">${esc(x.reason || '')}</div></td>
+      <td class="n">${typeof x.market_prob === 'number' ? 'mkt ' + pct(x.market_prob) : ''}<br>
+        <span class="muted">${typeof x.model_prob === 'number' ? 'it ' + pct(x.model_prob) : ''}</span></td>
+    </tr>`).join('')}</tbody></table>` : '<p class="empty">Nothing recent.</p>';
 }
 
-function renderMemory(data) {
-  if (data.track_record) $('record').textContent = data.track_record;
-  $('status').textContent = data.status || 'Nothing yet.';
-  $('recall').textContent = data.summary
-    || 'Nothing compressed yet. Its memory is written after enough events accumulate.';
-
-  const todos = data.todos || [];
-  if (todos.length) {
-    $('todos').innerHTML = `<ul class="lessons">${todos.map(t =>
-      `<li><span class="src${t.done ? '' : ' owner'}">${t.done ? 'done' : 'open'}</span>
-        <span${t.done ? ' class="on"' : ''}>${esc(t.text)}</span></li>`).join('')}</ul>`;
-  }
-
-  const lessons = data.lessons || [];
-  if (lessons.length) {
-    $('lessons').innerHTML = `<ul class="lessons">${lessons.map(l =>
-      `<li><span class="src${l.source === 'owner' ? ' owner' : ''}">${esc(l.source || 'self')}</span>
-        <span>${esc(l.text)}</span></li>`).join('')}</ul>`;
-  }
-}
-
-function esc(s) {
-  return String(s == null ? '' : s).replace(/[&<>"]/g, c =>
-    ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+function renderMemory(d) {
+  $('summary').textContent = d.summary || 'No long-term summary yet.';
+  const notes = d.lessons || [];
+  $('notes').innerHTML = notes.length
+    ? notes.map(n => `<li>${esc(n.text)} <span class="tag">${esc(n.source)}</span></li>`).join('')
+    : '<li class="muted">None yet.</li>';
+  const todos = (d.todos || []).filter(t => !t.done);
+  $('todos').innerHTML = todos.length
+    ? todos.map(t => `<li>${esc(t.text)}</li>`).join('') : '<li class="muted">Nothing open.</li>';
 }
 
 (async function load() {
-  const url = `https://raw.githubusercontent.com/${OWNER}/${REPO}/state/public.json`;
-  let data;
+  $('source').href = `https://github.com/${OWNER}/${REPO}`;
+  let d;
   try {
-    const res = await fetch(url, { cache: 'no-store' });
+    const res = await fetch(`https://raw.githubusercontent.com/${OWNER}/${REPO}/state/public.json`, { cache: 'no-store' });
     if (!res.ok) throw new Error(res.status);
-    data = await res.json();
+    d = await res.json();
   } catch {
-    $('s-mode').textContent = 'not running';
-    empty($('positions'), 'No data yet. The bot publishes here once it has run a tick.');
-    empty($('decisions'), 'No data yet.');
-    empty($('stream'), 'No data yet.');
-    $('recall').textContent = 'No data yet.';
+    $('stats').innerHTML = '<span>Not running yet. This page fills in once the bot has run a tick.</span>';
+    ['trades', 'positions'].forEach(id => empty($(id), 'No data yet.'));
     return;
   }
-
-  $('s-mode').textContent = data.dry_run ? 'dry run' : 'live';
-  $('s-mode').className = 'v ' + (data.dry_run ? 'dry' : 'live');
-  $('s-bal').textContent = mana(data.balance);
-  $('s-net').textContent = mana(data.net_worth);
-  const sc = data.score || {};
-  if (sc.n) {
-    // Lower is better. Green only when the model is actually beating the price.
-    $('s-brier').textContent = `${sc.model.toFixed(3)} / ${sc.market.toFixed(3)}`;
-    $('s-brier').className = 'v ' + (sc.model <= sc.market ? 'live' : 'neg');
-    $('s-brier').title = `over ${sc.n} resolved forecasts`;
+  if (d.username) {
+    $('profile').href = d.profile_url || 'https://manifold.markets/' + d.username;
+    $('profile').textContent = '@' + d.username;
+    $('profile').hidden = false;
   }
-  $('s-tick').textContent = data.generated_ms ? ago(data.generated_ms) : '—';
-  $('s-model').textContent = (data.model || '').split('/').pop() || '—';
-  if (data.username) {
-    const a = $('profile');
-    a.href = data.profile_url || ('https://manifold.markets/' + data.username);
-    a.textContent = '@' + data.username;
-    a.hidden = false;   // stays hidden on a fork that has not run yet
-  }
-  const n = (id, v) => { const e = $(id); if (e) e.textContent = v; };
-  n('c-stream', (data.journal || []).length);
-  n('c-pos', (data.positions || []).length);
-  n('c-dec', (data.decisions || []).length);
-  renderPositions(data.positions);
-  renderDecisions(data.decisions);
-  renderStream(data);
-  renderMemory(data);
+  renderStats(d);
+  renderTrades(d.trades || []);
+  renderPositions(d.positions || []);
+  renderRecord(d);
+  renderThinking(d);
+  renderMemory(d);
+  $('updated').textContent = d.generated_ms ? 'Updated ' + new Date(d.generated_ms).toLocaleString() : '';
 })();
 
 $('ask').addEventListener('submit', e => {
@@ -583,23 +366,18 @@ $('ask').addEventListener('submit', e => {
   const title = $('q-title').value.trim();
   if (!title) return;
   const body = $('q-body').value.trim();
-  // Routed through the issue form template rather than the raw issues/new endpoint.
-  // GitHub silently drops a `labels=` query param for anyone without write access to
-  // the repo, so a query-string link never actually labelled the issue for a visitor.
-  // A template's preset label applies regardless of who is filing it.
-  const href = `https://github.com/${OWNER}/${REPO}/issues/new`
-    + `?template=ask-the-bot.yml&title=${encodeURIComponent(title)}`
-    + `&question=${encodeURIComponent(body || title)}`;
-  window.open(href, '_blank', 'noopener');
+  // Through the issue form template: GitHub drops a `labels=` query param for anyone
+  // without write access, but a template's preset label applies to everyone.
+  window.open(`https://github.com/${OWNER}/${REPO}/issues/new?template=ask-the-bot.yml`
+    + `&title=${encodeURIComponent(title)}&question=${encodeURIComponent(body || title)}`,
+    '_blank', 'noopener');
 });
 
-document.querySelectorAll('pre button').forEach(b => {
-  b.addEventListener('click', async () => {
-    await navigator.clipboard.writeText(b.parentElement.querySelector('code').innerText);
-    b.textContent = 'copied';
-    setTimeout(() => (b.textContent = 'copy'), 1500);
-  });
-});
+document.querySelectorAll('pre button').forEach(b => b.addEventListener('click', async () => {
+  await navigator.clipboard.writeText(b.parentElement.querySelector('code').innerText);
+  b.textContent = 'copied';
+  setTimeout(() => (b.textContent = 'copy'), 1500);
+}));
 </script>
 </body>
 </html>
