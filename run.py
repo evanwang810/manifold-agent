@@ -28,6 +28,31 @@ def _short(exc: Exception) -> str:
     return str(exc).split("\n")[0][:90]
 
 
+async def probe(cfg, names: list[str]) -> None:
+    """Try one tiny generation on each named model with the configured key.
+
+    A model being listed does not mean a free key may call it: Pro and preview models
+    are often billing-only, and only say so when asked to generate. Costs one request
+    from each probed model's own quota, never from the models the agent runs on.
+    """
+    from agent.llm import GeminiClient, build_llm
+
+    tier = next((t for _, t in cfg.llm.tiers() if t.provider.lower() == "gemini"), None)
+    if tier is None:
+        print("\nprobe        only implemented for gemini")
+        return
+    llm = build_llm(tier)
+    try:
+        assert isinstance(llm, GeminiClient)
+        print("\n--- probe (one tiny request each)")
+        for name in names:
+            err = await llm.probe_model(name)
+            print(f"  {'ok ' if err is None else 'no '} {name}"
+                  + ("" if err is None else f"   ({err})"))
+    finally:
+        await llm.aclose()
+
+
 async def check(cfg) -> int:
     """Answer the only question that matters when nothing works: which side is broken?
 
@@ -156,7 +181,10 @@ async def amain(args: argparse.Namespace) -> int:
         cfg.manifold.dry_run = True
 
     if args.check:
-        return await check(cfg)
+        code = await check(cfg)
+        if args.probe:
+            await probe(cfg, [n.strip() for n in args.probe.split(",") if n.strip()])
+        return code
 
     runner = Runner(cfg)
     try:
@@ -191,6 +219,10 @@ def main() -> int:
     parser.add_argument("--dry-run", action="store_true", help="force dry run")
     parser.add_argument("--compress", action="store_true", help="rewrite memory summary")
     parser.add_argument("--check", action="store_true", help="diagnose keys, models, search")
+    parser.add_argument(
+        "--probe", default="",
+        help="with --check: comma-separated models to test-call with your key",
+    )
     parser.add_argument(
         "--replies-only", action="store_true",
         help="answer people and nothing else: no scan, no trades, no agency turn",

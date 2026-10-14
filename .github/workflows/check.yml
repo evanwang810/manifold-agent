@@ -5,6 +5,11 @@ name: check
 # grounding works, without placing any orders.
 on:
   workflow_dispatch:
+    inputs:
+      probe:
+        description: "Models to test-call, comma-separated (optional)"
+        required: false
+        default: ""
 
 jobs:
   check:
@@ -20,8 +25,9 @@ jobs:
         env:
           MANIFOLD_API_KEY: ${{ secrets.MANIFOLD_API_KEY }}
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          PROBE: ${{ inputs.probe }}
         run: |
-          python run.py --check | tee report.txt
+          python run.py --check --probe "$PROBE" | tee report.txt
           {
             echo '```'
             cat report.txt
