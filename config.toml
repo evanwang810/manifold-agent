@@ -146,14 +146,15 @@ skip_if_seen_within_hours = 24
 
 [agency]
 # The agent's own turn. Everything else it does is a reaction to something; this is the
-# one place it acts unprompted, and it gets exactly one action. The cheap model proposes
-# (usually "nothing", which is the intended answer), and anything touching mana is then
-# reviewed by the deep model, which can veto it or cut the amount. There is no ceiling on
-# a single action: the balance reserve and daily mana budget in [risk] are what bound it,
-# applied in code after both models have spoken.
+# one place it acts unprompted. The cheap model proposes, and anything that moves mana,
+# selling included, is reviewed by the deep model, which can veto it or cut the amount.
+# Notes and to-dos are the cheap model's alone. The balance reserve and daily mana
+# budget in [risk] bound every amount, applied in code after both models have spoken.
 #
-# It can sell out of a position, add to one, send mana (returning a loan, paying someone
-# back, lending to someone who asked), or rewrite one of its own standing notes.
+# Positions are held to resolution by default. A sell has to name new information that
+# makes the bet likely to lose, or a repayment that needs the mana. The price-move
+# re-evaluation in [watch] is the other way out, and that one runs on the deep model
+# with fresh research.
 enabled = true
 min_minutes_between_actions = 60
 max_actions_per_turn = 3

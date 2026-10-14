@@ -40,8 +40,10 @@ from .prompts import (
 log = logging.getLogger(__name__)
 
 MANAGRAM_MINIMUM = 10  # the API rejects anything smaller
-# Only outgoing mana is reviewed. Selling reduces exposure and notes touch nothing.
-REVIEWED_ACTIONS = {"add", "send_mana"}
+# Everything that moves mana goes to the deep model, sells included. Sells used to be
+# exempt, and the cheap model, with no research, spent a week selling the favourites
+# the deep model had just bought on a researched forecast.
+REVIEWED_ACTIONS = {"sell", "add", "send_mana"}
 
 
 @dataclass

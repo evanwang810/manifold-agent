@@ -79,10 +79,14 @@ async def _check_tier(cfg) -> bool:
         if isinstance(llm, GeminiClient):
             try:
                 available = await llm.list_models()
-                for family in ("gemma", "flash"):
-                    hits = [m for m in available if family in m][:14]
-                    if hits:
-                        print(f"available {family:6} {', '.join(hits)}")
+                # Every text model, not a prefix-matched sample: the old filter only
+                # looked for "gemma" and "flash" and stopped at fourteen, so the newest
+                # Flash releases and every Pro model were invisible here.
+                skip = ("embedding", "tts", "image", "audio", "live", "aqa", "robotics")
+                text = sorted({m for m in available if not any(s in m for s in skip)})
+                print(f"available    {len(text)} text models:")
+                for i in range(0, len(text), 4):
+                    print("             " + ", ".join(text[i:i + 4]))
             except Exception as exc:  # noqa: BLE001
                 print(f"available     could not list models ({_short(exc)})")
 

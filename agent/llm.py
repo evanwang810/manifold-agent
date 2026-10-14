@@ -420,18 +420,29 @@ class GeminiClient(LLMClient):
     async def list_models(self) -> list[str]:
         """Model ids this key can actually call. The fastest way to tell a typo'd
         model name apart from a quota problem apart from a blocked project."""
-        resp = await self._client.get(
-            f"{self.BASE}/models",
-            headers={"x-goog-api-key": self.cfg.api_key},
-            params={"pageSize": 200},
-        )
-        if resp.status_code >= 400:
-            raise PermanentLLMError(f"Gemini {resp.status_code}: {resp.text[:300]}")
-        return [
-            m["name"].removeprefix("models/")
-            for m in resp.json().get("models", [])
-            if "generateContent" in (m.get("supportedGenerationMethods") or [])
-        ]
+        names: list[str] = []
+        token = ""
+        for _ in range(10):  # the list is paged; one page used to hide the newest models
+            params: dict[str, Any] = {"pageSize": 1000}
+            if token:
+                params["pageToken"] = token
+            resp = await self._client.get(
+                f"{self.BASE}/models",
+                headers={"x-goog-api-key": self.cfg.api_key},
+                params=params,
+            )
+            if resp.status_code >= 400:
+                raise PermanentLLMError(f"Gemini {resp.status_code}: {resp.text[:300]}")
+            data = resp.json()
+            names += [
+                m["name"].removeprefix("models/")
+                for m in data.get("models", [])
+                if "generateContent" in (m.get("supportedGenerationMethods") or [])
+            ]
+            token = data.get("nextPageToken") or ""
+            if not token:
+                break
+        return names
 
 
 class OpenAICompatibleClient(LLMClient):
