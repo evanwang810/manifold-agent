@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1792024142019,
+  "generated_ms": 1792024546941,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash-lite",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,15 +31,15 @@
   },
   "usage": {
     "fast": {
-      "today": 0,
+      "today": 4,
       "cap": 220
     },
     "chat": {
-      "today": 10,
+      "today": 11,
       "cap": 400
     },
     "deep": {
-      "today": 2,
+      "today": 3,
       "cap": 34
     }
   },
@@ -64,6 +64,21 @@
   "net_worth": 497.21,
   "summary": "Balance M$72. Net worth M$512. Resolved bets: 128. Brier score over 175 resolved forecasts: yours 0.131, the market's 0.080 (lower is better, 0.25 is a coin flip). You forecast worse than the market price, and your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 78 of 175; on big disagreements, 67 of 146. Backing the favourite: won 28 of 39. Longshots against the favourite: won 19 of 89. \n\nCalibration remains severely challenged on speculative, narrative-driven longshots and micro-trader meta-markets, where time decay, high failure rates on <20% NO bets (the Longshot Leak rule), and overestimating edge frequently failed. You forecast worse than the market price, and your disagreements have mostly been you being wrong, not the market. Conversely, backing favourites has been much more reliable, winning 28 of 39. Recent risk management actions actively purged vulnerable low-probability NO positions to recover liquidity and align holdings with historical failure modes. The portfolio currently holds open positions including US Gas Price YES, ELK YES, JerryRigEverything NO, and weight/anthropics tracking positions, with active risk trimming targeting the Longshot Leak.\n\nMistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (the Longshot Leak), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, and overconfidence in high-probability projections.\n\nSpecific watchlisted market views and criteria remain relevant for active and upcoming observations, including the Alberta secession referendum, Anthropic IPO S-1 by October 16 and October 31, OpenAI federal system access, JerryRigEverything iPhone bend test, Russia oblasts control, Belief State Geometry, Python 3.15 syntax, Claude Fable release, warning shot before October 20, Serbia parliamentary election, Bitcoin $87,500, Magnus Carlsen FIDE rating, and ELK problem resolution. Monitor liquidity daily and track watchlisted markets until admin resolutions occur.",
   "journal": [
+    {
+      "ts": 1792024546630,
+      "kind": "trade",
+      "text": "Limit order M$49 NO on \"Will Magnus Carlsen be dethroned from his #1 spot in FIDE rating befor\" at 5%, my estimate 2% (high). Because:"
+    },
+    {
+      "ts": 1792024405306,
+      "kind": "screen",
+      "text": "Escalated \"Will Magnus Carlsen be dethroned from his #1 spot in FIDE rating befor\" at 5%: quick estimate 3% backs the favourite at 5%"
+    },
+    {
+      "ts": 1792024385297,
+      "kind": "screen",
+      "text": "Passed on \"Will Russia control at least 95% of Donbass at the end of October 2026\" at 5%: quick estimate 8% agrees with market. Current control is around 90-91% with slow advances, making the 95% threshold by end of October 2026 highly unlikely."
+    },
     {
       "ts": 1792023761273,
       "kind": "closed",
@@ -448,21 +463,6 @@
       "ts": 1791990838768,
       "kind": "book",
       "text": "Looked over 9 positions: The book remains fully invested with zero spendable mana, containing low-probability NO positions and high-conviction favorites heading toward resolution. (2 change(s) proposed)"
-    },
-    {
-      "ts": 1791988496570,
-      "kind": "analysis",
-      "text": "Analysed \"Will the worst-case ELK problem be solved by Oct 20, 2026?\": market 4%, my 1% (high). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1791988322299,
-      "kind": "screen",
-      "text": "Escalated \"Will the worst-case ELK problem be solved by Oct 20, 2026?\" at 4%: quick estimate 2% backs the favourite at 4%"
-    },
-    {
-      "ts": 1791987878312,
-      "kind": "score",
-      "text": "Scored 175 resolved forecasts: my Brier 0.131, the market's 0.080. Closer than the market on 78/175."
     }
   ],
   "todos": [
@@ -786,6 +786,18 @@
       "days_to_close": 18.0
     },
     {
+      "question": "Will Magnus Carlsen be dethroned from his #1 spot in FIDE rating before GTA 6 is released?",
+      "url": "https://manifold.markets/SophusCorry/will-magnus-carlsen-be-dethroned-fr",
+      "side": "NO",
+      "shares": 51.6,
+      "invested": 49.0,
+      "value": 49.0,
+      "profit": 0.0,
+      "prob": 0.049,
+      "closed": false,
+      "days_to_close": 17.9
+    },
+    {
       "question": "Will Geometry Dash 2.21 Update Will Be Released In August 13 2026?",
       "url": "https://manifold.markets/BetBeginner_098/will-geometry-dash-221-update-will",
       "side": "NO",
@@ -823,6 +835,28 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1792024546627,
+      "kind": "bet",
+      "question": "Will Magnus Carlsen be dethroned from his #1 spot in FIDE rating before GTA 6 is released?",
+      "url": "https://manifold.markets/SophusCorry/will-magnus-carlsen-be-dethroned-fr",
+      "market_prob": 0.050000000000000024,
+      "model_prob": 0.02,
+      "confidence": "high",
+      "amount": 49.0,
+      "outcome": "NO",
+      "thinking": "",
+      "uncertainty": "The exact official release date of GTA 6 and whether any rapid rating slump could happen to Magnus.",
+      "resolution_risk": "None identified; resolves based on official FIDE lists.",
+      "evidence_for": [
+        "Magnus Carlsen could theoretically suffer a catastrophic rating collapse or health issue before GTA 6 is finally released."
+      ],
+      "evidence_against": [
+        "Magnus Carlsen remains firmly entrenched at #1 in the October 2026 FIDE ratings with a comfortable margin over his nearest rivals.",
+        "GTA 6 is slated for release, and even if any minor delays happen, Magnus's rating lead and dominance in classical/rapid/blitz make an unseating before release nearly impossible given the short time frame."
+      ],
+      "reason": "edge 0.030, kelly 0.60, decay 0.56, bound by default cap"
+    },
     {
       "ts": 1792021976849,
       "kind": "no_trade",
@@ -1147,29 +1181,6 @@
         "Stringent quarantine and medical monitoring procedures were swiftly implemented locally in Irkutsk Oblast."
       ],
       "reason": "edge 0.031, kelly 0.38, decay 0.56, bound by balance reserve"
-    },
-    {
-      "ts": 1791942126951,
-      "kind": "bet",
-      "question": "Will Anthropic announce a $400+/month tier before November 2026?",
-      "url": "https://manifold.markets/winged_one/will-anthropic-announce-a-400month",
-      "market_prob": 0.131225367029378,
-      "model_prob": 0.08,
-      "confidence": "high",
-      "amount": 23.0,
-      "outcome": "NO",
-      "thinking": "With only ~17 days remaining and no announcements from Anthropic, a sudden $400+/month tier launch is increasingly unlikely. OpenAI's move did not immediately trigger an industry-wide copycat consumer price hike.",
-      "uncertainty": "Whether Anthropic is preparing a surprise enterprise-tier or power-user consumer rollout to match OpenAI's high pricing before the end of October.",
-      "resolution_risk": "Resolves YES if an official announcement specifies a standard US price of at least $400/month before November 1, 2026, even if it's not yet available.",
-      "evidence_for": [
-        "OpenAI introduced a $500/month ChatGPT Pro tier on September 29, 2026, creating commercial pressure for competitors to match high-end enterprise or power-user pricing."
-      ],
-      "evidence_against": [
-        "Only a little over two weeks remain until the November 1, 2026 deadline.",
-        "Anthropic has made no announcements regarding a $400+/month consumer tier.",
-        "Anthropic's typical pricing and packaging strategy has focused more on API usage, Team/Enterprise tiers, and Claude Pro at standard pricing (~$20/month), without history of introducing individual consumer tiers at such a high price point."
-      ],
-      "reason": "edge 0.051, kelly 0.39, decay 0.56, bound by balance reserve"
     }
   ]
 }
