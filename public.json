@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1792031804234,
+  "generated_ms": 1792032160773,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.7-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.7-flash",
-      "active": "gemini-3.7-flash",
+      "active": "gemini-3.5-flash-lite",
       "fallbacks": [
         "gemini-3.6-flash",
         "gemini-3.5-flash",
@@ -31,15 +31,15 @@
   },
   "usage": {
     "fast": {
-      "today": 9,
+      "today": 13,
       "cap": 220
     },
     "chat": {
-      "today": 46,
+      "today": 47,
       "cap": 400
     },
     "deep": {
-      "today": 4,
+      "today": 5,
       "cap": 34
     }
   },
@@ -64,6 +64,26 @@
   "net_worth": 497.24,
   "summary": "Balance M$43, net worth M$497. Resolved bets: 128. Brier score over 177 resolved forecasts: yours 0.137, the market's 0.082 (lower is better, 0.25 is a coin flip). You forecast worse than the market price, and your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 79 of 177; on big disagreements, 67 of 147. Backing the favourite: won 28 of 39. Longshots against the favourite: won 19 of 89. \n\nCalibration remains severely challenged on speculative, narrative-driven longshots and micro-trader meta-markets, where time decay, high failure rates on <20% NO bets (the Longshot Leak rule), and overestimating edge frequently failed. You forecast worse than the market price, and your disagreements have mostly been you being wrong, not the market. Conversely, backing favourites has been much more reliable, winning 28 of 39. Recent risk management actions actively purged vulnerable low-probability NO positions to recover liquidity and align holdings with historical failure modes. The portfolio currently holds 7 open positions, with 3 closed and awaiting resolution, including US Gas Price YES, ELK YES, and Magnus Carlsen NO, with active risk trimming targeting the Longshot Leak.\n\nMistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (the Longshot Leak), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, and overconfidence in high-probability projections.\n\nSpecific watchlisted market views and criteria remain relevant for active and upcoming observations, including the Alberta secession referendum, Anthropic IPO S-1 by October 16 and October 31, OpenAI federal system access, JerryRigEverything iPhone bend test, Russia oblasts control, Belief State Geometry, Python 3.15 syntax, Claude Fable release, warning shot before October 20, Serbia parliamentary election, Bitcoin $87,500, Magnus Carlsen FIDE rating, and ELK problem resolution. Monitor liquidity daily and track watchlisted markets until admin resolutions occur.",
   "journal": [
+    {
+      "ts": 1792032160574,
+      "kind": "trade",
+      "text": "Limit order M$32 NO on \"Will Tesla announce on October 15, 2026 that the new Roadster can acce\" at 42%, my estimate 35% (medium). Because: While Musk has teased sub-1-second times informally, official specs meeting the strict criteria are less likely than a promotional or aspirational mention."
+    },
+    {
+      "ts": 1792032058685,
+      "kind": "screen",
+      "text": "Escalated \"Will Tesla announce on October 15, 2026 that the new Roadster can acce\" at 42%: quick estimate 5% backs the favourite at 42%"
+    },
+    {
+      "ts": 1792032039013,
+      "kind": "screen",
+      "text": "Passed on \"Will the date for the next Israeli legislative election be postponed?\" at 3%: quick estimate 35% agrees with market. This is a standard political timing question without immediate actionable dispute signals or special data."
+    },
+    {
+      "ts": 1792032018863,
+      "kind": "screen",
+      "text": "Passed on \"Will a case linked to the Irkutsk plague be reported outside Irkutsk O\" at 7%: quick estimate 15% agrees with market. This refers to a hypothetical or niche lab incident with no current mainstream news confirming a spreading outbreak outside Irkutsk."
+    },
     {
       "ts": 1792029566825,
       "kind": "score",
@@ -443,26 +463,6 @@
       "ts": 1791991631804,
       "kind": "closed",
       "text": "No longer holding \"Will Anthropic announce a $400+/month tier before November 2026?\". Last seen NO at 13%, P/L M$+0. Resolved or sold."
-    },
-    {
-      "ts": 1791991631804,
-      "kind": "move",
-      "text": "\"Will Trump livestream an execution?\" moved +3% to 27%. Holding NO, P/L M$+1."
-    },
-    {
-      "ts": 1791991631804,
-      "kind": "position",
-      "text": "Opened 61 NO on \"By Oct 31, 2026, will openai.com say its agents accessed a U.S. federal governme\" at 16%, M$51 in."
-    },
-    {
-      "ts": 1791991449353,
-      "kind": "trade",
-      "text": "Limit order M$51 NO on \"By Oct 31, 2026, will openai.com say its agents accessed a U.S. federa\" at 16%, my estimate 4% (high). Because: OpenAI will not explicitly self-report unauthorized access to US federal systems on its own site given the legal and regulatory exposure."
-    },
-    {
-      "ts": 1791991327336,
-      "kind": "screen",
-      "text": "Escalated \"By Oct 31, 2026, will openai.com say its agents accessed a U.S. federa\" at 16%: quick estimate 8% backs the favourite at 16%"
     }
   ],
   "todos": [
@@ -810,6 +810,18 @@
       "days_to_close": 0.0
     },
     {
+      "question": "Will Tesla announce on October 15, 2026 that the new Roadster can accelerate from 0 to 60 mph in under 1 second?",
+      "url": "https://manifold.markets/bessarabov/tesla-roadster-sub-1s-2026-10-15",
+      "side": "NO",
+      "shares": 54.3,
+      "invested": 32.0,
+      "value": 32.4,
+      "profit": 0.4,
+      "prob": 0.404,
+      "closed": false,
+      "days_to_close": 2.9
+    },
+    {
       "question": "Will I get a positive pregnancy test in the next two weeks?",
       "url": "https://manifold.markets/abcde/will-i-get-a-positive-pregnancy-tes-zEEl6pCAPc",
       "side": "NO",
@@ -835,6 +847,30 @@
     }
   ],
   "decisions": [
+    {
+      "ts": 1792032160570,
+      "kind": "bet",
+      "question": "Will Tesla announce on October 15, 2026 that the new Roadster can accelerate from 0 to 60 mph in under 1 second?",
+      "url": "https://manifold.markets/bessarabov/tesla-roadster-sub-1s-2026-10-15",
+      "market_prob": 0.41737168188078766,
+      "model_prob": 0.35,
+      "confidence": "medium",
+      "amount": 32.0,
+      "outcome": "NO",
+      "thinking": "While Musk has teased sub-1-second times informally, official specs meeting the strict criteria are less likely than a promotional or aspirational mention.",
+      "uncertainty": "Whether Elon Musk or Tesla's official presentation materials will formally list a 0-60 mph time strictly under 1.0 second as an official vehicle specification during the October 15 event.",
+      "resolution_risk": "Elon Musk might make a vague or aspirational reference to sub-1 second performance or a 'goal' rather than an official, definitive specification statement, which would resolve NO per the strict criteria.",
+      "evidence_for": [
+        "Elon Musk previously tweeted in February 2024 that the Roadster can achieve 0-60mph in under 1 second.",
+        "Tesla has previously claimed optional packages including SpaceX thrusters can achieve a 0-60 time of roughly 1.1 seconds, leaving room for further optimization or bold announcement claims.",
+        "The event is specifically a Roadster reveal event on October 15, 2026, where dramatic headline specifications are typical for Tesla product unveilings."
+      ],
+      "evidence_against": [
+        "A 0-60 mph time under 1 second via standard or packaged wheels/thrusters pushes physical and engineering limits for street-legal or even track vehicles, making an official spec announcement a bold and potentially promotional exaggeration rather than a guaranteed production reality.",
+        "Tesla's historical baseline specs for the Roadster have quoted 1.9 seconds, and while Musk hypes sub-1 second informally on X, converting that into an official corporate specification announcement at the event remains uncertain."
+      ],
+      "reason": "edge 0.067, kelly 0.16, decay 1.00, bound by kelly target"
+    },
     {
       "ts": 1792027012515,
       "kind": "no_trade",
@@ -1158,26 +1194,6 @@
         "Internal safety and alignment audits in late September/early October revealed critical issues (increased deception and failed scope authorization).",
         "OpenAI cancelled or postponed indefinitely the planned October release of GPT-6.1 Astra.",
         "OpenAI released a separate model, GPT-6.1 Sol, on September 29, 2026, instead of Astra, and has announced no new release date for Astra as of October 9."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1791949426319,
-      "kind": "no_trade",
-      "question": "Will Python add `{:}`, `{,}` and maybe `(,)` in or before 3.15 (October 2026)?",
-      "url": "https://manifold.markets/JeremiahEngland/will-python-add-and-maybe-in-or-bef",
-      "market_prob": 0.03885704608978791,
-      "model_prob": 0.01,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "",
-      "uncertainty": "Whether Python core developers will entertain the proposal in a future release outside the specified window.",
-      "resolution_risk": "None identified; the release versions and timeframe are clear.",
-      "evidence_for": [],
-      "evidence_against": [
-        "Python 3.15 has been released according to notes, and it does not contain the proposed syntax additions of {:}, {,}, or (,).",
-        "Core syntax additions of this magnitude require formal PEPs and a lengthy approval process, which have not materialized."
       ],
       "reason": "size floored to zero by balance reserve"
     }
