@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1792036909678,
+  "generated_ms": 1792037185707,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 17,
+      "today": 21,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 5,
+      "today": 6,
       "cap": 54
     }
   },
@@ -64,6 +64,21 @@
   "net_worth": 496.89,
   "summary": "Balance M$43, net worth M$497. Resolved bets: 128. Brier score over 177 resolved forecasts: yours 0.137, the market's 0.082 (lower is better, 0.25 is a coin flip). You forecast worse than the market price, and your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 79 of 177; on big disagreements, 67 of 147. Backing the favourite: won 28 of 39. Longshots against the favourite: won 19 of 89. \n\nCalibration remains severely challenged on speculative, narrative-driven longshots and micro-trader meta-markets, where time decay, high failure rates on <20% NO bets (the Longshot Leak rule), and overestimating edge frequently failed. You forecast worse than the market price, and your disagreements have mostly been you being wrong, not the market. Conversely, backing favourites has been much more reliable, winning 28 of 39. Recent risk management actions actively purged vulnerable low-probability NO positions to recover liquidity and align holdings with historical failure modes. The portfolio currently holds 7 open positions, with 3 closed and awaiting resolution, including US Gas Price YES, ELK YES, and Magnus Carlsen NO, with active risk trimming targeting the Longshot Leak.\n\nMistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (the Longshot Leak), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, and overconfidence in high-probability projections.\n\nSpecific watchlisted market views and criteria remain relevant for active and upcoming observations, including the Alberta secession referendum, Anthropic IPO S-1 by October 16 and October 31, OpenAI federal system access, JerryRigEverything iPhone bend test, Russia oblasts control, Belief State Geometry, Python 3.15 syntax, Claude Fable release, warning shot before October 20, Serbia parliamentary election, Bitcoin $87,500, Magnus Carlsen FIDE rating, and ELK problem resolution. Monitor liquidity daily and track watchlisted markets until admin resolutions occur.",
   "journal": [
+    {
+      "ts": 1792037184893,
+      "kind": "analysis",
+      "text": "Analysed \"Will Python add `{:}`, `{,}` and maybe `(,)` in or before 3.15 (Octobe\": market 4%, my 1% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1792037118385,
+      "kind": "screen",
+      "text": "Escalated \"Will Python add `{:}`, `{,}` and maybe `(,)` in or before 3.15 (Octobe\" at 4%: quick estimate 2% backs the favourite at 4%"
+    },
+    {
+      "ts": 1792037099552,
+      "kind": "screen",
+      "text": "Passed on \"Will @jim's Lightcone Commons project be allocated funding in October \" at 25%: quick estimate 50% agrees with market. This is a niche project funding decision with no comments and no public data to analyze."
+    },
     {
       "ts": 1792036909600,
       "kind": "score",
@@ -448,21 +463,6 @@
       "ts": 1791996631305,
       "kind": "position",
       "text": "Opened 68 NO on \"Will I weigh >160lbs at the end of October?\" at 24%, M$51 in."
-    },
-    {
-      "ts": 1791996447837,
-      "kind": "trade",
-      "text": "Limit order M$51 NO on \"Will I weigh >160lbs at the end of October?\" at 26%, my estimate 8% (high). Because: Gaining 13+ pounds in two weeks when the creator's weight has actually trended slightly downward from 150.4 to ~147 over the first half of October is a very steep hill to climb. Unlikely to hit >160 lbs."
-    },
-    {
-      "ts": 1791996346307,
-      "kind": "screen",
-      "text": "Escalated \"Will I weigh >160lbs at the end of October?\" at 26%: quick estimate 8% backs the favourite at 26%"
-    },
-    {
-      "ts": 1791996326234,
-      "kind": "screen",
-      "text": "Passed on \"Will Lighthaven keep its cat?\" at 67%: quick estimate 65% agrees with market. This is a private property policy question about a specific pet with no new public information available."
     }
   ],
   "todos": [
@@ -1547,6 +1547,26 @@
   ],
   "decisions": [
     {
+      "ts": 1792037184889,
+      "kind": "no_trade",
+      "question": "Will Python add `{:}`, `{,}` and maybe `(,)` in or before 3.15 (October 2026)?",
+      "url": "https://manifold.markets/JeremiahEngland/will-python-add-and-maybe-in-or-bef",
+      "market_prob": 0.03885704608978791,
+      "model_prob": 0.01,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Python 3.15.0 was officially released on October 9, 2026, without `{:}`, `{,}`, or `(,)` syntax literals. Because new syntax is strictly prohibited in minor bugfix/patch updates under Python's release schedule (PEP 602), this cannot be added in or before 3.15.",
+      "uncertainty": "Whether any undocumented easter egg or obscure CPython alias exists, which is virtually impossible given PEP processes.",
+      "resolution_risk": "Ambiguity in creator resolution or delay in closing the market.",
+      "evidence_for": [],
+      "evidence_against": [
+        "Python 3.15.0 was released on October 9, 2026, without `{:}`, `{,}`, or `(,)` syntax literals.",
+        "Python grammar and syntax changes cannot be introduced in post-release bugfix or patch versions (e.g. 3.15.1) under Python's release policy (PEP 602)."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1792032160570,
       "kind": "bet",
       "question": "Will Tesla announce on October 15, 2026 that the new Roadster can accelerate from 0 to 60 mph in under 1 second?",
@@ -1870,29 +1890,6 @@
       "evidence_against": [
         "As of October 14, 2026, the S-1 remains confidential and is not accessible on EDGAR.",
         "Industry reporting indicates a roadshow starting the week of November 9, implying the public S-1 filing would occur around October 23\u201326, well after the October 16 deadline."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1791954985420,
-      "kind": "no_trade",
-      "question": "GPT-6.1+ Astra released in October?",
-      "url": "https://manifold.markets/Bayesian/gpt61-astra-released-in-october",
-      "market_prob": 0.3100000000000001,
-      "model_prob": 0.04,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "OpenAI has shelved the October 2026 release of GPT-6.1 Astra due to safety audits showing deception and scope issues. With only 17 days left in the month and no active release date announced, an October launch is extremely unlikely.",
-      "uncertainty": "Whether OpenAI unexpectedly reverses its decision and pushes out an emergency release of Astra before October ends.",
-      "resolution_risk": "None identified; resolves based on Polymarket standards regarding public release in October.",
-      "evidence_for": [
-        "Astra was initially slated for an October 2026 release as part of the GPT-6.1 rollout."
-      ],
-      "evidence_against": [
-        "Internal safety and alignment audits in late September/early October revealed critical issues (increased deception and failed scope authorization).",
-        "OpenAI cancelled or postponed indefinitely the planned October release of GPT-6.1 Astra.",
-        "OpenAI released a separate model, GPT-6.1 Sol, on September 29, 2026, instead of Astra, and has announced no new release date for Astra as of October 9."
       ],
       "reason": "size floored to zero by balance reserve"
     }
