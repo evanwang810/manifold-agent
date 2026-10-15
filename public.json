@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1792071697416,
+  "generated_ms": 1792072043590,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.7-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 45,
+      "today": 48,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 10,
+      "today": 11,
       "cap": 54
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 499.78,
   "summary": "Balance M$9. Net worth M$498. Resolved bets: 128. Brier score over 177 resolved forecasts: yours 0.137, the market's 0.082 (lower is better, 0.25 is a coin flip). You forecast worse than the market price, and your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 79 of 177; on big disagreements, 67 of 147. Backing the favourite: won 28 of 39. Longshots against the favourite: won 19 of 89.\n\nCalibration remains severely challenged on speculative, narrative-driven longshots and micro-trader meta-markets, where time decay and high failure rates on low-probability NO bets (the Longshot Leak rule) degrade performance. Conversely, backing favourites has been much more reliable, winning 28 of 39. Risk management has actively purged vulnerable low-probability NO positions to recover liquidity and align holdings with historical failure modes, leaving 8 open positions and 3 closed and awaiting resolution.\n\nMistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (the Longshot Leak), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, and overconfidence in high-probability projections.\n\nSpecific watchlisted market views and criteria remain relevant for active and upcoming observations, including the Alberta secession referendum, Anthropic IPO S-1 by October 16 and October 31, OpenAI federal system access, JerryRigEverything iPhone bend test, Russia oblasts control, Belief State Geometry, Python 3.15 syntax, Claude Fable release, warning shot before October 20, Serbia parliamentary election, Bitcoin $87,500, Magnus Carlsen FIDE rating, ELK problem resolution, and the Tesla Roadster announcement on October 15. Monitor liquidity daily and track watchlisted markets until admin resolutions occur.",
   "journal": [
+    {
+      "ts": 1792072043502,
+      "kind": "analysis",
+      "text": "Analysed \"Will Anthropic\u2019s IPO S-1 be public by 16 October 2026?\": market 7%, my 7% (high). No trade, edge 0.07 log-odds below minimum 0.2."
+    },
+    {
+      "ts": 1792071890243,
+      "kind": "screen",
+      "text": "Escalated \"Will Anthropic\u2019s IPO S-1 be public by 16 October 2026?\" at 7%: quick estimate 5% backs the favourite at 7%"
+    },
     {
       "ts": 1792070203398,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1792024546630,
       "kind": "trade",
       "text": "Limit order M$49 NO on \"Will Magnus Carlsen be dethroned from his #1 spot in FIDE rating befor\" at 5%, my estimate 2% (high). Because:"
-    },
-    {
-      "ts": 1792024405306,
-      "kind": "screen",
-      "text": "Escalated \"Will Magnus Carlsen be dethroned from his #1 spot in FIDE rating befor\" at 5%: quick estimate 3% backs the favourite at 5%"
-    },
-    {
-      "ts": 1792024385297,
-      "kind": "screen",
-      "text": "Passed on \"Will Russia control at least 95% of Donbass at the end of October 2026\" at 5%: quick estimate 8% agrees with market. Current control is around 90-91% with slow advances, making the 95% threshold by end of October 2026 highly unlikely."
     }
   ],
   "todos": [
@@ -1557,6 +1557,31 @@
   ],
   "decisions": [
     {
+      "ts": 1792072043497,
+      "kind": "no_trade",
+      "question": "Will Anthropic\u2019s IPO S-1 be public by 16 October 2026?",
+      "url": "https://manifold.markets/jim/will-anthropics-ipo-s1-be-public-by",
+      "market_prob": 0.07496088488489723,
+      "model_prob": 0.07,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With less than two days remaining until the Oct 16 deadline and reports pointing to a roadshow start the week of Nov 9 (targeting an S-1 disclosure around Oct 23\u201326), an EDGAR drop by tomorrow night is unlikely.",
+      "uncertainty": "Whether Anthropic intentionally accelerates the public disclosure immediately following the October 14 investor day rather than adhering to the standard late-October timeline.",
+      "resolution_risk": "An after-hours filing on EDGAR late on Friday, October 16 before 23:59 New York time.",
+      "evidence_for": [
+        "Draft Form S-1 was confidentially submitted to the SEC on June 1, 2026, meaning SEC review is well advanced.",
+        "Anthropic held an investor day on October 14, 2026, indicating the IPO process is in its late stages.",
+        "Companies are legally permitted to make their S-1 public earlier than the statutory 15-day pre-roadshow requirement."
+      ],
+      "evidence_against": [
+        "As of October 14, 2026, the S-1 remains absent from SEC EDGAR.",
+        "Reporting from Bloomberg indicates the IPO roadshow is slated for the week of November 9, pointing to an S-1 public filing window around October 23\u201326 under SEC rules.",
+        "Only about 36 hours remain until the October 16 23:59 ET deadline with no indications of an imminent filing."
+      ],
+      "reason": "edge 0.07 log-odds below minimum 0.2"
+    },
+    {
       "ts": 1792069451238,
       "kind": "no_trade",
       "question": "U.S. federal government announces delay or suspension of 2026 midterm elections before November 3, 2026",
@@ -1887,30 +1912,6 @@
         "The creator has rejected extreme measures like the gallon-of-milk-a-day diet."
       ],
       "reason": "edge 0.177, kelly 0.69, decay 0.60, bound by default cap"
-    },
-    {
-      "ts": 1791994014268,
-      "kind": "no_trade",
-      "question": "Will the US attack Cuba before the 2026 midterm elections?",
-      "url": "https://manifold.markets/CommanderKeen/will-the-us-attack-cuba-before-the",
-      "market_prob": 0.05009730571694695,
-      "model_prob": 0.08,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Military repositioning and tough rhetoric create headlines, but an actual overt military attack or invasion of Cuba remains a high-threshold, low-probability event before the midterms.",
-      "uncertainty": "Whether the reported naval movements and logistical planning are purely posturing/deterrence or a prelude to a sudden limited strike before November 3.",
-      "resolution_risk": "Could resolve YES if a minor localized drone or missile strike occurs covertly but is claimed overtly under the US banner, or if an accidental escalation rapidly triggers open conflict.",
-      "evidence_for": [
-        "Reports indicate US military planning groundwork around Cuba, including Army Reserve looking at support units and seven warships moving toward the Caribbean.",
-        "The Trump administration has enacted tighter sanctions on Cuba's mineral wealth and military apparatus, matching heightened aggressive rhetoric at the UN General Assembly."
-      ],
-      "evidence_against": [
-        "President Trump explicitly stated on September 26, 2026, that he does not predict U.S. military action in Cuba.",
-        "An actual kinetic attack, drone strike, or invasion requires a massive escalation that goes far beyond routine saber-rattling and positioning, especially just weeks before a midterm election where foreign entanglements carry heavy domestic political risks.",
-        "Historical precedent for a direct full-scale or overt military attack on Cuba by the US outside of active hot war is non-existent in modern times."
-      ],
-      "reason": "would be a longshot bet against the 5% favourite"
     }
   ]
 }
