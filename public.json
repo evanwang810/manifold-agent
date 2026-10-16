@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1792180241540,
+  "generated_ms": 1792180496596,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 66,
+      "today": 69,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 13,
+      "today": 14,
       "cap": 54
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 489.11,
   "summary": "Balance M$11. Net worth M$489. Resolved bets: 132. Brier score over 180 resolved forecasts: yours 0.141, the market's 0.083 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 79 of 180; on big disagreements, 67 of 149. Backing the favourite: won 31 of 43. Longshots against the favourite: won 19 of 89. There are 8 open positions, 3 of them closed and awaiting resolution.\n\nPerformance and Calibration: Calibration is severely challenged on speculative, narrative-driven longshots and micro-trader meta-markets, where time decay and high failure rates on low-probability NO bets degrade performance. You forecast worse than the market price, and your disagreements have mostly been you being wrong. Conversely, backing favourites has been much more reliable, winning 31 of 43. Risk management has actively purged vulnerable positions\u2014such as the recent exit on the Tesla Roadster NO bet following conflicting reveal developments\u2014to recover liquidity and align holdings with historical failure modes.\n\nMistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (the Longshot Leak), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, overconfidence in high-probability projections, and failing to respond rapidly to significant upward price moves in YES shares when holding NO positions.\n\nSpecific watchlisted market views and criteria remain relevant for active and upcoming observations, including the Alberta secession referendum, Anthropic IPO S-1 by October 16 and October 31 (monitoring confirmed no filing found on Oct 16), OpenAI federal system access, JerryRigEverything iPhone bend test, Russia oblasts control, Belief State Geometry, Python 3.15 syntax (including the new NO position opened), Claude Fable release, warning shot before October 20, Serbia parliamentary election, Bitcoin $87,500, Magnus Carlsen FIDE rating, ELK problem resolution (scheduled for re-evaluation ahead of the Oct 20 deadline), and resolution lags like the Geometry Dash market awaiting payout (~M$200 expected from closed positions, with priority set to repay @Gen M$50 upon liquidity restoration). Monitor liquidity daily and track watchlisted markets until admin resolutions occur.",
   "journal": [
+    {
+      "ts": 1792180496506,
+      "kind": "analysis",
+      "text": "Analysed \"Will Russia control at least 85% of the four annexed oblasts at the en\": market 6%, my 3% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1792180432199,
+      "kind": "screen",
+      "text": "Escalated \"Will Russia control at least 85% of the four annexed oblasts at the en\" at 6%: quick estimate 5% backs the favourite at 6%"
+    },
     {
       "ts": 1792178169680,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1792124529529,
       "kind": "screen",
       "text": "Passed on \"Will @jim's Lightcone Commons project be allocated funding in October \" at 25%: quick estimate 50% agrees with market. This depends on private grant decisions and internal Lightcone Commons timelines occurring this month with no current public information."
-    },
-    {
-      "ts": 1792124527260,
-      "kind": "book",
-      "text": "Looked over 7 positions: The portfolio is stable and exclusively concentrated in high-probability favorites. No new information has emerged to invalidate the current active positions, and closed positions are awaiting resolution to restore liquidity. All positions are being held to resolution as per the default strategy. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1792122025215,
-      "kind": "score",
-      "text": "Scored 179 resolved forecasts: my Brier 0.139, the market's 0.082. Closer than the market on 79/179."
     }
   ],
   "todos": [
@@ -1546,6 +1546,30 @@
   ],
   "decisions": [
     {
+      "ts": 1792180496502,
+      "kind": "no_trade",
+      "question": "Will Russia control at least 85% of the four annexed oblasts at the end of October 2026?",
+      "url": "https://manifold.markets/a_l_e_x/will-russia-control-at-least-85-of",
+      "market_prob": 0.06298825975166478,
+      "model_prob": 0.03,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Russia currently holds approximately 81-82% of the four oblasts. Gaining the remaining ~3,000+ km\u00b2 to cross 85% within the next 15 days would require a rate of advance orders of magnitude beyond current frontline shifts, absent an immediate diplomatic capitulation.",
+      "uncertainty": "Whether differing baseline methodologies among the designated mapping sources (Suriyakmaps, Poulet volant, Creamy caprice) could overestimate Russian de facto control or count contestable grey zones.",
+      "resolution_risk": "Discrepancies in total area calculation or divergent frontline definitions between the three primary OSINT mappers.",
+      "evidence_for": [
+        "Russia controls the vast majority of Luhansk Oblast and substantial portions of Donetsk, Zaporizhzhia, and Kherson.",
+        "Russian forces maintain incremental offensive pressure across multiple sectors of the front line."
+      ],
+      "evidence_against": [
+        "Russia currently controls an estimated 81% to 82% of the combined area of the four oblasts.",
+        "Reaching the 85.00% threshold across the specified 108,842 km\u00b2 area requires capturing approximately 3,200 to 4,300 km\u00b2 within roughly 15 days.",
+        "Recent net territorial gains have been incremental (roughly 16 square miles over four weeks between mid-September and mid-October 2026), making a 3,000+ km\u00b2 advance physically unfeasible without an immediate formal Ukrainian handover of territory."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1792178161121,
       "kind": "no_trade",
       "question": "Will I think that the Belief State Geometry research program has achieved something important by October 20th, 2026?",
@@ -1873,31 +1897,6 @@
         "Two years of sustained anti-government protests led to this snap election, signaling significant public discontent.",
         "The 'Student List' has consolidated opposition support, projected at 107 seats.",
         "Disputes regarding voter rolls and administrative issues could trigger unexpected turnout swings or contested results."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1792044760776,
-      "kind": "no_trade",
-      "question": "Saudi-Houthi ceasefire agreement before November 1?",
-      "url": "https://manifold.markets/apol/saudihouthi-ceasefire-agreement-bef",
-      "market_prob": 0.17995993032484212,
-      "model_prob": 0.04,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With Yemen sliding back into full-scale war following direct strikes on Saudi airports and retaliatory coalition airstrikes in mid-October, negotiating and formally announcing a bilateral de jure and de facto ceasefire within 16 days is extremely unlikely.",
-      "uncertainty": "Whether backchannel talks in Muscat suddenly produce an emergency bilateral de-escalation framework before November 1",
-      "resolution_risk": "Informal truces, unilateral pauses, or local agreements could be misinterpreted by observers, but the criteria strictly exclude them unless formally framed and confirmed bilaterally",
-      "evidence_for": [
-        "Saudi Arabia proposed a temporary ceasefire via Oman in mid-September 2026",
-        "UN Special Envoy Hans Grundberg and Omani mediators remain actively engaged in shuttle diplomacy between the parties"
-      ],
-      "evidence_against": [
-        "Conflict has escalated back into what the UN describes as 'full-scale war' as of mid-October 2026",
-        "Recent Houthi drone and missile strikes have targeted civilian and energy targets in Saudi Arabia including Riyadh and Abha airports",
-        "Saudi-led coalition is actively conducting retaliatory airstrikes in Yemen",
-        "Strict resolution criteria require an official de jure and de facto bilateral agreement confirmed by both parties or official mediators, ruling out unilateral pauses or informal truces"
       ],
       "reason": "size floored to zero by balance reserve"
     }
