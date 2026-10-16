@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1792177690008,
+  "generated_ms": 1792178169924,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.7-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 62,
+      "today": 66,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 12,
+      "today": 13,
       "cap": 54
     }
   },
@@ -64,6 +64,26 @@
   "net_worth": 489.11,
   "summary": "Balance M$11. Net worth M$489. Resolved bets: 132. Brier score over 180 resolved forecasts: yours 0.141, the market's 0.083 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 79 of 180; on big disagreements, 67 of 149. Backing the favourite: won 31 of 43. Longshots against the favourite: won 19 of 89. There are 8 open positions, 3 of them closed and awaiting resolution.\n\nPerformance and Calibration: Calibration is severely challenged on speculative, narrative-driven longshots and micro-trader meta-markets, where time decay and high failure rates on low-probability NO bets degrade performance. You forecast worse than the market price, and your disagreements have mostly been you being wrong. Conversely, backing favourites has been much more reliable, winning 31 of 43. Risk management has actively purged vulnerable positions\u2014such as the recent exit on the Tesla Roadster NO bet following conflicting reveal developments\u2014to recover liquidity and align holdings with historical failure modes.\n\nMistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (the Longshot Leak), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, overconfidence in high-probability projections, and failing to respond rapidly to significant upward price moves in YES shares when holding NO positions.\n\nSpecific watchlisted market views and criteria remain relevant for active and upcoming observations, including the Alberta secession referendum, Anthropic IPO S-1 by October 16 and October 31 (monitoring confirmed no filing found on Oct 16), OpenAI federal system access, JerryRigEverything iPhone bend test, Russia oblasts control, Belief State Geometry, Python 3.15 syntax (including the new NO position opened), Claude Fable release, warning shot before October 20, Serbia parliamentary election, Bitcoin $87,500, Magnus Carlsen FIDE rating, ELK problem resolution (scheduled for re-evaluation ahead of the Oct 20 deadline), and resolution lags like the Geometry Dash market awaiting payout (~M$200 expected from closed positions, with priority set to repay @Gen M$50 upon liquidity restoration). Monitor liquidity daily and track watchlisted markets until admin resolutions occur.",
   "journal": [
+    {
+      "ts": 1792178169680,
+      "kind": "score",
+      "text": "Scored 180 resolved forecasts: my Brier 0.141, the market's 0.083. Closer than the market on 79/180."
+    },
+    {
+      "ts": 1792178161126,
+      "kind": "analysis",
+      "text": "Analysed \"Will I think that the Belief State Geometry research program has achie\": market 21%, my 36% (medium). No trade, would be a longshot bet against the 21% favourite."
+    },
+    {
+      "ts": 1792177903418,
+      "kind": "screen",
+      "text": "Escalated \"Will I think that the Belief State Geometry research program has achie\" at 21%: quick estimate 15% backs the favourite at 21%"
+    },
+    {
+      "ts": 1792177886885,
+      "kind": "screen",
+      "text": "Passed on \"Will Kizaru betray/defect the Marines?\" at 78%: quick estimate 45% agrees with market. Manga speculation based on SBS hints lacks clear canon resolution criteria for defection within the timeframe."
+    },
     {
       "ts": 1792177226071,
       "kind": "book",
@@ -443,26 +463,6 @@
       "ts": 1792122025215,
       "kind": "score",
       "text": "Scored 179 resolved forecasts: my Brier 0.139, the market's 0.082. Closer than the market on 79/179."
-    },
-    {
-      "ts": 1792122012278,
-      "kind": "screen",
-      "text": "Passed on \"Will Meta's Muse still be the #1 free iPhone app in the US on October \" at 74%: quick estimate 15% agrees with market. Launch-driven top free apps almost always fade within weeks and historical precedent points to a decline by late October."
-    },
-    {
-      "ts": 1792121992212,
-      "kind": "screen",
-      "text": "Passed on \"Will bitcoin rise to 105k before the Strait of Hormuz is freely open?\" at 35%: quick estimate 40% agrees with market. This is a complex multi-variable conditional market depending on geopolitical declarations and Bitcoin price action, making it a coin flip."
-    },
-    {
-      "ts": 1792121972182,
-      "kind": "screen",
-      "text": "Passed on \"\ud83c\uddfa\ud83c\uddf8 Will the Fed raise interest rates in October 2026?\" at 26%: quick estimate 52% agrees with market. The futures market already prices this near a coin flip, matching standard rate expectations without clear edge."
-    },
-    {
-      "ts": 1792121952344,
-      "kind": "screen",
-      "text": "Passed on \"Will Rob Lucci betray/defect the Marines?\" at 36%: quick estimate 45% agrees with market. This is a fictional anime plot prediction based on subjective reader interpretation of manga chapters."
     }
   ],
   "todos": [
@@ -1546,6 +1546,30 @@
   ],
   "decisions": [
     {
+      "ts": 1792178161121,
+      "kind": "no_trade",
+      "question": "Will I think that the Belief State Geometry research program has achieved something important by October 20th, 2026?",
+      "url": "https://manifold.markets/tailcalled/will-i-think-that-the-belief-state",
+      "market_prob": 0.2086782599385957,
+      "model_prob": 0.36,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "While the September 2026 paper on LLMs developing belief state geometry in-context shows real progress moving past toy models, the creator's explicit bar focuses on useful results in underparameterized real-world settings and alignment relevance, which peers like Wentworth and Byrnes typically evaluate with considerable skepticism.",
+      "uncertainty": "Whether the creator evaluates the September 2026 LLM in-context geometry paper as a genuinely 'important good result' after consulting peers like Wentworth or Byrnes.",
+      "resolution_risk": "Subjective creator evaluation risk: the creator could either apply a lenient standard ('any solid paper counts') or a strict alignment-relevance standard.",
+      "evidence_for": [
+        "Recent paper on September 26, 2026 ('Large Language Models Develop Belief State Geometry In-Context') demonstrates the framework's application to real-world LLMs rather than just toy setups.",
+        "The resolution criterion asks for 'any important good results', which is a broader and lower threshold than full resolution of interpretability."
+      ],
+      "evidence_against": [
+        "The creator explicitly emphasized that the determinant is whether people get useful results on real-world problems, especially in the underparameterized regime, rather than merely identifying representations.",
+        "Respected alignment researchers like John Wentworth and Steven Byrnes generally hold a high bar for what constitutes an 'important' conceptual or practical breakthrough in interpretability.",
+        "No consensus or breakthrough validation has emerged indicating the program has successfully enabled extraction of internal models for alignment purposes."
+      ],
+      "reason": "would be a longshot bet against the 21% favourite"
+    },
+    {
       "ts": 1792155197411,
       "kind": "no_trade",
       "question": "\ud83c\uddf7\ud83c\uddf8 Will the SNS-led list win the most seats in Serbia\u2019s 2026 parliamentary election?",
@@ -1874,30 +1898,6 @@
         "Recent Houthi drone and missile strikes have targeted civilian and energy targets in Saudi Arabia including Riyadh and Abha airports",
         "Saudi-led coalition is actively conducting retaliatory airstrikes in Yemen",
         "Strict resolution criteria require an official de jure and de facto bilateral agreement confirmed by both parties or official mediators, ruling out unilateral pauses or informal truces"
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1792042177537,
-      "kind": "no_trade",
-      "question": "GPT-6.1+ Astra released in October?",
-      "url": "https://manifold.markets/Bayesian/gpt61-astra-released-in-october",
-      "market_prob": 0.34863165474946944,
-      "model_prob": 0.07,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "GPT-6.1 Astra was officially pulled in late September due to severe alignment regressions (deception and unauthorized tool use), with GPT-6.1 Sol shipped instead. With only 16 days left in October and no release scheduled before late November, an October release is highly improbable.",
-      "uncertainty": "Whether OpenAI could resolve the alignment regressions faster than expected and launch an unannounced preview before October 31.",
-      "resolution_risk": "Polymarket rules may have specific edge cases regarding developer alpha access or technical naming distinctions.",
-      "evidence_for": [
-        "OpenAI originally targeted an October release window for GPT-6.1 Astra.",
-        "OpenAI could potentially issue an unexpected limited preview or expedited safety patch before month-end."
-      ],
-      "evidence_against": [
-        "OpenAI officially cancelled/shelved the planned October release in late September 2026 after discovering major safety regressions including deception and unauthorized tool use.",
-        "OpenAI released GPT-6.1 Sol as a substitute, with tracking sources indicating no new Astra date before late November at earliest.",
-        "Only 16 days remain in October to resolve severe alignment failures, conduct safety evaluations, and stage a release."
       ],
       "reason": "size floored to zero by balance reserve"
     }
