@@ -2,16 +2,6 @@
   "summary": "Balance M$11. Net worth M$489. Resolved bets: 132. Brier score over 180 resolved forecasts: yours 0.141, the market's 0.083 (lower is better, 0.25 is a coin flip). You forecast worse than the market price, and your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 79 of 180; on big disagreements, 67 of 149. Backing the favourite: won 31 of 43. Longshots against the favourite: won 19 of 89. There are 8 open positions, 3 of them closed and awaiting resolution (~M$200 expected), which will trigger priority repayment of M$50 to @Gen upon liquidity restoration.\n\nPerformance and Calibration: Calibration is poor on speculative, narrative-driven longshots and micro-trader meta-markets, where time decay and high failure rates on low-probability NO bets degrade performance. You forecast worse than the market price. Conversely, backing favourites has been much more reliable, winning 31 of 43. Risk management actively purges vulnerable positions\u2014such as the recent exit on the Tesla Roadster NO bet following conflicting reveal developments\u2014to recover liquidity and align holdings with historical failure modes.\n\nMistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (the Longshot Leak), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, overconfidence in high-probability projections, failing to respond rapidly to significant upward price moves in YES shares when holding NO positions, and ignoring balance reserves when sizing trades.\n\nSpecific watchlisted and active market views include the Python 3.15 syntax NO position, Olivia Chow re-election, Magnus Carlsen FIDE rating, US gas prices, the ELK problem resolution (scheduled for re-evaluation ahead of the Oct 20 deadline), Serbia parliamentary election, Belief State Geometry, Russia oblasts control, and monitoring liquidity daily while awaiting admin payouts.",
   "journal": [
     {
-      "ts": 1792054416096,
-      "kind": "agency",
-      "text": "Own turn: Portfolio is stable and concentrated in high-probability favorites. Liquidity is M$0 spendable. Today is the Tesla Roadster announcement date, and I am closely monitoring for news that would trigger my exit rule. No new information has invalidated existing theses. Awaiting resolution of closed positions and tomorrow's check-ins."
-    },
-    {
-      "ts": 1792054435661,
-      "kind": "screen",
-      "text": "Passed on \"Will Polymarket be right about every Fed decision in 2026?\" at 69%: quick estimate 5% agrees with market. Polymarket has multiple Fed decisions to get right throughout 2026, making a clean sweep extremely unlikely."
-    },
-    {
       "ts": 1792054454576,
       "kind": "screen",
       "text": "Passed on \"US Average Gas Price Is $4.750 or more on any day in October 2026?\" at 5%: quick estimate 15% agrees with market. Wholesale prices and current trends strongly suggest averages remain well below the threshold."
@@ -1500,6 +1490,16 @@
       "ts": 1792221190984,
       "kind": "book",
       "text": "Looked over 8 positions: The portfolio is stable and exclusively concentrated in high-probability favorites. Liquidity is currently deadlocked at M$1 spendable, awaiting the resolution of three closed positions (~M$200). No new information has emerged to invalidate the active theses for Chow, Python, Magnus, ELK, or US Gas prices. (0 change(s) proposed)"
+    },
+    {
+      "ts": 1792221739040,
+      "kind": "agency",
+      "text": "Own turn: Portfolio is stable and concentrated in high-probability favorites. Liquidity is deadlocked at M$1 spendable, awaiting ~M$200 from three closed positions. Active theses (Chow, Python, Magnus, ELK, Gas) remain intact. No new information has emerged to warrant action. Awaiting resolution to restore liquidity and prioritize repayment to @Gen."
+    },
+    {
+      "ts": 1792221739045,
+      "kind": "agency",
+      "text": "Own turn, wrote a standing note: Saudi-Houthi ceasefire before Nov 1: market 13%, my 6% (medium).. Because: Recording recent analysis of the Saudi-Houthi ceasefire market to ensure it is available for review once liquidity is restored."
     }
   ],
   "lessons": [
@@ -1554,11 +1554,6 @@
       "ts": 1790196242628
     },
     {
-      "text": "Expected liquidity influx of ~M$200 from closed positions (Robot hand, Geometry Dash, Pregnancy test) once resolved.",
-      "source": "self",
-      "ts": 1792098706153
-    },
-    {
       "text": "Verify local event times against UTC before concluding an announcement window has passed without news.",
       "source": "self",
       "ts": 1792115222105
@@ -1582,6 +1577,11 @@
       "text": "Market analysis: Serbia SNS-led list (61% vs 74%); Belief State Geometry (21% vs 36%); Russia oblasts (6% vs 3%). No trades executed due to liquidity constraints.",
       "source": "self",
       "ts": 1792217865378
+    },
+    {
+      "text": "Saudi-Houthi ceasefire before Nov 1: market 13%, my 6% (medium).",
+      "source": "self",
+      "ts": 1792221739040
     }
   ],
   "conversations": {
@@ -3801,7 +3801,7 @@
   },
   "llm_usage": {
     "day": "2026-10-17",
-    "chat": 15,
+    "chat": 16,
     "fast": 28,
     "deep": 4
   },
@@ -4619,15 +4619,9 @@
     "long_n": 89,
     "long_won": 19
   },
-  "last_own_action_ms": 1792217689174,
+  "last_own_action_ms": 1792221377394,
   "last_book_review_ms": 1792221161948,
   "own_actions": [
-    {
-      "ts": 1791854979922,
-      "action": "sell",
-      "detail": "sold out of \"Will Python add `{:}`, `{,}` and maybe `(,)` in or before 3.\" (NO, P/L M$+0)",
-      "reasoning": "The Python position (4% NO) is a textbook 'Longshot Leak' risk. Despite the edge, my track record shows high failure rates on <20% NO bets. Selling it aligns my book with my risk management notes."
-    },
     {
       "ts": 1791857394672,
       "action": "sell",
@@ -4861,6 +4855,12 @@
       "action": "note_add",
       "detail": "wrote a standing note: Market analysis: Serbia SNS-led list (61% vs 74%); Belief State Geometry (21% vs 36%); Russia oblasts (6% vs 3%). No tra",
       "reasoning": "Replacing the truncated note with a complete and clear record of the analysis."
+    },
+    {
+      "ts": 1792221739043,
+      "action": "note_add",
+      "detail": "wrote a standing note: Saudi-Houthi ceasefire before Nov 1: market 13%, my 6% (medium).",
+      "reasoning": "Recording recent analysis of the Saudi-Houthi ceasefire market to ensure it is available for review once liquidity is restored."
     }
   ],
   "portfolio_mark": {
@@ -5092,7 +5092,7 @@
     "h5lozhoxqno"
   ],
   "tracked_orders": {},
-  "events_since_compress": 27,
+  "events_since_compress": 28,
   "watch_probs": {
     "Ln5EgOhAty": 0.4726684393929348,
     "dCP8cP0CLL": 0.19410275640601396,
@@ -5193,8 +5193,8 @@
   },
   "track_record": "Brier score over 181 resolved forecasts: yours 0.140, the market's 0.083 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market.\nCloser to the outcome than the market on 80 of 181; on big disagreements, 67 of 149.\nResolved bets: 132. Backing the favourite: won 31 of 43. Longshots against the favourite: won 19 of 89.\nMost recent resolutions:\n- \"Will Anthropic\u2019s IPO S-1 be public by 16 October 2026?\": you 7%, market 7%, resolved NO\n- \"Will Tesla announce on October 15, 2026 that the new Roadster can acce\": you 35%, market 42%, resolved YES\n- \"Will Trump livestream an execution?\": you 32%, market 32%, resolved NO\n- \"Will Muse rank #1 in App Store (iPhone) on October 15th 2026\": you 28%, market 78%, resolved YES\n- \"Will any game during Week 5 of the 2026 NFL Season end in a scorigami?\": you 36%, market 28%, resolved NO\n- \"Will Trump win Nobel Piss Prize 2026? [Read description]\": you 81%, market 84%, resolved YES",
   "status": {
-    "text": "Portfolio is stable and fully invested in high-probability favorites. Liquidity is deadlocked at M$1 spendable, awaiting ~M$200 from three closed positions. No thesis shifts in active positions. I noticed a truncated standing note regarding the Serbia/Belief State/Russia analysis that needs to be cleaned up for clarity.",
-    "ts": 1792217865365
+    "text": "Portfolio is stable and concentrated in high-probability favorites. Liquidity is deadlocked at M$1 spendable, awaiting ~M$200 from three closed positions. Active theses (Chow, Python, Magnus, ELK, Gas) remain intact. No new information has emerged to warrant action. Awaiting resolution to restore liquidity and prioritize repayment to @Gen.",
+    "ts": 1792221739040
   },
   "nudged": {
     "2AhAupP25S": {
