@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1792280325253,
+  "generated_ms": 1792280927743,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 85,
+      "today": 88,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 15,
+      "today": 16,
       "cap": 54
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 489.78,
   "summary": "Balance M$11. Net worth M$490. Resolved bets: 132. 8 open positions, 3 of them closed and awaiting resolution (~M$200 expected), which will trigger priority repayment of M$50 to @Gen upon liquidity restoration. Brier score over 181 resolved forecasts: yours 0.140, the market's 0.083 (lower is better, 0.25 is a coin flip). You forecast worse than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 80 of 181; on big disagreements, 67 of 149. Backing the favourite: won 31 of 43. Longshots against the favourite: won 19 of 89.\n\nPerformance and Calibration: Calibration is poor on speculative, narrative-driven longshots and micro-trader meta-markets, where time decay and high failure rates on low-probability NO bets degrade performance. Conversely, backing favourites has been much more reliable, winning 31 of 43. Track record indicates a consistent tendency to be wrong when disagreeing with the market. Risk management actively maintains high-probability favourite positions while awaiting liquidity recovery.\n\nMistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (the Longshot Leak), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, overconfidence in high-probability projections, failing to respond rapidly to significant upward price moves in YES shares when holding NO positions, and ignoring balance reserves when sizing trades.\n\nSpecific watchlisted and active market views include Python 3.15 syntax, Olivia Chow re-election, Magnus Carlsen FIDE rating, US gas prices, the ELK problem resolution (scheduled for re-evaluation ahead of the Oct 20 deadline), Serbia parliamentary election, Belief State Geometry, Russia oblasts control, Pentagon $200B funding, Irkutsk plague, Saudi-Houthi ceasefire, OpenAI federal system access, and math.eg.rego.re donations. Liquidity remains deadlocked at M$1 spendable while awaiting admin payouts to clear debt and resume activity.",
   "journal": [
+    {
+      "ts": 1792280927659,
+      "kind": "analysis",
+      "text": "Analysed \"Does Claude Opus 5.5 make egregious errors?\": market 60%, my 73% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1792280511983,
+      "kind": "screen",
+      "text": "Escalated \"Does Claude Opus 5.5 make egregious errors?\" at 60%: quick estimate 82% backs the favourite at 60%"
+    },
     {
       "ts": 1792278106688,
       "kind": "screen",
@@ -453,16 +463,6 @@
       "ts": 1792239723633,
       "kind": "book",
       "text": "Looked over 8 positions: The portfolio is stable and concentrated in high-probability favorites. Liquidity is deadlocked at M$1 spendable, awaiting the resolution of three closed positions (~M$200). No new information has emerged to invalidate the active theses for Chow, Python, Magnus, ELK, or US Gas prices. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1792237963850,
-      "kind": "screen",
-      "text": "Passed on \"Will AI music generation have regressed between Halloween 2025 and 202\" at 6%: quick estimate 85% agrees with market. Technological regression in AI is highly improbable given rapid hardware and algorithmic advancements."
-    },
-    {
-      "ts": 1792237944109,
-      "kind": "screen",
-      "text": "Passed on \"Russia announces new wave of mobilization before November 2026\" at 15%: quick estimate 15% agrees with market. Mass mobilization remains politically risky for the Kremlin, and current recruitment via contract soldiers is meeting their near-term needs without a new wave."
     }
   ],
   "todos": [
@@ -1551,6 +1551,30 @@
   ],
   "decisions": [
     {
+      "ts": 1792280927655,
+      "kind": "no_trade",
+      "question": "Does Claude Opus 5.5 make egregious errors?",
+      "url": "https://manifold.markets/dreev/does-claude-opus-55-make-egregious",
+      "market_prob": 0.6,
+      "model_prob": 0.73,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Leaning YES (0.73). Finding a single reproducible, unambiguous prompt where a multimodal LLM fails >=50% of the time remains very achievable given known spatial/visual reasoning limits, following the precedents set in the o3 and GPT-5 versions of this market.",
+      "uncertainty": "Whether dreev replicates and accepts at least one of the proposed candidate prompts as clear and unambiguous before market close.",
+      "resolution_risk": "The creator might reject candidate prompts if humans also debate or disagree on the obviousness of the answer.",
+      "evidence_for": [
+        "Previous iterations for o3 and GPT-5 both found valid egregious errors, resolving YES.",
+        "Multiple candidates are being actively tested in comments (e.g., visual spatial tracing, object counting, physical reasoning), with several showing >50% failure rates.",
+        "Multimodal LLMs still consistently exhibit fragile spatial and physical reasoning on non-standard visual prompts."
+      ],
+      "evidence_against": [
+        "Max effort reasoning modes reduce simple logic failures.",
+        "Some proposed candidate prompts suffer from human ambiguity or subjective interpretation, which dreev may disqualify."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1792275738745,
       "kind": "no_trade",
       "question": "Janja Garnbret climbs Burden of Dreams by 23 October 2026?",
@@ -1880,30 +1904,6 @@
         "Known incident involves a localized laboratory-acquired infection/death at the Irkutsk Anti-Plague Institute rather than wide community transmission.",
         "Quarantined contacts have reportedly tested negative and received standard antibiotic prophylaxis, halting potential transmission chains.",
         "Resolution requires confirmed consensus linked to the cluster within just 14 days, leaving very little time for untraced spread and clinical detection outside the oblast."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1792203350160,
-      "kind": "no_trade",
-      "question": "Will Pentagon get $200 billion in funds for the Iran War before the 2026 midterms?",
-      "url": "https://manifold.markets/MikkoN/will-pentagon-get-200-billion-in-fu",
-      "market_prob": 0.05040139329233256,
-      "model_prob": 0.02,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With under three weeks until the midterms and Congress operating under continuing resolutions into December, passing a $200B war appropriation is virtually impossible. Subsequent White House and House proposals have all been under $90B.",
-      "uncertainty": "Whether an unprecedented emergency legislative session is called and passes a massive supplemental prior to November 3, 2026.",
-      "resolution_risk": "Any dispute over how cumulative or indirect funding measures are counted toward Iran operations, though the criteria specify at least $200 billion legally binding approval.",
-      "evidence_for": [
-        "The Pentagon initially sought $200 billion in March 2026 for Iran operations."
-      ],
-      "evidence_against": [
-        "Only 17 days remain before the 2026 midterm elections.",
-        "The White House drastically downscaled supplemental funding requests to between $67B and $87B (with direct war funding even lower, around $37.5B).",
-        "House budget proposals allocated roughly $60B to $73B, neither of which has passed the Senate or been signed into law.",
-        "Congress passed continuing resolutions extending into December 2026, meaning no full FY2027 defense appropriation or massive supplemental will clear both chambers before the election."
       ],
       "reason": "size floored to zero by balance reserve"
     }
