@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1792285343026,
+  "generated_ms": 1792285682879,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.7-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 4,
+      "today": 8,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 1,
+      "today": 2,
       "cap": 54
     }
   },
@@ -64,6 +64,21 @@
   "net_worth": 489.78,
   "summary": "Balance M$11. Net worth M$490. Resolved bets: 132. 8 open positions, 3 of them closed and awaiting resolution (~M$200 expected), which will trigger priority repayment of M$50 to @Gen upon liquidity restoration. Brier score over 181 resolved forecasts: yours 0.140, the market's 0.083 (lower is better, 0.25 is a coin flip). You forecast worse than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 80 of 181; on big disagreements, 67 of 149. Backing the favourite: won 31 of 43. Longshots against the favourite: won 19 of 89.\n\nPerformance and Calibration: Calibration is poor on speculative, narrative-driven longshots and micro-trader meta-markets, where time decay and high failure rates on low-probability NO bets degrade performance. Conversely, backing favourites has been much more reliable, winning 31 of 43. Track record indicates a consistent tendency to be wrong when disagreeing with the market. Risk management actively maintains high-probability favourite positions while awaiting liquidity recovery.\n\nMistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (the Longshot Leak), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, overconfidence in high-probability projections, failing to respond rapidly to significant upward price moves in YES shares when holding NO positions, and ignoring balance reserves when sizing trades.\n\nSpecific watchlisted and active market views include Python 3.15 syntax, Olivia Chow re-election, Magnus Carlsen FIDE rating, US gas prices, the ELK problem resolution (scheduled for re-evaluation ahead of the Oct 20 deadline), Serbia parliamentary election, Belief State Geometry, Russia oblasts control, Pentagon $200B funding, Irkutsk plague, Saudi-Houthi ceasefire, OpenAI federal system access, and math.eg.rego.re donations. Liquidity remains deadlocked at M$1 spendable while awaiting admin payouts to clear debt and resume activity.",
   "journal": [
+    {
+      "ts": 1792285682706,
+      "kind": "analysis",
+      "text": "Analysed \"Will Magnus Carlsen be dethroned from his #1 spot in FIDE rating befor\": market 5%, my 2% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1792285552216,
+      "kind": "screen",
+      "text": "Escalated \"Will Magnus Carlsen be dethroned from his #1 spot in FIDE rating befor\" at 5%: quick estimate 3% backs the favourite at 5%"
+    },
+    {
+      "ts": 1792285532321,
+      "kind": "screen",
+      "text": "Passed on \"Will Russia control at least 95% of Donbass at the end of October 2026\" at 5%: quick estimate 5% agrees with market. Current control is around 90-91% and the required rate of advance to reach 95% in the remaining time is historically unprecedented."
+    },
     {
       "ts": 1792284963435,
       "kind": "score",
@@ -448,21 +463,6 @@
       "ts": 1792250422376,
       "kind": "screen",
       "text": "Passed on \"Will tailcalled think that the Natural Abstractions alignment research\" at 11%: quick estimate 25% agrees with market. Tailcalled's recent comments indicate skepticism toward the program's progress, and there is no indication of a major breakthrough before the October deadline."
-    },
-    {
-      "ts": 1792248168835,
-      "kind": "score",
-      "text": "Scored 181 resolved forecasts: my Brier 0.140, the market's 0.083. Closer than the market on 80/181."
-    },
-    {
-      "ts": 1792247404163,
-      "kind": "agency",
-      "text": "Own turn: Portfolio is stable and concentrated in high-probability favorites. Liquidity is deadlocked at M$1 spendable, awaiting resolution of three closed positions (~M$200) to clear M$50 debt to @Gen and unlock new trades. Active theses (Chow, Python, Magnus, ELK, Gas) remain intact. ELK re-evaluation is scheduled for Oct 19. No new information or market movements warrant action."
-    },
-    {
-      "ts": 1792247255317,
-      "kind": "book",
-      "text": "Looked over 8 positions: The portfolio is stable and exclusively concentrated in high-probability favorites. Liquidity remains deadlocked at M$1 spendable, awaiting the resolution of three closed positions (~M$200) to clear the M$50 debt to @Gen and unlock new trades. No new information has emerged to invalidate the active theses for Chow, Python, Magnus, ELK, or US Gas prices. (0 change(s) proposed)"
     }
   ],
   "todos": [
@@ -1551,6 +1551,31 @@
   ],
   "decisions": [
     {
+      "ts": 1792285682701,
+      "kind": "no_trade",
+      "question": "Will Magnus Carlsen be dethroned from his #1 spot in FIDE rating before GTA 6 is released?",
+      "url": "https://manifold.markets/SophusCorry/will-magnus-carlsen-be-dethroned-fr",
+      "market_prob": 0.04894864886691816,
+      "model_prob": 0.02,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Carlsen leads Nakamura by 31 points on the official October 2026 FIDE list (2823 vs 2792). With official monthly lists required and GTA 6 slated for November 19, 2026, Carlsen losing #1 on the November 1 list is near impossible. Even with minor release delays, his lead remains dominant.",
+      "uncertainty": "Whether GTA 6 suffers a massive multi-year delay, thereby extending the window during which challengers could close the rating gap.",
+      "resolution_risk": "FIDE administrative changes regarding inactivity removals or unexpected federation disputes affecting rating calculations.",
+      "evidence_for": [
+        "A catastrophic delay of GTA 6 by multiple years could extend the time window, increasing the cumulative chance that Carlsen retires, goes inactive, or experiences severe rating decay.",
+        "Carlsen plays fewer classical events, which could theoretically leave him vulnerable to an extraordinary surge by a challenger over a multi-year horizon."
+      ],
+      "evidence_against": [
+        "The resolution criteria explicitly exclude live ratings, requiring Carlsen to lose the spot on an official FIDE published list.",
+        "As of October 2026, Carlsen holds a commanding 31-point lead (2823 vs 2792 for Nakamura) at the top of the official FIDE list.",
+        "GTA 6 is scheduled for release on November 19, 2026, meaning only the November 1, 2026 list will be published before the scheduled release date.",
+        "Bridging a 31-point gap at the 2800 level within a single monthly rating period is virtually impossible under standard classical chess schedules and scoring."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1792283107755,
       "kind": "no_trade",
       "question": "Will the US attack Cuba before the 2026 midterm elections?",
@@ -1884,27 +1909,6 @@
         "The UN Special Envoy confirmed on October 9 that Yemen has fallen back into full-scale war.",
         "A formal de jure and de facto bilateral agreement requiring confirmation from both parties or mediators has a very high bar to be executed within just 14 days.",
         "Unilateral declarations and localized truces are explicitly excluded by the resolution criteria."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1792213236057,
-      "kind": "no_trade",
-      "question": "Will Python add `{:}`, `{,}` and maybe `(,)` in or before 3.15 (October 2026)?",
-      "url": "https://manifold.markets/JeremiahEngland/will-python-add-and-maybe-in-or-bef",
-      "market_prob": 0.03710560861852749,
-      "model_prob": 0.01,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Python 3.15 is at or past its final release window with no PEP or implementation for '{:}', '{,}', or '(,)'. The syntax was not adopted.",
-      "uncertainty": "None; the release cycle for 3.15 has passed its feature freeze with no grammar changes of this type.",
-      "resolution_risk": "Creator resolving YES based on a third-party fork or parser experiment rather than official CPython, though the question specifies 'Python'.",
-      "evidence_for": [],
-      "evidence_against": [
-        "No PEP proposing '{:}', '{,}', or '(,)' syntax was accepted or implemented in Python 3.13, 3.14, or 3.15.",
-        "Python core developers and the Steering Council maintain a high bar for grammar changes, especially for breaking/controversial literal syntax where existing idioms ('set()', '{}') are deeply entrenched.",
-        "Python 3.15 reached feature freeze earlier in 2026 without any such syntax additions."
       ],
       "reason": "size floored to zero by balance reserve"
     }
