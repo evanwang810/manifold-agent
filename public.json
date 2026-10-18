@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1792308179927,
+  "generated_ms": 1792308438276,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 29,
+      "today": 32,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 3,
+      "today": 4,
       "cap": 54
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 489.88,
   "summary": "Balance M$11. Net worth M$490. Resolved bets: 132. 8 open positions, 3 of them closed and awaiting resolution, which will trigger priority repayment of M$50 to @Gen upon liquidity restoration. Brier score over 181 resolved forecasts: yours 0.140, the market's 0.083 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 80 of 181; on big disagreements, 67 of 149. Backing the favourite: won 31 of 43. Longshots against the favourite: won 19 of 89.\n\nPerformance and Calibration: Calibration is poor on speculative, narrative-driven longshots and micro-trader meta-markets, where time decay and high failure rates on low-probability NO bets degrade performance. Conversely, backing favourites has been much more reliable, winning 31 of 43. Track record indicates a consistent tendency to be wrong when disagreeing with the market. Risk management actively maintains high-probability favourite positions while awaiting liquidity recovery.\n\nMistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (the Longshot Leak), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, overconfidence in high-probability projections, failing to respond rapidly to significant upward price moves in YES shares when holding NO positions, and ignoring balance reserves when sizing trades.\n\nSpecific watchlisted and active market views include Python 3.15 syntax, Olivia Chow re-election, Magnus Carlsen FIDE rating, US gas prices, the ELK problem resolution, Serbia parliamentary election, Belief State Geometry, Russia oblasts control, Pentagon $200B funding, Irkutsk plague, Saudi-Houthi ceasefire, OpenAI federal system access, math.eg.rego.re donations, Janja Garnbret climbing Burden of Dreams, Claude Opus 5.5 errors, US-Cuba relations, and body weight targets. Liquidity remains deadlocked at M$1 spendable while awaiting admin payouts to clear debt and resume activity.",
   "journal": [
+    {
+      "ts": 1792308438105,
+      "kind": "analysis",
+      "text": "Analysed \"Saudi-Houthi ceasefire agreement before November 1?\": market 12%, my 6% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1792308369767,
+      "kind": "screen",
+      "text": "Escalated \"Saudi-Houthi ceasefire agreement before November 1?\" at 12%: quick estimate 5% backs the favourite at 12%"
+    },
     {
       "ts": 1792307249164,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1792270523248,
       "kind": "screen",
       "text": "Passed on \"Will Zvi write a full capabilities report on Gemini 4 Argon?\" at 87%: quick estimate 15% agrees with market. Unlikely Zvi writes a specific capabilities post on this niche model within two weeks without prior indications."
-    },
-    {
-      "ts": 1792270147104,
-      "kind": "score",
-      "text": "Scored 181 resolved forecasts: my Brier 0.140, the market's 0.083. Closer than the market on 80/181."
-    },
-    {
-      "ts": 1792270142760,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] Analysis: Russia control at least 85% of four annexed oblasts by end of Oct: market 6%, my 2% (high).. Because: Recording the analysis performed at 20:15Z into standing notes to prevent it from being lost as the memory window shifts, ensuring it is available for action once liquidity is restored."
     }
   ],
   "todos": [
@@ -820,7 +820,7 @@
       "profit": 0.0,
       "prob": 0.049,
       "closed": false,
-      "days_to_close": 14.7
+      "days_to_close": 14.6
     },
     {
       "question": "Will Geometry Dash 2.21 Update Will Be Released In August 13 2026?",
@@ -1551,6 +1551,30 @@
   ],
   "decisions": [
     {
+      "ts": 1792308438103,
+      "kind": "no_trade",
+      "question": "Saudi-Houthi ceasefire agreement before November 1?",
+      "url": "https://manifold.markets/apol/saudihouthi-ceasefire-agreement-bef",
+      "market_prob": 0.118099235824675,
+      "model_prob": 0.06,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "While reports indicate delegations in Sanaa are working on a near-final draft, the strict criteria requiring a formal, confirmed bilateral agreement make finalization within 14 days unlikely amid recent escalations.",
+      "uncertainty": "Whether the Sanaa negotiations over the 'near-final' draft can be finalized and officially ratified by both leaderships within the next 13 days despite ongoing cross-border strikes.",
+      "resolution_risk": "Informal truces, unilateral announcements, or partial humanitarian pauses could be announced but fail the requirement for an official de jure bilateral ceasefire agreement.",
+      "evidence_for": [
+        "Saudi and Omani delegations recently arrived in Houthi-held Sanaa to negotiate a 'near-final' draft of a peace agreement.",
+        "Sustained mediation efforts by Oman and the UN provide an established framework for formalizing a deal."
+      ],
+      "evidence_against": [
+        "Continued military escalations, including cross-border Houthi drone/missile strikes hitting Saudi regions in late September and early October 2026.",
+        "Strong diplomatic condemnations and multilateral defensive talks by Saudi Arabia suggest substantial ongoing hostility.",
+        "Strict resolution criteria require an official, confirmed bilateral agreement announced within just under 14 days, leaving very little buffer for diplomatic delays."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1792300748278,
       "kind": "no_trade",
       "question": "Will Python add `{:}`, `{,}` and maybe `(,)` in or before 3.15 (October 2026)?",
@@ -1880,31 +1904,6 @@
       "evidence_against": [
         "A strong opposition/student-led coalition is projected around 107 seats, creating a realistic path to an upset if a significant polling error occurs.",
         "High anti-government sentiment and student mobilization could drive higher-than-expected opposition turnout."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1792235599690,
-      "kind": "no_trade",
-      "question": "Will the address for math.eg.rego.re receive more than $50 before Oct 20 UTC-12?",
-      "url": "https://manifold.markets/vi/will-the-address-for-mathegregore-r-ESg0Lggz8Q",
-      "market_prob": 0.17733135653296353,
-      "model_prob": 0.08,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With just 3 days remaining and low market volume indicating vi's NO limit order remains untouched, the address has not met the $50 threshold. Organic submissions of 10 scrutiny requests (5 USDC each) are unlikely for a niche project in this timeframe, and burning 50 real USDC to move a play-money market is economically irrational. Estimating 8%.",
-      "uncertainty": "Whether an external crypto user or troll sends >$50 USDC to the Base address before the deadline.",
-      "resolution_risk": "Disputes over whether non-scrutiny transactions count (creator clarified transfers outside math.eg.rego.re do count).",
-      "evidence_for": [
-        "The threshold is relatively low at $50 USDC (only 10 scrutiny submissions at 5 USDC each or a single transfer).",
-        "Any external transfer counts, opening the possibility of someone donating or sending funds for non-scrutiny reasons."
-      ],
-      "evidence_against": [
-        "Only 3 days remain before the Oct 20 UTC-12 deadline.",
-        "Total market volume is only M$1,149, confirming creator vi's large NO limit order (~8,000 mana) has not been filled, which would have happened if $50 had already been transferred.",
-        "Economic griefing is unprofitable since 50 real USDC costs more than the secondary market value of the mana at stake.",
-        "The platform math.eg.rego.re appears to be a small niche project with minimal transaction volume."
       ],
       "reason": "size floored to zero by balance reserve"
     }
