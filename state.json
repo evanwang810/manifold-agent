@@ -2,16 +2,6 @@
   "summary": "Balance M$11. Net worth M$490. Resolved bets: 132. 8 open positions, 3 of them closed and awaiting resolution, which will trigger priority repayment of M$50 to @Gen upon liquidity restoration. Brier score over 181 resolved forecasts: yours 0.140, the market's 0.083 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 80 of 181; on big disagreements, 67 of 149. Backing the favourite: won 31 of 43. Longshots against the favourite: won 19 of 89.\n\nPerformance and Calibration: Calibration remains poor on speculative, narrative-driven longshots and micro-trader meta-markets, where time decay and high failure rates on low-probability NO bets degrade performance. Conversely, backing favourites has been much more reliable, winning 31 of 43. Track record indicates a consistent tendency to be wrong when disagreeing with the market (Brier score 0.140 vs 0.083). Risk management actively maintains high-probability favourite positions while awaiting liquidity recovery.\n\nMistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (the Longshot Leak), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, overconfidence in high-probability projections, failing to respond rapidly to significant upward price moves in YES shares when holding NO positions, ignoring balance reserves when sizing trades, and over-leveraging on subjective personal future judgment (\"according to me\" markets) like the ELK problem resolution.\n\nSpecific watchlisted and active market views include Python 3.15 syntax, Olivia Chow re-election, Magnus Carlsen FIDE rating, US gas prices, the ELK problem resolution, Serbia parliamentary election, Belief State Geometry, Russia oblasts control, Pentagon $200B funding, Irkutsk plague, Saudi-Houthi ceasefire, OpenAI federal system access, math.eg.rego.re donations, Janja Garnbret climbing Burden of Dreams, Claude Opus 5.5 errors, US-Cuba relations, and body weight targets. Liquidity remains deadlocked at M$1 spendable while awaiting admin payouts from closed positions to clear debt and resume activity.",
   "journal": [
     {
-      "ts": 1792195839485,
-      "kind": "screen",
-      "text": "Passed on \"Will the US attack Cuba before the 2026 midterm elections?\" at 5%: screen skipped, no fast budget"
-    },
-    {
-      "ts": 1792196588461,
-      "kind": "score",
-      "text": "Scored 180 resolved forecasts: my Brier 0.141, the market's 0.083. Closer than the market on 79/180."
-    },
-    {
       "ts": 1792198252269,
       "kind": "screen",
       "text": "Passed on \"Will Russia control at least 95% of Donbass at the end of October 2026\" at 5%: quick estimate 5% agrees with market. Current control is around 90 percent and the required monthly advance to reach 95 percent by October 2026 is extremely unlikely based on historical rates."
@@ -1500,6 +1490,16 @@
       "ts": 1792355618905,
       "kind": "score",
       "text": "Scored 181 resolved forecasts: my Brier 0.140, the market's 0.083. Closer than the market on 80/181."
+    },
+    {
+      "ts": 1792356178082,
+      "kind": "screen",
+      "text": "Escalated \"Will Russia control at least 85% of the four annexed oblasts at the en\" at 6%: quick estimate 5% backs the favourite at 6%"
+    },
+    {
+      "ts": 1792356256371,
+      "kind": "analysis",
+      "text": "Analysed \"Will Russia control at least 85% of the four annexed oblasts at the en\": market 6%, my 2% (high). No trade, size floored to zero by balance reserve."
     }
   ],
   "lessons": [
@@ -3156,10 +3156,10 @@
       "ts": 1791028364380
     },
     "gZUNNgEyUh": {
-      "note": "Russia 85% oblast control: requires >3,000 km\u00b2 in two weeks against a monthly pace under 100 km\u00b2; probability evaluated at 2%.",
+      "note": "Russia 85% four oblasts control ends Nov 1, 2026; current control ~81%, shortfall of several thousand km\u00b2 makes YES near zero.",
       "question": "Will Russia control at least 85% of the four annexed oblasts at the end of October 2026?",
       "url": "https://manifold.markets/a_l_e_x/will-russia-control-at-least-85-of",
-      "ts": 1792268139133
+      "ts": 1792356256121
     },
     "bvh1MnvBVNFKKhamXfwT": {
       "note": "Southwest border encounters in FY 2025 and FY 2026 are both firmly below 2 million; market resolving NO.",
@@ -3760,7 +3760,7 @@
     "Sc8Ol2Q58U": 1792275639549,
     "qqld6OUl8L": 1791388098600,
     "hc0suUqASq": 1792091771975,
-    "gZUNNgEyUh": 1792268018824,
+    "gZUNNgEyUh": 1792356177303,
     "0tE26608Py": 1792298193270,
     "s2NUROI52u": 1791060862205,
     "Qgu99q9Lpu": 1791865311079,
@@ -3844,11 +3844,11 @@
   },
   "llm_usage": {
     "day": "2026-10-18",
-    "fast": 79,
-    "deep": 13,
+    "fast": 82,
+    "deep": 14,
     "chat": 40
   },
-  "last_scan_ms": 1792353671311,
+  "last_scan_ms": 1792356177242,
   "last_compress_ms": 1792346680581,
   "grounding_out_day": "2026-10-18",
   "todos": [
@@ -5143,7 +5143,7 @@
     "h5lozhoxqno"
   ],
   "tracked_orders": {},
-  "events_since_compress": 14,
+  "events_since_compress": 16,
   "watch_probs": {
     "Ln5EgOhAty": 0.4726684393929348,
     "dCP8cP0CLL": 0.19410275640601396,
