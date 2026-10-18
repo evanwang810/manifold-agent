@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1792348540188,
+  "generated_ms": 1792348823755,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 68,
+      "today": 71,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 10,
+      "today": 11,
       "cap": 54
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 489.88,
   "summary": "Balance M$11. Net worth M$490. Resolved bets: 132. 8 open positions, 3 of them closed and awaiting resolution, which will trigger priority repayment of M$50 to @Gen upon liquidity restoration. Brier score over 181 resolved forecasts: yours 0.140, the market's 0.083 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 80 of 181; on big disagreements, 67 of 149. Backing the favourite: won 31 of 43. Longshots against the favourite: won 19 of 89.\n\nPerformance and Calibration: Calibration remains poor on speculative, narrative-driven longshots and micro-trader meta-markets, where time decay and high failure rates on low-probability NO bets degrade performance. Conversely, backing favourites has been much more reliable, winning 31 of 43. Track record indicates a consistent tendency to be wrong when disagreeing with the market (Brier score 0.140 vs 0.083). Risk management actively maintains high-probability favourite positions while awaiting liquidity recovery.\n\nMistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (the Longshot Leak), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, overconfidence in high-probability projections, failing to respond rapidly to significant upward price moves in YES shares when holding NO positions, ignoring balance reserves when sizing trades, and over-leveraging on subjective personal future judgment (\"according to me\" markets) like the ELK problem resolution.\n\nSpecific watchlisted and active market views include Python 3.15 syntax, Olivia Chow re-election, Magnus Carlsen FIDE rating, US gas prices, the ELK problem resolution, Serbia parliamentary election, Belief State Geometry, Russia oblasts control, Pentagon $200B funding, Irkutsk plague, Saudi-Houthi ceasefire, OpenAI federal system access, math.eg.rego.re donations, Janja Garnbret climbing Burden of Dreams, Claude Opus 5.5 errors, US-Cuba relations, and body weight targets. Liquidity remains deadlocked at M$1 spendable while awaiting admin payouts from closed positions to clear debt and resume activity.",
   "journal": [
+    {
+      "ts": 1792348823636,
+      "kind": "analysis",
+      "text": "Analysed \"Will Jacob Pfau think that the Eliciting Latent Knowledge research pro\": market 16%, my 32% (medium). No trade, would be a longshot bet against the 16% favourite."
+    },
+    {
+      "ts": 1792348732548,
+      "kind": "screen",
+      "text": "Escalated \"Will Jacob Pfau think that the Eliciting Latent Knowledge research pro\" at 16%: flagged: Jacob Pfau's comment expresses ambiguity about whether ARC's transition to LPE counts as ELK progress."
+    },
     {
       "ts": 1792348168451,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1792305817360,
       "kind": "screen",
       "text": "Passed on \"GPT-6.1+ Astra released in October?\" at 28%: quick estimate 25% agrees with market. No public indication of a GPT-6.1+ Astra release slated specifically for October 2026 makes this a standard low-probability speculation."
-    },
-    {
-      "ts": 1792303579176,
-      "kind": "score",
-      "text": "Scored 181 resolved forecasts: my Brier 0.140, the market's 0.083. Closer than the market on 80/181."
-    },
-    {
-      "ts": 1792303561973,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] Success Case: The 'Robot Hand' longshot (YES at 35%) is currently in profit (M$146 vs M$125). This serves as a re. Because: Documenting a successful longshot to refine the understanding of where edge actually exists, preventing a total abandonment of longshots while still guarding against the 'Longshot Leak' identified in the track record."
     }
   ],
   "todos": [
@@ -1551,6 +1551,31 @@
   ],
   "decisions": [
     {
+      "ts": 1792348823633,
+      "kind": "no_trade",
+      "question": "Will Jacob Pfau think that the Eliciting Latent Knowledge research program has achieved something important by October 20, 2026?",
+      "url": "https://manifold.markets/JacobPfau/will-jacob-pfau-think-that-the-elic",
+      "market_prob": 0.1624362195707339,
+      "model_prob": 0.32,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Jacob's recent comment highlights that ARC moved on to LPE, which he views as 'distinct' from ELK and merely 'on track for something important'. Combined with the high bar set in the description (where simple benchmark improvements over RLHF/CoT do not suffice), NO appears the more likely resolution, though a generous interpretation of ELK's lineage keeps YES in play.",
+      "uncertainty": "Whether Jacob decides upon reflection (or after consulting researchers like Paul Christiano) that LPE's lineage or intermediate conceptual findings qualify as an important achievement of the ELK program itself.",
+      "resolution_risk": "Jacob could adopt a broad historical interpretation where ELK's role in inspiring subsequent ARC agendas counts as an important achievement, resolving YES despite LPE being distinct.",
+      "evidence_for": [
+        "Jacob Pfau noted that ARC's LPE machinery is 'heavily inspired by their earlier ELK thinking' and 'certainly on track for something important'.",
+        "ELK generated significant conceptual and formal alignment research that could be credited to the broader research program."
+      ],
+      "evidence_against": [
+        "Jacob explicitly noted that LPE is 'distinct' from ELK, questioning whether it counts toward this market.",
+        "Jacob characterized LPE as 'on track for something important' rather than having already achieved it.",
+        "The description set a strict bar: benchmark improvements over RLHF/CoT were deemed insufficient, and if ELK appeared less central than in 2022, the market would resolve NO.",
+        "ARC largely shifted focus away from the original worst-case ELK formulation without producing a demonstrated ELK solution."
+      ],
+      "reason": "would be a longshot bet against the 16% favourite"
+    },
+    {
       "ts": 1792346265213,
       "kind": "no_trade",
       "question": "By Oct 31, 2026, will openai.com say its agents accessed a U.S. federal government system without authorization?",
@@ -1884,30 +1909,6 @@
         "The current monthly rate of advance across the entire front is measured in dozens or low hundreds of square kilometers, far below what is needed."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1792266107760,
-      "kind": "no_trade",
-      "question": "Will I think that the Belief State Geometry research program has achieved something important by October 20th, 2026?",
-      "url": "https://manifold.markets/tailcalled/will-i-think-that-the-belief-state",
-      "market_prob": 0.2086782599385957,
-      "model_prob": 0.18,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With resolution in 3 days, recent October 2026 discussions (such as 'Simplex vs Timaeus') emphasize that scaling belief-state geometry beyond toy HMMs to real-world neural networks remains an open limitation. Since the creator noted useful results on real-world problems as the primary benchmark, the threshold for 'important' results has likely not been met.",
-      "uncertainty": "Whether the creator considers recent in-context LLM geometry papers sufficient to count as 'important good results' despite scaling to real-world underparameterized problems remaining open.",
-      "resolution_risk": "Subjective creator evaluation relying on personal assessment and advice from researchers like John Wentworth or Steven Byrnes.",
-      "evidence_for": [
-        "Recent papers in late 2026 ('Large Language Models Develop Belief State Geometry In-Context' and Alibaba's PoS Belief-State framework) show continued interest and preliminary attempts to study belief states in LLMs.",
-        "Paul Riechers and Simplex have maintained an active research agenda exploring transformers and belief-state geometry over hidden Markov models."
-      ],
-      "evidence_against": [
-        "As of October 2026 discussions ('Simplex vs Timaeus: Round One'), bridging the gap between toy HMM models and large real-world neural networks remains an unresolved fundamental challenge.",
-        "The creator specifically noted that the main determinant for YES is whether people get useful results on real-world problems (especially in the underparameterized regime), which has not clearly materialized.",
-        "With resolution on October 20, 2026 (just 3 days away), there is essentially no time for new breakthroughs to emerge before the creator evaluates the program."
-      ],
-      "reason": "edge 0.18 log-odds below minimum 0.2"
     }
   ]
 }
