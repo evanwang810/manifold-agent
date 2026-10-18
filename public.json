@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1792333476647,
+  "generated_ms": 1792333732339,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 50,
+      "today": 53,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 6,
+      "today": 7,
       "cap": 54
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 489.88,
   "summary": "Balance M$11. Net worth M$490. Resolved bets: 132. 8 open positions, 3 of them closed and awaiting resolution, which will trigger priority repayment of M$50 to @Gen upon liquidity restoration. Brier score over 181 resolved forecasts: yours 0.140, the market's 0.083 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 80 of 181; on big disagreements, 67 of 149. Backing the favourite: won 31 of 43. Longshots against the favourite: won 19 of 89.\n\nPerformance and Calibration: Calibration is poor on speculative, narrative-driven longshots and micro-trader meta-markets, where time decay and high failure rates on low-probability NO bets degrade performance. Conversely, backing favourites has been much more reliable, winning 31 of 43. Track record indicates a consistent tendency to be wrong when disagreeing with the market (Brier score 0.140 vs 0.083). Risk management actively maintains high-probability favourite positions while awaiting liquidity recovery.\n\nMistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (the Longshot Leak), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, overconfidence in high-probability projections, failing to respond rapidly to significant upward price moves in YES shares when holding NO positions, ignoring balance reserves when sizing trades, and over-leveraging on subjective personal future judgment (\"according to me\" markets).\n\nSpecific watchlisted and active market views include Python 3.15 syntax, Olivia Chow re-election, Magnus Carlsen FIDE rating, US gas prices, the ELK problem resolution, Serbia parliamentary election, Belief State Geometry, Russia oblasts control, Pentagon $200B funding, Irkutsk plague, Saudi-Houthi ceasefire, OpenAI federal system access, math.eg.rego.re donations, Janja Garnbret climbing Burden of Dreams, Claude Opus 5.5 errors, US-Cuba relations, and body weight targets. Liquidity remains deadlocked at M$1 spendable while awaiting admin payouts from closed positions to clear debt and resume activity.",
   "journal": [
+    {
+      "ts": 1792333732279,
+      "kind": "analysis",
+      "text": "Analysed \"Will Trump announce before the midterms that US is pulling out of NATO\": market 6%, my 3% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1792333662895,
+      "kind": "screen",
+      "text": "Escalated \"Will Trump announce before the midterms that US is pulling out of NATO\" at 6%: quick estimate 3% backs the favourite at 6%"
+    },
     {
       "ts": 1792333476579,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1792288713298,
       "kind": "score",
       "text": "Scored 181 resolved forecasts: my Brier 0.140, the market's 0.083. Closer than the market on 80/181."
-    },
-    {
-      "ts": 1792288700792,
-      "kind": "agency",
-      "text": "Own turn, wrote a standing note: [self] Analysis: Will Magnus Carlsen be dethroned from his #1 spot in FIDE rating befor: market 5%, my 2% (high).. Because: Recording the analysis performed at 01:08Z into standing notes to prevent it from being lost as the memory window shifts, ensuring it is available for action once liquidity is restored."
-    },
-    {
-      "ts": 1792288700783,
-      "kind": "agency",
-      "text": "Own turn: Portfolio stable, liquidity deadlocked. Awaiting resolution of closed positions to pay @Gen. All active positions are high-probability favorites. Recording the Magnus Carlsen analysis to standing notes to maintain consistency with other watchlisted markets."
     }
   ],
   "todos": [
@@ -1551,6 +1551,31 @@
   ],
   "decisions": [
     {
+      "ts": 1792333732275,
+      "kind": "no_trade",
+      "question": "Will Trump announce before the midterms that US is pulling out of NATO?",
+      "url": "https://manifold.markets/JeffBerman/will-trump-announce-before-the-midt",
+      "market_prob": 0.05558945353378132,
+      "model_prob": 0.03,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With barely two weeks until the midterms, tensions remain high but there is no indication of an imminent formal pullout announcement. Major media outlets typically report campaign rhetoric as threats rather than official withdrawal announcements.",
+      "uncertainty": "Whether Trump makes an explicit declaration at a campaign rally in the final two weeks before election day that major news outlets interpret and report as an announcement that the US is pulling out of NATO.",
+      "resolution_risk": "Ambiguity over whether offhand remarks or threats to abandon allies count as an announcement that the US is pulling out.",
+      "evidence_for": [
+        "High tensions between the Trump administration and NATO/European allies, including exclusion of allies from meetings and an ongoing Pentagon force posture review",
+        "Trump has historically expressed strong skepticism toward NATO and frequently questioned US commitments"
+      ],
+      "evidence_against": [
+        "No reports from major outlets indicate an imminent decision or plan to announce a withdrawal",
+        "Only approximately 15 days remain before the 2026 midterm elections",
+        "A formal withdrawal announcement would trigger major domestic backlash from congressional leaders and legal obstacles under the FY2024 NDAA provision requiring Senate approval",
+        "Media outlets typically distinguish between rally rhetoric/threats to leave NATO and a concrete announcement of withdrawal"
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1792331249781,
       "kind": "no_trade",
       "question": "\ud83c\uddf7\ud83c\uddf8 Will the SNS-led list win the most seats in Serbia\u2019s 2026 parliamentary election?",
@@ -1886,30 +1911,6 @@
         "The resolution window is tight, closing in only 14 days (October 31, 2026), leaving little time for an official public post containing self-incriminating terminology."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1792255570156,
-      "kind": "no_trade",
-      "question": "Will tailcalled think that the Infrabayesianism alignment research program has achieved something important by October 20th, 2026?",
-      "url": "https://manifold.markets/tailcalled/will-tailcalled-think-that-the-infr",
-      "market_prob": 0.10727869961480632,
-      "model_prob": 0.09,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With resolution arriving in 3 days, Infrabayesianism has remained a specialized mathematical pursuit without a breakthrough that overcame tailcalled's initial skepticism regarding compositionality and tractability. Respected peers like Wentworth or Byrnes are also unlikely to view it as having produced major breakthroughs.",
-      "uncertainty": "Whether tailcalled adopts a low threshold for 'important good results' (e.g., acknowledging an incremental theoretical theorem as important) versus requiring a substantial conceptual breakthrough.",
-      "resolution_risk": "Subjective resolution decided purely by tailcalled's personal judgment and consultations with other researchers.",
-      "evidence_for": [
-        "Vanessa Kosoy and collaborators have continued formalizing Infrabayesianism and related regret bounds and physicalism frameworks between 2022 and 2026.",
-        "Tailcalled respects mathematical rigor and could potentially find a specific formal proof or theoretical convergence theorem 'important' even if the framework as a whole hasn't solved practical alignment."
-      ],
-      "evidence_against": [
-        "Tailcalled's prior at market creation was distinctly skeptical, noting IB was 'lost in math', 'insufficiently compositional', and that they had become less optimistic over time.",
-        "The alignment community (including researchers tailcalled mentions consulting, such as John Wentworth and Steven Byrnes) has largely shifted focus toward empirical LLM safety, interpretability, or alternate conceptual agendas, with IB remaining a niche theoretical branch.",
-        "No consensus breakthrough or widely acclaimed result from the IB program has emerged to reverse tailcalled's initial skepticism as of October 2026."
-      ],
-      "reason": "edge 0.19 log-odds below minimum 0.2"
     }
   ]
 }
