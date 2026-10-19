@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1792376018487,
+  "generated_ms": 1792376311825,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 8,
+      "today": 12,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 2,
+      "today": 3,
       "cap": 54
     }
   },
@@ -64,6 +64,21 @@
   "net_worth": 489.88,
   "summary": "Balance M$11. Net worth M$490. Resolved bets: 132. 8 open positions, 3 of them closed and awaiting resolution, which will trigger priority repayment of M$50 to @Gen upon liquidity restoration. Brier score over 181 resolved forecasts: yours 0.140, the market's 0.083 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 80 of 181; on big disagreements, 67 of 149. Backing the favourite: won 31 of 43. Longshots against the favourite: won 19 of 89.\n\nPerformance and Calibration: Calibration remains poor on speculative, narrative-driven longshots and micro-trader meta-markets, where time decay and high failure rates on low-probability NO bets degrade performance. Conversely, backing favourites has been much more reliable, winning 31 of 43. Track record indicates a consistent tendency to be wrong when disagreeing with the market (Brier score 0.140 vs 0.083). You forecast worse than the market price, and your disagreements have mostly been you being wrong, not the market. Risk management actively maintains high-probability favourite positions while awaiting liquidity recovery.\n\nMistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (the Longshot Leak), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, overconfidence in high-probability projections, failing to respond rapidly to significant upward price moves in YES shares when holding NO positions, ignoring balance reserves when sizing trades, and over-leveraging on subjective personal future judgment (\"according to me\" markets) like the ELK problem resolution.\n\nSpecific watchlisted and active market views include Python 3.15 syntax, Olivia Chow re-election, Magnus Carlsen FIDE rating, US gas prices, the ELK problem resolution, Serbia parliamentary election, Belief State Geometry, Russia oblasts control, Pentagon $200B funding, Irkutsk plague, Saudi-Houthi ceasefire, OpenAI federal system access, math.eg.rego.re donations, Janja Garnbret climbing Burden of Dreams, Claude Opus 5.5 errors, US-Cuba relations, and body weight targets. Liquidity remains deadlocked at M$1 spendable while awaiting admin payouts from closed positions to clear debt and resume activity.",
   "journal": [
+    {
+      "ts": 1792376311676,
+      "kind": "analysis",
+      "text": "Analysed \"Will Magnus Carlsen be dethroned from his #1 spot in FIDE rating befor\": market 5%, my 3% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1792376227924,
+      "kind": "screen",
+      "text": "Escalated \"Will Magnus Carlsen be dethroned from his #1 spot in FIDE rating befor\" at 5%: quick estimate 3% backs the favourite at 5%"
+    },
+    {
+      "ts": 1792376207960,
+      "kind": "screen",
+      "text": "Passed on \"Will Russia control at least 95% of Donbass at the end of October 2026\" at 5%: quick estimate 8% agrees with market. Current control is around 90 percent and the required monthly advance rate to reach 95 percent is implausible."
+    },
     {
       "ts": 1792374291388,
       "kind": "score",
@@ -448,21 +463,6 @@
       "ts": 1792338623714,
       "kind": "screen",
       "text": "Escalated \"2026 Alberta referendum asks about secession from Canada?\" at 33%: quick estimate 5% backs the favourite at 33%"
-    },
-    {
-      "ts": 1792338603542,
-      "kind": "screen",
-      "text": "Passed on \"Will we know who Satoshi Nakamoto is within two years of Tyler Cowen\u2019s\" at 4%: quick estimate 15% agrees with market. Unmasking Satoshi remains extremely unlikely within such a short window based on speculative claims alone."
-    },
-    {
-      "ts": 1792338583513,
-      "kind": "screen",
-      "text": "Passed on \"Will tailcalled think that the Natural Abstractions alignment research\" at 11%: quick estimate 20% agrees with market. The creator noted the program was stuck, comments show ongoing skepticism, and only two days remain without major news."
-    },
-    {
-      "ts": 1792337107494,
-      "kind": "score",
-      "text": "Scored 181 resolved forecasts: my Brier 0.140, the market's 0.083. Closer than the market on 80/181."
     }
   ],
   "todos": [
@@ -1551,6 +1551,31 @@
   ],
   "decisions": [
     {
+      "ts": 1792376311672,
+      "kind": "no_trade",
+      "question": "Will Magnus Carlsen be dethroned from his #1 spot in FIDE rating before GTA 6 is released?",
+      "url": "https://manifold.markets/SophusCorry/will-magnus-carlsen-be-dethroned-fr",
+      "market_prob": 0.04894864886691816,
+      "model_prob": 0.03,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Carlsen remains firmly at No. 1 on official FIDE lists with a 2823 rating and a significant buffer. With 'not live ratings' specified, only monthly lists matter, making dethronement before GTA 6 highly improbable.",
+      "uncertainty": "Whether GTA 6 suffers a catastrophic multi-year delay that extends the window far into 2027 or beyond.",
+      "resolution_risk": "None identified; criteria clearly restrict tracking to official published FIDE monthly rating lists rather than volatile live ratings.",
+      "evidence_for": [
+        "A younger player (such as Erigaisi, Gukesh, or Abdusattorov) could theoretically have an unprecedented rating surge in classical chess.",
+        "Carlsen plays classical chess relatively sparingly and could lose rating points if he performs poorly in an open event."
+      ],
+      "evidence_against": [
+        "Carlsen holds an unbroken streak at World No. 1 since July 2011.",
+        "As of the October 1, 2026 FIDE rating list, Carlsen holds 2823, with a comfortable buffer over the rest of the field.",
+        "Resolution specifies 'Not live ratings', requiring an official monthly list publication.",
+        "No player gained enough classical rating points in October 2026 to displace Carlsen on the impending November 1, 2026 list."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
       "ts": 1792373905637,
       "kind": "no_trade",
       "question": "Will the US attack Cuba before the 2026 midterm elections?",
@@ -1888,31 +1913,6 @@
         "Only approximately 15 days remain before the 2026 midterm elections",
         "A formal withdrawal announcement would trigger major domestic backlash from congressional leaders and legal obstacles under the FY2024 NDAA provision requiring Senate approval",
         "Media outlets typically distinguish between rally rhetoric/threats to leave NATO and a concrete announcement of withdrawal"
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1792331249781,
-      "kind": "no_trade",
-      "question": "\ud83c\uddf7\ud83c\uddf8 Will the SNS-led list win the most seats in Serbia\u2019s 2026 parliamentary election?",
-      "url": "https://manifold.markets/MAKER/-will-the-snsled-list-win-the-most",
-      "market_prob": 0.6098818755396771,
-      "model_prob": 0.81,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With election day on October 25, SNS is polling around 45-48% and projected to secure 126-130 seats. Even under significant voter discontent, Serbia's proportional system and opposition fragmentation make it very unlikely that any single competing list surpasses SNS's seat tally.",
-      "uncertainty": "Whether the opposition vote consolidates sufficiently behind a single list to challenge SNS's seat plurality, or splits across competing slates.",
-      "resolution_risk": "Disputes or challenges over RIK certifications, or potential election reruns at specific polling stations delaying final certified seat allocation past the resolution window.",
-      "evidence_for": [
-        "Poliwave projections show the SNS-led coalition winning 126 to 130 seats out of 250, giving them an outright or near-outright majority of seats.",
-        "Serbia's opposition remains fragmented across multiple lists (Students' list, nationalist blocs, minorities), making it difficult for any single rival slate to surpass SNS's total.",
-        "SNS benefits from substantial institutional advantages, incumbency control over administrative machinery (RIK), and dominant media presence.",
-        "Historically, SNS has consistently held a 50+ seat margin over the runner-up list in every parliamentary election since 2014."
-      ],
-      "evidence_against": [
-        "Sustained civic and student protests over the past two years have created elevated political tension and ruling party anxiety.",
-        "A unified 'Students' list' or consolidated opposition slate could narrow the gap if urban and youth turnout surges dramatically on October 25."
       ],
       "reason": "size floored to zero by balance reserve"
     }
