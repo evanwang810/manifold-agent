@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1792516953421,
+  "generated_ms": 1792517432275,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 60,
+      "today": 63,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 7,
+      "today": 8,
       "cap": 54
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 488.99,
   "summary": "Balance M$11. Net worth M$489. Resolved bets: 132. 8 open positions, 3 of them closed and awaiting resolution, which will trigger priority repayment of M$50 to @Gen upon liquidity restoration. Brier score over 182 resolved forecasts: yours 0.139, the market's 0.082 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 81 of 182; on big disagreements, 68 of 150. Backing the favourite: won 31 of 43. Longshots against the favourite: won 19 of 89. Liquidity is deadlocked at M$1 spendable, and risk management maintains high-probability favourite positions while awaiting payouts to clear debt.\n\nPerformance and calibration remain poor on speculative, narrative-driven longshots, micro-trader meta-markets, and low-probability NO bets where time decay degrades results. You forecast worse than the market price, and disagreements have mostly been you being wrong. Conversely, backing favourites has been much more reliable, winning 31 of 43. \n\nMistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (the Longshot Leak), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, overconfidence in high-probability projections, failing to respond rapidly to significant upward price moves in YES shares when holding NO positions, ignoring balance reserves when sizing trades, over-leveraging on subjective personal future judgment (\"according to me\" markets), chasing tiny edges in ultra-favorites where marginal utility drops, and assuming occasional longshot wins (like Robot Hand) justify abandoning the stick-to-favorites discipline (Windfall Strategy).\n\nSpecific active and watchlisted market views include Python 3.15 syntax, Olivia Chow re-election, Magnus Carlsen FIDE rating, US gas prices, the ELK problem resolution (closing today with determination YES), Serbia parliamentary election, Belief State Geometry, Russia oblasts control, Pentagon $200B funding, Irkutsk plague, Saudi-Houthi ceasefire, OpenAI federal system access, math.eg.rego.re donations, Janja Garnbret climbing Burden of Dreams, Claude Opus 5.5 errors, US-Cuba relations, body weight targets, GPT-6.1+ Astra release, El-Sayed disavowal of Hasan Piker, Zvi's Muse Wonder report, Alberta referendum, Iran US base strikes, and US-Canada border/woke sentiment indices. Spendable liquidity remains at M$1 while awaiting admin payouts from closed positions (Pregnancy, Geometry Dash, Robot Hand) to clear debt to @Gen and resume activity.",
   "journal": [
+    {
+      "ts": 1792517432093,
+      "kind": "analysis",
+      "text": "Analysed \"Does Claude Opus 5.5 make egregious errors?\": market 64%, my 16% (medium). No trade, would be a longshot bet against the 64% favourite."
+    },
+    {
+      "ts": 1792517207448,
+      "kind": "screen",
+      "text": "Escalated \"Does Claude Opus 5.5 make egregious errors?\" at 64%: quick estimate 75% backs the favourite at 64%"
+    },
     {
       "ts": 1792514892352,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1792472430680,
       "kind": "screen",
       "text": "Passed on \"Will Daniel Lord still be living in a Tesla by the end of October?\" at 62%: quick estimate 50% agrees with market. Niche YouTuber lifestyle tracking relies purely on future unpredictable social media updates; not worth deep analysis."
-    },
-    {
-      "ts": 1792472410658,
-      "kind": "screen",
-      "text": "Passed on \"Will a case linked to the Irkutsk plague be reported outside Irkutsk O\" at 6%: quick estimate 15% agrees with market. A lab outbreak in Russia is developing quickly, but spreading outside the oblast before November is unlikely."
-    },
-    {
-      "ts": 1792472390505,
-      "kind": "screen",
-      "text": "Passed on \"Will Anthropic announce a $400+/month tier before November 2026?\" at 6%: quick estimate 45% agrees with market. No specific evidence or rumor indicates Anthropic will launch a $400 tier in the next 11 days."
     }
   ],
   "todos": [
@@ -1551,6 +1551,32 @@
   ],
   "decisions": [
     {
+      "ts": 1792517432089,
+      "kind": "no_trade",
+      "question": "Does Claude Opus 5.5 make egregious errors?",
+      "url": "https://manifold.markets/dreev/does-claude-opus-55-make-egregious",
+      "market_prob": 0.6406707251591303,
+      "model_prob": 0.16,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With under 15 hours remaining, Opus 5.5 on Max effort (with code execution enabled) has cleared all candidate tests tested by dreev, including the plastic forks replication and ClockBench. Without an active reproducible failure on the board, the probability of YES has fallen sharply.",
+      "uncertainty": "Whether a commenter submits an unambiguous, human-obvious question in the remaining 14 hours that causes Opus 5.5 Max to fail at least 50% of trials upon replication.",
+      "resolution_risk": "The creator extending market close if an intriguing candidate is submitted near the deadline.",
+      "evidence_for": [
+        "LLMs historically still stumble on specific spatial, physical, or common-sense reasoning edge cases.",
+        "Earlier models (o3, GPT-5-Thinking) failed similar tests despite initial optimism.",
+        "Several users in the thread are actively searching benchmarks (like Humanity's Sixth Sense and SimpleBench) for edge cases."
+      ],
+      "evidence_against": [
+        "Market closes in approximately 14 hours (0.6 days).",
+        "With effort set to Max and tool/code execution permitted, Opus 5.5 has passed every candidate tested so far by creator @dreev.",
+        "The prime candidate (clear plastic forks) was officially replicated by @dreev and Claude cleared the bar.",
+        "ClockBench and visual illusion candidates were also solved correctly with code and prompt clarity."
+      ],
+      "reason": "would be a longshot bet against the 64% favourite"
+    },
+    {
       "ts": 1792507429683,
       "kind": "no_trade",
       "question": "\ud83c\uddf7\ud83c\uddf8 Will the SNS-led list win the most seats in Serbia\u2019s 2026 parliamentary election?",
@@ -1884,30 +1910,6 @@
         "Option 1 on the ballot is to 'remain a province of Canada', which touches upon the exclusion clause."
       ],
       "reason": "would be a longshot bet against the 31% favourite"
-    },
-    {
-      "ts": 1792418463243,
-      "kind": "no_trade",
-      "question": "\ud83c\uddf7\ud83c\uddf8 Will the SNS-led list win the most seats in Serbia\u2019s 2026 parliamentary election?",
-      "url": "https://manifold.markets/MAKER/-will-the-snsled-list-win-the-most",
-      "market_prob": 0.6836702122705455,
-      "model_prob": 0.83,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "SNS retains a formidable electoral machine and state apparatus. Given that 18 slates are running, the opposition vote remains divided, making an outright plurality for the SNS-led list the most probable single outcome despite anti-government student mobilization.",
-      "uncertainty": "Whether non-regime voters consolidated sufficiently behind a single leading opposition slate to outpoll SNS's disciplined turnout machine.",
-      "resolution_risk": "Disputed polling station reruns or delayed RIK certification could prolong official seat allocation beyond initial reporting windows.",
-      "evidence_for": [
-        "SNS possesses extensive state resources, institutional control, media dominance, and established voter mobilization machinery across Serbia.",
-        "Eighteen competing slates are registered on the ballot, which historically fragments the non-SNS vote under D'Hondt seat allocation.",
-        "Winning a plurality does not require a majority; SNS only needs to win more seats than any single competing list."
-      ],
-      "evidence_against": [
-        "Summer 2026 polling indicated significant public dissatisfaction and momentum for the Student List and opposition coalitions.",
-        "Snap election conditions reflect social divisions and heightened anti-government mobilization."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
