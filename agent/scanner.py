@@ -44,7 +44,7 @@ class Scanner:
             return False, "price pinned at an extreme"
         return True, "ok"
 
-    async def find_candidates(self, limit: int = 5) -> list[Market]:
+    async def find_candidates(self, limit: int = 5, held: set[str] | None = None) -> list[Market]:
         """Pull soonest-closing open binary markets and filter them down.
 
         Sorting by close date means the API is already doing most of the
@@ -71,7 +71,15 @@ class Scanner:
                 if not ok:
                     rejects[why.split(",")[0]] = rejects.get(why.split(",")[0], 0) + 1
                     continue
-                if self.memory.seen_within(market.id, self.cfg.skip_if_seen_within_hours):
+                # Held markets are watched by the price-move check and the desk. Letting
+                # them back into the scan is how one favourite got bought eight times.
+                if held and market.id in held:
+                    continue
+                if not self.memory.worth_another_look(
+                    market.id, market.probability,
+                    min_hours=self.cfg.skip_if_seen_within_hours,
+                    max_days=self.cfg.rescan_after_days, move=self.cfg.rescan_on_move,
+                ):
                     continue
                 candidates.append(market)
 

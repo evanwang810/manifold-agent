@@ -103,6 +103,15 @@ class RiskEngine:
             ("balance reserve", balance - cfg.min_balance_reserve),
         ]
 
+        # Whatever is already riding on this side counts against the new order. Sizing
+        # used to ignore the existing position, so every re-analysis of a held market
+        # bought another full-size chunk on top of the last one.
+        if position is not None and position.side == outcome:
+            already = max(position.invested, position.value)
+            soft = [(name, value - already) for name, value in soft]
+            if min(value for _, value in soft) < cfg.min_bet:
+                return _no(f"already holding M${already:.0f} {outcome}, which is the full size")
+
         soft_name, soft_cap = min(soft, key=lambda item: item[1])
         hard_name, hard_cap = min(hard, key=lambda item: item[1])
 

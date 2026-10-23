@@ -108,6 +108,10 @@ class ScanConfig:
     max_days_to_resolve: float = 30
     min_hours_to_resolve: float = 6
     skip_if_seen_within_hours: float = 24
+    # After that, an already-analysed market comes back only if its price has moved
+    # this much since, or once this many days have passed.
+    rescan_on_move: float = 0.08
+    rescan_after_days: float = 7
 
 
 @dataclass
@@ -149,6 +153,9 @@ class ScreenConfig:
     # favourite counts: escalating longshot disagreements spends a deep call on a
     # trade the sizer will refuse. Over 2,126 logged screens this passes about 24%.
     escalate_logodds: float = 0.2
+    # Markets per screening call. Flash-lite has quota to spare, so this is kept small
+    # for attention per market rather than squeezed for calls.
+    batch_size: int = 4
 
 
 @dataclass

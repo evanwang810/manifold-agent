@@ -72,13 +72,15 @@ class Memory:
             "lessons": [],             # standing notes: [{text, source, ts}]
             "conversations": {},       # key -> {channel, who, title, url, messages[]}
             "market_notes": {},        # market_id -> one line the model wrote about it
-            "seen": {},                # market_id -> ms timestamp of last evaluation
+            "seen": {},                # market_id -> {ts, prob} of the last evaluation
             "budget": {"day": "", "spent": 0.0},
             "llm_usage": {"day": ""},   # day -> per-tier call counts, reset daily
             "last_scan_ms": 0,
             "last_compress_ms": 0,
             "grounding_out_day": "",   # UTC day grounding quota ran out
             "todos": [],               # [{text, ts, done}]
+            "daily": [],               # [{day, text, nw_open, nw_close}], one per finished UTC day
+            "nw_by_day": {},           # "YYYY-MM-DD" -> net worth at the last tick of that day
             "resolutions": {},         # slug -> {y, checked} once resolved; y None if N/A
             "resolve_checked": {},     # slug -> ms, last time an open market was checked
             "last_score_ms": 0,
@@ -183,15 +185,38 @@ class Memory:
                 out.append({"note": entry, "question": "", "url": "", "ts": 0, "id": market_id})
         return sorted(out, key=lambda e: e.get("ts") or 0, reverse=True)[:n]
 
-    def mark_seen(self, market_id: str) -> None:
-        self.state["seen"][market_id] = int(time.time() * 1000)
+    def mark_seen(self, market_id: str, prob: float | None = None) -> None:
+        self.state["seen"][market_id] = {"ts": int(time.time() * 1000), "prob": prob}
         self.save()
 
+    def _seen(self, market_id: str) -> tuple[int, float | None]:
+        entry = self.state["seen"].get(market_id)
+        if isinstance(entry, dict):
+            return int(entry.get("ts") or 0), entry.get("prob")
+        return int(entry or 0), None  # written before prices were recorded
+
     def seen_within(self, market_id: str, hours: float) -> bool:
-        ts = self.state["seen"].get(market_id)
+        ts, _ = self._seen(market_id)
+        return bool(ts) and (time.time() * 1000 - ts) < hours * 3_600_000
+
+    def worth_another_look(self, market_id: str, prob: float, *, min_hours: float,
+                           max_days: float, move: float) -> bool:
+        """Has anything changed since it last looked at this market?
+
+        A plain 24-hour cooldown brought every market back the next day as if it were
+        new, and the deep model forecast it again from scratch, at full price, with
+        the same answer. Now a market it has already analysed comes back only if the
+        price has moved meaningfully since, or after max_days regardless.
+        """
+        ts, then = self._seen(market_id)
         if not ts:
+            return True
+        age_hours = (time.time() * 1000 - ts) / 3_600_000
+        if age_hours < min_hours:
             return False
-        return (time.time() * 1000 - ts) < hours * 3_600_000
+        if age_hours >= max_days * 24 or then is None:
+            return True
+        return abs(prob - float(then)) >= move
 
     def minutes_since_scan(self) -> float:
         last = float(self.state.get("last_scan_ms") or 0)
@@ -512,6 +537,30 @@ class Memory:
 
     # -- compression ------------------------------------------------------
 
+    # -- the daily log -----------------------------------------------------
+
+    def record_net_worth(self, net_worth: float) -> None:
+        """Overwritten every tick, so each day ends holding its closing value."""
+        today = time.strftime("%Y-%m-%d", time.gmtime())
+        book = self.state.setdefault("nw_by_day", {})
+        book[today] = round(net_worth, 2)
+        for day in sorted(book)[:-60]:
+            del book[day]
+
+    def digest_due(self) -> str | None:
+        """Yesterday's date if its log entry has not been written yet."""
+        yesterday = time.strftime("%Y-%m-%d", time.gmtime(time.time() - 86_400))
+        if any(d.get("day") == yesterday for d in self.state.get("daily", [])):
+            return None
+        return yesterday
+
+    def add_digest(self, day: str, text: str, nw_open: float | None,
+                   nw_close: float | None) -> None:
+        daily = self.state.setdefault("daily", [])
+        daily.append({"day": day, "text": text, "nw_open": nw_open, "nw_close": nw_close})
+        self.state["daily"] = daily[-30:]
+        self.save()
+
     def set_status(self, text: str) -> None:
         """The agent's own read of where things stand, overwritten each own turn.
 
@@ -540,6 +589,9 @@ class Memory:
                          f"your own account of it):\n{record}")
         summary = self.state.get("summary", "").strip()
         parts.append(summary or "No compressed history yet. This is still early.")
+        daily = self.state.get("daily") or []
+        if daily and daily[-1].get("text"):
+            parts.append(f"Your log for {daily[-1]['day']}: {daily[-1]['text']}")
         status = self.state.get("status") or {}
         if status.get("text"):
             parts.append(f"Where things stood at your last own turn "

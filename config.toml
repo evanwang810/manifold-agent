@@ -114,6 +114,9 @@ enabled = true
 # passed 42%, and mostly on the screener hedging a strong favourite toward 50%, which
 # the deep model then bought as a longshot.
 escalate_logodds = 0.2
+# Markets per screening call. Flash-lite has quota to spare, so this stays small for
+# attention per market rather than squeezed for calls.
+batch_size = 4
 
 [budget]
 # The deep tier is the binding constraint on the whole agent, and this cap is what
@@ -123,10 +126,13 @@ escalate_logodds = 0.2
 # the fast tier's fallback, so it is not counted), and 54 leaves headroom for retries.
 # Every sell, add and transfer on the own turn now goes through this tier too.
 max_evaluations_per_tick = 3     # markets per deep call, all in one request
-max_fast_calls_per_tick = 10     # one screen plus research for three markets
+max_fast_calls_per_tick = 12     # three screens of four plus research for three markets
 max_chat_calls_per_tick = 4
 max_deep_calls_per_tick = 1
-max_fast_calls_per_day = 220
+# Flash-lite's free quota is far larger than this. The cap is still worth having:
+# when the fast model runs dry it falls back to gemini-3.5-flash, which shares its
+# quota with the deep chain.
+max_fast_calls_per_day = 400
 max_chat_calls_per_day = 400
 max_deep_calls_per_day = 54
 # Without pacing a daily cap is gone in the first ten minutes and the agent is dark
@@ -149,6 +155,11 @@ min_volume = 800
 max_days_to_resolve = 30
 min_hours_to_resolve = 6
 skip_if_seen_within_hours = 24
+# A market it already analysed comes back only if the price moved this much since it
+# looked, or after this many days. A plain 24h cooldown brought every market back daily
+# as if new, and markets it held were re-bought at full size each time.
+rescan_on_move = 0.08
+rescan_after_days = 7
 
 [agency]
 # The desk: the agent's own turn, run by the deep model. It sees every position, its

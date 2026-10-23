@@ -181,7 +181,7 @@ class Brain:
         ready: list[tuple[Market, list[Comment]]] = []
         for m in markets:
             fresh = await self.client.market(m.id)
-            self.memory.mark_seen(fresh.id)
+            self.memory.mark_seen(fresh.id, fresh.probability)
             if fresh.is_resolved:
                 out.append(Evaluation(fresh, None, None, False, "resolved while queued"))
                 continue
@@ -190,7 +190,10 @@ class Brain:
         # Screening only makes sense on markets we went looking for. A filled order or
         # a position in freefall is already news, and gets the deep model regardless.
         if screen and self.cfg.screen.enabled and ready:
-            verdicts = await self._screen(ready)
+            size = max(1, self.cfg.screen.batch_size)
+            verdicts = []
+            for i in range(0, len(ready), size):
+                verdicts += await self._screen(ready[i:i + size])
             survivors: list[tuple[float, Market, list[Comment]]] = []
             for (market, comments), (passed, detail, quick, strength) in zip(ready, verdicts):
                 self.memory.log_event(

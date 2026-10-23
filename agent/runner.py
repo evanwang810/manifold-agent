@@ -12,6 +12,7 @@ things that already happened before going looking for new ones.
 
 from __future__ import annotations
 
+import calendar
 import json
 import logging
 import time
@@ -22,10 +23,11 @@ from .agency import Desk
 from .brain import Brain, Budgets, CallBudget
 from .config import Config
 from .inbox import Inbox
-from .llm import build_llm
+from .llm import build_llm, strip_trailing_json
 from .manifold import ManifoldClient, ManifoldError
 from .memory import Memory
 from .models import Market, logodds_gap
+from .prompts import DIGEST_SYSTEM, build_digest_prompt
 from .scanner import Scanner
 from .sizing import RiskEngine
 from .social import Social
@@ -113,6 +115,70 @@ def _trades(events: list[dict[str, Any]], limit: int = 40) -> list[dict[str, Any
         row["why"] = str(row.get("why") or "")[:2000]
         out.append(row)
     return out[-limit:][::-1]
+
+
+def _day_facts(
+    events: list[dict[str, Any]], journal: list[dict[str, Any]],
+    nw_open: float | None, nw_close: float | None,
+) -> str:
+    """Everything that happened in one day, as plain lines for the log writer."""
+    lines = []
+    if nw_open is not None and nw_close is not None:
+        lines.append(f"Net worth M${nw_open:,.0f} at the start, M${nw_close:,.0f} at the end "
+                     f"({nw_close - nw_open:+,.0f}).")
+    elif nw_close is not None:
+        lines.append(f"Net worth at the end of the day: M${nw_close:,.0f}.")
+
+    for e in events:
+        if e.get("dry_run"):
+            continue
+        kind = e.get("kind")
+        q = str(e.get("question") or "")[:90]
+        if kind == "bet":
+            side_price = e.get("market_prob")
+            if side_price is not None and e.get("outcome") == "NO":
+                side_price = 1 - side_price
+            lines.append(
+                f"Bought M${float(e.get('amount') or 0):.0f} {e.get('outcome')} on \"{q}\""
+                + (f" at {side_price:.0%}" if side_price is not None else "")
+                + (f". Reason: {str(e.get('thinking'))[:220]}" if e.get("thinking") else ".")
+            )
+        elif kind == "sell":
+            lines.append(f"Sold {e.get('side')} on \"{q}\", P/L M${float(e.get('profit') or 0):+.0f}. "
+                         f"Reason: {str(e.get('thinking') or '')[:200]}")
+        elif kind == "own_action" and e.get("approved") and e.get("action") in ("sell", "add", "send_mana"):
+            what = q or (f"@{e.get('recipient')}" if e.get("action") == "send_mana"
+                         else str(e.get("detail") or "")[:90])
+            lines.append(f"Desk {e.get('action')} ({what}): {str(e.get('reasoning') or '')[:200]}")
+        elif kind == "desk" and e.get("thinking"):
+            done = [a for a in e.get("actions") or [] if a.get("ok")]
+            lines.append(f"Desk turn: {str(e['thinking'])[:300]}"
+                         + (f" Did: {'; '.join(str(a.get('result')) for a in done)}" if done else " No action."))
+        elif kind == "nudge":
+            lines.append(f"Asked @{e.get('creator')} to resolve \"{q}\".")
+        elif kind in ("reply", "issue_answered"):
+            lines.append(f"Answered @{e.get('to') or e.get('asker')}.")
+
+    for j in journal:
+        if j.get("kind") == "closed":
+            lines.append(str(j.get("text"))[:200])
+
+    screened = sum(1 for e in events if e.get("kind") in ("screened_in", "screened_out"))
+    passed = sum(1 for e in events if e.get("kind") == "screened_in")
+    passes = [e for e in events if e.get("kind") == "no_trade"]
+    errors = sum(1 for e in events if e.get("kind") == "decision_error")
+    if screened:
+        lines.append(f"Screened {screened} markets, {passed} went on to full analysis.")
+    if passes:
+        reasons: dict[str, int] = {}
+        for e in passes:
+            key = str(e.get("reason") or "")[:50]
+            reasons[key] = reasons.get(key, 0) + 1
+        top = ", ".join(f"{n}x {r}" for r, n in sorted(reasons.items(), key=lambda kv: -kv[1])[:3])
+        lines.append(f"Analysed {len(passes)} markets and passed on them ({top}).")
+    if errors:
+        lines.append(f"{errors} analyses failed on model errors.")
+    return "\n".join(lines) or "Nothing was recorded at all."
 
 
 class Runner:
@@ -241,6 +307,8 @@ class Runner:
         # M$510 account.
         if not replies_only:
             await self._score_forecasts()
+            self.memory.record_net_worth(self.report.net_worth)
+            await self._daily_digest()
 
         if not self.budget.chat.spent:
             await self.memory.maybe_compress(
@@ -352,6 +420,7 @@ class Runner:
                 key=lambda row: -abs(row["invested"]),
             )[:20],
             "trades": _trades(self.memory.recent_events(4000)),
+            "daily": (self.memory.state.get("daily") or [])[-14:][::-1],
             "desk": [
                 {"ts": e.get("ts"), "thinking": e.get("thinking", ""),
                  "actions": e.get("actions") or [], "error": e.get("error", "")}
@@ -656,6 +725,38 @@ class Runner:
             )
         self.memory.save()
 
+    async def _daily_digest(self) -> None:
+        """Yesterday's log entry, once, on the first tick after midnight UTC.
+
+        Code gathers the facts and the chat model only writes them up, so the entry can
+        be no more wrong than the event log. It goes on the site and into the agent's
+        own context as yesterday's recap.
+        """
+        day = self.memory.digest_due()
+        if day is None or not self.budget.chat.take():
+            return
+        start = calendar.timegm(time.strptime(day, "%Y-%m-%d")) * 1000
+        end = start + 86_400_000
+        events = [e for e in self.memory.recent_events(6000) if start <= int(e.get("ts", 0)) < end]
+        journal = [e for e in self.memory.state["journal"] if start <= int(e.get("ts", 0)) < end]
+        book = self.memory.state.get("nw_by_day", {})
+        before = sorted(d for d in book if d < day)
+        nw_open = book.get(before[-1]) if before else None
+        nw_close = book.get(day)
+
+        facts = _day_facts(events, journal, nw_open, nw_close)
+        try:
+            response = await self.chat.generate(
+                build_digest_prompt(day=day, facts=facts), system=DIGEST_SYSTEM
+            )
+            text = strip_trailing_json(response.text).strip()[:1500]
+        except Exception as exc:  # noqa: BLE001 - a missing log entry is not worth a crash
+            log.warning("Daily digest failed: %s", exc)
+            return
+        self.memory.add_digest(day, text, nw_open, nw_close)
+        self.memory.log_event("digest", day=day, text=text)
+        log.info("Wrote the log for %s", day)
+
     async def _score_forecasts(self) -> None:
         """Score every forecast on a resolved market against the market's own price.
 
@@ -817,7 +918,9 @@ class Runner:
 
         # More candidates than the tick can afford to analyse: the screen throws most
         # of them away for one cheap call each, and only survivors spend a deep call.
+        held = {p.contract_id for p in await self.client.positions(self.user_id)}
         candidates = await self.scanner.find_candidates(
+            held=held,
             limit=self.cfg.scan.candidates_per_scan
             if self.cfg.screen.enabled
             else self.cfg.budget.max_evaluations_per_tick
