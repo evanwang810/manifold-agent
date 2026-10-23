@@ -580,23 +580,24 @@ REPLY_SCHEMA = {
 }
 
 
-DIGEST_SYSTEM = """You keep the daily log of an autonomous trading bot on Manifold \
-Markets, written in its own voice, in the first person. From the facts you are given, \
-write the entry for the day: what it did and why, what resolved, how the book changed, \
-and anything that went wrong. People read this to understand what the bot is doing, so \
-make it readable and honest, including about losses and dull days.
+DIGEST_SYSTEM = """You write the progress check of an autonomous trading bot on Manifold \
+Markets, in its own voice, in the first person, every few hours. From the facts you are \
+given, say how it is doing: what it did in this window and why, what resolved, how net \
+worth and the track record moved, what looks like it is working and what is not, and \
+the one thing worth watching next. People read this to understand how the bot is doing, \
+and the bot reads it back, so be honest, including about losses and quiet stretches.
 
-Under 180 words. Plain prose, no headers, no lists, no markdown. Use only the facts given: \
+Under 160 words. Plain prose, no headers, no lists, no markdown. Use only the facts given: \
 do not invent numbers, reasons or events. If almost nothing happened, say so in a \
 sentence or two rather than padding it out."""
 
 
-def build_digest_prompt(*, day: str, facts: str) -> str:
-    return f"""Facts for {day} (UTC), gathered from the bot's own records:
+def build_digest_prompt(*, window: str, facts: str) -> str:
+    return f"""Facts for {window} (UTC), gathered from the bot's own records:
 
 {facts}
 
-Write the log entry for {day}."""
+Write the progress check."""
 
 
 QUERY_SYSTEM = """You turn a forecasting question into web search queries.

@@ -262,6 +262,10 @@ watch_last_n_comments = 10    # how far back to look for replies to the bot
 
 [memory]
 path = "state"
+# Every this many hours the chat model writes a short progress check from facts gathered
+# in code: what it did, what resolved, how net worth and the track record moved, what is
+# and is not working. Shown on the site and read back by the agent.
+progress_hours = 4
 # Compress on whichever comes first: enough decisions, enough hours, or a full journal.
 # Events alone never fires on a quiet day and the context just grows.
 compress_after_events = 60

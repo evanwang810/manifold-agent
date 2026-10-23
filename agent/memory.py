@@ -79,8 +79,7 @@ class Memory:
             "last_compress_ms": 0,
             "grounding_out_day": "",   # UTC day grounding quota ran out
             "todos": [],               # [{text, ts, done}]
-            "daily": [],               # [{day, text, nw_open, nw_close}], one per finished UTC day
-            "nw_by_day": {},           # "YYYY-MM-DD" -> net worth at the last tick of that day
+            "progress": [],            # [{start, end, text, nw_open, nw_close, score}]
             "resolutions": {},         # slug -> {y, checked} once resolved; y None if N/A
             "resolve_checked": {},     # slug -> ms, last time an open market was checked
             "last_score_ms": 0,
@@ -537,28 +536,23 @@ class Memory:
 
     # -- compression ------------------------------------------------------
 
-    # -- the daily log -----------------------------------------------------
+    # -- progress checks ---------------------------------------------------
 
-    def record_net_worth(self, net_worth: float) -> None:
-        """Overwritten every tick, so each day ends holding its closing value."""
-        today = time.strftime("%Y-%m-%d", time.gmtime())
-        book = self.state.setdefault("nw_by_day", {})
-        book[today] = round(net_worth, 2)
-        for day in sorted(book)[:-60]:
-            del book[day]
+    def last_progress(self) -> dict[str, Any] | None:
+        entries = self.state.get("progress") or []
+        return entries[-1] if entries else None
 
-    def digest_due(self) -> str | None:
-        """Yesterday's date if its log entry has not been written yet."""
-        yesterday = time.strftime("%Y-%m-%d", time.gmtime(time.time() - 86_400))
-        if any(d.get("day") == yesterday for d in self.state.get("daily", [])):
-            return None
-        return yesterday
+    def progress_due(self, hours: float) -> int | None:
+        """Start of the window to report on, if a check is due. None otherwise."""
+        now = int(time.time() * 1000)
+        last = self.last_progress()
+        start = int(last["end"]) if last else now - int(hours * 3_600_000)
+        return start if now - start >= hours * 3_600_000 else None
 
-    def add_digest(self, day: str, text: str, nw_open: float | None,
-                   nw_close: float | None) -> None:
-        daily = self.state.setdefault("daily", [])
-        daily.append({"day": day, "text": text, "nw_open": nw_open, "nw_close": nw_close})
-        self.state["daily"] = daily[-30:]
+    def add_progress(self, entry: dict[str, Any]) -> None:
+        entries = self.state.setdefault("progress", [])
+        entries.append(entry)
+        self.state["progress"] = entries[-60:]
         self.save()
 
     def set_status(self, text: str) -> None:
@@ -589,9 +583,9 @@ class Memory:
                          f"your own account of it):\n{record}")
         summary = self.state.get("summary", "").strip()
         parts.append(summary or "No compressed history yet. This is still early.")
-        daily = self.state.get("daily") or []
-        if daily and daily[-1].get("text"):
-            parts.append(f"Your log for {daily[-1]['day']}: {daily[-1]['text']}")
+        last = self.last_progress()
+        if last and last.get("text"):
+            parts.append(f"Your last progress check ({_stamp(int(last['end']))}): {last['text']}")
         status = self.state.get("status") or {}
         if status.get("text"):
             parts.append(f"Where things stood at your last own turn "

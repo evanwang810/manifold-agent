@@ -315,11 +315,11 @@ watchlist buy. Only a debt can dip into the reserve, capped at what that person 
 has not had back. Every turn is logged with its full reasoning and what each action did,
 and shown on the site.
 
-Once a day, on the first tick after midnight UTC, the chat model writes a short log
-entry for the day before. Code gathers the facts (net worth at open and close, every
-trade and its reason, desk turns, resolutions, what the screener let through, errors)
-and the model only writes them up, so the entry is no more wrong than the event log. It
-goes on the site and into the agent's own context as yesterday's recap.
+Every four hours the chat model writes a short progress check. Code gathers the facts
+(net worth then and now, every trade and its reason, desk turns, resolutions, what the
+screener let through, errors, and how the track record moved) and the model only writes
+them up, so a check is no more wrong than the event log. It goes on the site and into the
+agent's own context, so its next decisions are made knowing how it has been doing.
 
 Set `enabled = false` under `[agency]` to switch it off, or `allow_send_mana = false` to
 keep it trading but stop it moving mana to people.

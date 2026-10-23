@@ -12,7 +12,6 @@ things that already happened before going looking for new ones.
 
 from __future__ import annotations
 
-import calendar
 import json
 import logging
 import time
@@ -121,13 +120,13 @@ def _day_facts(
     events: list[dict[str, Any]], journal: list[dict[str, Any]],
     nw_open: float | None, nw_close: float | None,
 ) -> str:
-    """Everything that happened in one day, as plain lines for the log writer."""
+    """Everything that happened in one window, as plain lines for the writer."""
     lines = []
     if nw_open is not None and nw_close is not None:
-        lines.append(f"Net worth M${nw_open:,.0f} at the start, M${nw_close:,.0f} at the end "
+        lines.append(f"Net worth M${nw_open:,.0f} at the last check, M${nw_close:,.0f} now "
                      f"({nw_close - nw_open:+,.0f}).")
     elif nw_close is not None:
-        lines.append(f"Net worth at the end of the day: M${nw_close:,.0f}.")
+        lines.append(f"Net worth now: M${nw_close:,.0f}.")
 
     for e in events:
         if e.get("dry_run"):
@@ -307,8 +306,7 @@ class Runner:
         # M$510 account.
         if not replies_only:
             await self._score_forecasts()
-            self.memory.record_net_worth(self.report.net_worth)
-            await self._daily_digest()
+            await self._progress_check()
 
         if not self.budget.chat.spent:
             await self.memory.maybe_compress(
@@ -420,7 +418,7 @@ class Runner:
                 key=lambda row: -abs(row["invested"]),
             )[:20],
             "trades": _trades(self.memory.recent_events(4000)),
-            "daily": (self.memory.state.get("daily") or [])[-14:][::-1],
+            "progress": (self.memory.state.get("progress") or [])[-24:][::-1],
             "desk": [
                 {"ts": e.get("ts"), "thinking": e.get("thinking", ""),
                  "actions": e.get("actions") or [], "error": e.get("error", "")}
@@ -725,37 +723,50 @@ class Runner:
             )
         self.memory.save()
 
-    async def _daily_digest(self) -> None:
-        """Yesterday's log entry, once, on the first tick after midnight UTC.
+    async def _progress_check(self) -> None:
+        """A short read on how it is doing, every few hours.
 
-        Code gathers the facts and the chat model only writes them up, so the entry can
-        be no more wrong than the event log. It goes on the site and into the agent's
-        own context as yesterday's recap.
+        Code gathers the facts and the chat model only writes them up, so the check
+        can be no more wrong than the event log. It goes on the site and into the
+        agent's own context, so the next decisions are made knowing it.
         """
-        day = self.memory.digest_due()
-        if day is None or not self.budget.chat.take():
+        start = self.memory.progress_due(self.cfg.memory.progress_hours)
+        if start is None or not self.budget.chat.take():
             return
-        start = calendar.timegm(time.strptime(day, "%Y-%m-%d")) * 1000
-        end = start + 86_400_000
+        end = int(time.time() * 1000)
         events = [e for e in self.memory.recent_events(6000) if start <= int(e.get("ts", 0)) < end]
         journal = [e for e in self.memory.state["journal"] if start <= int(e.get("ts", 0)) < end]
-        book = self.memory.state.get("nw_by_day", {})
-        before = sorted(d for d in book if d < day)
-        nw_open = book.get(before[-1]) if before else None
-        nw_close = book.get(day)
+        last = self.memory.last_progress()
+        nw_open = (last or {}).get("nw_close")
+        nw_close = round(self.report.net_worth, 2)
+        score = self.memory.state.get("score") or {}
 
         facts = _day_facts(events, journal, nw_open, nw_close)
+        before = (last or {}).get("score") or {}
+        if score.get("n"):
+            line = (f"Track record: Brier {score['model']:.3f} against the market's "
+                    f"{score['market']:.3f} over {score['n']} resolved forecasts; favourite "
+                    f"bets won {score.get('fav_won', 0)} of {score.get('fav_n', 0)}.")
+            if before.get("n") and before["n"] != score["n"]:
+                line += (f" Since the last check: {score['n'] - before['n']} more resolved, "
+                         f"Brier was {before['model']:.3f}.")
+            facts += "\n" + line
+        window = (f"{time.strftime('%m-%d %H:%M', time.gmtime(start / 1000))} to "
+                  f"{time.strftime('%m-%d %H:%M', time.gmtime(end / 1000))}")
         try:
             response = await self.chat.generate(
-                build_digest_prompt(day=day, facts=facts), system=DIGEST_SYSTEM
+                build_digest_prompt(window=window, facts=facts), system=DIGEST_SYSTEM
             )
             text = strip_trailing_json(response.text).strip()[:1500]
-        except Exception as exc:  # noqa: BLE001 - a missing log entry is not worth a crash
-            log.warning("Daily digest failed: %s", exc)
+        except Exception as exc:  # noqa: BLE001 - a missing check is not worth a crash
+            log.warning("Progress check failed: %s", exc)
             return
-        self.memory.add_digest(day, text, nw_open, nw_close)
-        self.memory.log_event("digest", day=day, text=text)
-        log.info("Wrote the log for %s", day)
+        entry = {"start": start, "end": end, "text": text, "nw_open": nw_open,
+                 "nw_close": nw_close, "score": {k: score.get(k) for k in
+                                                 ("n", "model", "market", "fav_n", "fav_won")}}
+        self.memory.add_progress(entry)
+        self.memory.log_event("progress", **entry)
+        log.info("Wrote a progress check for %s", window)
 
     async def _score_forecasts(self) -> None:
         """Score every forecast on a resolved market against the market's own price.

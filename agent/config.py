@@ -223,6 +223,8 @@ class SocialConfig:
 @dataclass
 class MemoryConfig:
     path: str = "state"
+    # A progress check written every this many hours, from facts gathered in code.
+    progress_hours: float = 4
     compress_after_events: int = 60
     # Compress on time as well as on events, or a quiet day never compresses at all and
     # the journal just grows.

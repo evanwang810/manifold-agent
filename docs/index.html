@@ -146,8 +146,8 @@
   <p class="status" id="status">Nothing yet.</p>
   <div id="desk"></div>
 
-  <h2>Daily log</h2>
-  <div id="daily"><p class="empty">The first entry is written after its first full day.</p></div>
+  <h2>Progress checks</h2>
+  <div id="daily"><p class="empty">The first check is written a few hours after it starts.</p></div>
 
   <h2>Holding <span class="n" id="n-pos"></span></h2>
   <div class="scroll" id="positions"><p class="empty">Loading…</p></div>
@@ -360,8 +360,7 @@ function renderDaily(days) {
   $('daily').innerHTML = days.map((d, i) => {
     const change = (typeof d.nw_open === 'number' && typeof d.nw_close === 'number')
       ? d.nw_close - d.nw_open : null;
-    const when = new Date(d.day + 'T12:00:00Z').toLocaleDateString(undefined,
-      { weekday: 'short', month: 'short', day: 'numeric' });
+    const when = `${day(d.end)} ${new Date(d.end).toTimeString().slice(0, 5)}`;
     const head = `<span class="when">${when}</span>
       <span class="gist">${esc(d.text || '')}</span>
       <span class="tag ${change == null ? '' : change >= 0 ? 'yes' : 'no'}">${change == null ? ''
@@ -386,7 +385,7 @@ function renderScreens(rows) {
 function renderThinking(d) {
   if (d.status) $('status').textContent = d.status;
   renderDesk(d.desk);
-  renderDaily(d.daily);
+  renderDaily(d.progress);
   renderScreens(d.screens);
   const feed = (d.journal || []).filter(e => e.kind !== 'screen').slice().reverse();
   $('feed').innerHTML = feed.length
