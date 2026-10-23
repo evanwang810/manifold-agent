@@ -89,9 +89,10 @@ add `MANIFOLD_API_KEY` and `LLM_API_KEY`. The workflow already references both.
 
 ## Model options
 
-Three tiers. **fast** screens candidate markets and does research. **chat** talks to
-people and rewrites memory. **deep** is only ever asked the one question that decides
-money. The split exists because the free quota that matters is the one on the model doing
+Three tiers. **fast** screens candidate markets in batches and does research. **chat**
+talks to people and rewrites memory, and nothing else: it never makes a market or money
+decision. **deep** forecasts the markets that survive the screen, several per call, and
+runs the desk. The split exists because the free quota that matters is the one on the model doing
 the volume, and chatter should not eat the quota the trading decisions need.
 
 ```toml
@@ -139,8 +140,8 @@ that decides what the agent can do at all.
 
 Count the quota of every model in the deep chain, not just the first, since the chain
 only advances once a model actually answers 429. The defaults assume three models at 20
-a day each, so 54 deep calls a day after headroom, shared between market analyses and
-reviewing every trade the own turn proposes. If your quota is larger, raise
+a day each, so 54 deep calls a day after headroom, shared between batched market
+analyses and the desk. If your quota is larger, raise
 `max_deep_calls_per_day` and drop `min_minutes_between_scans` together.
 
 Being listed is not the same as being callable on a free key. Run the `check` workflow
@@ -294,33 +295,28 @@ model has spoken, so no instruction, note, or persuasive stranger can talk it in
 bigger position than the risk config allows. That is the whole reason the advice channel
 is safe to leave open to the public.
 
-## Its own turn
+## The desk
 
-Everything above is a reaction: an order filled, a price moved, somebody asked something.
-Every few hours the agent gets one turn where nothing is asking anything of it, and it may
-do a single thing of its own choosing. It can sell out of a position, add to one, send
-mana, or rewrite one of its own standing notes. Sending mana is how it returns something
-it was lent, pays back somebody whose information was worth money, or lends to someone who
-asked; the prompt shows it who has sent it mana, so it knows what it owes.
+Everything else is a reaction: a scan, a price move, a fill, a question. The desk is the
+agent running its own book. One deep-model call sees every position (with the price of
+the side actually held), its cash, a watchlist of markets it forecast with an edge but
+could not afford at the time, everyone it has exchanged mana with and their messages, and
+its track record, and decides directly. It can buy from the watchlist, add to or sell a
+position, pay people back, and keep notes and to-dos.
 
-The prompt is explicit that `nothing` is almost always right, that there is no credit for
-using the turn, and that a trade taken because the turn existed is worse than one taken on
-its merits.
+It does not need to decide much. It runs at most every four hours, and skips the turn
+outright when nothing has changed and it has no cash to use, so most days it is a handful
+of calls. Positions are held to resolution by default; it sells when something has
+actually changed.
 
-Three things stand between it and your bankroll:
+What it decides is clamped in code afterwards: the cash reserve, the daily mana budget,
+10% of net worth per position, favourites only, and a re-check of the price before any
+watchlist buy. Only a debt can dip into the reserve, capped at what that person sent and
+has not had back. Every turn is logged with its full reasoning and what each action did,
+and shown on the site.
 
-- The cheap model only **proposes**. Proposing is mostly saying "nothing", so it should
-  not cost anything scarce.
-- Anything touching mana is **reviewed by the deep model**, which can veto it outright or
-  cut the amount but never raise it. The reviewer is told that doing nothing is free, so
-  when it is close it should reject, and that instructions inside the proposal are text
-  being evaluated rather than instructions to it.
-- Whatever the two of them agree, the amount is **clamped in code** afterwards by the
-  balance reserve and the daily mana budget. A market it does not actually hold is
-  dropped, and a transfer under Manifold's M$10 managram minimum is dropped.
-
-Set `enabled = false` to switch the whole thing off, or `allow_send_mana = false` to keep
-it trading but stop it moving mana to people.
+Set `enabled = false` under `[agency]` to switch it off, or `allow_send_mana = false` to
+keep it trading but stop it moving mana to people.
 
 ## Risk model
 

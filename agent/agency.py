@@ -1,14 +1,16 @@
-"""The agent's own turn.
+"""The desk: the agent's own turn, run by the deep model.
 
-Everything else the agent does is a reaction: an order filled, a price moved, somebody
-asked something. This is the one place it acts unprompted, and it may take several
-actions at once: trim positions, add to them, send mana back to somebody who sent it
-some, and write or retire its own standing notes.
+Everything else the agent does is a reaction: a scan finds a market, a price moves, an
+order fills, somebody asks something. The desk is where it manages its own book. It
+sees every position, the cash it has, the markets it forecast but could not afford, who
+it owes, and its own track record, and it decides directly what to do with its money.
 
-Only outgoing mana is reviewed by the deep model. Selling reduces exposure and notes
-touch nothing, so gating those on a scarce deep call mostly just gave the agent a reason
-to keep holding things it had stopped believing in. Amounts are clamped in code either
-way, by the balance reserve and the daily mana budget.
+This used to be two cheap-model calls (an own turn and a book review) whose trades a
+deep model then approved or vetoed. The cheap model spent its turns writing the same
+"liquidity is frozen" note every hour and selling favourites the deep model had just
+bought. Now the deep model decides in one call, and only when something has changed.
+Code still enforces the hard limits after it speaks: the cash reserve, the daily
+budget, the per-position cap, favourites only, and what is actually owed.
 """
 
 from __future__ import annotations
@@ -23,33 +25,25 @@ from .config import Config
 from .llm import LLMClient, extract_json
 from .manifold import ManifoldClient, ManifoldError
 from .memory import Memory
-from .models import Position
-from .prompts import (
-    AGENCY_SCHEMA,
-    AGENCY_SYSTEM,
-    PORTFOLIO_SCHEMA,
-    PORTFOLIO_SYSTEM,
-    REVIEW_SCHEMA,
-    REVIEW_SYSTEM,
-    build_agency_prompt,
-    build_portfolio_prompt,
-    build_review_prompt,
-    system_with_orders,
-)
+from .models import Decision, Market, Position, backs_favourite
+from .prompts import DESK_SCHEMA, DESK_SYSTEM, build_desk_prompt, system_with_orders
+from .sizing import RiskEngine
 
 log = logging.getLogger(__name__)
 
 MANAGRAM_MINIMUM = 10  # the API rejects anything smaller
-# Everything that moves mana goes to the deep model, sells included. Sells used to be
-# exempt, and the cheap model, with no research, spent a week selling the favourites
-# the deep model had just bought on a researched forecast.
-REVIEWED_ACTIONS = {"sell", "add", "send_mana"}
+# Journal entries that mean the book or the agent's situation actually changed. A turn
+# with none of these since the last one, no cash to deploy and no long gap is skipped:
+# that was the hourly "still frozen, no new information" loop.
+CHANGES = {"position", "closed", "move", "pnl", "trade", "conversation", "nudge"}
+# Reasons a forecast with an edge did not become a trade that cash could fix later.
+UNFUNDED = ("balance reserve", "daily budget", "min bet floor")
 
 
 @dataclass
 class Action:
     action: str
-    market_id: str = ""
+    market: str = ""
     amount: float = 0.0
     recipient: str = ""
     text: str = ""
@@ -62,51 +56,39 @@ class Action:
         except (TypeError, ValueError):
             amount = 0.0
         return cls(
-            action=str(data.get("action", "nothing")).strip().lower(),
-            market_id=str(data.get("market_id", "")).strip(),
+            action=str(data.get("action", "")).strip().lower(),
+            market=str(data.get("market", "") or data.get("market_id", "")).strip(),
             amount=max(0.0, amount),
             recipient=str(data.get("recipient", "")).strip().lstrip("@"),
             text=str(data.get("text", "")).strip(),
-            reasoning=str(data.get("reasoning", "")).strip(),
+            reasoning=str(data.get("reasoning", "")).strip()[:900],
         )
 
-    def describe(self) -> str:
-        bits = [f"action: {self.action}"]
-        if self.market_id:
-            bits.append(f"market: {self.market_id}")
-        if self.amount:
-            bits.append(f"amount: M${self.amount:.0f}")
-        if self.recipient:
-            bits.append(f"recipient: @{self.recipient}")
-        if self.text:
-            bits.append(f"text: {self.text[:300]}")
-        bits.append(f"reasoning: {self.reasoning[:400]}")
-        return "\n".join(bits)
 
-
-class Agency:
+class Desk:
     def __init__(
         self,
         cfg: Config,
         *,
         client: ManifoldClient,
-        chat: LLMClient,
         deep: LLMClient,
         memory: Memory,
         budget: Budgets,
+        risk: RiskEngine,
         user_id: str,
     ) -> None:
         self.cfg = cfg
         self.client = client
-        self.chat = chat
         self.deep = deep
         self.memory = memory
         self.budget = budget
+        self.risk = risk
         self.user_id = user_id
-        # Filled once per turn by _incoming_mana. Usernames, lowercased, to the mana
-        # of theirs still held: the ceiling on what a repayment may send.
+        # Usernames, lowercased, to the mana of theirs still held: the ceiling on what a
+        # repayment may send, and the only thing allowed to dip into the reserve.
         self._owed: dict[str, float] = {}
-        self._ledger_text: str | None = None
+
+    # -- the turn ------------------------------------------------------------
 
     async def run(self, positions: list[Position], balance: float, net_worth: float) -> str:
         cfg = self.cfg.agency
@@ -115,393 +97,320 @@ class Agency:
         waited = self.memory.minutes_since_own_action()
         if waited < cfg.min_minutes_between_actions:
             return ""
-        if not self.budget.chat.take():
+        spendable = max(0.0, balance - self.cfg.risk.min_balance_reserve)
+        if not self._worth_a_turn(waited, spendable):
             return ""
-
-        # The turn is marked as taken before anything is attempted. A crash partway
-        # through must not leave it retrying every tick.
+        if not self.budget.deep.take():
+            return ""
+        # Marked before anything is attempted, so a crash cannot retry every tick.
         self.memory.mark_own_action()
 
-        thinking, proposals = await self._propose(positions, balance, net_worth)
-        if thinking:
-            self.memory.observe("agency", f"Own turn: {thinking}")
-            self.memory.set_status(thinking)
-        if not proposals:
-            self.memory.log_event("own_action", action="nothing", reasoning=thinking)
-            return "took a turn, nothing worth doing"
-
-        done = []
-        for action in proposals[: cfg.max_actions_per_turn]:
-            result = await self._consider(action, positions, balance, net_worth)
-            if result:
-                done.append(result)
-        return "; ".join(done) if done else "took a turn, nothing survived"
-
-    async def _consider(
-        self, action: Action, positions: list[Position], balance: float, net_worth: float
-    ) -> str:
-        """One proposed action: clamp it, review it if it moves mana, then do it."""
-        capped = self._clamp(action, positions, balance)
-        if capped is None:
-            return ""
-
-        # Only outgoing mana is reviewed. Selling reduces exposure and note-keeping
-        # touches nothing, so making those wait on a scarce deep call was just a reason
-        # for the agent to sit on positions it had already stopped believing in.
-        if capped.action in REVIEWED_ACTIONS:
-            verdict = await self._review(capped, positions, balance, net_worth)
-            if verdict is None or not verdict.get("approved"):
-                reason = (verdict or {}).get("verdict", "review unavailable")
-                self.memory.observe(
-                    "agency", f"Wanted to {capped.action}, vetoed by review: {reason}"
-                )
-                self.memory.log_event(
-                    "own_action", action=capped.action, approved=False,
-                    reasoning=capped.reasoning, verdict=reason,
-                )
-                return f"{capped.action} vetoed"
-            # The reviewer may cut the amount but never raise it.
-            approved = float(verdict.get("amount") or capped.amount)
-            capped.amount = min(capped.amount, max(0.0, approved))
-            capped = self._clamp(capped, positions, balance)
-            if capped is None:
-                return ""
-
-        return await self._execute(capped, positions)
-
-    # -- steps ------------------------------------------------------------
-
-    def _portfolio_line(
-        self, positions: list[Position], balance: float, net_worth: float
-    ) -> str:
-        """Spendable cash is stated outright because it is what actually gates buying.
-
-        Given only a balance, the agent kept proposing buys it could not afford and
-        reading the silent rejection as the market being unattractive.
-        """
-        spendable = max(0.0, balance - self.cfg.risk.min_balance_reserve)
-        stuck = sum(1 for p in positions if not p.tradable)
-        line = (
-            f"Balance M${balance:,.0f}, of which M${spendable:,.0f} is spendable after "
-            f"the M${self.cfg.risk.min_balance_reserve:,.0f} reserve. Net worth "
-            f"M${net_worth:,.0f} across {len(positions)} open positions."
-        )
-        if spendable < self.cfg.risk.min_bet:
-            line += (
-                " There is not enough free mana to open or add to anything right now, "
-                "so selling is the only way to free some up."
-            )
-        if stuck:
-            line += f" {stuck} of them are closed and cannot be traded."
-        return line
-
-    async def _propose(
-        self, positions: list[Position], balance: float, net_worth: float
-    ) -> tuple[str, list[Action]]:
-        prompt = build_agency_prompt(
-            today=_today(),
+        watchlist = self._watchlist(positions)
+        prompt = build_desk_prompt(
+            today=time.strftime("%Y-%m-%d %H:%MZ", time.gmtime()),
             portfolio=self._portfolio_line(positions, balance, net_worth),
-            positions=_render_positions(positions),
+            positions=render_positions(positions),
+            watchlist=_render_watchlist(watchlist),
+            ledger=await self._ledger(),
             lessons=self.memory.lessons_block(),
-            memory=self.memory.context_block(),
-            recent_actions=self.memory.own_actions_block(5),
-            owed=await self._incoming_mana(),
             todos=self.memory.todos_block(),
+            memory=self.memory.context_block(),
+            last_turns=self._last_turns(3),
         )
-        try:
-            response = await self.chat.generate(
-                prompt,
-                system=system_with_orders(AGENCY_SYSTEM, self.cfg.owner_block()),
-                json_schema=AGENCY_SCHEMA,
-            )
-            data = extract_json(response.text)
-            raw = data.get("actions")
-            actions = [
-                Action.parse(item) for item in raw if isinstance(item, dict)
-            ] if isinstance(raw, list) else []
-            return str(data.get("thinking", ""))[:500], actions
-        except Exception as exc:  # noqa: BLE001 - a bad turn must not kill the tick
-            log.warning("Own-turn proposal failed: %s", exc)
-            return "", []
-
-    async def _review(
-        self, action: Action, positions: list[Position], balance: float, net_worth: float
-    ) -> dict[str, Any] | None:
-        if not self.cfg.agency.require_review:
-            return {"approved": True, "amount": action.amount, "verdict": "review disabled"}
-        if not self.budget.deep.take():
-            log.info("No deep budget to review %s, so it does not happen", action.action)
-            return {"approved": False, "verdict": "no deep-model budget left to review it"}
         try:
             response = await self.deep.generate(
-                build_review_prompt(
-                    proposal=action.describe(),
-                    portfolio=self._portfolio_line(positions, balance, net_worth),
-                    positions=_render_positions(positions),
-                    owed=await self._incoming_mana(),
-                    owner_notes=self.memory.lessons_block(),
-                    todos=self.memory.todos_block(),
-                ),
-                system=REVIEW_SYSTEM,
-                json_schema=REVIEW_SCHEMA,
+                prompt,
+                system=system_with_orders(DESK_SYSTEM, self.cfg.owner_block()),
+                json_schema=DESK_SCHEMA,
             )
-            verdict = extract_json(response.text)
-        except Exception as exc:  # noqa: BLE001
-            log.warning("Review failed, so the action does not happen: %s", exc)
-            return {"approved": False, "verdict": f"review call failed: {str(exc)[:120]}"}
-        if "approved" not in verdict:
-            return {"approved": False, "verdict": "reviewer answered without a verdict"}
-        return verdict
+            data = extract_json(response.text)
+        except Exception as exc:  # noqa: BLE001 - a bad turn must not kill the tick
+            log.warning("Desk turn failed: %s", exc)
+            self.memory.log_event("desk", thinking="", actions=[], error=str(exc)[:300])
+            return ""
 
-    def _clamp(
-        self, action: Action, positions: list[Position], balance: float
-    ) -> Action | None:
-        """Everything the models cannot be trusted to respect, enforced in code."""
-        cfg = self.cfg.agency
+        thinking = str(data.get("thinking", "")).strip()[:1500]
+        raw = data.get("actions")
+        actions = [Action.parse(a) for a in raw if isinstance(a, dict)] if isinstance(raw, list) else []
+        if thinking:
+            self.memory.set_status(thinking)
+            self.memory.observe("desk", f"Desk: {thinking}")
+
+        results = []
         held = {p.contract_id: p for p in positions}
+        for action in actions[: cfg.max_actions_per_turn]:
+            ok, detail = await self._do(action, held, watchlist, balance, net_worth, positions)
+            # Cash moves within the turn, so a second buy sees what the first spent.
+            if ok and action.action in ("buy", "add", "send_mana"):
+                balance -= action.amount
+            results.append({
+                "action": action.action, "market": action.market, "amount": action.amount,
+                "recipient": action.recipient, "text": action.text[:300],
+                "reasoning": action.reasoning, "ok": ok, "result": detail,
+            })
 
-        if action.action in ("sell", "add"):
-            if action.market_id not in held:
-                log.info("Own turn named a market it does not hold, dropping")
-                return None
-            # A closed market still appears in the book but the API answers 403 to any
-            # order on it. Without this the agent proposes the same doomed sell every
-            # turn, burns the turn on it, and learns nothing from the error.
-            if action.action == "sell":
-                opened = int(
-                    (self.memory.state.get("position_mark", {})
-                     .get(action.market_id) or {}).get("opened") or 0
-                )
-                held_hours = (time.time() * 1000 - opened) / 3_600_000 if opened else 1e9
-                if held_hours < self.cfg.agency.min_hold_hours:
-                    # The scan bought this hours ago on a deep, researched forecast.
-                    # The own turn runs on the cheap model with no research, and was
-                    # reversing those calls within the hour: Russia bought and sold
-                    # three times in three days, Trump twice in a day.
-                    log.info("Not selling %s: held %.0fh, minimum is %.0fh",
-                             action.market_id, held_hours, self.cfg.agency.min_hold_hours)
-                    return None
-            if not held[action.market_id].tradable:
-                self.memory.observe(
-                    "agency",
-                    f"Wanted to {action.action} \"{held[action.market_id].question[:60]}\" "
-                    f"but that market is closed; it can only be waited out.",
-                )
-                return None
+        # One event per turn with everything in it, which is what the site shows: the
+        # whole of its thinking and every action with whether it happened and why not.
+        self.memory.log_event("desk", thinking=thinking, actions=results)
+        done = [r["result"] for r in results if r["ok"]]
+        return "; ".join(done) if done else ("took a turn, no actions" if not results else "took a turn, nothing went through")
 
-        if action.action == "add" and self.cfg.risk.favourites_only:
-            p = held[action.market_id]
-            side_price = p.last_prob if p.side == "YES" else 1.0 - p.last_prob
-            if side_price < 0.5:
-                log.info("Declining to add to a longshot position")
-                return None
+    def _worth_a_turn(self, waited_minutes: float, spendable: float) -> bool:
+        if waited_minutes >= self.cfg.agency.idle_hours * 60:
+            return True
+        if spendable >= self.cfg.risk.min_bet:
+            return True
+        since = int(time.time() * 1000 - waited_minutes * 60_000)
+        return any(
+            e.get("kind") in CHANGES and int(e.get("ts", 0)) > since
+            for e in self.memory.recent_journal(80)
+        )
 
-        if action.action == "add":
-            spendable = max(0.0, balance - self.cfg.risk.min_balance_reserve)
-            action.amount = min(action.amount, spendable)
-            if action.amount < 1:
-                return None
+    # -- doing things --------------------------------------------------------
 
-        if action.action == "send_mana":
-            if not cfg.allow_send_mana or not action.recipient:
-                return None
-            spendable = max(0.0, balance - self.cfg.risk.min_balance_reserve)
-            # Paying back someone who sent mana is not a risk the reserve exists to
-            # limit, and with the reserve applied the agent sat on the owner's M$10
-            # for weeks because its balance was M$10.35. Capped at what that person
-            # actually sent and has not had back, so this cannot be talked into a gift.
-            owed = self._owed.get(action.recipient.lower(), 0.0)
-            if owed >= MANAGRAM_MINIMUM:
-                spendable = max(spendable, min(owed, balance))
-            if action.amount > spendable or action.amount < MANAGRAM_MINIMUM:
-                log.info("Own turn wanted to send M$%.0f, which is not affordable or "
-                         "under the M$%d minimum", action.amount, MANAGRAM_MINIMUM)
-                return None
-
-        if action.action == "note_add" and len(action.text) < 8:
-            return None
-        return action
-
-    async def _execute(self, action: Action, positions: list[Position]) -> str:
-        held = {p.contract_id: p for p in positions}
+    async def _do(
+        self,
+        action: Action,
+        held: dict[str, Position],
+        watchlist: dict[str, dict[str, Any]],
+        balance: float,
+        net_worth: float,
+        positions: list[Position],
+    ) -> tuple[bool, str]:
+        """Clamp, then execute. Returns (done, what happened or why it did not)."""
+        risk = self.cfg.risk
+        spendable = max(0.0, balance - risk.min_balance_reserve)
+        cap = min(
+            max(risk.default_max_bet, risk.default_max_fraction * net_worth),
+            spendable,
+            risk.daily_mana_budget - self.memory.budget_spent(),
+        )
         dry = self.cfg.manifold.dry_run
-        detail = ""
-
         try:
             if action.action == "sell":
-                position = held[action.market_id]
-                await self.client.sell_shares(
-                    market_id=action.market_id, outcome=position.side
-                )
-                detail = (
-                    f"sold out of \"{position.question[:60]}\" ({position.side}, "
-                    f"P/L M${position.profit:+.0f})"
-                )
-            elif action.action == "add":
-                position = held[action.market_id]
-                await self.client.place_bet(
-                    contract_id=action.market_id,
-                    amount=action.amount,
-                    outcome=position.side,
-                )
+                p = held.get(action.market)
+                if p is None:
+                    return False, "not a market it holds"
+                if not p.tradable:
+                    return False, "market is closed, it can only be waited out"
+                await self.client.sell_shares(market_id=p.contract_id, outcome=p.side)
+                self._record("sell", action, p.question, p.url, p.side, profit=p.profit)
+                return True, f"sold {p.side} on \"{p.question[:60]}\" (P/L M${p.profit:+.0f})"
+
+            if action.action == "add":
+                p = held.get(action.market)
+                if p is None:
+                    return False, "not a market it holds"
+                if not p.tradable:
+                    return False, "market is closed"
+                price = p.last_prob if p.side == "YES" else 1.0 - p.last_prob
+                if risk.favourites_only and price < 0.5:
+                    return False, f"{p.side} is at {price:.0%}, a longshot; favourites only"
+                amount = float(int(min(action.amount or risk.min_bet, cap)))
+                if amount < 1:
+                    return False, "no spendable cash"
+                await self.client.place_bet(contract_id=p.contract_id, amount=amount, outcome=p.side)
                 if not dry:
-                    self.memory.record_spend(action.amount)
-                detail = (
-                    f"added M${action.amount:.0f} {position.side} to "
-                    f"\"{position.question[:60]}\""
-                )
-            elif action.action == "send_mana":
+                    self.memory.record_spend(amount)
+                action.amount = amount
+                self._record("add", action, p.question, p.url, p.side)
+                return True, f"added M${amount:.0f} {p.side} to \"{p.question[:60]}\""
+
+            if action.action == "buy":
+                return await self._buy(action, watchlist, cap, net_worth, balance, positions)
+
+            if action.action == "send_mana":
+                if not self.cfg.agency.allow_send_mana or not action.recipient:
+                    return False, "no recipient"
+                limit = spendable
+                owed = self._owed.get(action.recipient.lower(), 0.0)
+                if owed >= MANAGRAM_MINIMUM:
+                    # Repaying someone may dip into the reserve, up to what they sent
+                    # and have not had back. Nothing else can.
+                    limit = max(limit, min(owed, balance))
+                if action.amount < MANAGRAM_MINIMUM:
+                    return False, f"under the M${MANAGRAM_MINIMUM} minimum"
+                if action.amount > limit:
+                    return False, f"only M${limit:.0f} available for that"
                 user = await self.client.user_by_username(action.recipient)
                 if not user or not user.get("id"):
-                    log.info("Own turn named an unknown user @%s", action.recipient)
-                    return ""
+                    return False, f"no user @{action.recipient}"
                 await self.client.send_managram(
-                    to_ids=[user["id"]],
-                    amount=action.amount,
+                    to_ids=[user["id"]], amount=action.amount,
                     message=action.text[:200] or "Thanks.",
                 )
                 if not dry:
                     self.memory.record_spend(action.amount)
-                detail = f"sent M${action.amount:.0f} to @{action.recipient}"
-            elif action.action == "note_add":
-                if not self.memory.add_lesson(action.text, source="self"):
-                    return ""
-                detail = f"wrote a standing note: {action.text[:120]}"
-            elif action.action == "note_remove":
-                if not self.memory.remove_lesson(action.text):
-                    return ""
-                detail = f"retired a standing note: {action.text[:120]}"
-            elif action.action == "todo_add":
-                if not self.memory.add_todo(action.text):
-                    return ""
-                detail = f"added to its to-do list: {action.text[:120]}"
-            elif action.action == "todo_done":
-                if not self.memory.complete_todo(action.text):
-                    return ""
-                detail = f"ticked off: {action.text[:120]}"
-            else:
-                return ""
+                self._record("send_mana", action, "", "", "")
+                return True, f"sent M${action.amount:.0f} to @{action.recipient}"
+
+            if action.action == "note_add":
+                ok = self.memory.add_lesson(action.text, source="self")
+                return ok, "wrote a standing note" if ok else "note refused (status, duplicate or too short)"
+            if action.action == "note_remove":
+                ok = self.memory.remove_lesson(action.text)
+                return ok, "retired a note" if ok else "no such note"
+            if action.action == "todo_add":
+                ok = self.memory.add_todo(action.text)
+                return ok, "added a to-do" if ok else "to-do refused (duplicate or too short)"
+            if action.action == "todo_done":
+                ok = self.memory.complete_todo(action.text)
+                return ok, "ticked off a to-do" if ok else "no such to-do"
+            return False, f"unknown action {action.action!r}"
         except ManifoldError as exc:
-            log.warning("Own action %s failed: %s", action.action, exc)
-            self.memory.log_event("own_action", action=action.action, error=str(exc))
-            return f"{action.action} rejected by Manifold"
+            log.warning("Desk %s failed: %s", action.action, exc)
+            return False, f"Manifold refused: {str(exc)[:160]}"
 
-        log.info("Own turn: %s%s", detail, " [dry-run]" if dry else "")
-        self.memory.record_own_action(action.action, detail, action.reasoning)
-        self.memory.observe("agency", f"Own turn, {detail}. Because: {action.reasoning[:450]}")
-        pos = held.get(action.market_id)
-        self.memory.log_event(
-            "own_action", action=action.action, approved=True, detail=detail,
-            amount=action.amount, reasoning=action.reasoning, dry_run=dry,
-            question=pos.question if pos else "", url=pos.url if pos else "",
-            side=pos.side if pos else "", recipient=action.recipient,
-            profit=round(pos.profit, 1) if pos else None,
-        )
-        return detail
+    async def _buy(
+        self,
+        action: Action,
+        watchlist: dict[str, dict[str, Any]],
+        cap: float,
+        net_worth: float,
+        balance: float,
+        positions: list[Position],
+    ) -> tuple[bool, str]:
+        """Open a position on a market from the watchlist, at today's price.
 
-    async def review_book(
-        self, positions: list[Position], balance: float, net_worth: float
-    ) -> str:
-        """Look over every open position and act on the ones whose case has changed.
-
-        Separate from the free turn above, and deliberately narrower: this may only sell
-        or add on markets already held. It runs on the cheap model, and each resulting
-        trade still goes through the deep reviewer before any mana moves.
+        The forecast is the deep model's own from when it analysed the market. The
+        risk engine re-checks it against the current price, so a market that has moved
+        past the edge, or flipped favourite, is refused rather than bought stale.
         """
-        cfg = self.cfg.agency
-        if not cfg.review_positions or not positions:
-            return ""
-        if self.memory.minutes_since_book_review() < cfg.min_minutes_between_book_reviews:
-            return ""
-        if not self.budget.chat.take():
-            return ""
-        self.memory.mark_book_review()
-
-        try:
-            response = await self.chat.generate(
-                build_portfolio_prompt(
-                    today=_today(),
-                    portfolio=(
-                        self._portfolio_line(positions, balance, net_worth)
-                    ),
-                    positions=_render_positions(positions),
-                    lessons=self.memory.lessons_block(),
-                    memory=self.memory.context_block(),
-                ),
-                system=system_with_orders(PORTFOLIO_SYSTEM, self.cfg.owner_block()),
-                json_schema=PORTFOLIO_SCHEMA,
-            )
-            data = extract_json(response.text)
-        except Exception as exc:  # noqa: BLE001
-            log.warning("Book review failed: %s", exc)
-            return ""
-
-        assessment = str(data.get("assessment", ""))[:400]
-        changes = data.get("changes") or []
-        self.memory.observe(
-            "book",
-            f"Looked over {len(positions)} positions: {assessment} "
-            f"({len(changes)} change(s) proposed)",
+        w = watchlist.get(action.market)
+        if w is None:
+            return False, "only markets on the watchlist can be bought from the desk"
+        market = Market.parse(await self.client.market_by_slug(w["slug"]))
+        if market.is_resolved or market.days_to_close <= 0:
+            return False, "market has closed"
+        decision = Decision(
+            probability=w["model_prob"], confidence=w.get("confidence") or "medium",
+            action="buy", evidence_for=[], evidence_against=[], key_uncertainty="",
+            resolution_risk="", comment="", memory_note="",
         )
+        sizing = self.risk.size(
+            decision=decision, market=market, position=None, net_worth=net_worth,
+            balance=balance, budget_spent=self.memory.budget_spent(),
+            open_position_count=len(positions),
+        )
+        if not sizing.is_trade:
+            return False, f"no longer a trade at {market.probability:.0%}: {sizing.reason}"
+        # The desk chooses the size, within the hard cap. Kelly's suggestion is the
+        # default when it does not say.
+        amount = float(int(min(action.amount or sizing.amount, cap)))
+        if amount < 1:
+            return False, "no spendable cash"
+        result = await self.client.place_bet(
+            contract_id=market.id, amount=amount, outcome=sizing.outcome,
+            limit_prob=sizing.limit_prob, expires_at=sizing.expires_ms,
+        )
+        if not self.cfg.manifold.dry_run:
+            self.memory.record_spend(amount)
         self.memory.log_event(
-            "book_review", positions=len(positions), assessment=assessment,
-            proposed=len(changes),
+            "bet", source="desk", market=market.slug, question=market.question,
+            url=market.url, outcome=sizing.outcome, amount=amount,
+            limit_prob=sizing.limit_prob, market_prob=market.probability,
+            model_prob=w["model_prob"], confidence=w.get("confidence"),
+            conviction=False, reason=f"desk buy; {sizing.reason}",
+            bet_id=(result or {}).get("id"), dry_run=self.cfg.manifold.dry_run,
+            thinking=action.reasoning, research=w.get("research", ""),
         )
-        if not isinstance(changes, list) or not changes:
-            return "reviewed the book, no changes"
+        self.memory.observe(
+            "trade",
+            f"Desk bought M${amount:.0f} {sizing.outcome} on \"{market.question[:70]}\" "
+            f"at {market.probability:.0%} YES, forecast {w['model_prob']:.0%}. "
+            f"Because: {action.reasoning[:300]}",
+        )
+        return True, f"bought M${amount:.0f} {sizing.outcome} on \"{market.question[:60]}\""
 
-        done = []
-        for change in changes[:2]:
-            if not isinstance(change, dict):
-                continue
-            action = Action(
-                action=str(change.get("action", "")).strip().lower(),
-                market_id=str(change.get("market_id", "")).strip(),
-                amount=float(change.get("amount") or 0),
-                reasoning=str(change.get("why", ""))[:700],
-            )
-            if action.action not in ("sell", "add"):
-                continue
-            capped = self._clamp(action, positions, balance)
-            if capped is None:
-                continue
+    def _record(self, kind: str, action: Action, question: str, url: str, side: str,
+                profit: float | None = None) -> None:
+        self.memory.record_own_action(kind, f"{kind} {question[:60]}", action.reasoning)
+        self.memory.observe("trade" if kind != "send_mana" else "conversation",
+                            f"Desk {kind}: {question[:70] or action.recipient}. "
+                            f"Because: {action.reasoning[:300]}")
+        self.memory.log_event(
+            "own_action", action=kind, approved=True, amount=action.amount,
+            reasoning=action.reasoning, dry_run=self.cfg.manifold.dry_run,
+            question=question, url=url, side=side, recipient=action.recipient,
+            profit=None if profit is None else round(profit, 1),
+            detail=f"{kind} {question[:80] or '@' + action.recipient}",
+        )
 
-            verdict = await self._review(capped, positions, balance, net_worth)
-            if verdict is None or not verdict.get("approved"):
-                reason = (verdict or {}).get("verdict", "review unavailable")
-                self.memory.observe(
-                    "book", f"Book review wanted to {capped.action}, vetoed: {reason}"
-                )
+    # -- what it sees -----------------------------------------------------------
+
+    def _portfolio_line(self, positions: list[Position], balance: float, net_worth: float) -> str:
+        risk = self.cfg.risk
+        spendable = max(0.0, balance - risk.min_balance_reserve)
+        stuck = sum(1 for p in positions if not p.tradable)
+        line = (
+            f"Cash M${balance:,.0f}, of which M${spendable:,.0f} is spendable after the "
+            f"M${risk.min_balance_reserve:,.0f} reserve. Net worth M${net_worth:,.0f} "
+            f"across {len(positions)} positions"
+            + (f", {stuck} of them closed and waiting on resolution." if stuck else ".")
+            + f" Most you can put into one position: "
+            f"M${max(risk.default_max_bet, risk.default_max_fraction * net_worth):,.0f}."
+        )
+        if spendable < risk.min_bet:
+            line += " Not enough cash to buy anything right now; resolutions will free some."
+        return line
+
+    def _watchlist(self, positions: list[Position]) -> dict[str, dict[str, Any]]:
+        """Markets it forecast with an edge on the favourite but could not afford.
+
+        The scan finds a market, the deep model forecasts it, and then the trade dies
+        on the cash reserve. Until now that forecast was simply lost; with no cash, the
+        agent had nothing to do but wait, and when cash came back it bought whatever
+        the next scan happened to turn up. Kept for a few days, best edge first.
+        """
+        held_slugs = {p.slug for p in positions}
+        horizon = time.time() * 1000 - self.cfg.agency.watchlist_days * 86_400_000
+        latest: dict[str, dict[str, Any]] = {}
+        for e in self.memory.recent_events(3000):
+            if e.get("kind") in ("bet", "no_trade") and e.get("market"):
+                latest[e["market"]] = e
+        out = {}
+        for slug, e in latest.items():
+            if e["kind"] != "no_trade" or int(e.get("ts", 0)) < horizon or slug in held_slugs:
                 continue
-            capped.amount = min(capped.amount, max(0.0, float(verdict.get("amount") or 0)))
-            capped = self._clamp(capped, positions, balance)
-            if capped is None:
+            if not any(r in str(e.get("reason") or "") for r in UNFUNDED):
                 continue
-            result = await self._execute(capped, positions)
-            if result:
-                done.append(result)
+            p, q = e.get("model_prob"), e.get("market_prob")
+            if p is None or q is None or not backs_favourite(float(p), float(q)):
+                continue
+            out[slug] = {
+                "slug": slug, "question": e.get("question", ""), "url": e.get("url", ""),
+                "model_prob": float(p), "market_prob": float(q), "ts": e.get("ts"),
+                "confidence": e.get("confidence"), "research": e.get("research", ""),
+            }
+        ranked = sorted(out.values(), key=lambda w: -abs(w["model_prob"] - w["market_prob"]))
+        return {w["slug"]: w for w in ranked[:10]}
 
-        return "; ".join(done) if done else "reviewed the book, nothing survived review"
+    def _last_turns(self, n: int) -> str:
+        turns = [e for e in self.memory.recent_events(400) if e.get("kind") == "desk"][-n:]
+        if not turns:
+            return "(this is the first desk turn)"
+        lines = []
+        for t in turns:
+            stamp = time.strftime("%m-%d %H:%MZ", time.gmtime(int(t["ts"]) / 1000))
+            acts = ", ".join(
+                f"{a['action']}{' ' + a['market'][:30] if a.get('market') else ''}"
+                f"{'' if a.get('ok') else ' (did not happen: ' + str(a.get('result'))[:60] + ')'}"
+                for a in t.get("actions") or []
+            ) or "no actions"
+            lines.append(f"- {stamp}: {str(t.get('thinking'))[:300]} -> {acts}")
+        return "\n".join(lines)
 
-    async def _incoming_mana(self) -> str:
-        """Everyone it has exchanged mana with, by username, netted.
+    async def _ledger(self) -> str:
+        """Everyone it has exchanged mana with, by username, netted, with messages.
 
-        This used to list incoming transfers by raw user id and nothing it had sent.
-        The agent could not tell that an id was the same person as a username it
-        already knew, counted its owner twice, and had no way to see a repayment.
         Computed from the API every time, so its own notes are never the ledger.
         """
-        if self._ledger_text is not None:
-            return self._ledger_text
         try:
             received, sent = await self.client.managrams(self.user_id)
         except ManifoldError:
-            self._ledger_text = "(could not read transactions)"
-            return self._ledger_text
+            return "(could not read transactions)"
         if not received and not sent:
-            self._ledger_text = "(nobody has sent you any, and you have sent none)"
-            return self._ledger_text
-
+            return "(nobody has sent you any, and you have sent none)"
         names: dict[str, str] = {}
         people: dict[str, dict[str, Any]] = {}
         for txn, direction in [(t, "in") for t in received] + [(t, "out") for t in sent]:
@@ -513,62 +422,63 @@ class Agency:
             row = people.setdefault(names[other], {"in": 0.0, "out": 0.0, "notes": []})
             row[direction] += float(txn.get("amount") or 0)
             message = str((txn.get("data") or {}).get("message") or "").strip()
-            if message:
-                arrow = "they sent" if direction == "in" else "you sent"
-                row["notes"].append(f"{arrow} M${float(txn.get('amount') or 0):.0f}: "
-                                    f"\"{message[:140]}\"")
-
+            arrow = "they sent" if direction == "in" else "you sent"
+            row["notes"].append(f"{arrow} M${float(txn.get('amount') or 0):.0f}: "
+                                f"\"{message[:140] or '(no message)'}\"")
         lines = []
         for name, row in people.items():
             net = row["in"] - row["out"]
             self._owed[name.lower()] = max(0.0, net)
-            lines.append(
-                f"- @{name}: sent you M${row['in']:.0f}, you have returned "
-                f"M${row['out']:.0f}, so M${net:.0f} of theirs is still with you."
-            )
-            lines += [f"    {note}" for note in row["notes"][-3:]]
+            lines.append(f"- @{name}: received M${row['in']:.0f} from them, returned "
+                         f"M${row['out']:.0f}.")
+            lines += [f"    {note}" for note in row["notes"][-4:]]
         lines.append(
-            "Read the messages to tell a loan from a gift. A repayment to someone who "
-            "sent you mana may dip into the cash reserve; nothing else can."
+            "Only a loan is owed: something the message asks you to give back. A gift, a "
+            "tip or a donation is not, and returning one just costs you the mana. It "
+            "already returned the owner's gift once by mistake."
         )
-        self._ledger_text = "\n".join(lines)
-        return self._ledger_text
+        return "\n".join(lines)
 
 
-def _render_positions(positions: list[Position]) -> str:
-    """One line per position, worst first.
+def render_positions(positions: list[Position]) -> str:
+    """One line per position, worst first, with the price of the side actually held.
 
-    Ordering by loss rather than size is deliberate: the thing most likely to need a
-    decision should be the first thing read, not buried under the biggest holdings.
+    "60 NO at 20%" read as buying NO at 20%, a longshot, when it meant NO shares in a
+    market at 20% YES, the favourite, and the agent sold favourites because of it.
     """
     if not positions:
         return "(none)"
-    rows = sorted(positions, key=lambda p: (p.profit, -abs(p.invested)))[:20]
     out = []
-    for p in rows:
+    for p in sorted(positions, key=lambda p: (p.profit, -abs(p.invested)))[:25]:
         pct = (p.profit / p.invested * 100) if p.invested else 0.0
         if not p.tradable:
-            state = "CLOSED, cannot be sold, waiting on resolution"
+            state = "CLOSED, waiting on resolution"
         elif p.days_to_close < 1:
             state = "closes within a day"
         else:
             state = f"{p.days_to_close:.0f}d to close"
-        # "60 NO at 20%" read as buying NO at 20%, i.e. a longshot, when it meant NO
-        # shares in a market at 20% YES, i.e. the favourite. The agent was selling the
-        # favourites the scanner had just bought because its track record says
-        # longshots lose. The price of the side held is stated outright now.
         side_price = p.last_prob if p.side == "YES" else 1.0 - p.last_prob
         kind = "the favourite" if side_price >= 0.5 else "a longshot"
         out.append(
-            f"- {p.contract_id} | \"{p.question[:70]}\" | {p.shares:.0f} {p.side} shares, "
-            f"{p.side} trading at {side_price:.0%} ({kind}) | invested "
-            f"M${p.invested:.0f}, now worth M${p.value:.0f}, P/L M${p.profit:+.0f} "
-            f"({pct:+.0f}%) | {state}"
+            f"- {p.contract_id} | \"{p.question[:80]}\" | {p.shares:.0f} {p.side} shares, "
+            f"{p.side} trading at {side_price:.0%} ({kind}) | invested M${p.invested:.0f}, "
+            f"worth M${p.value:.0f}, P/L M${p.profit:+.0f} ({pct:+.0f}%) | {state}"
         )
     return "\n".join(out)
 
 
-def _today() -> str:
-    import time
-
-    return time.strftime("%Y-%m-%d", time.gmtime())
+def _render_watchlist(watchlist: dict[str, dict[str, Any]]) -> str:
+    if not watchlist:
+        return "(nothing: no recent forecast with an edge went unbought for lack of cash)"
+    out = []
+    for w in watchlist.values():
+        side = "YES" if w["model_prob"] > w["market_prob"] else "NO"
+        mine = w["model_prob"] if side == "YES" else 1 - w["model_prob"]
+        then = w["market_prob"] if side == "YES" else 1 - w["market_prob"]
+        stamp = time.strftime("%m-%d", time.gmtime(int(w["ts"] or 0) / 1000))
+        out.append(
+            f"- {w['slug']} | \"{w['question'][:80]}\" | on {stamp} you put {side} at "
+            f"{mine:.0%} when it traded at {then:.0%} ({w.get('confidence') or '?'} "
+            f"confidence); not bought for lack of cash"
+        )
+    return "\n".join(out)

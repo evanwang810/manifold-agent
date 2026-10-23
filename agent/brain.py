@@ -1,4 +1,9 @@
-"""Evaluate one market and act on it: research, decide, size, execute, explain."""
+"""Evaluate markets and act on them: screen, research, decide, size, execute, explain.
+
+Both model passes are batched. The screen looks at a whole scan in one cheap call and
+the deep model forecasts the survivors together in one call, so the same daily quota
+covers several times as many markets as one request per market did.
+"""
 
 from __future__ import annotations
 
@@ -15,7 +20,7 @@ from .models import (
     Comment, Decision, Market, Position, Sizing, backs_favourite, logodds_gap,
 )
 from .prompts import (
-    DECISION_SCHEMA,
+    DECISION_BATCH_SCHEMA,
     QUERY_SCHEMA,
     QUERY_SYSTEM,
     RESEARCH_SYSTEM,
@@ -159,70 +164,123 @@ class Brain:
     async def evaluate(
         self, market: Market, *, trigger: str, screen: bool = False
     ) -> Evaluation:
-        market = await self.client.market(market.id)
-        self.memory.mark_seen(market.id)
-        if market.is_resolved:
-            return Evaluation(market, None, None, False, "resolved while queued")
+        """One market: a batch of one, so there is a single code path."""
+        results = await self.evaluate_batch([market], trigger=trigger, screen=screen, analyse=1)
+        return results[0] if results else Evaluation(market, None, None, False, "nothing to do")
 
-        comments = await self._safe_comments(market.id)
+    async def evaluate_batch(
+        self, markets: list[Market], *, trigger: str, screen: bool = False, analyse: int = 3
+    ) -> list[Evaluation]:
+        """Screen a batch in one cheap call, then forecast the survivors in one deep call.
+
+        `analyse` caps how many reach the deep model. Survivors beyond it are not
+        marked as seen, so the next scan can pick them up instead of them vanishing
+        for a day.
+        """
+        out: list[Evaluation] = []
+        ready: list[tuple[Market, list[Comment]]] = []
+        for m in markets:
+            fresh = await self.client.market(m.id)
+            self.memory.mark_seen(fresh.id)
+            if fresh.is_resolved:
+                out.append(Evaluation(fresh, None, None, False, "resolved while queued"))
+                continue
+            ready.append((fresh, await self._safe_comments(fresh.id)))
 
         # Screening only makes sense on markets we went looking for. A filled order or
         # a position in freefall is already news, and gets the deep model regardless.
-        if screen and self.cfg.screen.enabled:
-            passed, detail, quick = await self._screen(market, comments)
-            # Both outcomes are logged with the screener's own number, so the pass rate
-            # and the threshold that produced it can be measured later rather than
-            # guessed at. Calibrating this on the deep model's gaps is a proxy at best.
-            self.memory.log_event(
-                "screened_in" if passed else "screened_out",
-                market=market.slug, question=market.question, url=market.url,
-                market_prob=market.probability, quick_prob=quick,
-                gap=None if quick is None else round(logodds_gap(quick, market.probability), 3),
-                threshold=self.cfg.screen.escalate_logodds, reason=detail,
-            )
-            self.memory.observe(
-                "screen",
-                f"{'Escalated' if passed else 'Passed on'} \"{market.question[:70]}\" "
-                f"at {market.probability:.0%}: {detail}",
-            )
-            if not passed:
-                return Evaluation(
-                    market, None, None, False, f"screened out: {detail}",
-                    screened_out=True,
+        if screen and self.cfg.screen.enabled and ready:
+            verdicts = await self._screen(ready)
+            survivors: list[tuple[float, Market, list[Comment]]] = []
+            for (market, comments), (passed, detail, quick, strength) in zip(ready, verdicts):
+                self.memory.log_event(
+                    "screened_in" if passed else "screened_out",
+                    market=market.slug, question=market.question, url=market.url,
+                    market_prob=market.probability, quick_prob=quick,
+                    gap=None if quick is None else round(logodds_gap(quick, market.probability), 3),
+                    threshold=self.cfg.screen.escalate_logodds, reason=detail,
                 )
+                self.memory.observe(
+                    "screen",
+                    f"{'Escalated' if passed else 'Passed on'} \"{market.question[:70]}\" "
+                    f"at {market.probability:.0%}: {detail}",
+                )
+                if passed:
+                    survivors.append((strength, market, comments))
+                else:
+                    out.append(Evaluation(market, None, None, False,
+                                          f"screened out: {detail}", screened_out=True))
+            survivors.sort(key=lambda s: -s[0])
+            ready = [(m, c) for _, m, c in survivors]
+
+        batch, overflow = ready[:analyse], ready[analyse:]
+        for market, _ in overflow:
+            self.memory.state["seen"].pop(market.id, None)
+        if not batch:
+            return out
+        if not self.budget.deep.take():
+            for market, _ in batch:
+                self.memory.state["seen"].pop(market.id, None)
+                out.append(Evaluation(market, None, None, False, "out of deep model budget"))
+            return out
 
         positions = await self.client.positions(self.user_id)
-        position = next((p for p in positions if p.contract_id == market.id), None)
+        held = {p.contract_id: p for p in positions}
+        items = []
+        for market, comments in batch:
+            items.append({
+                "market": market, "comments": comments,
+                "research": await self._research(market),
+                "market_note": self.memory.note_for(market.id),
+                "position": held.get(market.id), "trigger": trigger,
+            })
 
-        research = await self._research(market)
         prompt = build_decision_prompt(
-            market=market,
-            comments=comments,
-            research=research,
+            items=items,
             memory=self.memory.context_block(),
-            market_note=self.memory.note_for(market.id),
-            position=position,
-            today=_today(),
-            trigger=trigger,
             lessons=self.memory.lessons_block(),
+            today=_today(),
             show_price=not self.cfg.forecast.blind,
         )
-
-        if not self.budget.deep.take():
-            return Evaluation(market, None, None, False, "out of deep model budget")
-
         try:
             response = await self.deep.generate(
                 prompt,
                 system=system_with_orders(TRADER_SYSTEM, self.cfg.owner_block()),
-                json_schema=DECISION_SCHEMA,
+                json_schema=DECISION_BATCH_SCHEMA,
             )
-            decision = Decision.parse(extract_json(response.text))
+            data = extract_json(response.text)
         except Exception as exc:  # noqa: BLE001 - a bad response must not kill the tick
-            log.warning("Decision failed on %s: %s", market.slug, exc)
-            self.memory.log_event("decision_error", market=market.slug, error=str(exc))
-            return Evaluation(market, None, None, False, f"model error: {exc}")
+            log.warning("Decision batch failed: %s", exc)
+            for it in items:
+                self.memory.log_event("decision_error", market=it["market"].slug, error=str(exc))
+                out.append(Evaluation(it["market"], None, None, False, f"model error: {exc}"))
+            return out
 
+        by_index: dict[int, dict] = {}
+        for d in data.get("decisions") or []:
+            if isinstance(d, dict):
+                try:
+                    by_index[int(d.get("index"))] = d
+                except (TypeError, ValueError):
+                    continue
+        if not by_index and len(items) == 1 and "probability" in data:
+            by_index[1] = data  # a single answer that skipped the wrapper
+
+        for n, it in enumerate(items, start=1):
+            d = by_index.get(n)
+            if d is None:
+                self.memory.log_event("decision_error", market=it["market"].slug,
+                                      error="no decision returned for this market")
+                out.append(Evaluation(it["market"], None, None, False, "no decision returned"))
+                continue
+            out.append(await self._act(it, Decision.parse(d), len(positions)))
+        return out
+
+    async def _act(self, item: dict, decision: Decision, open_positions: int) -> Evaluation:
+        """Everything after the forecast: notes, then sell, size, or record a pass."""
+        market: Market = item["market"]
+        position: Position | None = item["position"]
+        research: str = item["research"]
         self.memory.set_note(
             market.id, decision.memory_note, question=market.question, url=market.url
         )
@@ -235,9 +293,9 @@ class Brain:
         )
 
         if decision.action == "sell":
-            return await self._sell(market, decision, position)
+            return await self._sell(market, decision, position, research)
 
-        sizing = await self._size(market, decision, position, len(positions))
+        sizing = await self._size(market, decision, position, open_positions)
         if not sizing.is_trade:
             self.memory.log_event(
                 "no_trade",
@@ -248,6 +306,7 @@ class Brain:
                 evidence_for=decision.evidence_for[:4],
                 evidence_against=decision.evidence_against[:4],
                 resolution_risk=decision.resolution_risk,
+                research=research[:2500],
             )
             self.memory.observe(
                 "analysis",
@@ -257,53 +316,69 @@ class Brain:
             )
             return Evaluation(market, decision, sizing, False, sizing.reason)
 
-        return await self._execute(market, decision, sizing)
+        return await self._execute(market, decision, sizing, research)
 
     # -- steps ------------------------------------------------------------
 
     async def _screen(
-        self, market: Market, comments: list[Comment]
-    ) -> tuple[bool, str, float | None]:
-        """Cheap first pass. True means the deep model should look at this properly.
+        self, items: list[tuple[Market, list[Comment]]]
+    ) -> list[tuple[bool, str, float | None, float]]:
+        """Cheap first pass over the whole batch in one call.
 
-        The screener forecasts blind like the trader does, so its number can be compared
-        to the price the same way. Two independent reasons to escalate: it disagrees
-        with the market, or it says the question has something in it worth reading
-        carefully. Either is enough, because the cost of a wasted deep call is one call
-        and the cost of skipping a mispriced market is the entire point of the project.
+        Returns (passed, detail, quick estimate, strength) per market, in order. The
+        screener forecasts blind like the trader does, so its number can be compared
+        to the price the same way. Strength ranks survivors when there are more than
+        the deep call can take: a bigger lean toward the favourite goes first.
         """
         if not self.budget.fast.take():
             # The deep model is the scarce one. If the cheap pass cannot run, skipping
-            # the market is right: escalating unscreened is how the quota disappears.
-            return False, "screen skipped, no fast budget", None
-
+            # the batch is right: escalating unscreened is how the quota disappears.
+            return [(False, "screen skipped, no fast budget", None, 0.0)] * len(items)
         try:
             response = await self.fast.generate(
-                build_screen_prompt(market=market, comments=comments, today=_today()),
+                build_screen_prompt(items=items, today=_today()),
                 system=SCREEN_SYSTEM,
                 json_schema=SCREEN_SCHEMA,
                 attempts=2,
             )
             data = extract_json(response.text)
         except Exception as exc:  # noqa: BLE001
-            log.info("Screen failed on %s (%s), skipping it", market.slug, exc)
-            return False, "screen failed", None
+            log.info("Screen failed (%s), skipping the batch", exc)
+            return [(False, "screen failed", None, 0.0)] * len(items)
 
-        rough = min(0.99, max(0.01, float(data.get("probability", 0.5))))
-        q = market.probability
-        gap = logodds_gap(rough, q)
-        why = str(data.get("why", ""))[:200]
-        interesting = bool(data.get("worth_a_look"))
-        # The screener hedges toward 50% on nearly every strong favourite, so without
-        # this almost everything it escalated was "the favourite might fail", which
-        # the deep model then bought as a longshot and mostly lost.
-        direction_ok = backs_favourite(rough, q) or not self.cfg.risk.favourites_only
+        answers: dict[int, dict] = {}
+        for a in data.get("markets") or []:
+            if isinstance(a, dict):
+                try:
+                    answers[int(a.get("index"))] = a
+                except (TypeError, ValueError):
+                    continue
 
-        if gap >= self.cfg.screen.escalate_logodds and direction_ok:
-            return True, f"quick estimate {rough:.0%} backs the favourite at {q:.0%}", rough
-        if interesting:
-            return True, f"flagged: {why}", rough
-        return False, f"quick estimate {rough:.0%} agrees with market. {why}", rough
+        out = []
+        for n, (market, _) in enumerate(items, start=1):
+            a = answers.get(n)
+            if a is None:
+                out.append((False, "screener gave no answer", None, 0.0))
+                continue
+            try:
+                rough = min(0.99, max(0.01, float(a.get("probability", 0.5))))
+            except (TypeError, ValueError):
+                out.append((False, "screener answer unreadable", None, 0.0))
+                continue
+            q = market.probability
+            gap = logodds_gap(rough, q)
+            why = str(a.get("why", ""))[:200]
+            # The screener hedges toward 50% on nearly every strong favourite, so without
+            # this almost everything it escalated was "the favourite might fail", which
+            # the deep model then bought as a longshot and mostly lost.
+            direction_ok = backs_favourite(rough, q) or not self.cfg.risk.favourites_only
+            if gap >= self.cfg.screen.escalate_logodds and direction_ok:
+                out.append((True, f"quick estimate {rough:.0%} backs the favourite at {q:.0%}. {why}", rough, gap))
+            elif a.get("worth_a_look"):
+                out.append((True, f"flagged: {why}", rough, 0.0))
+            else:
+                out.append((False, f"quick estimate {rough:.0%}, market {q:.0%}. {why}", rough, 0.0))
+        return out
 
     async def _research(self, market: Market) -> str:
         """Grounded generation where the provider supports it, keyless search otherwise.
@@ -425,7 +500,7 @@ class Brain:
         return sizing
 
     async def _execute(
-        self, market: Market, decision: Decision, sizing: Sizing
+        self, market: Market, decision: Decision, sizing: Sizing, research: str = ""
     ) -> Evaluation:
         kind = "market" if sizing.limit_prob is None else f"limit @ {sizing.limit_prob:.2f}"
         log.info(
@@ -471,6 +546,7 @@ class Brain:
             market_prob=market.probability, model_prob=decision.probability,
             confidence=decision.confidence, conviction=sizing.conviction,
             reason=sizing.reason, bet_id=bet_id, dry_run=self.cfg.manifold.dry_run,
+            research=research[:2500],
             thinking=decision.comment, uncertainty=decision.key_uncertainty,
             evidence_for=decision.evidence_for[:4],
             evidence_against=decision.evidence_against[:4],
@@ -488,7 +564,8 @@ class Brain:
         return Evaluation(market, decision, sizing, True, "placed")
 
     async def _sell(
-        self, market: Market, decision: Decision, position: Position | None
+        self, market: Market, decision: Decision, position: Position | None,
+        research: str = "",
     ) -> Evaluation:
         if position is None:
             return Evaluation(market, decision, None, False, "sell with no position")
@@ -507,6 +584,7 @@ class Brain:
             side=position.side, profit=position.profit,
             model_prob=decision.probability, market_prob=market.probability,
             thinking=decision.comment, dry_run=self.cfg.manifold.dry_run,
+            research=research[:2500],
         )
         self.memory.observe(
             "trade",

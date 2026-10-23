@@ -122,8 +122,8 @@ escalate_logodds = 0.2
 # model actually answers 429. 3.8, 3.7 and 3.6 make about 60 (3.5 Flash is shared with
 # the fast tier's fallback, so it is not counted), and 54 leaves headroom for retries.
 # Every sell, add and transfer on the own turn now goes through this tier too.
-max_evaluations_per_tick = 2
-max_fast_calls_per_tick = 4
+max_evaluations_per_tick = 3     # markets per deep call, all in one request
+max_fast_calls_per_tick = 10     # one screen plus research for three markets
 max_chat_calls_per_tick = 4
 max_deep_calls_per_tick = 1
 max_fast_calls_per_day = 220
@@ -135,11 +135,12 @@ max_deep_calls_per_day = 54
 pace_burst = 3
 
 [scan]
-# 36 scans a day at 4 markets each is 144 screens, which at a 25% pass rate is about 36
-# candidates for a deep model that can afford 18. Pacing absorbs the difference, and
-# screening more than the deep model can take is the cheapest way to see more markets.
-min_minutes_between_scans = 40
-candidates_per_scan = 4
+# Each scan screens every candidate in one fast-model call and sends up to
+# [budget] max_evaluations_per_tick survivors to the deep model in one call. 24 scans a
+# day at 10 markets is 240 markets looked at, for about 24 screen calls, 24 deep calls,
+# and two research calls per analysed market on the fast tier.
+min_minutes_between_scans = 60
+candidates_per_scan = 10
 # Loosened: the old bar (25 traders, M$3k, a month) left the screener with a thin pool
 # of the same large markets, and a mispricing is likelier on a question fewer people
 # have bothered to price than on one everybody is already staring at.
@@ -150,26 +151,24 @@ min_hours_to_resolve = 6
 skip_if_seen_within_hours = 24
 
 [agency]
-# The agent's own turn. Everything else it does is a reaction to something; this is the
-# one place it acts unprompted. The cheap model proposes, and anything that moves mana,
-# selling included, is reviewed by the deep model, which can veto it or cut the amount.
-# Notes and to-dos are the cheap model's alone. The balance reserve and daily mana
-# budget in [risk] bound every amount, applied in code after both models have spoken.
+# The desk: the agent's own turn, run by the deep model. It sees every position, its
+# cash, a watchlist of markets it forecast with an edge but could not afford, who it
+# owes, and its track record, and decides directly: buy from the watchlist, add, sell,
+# pay people, keep notes. Code applies the [risk] limits afterwards. This replaced a
+# cheap-model own turn plus a cheap-model book review whose trades a deep model then
+# vetoed or approved; that setup wrote the same "liquidity frozen" note every hour.
 #
-# Positions are held to resolution by default. A sell has to name new information that
-# makes the bet likely to lose, or a repayment that needs the mana. The price-move
-# re-evaluation in [watch] is the other way out, and that one runs on the deep model
-# with fresh research.
+# Positions are held to resolution by default; the desk sells when something has
+# actually changed. The price-move re-evaluation in [watch] is the other way out.
+#
+# It does not need to make many money decisions. Most turns are skipped because nothing
+# changed, so in practice this is a few deep-model calls a day at most.
 enabled = true
-min_minutes_between_actions = 60
-max_actions_per_turn = 3
+min_minutes_between_actions = 240   # earliest it may run again after a turn
+idle_hours = 12                     # skips turns when nothing changed, but not longer than this
+max_actions_per_turn = 5
 allow_send_mana = true
-# Separately, a sweep over the whole book: every open position looked at together, with
-# the option to trim or add. Narrower than the free turn, since it can only touch markets
-# already held, and every trade it proposes still goes through the deep reviewer.
-review_positions = true
-min_minutes_between_book_reviews = 60
-require_review = true         # false lets the cheap model move mana unsupervised
+watchlist_days = 4                  # how long an unaffordable forecast stays buyable
 
 [forecast]
 # Hide the market price while the model is forecasting. Shown the price, it hands the

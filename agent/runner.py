@@ -18,7 +18,7 @@ import time
 from dataclasses import dataclass, field
 from typing import Any
 
-from .agency import Agency
+from .agency import Desk
 from .brain import Brain, Budgets, CallBudget
 from .config import Config
 from .inbox import Inbox
@@ -76,6 +76,8 @@ def _trades(events: list[dict[str, Any]], limit: int = 40) -> list[dict[str, Any
                 "limit": e.get("limit_prob"), "market_prob": e.get("market_prob"),
                 "model_prob": e.get("model_prob"), "confidence": e.get("confidence"),
                 "why": e.get("thinking") or "",
+                "research": (e.get("research") or "")[:2500],
+                "source": e.get("source") or "scan",
                 "evidence_for": (e.get("evidence_for") or [])[:4],
                 "evidence_against": (e.get("evidence_against") or [])[:4],
                 "uncertainty": e.get("uncertainty") or "",
@@ -84,7 +86,7 @@ def _trades(events: list[dict[str, Any]], limit: int = 40) -> list[dict[str, Any
             row = {
                 "kind": "sell", "side": e.get("side"), "profit": e.get("profit"),
                 "market_prob": e.get("market_prob"), "model_prob": e.get("model_prob"),
-                "why": e.get("thinking") or "",
+                "why": e.get("thinking") or "", "research": (e.get("research") or "")[:2500],
             }
         elif kind == "own_action" and e.get("approved") and e.get("action") in (
             "sell", "add", "send_mana"
@@ -220,22 +222,15 @@ class Runner:
         self.report.replies = await self._answer_messages(len(positions))
 
         if not replies_only:
-            # Before the scan, not after. Its reviewer needs a deep call, and the scan
-            # would otherwise spend the tick's only one on a market first: that is why
-            # every mana transfer the agent ever proposed came back "review unavailable".
-            # It only fires about once an hour, so the scan rarely loses anything.
-            agency = Agency(
-                self.cfg, client=self.client, chat=self.chat, deep=self.deep,
-                memory=self.memory, budget=self.budget, user_id=self.user_id,
+            # The desk runs before the scan: it needs a deep call, and it only takes one
+            # when something has changed, so the scan rarely loses a turn to it.
+            desk = Desk(
+                self.cfg, client=self.client, deep=self.deep, memory=self.memory,
+                budget=self.budget, risk=self.risk, user_id=self.user_id,
             )
-            book = await agency.review_book(
-                positions, self.report.balance, self.report.net_worth
-            )
-            if book:
-                self.report.notes.append(f"book: {book}")
-            own = await agency.run(positions, self.report.balance, self.report.net_worth)
-            if own:
-                self.report.notes.append(f"own turn: {own}")
+            did = await desk.run(positions, self.report.balance, self.report.net_worth)
+            if did:
+                self.report.notes.append(f"desk: {did}")
 
             await self._scan()
 
@@ -357,6 +352,20 @@ class Runner:
                 key=lambda row: -abs(row["invested"]),
             )[:20],
             "trades": _trades(self.memory.recent_events(4000)),
+            "desk": [
+                {"ts": e.get("ts"), "thinking": e.get("thinking", ""),
+                 "actions": e.get("actions") or [], "error": e.get("error", "")}
+                for e in self.memory.recent_events(1500)
+                if e.get("kind") == "desk"
+            ][-20:][::-1],
+            "screens": [
+                {"ts": e.get("ts"), "question": e.get("question"), "url": e.get("url"),
+                 "passed": e.get("kind") == "screened_in",
+                 "market_prob": e.get("market_prob"), "quick_prob": e.get("quick_prob"),
+                 "why": e.get("reason", "")}
+                for e in self.memory.recent_events(1500)
+                if e.get("kind") in ("screened_in", "screened_out")
+            ][-40:][::-1],
             "decisions": [
                 {
                     "ts": e.get("ts"),
@@ -487,14 +496,18 @@ class Runner:
             log.error("Evaluation failed on %s: %s", market.slug, exc)
             self.report.notes.append(f"error on {market.slug}: {exc}")
             return
+        self._tally(result)
         if result.screened_out:
             self._evaluations -= 1
-            self.report.screened.append(market.slug)
+
+    def _tally(self, result: Any) -> None:
+        if result.screened_out:
+            self.report.screened.append(result.market.slug)
         else:
-            self.report.evaluated.append(market.slug)
+            self.report.evaluated.append(result.market.slug)
         if result.executed:
             self.report.bets += 1
-        self.report.notes.append(f"{market.slug}: {result.detail}")
+        self.report.notes.append(f"{result.market.slug}: {result.detail}")
 
     async def _check_fills(self) -> None:
         """A resting order that vanished either filled or expired. Both are news."""
@@ -814,15 +827,23 @@ class Runner:
             self.report.notes.append("scan found nothing that passed the filters")
             return
 
-        for market in candidates:
-            if not self._can_evaluate or self.budget.fast.spent:
-                break
-            await self._evaluate(
-                market,
-                "Routine scan. This market passed the size and timing filters and has "
-                "not been looked at recently.",
+        # The whole scan goes through one screening call, and the survivors through
+        # one deep call, rather than a request per market at each stage.
+        assert self.brain is not None
+        try:
+            results = await self.brain.evaluate_batch(
+                candidates,
+                trigger="Routine scan. This market passed the size and timing filters "
+                        "and has not been looked at recently.",
                 screen=True,
+                analyse=self.cfg.budget.max_evaluations_per_tick,
             )
+        except ManifoldError as exc:
+            log.error("Scan batch failed: %s", exc)
+            self.report.notes.append(f"scan error: {exc}")
+            return
+        for result in results:
+            self._tally(result)
 
 
 def utc_stamp() -> str:

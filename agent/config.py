@@ -153,28 +153,22 @@ class ScreenConfig:
 
 @dataclass
 class AgencyConfig:
-    """The agent's own turn: one unprompted action, occasionally.
+    """The desk: the agent's own turn, decided by the deep model.
 
-    The models propose and review; these numbers are the part neither can argue with,
-    applied in code after both have spoken.
+    These are the parts the model cannot argue with. The money limits themselves live
+    in [risk] and are applied in code after it speaks.
     """
 
     enabled: bool = True
-    min_minutes_between_actions: float = 60
-    max_actions_per_turn: int = 3
+    # Earliest the desk may run again after a turn.
+    min_minutes_between_actions: float = 240
+    # It skips a turn when nothing has changed and it has no cash to use, but never
+    # goes longer than this without looking.
+    idle_hours: float = 12
+    max_actions_per_turn: int = 5
     allow_send_mana: bool = True
-    # A sweep over every open position, separate from the free turn and narrower: it may
-    # only sell or add on markets already held, and each trade still goes to the reviewer.
-    review_positions: bool = True
-    # A position the scan opened on a researched forecast cannot be sold by the own
-    # turn or book review, which run without research, until it has been held this
-    # long. Re-evaluation after a big price move still can, through the normal path.
-    min_hold_hours: float = 24
-    min_minutes_between_book_reviews: float = 60
-    # Sell and note actions skip the deep reviewer; only outgoing mana needs it.
-    # The deep model reviews anything touching mana and can veto it or cut the amount.
-    # Turning this off means the cheap model moves money unsupervised.
-    require_review: bool = True
+    # How long a forecast it could not afford stays on its watchlist.
+    watchlist_days: float = 4
 
 
 @dataclass

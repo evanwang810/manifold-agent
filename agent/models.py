@@ -137,6 +137,13 @@ class Comment:
     text: str
     created_time: int
     reply_to_id: str | None
+    # Where the author stood. Manifold spells these "commentor".
+    position_outcome: str = ""
+    position_shares: float = 0.0
+    bet_outcome: str = ""
+    bet_amount: float = 0.0
+    likes: int = 0
+    is_api: bool = False  # posted through the API, which on Manifold means a bot
 
     @classmethod
     def parse(cls, data: dict[str, Any]) -> Comment:
@@ -149,6 +156,12 @@ class Comment:
             text=tiptap_text(data.get("content")).strip(),
             created_time=int(data.get("createdTime") or 0),
             reply_to_id=data.get("replyToCommentId"),
+            position_outcome=str(data.get("commentorPositionOutcome") or ""),
+            position_shares=float(data.get("commentorPositionShares") or 0.0),
+            bet_outcome=str(data.get("betOutcome") or ""),
+            bet_amount=float(data.get("betAmount") or 0.0),
+            likes=int(data.get("likes") or 0),
+            is_api=bool(data.get("isApi")),
         )
 
 

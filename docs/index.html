@@ -96,6 +96,19 @@
   .list{margin:0; padding-left:18px} .list li{margin-bottom:5px}
   .tag{font:11px var(--mono); color:var(--faint)}
   .empty{color:var(--faint); font:13px var(--mono); padding:14px 0}
+  .turn{border-bottom:1px solid var(--line)}
+  .turn summary{list-style:none; cursor:pointer; padding:10px 0; display:grid;
+                grid-template-columns:96px 1fr auto; gap:0 12px; align-items:baseline}
+  .turn summary::-webkit-details-marker{display:none}
+  .turn summary:hover .gist{text-decoration:underline; text-decoration-color:var(--faint)}
+  .gist{color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+  .turn .body{padding:0 0 16px 108px}
+  .acts{list-style:none; margin:8px 0 0; padding:0; font-size:14px}
+  .acts li{padding:6px 0; border-top:1px dashed var(--line)}
+  .acts .res{font:12.5px var(--mono); color:var(--faint)}
+  .found{white-space:pre-wrap; font-size:13.5px; color:var(--muted); background:var(--soft);
+         border:1px solid var(--line); border-radius:6px; padding:10px 12px; margin:0 0 10px; max-width:none}
+  @media (max-width:640px){ .turn summary{grid-template-columns:80px 1fr auto} .turn .body{padding-left:0} }
 
   form{display:grid; gap:8px; max-width:560px}
   input, textarea{font:inherit; color:inherit; background:var(--soft); border:1px solid var(--line);
@@ -129,14 +142,16 @@
   <h2>Trades <span class="n" id="n-trades"></span></h2>
   <div id="trades"><p class="empty">Loading…</p></div>
 
+  <h2>What it's thinking</h2>
+  <p class="status" id="status">Nothing yet.</p>
+  <div id="desk"></div>
+
   <h2>Holding <span class="n" id="n-pos"></span></h2>
   <div class="scroll" id="positions"><p class="empty">Loading…</p></div>
 
   <h2>Track record</h2>
   <div id="record"><p class="empty">Nothing resolved yet.</p></div>
 
-  <h2>What it's thinking</h2>
-  <p class="status" id="status">Nothing yet.</p>
 
   <details class="more">
     <summary>Recent activity</summary>
@@ -144,7 +159,13 @@
   </details>
 
   <details class="more">
-    <summary>Markets it looked at and passed on</summary>
+    <summary>Screener: what the quick pass let through</summary>
+    <p class="muted">Every scan, the fast model forecasts a batch of markets blind. Only ones where it backs the favourite by enough go on to the deep model.</p>
+    <div class="scroll" id="screens"></div>
+  </details>
+
+  <details class="more">
+    <summary>Markets it analysed and passed on</summary>
     <div id="passed"></div>
   </details>
 
@@ -261,6 +282,7 @@ function tradeRow(t) {
     t.why ? `<p>${esc(t.why)}</p>` : '<p class="muted">No reasoning recorded.</p>',
     ev,
     t.uncertainty ? `<p class="muted"><b>Biggest unknown:</b> ${esc(t.uncertainty)}</p>` : '',
+    t.research ? `<p class="muted"><b>What its research found</b>${t.source === 'desk' ? ' (when it first analysed this)' : ''}</p><p class="found">${esc(t.research)}</p>` : '',
     t.url ? `<p><a href="${esc(t.url)}" target="_blank" rel="noopener">Open the market ↗</a></p>` : '',
   ].join('');
   return `<details class="trade"><summary>
@@ -308,8 +330,44 @@ function renderRecord(d) {
     </div>${recent.trim() ? `<div class="lines">Recently resolved\n${esc(recent.trim())}</div>` : ''}`;
 }
 
+function renderDesk(turns) {
+  if (!turns || !turns.length) return;
+  const label = { buy: 'Buy', add: 'Add', sell: 'Sell', send_mana: 'Send', note_add: 'Note',
+                  note_remove: 'Drop note', todo_add: 'To-do', todo_done: 'Done' };
+  $('desk').innerHTML = turns.map(turn => {
+    const acts = turn.actions || [];
+    const done = acts.filter(a => a.ok).length;
+    const tally = acts.length ? `${done}/${acts.length} done` : 'no action';
+    const list = acts.length ? `<ul class="acts">${acts.map(a => `<li>
+        <b class="${a.ok ? '' : 'muted'}">${label[a.action] || esc(a.action)}</b>
+        ${a.amount ? `<span class="mono">M$${Math.round(a.amount)}</span>` : ''}
+        ${a.recipient ? `to @${esc(a.recipient)}` : ''} ${esc(a.text || '')}
+        <div class="muted">${esc(a.reasoning || '')}</div>
+        <div class="res">${a.ok ? '✓' : '✗'} ${esc(a.result || '')}</div></li>`).join('')}</ul>` : '';
+    return `<details class="turn"><summary>
+        <span class="when">${day(turn.ts)} ${new Date(turn.ts).toTimeString().slice(0, 5)}</span>
+        <span class="gist">${esc(turn.thinking || turn.error || '')}</span>
+        <span class="tag">${tally}</span></summary>
+      <div class="body"><p>${esc(turn.thinking || '')}</p>${turn.error ? `<p class="no">${esc(turn.error)}</p>` : ''}${list}</div></details>`;
+  }).join('');
+}
+
+function renderScreens(rows) {
+  if (!rows || !rows.length) return empty($('screens'), 'Nothing screened recently.');
+  $('screens').innerHTML = `<table><thead><tr><th></th><th>Market</th><th class="n">Price</th>
+      <th class="n">Quick read</th></tr></thead><tbody>${rows.map(s => `<tr>
+      <td class="mono ${s.passed ? 'yes' : 'muted'}">${s.passed ? 'in' : 'out'}</td>
+      <td>${s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.question)}</a>` : esc(s.question)}
+        <div class="tag">${esc(s.why || '')}</div></td>
+      <td class="n">${typeof s.market_prob === 'number' ? pct(s.market_prob) : '—'}</td>
+      <td class="n">${typeof s.quick_prob === 'number' ? pct(s.quick_prob) : '—'}</td>
+    </tr>`).join('')}</tbody></table>`;
+}
+
 function renderThinking(d) {
   if (d.status) $('status').textContent = d.status;
+  renderDesk(d.desk);
+  renderScreens(d.screens);
   const feed = (d.journal || []).filter(e => e.kind !== 'screen').slice().reverse();
   $('feed').innerHTML = feed.length
     ? feed.map(e => `<div><span class="when">${day(e.ts)} ${new Date(e.ts).toTimeString().slice(0, 5)}</span><span>${esc(e.text)}</span></div>`).join('')
