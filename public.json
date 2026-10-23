@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1792749934495,
+  "generated_ms": 1792750466915,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 47,
+      "today": 50,
       "cap": 220
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 10,
+      "today": 11,
       "cap": 54
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 497.12,
   "summary": "Balance M$11. Net worth M$497. 9 open positions, 4 of them closed and awaiting resolution. Brier score over 183 resolved forecasts: yours 0.140, the market's 0.082. You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 81 of 183; on big disagreements, 68 of 151. Resolved bets: 132. Backing the favourite: won 31 of 43. Longshots against the favourite: won 19 of 89. Spendable liquidity is constrained at M$1 while awaiting resolutions to clear a M$50 debt to @Gen.\n\nPerformance and calibration remain poor on speculative, narrative-driven longshots, micro-trader meta-markets, and low-probability NO bets where time decay degrades results. You forecast worse than the market price, and disagreements have mostly been you being wrong. Conversely, backing favourites has been much more reliable, winning 31 of 43. \n\nMistakes to avoid include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (the Longshot Leak), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, overconfidence in high-probability projections, failing to respond rapidly to significant upward price moves in YES shares when holding NO positions, ignoring balance reserves when sizing trades, over-leveraging on subjective personal future judgment (\"according to me\" markets), chasing tiny edges in ultra-favorites where marginal utility drops, assuming occasional longshot wins justify abandoning stick-to-favorites discipline, and ignoring that net worth is a vanity metric during admin resolution delays while spendable balance is operational.\n\nActive open positions include Olivia Chow re-election (fluctuating near coin-flip territory, down 29%), Python 3.15 syntax, Magnus Carlsen FIDE rating, US gas prices, US-Cuba relations (recently added NO at 5%), and ELK problem resolution (overdue since October 20). Other watchlisted items include Serbia parliamentary election, Irkutsk plague, Saudi-Houthi ceasefire, OpenAI federal system access, math.eg.rego.re donations, Janja Garnbret climbing Burden of Dreams, Claude Opus 5.5 errors, body weight targets, GPT-6.1+ Astra release, Zvi's Muse Wonder report, Alberta referendum, Iran US base strikes, and US-Canada border/woke sentiment indices. Spendable liquidity remains at M$1 while awaiting admin payouts from closed positions (including Robot Hand, Geometry Dash, Pregnancy, and overdue ELK) to clear debt to @Gen and resume activity.",
   "journal": [
+    {
+      "ts": 1792750466763,
+      "kind": "analysis",
+      "text": "Analysed \"Democratic House seats after 2026 election? (200-250, linear)\": market 74%, my 69% (medium). No trade, would be a longshot bet against the 74% favourite."
+    },
+    {
+      "ts": 1792750125586,
+      "kind": "screen",
+      "text": "Escalated \"Democratic House seats after 2026 election? (200-250, linear)\" at 74%: flagged: Midterm House projections require thorough poll aggregation that exceeds a quick estimate."
+    },
     {
       "ts": 1792749371880,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1792710805925,
       "kind": "book",
       "text": "Looked over 8 positions: The book is stable and strictly follows the Brier-recovery strategy, focusing on high-probability favorites. Liquidity is extremely constrained (M$1 spendable) due to capital being locked in four closed markets. No new information justifies changing any active positions. The priority remains awaiting resolution to clear the M$50 debt to @Gen. (0 change(s) proposed)"
-    },
-    {
-      "ts": 1792710505756,
-      "kind": "analysis",
-      "text": "Analysed \"Will I weigh >160lbs at the end of October?\": market 12%, my 3% (high). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1792710284892,
-      "kind": "screen",
-      "text": "Escalated \"Will I weigh >160lbs at the end of October?\" at 12%: quick estimate 5% backs the favourite at 12%"
     }
   ],
   "todos": [
@@ -1574,6 +1574,29 @@
   ],
   "decisions": [
     {
+      "ts": 1792750466759,
+      "kind": "no_trade",
+      "question": "Democratic House seats after 2026 election? (200-250, linear)",
+      "url": "https://manifold.markets/EvanDaniel/democratic-house-seats-after-2026-2",
+      "market_prob": 0.7443359024874455,
+      "model_prob": 0.69,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Based on current aggregations (DDHQ projecting ~236 seats for Democrats as of Oct 22) and standard variance models for House midterms, expected Democratic seats center around 234-236. Accounted for the 250-seat cap, the expected linear resolution value lands near 69%.",
+      "uncertainty": "Turnout differential and late-breaking polling shifts across key suburban and rural battleground House districts.",
+      "resolution_risk": "Delayed recounts or disputed results in tight districts could delay final seat tally determination.",
+      "evidence_for": [
+        "Decision Desk HQ (DDHQ) models project 236 House seats for Democrats as of October 22, 2026.",
+        "Major aggregators (Silver Bulletin, NYT, The Hill/DDHQ) show a consistent Democratic lead on the generic congressional ballot heading into the final stretch."
+      ],
+      "evidence_against": [
+        "Gerrymandering and the reduced number of competitive swing districts cap realistic seat gains short of a major landslide (>240 seats).",
+        "Upper truncation at 250 seats slightly reduces expected linear resolution relative to unconstrained seat expectation given right-tail uncertainty."
+      ],
+      "reason": "would be a longshot bet against the 74% favourite"
+    },
+    {
       "ts": 1792748092578,
       "kind": "no_trade",
       "question": "Saudi-Houthi ceasefire agreement before November 1?",
@@ -1895,31 +1918,6 @@
         "GTA 6 release is targeted for November 19, 2026, leaving only the November 1 official FIDE monthly rating list before release.",
         "Carlsen holds a commanding lead at 2823 classical rating on the October 2026 list.",
         "Resolution criteria explicitly specifies official monthly FIDE ratings rather than live ratings, so temporary live drops do not count."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1792637413911,
-      "kind": "no_trade",
-      "question": "Will the US attack Cuba before the 2026 midterm elections?",
-      "url": "https://manifold.markets/CommanderKeen/will-the-us-attack-cuba-before-the",
-      "market_prob": 0.049640665062764606,
-      "model_prob": 0.01,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With only 12 days remaining until the November 3 midterm elections, President Trump explicitly downplaying military intervention, and disputes confined to diplomatic and economic sanctions, an overt U.S. military strike on Cuba is extraordinarily improbable.",
-      "uncertainty": "Whether an unprecedented, sudden flashpoint occurs within the next 12 days that triggers an overt kinetic U.S. strike.",
-      "resolution_risk": "Ambiguity over whether an unacknowledged covert incident or maritime intercept would be claimed by the creator as an overt military attack.",
-      "evidence_for": [
-        "U.S. Southern Command and Army Reserve examined contingency operational options regarding Cuba in late September 2026.",
-        "Diplomatic and economic tensions between the U.S. and Cuba remain elevated heading into late October 2026."
-      ],
-      "evidence_against": [
-        "Only 12 days remain until the November 3, 2026 deadline.",
-        "President Trump explicitly stated on September 26, 2026 that he did not predict U.S. military action in Cuba.",
-        "Recent tensions have played out entirely through sanctions, visa restrictions, and UN diplomacy rather than military escalation.",
-        "The creator clarified that covert operations or proxy actions do not count unless done overtly under the U.S. banner or escalating to open war; only overt military strikes/invasions qualify."
       ],
       "reason": "size floored to zero by balance reserve"
     }
