@@ -137,7 +137,7 @@ class Desk:
             self.memory.observe("desk", f"Desk: {thinking}")
 
         results = []
-        held = {p.contract_id: p for p in positions}
+        held = {p.key: p for p in positions}
         for action in actions[: cfg.max_actions_per_turn]:
             ok, detail = await self._do(action, held, watchlist, balance, net_worth, positions)
             # Cash moves within the turn, so a second buy sees what the first spent.
@@ -193,7 +193,9 @@ class Desk:
                     return False, "not a market it holds"
                 if not p.tradable:
                     return False, "market is closed, it can only be waited out"
-                await self.client.sell_shares(market_id=p.contract_id, outcome=p.side)
+                await self.client.sell_shares(
+                    market_id=p.contract_id, outcome=p.side, answer_id=p.answer_id
+                )
                 self._record("sell", action, p.question, p.url, p.side, profit=p.profit)
                 return True, f"sold {p.side} on \"{p.question[:60]}\" (P/L M${p.profit:+.0f})"
 
@@ -209,7 +211,10 @@ class Desk:
                 amount = float(int(min(action.amount or risk.min_bet, cap)))
                 if amount < 1:
                     return False, "no spendable cash"
-                await self.client.place_bet(contract_id=p.contract_id, amount=amount, outcome=p.side)
+                await self.client.place_bet(
+                    contract_id=p.contract_id, amount=amount, outcome=p.side,
+                    answer_id=p.answer_id,
+                )
                 if not dry:
                     self.memory.record_spend(amount)
                 action.amount = amount
@@ -279,7 +284,13 @@ class Desk:
         w = watchlist.get(action.market)
         if w is None:
             return False, "only markets on the watchlist can be bought from the desk"
-        market = Market.parse(await self.client.market_by_slug(w["slug"]))
+        slug, _, answer_id = w["slug"].partition("::")
+        market = Market.parse(await self.client.market_by_slug(slug))
+        if answer_id:
+            try:
+                market = market.for_answer(answer_id)
+            except ValueError:
+                return False, "that answer no longer exists"
         if market.is_resolved or market.days_to_close <= 0:
             return False, "market has closed"
         decision = Decision(
@@ -302,11 +313,12 @@ class Desk:
         result = await self.client.place_bet(
             contract_id=market.id, amount=amount, outcome=sizing.outcome,
             limit_prob=sizing.limit_prob, expires_at=sizing.expires_ms,
+            answer_id=market.answer_id,
         )
         if not self.cfg.manifold.dry_run:
             self.memory.record_spend(amount)
         self.memory.log_event(
-            "bet", source="desk", market=market.slug, question=market.question,
+            "bet", source="desk", market=market.key, question=market.question,
             url=market.url, outcome=sizing.outcome, amount=amount,
             limit_prob=sizing.limit_prob, market_prob=market.probability,
             model_prob=w["model_prob"], confidence=w.get("confidence"),
@@ -362,7 +374,9 @@ class Desk:
         agent had nothing to do but wait, and when cash came back it bought whatever
         the next scan happened to turn up. Kept for a few days, best edge first.
         """
-        held_slugs = {p.slug for p in positions}
+        # Event keys: slug, plus the answer for a multiple-choice holding.
+        held_slugs = {p.slug + (f"::{p.answer_id}" if p.answer_id else "") for p in positions}
+        held_markets = {p.slug for p in positions if p.answer_id}
         horizon = time.time() * 1000 - self.cfg.agency.watchlist_days * 86_400_000
         latest: dict[str, dict[str, Any]] = {}
         for e in self.memory.recent_events(3000):
@@ -372,6 +386,8 @@ class Desk:
         for slug, e in latest.items():
             if e["kind"] != "no_trade" or int(e.get("ts", 0)) < horizon or slug in held_slugs:
                 continue
+            if "::" in slug and slug.partition("::")[0] in held_markets:
+                continue  # one answer per multiple-choice market
             if not any(r in str(e.get("reason") or "") for r in UNFUNDED):
                 continue
             p, q = e.get("model_prob"), e.get("market_prob")
@@ -460,7 +476,7 @@ def render_positions(positions: list[Position]) -> str:
         side_price = p.last_prob if p.side == "YES" else 1.0 - p.last_prob
         kind = "the favourite" if side_price >= 0.5 else "a longshot"
         out.append(
-            f"- {p.contract_id} | \"{p.question[:80]}\" | {p.shares:.0f} {p.side} shares, "
+            f"- {p.key} | \"{p.question[:100]}\" | {p.shares:.0f} {p.side} shares, "
             f"{p.side} trading at {side_price:.0%} ({kind}) | invested M${p.invested:.0f}, "
             f"worth M${p.value:.0f}, P/L M${p.profit:+.0f} ({pct:+.0f}%) | {state}"
         )

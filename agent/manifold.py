@@ -192,6 +192,12 @@ class ManifoldClient:
             # fact already been paid and had already spent.
             if market is not None and market.is_resolved:
                 continue
+            if market is not None and market.mechanism == "cpmm-multi-1":
+                # This endpoint only gives a multiple-choice market as one summary row,
+                # which says nothing about which answer is held. The per-market
+                # positions endpoint breaks it down by answer.
+                out += await self._answer_positions(market, user_id)
+                continue
             out.append(
                 Position(
                     contract_id=contract_id,
@@ -209,6 +215,40 @@ class ManifoldClient:
                     is_closed=bool(market and (market.is_resolved or market.days_to_close <= 0)),
                 )
             )
+        return out
+
+    async def _answer_positions(self, market: Market, user_id: str) -> list[Position]:
+        try:
+            rows = await self._request(
+                "GET", f"/market/{market.id}/positions", params={"userId": user_id}
+            )
+        except ManifoldError as exc:
+            log.warning("Could not read answer positions on %s: %s", market.slug, exc)
+            return []
+        out = []
+        for row in rows or []:
+            answer_id = row.get("answerId")
+            total = row.get("totalShares") or {}
+            has_yes = float(total.get("YES") or 0.0)
+            has_no = float(total.get("NO") or 0.0)
+            if not answer_id or (has_yes < 1e-6 and has_no < 1e-6):
+                continue
+            try:
+                view = market.for_answer(answer_id)
+            except ValueError:
+                continue
+            if view.is_resolved:
+                continue
+            out.append(Position(
+                contract_id=market.id, question=view.question, slug=market.slug,
+                has_yes=has_yes, has_no=has_no,
+                invested=float(row.get("invested") or 0.0),
+                payout=float(row.get("payout") or 0.0),
+                profit=float(row.get("profit") or 0.0),
+                last_prob=view.probability, days_to_close=market.days_to_close,
+                creator_username=market.creator_username, close_time=market.close_time,
+                is_closed=market.days_to_close <= 0, answer_id=answer_id,
+            ))
         return out
 
     async def user_by_username(self, username: str) -> dict[str, Any] | None:
@@ -255,6 +295,7 @@ class ManifoldClient:
         limit_prob: float | None = None,
         expires_at: int | None = None,
         dry_run: bool = False,
+        answer_id: str = "",
     ) -> dict[str, Any]:
         """Place a market or limit order.
 
@@ -272,6 +313,8 @@ class ManifoldClient:
             body["limitProb"] = round(min(0.99, max(0.01, limit_prob)), 2)
         if expires_at is not None:
             body["expiresAt"] = int(expires_at)
+        if answer_id:
+            body["answerId"] = answer_id
         return await self._request("POST", "/bet", json=body, idempotent=False)
 
 
@@ -282,7 +325,8 @@ class ManifoldClient:
         return await self._request("POST", f"/bet/cancel/{bet_id}")
 
     async def sell_shares(
-        self, *, market_id: str, outcome: str, shares: float | None = None
+        self, *, market_id: str, outcome: str, shares: float | None = None,
+        answer_id: str = "",
     ) -> Any:
         if self.cfg.dry_run:
             log.info("[dry-run] would sell %s %s on %s", shares or "all", outcome, market_id)
@@ -290,6 +334,8 @@ class ManifoldClient:
         body: dict[str, Any] = {"outcome": outcome}
         if shares is not None:
             body["shares"] = round(shares, 4)
+        if answer_id:
+            body["answerId"] = answer_id
         return await self._request("POST", f"/market/{market_id}/sell", json=body)
 
     async def post_comment(

@@ -14,6 +14,11 @@ def now_ms() -> int:
     return int(time.time() * 1000)
 
 
+def _answer_prob(answer: dict[str, Any]) -> float:
+    """Full market payloads call it `probability`; the positions payload calls it `prob`."""
+    return float(answer.get("probability") or answer.get("prob") or 0.0)
+
+
 def logit(p: float) -> float:
     p = min(0.99, max(0.01, p))
     return math.log(p / (1.0 - p))
@@ -88,6 +93,11 @@ class Market:
     is_resolved: bool
     description: str
     raw: dict[str, Any] = field(repr=False, default_factory=dict)
+    # Set when this is one answer of a multiple-choice market, viewed as its own yes/no
+    # question: "will this answer be the one?". Everything downstream treats it as a
+    # binary market; only placing and closing orders need the answer id.
+    answer_id: str = ""
+    answer_text: str = ""
 
     @classmethod
     def parse(cls, data: dict[str, Any]) -> Market:
@@ -119,6 +129,72 @@ class Market:
     @property
     def is_binary(self) -> bool:
         return self.outcome_type == "BINARY" and self.mechanism == "cpmm-1"
+
+    @property
+    def is_multiple_choice(self) -> bool:
+        return self.mechanism == "cpmm-multi-1" and not self.answer_id
+
+    @property
+    def tradeable(self) -> bool:
+        """A plain binary market, or one answer of a multiple-choice market."""
+        return self.is_binary or (bool(self.answer_id) and self.mechanism == "cpmm-multi-1")
+
+    @property
+    def key(self) -> str:
+        """Unique per tradeable thing. Answers of one market share a slug and an id."""
+        return f"{self.slug}::{self.answer_id}" if self.answer_id else self.slug
+
+    @property
+    def contract_key(self) -> str:
+        """Same shape as Position.key, for matching a market to what is held."""
+        return f"{self.id}::{self.answer_id}" if self.answer_id else self.id
+
+    def for_answer(self, answer_id: str) -> Market:
+        """This market seen as the yes/no question "is it this answer?".
+
+        The other answers are listed by name but not by price, so the forecast stays
+        blind. Whether they are mutually exclusive is spelled out, because that changes
+        what a probability for one of them means.
+        """
+        answers = self.raw.get("answers") or []
+        answer = next((a for a in answers if a.get("id") == answer_id), None)
+        if answer is None:
+            raise ValueError(f"no answer {answer_id} on {self.slug}")
+        exclusive = self.raw.get("shouldAnswersSumToOne", True) is not False
+        others = [a.get("text", "") for a in answers if a.get("id") != answer_id][:25]
+        text = str(answer.get("text", "")).strip()
+        note = (
+            f"\n\n[This is one answer of a multiple-choice market. You are forecasting "
+            f"whether \"{text}\" is the answer. "
+            + ("Exactly one answer resolves YES. " if exclusive
+               else "Each answer resolves YES or NO on its own. ")
+            + f"The other answers are: {'; '.join(o for o in others if o) or '(none)'}.]"
+        )
+        resolved = self.is_resolved or bool(answer.get("resolution"))
+        return Market(
+            id=self.id, question=f"{self.question} \u2192 {text}", slug=self.slug, url=self.url,
+            creator_username=self.creator_username, outcome_type=self.outcome_type,
+            mechanism=self.mechanism, probability=_answer_prob(answer),
+            volume=float(answer.get("volume") or self.volume), liquidity=self.liquidity,
+            unique_bettors=self.unique_bettors, close_time=self.close_time,
+            created_time=self.created_time, is_resolved=resolved,
+            description=self.description + note, raw=self.raw,
+            answer_id=answer_id, answer_text=text,
+        )
+
+    def split(self, max_answers: int = 3, min_prob: float = 0.03) -> list[Market]:
+        """The answers worth a look, most likely first, as yes/no sub-markets.
+
+        "Other" is skipped (it resolves on whatever nobody listed), and so are answers
+        pinned at the extremes, which have no room to be wrong in our favour.
+        """
+        answers = [
+            a for a in (self.raw.get("answers") or [])
+            if not a.get("isOther") and not a.get("resolution")
+            and min_prob < _answer_prob(a) < 1 - min_prob
+        ]
+        answers.sort(key=lambda a: -_answer_prob(a))
+        return [self.for_answer(a["id"]) for a in answers[:max_answers]]
 
     @property
     def days_to_close(self) -> float:
@@ -180,6 +256,12 @@ class Position:
     creator_username: str = ""
     is_closed: bool = False
     close_time: int | None = None
+    answer_id: str = ""  # set for one answer of a multiple-choice market
+
+    @property
+    def key(self) -> str:
+        """Unique per holding: two answers of one market share a contract id."""
+        return f"{self.contract_id}::{self.answer_id}" if self.answer_id else self.contract_id
 
     @property
     def side(self) -> str:

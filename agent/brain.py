@@ -181,7 +181,12 @@ class Brain:
         ready: list[tuple[Market, list[Comment]]] = []
         for m in markets:
             fresh = await self.client.market(m.id)
-            self.memory.mark_seen(fresh.id, fresh.probability)
+            if m.answer_id:
+                try:
+                    fresh = fresh.for_answer(m.answer_id)
+                except ValueError:
+                    continue  # the answer was removed while queued
+            self.memory.mark_seen(fresh.contract_key, fresh.probability)
             if fresh.is_resolved:
                 out.append(Evaluation(fresh, None, None, False, "resolved while queued"))
                 continue
@@ -198,7 +203,7 @@ class Brain:
             for (market, comments), (passed, detail, quick, strength) in zip(ready, verdicts):
                 self.memory.log_event(
                     "screened_in" if passed else "screened_out",
-                    market=market.slug, question=market.question, url=market.url,
+                    market=market.key, question=market.question, url=market.url,
                     market_prob=market.probability, quick_prob=quick,
                     gap=None if quick is None else round(logodds_gap(quick, market.probability), 3),
                     threshold=self.cfg.screen.escalate_logodds, reason=detail,
@@ -214,28 +219,37 @@ class Brain:
                     out.append(Evaluation(market, None, None, False,
                                           f"screened out: {detail}", screened_out=True))
             survivors.sort(key=lambda s: -s[0])
-            ready = [(m, c) for _, m, c in survivors]
+            # One answer per multiple-choice market: the strongest. Several answers of
+            # one question are correlated bets, not diversification.
+            taken: set[str] = set()
+            ready = []
+            for _, m, c in survivors:
+                if m.answer_id and m.id in taken:
+                    self.memory.state["seen"].pop(m.contract_key, None)
+                    continue
+                taken.add(m.id)
+                ready.append((m, c))
 
         batch, overflow = ready[:analyse], ready[analyse:]
         for market, _ in overflow:
-            self.memory.state["seen"].pop(market.id, None)
+            self.memory.state["seen"].pop(market.contract_key, None)
         if not batch:
             return out
         if not self.budget.deep.take():
             for market, _ in batch:
-                self.memory.state["seen"].pop(market.id, None)
+                self.memory.state["seen"].pop(market.contract_key, None)
                 out.append(Evaluation(market, None, None, False, "out of deep model budget"))
             return out
 
         positions = await self.client.positions(self.user_id)
-        held = {p.contract_id: p for p in positions}
+        held = {p.key: p for p in positions}
         items = []
         for market, comments in batch:
             items.append({
                 "market": market, "comments": comments,
                 "research": await self._research(market),
-                "market_note": self.memory.note_for(market.id),
-                "position": held.get(market.id), "trigger": trigger,
+                "market_note": self.memory.note_for(market.contract_key),
+                "position": held.get(market.contract_key), "trigger": trigger,
             })
 
         prompt = build_decision_prompt(
@@ -255,7 +269,7 @@ class Brain:
         except Exception as exc:  # noqa: BLE001 - a bad response must not kill the tick
             log.warning("Decision batch failed: %s", exc)
             for it in items:
-                self.memory.log_event("decision_error", market=it["market"].slug, error=str(exc))
+                self.memory.log_event("decision_error", market=it["market"].key, error=str(exc))
                 out.append(Evaluation(it["market"], None, None, False, f"model error: {exc}"))
             return out
 
@@ -272,7 +286,7 @@ class Brain:
         for n, it in enumerate(items, start=1):
             d = by_index.get(n)
             if d is None:
-                self.memory.log_event("decision_error", market=it["market"].slug,
+                self.memory.log_event("decision_error", market=it["market"].key,
                                       error="no decision returned for this market")
                 out.append(Evaluation(it["market"], None, None, False, "no decision returned"))
                 continue
@@ -285,7 +299,7 @@ class Brain:
         position: Position | None = item["position"]
         research: str = item["research"]
         self.memory.set_note(
-            market.id, decision.memory_note, question=market.question, url=market.url
+            market.contract_key, decision.memory_note, question=market.question, url=market.url
         )
         if decision.lesson.strip():
             self.memory.add_lesson(decision.lesson, source="self")
@@ -302,7 +316,7 @@ class Brain:
         if not sizing.is_trade:
             self.memory.log_event(
                 "no_trade",
-                market=market.slug, question=market.question, url=market.url,
+                market=market.key, question=market.question, url=market.url,
                 market_prob=market.probability, model_prob=decision.probability,
                 confidence=decision.confidence, reason=sizing.reason,
                 thinking=decision.comment, uncertainty=decision.key_uncertainty,
@@ -515,6 +529,7 @@ class Brain:
         try:
             result = await self.client.place_bet(
                 contract_id=market.id,
+                answer_id=market.answer_id,
                 amount=sizing.amount,
                 outcome=sizing.outcome,
                 limit_prob=sizing.limit_prob,
@@ -533,6 +548,7 @@ class Brain:
                 bet_id,
                 {
                     "contract_id": market.id,
+                    "answer_id": market.answer_id,
                     "question": market.question,
                     "slug": market.slug,
                     "outcome": sizing.outcome,
@@ -544,7 +560,7 @@ class Brain:
 
         self.memory.log_event(
             "bet",
-            market=market.slug, question=market.question, url=market.url,
+            market=market.key, question=market.question, url=market.url,
             outcome=sizing.outcome, amount=sizing.amount, limit_prob=sizing.limit_prob,
             market_prob=market.probability, model_prob=decision.probability,
             confidence=decision.confidence, conviction=sizing.conviction,
@@ -576,14 +592,16 @@ class Brain:
         log.info("SELL %s on %s (model %.0f%%)", position.side, market.slug,
                  decision.probability * 100)
         try:
-            await self.client.sell_shares(market_id=market.id, outcome=position.side)
+            await self.client.sell_shares(
+                market_id=market.id, outcome=position.side, answer_id=position.answer_id
+            )
         except ManifoldError as exc:
-            self.memory.log_event("sell_failed", market=market.slug, error=str(exc))
+            self.memory.log_event("sell_failed", market=market.key, error=str(exc))
             return Evaluation(market, decision, None, False, f"sell rejected: {exc}")
 
         self.memory.log_event(
             "sell",
-            market=market.slug, question=market.question, url=market.url,
+            market=market.key, question=market.question, url=market.url,
             side=position.side, profit=position.profit,
             model_prob=decision.probability, market_prob=market.probability,
             thinking=decision.comment, dry_run=self.cfg.manifold.dry_run,

@@ -160,6 +160,14 @@ skip_if_seen_within_hours = 24
 # as if new, and markets it held were re-bought at full size each time.
 rescan_on_move = 0.08
 rescan_after_days = 7
+# Multiple-choice markets. Each answer is treated as its own yes/no question ("will it
+# be this one?"), so the same blind forecast, favourites-only rule and sizing apply. In
+# practice that mostly means NO on long-shot answers, which multiple-choice markets
+# tend to overprice. Only the top few answers of a market are looked at, "Other" never,
+# and it holds at most one answer per market.
+multiple_choice = true
+max_answers_per_market = 3
+max_multiple_choice_markets = 12
 
 [agency]
 # The desk: the agent's own turn, run by the deep model. It sees every position, its

@@ -47,8 +47,8 @@ class RiskEngine:
     ) -> Sizing:
         cfg = self.cfg
 
-        if not market.is_binary:
-            return _no("not a cpmm binary market")
+        if not market.tradeable:
+            return _no("not a binary market or a multiple-choice answer")
 
         p = decision.probability
         q = market.probability

@@ -30,6 +30,11 @@ produces no information and no position. If after reading everything you genuine
 within a point or two of the market, say so, but do not drift there to feel safe.
 - Your edge, when you have one, comes from reading the resolution criteria carefully or \
 from recent information the price has not absorbed. It does not come from vibes.
+- Some questions are one answer of a multiple-choice market, written as "question \u2192 \
+answer". Forecast the probability that this particular answer is the one that resolves \
+YES. The description says whether the answers are mutually exclusive and lists the \
+others; a crowded field usually means any single long-shot answer is less likely than \
+it feels.
 - Read the resolution criteria literally. Many questions resolve on a technicality that \
 differs from the plain-English reading. Genuine ambiguity is a real reason to sit closer \
 to the market price. Vague unease is not.

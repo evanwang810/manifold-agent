@@ -24,8 +24,8 @@ class Scanner:
 
     def qualifies(self, market: Market) -> tuple[bool, str]:
         cfg = self.cfg
-        if not market.is_binary:
-            return False, "not a binary YES/NO market"
+        if not (market.is_binary or market.is_multiple_choice):
+            return False, "not a binary or multiple-choice market"
         if market.is_resolved:
             return False, "resolved"
         if market.unique_bettors < cfg.min_unique_bettors:
@@ -40,9 +40,47 @@ class Scanner:
             return False, f"closes in {days * 24:.1f}h, too soon to matter"
 
         # A price already at the edge has almost no room to be wrong in our favor.
-        if market.probability <= 0.03 or market.probability >= 0.97:
+        # (A multiple-choice market has no single price; its answers are checked when
+        # it is split.)
+        if market.is_binary and (market.probability <= 0.03 or market.probability >= 0.97):
             return False, "price pinned at an extreme"
         return True, "ok"
+
+    async def _answers(self, held: set[str], rejects: dict[str, int]) -> list[Market]:
+        """Answers of open multiple-choice markets, as yes/no sub-markets.
+
+        A market where any answer is already held is skipped whole, so the agent ends
+        up with at most one position per multiple-choice question rather than several
+        correlated ones.
+        """
+        try:
+            batch = await self.client.search_markets(
+                sort="close-date", filter="open", contract_type="MULTIPLE_CHOICE", limit=100,
+            )
+        except Exception as exc:  # noqa: BLE001 - a failed extra search is not fatal
+            log.info("Multiple-choice search failed: %s", exc)
+            return []
+        out: list[Market] = []
+        fetched = 0
+        for market in batch:
+            if market.id in held:
+                continue
+            ok, why = self.qualifies(market)
+            if not ok:
+                rejects[why.split(",")[0]] = rejects.get(why.split(",")[0], 0) + 1
+                continue
+            if fetched >= self.cfg.max_multiple_choice_markets:
+                break
+            fetched += 1
+            full = await self.client.market(market.id)  # search results carry no answers
+            for answer in full.split(self.cfg.max_answers_per_market):
+                if self.memory.worth_another_look(
+                    answer.contract_key, answer.probability,
+                    min_hours=self.cfg.skip_if_seen_within_hours,
+                    max_days=self.cfg.rescan_after_days, move=self.cfg.rescan_on_move,
+                ):
+                    out.append(answer)
+        return out
 
     async def find_candidates(self, limit: int = 5, held: set[str] | None = None) -> list[Market]:
         """Pull soonest-closing open binary markets and filter them down.
@@ -76,7 +114,7 @@ class Scanner:
                 if held and market.id in held:
                     continue
                 if not self.memory.worth_another_look(
-                    market.id, market.probability,
+                    market.contract_key, market.probability,
                     min_hours=self.cfg.skip_if_seen_within_hours,
                     max_days=self.cfg.rescan_after_days, move=self.cfg.rescan_on_move,
                 ):
@@ -86,6 +124,9 @@ class Scanner:
             # Once the batch runs past our horizon there is nothing left to find.
             if batch and batch[-1].days_to_close > self.cfg.max_days_to_resolve:
                 break
+
+        if self.cfg.multiple_choice:
+            candidates += await self._answers(held or set(), rejects)
 
         # Prefer more liquid markets, they tolerate real size and are less noisy.
         candidates.sort(key=lambda m: m.volume, reverse=True)

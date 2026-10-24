@@ -116,6 +116,46 @@ def _trades(events: list[dict[str, Any]], limit: int = 40) -> list[dict[str, Any
     return out[-limit:][::-1]
 
 
+def _outcome(data: dict[str, Any], answer_id: str = "") -> tuple[bool, float | None]:
+    """(resolved, outcome) for a market or one answer of a multiple-choice market.
+
+    The outcome is 1 for YES, 0 for NO, a fraction for a partial resolution, and None
+    for a cancellation, which has nothing to score against.
+    """
+    if answer_id:
+        answer = next((a for a in data.get("answers") or [] if a.get("id") == answer_id), None)
+        if answer is None:
+            return True, None
+        if data.get("shouldAnswersSumToOne") is False:
+            result = answer.get("resolution")  # independent answers resolve one by one
+            if not result:
+                return False, None
+            if result == "MKT":
+                prob = answer.get("resolutionProbability")
+                return True, None if prob is None else float(prob)
+            return True, {"YES": 1.0, "NO": 0.0}.get(result)
+        if not data.get("isResolved"):
+            return False, None
+        result = data.get("resolution")
+        if result == "MKT":
+            share = (data.get("resolutions") or {}).get(answer_id)
+            return True, None if share is None else float(share) / 100
+        if result == "CANCEL":
+            return True, None
+        return True, 1.0 if result == answer_id else 0.0
+
+    if not data.get("isResolved"):
+        return False, None
+    result = data.get("resolution")
+    if result == "YES":
+        return True, 1.0
+    if result == "NO":
+        return True, 0.0
+    if result == "MKT" and data.get("resolutionProbability") is not None:
+        return True, float(data["resolutionProbability"])
+    return True, None  # cancelled or N/A
+
+
 def _day_facts(
     events: list[dict[str, Any]], journal: list[dict[str, Any]],
     nw_open: float | None, nw_close: float | None,
@@ -495,10 +535,10 @@ class Runner:
         mark["balance"] = self.report.balance
 
         seen = self.memory.state["position_mark"]
-        live = {p.contract_id for p in positions}
+        live = {p.key for p in positions}
 
         for position in positions:
-            before = seen.get(position.contract_id)
+            before = seen.get(position.key)
             if before is None:
                 self.memory.observe(
                     "position",
@@ -525,7 +565,7 @@ class Runner:
                         f"\"{position.question[:70]}\" P/L moved M${pnl:+.0f} to "
                         f"M${position.profit:+.0f} without much price change.",
                     )
-            seen[position.contract_id] = {
+            seen[position.key] = {
                 "opened": (before or {}).get("opened") or int(time.time() * 1000),
                 "prob": position.last_prob,
                 "profit": position.profit,
@@ -600,6 +640,8 @@ class Runner:
             if not self._can_evaluate:
                 continue
             market = await self.client.market(info["contract_id"])
+            if info.get("answer_id"):
+                market = market.for_answer(info["answer_id"])
             price = "" if self.cfg.forecast.blind else f" at {info['limit_prob']:.2f}"
             await self._evaluate(
                 market,
@@ -626,8 +668,8 @@ class Runner:
         moved = []
         for position in positions:
             current = position.last_prob
-            previous = baseline.get(position.contract_id)
-            baseline[position.contract_id] = current
+            previous = baseline.get(position.key)
+            baseline[position.key] = current
             # A stored 0.0 is not a price, it is the old bug that read every position
             # as 0%. Treat it as no baseline so the first tick after the fix re-seeds
             # instead of reporting all sixteen positions as having moved at once.
@@ -641,7 +683,7 @@ class Runner:
         # Biggest mover first, since the tick may only afford one evaluation.
         cooldown_hours = self.cfg.watch.reevaluate_cooldown_minutes / 60
         for _, move, previous, current, position in sorted(moved, key=lambda m: -m[0]):
-            if self.memory.seen_within(position.contract_id, cooldown_hours):
+            if self.memory.seen_within(position.key, cooldown_hours):
                 continue
             if not self._can_evaluate:
                 self.report.notes.append(
@@ -649,6 +691,8 @@ class Runner:
                 )
                 continue
             market = await self.client.market(position.contract_id)
+            if position.answer_id:
+                market = market.for_answer(position.answer_id)
             detail = (
                 "The market has moved notably since you last looked. The size and "
                 "direction are withheld so they cannot anchor you."
@@ -683,6 +727,7 @@ class Runner:
             return
 
         due = []
+        asking: set[str] = set()  # one nudge per market, however many answers are held
         for p in positions:
             if p.tradable or not p.close_time or not p.creator_username:
                 continue
@@ -692,6 +737,9 @@ class Runner:
                 continue
             if prior.get("count", 0) >= 2 or now - int(prior.get("ts", 0)) < 14 * day_ms:
                 continue
+            if p.contract_id in asking:
+                continue
+            asking.add(p.contract_id)
             due.append((p.value, days_closed, p))
 
         for _, days_closed, p in sorted(due, key=lambda row: -row[0])[:room]:
@@ -806,26 +854,19 @@ class Runner:
             (slug for slug in latest if slug not in resolved),
             key=lambda slug: checked.get(slug, 0),
         )
-        for slug in pending[:100]:
-            checked[slug] = now
+        for key in pending[:100]:
+            checked[key] = now
+            slug, _, answer_id = key.partition("::")
             try:
                 data = await self.client.market_by_slug(slug)
             except ManifoldError as exc:
                 log.info("Could not check %s for resolution: %s", slug, exc)
                 continue
-            if not data.get("isResolved"):
+            done, y = _outcome(data, answer_id)
+            if not done:
                 continue
-            result = data.get("resolution")
-            if result == "YES":
-                y = 1.0
-            elif result == "NO":
-                y = 0.0
-            elif result == "MKT" and data.get("resolutionProbability") is not None:
-                y = float(data["resolutionProbability"])
-            else:
-                y = None  # cancelled or N/A: nothing to score against
-            resolved[slug] = {"y": y}
-            checked.pop(slug, None)
+            resolved[key] = {"y": y}
+            checked.pop(key, None)
 
         scored = [
             (s, float(e["model_prob"]), float(e["market_prob"]), resolved[s]["y"])

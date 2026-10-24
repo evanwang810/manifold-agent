@@ -112,6 +112,10 @@ class ScanConfig:
     # this much since, or once this many days have passed.
     rescan_on_move: float = 0.08
     rescan_after_days: float = 7
+    # Multiple-choice markets, each answer treated as its own yes/no question.
+    multiple_choice: bool = True
+    max_answers_per_market: int = 3
+    max_multiple_choice_markets: int = 12   # full fetches per scan, one API call each
 
 
 @dataclass

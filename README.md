@@ -46,6 +46,12 @@ Scanned markets go through a cheap screen first. The fast model forecasts each o
 blind, and only markets where its number backs the market's favourite by enough, or
 where it flags something worth reading properly, reach the deep model.
 
+Multiple-choice markets are traded too. Each answer is treated as its own yes/no
+question ("will it be this one?"), so the same blind forecast, favourites-only rule and
+sizing apply; in practice that mostly means NO on long-shot answers, which
+multiple-choice markets tend to overprice. Only the top few answers are looked at,
+"Other" never, and it holds at most one answer per market.
+
 It only ever buys the favourite. That rule came out of its own record: favourite bets
 won 17 of 20, and longshot bets against the favourite won 13 of 70, which was nearly
 all of the losses. Disagreement is measured in log-odds rather than points, because
