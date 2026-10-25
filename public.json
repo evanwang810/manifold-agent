@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1792957747215,
+  "generated_ms": 1792958118196,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.5-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 33,
+      "today": 36,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 8,
+      "today": 9,
       "cap": 54
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 496.72,
   "summary": "Balance M$9. Net worth M$497. 9 open positions, 4 of them closed and awaiting resolution. Spendable liquidity remains strictly constrained at M$0 while awaiting admin payouts to clear debts and free up operational cash. Brier score over 187 resolved forecasts: yours 0.137, the market's 0.082 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 85 of 187; on big disagreements, 72 of 155. Resolved bets: 134. Backing the favourite: won 33 of 45. Longshots against the favourite: won 19 of 89.\n\nPerformance and calibration remain poor on speculative, narrative-driven longshots, micro-trader meta-markets, and low-probability NO bets where time decay degrades results. You forecast worse than the market price, and disagreements have mostly been you being wrong. Conversely, backing favourites has been much more reliable, winning 33 of 45. \n\nActive open positions include Olivia Chow re-election (YES, serving as the primary source of volatility and potential drawdown), Python 3.15 syntax, Magnus Carlsen FIDE rating, US gas prices, and US-Cuba relations. Watchlisted and tracked items include OpenAI federal system access, Claude Opus 5.5 errors, body weight targets, Saudi-Houthi ceasefire, and Iran US base strikes.\n\nMistakes worth avoiding include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (the Longshot Leak), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, overconfidence in high-probability projections, failing to respond rapidly to significant upward price moves in YES shares when holding NO positions, ignoring balance reserves when sizing trades, over-leveraging on subjective personal future judgment (\"according to me\" markets), chasing tiny edges in ultra-favorites where marginal utility drops, assuming occasional longshot wins justify abandoning stick-to-favorites discipline, and ignoring that net worth is a vanity metric during admin resolution delays while spendable balance is operational.",
   "journal": [
+    {
+      "ts": 1792958118071,
+      "kind": "analysis",
+      "text": "Analysed \"Who will be elected New Zealand Prime Minister in the next election? \u2192\": market 52%, my 40% (medium). No trade, would be a longshot bet against the 52% favourite."
+    },
+    {
+      "ts": 1792957940107,
+      "kind": "screen",
+      "text": "Escalated \"Who will be elected New Zealand Prime Minister in the next election? \u2192\" at 52%: quick estimate 82% backs the favourite at 52%. Luxon is the current incumbent Prime Minister and National leader, making him the heavy favorite despite coalition quirks."
+    },
     {
       "ts": 1792957173827,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1792846735517,
       "kind": "screen",
       "text": "Passed on \"Will Polymarket be right about every Fed decision in 2026?\" at 83%: quick estimate 55%, market 83%. Too many meetings left to evaluate with high confidence, making it a standard speculative coin-flip."
-    },
-    {
-      "ts": 1792846735512,
-      "kind": "screen",
-      "text": "Passed on \"US Average Gas Price Is $4.750 or more on any day in October 2026?\" at 3%: quick estimate 18%, market 3%. Wholesale prices and current trajectory firmly support the lower average noted by commentators."
-    },
-    {
-      "ts": 1792846176655,
-      "kind": "score",
-      "text": "Scored 186 resolved forecasts: my Brier 0.138, the market's 0.082. Closer than the market on 84/186."
     }
   ],
   "todos": [
@@ -1852,6 +1852,15 @@
   ],
   "screens": [
     {
+      "ts": 1792957940103,
+      "question": "Who will be elected New Zealand Prime Minister in the next election? \u2192 Christopher Luxon",
+      "url": "https://manifold.markets/NcyRocks/who-will-be-elected-new-zealand-pri",
+      "passed": true,
+      "market_prob": 0.5198517214537152,
+      "quick_prob": 0.82,
+      "why": "quick estimate 82% backs the favourite at 52%. Luxon is the current incumbent Prime Minister and National leader, making him the heavy favorite despite coalition quirks."
+    },
+    {
       "ts": 1792954225977,
       "question": "Will all 18 \"safe\" Senate seats be won by their incumbent parties?",
       "url": "https://manifold.markets/EvanDaniel/will-all-18-safe-senate-seats-by-wo",
@@ -2201,18 +2210,33 @@
       "market_prob": 0.71,
       "quick_prob": 0.05,
       "why": "quick estimate 5%, market 71%. Gadi Eizenkot's hypothetical party 'Yashar' is a longshot compared to major established Israeli parties like Likud or Yesh Atid."
-    },
-    {
-      "ts": 1792883792468,
-      "question": "Who will be elected mayor of Toronto in 2026? \u2192 Olivia Chow",
-      "url": "https://manifold.markets/cash/who-will-be-elected-mayor-of-toront",
-      "passed": true,
-      "market_prob": 0.6299999999999999,
-      "quick_prob": 0.7,
-      "why": "quick estimate 70% backs the favourite at 63%. Incumbent Olivia Chow leads early polls, making her the strong favorite for re-election."
     }
   ],
   "decisions": [
+    {
+      "ts": 1792958118067,
+      "kind": "no_trade",
+      "question": "Who will be elected New Zealand Prime Minister in the next election? \u2192 Christopher Luxon",
+      "url": "https://manifold.markets/NcyRocks/who-will-be-elected-new-zealand-pri",
+      "market_prob": 0.5198517214537152,
+      "model_prob": 0.4,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "National's slump into the mid-20s in late 2026 polling combined with strong left-block momentum significantly impairs Luxon's path to forming government. I assign a 40% probability to Luxon being elected PM.",
+      "uncertainty": "Whether the center-right coalition block (National, ACT, NZ First) can maintain or recover a parliamentary majority against the gaining center-left block.",
+      "resolution_risk": "Protracted post-election coalition negotiations could delay or alter the final Prime Minister appointment.",
+      "evidence_for": [
+        "Luxon is the sitting Prime Minister with incumbent status and leads the primary center-right National Party.",
+        "Preferred Prime Minister polling remains competitive, with Luxon tied around 20% alongside Labour leader Chris Hipkins."
+      ],
+      "evidence_against": [
+        "October 2026 polls show National support dropping to mid-to-high 20s (25.9%-26.5%), reaching its lowest level since 2020.",
+        "The opposition left bloc (Labour, Greens, Te P\u0101ti M\u0101ori) has gained significant momentum in recent polling.",
+        "Internal party speculation ('coup talk') and high personal disapproval ratings weaken his political position heading into the election."
+      ],
+      "reason": "would be a longshot bet against the 52% favourite"
+    },
     {
       "ts": 1792924879338,
       "kind": "no_trade",
@@ -2543,29 +2567,6 @@
         "Creator weighs 151.2 lbs as of Oct 22, requiring a gain of >8.8 lbs in 9 days",
         "At 4,000 kcal/day, real mass gain is capped at ~0.3-0.5 lbs/day",
         "Creator rejected extreme protocols like GOMAD, making sudden dramatic weight jumps unlikely"
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1792794753497,
-      "kind": "no_trade",
-      "question": "Will Russia control at least 85% of the four annexed oblasts at the end of October 2026?",
-      "url": "https://manifold.markets/a_l_e_x/will-russia-control-at-least-85-of",
-      "market_prob": 0.045929354698762345,
-      "model_prob": 0.02,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With only 8 days remaining, Russia would need to expand control by ~3,000+ km\u00b2 to reach the 85% threshold across the four annexed oblasts. At current rates of territorial movement, reaching 85% without an immediate formal diplomatic handover is nearly impossible.",
-      "uncertainty": "An unexpected comprehensive diplomatic ceasefire or negotiated withdrawal signed before November 1.",
-      "resolution_risk": "Discrepancies in border mapping definitions or ruler tools among Suriyakmaps, Poulet volant, and Creamy caprice.",
-      "evidence_for": [
-        "Russia continues incremental offensive operations across Donetsk, Zaporozhye, and other sectors."
-      ],
-      "evidence_against": [
-        "Russia currently holds approximately 81-82% of the four oblasts.",
-        "Reaching 85% requires gaining over 3,000 km\u00b2 across Donetsk, Zaporozhye, and Kherson.",
-        "Only 8 days remain until the close date (November 1, 2026), making military conquest of this scale impossible absent immediate mass capitulation or signed handover."
       ],
       "reason": "size floored to zero by balance reserve"
     }
