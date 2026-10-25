@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1792939216575,
+  "generated_ms": 1792939759308,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 21,
+      "today": 24,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 5,
+      "today": 6,
       "cap": 54
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 496.9,
   "summary": "Balance M$9. Net worth M$497. 9 open positions, 4 of them closed and awaiting resolution. Spendable liquidity remains strictly constrained at M$1 while awaiting admin payouts to clear a M$50 debt to @Gen. Brier score over 187 resolved forecasts: yours 0.137, the market's 0.082 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 85 of 187; on big disagreements, 72 of 155. Resolved bets: 134. Backing the favourite: won 33 of 45. Longshots against the favourite: won 19 of 89.\n\nPerformance and calibration remain poor on speculative, narrative-driven longshots, micro-trader meta-markets, and low-probability NO bets where time decay degrades results. You forecast worse than the market price, and disagreements have mostly been you being wrong. Conversely, backing favourites has been much more reliable, winning 33 of 45. \n\nActive open positions include Olivia Chow re-election (YES, moving down to 63%, serving as the primary source of volatility and potential drawdown), Python 3.15 syntax, Magnus Carlsen FIDE rating, US gas prices, and US-Cuba relations. Watchlisted and tracked items include OpenAI federal system access, Claude Opus 5.5 errors, body weight targets, Saudi-Houthi ceasefire, and Iran US base strikes.\n\nMistakes worth avoiding include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (the Longshot Leak), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, overconfidence in high-probability projections, failing to respond rapidly to significant upward price moves in YES shares when holding NO positions, ignoring balance reserves when sizing trades, over-leveraging on subjective personal future judgment (\"according to me\" markets), chasing tiny edges in ultra-favorites where marginal utility drops, assuming occasional longshot wins justify abandoning stick-to-favorites discipline, and ignoring that net worth is a vanity metric during admin resolution delays while spendable balance is operational.",
   "journal": [
+    {
+      "ts": 1792939407760,
+      "kind": "screen",
+      "text": "Escalated \"NFL Week 6 - Prop Bets \u2192 Fat Guy Touchdown*\" at 37%: quick estimate 12% backs the favourite at 37%. Fat guy touchdowns are rare and random events with insufficient data for a deep model to improve the guess."
+    },
+    {
+      "ts": 1792939407757,
+      "kind": "screen",
+      "text": "Passed on \"F1 2026 Prop Bets United States \ud83c\uddfa\ud83c\uddf8 (Austin, Circuit of the Americas) G\" at 50%: quick estimate 35%, market 50%. This is a standard F1 podium prop dependent on the race outcome, not requiring deep model intervention."
+    },
     {
       "ts": 1792938657663,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1792835631478,
       "kind": "screen",
       "text": "Escalated \"Saudi-Houthi ceasefire agreement before November 1?\" at 11%: quick estimate 8% backs the favourite at 11%. Escalating strikes and a very short deadline make a formal bilateral ceasefire before November 1 extremely unlikely."
-    },
-    {
-      "ts": 1792835064428,
-      "kind": "score",
-      "text": "Scored 186 resolved forecasts: my Brier 0.138, the market's 0.082. Closer than the market on 84/186."
-    },
-    {
-      "ts": 1792832065271,
-      "kind": "analysis",
-      "text": "Analysed \"GPT-6.1+ Astra released in October?\": market 11%, my 2% (high). No trade, size floored to zero by balance reserve."
     }
   ],
   "todos": [
@@ -839,7 +839,7 @@
       "profit": 0.0,
       "prob": 0.037,
       "closed": false,
-      "days_to_close": 6.6
+      "days_to_close": 6.5
     },
     {
       "question": "Will I get a positive pregnancy test in the next two weeks?",
@@ -1838,6 +1838,24 @@
   ],
   "screens": [
     {
+      "ts": 1792939407757,
+      "question": "NFL Week 6 - Prop Bets \u2192 Fat Guy Touchdown*",
+      "url": "https://manifold.markets/StopPunting/nfl-week-6-prop-bets-gPcph2Ph2n",
+      "passed": true,
+      "market_prob": 0.3700000000000001,
+      "quick_prob": 0.12,
+      "why": "quick estimate 12% backs the favourite at 37%. Fat guy touchdowns are rare and random events with insufficient data for a deep model to improve the guess."
+    },
+    {
+      "ts": 1792939407753,
+      "question": "F1 2026 Prop Bets United States \ud83c\uddfa\ud83c\uddf8 (Austin, Circuit of the Americas) Grand Prix [LIVE, Add answers] \u2192 [COTA] A Ferrari on the podium",
+      "url": "https://manifold.markets/BlitzEver/f1-2026-prop-bets-australia-melbour",
+      "passed": false,
+      "market_prob": 0.5,
+      "quick_prob": 0.35,
+      "why": "quick estimate 35%, market 50%. This is a standard F1 podium prop dependent on the race outcome, not requiring deep model intervention."
+    },
+    {
       "ts": 1792935664719,
       "question": "Will the S&P 500 be greater than or equal to X at the end of October 2026? \u2192 S&P500 \u2265 7500",
       "url": "https://manifold.markets/dfish/will-the-sp-500-be-greater-than-or-UndzOOCIUL",
@@ -2178,24 +2196,6 @@
       "market_prob": 0.3040423853924054,
       "quick_prob": 0.15,
       "why": "quick estimate 15% backs the favourite at 30%. App Store rankings are extremely volatile and holding or returning to the #1 spot in over a week is unlikely."
-    },
-    {
-      "ts": 1792846735512,
-      "question": "Will Polymarket be right about every Fed decision in 2026?",
-      "url": "https://manifold.markets/HillaryClinton/will-polymarket-be-right-about-ever",
-      "passed": false,
-      "market_prob": 0.8306525294884007,
-      "quick_prob": 0.55,
-      "why": "quick estimate 55%, market 83%. Too many meetings left to evaluate with high confidence, making it a standard speculative coin-flip."
-    },
-    {
-      "ts": 1792846735507,
-      "question": "US Average Gas Price Is $4.750 or more on any day in October 2026?",
-      "url": "https://manifold.markets/Jack1/us-average-gas-price-is-4750-or-mor",
-      "passed": false,
-      "market_prob": 0.03346830516959416,
-      "quick_prob": 0.18,
-      "why": "quick estimate 18%, market 3%. Wholesale prices and current trajectory firmly support the lower average noted by commentators."
     }
   ],
   "decisions": [
