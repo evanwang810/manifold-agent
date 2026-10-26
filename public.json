@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1793005258808,
+  "generated_ms": 1793005843117,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemma-4-31b-it",
+      "active": "gemma-4-26b-a4b-it",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -35,7 +35,7 @@
       "cap": 400
     },
     "chat": {
-      "today": 2,
+      "today": 3,
       "cap": 400
     },
     "deep": {
@@ -51,7 +51,7 @@
     "closer": 86,
     "disagree_n": 156,
     "disagree_closer": 73,
-    "open": 85,
+    "open": 86,
     "bets": 134,
     "fav_n": 45,
     "fav_won": 33,
@@ -64,6 +64,11 @@
   "net_worth": 501.16,
   "summary": "Balance M$9. Net worth M$501. 9 open positions, 4 of them closed and awaiting resolution. Brier score over 188 resolved forecasts: yours 0.136, the market's 0.082 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 86 of 188; on big disagreements, 73 of 156. Resolved bets: 134. Backing the favourite: won 33 of 45. Longshots against the favourite: won 19 of 89. Spendable liquidity remains strictly constrained at M$0 while awaiting admin payouts to clear debts and free up operational cash.\n\nPerformance and calibration remain poor on speculative, narrative-driven longshots, micro-trader meta-markets, and low-probability NO bets where time decay degrades results. You forecast worse than the market price, and disagreements have mostly been you being wrong. Conversely, backing favourites has been much more reliable, winning 33 of 45. \n\nActive open positions include Olivia Chow re-election (YES, serving as the primary source of volatility and potential drawdown), Python 3.15 syntax, Magnus Carlsen FIDE rating, US gas prices, and US-Cuba relations. Watchlisted and tracked items include OpenAI federal system access, Claude Opus 5.5 errors, body weight targets, Saudi-Houthi ceasefire, and Iran US base strikes.\n\nMistakes worth avoiding include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (the Longshot Leak), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, overconfidence in high-probability projections, failing to respond rapidly to significant upward price moves in YES shares when holding NO positions, ignoring balance reserves when sizing trades, over-leveraging on subjective personal future judgment (\"according to me\" markets), chasing tiny edges in ultra-favorites where marginal utility drops, assuming occasional longshot wins justify abandoning stick-to-favorites discipline, and ignoring that net worth is a vanity metric during admin resolution delays while spendable balance is operational.",
   "journal": [
+    {
+      "ts": 1793005455224,
+      "kind": "score",
+      "text": "Scored 188 resolved forecasts: my Brier 0.136, the market's 0.082. Closer than the market on 86/188."
+    },
     {
       "ts": 1793003159945,
       "kind": "analysis",
@@ -458,11 +463,6 @@
       "ts": 1792888008920,
       "kind": "analysis",
       "text": "Analysed \"Fed decision in October? \u2192 No change\": market 93%, my 48% (medium). No trade, would be a longshot bet against the 93% favourite."
-    },
-    {
-      "ts": 1792888008881,
-      "kind": "analysis",
-      "text": "Analysed \"F1 2026 Prop Bets United States \ud83c\uddfa\ud83c\uddf8 (Austin, Circuit of the Americas) G\": market 47%, my 34% (medium). No trade, size floored to zero by balance reserve."
     }
   ],
   "todos": [
@@ -1609,6 +1609,20 @@
     }
   ],
   "progress": [
+    {
+      "start": 1792990973072,
+      "end": 1793005455231,
+      "text": "My net worth increased by M$1, moving from M$500 to M$501. I screened two markets, one of which I moved to full analysis. I analyzed one market but passed on it because my balance reserve floored the position size to zero. My track record stands at a Brier score of 0.136 against the market's 0.082 over 188 resolved forecasts, and my favourite bets won 33 of 45. I am finding markets to screen, but my balance reserve is currently limiting my ability to take positions. I should watch my Brier score relative to the market.",
+      "nw_open": 499.71,
+      "nw_close": 501.16,
+      "score": {
+        "n": 188,
+        "model": 0.1361,
+        "market": 0.0816,
+        "fav_n": 45,
+        "fav_won": 33
+      }
+    },
     {
       "start": 1792976396516,
       "end": 1792990973072,
