@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1793136549257,
+  "generated_ms": 1793136881054,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 32,
+      "today": 35,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 12,
+      "today": 13,
       "cap": 54
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 608.15,
   "summary": "Balance M$13. Net worth M$608. 12 open positions, 5 of them closed and awaiting resolution. Brier score over 195 resolved forecasts: yours 0.132, the market's 0.082 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 91 of 195; on big disagreements, 78 of 163. Resolved bets: 135. Backing the favourite: won 34 of 46. Longshots against the favourite: won 19 of 89.\n\nPerformance and calibration remain weak on speculative, narrative-driven longshots, micro-trader meta-markets, and low-probability NO bets where time decay degrades results. You forecast worse than the market price, and your disagreements have mostly been you being wrong. Conversely, backing favourites remains much more reliable, winning 34 of 46. Spendable cash was temporarily constrained to M$0 while awaiting resolutions, but payouts recently cleared to raise cash, allowing the opening of fresh positions on high-edge favourites and near-term certainties like the Djokovic ATP match, French protest counts, end-of-month body weight, and the Fetterman endorsement market.\n\nActive open positions include Python 3.15 syntax, Magnus Carlsen FIDE rating, US gas prices, US-Cuba relations, body weight targets, Djokovic ATP match, French protest counts, and the John Fetterman Republican endorsement market. Olivia Chow re-election recently resolved YES successfully, releasing capital. Watchlisted items include OpenAI federal system access, Claude Opus 5.5 errors, Saudi-Houthi ceasefire, and Iran US base strikes.\n\nMistakes worth avoiding include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (the Longshot Leak), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, overconfidence in high-probability projections, failing to respond rapidly to significant upward price moves in YES shares when holding NO positions, ignoring balance reserves when sizing trades, over-leveraging on subjective personal future judgment (\"according to me\" markets), chasing tiny edges in ultra-favorites where marginal utility drops, assuming occasional longshot wins justify abandoning stick-to-favorites discipline, and ignoring that net worth is a vanity metric during admin resolution delays while spendable balance is operational.",
   "journal": [
+    {
+      "ts": 1793136878639,
+      "kind": "analysis",
+      "text": "Analysed \"Qwen 4 (Alibaba Qwen) release date \u2192 Before November 2026\": market 48%, my 11% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1793136742032,
+      "kind": "screen",
+      "text": "Escalated \"Qwen 4 (Alibaba Qwen) release date \u2192 Before November 2026\" at 48%: quick estimate 15% backs the favourite at 48%. There is no public announcement or evidence pointing to a Qwen 4 release before November 2026."
+    },
     {
       "ts": 1793135463983,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1793054352787,
       "kind": "trade",
       "text": "Desk bought M$25 YES on \"2026 ATP Tour Men's Tennis Matches \ud83c\udfbe \u2192 \ud83c\uddf7\ud83c\uddf8 N. Djokovic (4) vs \ud83c\uddeb\ud83c\uddf7 U. Hum\" at 72% YES, forecast 81%. Because: Sports/tennis domain is track record strength; forecast 81% YES vs market 69% YES favourite."
-    },
-    {
-      "ts": 1793054352098,
-      "kind": "trade",
-      "text": "Desk bought M$25 NO on \"Will I weigh >160lbs at the end of October?\" at 8% YES, forecast 2%. Because: Near-term resolution with high confidence forecast (98% NO vs market 88% NO)."
-    },
-    {
-      "ts": 1793054351835,
-      "kind": "desk",
-      "text": "Desk: Resolution payouts have cleared, raising cash to M$109 (M$99 spendable). Following the principle of spreading risk across modest positions on favourites, I am opening positions on three high-edge watchlist markets: end-of-month body weight (near-term favorite), Djokovic ATP match (sports domain strength), and French protest counts."
     }
   ],
   "todos": [
@@ -2153,6 +2153,15 @@
   ],
   "screens": [
     {
+      "ts": 1793136742026,
+      "question": "Qwen 4 (Alibaba Qwen) release date \u2192 Before November 2026",
+      "url": "https://manifold.markets/Bayesian/when-will-alibaba-release-qwen-4",
+      "passed": true,
+      "market_prob": 0.48423383526206515,
+      "quick_prob": 0.15,
+      "why": "quick estimate 15% backs the favourite at 48%. There is no public announcement or evidence pointing to a Qwen 4 release before November 2026."
+    },
+    {
       "ts": 1793133083829,
       "question": "Which Starship will be the first to be caught? \u2192 Ship 44",
       "url": "https://manifold.markets/Narnianknight/which-starship-will-be-the-first-to",
@@ -2502,18 +2511,32 @@
       "market_prob": 0.9022152330274664,
       "quick_prob": 0.35,
       "why": "quick estimate 35%, market 90%. This is a manga/anime prediction market driven by subjective pacing and ongoing plot points, not suitable for deep quantitative modeling."
-    },
-    {
-      "ts": 1793021355967,
-      "question": "2026 WTA Tour Women's Tennis Matches \ud83c\udfbe \u2192 \ud83c\udde8\ud83c\uddff T. Valentova (Q) vs \ud83c\uddf8\ud83c\uddf0 M. Poh\u00e1nkov\u00e1 (WC) [Tokyo WTA 500 \u2013 Round 1]",
-      "url": "https://manifold.markets/polymathematic/2026-wta-tour-womens-tennis-matches",
-      "passed": false,
-      "market_prob": 0.6600000000000001,
-      "quick_prob": 0.5,
-      "why": "quick estimate 50%, market 66%. This is a standard early-round tennis matchup between two closely matched lower-tier players where odds are a pure coin flip."
     }
   ],
   "decisions": [
+    {
+      "ts": 1793136878633,
+      "kind": "no_trade",
+      "question": "Qwen 4 (Alibaba Qwen) release date \u2192 Before November 2026",
+      "url": "https://manifold.markets/Bayesian/when-will-alibaba-release-qwen-4",
+      "market_prob": 0.48423383526206515,
+      "model_prob": 0.11,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With only 4 days remaining in October 2026 and no public API, open weights, or launch date announced following the late-September preview, a full public release before November 1 is unlikely.",
+      "uncertainty": "Whether Alibaba unexpectedly deploys Qwen 4 publicly within the next 4 days.",
+      "resolution_risk": "An unannounced soft release or open-weights dump on GitHub/Hugging Face before November 1 that meets resolution criteria without a major launch event.",
+      "evidence_for": [
+        "Alibaba previewed the Qwen 4 model family at the Apsara conference on September 22, 2026, stating it was in training and coming 'very soon'."
+      ],
+      "evidence_against": [
+        "Today is October 27, 2026, leaving only 4 days before November 1, 2026.",
+        "As of mid-October 2026, no official launch date, open weights, or public API access had been made available.",
+        "Foundation models previewed while still in active training in late September typically require more time for evaluation, safety alignment, and infrastructure deployment before public availability."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1793133379148,
       "kind": "no_trade",
@@ -2823,23 +2846,6 @@
       "evidence_for": [],
       "evidence_against": [],
       "reason": "desk buy; edge 0.090, kelly 0.32, decay 1.00, bound by default cap"
-    },
-    {
-      "ts": 1793054352093,
-      "kind": "bet",
-      "question": "Will I weigh >160lbs at the end of October?",
-      "url": "https://manifold.markets/Parallax/will-i-weigh-160lbs-at-the-end-of-o",
-      "market_prob": 0.07544898156392495,
-      "model_prob": 0.02,
-      "confidence": "high",
-      "amount": 25.0,
-      "outcome": "NO",
-      "thinking": "Near-term resolution with high confidence forecast (98% NO vs market 88% NO).",
-      "uncertainty": "",
-      "resolution_risk": "",
-      "evidence_for": [],
-      "evidence_against": [],
-      "reason": "desk buy; edge 0.055, kelly 0.73, decay 1.00, bound by default cap"
     }
   ]
 }
