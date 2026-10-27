@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1793132890009,
+  "generated_ms": 1793133379739,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 27,
+      "today": 32,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 11,
+      "today": 12,
       "cap": 54
     }
   },
@@ -64,6 +64,26 @@
   "net_worth": 607.99,
   "summary": "Balance M$13. Net worth M$608. 12 open positions, 5 of them closed and awaiting resolution. Brier score over 195 resolved forecasts: yours 0.132, the market's 0.082 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 91 of 195; on big disagreements, 78 of 163. Resolved bets: 135. Backing the favourite: won 34 of 46. Longshots against the favourite: won 19 of 89.\n\nPerformance and calibration remain weak on speculative, narrative-driven longshots, micro-trader meta-markets, and low-probability NO bets where time decay degrades results. You forecast worse than the market price, and your disagreements have mostly been you being wrong. Conversely, backing favourites remains much more reliable, winning 34 of 46. Spendable cash was temporarily constrained to M$0 while awaiting resolutions, but payouts recently cleared to raise cash, allowing the opening of fresh positions on high-edge favourites and near-term certainties like the Djokovic ATP match, French protest counts, end-of-month body weight, and the Fetterman endorsement market.\n\nActive open positions include Python 3.15 syntax, Magnus Carlsen FIDE rating, US gas prices, US-Cuba relations, body weight targets, Djokovic ATP match, French protest counts, and the John Fetterman Republican endorsement market. Olivia Chow re-election recently resolved YES successfully, releasing capital. Watchlisted items include OpenAI federal system access, Claude Opus 5.5 errors, Saudi-Houthi ceasefire, and Iran US base strikes.\n\nMistakes worth avoiding include holding deteriorating positions purely out of stubbornness when liquidity is deadlocked, taking low-probability lottery tickets or longshot bets against strong favourites (the Longshot Leak), falling for the Narrative Trap where a compelling story masks poor mathematical expected value, allowing portfolio-memory mismatches to delay tactical exits, assigning near-zero probability to frontier AI releases, trading micro-trader meta-markets where time decay turns unfavorable, overconfidence in high-probability projections, failing to respond rapidly to significant upward price moves in YES shares when holding NO positions, ignoring balance reserves when sizing trades, over-leveraging on subjective personal future judgment (\"according to me\" markets), chasing tiny edges in ultra-favorites where marginal utility drops, assuming occasional longshot wins justify abandoning stick-to-favorites discipline, and ignoring that net worth is a vanity metric during admin resolution delays while spendable balance is operational.",
   "journal": [
+    {
+      "ts": 1793133379154,
+      "kind": "analysis",
+      "text": "Analysed \"GPT-6.1+ Astra released in October?\": market 9%, my 2% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1793133379107,
+      "kind": "analysis",
+      "text": "Analysed \"Which Starship will be the first to be caught? \u2192 Ship 44\": market 12%, my 12% (medium). No trade, edge 0.01 log-odds below minimum 0.2."
+    },
+    {
+      "ts": 1793133083834,
+      "kind": "screen",
+      "text": "Escalated \"Which Starship will be the first to be caught? \u2192 Ship 44\" at 12%: quick estimate 2% backs the favourite at 12%. Ship 44 is too far down the production line to be the first caught given current flight schedules."
+    },
+    {
+      "ts": 1793133083829,
+      "kind": "screen",
+      "text": "Escalated \"GPT-6.1+ Astra released in October?\" at 9%: quick estimate 5% backs the favourite at 9%. There is no indication of a GPT-6.1+ Astra release happening in the remaining days of October."
+    },
     {
       "ts": 1793131755809,
       "kind": "score",
@@ -443,26 +463,6 @@
       "ts": 1793054256517,
       "kind": "portfolio",
       "text": "Net worth up from M$501 to M$601, balance M$109."
-    },
-    {
-      "ts": 1793053333660,
-      "kind": "score",
-      "text": "Scored 192 resolved forecasts: my Brier 0.134, the market's 0.083. Closer than the market on 89/192."
-    },
-    {
-      "ts": 1793050718163,
-      "kind": "screen",
-      "text": "Passed on \"UK Autumn Budget 2026: will taxes on banks be increased?\" at 83%: quick estimate 45%, market 83%. This is a standard fiscal policy binary with no strong public leaks yet to justify deep analysis."
-    },
-    {
-      "ts": 1793049598644,
-      "kind": "score",
-      "text": "Scored 190 resolved forecasts: my Brier 0.135, the market's 0.082. Closer than the market on 87/190."
-    },
-    {
-      "ts": 1793047456982,
-      "kind": "analysis",
-      "text": "Analysed \"Will Brazilian presidential election second round be annulled?\": market 5%, my 3% (medium). No trade, size floored to zero by balance reserve."
     }
   ],
   "todos": [
@@ -842,9 +842,9 @@
       "side": "NO",
       "shares": 36.0,
       "invested": 25.0,
-      "value": 29.0,
-      "profit": 4.0,
-      "prob": 0.194,
+      "value": 29.2,
+      "profit": 4.2,
+      "prob": 0.19,
       "closed": false,
       "days_to_close": 3.6
     },
@@ -2153,6 +2153,24 @@
   ],
   "screens": [
     {
+      "ts": 1793133083829,
+      "question": "Which Starship will be the first to be caught? \u2192 Ship 44",
+      "url": "https://manifold.markets/Narnianknight/which-starship-will-be-the-first-to",
+      "passed": true,
+      "market_prob": 0.12133102709007633,
+      "quick_prob": 0.02,
+      "why": "quick estimate 2% backs the favourite at 12%. Ship 44 is too far down the production line to be the first caught given current flight schedules."
+    },
+    {
+      "ts": 1793133083824,
+      "question": "GPT-6.1+ Astra released in October?",
+      "url": "https://manifold.markets/Bayesian/gpt61-astra-released-in-october",
+      "passed": true,
+      "market_prob": 0.09345949965304705,
+      "quick_prob": 0.05,
+      "why": "quick estimate 5% backs the favourite at 9%. There is no indication of a GPT-6.1+ Astra release happening in the remaining days of October."
+    },
+    {
       "ts": 1793129337098,
       "question": "Which Starship will be the first to be caught? \u2192 Ship 44",
       "url": "https://manifold.markets/Narnianknight/which-starship-will-be-the-first-to",
@@ -2493,27 +2511,55 @@
       "market_prob": 0.6600000000000001,
       "quick_prob": 0.5,
       "why": "quick estimate 50%, market 66%. This is a standard early-round tennis matchup between two closely matched lower-tier players where odds are a pure coin flip."
-    },
-    {
-      "ts": 1793021355962,
-      "question": "2026 ATP Tour Men's Tennis Matches \ud83c\udfbe \u2192 \ud83c\uddf7\ud83c\uddf8 N. Djokovic (4) vs \ud83c\uddeb\ud83c\uddf7 U. Humbert [Basel ATP 500 \u2013 Round 1]",
-      "url": "https://manifold.markets/polymathematic/2026-atp-tour-mens-tennis-matches",
-      "passed": true,
-      "market_prob": 0.6900000000000001,
-      "quick_prob": 0.8,
-      "why": "quick estimate 80% backs the favourite at 69%. Novak Djokovic is a heavy favorite against Ugo Humbert in an opening round."
-    },
-    {
-      "ts": 1793021355958,
-      "question": "2026 WTA Tour Women's Tennis Matches \ud83c\udfbe \u2192 \ud83c\uddef\ud83c\uddf5 N. Osaka (7) vs \ud83c\uddee\ud83c\uddf9 J. Paolini [Tokyo WTA 500 \u2013 Round 1]",
-      "url": "https://manifold.markets/polymathematic/2026-wta-tour-womens-tennis-matches",
-      "passed": false,
-      "market_prob": 0.73,
-      "quick_prob": 0.45,
-      "why": "quick estimate 45%, market 73%. Osaka versus Paolini is a competitive match where odds are close to even."
     }
   ],
   "decisions": [
+    {
+      "ts": 1793133379148,
+      "kind": "no_trade",
+      "question": "GPT-6.1+ Astra released in October?",
+      "url": "https://manifold.markets/Bayesian/gpt61-astra-released-in-october",
+      "market_prob": 0.09345949965304705,
+      "model_prob": 0.02,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "OpenAI shelved GPT-6.1 Astra in late September following safety audit failures, and DevDay focused on other models. With under 4 days left in October, a release is virtually impossible.",
+      "uncertainty": "Whether OpenAI reverses its safety shelving decision and does an unannounced surprise launch within 4 days.",
+      "resolution_risk": "Uncertainty around whether Polymarket rules count minor API preview access or rebranding of existing models as a release.",
+      "evidence_for": [
+        "OpenAI could theoretically release a model under the Astra name unexpectedly before October 31."
+      ],
+      "evidence_against": [
+        "OpenAI officially shelved GPT-6.1 Astra in late September 2026 due to safety and alignment audit failures.",
+        "OpenAI DevDay passed without an Astra release, focusing on Sol, Dots, and agent APIs instead.",
+        "Only 4 days remain in October 2026 with no public indications or announcements."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
+      "ts": 1793133379101,
+      "kind": "no_trade",
+      "question": "Which Starship will be the first to be caught? \u2192 Ship 44",
+      "url": "https://manifold.markets/Narnianknight/which-starship-will-be-the-first-to",
+      "market_prob": 0.12133102709007633,
+      "model_prob": 0.12,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Ship 42 is scheduled as the first upper stage catch attempt on Flight 15, with Ship 43 following on Flight 16. Ship 44 is third in line, making it unlikely to be the first successful catch.",
+      "uncertainty": "Whether Flight 15 (Ship 42) or Flight 16 (Ship 43) succeeds on its catch attempt before Ship 44 flies.",
+      "resolution_risk": "If Starship is never caught, 'Starship will never be caught' or 'Other' might resolve YES depending on market additions.",
+      "evidence_for": [
+        "SpaceX iterative testing often requires multiple flight attempts to master landing procedures like catching the upper stage.",
+        "If Ship 42 and Ship 43 fail their catch attempts, Ship 44 is next in line."
+      ],
+      "evidence_against": [
+        "Ship 42 is scheduled for Flight 15 in November 2026 as the first upper stage catch attempt.",
+        "If Ship 42 or Ship 43 successfully lands on chopsticks, Ship 44 cannot be the first."
+      ],
+      "reason": "edge 0.01 log-odds below minimum 0.2"
+    },
     {
       "ts": 1793129649159,
       "kind": "no_trade",
@@ -2794,52 +2840,6 @@
       "evidence_for": [],
       "evidence_against": [],
       "reason": "desk buy; edge 0.055, kelly 0.73, decay 1.00, bound by default cap"
-    },
-    {
-      "ts": 1793047456976,
-      "kind": "no_trade",
-      "question": "Will Brazilian presidential election second round be annulled?",
-      "url": "https://manifold.markets/Papaulo/will-brazilian-presidential-electio",
-      "market_prob": 0.05015969565295357,
-      "model_prob": 0.03,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "While Fl\u00e1vio Bolsonaro has called for annulment following second-round delays, Brazil's electoral authorities (TSE) face extremely high institutional hurdles to invalidate a presidential runoff, making actual annulment highly improbable.",
-      "uncertainty": "Whether the TSE or STF finds any actionable legal ground in the procedural delays rather than summarily dismissing the petition.",
-      "resolution_risk": "Lack of creator description leaves open potential ambiguity if partial recount or procedural sanction is misconstrued as full annulment.",
-      "evidence_for": [
-        "Fl\u00e1vio Bolsonaro has formally challenged the runoff outcome and called for an annulment following voting extensions and delay."
-      ],
-      "evidence_against": [
-        "Brazil's Superior Electoral Court (TSE) and Supreme Court (STF) have a strong precedent of enforcing election results and institutional stability.",
-        "Major reporting characterizes the annulment effort as an improbable longshot with negligible legal backing."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1793025294443,
-      "kind": "no_trade",
-      "question": "2026 ATP Tour Men's Tennis Matches \ud83c\udfbe \u2192 \ud83c\udde9\ud83c\uddea A. Zverev (1) vs \ud83c\uddea\ud83c\uddf8 M. Landaluce (WC) [Vienna ATP 500 \u2013 Round 1]",
-      "url": "https://manifold.markets/polymathematic/2026-atp-tour-mens-tennis-matches",
-      "market_prob": 0.8799999999999999,
-      "model_prob": 0.87,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "As the #1 seed and premier indoor hard court player, Zverev holds a decisive advantage over wildcard opponent Landaluce. Baseline win expectations for top seed vs WC in early rounds sit near 87%.",
-      "uncertainty": "Whether Zverev maintains standard baseline form and health late in the season.",
-      "resolution_risk": "If either player withdraws prior to match start, the market resolves N/A according to criteria.",
-      "evidence_for": [
-        "Alexander Zverev is the #1 seed and a top-tier world player.",
-        "Mart\u00edn Landaluce entered via Wild Card (WC), reflecting a substantially lower ranking.",
-        "Zverev has strong performance records on indoor hard courts."
-      ],
-      "evidence_against": [
-        "Late season ATP 500 tournaments in late October can feature fatigue-related upsets.",
-        "Young wildcard players can occasionally produce high-peak performances."
-      ],
-      "reason": "would be a longshot bet against the 88% favourite"
     }
   ]
 }
