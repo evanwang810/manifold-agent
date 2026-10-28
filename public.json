@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1793217936800,
+  "generated_ms": 1793218328698,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 17,
+      "today": 22,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 5,
+      "today": 6,
       "cap": 54
     }
   },
@@ -64,6 +64,26 @@
   "net_worth": 609.73,
   "summary": "Balance M$11. Net worth M$609. 13 open positions, 5 of them closed and awaiting resolution. Brier score over 196 resolved forecasts: yours 0.132, the market's 0.082 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 91 of 196; on big disagreements, 78 of 163. Resolved bets: 135. Backing the favourite: won 34 of 46. Longshots against the favourite: won 19 of 89.\n\nPerformance and calibration remain weak on speculative, narrative-driven longshots and low-probability NO bets. You forecast worse than the market price overall. Conversely, backing favourites remains much more reliable. Recent capital was deployed into high-conviction favourites, including NO on whether John Fetterman will endorse a Republican, NO on French protest counts, YES on Djokovic, YES on Naomi Osaka, and NO on personal weight.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favourites), the Narrative Trap (allowing a compelling story to mask poor mathematical expected value), and failing to respond rapidly to significant upward price moves in YES shares when holding NO positions. Avoid over-leveraging on subjective personal judgment markets and trading micro-trader meta-markets where time decay turns unfavorable.",
   "journal": [
+    {
+      "ts": 1793218328282,
+      "kind": "analysis",
+      "text": "Analysed \"Israel's next Prime minister \u2192 Benjamin Netanyahu\": market 47%, my 32% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1793218328220,
+      "kind": "analysis",
+      "text": "Analysed \"US Average DIESEL Price Is $6.4000 or more on Election Day 2026?\": market 22%, my 58% (medium). No trade, would be a longshot bet against the 22% favourite."
+    },
+    {
+      "ts": 1793218131291,
+      "kind": "screen",
+      "text": "Escalated \"Israel's next Prime minister \u2192 Benjamin Netanyahu\" at 47%: quick estimate 35% backs the favourite at 47%. Netanyahu's political future is uncertain following elections on October 27, 2026, making this a pure coin flip."
+    },
+    {
+      "ts": 1793218131286,
+      "kind": "screen",
+      "text": "Escalated \"US Average DIESEL Price Is $6.4000 or more on Election Day 2026?\" at 22%: quick estimate 5% backs the favourite at 22%. Current diesel prices are far below $6.40 and a massive sudden spike in one week is extremely unlikely."
+    },
     {
       "ts": 1793216616671,
       "kind": "score",
@@ -443,26 +463,6 @@
       "ts": 1793110669347,
       "kind": "screen",
       "text": "Passed on \"Will the S&P 500 be greater than or equal to X at the end of October 2\" at 82%: quick estimate 8%, market 82%. Reaching 7600 by the end of October 2026 requires an improbable short-term market surge."
-    },
-    {
-      "ts": 1793110669342,
-      "kind": "screen",
-      "text": "Passed on \"Will the S&P 500 be greater than or equal to X at the end of October 2\" at 93%: quick estimate 15%, market 93%. A rapid climb to 7500 in three days from current levels is extremely unlikely."
-    },
-    {
-      "ts": 1793109342083,
-      "kind": "score",
-      "text": "Scored 194 resolved forecasts: my Brier 0.133, the market's 0.082. Closer than the market on 90/194."
-    },
-    {
-      "ts": 1793106897414,
-      "kind": "screen",
-      "text": "Passed on \"Will Meta's Muse still be the #1 free iPhone app in the US on October \" at 24%: quick estimate 35%, market 24%. App store trends are notoriously fickle and historical precedent shows viral hits rarely hold the top spot for months."
-    },
-    {
-      "ts": 1793101811198,
-      "kind": "score",
-      "text": "Scored 194 resolved forecasts: my Brier 0.133, the market's 0.082. Closer than the market on 90/194."
     }
   ],
   "todos": [
@@ -2160,6 +2160,24 @@
   ],
   "screens": [
     {
+      "ts": 1793218131286,
+      "question": "Israel's next Prime minister \u2192 Benjamin Netanyahu",
+      "url": "https://manifold.markets/dkgsAiogjertg/israels-next-prime-minister",
+      "passed": true,
+      "market_prob": 0.47158709476738686,
+      "quick_prob": 0.35,
+      "why": "quick estimate 35% backs the favourite at 47%. Netanyahu's political future is uncertain following elections on October 27, 2026, making this a pure coin flip."
+    },
+    {
+      "ts": 1793218131280,
+      "question": "US Average DIESEL Price Is $6.4000 or more on Election Day 2026?",
+      "url": "https://manifold.markets/Jack1/us-average-diesel-price-is-6400-or",
+      "passed": true,
+      "market_prob": 0.21999999999999997,
+      "quick_prob": 0.05,
+      "why": "quick estimate 5% backs the favourite at 22%. Current diesel prices are far below $6.40 and a massive sudden spike in one week is extremely unlikely."
+    },
+    {
       "ts": 1793214373033,
       "question": "Israel's next Prime minister \u2192 Benjamin Netanyahu",
       "url": "https://manifold.markets/dkgsAiogjertg/israels-next-prime-minister",
@@ -2500,27 +2518,56 @@
       "market_prob": 0.71,
       "quick_prob": 0.65,
       "why": "quick estimate 65%, market 71%. Eala is seeded 8th and favored against Gibson, standard tennis match up with no special edges."
-    },
-    {
-      "ts": 1793121833267,
-      "question": "2026 WTA Tour Women's Tennis Matches \ud83c\udfbe \u2192 \ud83c\uddef\ud83c\uddf5 N. Osaka (7) vs \ud83c\uddf8\ud83c\uddf0 M. Poh\u00e1nkov\u00e1 (WC) [Tokyo WTA 500 \u2013 Round 2]",
-      "url": "https://manifold.markets/polymathematic/2026-wta-tour-womens-tennis-matches",
-      "passed": true,
-      "market_prob": 0.74,
-      "quick_prob": 0.8,
-      "why": "quick estimate 80% backs the favourite at 74%. Osaka as the 7th seed heavily favors a win over wildcard Pohankova."
-    },
-    {
-      "ts": 1793121833263,
-      "question": "2026 WTA Tour Women's Tennis Matches \ud83c\udfbe \u2192 \ud83c\uddf0\ud83c\uddff E. Rybakina (1) vs \ud83c\uddf0\ud83c\uddff Y. Putintseva (Q) [Tokyo WTA 500 \u2013 Round 2]",
-      "url": "https://manifold.markets/polymathematic/2026-wta-tour-womens-tennis-matches",
-      "passed": false,
-      "market_prob": 0.8700000000000001,
-      "quick_prob": 0.78,
-      "why": "quick estimate 78%, market 87%. Rybakina is the top seed and strong favorite against compatriot Putintseva on hard court."
     }
   ],
   "decisions": [
+    {
+      "ts": 1793218328276,
+      "kind": "no_trade",
+      "question": "Israel's next Prime minister \u2192 Benjamin Netanyahu",
+      "url": "https://manifold.markets/dkgsAiogjertg/israels-next-prime-minister",
+      "market_prob": 0.47158709476738686,
+      "model_prob": 0.32,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With 53 seats, Netanyahu's bloc is 8 seats short of a majority following the Oct 27 elections. Caretaker status does not count, and anti-Netanyahu pledges make coalition building difficult, estimating a 32% chance he successfully forms and gets sworn in for the next government.",
+      "uncertainty": "Whether Netanyahu can convince defectors or party leaders like Bennett or Lieberman to form a 61-seat majority coalition.",
+      "resolution_risk": "If a long deadlock ensues with Netanyahu remaining as caretaker PM past Dec 31 2027, the market resolves to Other.",
+      "evidence_for": [
+        "Netanyahu's Likud-led bloc won 53 seats, making him the largest single political bloc leader",
+        "Netanyahu has a long historical track record of negotiating coalition agreements from difficult election results"
+      ],
+      "evidence_against": [
+        "53 seats falls 8 seats short of the 61 needed for a parliamentary majority",
+        "Interim/caretaker PM status does not count for resolution, and prolonged deadlock resolving after Dec 2027 goes to Other",
+        "Opposition parties remain heavily opposed to joining a Netanyahu-led coalition"
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
+      "ts": 1793218328214,
+      "kind": "no_trade",
+      "question": "US Average DIESEL Price Is $6.4000 or more on Election Day 2026?",
+      "url": "https://manifold.markets/Jack1/us-average-diesel-price-is-6400-or",
+      "market_prob": 0.21999999999999997,
+      "model_prob": 0.58,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Diesel is at $6.35/gal as of Oct 28, up 7 cents in 9 days. With 6 days until Election Day, a further 5-cent increase to hit $6.4000 is plausible if current upward momentum persists, putting probability around 58%.",
+      "uncertainty": "Whether retail diesel prices continue their recent daily increases through November 3.",
+      "resolution_risk": "AAA gas prices website update timing or slight regional reporting delays on Election Day.",
+      "evidence_for": [
+        "US national average diesel price is $6.35 as of Oct 28 2026, up 7 cents over the past 9 days",
+        "Recent macro trend shows diesel prices up 71.2% year-over-year with strong upward momentum"
+      ],
+      "evidence_against": [
+        "Requires an additional 5-cent increase in retail prices over just 6 days",
+        "Fuel price growth could stall or plateau in the final week before Election Day"
+      ],
+      "reason": "would be a longshot bet against the 22% favourite"
+    },
     {
       "ts": 1793214706673,
       "kind": "no_trade",
@@ -2818,54 +2865,6 @@
         "Gaining 5-6 cents nationwide over just 7.8 days requires sustained upward crude/refining price spikes rather than typical range-bound retail fluctuations."
       ],
       "reason": "would be a longshot bet against the 35% favourite"
-    },
-    {
-      "ts": 1793066152654,
-      "kind": "no_trade",
-      "question": "Will John Fetterman endorse a Republican before election day?",
-      "url": "https://manifold.markets/Jack1/will-john-fetterman-endorse-a-repub",
-      "market_prob": 0.1782619977797498,
-      "model_prob": 0.05,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With under a week until the deadline, Fetterman continues to insist he is remaining a Democrat. While he frequently praises bipartisan colleagues, an explicit endorsement instructing voters to support a Republican on the ballot is highly improbable in the remaining timeframe.",
-      "uncertainty": "Whether Fetterman releases a surprise last-minute endorsement in a local or congressional Pennsylvania race before November 2.",
-      "resolution_risk": "Praise or friendly comments towards Republican colleagues being conflated with a formal endorsement, though criteria explicitly state praising is not enough.",
-      "evidence_for": [
-        "Fetterman has praised GOP colleagues like Dave McCormick and appeared via video at a Republican convention",
-        "He has frequently broken with Democratic party leadership on key issues"
-      ],
-      "evidence_against": [
-        "Fetterman has explicitly affirmed his Democratic party membership and rejected switching parties",
-        "Less than seven days remain before the November 2 deadline with no endorsement made so far",
-        "Resolution criteria strictly require an explicit positive endorsement instructing voters to vote for a Republican candidate"
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1793064311718,
-      "kind": "no_trade",
-      "question": "Will Olivia Chow be re-elected mayor of Toronto in 2026?",
-      "url": "https://manifold.markets/cash/will-olivia-chow-be-reelected-mayor",
-      "market_prob": 0.95,
-      "model_prob": 0.93,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With election day taking place yesterday (Oct 26) and final polling combined with election night reporting pointing to Chow's victory, incumbent re-election is nearly settled pending official result certification.",
-      "uncertainty": "Final official vote count certification by Toronto Elections following Oct 26 election day.",
-      "resolution_risk": "Potential delay or recount if official margins end up unusually tight.",
-      "evidence_for": [
-        "Final Pollara poll had Chow leading 48% to 40%.",
-        "Incumbent advantage in Toronto municipal elections is historically high.",
-        "Initial election night returns on Oct 26 pointed strongly toward Chow winning re-election."
-      ],
-      "evidence_against": [
-        "Liaison Strategies poll on Oct 25 showed a tight race with Bradford at 49% and Chow at 47%.",
-        "Final official result certification is still completing after Oct 26 voting."
-      ],
-      "reason": "would be a longshot bet against the 95% favourite"
     }
   ]
 }
