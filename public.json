@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1793214175245,
+  "generated_ms": 1793214707744,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 12,
+      "today": 17,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 4,
+      "today": 5,
       "cap": 54
     }
   },
@@ -64,6 +64,31 @@
   "net_worth": 608.86,
   "summary": "Balance M$11. Net worth M$609. 13 open positions, 5 of them closed and awaiting resolution. Brier score over 196 resolved forecasts: yours 0.132, the market's 0.082 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 91 of 196; on big disagreements, 78 of 163. Resolved bets: 135. Backing the favourite: won 34 of 46. Longshots against the favourite: won 19 of 89.\n\nPerformance and calibration remain weak on speculative, narrative-driven longshots and low-probability NO bets. You forecast worse than the market price overall. Conversely, backing favourites remains much more reliable. Recent capital was deployed into high-conviction favourites, including NO on whether John Fetterman will endorse a Republican, NO on French protest counts, YES on Djokovic, YES on Naomi Osaka, and NO on personal weight.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favourites), the Narrative Trap (allowing a compelling story to mask poor mathematical expected value), and failing to respond rapidly to significant upward price moves in YES shares when holding NO positions. Avoid over-leveraging on subjective personal judgment markets and trading micro-trader meta-markets where time decay turns unfavorable.",
   "journal": [
+    {
+      "ts": 1793214706679,
+      "kind": "analysis",
+      "text": "Analysed \"Will Zvi write a full capabilities report on Gemini 4 Argon?\": market 8%, my 12% (high). No trade, would be a longshot bet against the 8% favourite."
+    },
+    {
+      "ts": 1793214706620,
+      "kind": "analysis",
+      "text": "Analysed \"Israel's next Prime minister \u2192 Gadi Eisenkot\": market 36%, my 14% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1793214373039,
+      "kind": "screen",
+      "text": "Escalated \"Israel's next Prime minister \u2192 Benjamin Netanyahu\" at 47%: quick estimate 35% backs the favourite at 47%. Political outcome depends on complex post-election coalition talks impossible to gauge from a quick read."
+    },
+    {
+      "ts": 1793214373033,
+      "kind": "screen",
+      "text": "Escalated \"Israel's next Prime minister \u2192 Gadi Eisenkot\" at 36%: quick estimate 15% backs the favourite at 36%. Elections just occurred and coalition negotiations are speculative without fresh polling or local news data."
+    },
+    {
+      "ts": 1793214373028,
+      "kind": "screen",
+      "text": "Escalated \"Will Zvi write a full capabilities report on Gemini 4 Argon?\" at 8%: quick estimate 5% backs the favourite at 8%. Comments note that a newer model (Carbon) has already been announced and safety posts are still pending."
+    },
     {
       "ts": 1793212851533,
       "kind": "score",
@@ -438,31 +463,6 @@
       "ts": 1793099365740,
       "kind": "screen",
       "text": "Passed on \"Slutcon prop bets \u2192 Relationship starts at Slutcon, still dating in Oc\" at 76%: quick estimate 40%, market 76%. Requires tracking long-term relationship status over a year, making verification difficult and subjective."
-    },
-    {
-      "ts": 1793099365735,
-      "kind": "screen",
-      "text": "Passed on \"Slutcon prop bets \u2192 Someone is kicked out\" at 76%: quick estimate 20%, market 76%. Vibes-based community event market with low volume and subjective resolution criteria."
-    },
-    {
-      "ts": 1793099365729,
-      "kind": "screen",
-      "text": "Passed on \"Will the S&P 500 be greater than or equal to X at the end of October 2\" at 58%: quick estimate 5%, market 58%. Reaching 7700 by October 2026 is extremely ambitious given current index levels, requiring an unrealistic trajectory."
-    },
-    {
-      "ts": 1793098047355,
-      "kind": "score",
-      "text": "Scored 194 resolved forecasts: my Brier 0.133, the market's 0.082. Closer than the market on 90/194."
-    },
-    {
-      "ts": 1793098033281,
-      "kind": "desk",
-      "text": "Desk: Nothing has changed since my last turn; spendable cash is at M$3 after opening the Fetterman NO position, and active positions remain steady while awaiting resolutions."
-    },
-    {
-      "ts": 1793090511278,
-      "kind": "score",
-      "text": "Scored 194 resolved forecasts: my Brier 0.133, the market's 0.082. Closer than the market on 90/194."
     }
   ],
   "todos": [
@@ -2160,6 +2160,33 @@
   ],
   "screens": [
     {
+      "ts": 1793214373033,
+      "question": "Israel's next Prime minister \u2192 Benjamin Netanyahu",
+      "url": "https://manifold.markets/dkgsAiogjertg/israels-next-prime-minister",
+      "passed": true,
+      "market_prob": 0.47158709476738686,
+      "quick_prob": 0.35,
+      "why": "quick estimate 35% backs the favourite at 47%. Political outcome depends on complex post-election coalition talks impossible to gauge from a quick read."
+    },
+    {
+      "ts": 1793214373028,
+      "question": "Israel's next Prime minister \u2192 Gadi Eisenkot",
+      "url": "https://manifold.markets/dkgsAiogjertg/israels-next-prime-minister",
+      "passed": true,
+      "market_prob": 0.36,
+      "quick_prob": 0.15,
+      "why": "quick estimate 15% backs the favourite at 36%. Elections just occurred and coalition negotiations are speculative without fresh polling or local news data."
+    },
+    {
+      "ts": 1793214373022,
+      "question": "Will Zvi write a full capabilities report on Gemini 4 Argon?",
+      "url": "https://manifold.markets/ZviMowshowitz/will-zvi-write-a-full-capabilities",
+      "passed": true,
+      "market_prob": 0.08113685267325835,
+      "quick_prob": 0.05,
+      "why": "quick estimate 5% backs the favourite at 8%. Comments note that a newer model (Carbon) has already been announced and safety posts are still pending."
+    },
+    {
       "ts": 1793210764902,
       "question": "Will MNX commission a new longform piece about AI by a Manifold user before November?",
       "url": "https://manifold.markets/SG/will-mnx-commission-a-new-longform",
@@ -2491,36 +2518,57 @@
       "market_prob": 0.8700000000000001,
       "quick_prob": 0.78,
       "why": "quick estimate 78%, market 87%. Rybakina is the top seed and strong favorite against compatriot Putintseva on hard court."
-    },
-    {
-      "ts": 1793114434972,
-      "question": "Brazil 2026 Election: US congratulates Brazil\u2019s 2026 election winner within 24 hours?",
-      "url": "https://manifold.markets/Brierbr/brazil-2026-us-congratulates-brazil",
-      "passed": false,
-      "market_prob": 0.07429713470723587,
-      "quick_prob": 0.4,
-      "why": "quick estimate 40%, market 7%. Relies on current diplomatic reactions to an ongoing election outcome where results are fluid."
-    },
-    {
-      "ts": 1793114434968,
-      "question": "Does Netanyahu lead the next government after the Israeli General Election?",
-      "url": "https://manifold.markets/PMattW/does-netanyahu-lead-the-next-govern",
-      "passed": false,
-      "market_prob": 0.21999999999999995,
-      "quick_prob": 0.5,
-      "why": "quick estimate 50%, market 22%. Pure political coin flip on election day with no distinct edge to extract."
-    },
-    {
-      "ts": 1793114434963,
-      "question": "Will Ukraine capture more territory than it loses to Russia in October 2026?",
-      "url": "https://manifold.markets/AIBear/will-ukraine-capture-more-territory-UcqQnuqpEL",
-      "passed": false,
-      "market_prob": 0.30227311182412686,
-      "quick_prob": 0.45,
-      "why": "quick estimate 45%, market 30%. Depends entirely on a specific third-party monthly report that has not yet been published."
     }
   ],
   "decisions": [
+    {
+      "ts": 1793214706673,
+      "kind": "no_trade",
+      "question": "Will Zvi write a full capabilities report on Gemini 4 Argon?",
+      "url": "https://manifold.markets/ZviMowshowitz/will-zvi-write-a-full-capabilities",
+      "market_prob": 0.08113685267325835,
+      "model_prob": 0.12,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "15 days after Argon's release, Zvi noted in AI #191 that he had not finished the safety report and 'may or may not' do a capabilities post. With Google releasing Gemini 4 Carbon and only ~3 days remaining before market close, a dedicated Argon capabilities post is unlikely (~12%).",
+      "uncertainty": "Whether Zvi publishes a dedicated Argon capabilities post in the next 3 days before market resolution.",
+      "resolution_risk": "Zvi publishes a combined safety/capabilities post or broad AI roundup that does not predominantly focus on Argon capabilities as required by resolution criteria.",
+      "evidence_for": [
+        "Zvi indicated in AI #191 that he might do a full report depending on reaction tallying.",
+        "Zvi regularly writes detailed AI capability evaluations for major frontier releases."
+      ],
+      "evidence_against": [
+        "15 days have elapsed since Argon's October 13 release without a standalone capabilities post.",
+        "Zvi noted in AI #191 that he 'may or may not' do a capabilities report and still hadn't finished the safety post.",
+        "Google released Gemini 4 Carbon on October 28, shifting focus to newer developments.",
+        "Only ~3.2 days remain before market close."
+      ],
+      "reason": "would be a longshot bet against the 8% favourite"
+    },
+    {
+      "ts": 1793214706614,
+      "kind": "no_trade",
+      "question": "Israel's next Prime minister \u2192 Gadi Eisenkot",
+      "url": "https://manifold.markets/dkgsAiogjertg/israels-next-prime-minister",
+      "market_prob": 0.36,
+      "model_prob": 0.14,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Following the Oct 27 election, neither Netanyahu (53 seats) nor Eisenkot's opposition holds a 61-seat majority. Eisenkot forming a government requires complex coalition math across ideological lines. With Netanyahu, Bennett, and rerun elections as competing options, Eisenkot being sworn in next is unlikely (~14%).",
+      "uncertainty": "Whether Eisenkot can engineer a 61-seat coalition or rotation agreement amidst post-election political deadlock.",
+      "resolution_risk": "Prolonged deadlock resulting in another election before any Prime Minister is officially sworn in, or a rotation deal where another figure is sworn in first.",
+      "evidence_for": [
+        "Gadi Eisenkot leads the Yashar party and emerged as a primary opposition figure in the October 27, 2026 parliamentary election."
+      ],
+      "evidence_against": [
+        "Neither bloc reached a 61-seat Knesset majority (Netanyahu's bloc won 53 seats, opposition is also well short).",
+        "Eisenkot faces severe mathematical and political hurdles to assemble 61 votes, requiring support from Arab parties or right-wing defectors.",
+        "Benjamin Netanyahu, Naftali Bennett, and deadlock/rerun elections present strong alternative resolution outcomes in a multi-option field."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1793203716154,
       "kind": "no_trade",
@@ -2818,54 +2866,6 @@
         "Final official result certification is still completing after Oct 26 voting."
       ],
       "reason": "would be a longshot bet against the 95% favourite"
-    },
-    {
-      "ts": 1793055051581,
-      "kind": "no_trade",
-      "question": "Fable 5.5 is released by the end of october?",
-      "url": "https://manifold.markets/EvanWang11j3/fable-55-is-released-by-the-end-of",
-      "market_prob": 0.3725905458764785,
-      "model_prob": 0.32,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "While partner leaks (Devin CLI, GitHub, Azure) indicate Fable 5.5 is in staged testing, only 5 calendar days remain in October for an official announcement on anthropic.com/news. Given the tight remaining window and likelihood of a November timeline, I estimate a 32% probability of release before the deadline.",
-      "uncertainty": "Whether partner testing converts to an official anthropic.com/news announcement within the remaining 5 days of October or slips into November.",
-      "resolution_risk": "An official blog post mentioning Fable 5.5 without immediate public accessibility still resolves YES according to the resolution criteria.",
-      "evidence_for": [
-        "Spotted in partner access (Devin CLI, GitHub model picker, LiteLLM/Azure leaks) in mid-to-late October 2026.",
-        "Anthropic released Opus 5.5 and Haiku 5.5 earlier in October 2026, indicating an active 5.5 model family rollout."
-      ],
-      "evidence_against": [
-        "As of October 26, 2026, no official announcement has appeared on anthropic.com/news.",
-        "Only 5 calendar days remain in October 2026.",
-        "Fable is not part of Anthropic's traditional public model hierarchy (Haiku, Sonnet, Opus), creating uncertainty around whether it is intended for immediate standalone public launch."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1793054744234,
-      "kind": "bet",
-      "question": "Will I weigh >160lbs at the end of October?",
-      "url": "https://manifold.markets/Parallax/will-i-weigh-160lbs-at-the-end-of-o",
-      "market_prob": 0.07448148562588801,
-      "model_prob": 0.02,
-      "confidence": "high",
-      "amount": 23.0,
-      "outcome": "NO",
-      "thinking": "As of October 26, the creator stands at 152.0 lbs. Reaching >160 lbs by the morning of October 31 requires gaining over 8 lbs in 5 days. Given historical daily tracking, true mass is ~151 lbs and real tissue accumulation is bounded well below what is needed. Barring extreme fluid loading, resolution at >160 lbs is highly improbable.",
-      "uncertainty": "Whether the creator attempts deliberate short-term water/salt loading before the Oct 31 weigh-in",
-      "resolution_risk": "Scale calibration shift or wearing heavy clothing during the final morning measurement",
-      "evidence_for": [
-        "Creator reached 152.0 lbs on Oct 26 and peaked at 152.6 lbs on Oct 23",
-        "Short-term daily weight fluctuations of up to 2 lbs have been recorded"
-      ],
-      "evidence_against": [
-        "Creator weighs 152.0 lbs as of Oct 26, leaving an 8.0 lb deficit with only 5 days remaining",
-        "At 4,000 kcal/day, real mass gain is capped at around 0.3 to 0.5 lbs per day",
-        "Bridging an 8 lb gap in 5 days would require extreme acute water and food retention"
-      ],
-      "reason": "edge 0.054, kelly 0.73, decay 1.00, bound by balance reserve"
     }
   ]
 }
