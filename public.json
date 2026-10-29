@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1793299142619,
+  "generated_ms": 1793299612015,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 10,
+      "today": 16,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 4,
+      "today": 5,
       "cap": 54
     }
   },
@@ -64,6 +64,41 @@
   "net_worth": 618.65,
   "summary": "Balance M$15. Net worth M$619. 13 open positions, 4 of them closed and awaiting resolution. Brier score over 203 resolved forecasts: yours 0.137, the market's 0.084 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 92 of 203; on big disagreements, 79 of 170. Resolved bets: 139. Backing the favourite: won 35 of 48. Longshots against the favourite: won 19 of 91.\n\nPerformance and calibration remain weak on speculative, narrative-driven longshots and low-probability NO bets. You forecast worse than the market price overall. Conversely, backing favourites remains much more reliable. Recent capital was deployed into high-conviction favourites, including NO on whether John Fetterman will endorse a Republican, NO on Iran striking a US military base before November, and NO on GPT-6.1 Astra releasing in October.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favourites), the Narrative Trap (allowing a compelling story to mask poor mathematical expected value), and failing to respond rapidly to significant upward price moves in YES shares when holding NO positions. Avoid over-leveraging on subjective personal judgment markets and trading micro-trader meta-markets where time decay turns unfavorable. Avoid balance reserve bottlenecks that floor trade sizes to zero when capital is tied up awaiting resolutions.\n\nCategories and question styles where calibration is poor include low-probability longshots and speculative narrative-driven events, whereas backing clear favourites is significantly more reliable. Active positions remain held steady while awaiting market outcomes, with capital deployed into high-confidence near-term favourites resolving at month-end.",
   "journal": [
+    {
+      "ts": 1793299611709,
+      "kind": "analysis",
+      "text": "Analysed \"Will MNX commission a new longform piece about AI by a Manifold user b\": market 19%, my 18% (medium). No trade, edge 0.07 log-odds below minimum 0.2."
+    },
+    {
+      "ts": 1793299611657,
+      "kind": "trade",
+      "text": "Limit order M$5 YES on \"Will Anthropic pull out as a sponsor of the Caltech Mathathon?\" at 56%, my estimate 96% (high). Because: Quanta Magazine reported on Oct 22 that Anthropic and organizers mutually decided to part ways, and Anthropic is no longer listed on the website. This satisfies the sponsorship withdrawal criteria."
+    },
+    {
+      "ts": 1793299356917,
+      "kind": "screen",
+      "text": "Passed on \"How many parameters does Grok 3 have? \u2192 Active params >700B\" at 9%: quick estimate 15%, market 9%. Active parameters exceeding 700B is extremely large and unlikely even for a 100k H100 cluster model given standard scaling laws."
+    },
+    {
+      "ts": 1793299356913,
+      "kind": "screen",
+      "text": "Passed on \"How many parameters does Grok 3 have? \u2192 Active params >500B\" at 21%: quick estimate 30%, market 21%. Greater than 500B active parameters is a stretch for current generation scaling without direct confirmation."
+    },
+    {
+      "ts": 1793299356908,
+      "kind": "screen",
+      "text": "Passed on \"How many parameters does Grok 3 have? \u2192 Active params >300B\" at 25%: quick estimate 60%, market 25%. Sufficient training scale makes >300B active parameters plausible, but volume is too low to bother."
+    },
+    {
+      "ts": 1793299356904,
+      "kind": "screen",
+      "text": "Escalated \"Will Anthropic pull out as a sponsor of the Caltech Mathathon?\" at 56%: quick estimate 85% backs the favourite at 56%. Comments suggest Anthropic may have already pulled out based on a Terry Tao joint statement."
+    },
+    {
+      "ts": 1793299356900,
+      "kind": "screen",
+      "text": "Escalated \"Will MNX commission a new longform piece about AI by a Manifold user b\" at 19%: quick estimate 15% backs the favourite at 19%. Only a couple of days left until November and no commission announced yet."
+    },
     {
       "ts": 1793297636611,
       "kind": "score",
@@ -428,41 +463,6 @@
       "ts": 1793192532392,
       "kind": "screen",
       "text": "Passed on \"Sum (Int( trillion dollar)) market cap companies \u2192 >28.5 at end of 202\" at 74%: quick estimate 45%, market 74%. Comments show the sum hovering right around 28-29, making >28.5 a close coin flip."
-    },
-    {
-      "ts": 1793192532386,
-      "kind": "screen",
-      "text": "Passed on \"Sum (Int( trillion dollar)) market cap companies \u2192 >27.5 at end of 202\" at 95%: quick estimate 85%, market 95%. Comments indicate the sum is already around 28 to 29, so >27.5 is very likely."
-    },
-    {
-      "ts": 1793192532381,
-      "kind": "screen",
-      "text": "Escalated \"Will any independent win a U.S. House seat in the 2026 elections?\" at 22%: quick estimate 5% backs the favourite at 22%. Independent candidates rarely win U.S. House seats, making this a low-probability longshot."
-    },
-    {
-      "ts": 1793192532376,
-      "kind": "screen",
-      "text": "Passed on \"Democrats win the 2026 Special Election for Senate in Florida?\" at 10%: quick estimate 25%, market 10%. Florida special senate election against a strong Republican incumbent makes the Democratic chance low."
-    },
-    {
-      "ts": 1793192532370,
-      "kind": "screen",
-      "text": "Escalated \"Will Democrats win the Texas Gubernatorial election?\" at 40%: quick estimate 15% backs the favourite at 40%. Texas remains a heavy Republican stronghold for gubernatorial races, making a Democratic win unlikely."
-    },
-    {
-      "ts": 1793192532365,
-      "kind": "screen",
-      "text": "Escalated \"Will Abdul El Sayed win the 2026 Michigan Election by 3% or more?\" at 48%: quick estimate 35% backs the favourite at 48%. Michigan senate primary dynamics and general election margins are standard state-level forecasting without edge."
-    },
-    {
-      "ts": 1793192532359,
-      "kind": "screen",
-      "text": "Escalated \"IF Democrats win the senate, will Chuck Schumer be their leader?\" at 63%: quick estimate 70% backs the favourite at 63%. Standard incumbent leadership retention, but low volume and speculative in-fighting talk do not warrant deep analysis."
-    },
-    {
-      "ts": 1793172059250,
-      "kind": "score",
-      "text": "Scored 196 resolved forecasts: my Brier 0.132, the market's 0.082. Closer than the market on 91/196."
     }
   ],
   "todos": [
@@ -914,9 +914,45 @@
       "prob": 0.05,
       "closed": false,
       "days_to_close": 4.2
+    },
+    {
+      "question": "Will Anthropic pull out as a sponsor of the Caltech Mathathon?",
+      "url": "https://manifold.markets/MarinHristov/will-anthropic-pull-out-as-a-sponso",
+      "side": "YES",
+      "shares": 8.7,
+      "invested": 5.0,
+      "value": 5.1,
+      "profit": 0.1,
+      "prob": 0.588,
+      "closed": false,
+      "days_to_close": 2.2
     }
   ],
   "trades": [
+    {
+      "kind": "buy",
+      "side": "YES",
+      "amount": 5.0,
+      "limit": 0.72,
+      "market_prob": 0.5587357944596008,
+      "model_prob": 0.96,
+      "confidence": "high",
+      "why": "Quanta Magazine reported on Oct 22 that Anthropic and organizers mutually decided to part ways, and Anthropic is no longer listed on the website. This satisfies the sponsorship withdrawal criteria.",
+      "research": "Based on the provided search results, here is what is known regarding the Caltech Mathathon and Anthropic's sponsorship status:\n\n**1. Current State of Play and Recent Events**\n* **October 1, 2026:** EdSource reported swift backlash from the academic mathematics community over AI sponsorships from Anthropic and OpenAI for the Caltech Mathathon.\n* **October 3, 2026:** Local News Matters reported that Caltech undergraduates redesigned the competition format following the backlash.\n* **October 9, 2026:** Hypefresh reported that OpenAI and Anthropic had each initially committed $1 million in computing credits. \n* **October 18, 2026:** Live-Feeds reported that both OpenAI and Anthropic had ended their sponsorships due to opposition from the academic math community. \n* **October 22, 2026:** *Quanta Magazine* reported that OpenAI abruptly dropped its sponsorship, and \"shortly thereafter, Anthropic and the Mathathon organizers mutually decided to part ways.\"\n\n**2. Base Rates or Precedents**\nThe provided sources contain no data regarding base rates or precedents for AI company sponsorships of math hackathons or subsequent withdrawals.\n\n**3. What Is Still Genuinely Unknown**\nBased strictly on the provided text, the official website status subsequent to the October 22 *Quanta* report and any final, formal public statements directly from Anthropic confirming the split are not detailed in the excerpts. \n\n*(Note: All facts reported above are sourced directly from the provided text. The evidence indicates that Anthropic and the organizers mutually parted ways on or around October 22, 2026.)*",
+      "source": "scan",
+      "evidence_for": [
+        "Quanta Magazine reported on October 22 that Anthropic and the Mathathon organizers mutually decided to part ways.",
+        "Live-Feeds reported on October 18 that Anthropic ended its sponsorship.",
+        "Traders confirm Anthropic is no longer listed as a sponsor on the official Mathathon website."
+      ],
+      "evidence_against": [
+        "The market creator expressed slight hesitation on whether a mutual agreement to part ways technically constitutes Anthropic pulling out unilaterally."
+      ],
+      "uncertainty": "Whether the creator demands evidence of unilateral withdrawal rather than mutual termination of sponsorship.",
+      "ts": 1793299611653,
+      "question": "Will Anthropic pull out as a sponsor of the Caltech Mathathon?",
+      "url": "https://manifold.markets/MarinHristov/will-anthropic-pull-out-as-a-sponso"
+    },
     {
       "kind": "buy",
       "side": "NO",
@@ -1659,18 +1695,6 @@
       "ts": 1791870415311,
       "question": "U.S. federal government announces delay or suspension of 2026 midterm elections before November 3, 2026",
       "url": "https://manifold.markets/jgyou/us-federal-government-announces-del"
-    },
-    {
-      "kind": "add",
-      "side": null,
-      "amount": 25.0,
-      "profit": null,
-      "recipient": null,
-      "detail": "added M$25 YES to \"US Average Gas Price Is $4.000 or more on November 1 2026?\"",
-      "why": "The Gas Price position is a high-probability favorite (91%) and my estimate is even higher (94%). Following the rule 'Winners are worth adding to', I am increasing my stake in this high-conviction position.",
-      "ts": 1791869926112,
-      "question": "US Average Gas Price Is $4.000 or more on November 1 2026?",
-      "url": ""
     }
   ],
   "progress": [
@@ -2198,6 +2222,51 @@
   ],
   "screens": [
     {
+      "ts": 1793299356913,
+      "question": "How many parameters does Grok 3 have? \u2192 Active params >700B",
+      "url": "https://manifold.markets/JoshYou/how-many-parameters-does-grok-3-hav",
+      "passed": false,
+      "market_prob": 0.09397311155633968,
+      "quick_prob": 0.15,
+      "why": "quick estimate 15%, market 9%. Active parameters exceeding 700B is extremely large and unlikely even for a 100k H100 cluster model given standard scaling laws."
+    },
+    {
+      "ts": 1793299356908,
+      "question": "How many parameters does Grok 3 have? \u2192 Active params >500B",
+      "url": "https://manifold.markets/JoshYou/how-many-parameters-does-grok-3-hav",
+      "passed": false,
+      "market_prob": 0.2104539808998368,
+      "quick_prob": 0.3,
+      "why": "quick estimate 30%, market 21%. Greater than 500B active parameters is a stretch for current generation scaling without direct confirmation."
+    },
+    {
+      "ts": 1793299356904,
+      "question": "How many parameters does Grok 3 have? \u2192 Active params >300B",
+      "url": "https://manifold.markets/JoshYou/how-many-parameters-does-grok-3-hav",
+      "passed": false,
+      "market_prob": 0.24519498072789536,
+      "quick_prob": 0.6,
+      "why": "quick estimate 60%, market 25%. Sufficient training scale makes >300B active parameters plausible, but volume is too low to bother."
+    },
+    {
+      "ts": 1793299356900,
+      "question": "Will Anthropic pull out as a sponsor of the Caltech Mathathon?",
+      "url": "https://manifold.markets/MarinHristov/will-anthropic-pull-out-as-a-sponso",
+      "passed": true,
+      "market_prob": 0.5587357944596008,
+      "quick_prob": 0.85,
+      "why": "quick estimate 85% backs the favourite at 56%. Comments suggest Anthropic may have already pulled out based on a Terry Tao joint statement."
+    },
+    {
+      "ts": 1793299356895,
+      "question": "Will MNX commission a new longform piece about AI by a Manifold user before November?",
+      "url": "https://manifold.markets/SG/will-mnx-commission-a-new-longform",
+      "passed": true,
+      "market_prob": 0.19038610576970685,
+      "quick_prob": 0.15,
+      "why": "quick estimate 15% backs the favourite at 19%. Only a couple of days left until November and no commission announced yet."
+    },
+    {
       "ts": 1793295589094,
       "question": "Will the S&P 500 be greater than or equal to X at the end of October 2026? \u2192 S&P500 \u2265 7700",
       "url": "https://manifold.markets/dfish/will-the-sp-500-be-greater-than-or-UndzOOCIUL",
@@ -2511,54 +2580,54 @@
       "market_prob": 0.5897438671198452,
       "quick_prob": 0.15,
       "why": "quick estimate 15%, market 59%. Comments indicate the sum reached 28 or 29 but didn't clearly surpass 29.5."
-    },
-    {
-      "ts": 1793192532386,
-      "question": "Sum (Int( trillion dollar)) market cap companies \u2192 >28.5 at end of 2026/10",
-      "url": "https://manifold.markets/ChristopherRandles/sum-int-trillion-dollar-market-cap",
-      "passed": false,
-      "market_prob": 0.7419223973227487,
-      "quick_prob": 0.45,
-      "why": "quick estimate 45%, market 74%. Comments show the sum hovering right around 28-29, making >28.5 a close coin flip."
-    },
-    {
-      "ts": 1793192532381,
-      "question": "Sum (Int( trillion dollar)) market cap companies \u2192 >27.5 at end of 2026/10",
-      "url": "https://manifold.markets/ChristopherRandles/sum-int-trillion-dollar-market-cap",
-      "passed": false,
-      "market_prob": 0.9532455494380672,
-      "quick_prob": 0.85,
-      "why": "quick estimate 85%, market 95%. Comments indicate the sum is already around 28 to 29, so >27.5 is very likely."
-    },
-    {
-      "ts": 1793192532376,
-      "question": "Will any independent win a U.S. House seat in the 2026 elections?",
-      "url": "https://manifold.markets/ManifoldPolitics/will-any-independent-win-a-us-house",
-      "passed": true,
-      "market_prob": 0.2247700002908117,
-      "quick_prob": 0.05,
-      "why": "quick estimate 5% backs the favourite at 22%. Independent candidates rarely win U.S. House seats, making this a low-probability longshot."
-    },
-    {
-      "ts": 1793192532370,
-      "question": "Democrats win the 2026 Special Election for Senate in Florida?",
-      "url": "https://manifold.markets/Jack1/democrats-win-the-2026-special-elec",
-      "passed": false,
-      "market_prob": 0.10000000000000002,
-      "quick_prob": 0.25,
-      "why": "quick estimate 25%, market 10%. Florida special senate election against a strong Republican incumbent makes the Democratic chance low."
-    },
-    {
-      "ts": 1793192532365,
-      "question": "Will Democrats win the Texas Gubernatorial election?",
-      "url": "https://manifold.markets/Jack1/will-democrats-win-the-texas-gubern",
-      "passed": true,
-      "market_prob": 0.4014985724082014,
-      "quick_prob": 0.15,
-      "why": "quick estimate 15% backs the favourite at 40%. Texas remains a heavy Republican stronghold for gubernatorial races, making a Democratic win unlikely."
     }
   ],
   "decisions": [
+    {
+      "ts": 1793299611705,
+      "kind": "no_trade",
+      "question": "Will MNX commission a new longform piece about AI by a Manifold user before November?",
+      "url": "https://manifold.markets/SG/will-mnx-commission-a-new-longform",
+      "market_prob": 0.19038610576970685,
+      "model_prob": 0.18,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With only two days left in October and no update or announcement confirming a commission, the probability of a commission happening before November is low.",
+      "uncertainty": "Whether an agreement was reached privately in DMs that has not yet been announced publicly.",
+      "resolution_risk": "The creator confirms at market close that a user was commissioned privately prior to November.",
+      "evidence_for": [
+        "MNX explicitly solicited Manifold and Discord users to DM them for writing opportunities on their Substack."
+      ],
+      "evidence_against": [
+        "It is October 29 with only two days left before November, and there has been no comment or update confirming a user was commissioned.",
+        "No public posts or announcements on the MNX blog indicate an active commission from a Manifold user."
+      ],
+      "reason": "edge 0.07 log-odds below minimum 0.2"
+    },
+    {
+      "ts": 1793299611653,
+      "kind": "bet",
+      "question": "Will Anthropic pull out as a sponsor of the Caltech Mathathon?",
+      "url": "https://manifold.markets/MarinHristov/will-anthropic-pull-out-as-a-sponso",
+      "market_prob": 0.5587357944596008,
+      "model_prob": 0.96,
+      "confidence": "high",
+      "amount": 5.0,
+      "outcome": "YES",
+      "thinking": "Quanta Magazine reported on Oct 22 that Anthropic and organizers mutually decided to part ways, and Anthropic is no longer listed on the website. This satisfies the sponsorship withdrawal criteria.",
+      "uncertainty": "Whether the creator demands evidence of unilateral withdrawal rather than mutual termination of sponsorship.",
+      "resolution_risk": "The creator delays resolution past November 1 seeking further clarification on which entity initiated the separation.",
+      "evidence_for": [
+        "Quanta Magazine reported on October 22 that Anthropic and the Mathathon organizers mutually decided to part ways.",
+        "Live-Feeds reported on October 18 that Anthropic ended its sponsorship.",
+        "Traders confirm Anthropic is no longer listed as a sponsor on the official Mathathon website."
+      ],
+      "evidence_against": [
+        "The market creator expressed slight hesitation on whether a mutual agreement to part ways technically constitutes Anthropic pulling out unilaterally."
+      ],
+      "reason": "edge 0.401, kelly 0.91, decay 1.00, bound by balance reserve"
+    },
     {
       "ts": 1793281909690,
       "kind": "bet",
@@ -2851,54 +2920,6 @@
         "If Ship 42 or Ship 43 successfully lands on chopsticks, Ship 44 cannot be the first."
       ],
       "reason": "edge 0.01 log-odds below minimum 0.2"
-    },
-    {
-      "ts": 1793129649159,
-      "kind": "no_trade",
-      "question": "Which Starship will be the first to be caught? \u2192 Ship 43",
-      "url": "https://manifold.markets/Narnianknight/which-starship-will-be-the-first-to",
-      "market_prob": 0.25506794967602464,
-      "model_prob": 0.26,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Ship 43 (Flight 16) holds roughly a 26% chance of being the first caught, contingent on Flight 15 (Ship 42) failing or diverting its initial catch attempt.",
-      "uncertainty": "Whether Flight 15 (Ship 42) successfully lands on the chopsticks on its first attempt or is diverted to an ocean splashdown.",
-      "resolution_risk": "The criteria specify the vehicle must come to rest on chopsticks in one piece, but subsequent destruction does not invalidate resolution.",
-      "evidence_for": [
-        "Ship 43 is assigned to Flight 16 and has already undergone chopstick fit checks on Pad 2.",
-        "First catch attempts for novel upper-stage vehicles have high failure or diversion risks, giving the second vehicle (Ship 43) a significant chance to be the first successful catch."
-      ],
-      "evidence_against": [
-        "Ship 42 is assigned to Flight 15 and will have the first opportunity to attempt a tower catch.",
-        "If Ship 42 succeeds on Flight 15, Ship 43 cannot resolve YES.",
-        "This is a 10-option mutually exclusive market, dividing overall success probability among multiple ships and outcomes."
-      ],
-      "reason": "would be a longshot bet against the 26% favourite"
-    },
-    {
-      "ts": 1793125918182,
-      "kind": "no_trade",
-      "question": "Which Starship will be the first to be caught? \u2192 Ship 42",
-      "url": "https://manifold.markets/Narnianknight/which-starship-will-be-the-first-to",
-      "market_prob": 0.43238225299809174,
-      "model_prob": 0.07,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Flight 15 in Nov 2026 targets the first chopstick catch of a Starship upper stage, likely using S39. For S42 to be the first caught, early attempts on S39-S41 must fail while S42 succeeds. Given SpaceX's fast iteration, S42 specifically being the first caught is around 7%.",
-      "uncertainty": "Whether SpaceX successfully catches the upper stage on Flight 15 (S39) or Flight 16 (S40) before Ship 42 ever flies.",
-      "resolution_risk": "If Starship upper stage catch is never achieved, this option resolves NO and 'Never' or 'Other' resolves YES.",
-      "evidence_for": [
-        "Ship 42 is a planned Block 3 Starship upper stage scheduled to fly after the initial Block 3 flights.",
-        "If initial chopstick catch attempts on Ships 39, 40, and 41 fail or are aborted, Ship 42 could be the first to land successfully."
-      ],
-      "evidence_against": [
-        "Flight 15 (Nov 2026) is planned as the first upper stage catch attempt, using S39 or an earlier ship.",
-        "SpaceX typically iterates rapidly and resolves landing/catch control issues within 1-2 attempts.",
-        "This is a multiple-choice market with ~10 mutually exclusive outcomes, diluting individual ship probabilities."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
