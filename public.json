@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1793232557437,
+  "generated_ms": 1793232759123,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 0,
+      "today": 1,
       "cap": 400
     },
     "chat": {
@@ -64,6 +64,11 @@
   "net_worth": 609.78,
   "summary": "Balance M$11. Net worth M$609. 13 open positions, 5 of them closed and awaiting resolution. Brier score over 196 resolved forecasts: yours 0.132, the market's 0.082 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 91 of 196; on big disagreements, 78 of 163. Resolved bets: 135. Backing the favourite: won 34 of 46. Longshots against the favourite: won 19 of 89.\n\nPerformance and calibration remain weak on speculative, narrative-driven longshots and low-probability NO bets. You forecast worse than the market price overall. Conversely, backing favourites remains much more reliable. Recent capital was deployed into high-conviction favourites, including NO on whether John Fetterman will endorse a Republican, NO on French protest counts, YES on Djokovic, YES on Naomi Osaka, and NO on personal weight.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favourites), the Narrative Trap (allowing a compelling story to mask poor mathematical expected value), and failing to respond rapidly to significant upward price moves in YES shares when holding NO positions. Avoid over-leveraging on subjective personal judgment markets and trading micro-trader meta-markets where time decay turns unfavorable.",
   "journal": [
+    {
+      "ts": 1793232758645,
+      "kind": "screen",
+      "text": "Passed on \"Will a Republican win the Florida governorship in 2026?\" at 70%: quick estimate 65%, market 70%. Florida leans Republican, but a midterm election with an open seat makes it competitive enough that a quick read is insufficient."
+    },
     {
       "ts": 1793227615274,
       "kind": "score",
@@ -458,11 +463,6 @@
       "ts": 1793121833276,
       "kind": "screen",
       "text": "Passed on \"2026 WTA Tour Women's Tennis Matches \ud83c\udfbe \u2192 \ud83c\uddf5\ud83c\udded A. Eala (8) vs \ud83c\udde6\ud83c\uddfa T. Gibso\" at 71%: quick estimate 65%, market 71%. Eala is seeded 8th and favored against Gibson, standard tennis match up with no special edges."
-    },
-    {
-      "ts": 1793121833272,
-      "kind": "screen",
-      "text": "Escalated \"2026 WTA Tour Women's Tennis Matches \ud83c\udfbe \u2192 \ud83c\uddef\ud83c\uddf5 N. Osaka (7) vs \ud83c\uddf8\ud83c\uddf0 M. Poh\u00e1\" at 74%: quick estimate 80% backs the favourite at 74%. Osaka as the 7th seed heavily favors a win over wildcard Pohankova."
     }
   ],
   "todos": [
@@ -805,7 +805,7 @@
       "profit": 0.0,
       "prob": 0.049,
       "closed": false,
-      "days_to_close": 4.0
+      "days_to_close": 3.9
     },
     {
       "question": "Will I weigh >160lbs at the end of October?",
@@ -841,7 +841,7 @@
       "profit": 4.9,
       "prob": 0.17,
       "closed": false,
-      "days_to_close": 2.5
+      "days_to_close": 2.4
     },
     {
       "question": "2026 ATP Tour Men's Tennis Matches \ud83c\udfbe \u2192 \ud83c\uddf7\ud83c\uddf8 N. Djokovic (4) vs \ud83c\uddeb\ud83c\uddf7 U. Humbert [Basel ATP 500 \u2013 Round 1]",
@@ -2166,6 +2166,15 @@
   ],
   "screens": [
     {
+      "ts": 1793232758642,
+      "question": "Will a Republican win the Florida governorship in 2026?",
+      "url": "https://manifold.markets/Gabrielle/will-a-republican-win-the-florida-g",
+      "passed": false,
+      "market_prob": 0.7045482358747714,
+      "quick_prob": 0.65,
+      "why": "quick estimate 65%, market 70%. Florida leans Republican, but a midterm election with an open seat makes it competitive enough that a quick read is insufficient."
+    },
+    {
       "ts": 1793225433065,
       "question": "If Trump wins, will we have permanent Daylight Savings Time?",
       "url": "https://manifold.markets/BlueDragon/if-trump-wins-will-we-still-have-da",
@@ -2515,15 +2524,6 @@
       "market_prob": 0.22078563273934054,
       "quick_prob": 0.4,
       "why": "quick estimate 40%, market 22%. Netanyahu's political survival depends on coalition dynamics and ongoing judicial/security factors."
-    },
-    {
-      "ts": 1793125633894,
-      "question": "Which Starship will be the first to be caught? \u2192 Ship 43",
-      "url": "https://manifold.markets/Narnianknight/which-starship-will-be-the-first-to",
-      "passed": true,
-      "market_prob": 0.25506794967602464,
-      "quick_prob": 0.03,
-      "why": "quick estimate 3% backs the favourite at 26%. Ship 43 is even further down the production line and highly unlikely to be the first caught."
     }
   ],
   "decisions": [
