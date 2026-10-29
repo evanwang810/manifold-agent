@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1793240040597,
+  "generated_ms": 1793240517259,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 1,
+      "today": 4,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 0,
+      "today": 1,
       "cap": 54
     }
   },
@@ -64,6 +64,21 @@
   "net_worth": 609.78,
   "summary": "Balance M$11. Net worth M$610. 13 open positions, 5 of them closed and awaiting resolution. Brier score over 200 resolved forecasts: yours 0.134, the market's 0.082 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 91 of 200; on big disagreements, 78 of 167. Resolved bets: 135. Backing the favourite: won 34 of 46. Longshots against the favourite: won 19 of 89.\n\nPerformance and calibration remain weak on speculative, narrative-driven longshots and low-probability NO bets. You forecast worse than the market price overall. Conversely, backing favourites remains much more reliable. Recent capital was deployed into high-conviction favourites, including NO on whether John Fetterman will endorse a Republican, NO on French protest counts, YES on Djokovic, YES on Naomi Osaka, and NO on personal weight. \n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favourites), the Narrative Trap (allowing a compelling story to mask poor mathematical expected value), and failing to respond rapidly to significant upward price moves in YES shares when holding NO positions. Avoid over-leveraging on subjective personal judgment markets and trading micro-trader meta-markets where time decay turns unfavorable. Avoid balance reserve bottlenecks that floor trade sizes to zero when capital is tied up awaiting resolutions.",
   "journal": [
+    {
+      "ts": 1793240516393,
+      "kind": "analysis",
+      "text": "Analysed \"Fable 5.5 is released by the end of october?\": market 9%, my 18% (medium). No trade, would be a longshot bet against the 9% favourite."
+    },
+    {
+      "ts": 1793240253786,
+      "kind": "screen",
+      "text": "Passed on \"Bitcoin price reaches 85k USD by the end of October\" at 21%: quick estimate 85%, market 21%. Bitcoin is already trading near or above this level and only has days left, making YES highly likely."
+    },
+    {
+      "ts": 1793240253783,
+      "kind": "screen",
+      "text": "Escalated \"Fable 5.5 is released by the end of october?\" at 9%: quick estimate 1% backs the favourite at 9%. Anthropic does not have a product named Fable 5.5, making this a hallucinated or defunct market."
+    },
     {
       "ts": 1793234896773,
       "kind": "score",
@@ -448,21 +463,6 @@
       "ts": 1793124304361,
       "kind": "score",
       "text": "Scored 195 resolved forecasts: my Brier 0.132, the market's 0.082. Closer than the market on 91/195."
-    },
-    {
-      "ts": 1793122424716,
-      "kind": "desk",
-      "text": "Desk: Nothing has changed since my last turn; spendable cash is at M$1 after filling a small order on Naomi Osaka, and active positions remain steady while awaiting market resolutions."
-    },
-    {
-      "ts": 1793122279524,
-      "kind": "position",
-      "text": "Opened 3 YES on \"2026 WTA Tour Women's Tennis Matches \ud83c\udfbe \u2192 \ud83c\uddef\ud83c\uddf5 N. Osaka (7) vs \ud83c\uddf8\ud83c\uddf0 M. Poh\u00e1nkov\u00e1 (WC)\" at 74%, M$2 in."
-    },
-    {
-      "ts": 1793122096224,
-      "kind": "trade",
-      "text": "Limit order M$2 YES on \"2026 WTA Tour Women's Tennis Matches \ud83c\udfbe \u2192 \ud83c\uddef\ud83c\uddf5 N. Osaka (7) vs \ud83c\uddf8\ud83c\uddf0 M. Poh\u00e1\" at 74%, my estimate 88% (medium). Because: Naomi Osaka enters as a strong favorite at home in Tokyo following an impressive straight-sets Round 1 win against Jasmine Paolini, while Poh\u00e1nkov\u00e1 is a wild card entrant."
     }
   ],
   "todos": [
@@ -2166,6 +2166,24 @@
   ],
   "screens": [
     {
+      "ts": 1793240253783,
+      "question": "Bitcoin price reaches 85k USD by the end of October",
+      "url": "https://manifold.markets/rg26/bitcoin-price-reaches-85k-usd-by-th",
+      "passed": false,
+      "market_prob": 0.20550428682718405,
+      "quick_prob": 0.85,
+      "why": "quick estimate 85%, market 21%. Bitcoin is already trading near or above this level and only has days left, making YES highly likely."
+    },
+    {
+      "ts": 1793240253779,
+      "question": "Fable 5.5 is released by the end of october?",
+      "url": "https://manifold.markets/EvanWang11j3/fable-55-is-released-by-the-end-of",
+      "passed": true,
+      "market_prob": 0.09000000000000002,
+      "quick_prob": 0.01,
+      "why": "quick estimate 1% backs the favourite at 9%. Anthropic does not have a product named Fable 5.5, making this a hallucinated or defunct market."
+    },
+    {
       "ts": 1793232758642,
       "question": "Will a Republican win the Florida governorship in 2026?",
       "url": "https://manifold.markets/Gabrielle/will-a-republican-win-the-florida-g",
@@ -2506,27 +2524,33 @@
       "market_prob": 0.12133102709007633,
       "quick_prob": 0.05,
       "why": "quick estimate 5% backs the favourite at 12%. Ship 44 is too far ahead in production sequence to predict accurately right now."
-    },
-    {
-      "ts": 1793125633902,
-      "question": "Israel's next Prime minister \u2192 Gadi Eisenkot",
-      "url": "https://manifold.markets/dkgsAiogjertg/israels-next-prime-minister",
-      "passed": false,
-      "market_prob": 0.586096688645445,
-      "quick_prob": 0.15,
-      "why": "quick estimate 15%, market 59%. Eisenkot is a longshot contender given current Knesset polling and center-left party fragmentation."
-    },
-    {
-      "ts": 1793125633898,
-      "question": "Israel's next Prime minister \u2192 Benjamin Netanyahu",
-      "url": "https://manifold.markets/dkgsAiogjertg/israels-next-prime-minister",
-      "passed": false,
-      "market_prob": 0.22078563273934054,
-      "quick_prob": 0.4,
-      "why": "quick estimate 40%, market 22%. Netanyahu's political survival depends on coalition dynamics and ongoing judicial/security factors."
     }
   ],
   "decisions": [
+    {
+      "ts": 1793240516390,
+      "kind": "no_trade",
+      "question": "Fable 5.5 is released by the end of october?",
+      "url": "https://manifold.markets/EvanWang11j3/fable-55-is-released-by-the-end-of",
+      "market_prob": 0.09000000000000002,
+      "model_prob": 0.18,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With October 29 underway and no announcement on anthropic.com/news, the remaining window before the Oct 31 deadline is down to ~2.5 days. Because October 31 falls on a Saturday and Anthropic rarely issues major releases on weekends, the effective window is restricted to Thursday/Friday. Lowering probability to 18%.",
+      "uncertainty": "Whether Anthropic intends to publish an official release post on anthropic.com/news within the next 36 hours.",
+      "resolution_risk": "A partner rollout or developer access grant that is not formally posted on anthropic.com/news before the deadline would resolve NO.",
+      "evidence_for": [
+        "Mid-October partner leaks suggested Anthropic was preparing a Fable 5.5 release.",
+        "Anthropic occasionally launches models on short notice without prior public announcement."
+      ],
+      "evidence_against": [
+        "Today is October 29 and no announcement has appeared on anthropic.com/news.",
+        "Only ~2.5 days remain before the October 31 PST deadline.",
+        "October 31 is a Saturday, and major model releases rarely occur over the weekend."
+      ],
+      "reason": "would be a longshot bet against the 9% favourite"
+    },
     {
       "ts": 1793225540469,
       "kind": "no_trade",
@@ -2849,29 +2873,6 @@
       "evidence_for": [],
       "evidence_against": [],
       "reason": "desk buy; edge 0.130, kelly 0.72, decay 1.00, bound by balance reserve"
-    },
-    {
-      "ts": 1793077291533,
-      "kind": "no_trade",
-      "question": "Will the Democrats Outperform their 2018 Midterm Results? [Win more than 235 seats in 2026]",
-      "url": "https://manifold.markets/HillaryClinton/will-the-democrats-outperform-their",
-      "market_prob": 0.48783464432039375,
-      "model_prob": 0.42,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "While DDHQ projects 238 seats, general model aggregations giving an 85% chance at a majority (218+) place the median Dem seat count around 228-232. Winning >235 seats requires an outcome in the upper tail of possibilities, making it a ~42% event.",
-      "uncertainty": "The exact distribution of tight battleground House district outcomes and polling error direction.",
-      "resolution_risk": "Disagreements on whether independent winners intend to caucus with Democrats.",
-      "evidence_for": [
-        "DDHQ projected 238 Democratic House seats on Oct 26, 2026.",
-        "Call the Map gives Democrats an 85% probability of winning the House majority."
-      ],
-      "evidence_against": [
-        "Winning >235 seats requires a massive sweep well above the 218-seat majority threshold.",
-        "An 85% chance at 218+ seats implies a median around 228-232 seats, putting >235 seats in the upper tail of model outcomes."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
