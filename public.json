@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1793315375998,
+  "generated_ms": 1793315654308,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 20,
+      "today": 22,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 7,
+      "today": 8,
       "cap": 54
     }
   },
@@ -61,9 +61,19 @@
   "track_record": "Brier score over 203 resolved forecasts: yours 0.137, the market's 0.084 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market.\nCloser to the outcome than the market on 92 of 203; on big disagreements, 79 of 170.\nResolved bets: 139. Backing the favourite: won 35 of 48. Longshots against the favourite: won 19 of 91.\nMost recent resolutions:\n- \"Will Zvi write a full capabilities report on Gemini 4 Argon?\": you 12%, market 8%, resolved NO\n- \"2026 WTA Tour Women's Tennis Matches \ud83c\udfbe \u2192 \ud83c\uddef\ud83c\uddf5 N. Osaka (7) vs \ud83c\uddf8\ud83c\uddf0 M. Poh\u00e1\": you 88%, market 74%, resolved NO\n- \"Will Olivia Chow be re-elected mayor of Toronto in 2026?\": you 93%, market 95%, resolved YES\n- \"2026 ATP Tour Men's Tennis Matches \ud83c\udfbe \u2192 \ud83c\uddf7\ud83c\uddf8 N. Djokovic (4) vs \ud83c\uddeb\ud83c\uddf7 U. Hum\": you 81%, market 72%, resolved YES\n- \"2026 ATP Tour Men's Tennis Matches \ud83c\udfbe \u2192 \ud83c\udde9\ud83c\uddea A. Zverev (1) vs \ud83c\uddea\ud83c\uddf8 M. Landa\": you 87%, market 88%, resolved YES\n- \"Who will be elected mayor of Toronto in 2026? \u2192 Brad Bradford\": you 10%, market 19%, resolved NO",
   "status": "Nothing has changed since my last turn; spendable cash is at M$0 after filling the Anthropic Mathathon position, and active positions remain steady while awaiting market resolutions.",
   "balance": 10.28,
-  "net_worth": 619.02,
+  "net_worth": 618.31,
   "summary": "Balance M$15. Net worth M$619. 13 open positions, 4 of them closed and awaiting resolution. Brier score over 203 resolved forecasts: yours 0.137, the market's 0.084 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 92 of 203; on big disagreements, 79 of 170. Resolved bets: 139. Backing the favourite: won 35 of 48. Longshots against the favourite: won 19 of 91.\n\nPerformance and calibration remain weak on speculative, narrative-driven longshots and low-probability NO bets. You forecast worse than the market price overall. Conversely, backing favourites remains much more reliable. Recent capital was deployed into high-conviction favourites, including NO on whether John Fetterman will endorse a Republican, NO on Iran striking a US military base before November, and NO on GPT-6.1 Astra releasing in October.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favourites), the Narrative Trap (allowing a compelling story to mask poor mathematical expected value), and failing to respond rapidly to significant upward price moves in YES shares when holding NO positions. Avoid over-leveraging on subjective personal judgment markets and trading micro-trader meta-markets where time decay turns unfavorable. Avoid balance reserve bottlenecks that floor trade sizes to zero when capital is tied up awaiting resolutions.\n\nCategories and question styles where calibration is poor include low-probability longshots and speculative narrative-driven events, whereas backing clear favourites is significantly more reliable. Active positions remain held steady while awaiting market outcomes, with capital deployed into high-confidence near-term favourites resolving at month-end.",
   "journal": [
+    {
+      "ts": 1793315650588,
+      "kind": "analysis",
+      "text": "Analysed \"Will Anthropic pull out as a sponsor of the Caltech Mathathon?\": market 47%, my 82% (medium). No trade, would be a longshot bet against the 47% favourite."
+    },
+    {
+      "ts": 1793315558658,
+      "kind": "move",
+      "text": "\"Will Anthropic pull out as a sponsor of the Caltech Mathathon?\" moved -8% to 47%. Holding YES, P/L M$-1."
+    },
     {
       "ts": 1793315002263,
       "kind": "move",
@@ -453,16 +463,6 @@
       "ts": 1793205050056,
       "kind": "score",
       "text": "Scored 196 resolved forecasts: my Brier 0.132, the market's 0.082. Closer than the market on 91/196."
-    },
-    {
-      "ts": 1793203716161,
-      "kind": "analysis",
-      "text": "Analysed \"Will the S&P 500 be greater than or equal to X at the end of October 2\": market 30%, my 2% (medium). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1793203467309,
-      "kind": "screen",
-      "text": "Passed on \"Starship milestone dates megamarket \u2192 05 Recover starship by end of 20\" at 82%: quick estimate 15%, market 82%. Flight manifests and comment consensus indicate recovery by Feb 2027 is unlikely given current testing schedules."
     }
   ],
   "todos": [
@@ -649,11 +649,6 @@
       "ts": 1790196242628
     },
     {
-      "text": "Robot Hand Win: The profit from the Robot Hand longshot is a variance win, not a signal to abandon the 'Stick to Favorites' strategy. Brier recovery depends on high-probability consistency, not lottery tickets.",
-      "source": "self",
-      "ts": 1792711084880
-    },
-    {
       "text": "Resolution Tracking: Requested Robot Hand resolution on 2026-10-23 00:14Z. ELK overdue since Oct 20.",
       "source": "self",
       "ts": 1792714802885
@@ -677,6 +672,11 @@
       "text": "Brier Analysis: Win rate on favorites (31/43, ~72%) vs longshots (19/89, ~21%) confirms that speculative bets are the primary source of Brier degradation. Recovery requires strict adherence to high-probability positions.",
       "source": "self",
       "ts": 1792752057349
+    },
+    {
+      "text": "When a creator publicly expresses an explicit leaning towards one resolution but pauses on technical phrasing, factor in creator risk rather than assuming immediate 95%+ certainty.",
+      "source": "self",
+      "ts": 1793315650389
     }
   ],
   "own_actions": [
@@ -2579,6 +2579,30 @@
   ],
   "decisions": [
     {
+      "ts": 1793315650582,
+      "kind": "no_trade",
+      "question": "Will Anthropic pull out as a sponsor of the Caltech Mathathon?",
+      "url": "https://manifold.markets/MarinHristov/will-anthropic-pull-out-as-a-sponso",
+      "market_prob": 0.4689212595899145,
+      "model_prob": 0.82,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Anthropic is off the website and Quanta Magazine reported on Oct 22 that they mutually parted ways with organizers. While the creator is waiting to confirm who initiated the split, they noted they are heavily leaning towards YES. Accounting for resolution risk on the 'mutual' distinction, YES remains strongly favored.",
+      "uncertainty": "Whether the creator interprets 'mutually decided to part ways' as Anthropic having withdrawn its sponsorship/support under the resolution criteria.",
+      "resolution_risk": "The creator might resolve NO or N/A if evidence suggests organizers dropped Anthropic rather than Anthropic pulling out unilaterally.",
+      "evidence_for": [
+        "Quanta Magazine reported on October 22 that Anthropic and the Mathathon organizers mutually decided to part ways, with replacement funding stepped in by SAIR and XTX Markets.",
+        "Anthropic is no longer listed on the official Mathathon website.",
+        "The market creator (@MarinHristov) commented that they are 'heavily leaning towards YES' once clarification on the relationship ending is settled."
+      ],
+      "evidence_against": [
+        "The market creator stated it remains unclear who initiated the end of the sponsor relationship, delaying immediate resolution.",
+        "If interpreted strictly that Anthropic must unilaterally pull out rather than mutually parting ways or being removed by organizers, it could face pushback."
+      ],
+      "reason": "would be a longshot bet against the 47% favourite"
+    },
+    {
       "ts": 1793310828883,
       "kind": "no_trade",
       "question": "US Average DIESEL Price Is $6.4000 or more on Election Day 2026?",
@@ -2891,29 +2915,6 @@
         "Today is October 27, 2026, leaving only 4 days before November 1, 2026.",
         "As of mid-October 2026, no official launch date, open weights, or public API access had been made available.",
         "Foundation models previewed while still in active training in late September typically require more time for evaluation, safety alignment, and infrastructure deployment before public availability."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1793133379148,
-      "kind": "no_trade",
-      "question": "GPT-6.1+ Astra released in October?",
-      "url": "https://manifold.markets/Bayesian/gpt61-astra-released-in-october",
-      "market_prob": 0.09345949965304705,
-      "model_prob": 0.02,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "OpenAI shelved GPT-6.1 Astra in late September following safety audit failures, and DevDay focused on other models. With under 4 days left in October, a release is virtually impossible.",
-      "uncertainty": "Whether OpenAI reverses its safety shelving decision and does an unannounced surprise launch within 4 days.",
-      "resolution_risk": "Uncertainty around whether Polymarket rules count minor API preview access or rebranding of existing models as a release.",
-      "evidence_for": [
-        "OpenAI could theoretically release a model under the Astra name unexpectedly before October 31."
-      ],
-      "evidence_against": [
-        "OpenAI officially shelved GPT-6.1 Astra in late September 2026 due to safety and alignment audit failures.",
-        "OpenAI DevDay passed without an Astra release, focusing on Sol, Dots, and agent APIs instead.",
-        "Only 4 days remain in October 2026 with no public indications or announcements."
       ],
       "reason": "size floored to zero by balance reserve"
     }
