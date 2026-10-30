@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1793388213159,
+  "generated_ms": 1793388412021,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 24,
+      "today": 25,
       "cap": 400
     },
     "chat": {
@@ -64,6 +64,16 @@
   "net_worth": 624.46,
   "summary": "Balance M$10. Net worth M$624. 14 open positions, 4 of them closed and awaiting resolution. Brier score over 203 resolved forecasts: yours 0.137, the market's 0.084 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 92 of 203; on big disagreements, 79 of 170. Resolved bets: 139. Backing the favourite: won 35 of 48. Longshots against the favourite: won 19 of 91.\n\nPerformance and calibration remain weak on speculative, narrative-driven longshots and low-probability NO bets. You forecast worse than the market price overall. Conversely, backing favourites remains much more reliable. Recent capital was deployed into high-conviction favourites and near-term month-end resolutions, including NO on whether Iran will strike a US military base before November, NO on GPT-6.1 Astra releasing in October, and YES on Anthropic pulling out as a sponsor of the Caltech Mathathon. Active positions are held steady while awaiting resolutions, though some positions like the Anthropic sponsorship have experienced downward price movement against us. Spendable cash has repeatedly hit zero or been limited, causing balance reserves to floor potential trade sizes to zero.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favourites), the Narrative Trap (allowing a compelling story to mask poor mathematical expected value), and failing to respond rapidly to significant upward price moves in YES shares when holding NO positions. Avoid over-leveraging on subjective personal judgment markets and trading micro-trader meta-markets where time decay turns unfavorable. Avoid balance reserve bottlenecks that floor trade sizes to zero when capital is tied up awaiting resolutions.\n\nCategories and question styles where calibration is poor include low-probability longshots and speculative narrative-driven events, whereas backing clear favourites is significantly more reliable. Active positions remain held steady while awaiting market outcomes, with capital deployed into high-confidence near-term favourites resolving at month-end.",
   "journal": [
+    {
+      "ts": 1793388410716,
+      "kind": "screen",
+      "text": "Passed on \"Will Binance officially announce the resumption of crypto withdrawals \" at 52%: quick estimate 50%, market 52%. Pure headline-driven short-term crypto exchange status with no verifiable public information available beyond the prompt."
+    },
+    {
+      "ts": 1793388410710,
+      "kind": "screen",
+      "text": "Passed on \"Diesel export ban before midterms?\" at 4%: quick estimate 12%, market 4%. A diesel export ban before midterms is being discussed but lacks concrete executive action or legislation, matching past empty threats."
+    },
     {
       "ts": 1793386710220,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1793299611709,
       "kind": "analysis",
       "text": "Analysed \"Will MNX commission a new longform piece about AI by a Manifold user b\": market 19%, my 18% (medium). No trade, edge 0.07 log-odds below minimum 0.2."
-    },
-    {
-      "ts": 1793299611657,
-      "kind": "trade",
-      "text": "Limit order M$5 YES on \"Will Anthropic pull out as a sponsor of the Caltech Mathathon?\" at 56%, my estimate 96% (high). Because: Quanta Magazine reported on Oct 22 that Anthropic and organizers mutually decided to part ways, and Anthropic is no longer listed on the website. This satisfies the sponsorship withdrawal criteria."
-    },
-    {
-      "ts": 1793299356917,
-      "kind": "screen",
-      "text": "Passed on \"How many parameters does Grok 3 have? \u2192 Active params >700B\" at 9%: quick estimate 15%, market 9%. Active parameters exceeding 700B is extremely large and unlikely even for a 100k H100 cluster model given standard scaling laws."
     }
   ],
   "todos": [
@@ -831,7 +831,7 @@
       "profit": 7.4,
       "prob": 0.101,
       "closed": false,
-      "days_to_close": 0.7
+      "days_to_close": 0.6
     },
     {
       "question": "Will Python add `{:}`, `{,}` and maybe `(,)` in or before 3.15 (October 2026)?",
@@ -2212,6 +2212,24 @@
   ],
   "screens": [
     {
+      "ts": 1793388410710,
+      "question": "Will Binance officially announce the resumption of crypto withdrawals before November 1, 2026, 12:36 UTC?",
+      "url": "https://manifold.markets/IbrahimElgoumrie/will-binance-officially-announce-th",
+      "passed": false,
+      "market_prob": 0.5151015299104809,
+      "quick_prob": 0.5,
+      "why": "quick estimate 50%, market 52%. Pure headline-driven short-term crypto exchange status with no verifiable public information available beyond the prompt."
+    },
+    {
+      "ts": 1793388410704,
+      "question": "Diesel export ban before midterms?",
+      "url": "https://manifold.markets/Balasar/diesel-export-ban-before-midterms",
+      "passed": false,
+      "market_prob": 0.0406621400772079,
+      "quick_prob": 0.12,
+      "why": "quick estimate 12%, market 4%. A diesel export ban before midterms is being discussed but lacks concrete executive action or legislation, matching past empty threats."
+    },
+    {
       "ts": 1793384685292,
       "question": "Who will finish bottom 3 in Octobers Masters League? \u2192 Muskat_fan",
       "url": "https://manifold.markets/JasonMendoza2008/who-will-finish-bottom-3-in-october",
@@ -2552,24 +2570,6 @@
       "market_prob": 0.5833646252975137,
       "quick_prob": 0.01,
       "why": "quick estimate 1%, market 58%. The S&P 500 would need an implausibly massive surge in two days to reach 7700 from current levels."
-    },
-    {
-      "ts": 1793295589089,
-      "question": "CI2026: Will the World Economic Forum elect Christine Lagarde in November?",
-      "url": "https://manifold.markets/FrankfurtSchool/ci2026-will-the-world-economic-foru",
-      "passed": false,
-      "market_prob": 0.6499999999999999,
-      "quick_prob": 0.05,
-      "why": "quick estimate 5%, market 65%. Christine Lagarde's term as ECB President runs until 2027 and she is not expected to be elected by WEF."
-    },
-    {
-      "ts": 1793291918506,
-      "question": "Will the S&P 500 be greater than or equal to X at the end of October 2026? \u2192 S&P500 \u2265 7800",
-      "url": "https://manifold.markets/dfish/will-the-sp-500-be-greater-than-or-UndzOOCIUL",
-      "passed": true,
-      "market_prob": 0.12991862590367745,
-      "quick_prob": 0.05,
-      "why": "quick estimate 5% backs the favourite at 13%. S&P 500 reaching 7800 by October 2026 requires unrealistic sustained growth from current baseline levels."
     }
   ],
   "decisions": [
