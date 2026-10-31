@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1793465691964,
+  "generated_ms": 1793466305742,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 44,
+      "today": 47,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 8,
+      "today": 9,
       "cap": 54
     }
   },
@@ -64,6 +64,26 @@
   "net_worth": 623.36,
   "summary": "Balance M$10. Net worth M$623. 14 open positions, 4 of them closed and awaiting resolution. Brier score over 207 resolved forecasts: yours 0.139, the market's 0.086 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 95 of 207; on big disagreements, 82 of 174. Resolved bets: 139. Backing the favourite: won 35 of 48. Longshots against the favourite: won 19 of 91.\n\nPerformance and calibration remain weak on speculative, narrative-driven longshots and low-probability NO bets. You forecast worse than the market price overall. Conversely, backing favourites remains much more reliable. Recent capital was deployed into high-conviction favourites and near-term month-end resolutions, including YES on Anthropic pulling out as a sponsor of the Caltech Mathathon. Active positions are held steady while awaiting resolutions, though some positions like the Anthropic sponsorship have experienced downward price movement against us. Spendable cash is at M$0 due to the M$10 reserve, repeatedly flooring potential trade sizes to zero when capital is tied up awaiting resolutions.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favourites), the Narrative Trap (allowing a compelling story to mask poor mathematical expected value), and failing to respond rapidly to significant upward price moves in YES shares when holding NO positions. Avoid over-leveraging on subjective personal judgment markets and trading micro-trader meta-markets where time decay turns unfavorable. Avoid balance reserve bottlenecks that floor trade sizes to zero when capital is tied up awaiting resolutions.\n\nCategories and question styles where calibration is poor include low-probability longshots and speculative narrative-driven events, whereas backing clear favourites is significantly more reliable. Active positions remain held steady while awaiting market outcomes, with capital deployed into high-confidence near-term favourites resolving at month-end.",
   "journal": [
+    {
+      "ts": 1793466305338,
+      "kind": "analysis",
+      "text": "Analysed \"Which team will win the WNBA championship this season? \u2192 Atlanta Dream\": market 48%, my 38% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1793465885788,
+      "kind": "screen",
+      "text": "Passed on \"Which team will win the WNBA championship this season? \u2192 Golden State \" at 51%: quick estimate 2%, market 51%. The WNBA season has concluded and the Golden State Valkyries did not win the championship."
+    },
+    {
+      "ts": 1793465885783,
+      "kind": "screen",
+      "text": "Escalated \"Which team will win the WNBA championship this season? \u2192 Atlanta Dream\" at 48%: quick estimate 2% backs the favourite at 48%. The WNBA season has concluded and Atlanta Dream did not win the championship."
+    },
+    {
+      "ts": 1793465885778,
+      "kind": "screen",
+      "text": "Passed on \"AnyPS5 reaches 100% in October?\" at 3%: quick estimate 5%, market 3%. Today is the last day of October and there is no evidence of 100% completion in system libraries and GPU shaders."
+    },
     {
       "ts": 1793460703479,
       "kind": "score",
@@ -443,26 +463,6 @@
       "ts": 1793410876641,
       "kind": "analysis",
       "text": "Analysed \"Will the Republicans maintain a majority in the senate after the midte\": market 33%, my 38% (medium). No trade, would be a longshot bet against the 33% favourite."
-    },
-    {
-      "ts": 1793410546844,
-      "kind": "screen",
-      "text": "Escalated \"Will the Republicans maintain a majority in the senate after the midte\" at 33%: flagged: Comments correctly flag a vital ambiguity over whether a 50-50 tie counts as a Republican majority due to the VP tiebreaker."
-    },
-    {
-      "ts": 1793408832788,
-      "kind": "score",
-      "text": "Scored 204 resolved forecasts: my Brier 0.136, the market's 0.084. Closer than the market on 93/204."
-    },
-    {
-      "ts": 1793406773581,
-      "kind": "screen",
-      "text": "Passed on \"Will Lighthaven keep its cat?\" at 67%: quick estimate 65%, market 67%. This is a low-stakes community specific question relying on subjective rules and current holder estimates, not worth deep analysis."
-    },
-    {
-      "ts": 1793406773576,
-      "kind": "screen",
-      "text": "Passed on \"Saudi-Houthi ceasefire agreement before November 1?\" at 3%: quick estimate 5%, market 3%. With only one day left until November 1 and ongoing escalations, a formal bilateral ceasefire is extremely unlikely."
     }
   ],
   "todos": [
@@ -795,7 +795,7 @@
       "profit": 0.0,
       "prob": 0.049,
       "closed": false,
-      "days_to_close": 1.3
+      "days_to_close": 1.2
     },
     {
       "question": "Will I weigh >160lbs at the end of October?",
@@ -915,7 +915,7 @@
       "profit": -0.6,
       "prob": 0.5,
       "closed": false,
-      "days_to_close": 0.3
+      "days_to_close": 0.2
     }
   ],
   "trades": [
@@ -2212,6 +2212,33 @@
   ],
   "screens": [
     {
+      "ts": 1793465885783,
+      "question": "Which team will win the WNBA championship this season? \u2192 Golden State Valkyries",
+      "url": "https://manifold.markets/asmith/which-team-will-win-the-wnba-champi",
+      "passed": false,
+      "market_prob": 0.5118737848021541,
+      "quick_prob": 0.02,
+      "why": "quick estimate 2%, market 51%. The WNBA season has concluded and the Golden State Valkyries did not win the championship."
+    },
+    {
+      "ts": 1793465885778,
+      "question": "Which team will win the WNBA championship this season? \u2192 Atlanta Dream",
+      "url": "https://manifold.markets/asmith/which-team-will-win-the-wnba-champi",
+      "passed": true,
+      "market_prob": 0.47999999999999987,
+      "quick_prob": 0.02,
+      "why": "quick estimate 2% backs the favourite at 48%. The WNBA season has concluded and Atlanta Dream did not win the championship."
+    },
+    {
+      "ts": 1793465885773,
+      "question": "AnyPS5 reaches 100% in October?",
+      "url": "https://manifold.markets/Bayesian/anyps5-reaches-100-in-october",
+      "passed": false,
+      "market_prob": 0.03274051393565315,
+      "quick_prob": 0.05,
+      "why": "quick estimate 5%, market 3%. Today is the last day of October and there is no evidence of 100% completion in system libraries and GPU shaders."
+    },
+    {
       "ts": 1793458511224,
       "question": "Who will remain in masters after Octobers Masters League? \u2192 Prismatic",
       "url": "https://manifold.markets/Jack1/who-will-remain-in-masters-after-oc",
@@ -2543,36 +2570,32 @@
       "market_prob": 0.7265566258706232,
       "quick_prob": 0.85,
       "why": "quick estimate 85% backs the favourite at 73%. Gas prices would need to be unrealistically high for the 12x threshold to exceed typical Democratic House vote shares."
-    },
-    {
-      "ts": 1793421704205,
-      "question": "Will Admiral Frank \"Mitch\" Bradley be removed by any means before the 2026 Midterm Elections?",
-      "url": "https://manifold.markets/Panfilo/will-admiral-frank-mitch-bradley-be",
-      "passed": false,
-      "market_prob": 0.12833310390939037,
-      "quick_prob": 0.15,
-      "why": "quick estimate 15%, market 13%. No specific catalyst or public reporting indicates imminent removal of Admiral Bradley before the midterms."
-    },
-    {
-      "ts": 1793421704199,
-      "question": "Will Democrats win the 2026 Alaskan Governor election?",
-      "url": "https://manifold.markets/Jack1/will-democrats-win-the-2026-alaskan",
-      "passed": false,
-      "market_prob": 0.8720435174532584,
-      "quick_prob": 0.35,
-      "why": "quick estimate 35%, market 87%. Alaska uses ranked-choice voting, but a straight Democratic win is still an uphill battle without special local polling."
-    },
-    {
-      "ts": 1793421704193,
-      "question": "Will Democrats win the Texas Commissioner of Agriculture Election?",
-      "url": "https://manifold.markets/Jack1/will-democrats-win-the-texas-commis",
-      "passed": true,
-      "market_prob": 0.4799999999999998,
-      "quick_prob": 0.1,
-      "why": "quick estimate 10% backs the favourite at 48%. Texas statewide commissioner races heavily favor Republicans, making a Democratic win very unlikely."
     }
   ],
   "decisions": [
+    {
+      "ts": 1793466305333,
+      "kind": "no_trade",
+      "question": "Which team will win the WNBA championship this season? \u2192 Atlanta Dream",
+      "url": "https://manifold.markets/asmith/which-team-will-win-the-wnba-champi",
+      "market_prob": 0.47999999999999987,
+      "model_prob": 0.38,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Atlanta Dream forced Game 7 with a Game 6 win, but Game 7 takes place at Golden State's home court. Factoring in home-court advantage for a deciding Game 7, Atlanta's championship probability is estimated at 38%.",
+      "uncertainty": "The outcome of Game 7 of the 2026 WNBA Finals on October 31, 2026.",
+      "resolution_risk": "Standard sports resolution with no technical ambiguities expected.",
+      "evidence_for": [
+        "Atlanta Dream won Game 6 80-69 to force a deciding Game 7",
+        "Finished with a strong 30-14 regular season record"
+      ],
+      "evidence_against": [
+        "Game 7 is being played on the road at the Golden State Valkyries' Chase Center",
+        "Home-court advantage gives Golden State the edge in a Game 7"
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1793447719165,
       "kind": "no_trade",
@@ -2891,29 +2914,6 @@
         "Only 3.3 days remain before the 2026 midterm elections.",
         "Congressional guardrails restrict unilateral withdrawal from NATO.",
         "No major news outlet listed in the resolution criteria has reported an imminent announcement."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1793374017630,
-      "kind": "no_trade",
-      "question": "Sum (Int( trillion dollar)) market cap companies \u2192 >28.5 at end of 2026/10",
-      "url": "https://manifold.markets/ChristopherRandles/sum-int-trillion-dollar-market-cap",
-      "market_prob": 0.6589921933804488,
-      "model_prob": 0.93,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With the sum of integer trillion-dollar market caps standing at 29 as of Thursday's close, the market needs only to maintain current levels through Friday's session for >28.5 to resolve YES.",
-      "uncertainty": "Whether Friday Oct 30 market movements drop any threshold-straddling mega-cap company below a whole trillion mark.",
-      "resolution_risk": "Discrepancies or late updates on companiesmarketcap.com relative to standard market close times.",
-      "evidence_for": [
-        "Sum of integer trillion-dollar market caps reached 29 as of Thursday's close (Oct 29).",
-        "17 companies currently have a market cap over $1T, providing a strong baseline sum.",
-        "To resolve YES for >28.5, the sum only needs to stay at 29 or higher through the final trading day of October."
-      ],
-      "evidence_against": [
-        "A market decline on Friday Oct 30 could push one or more companies sitting close to an integer threshold below it, dropping the sum to 28 or lower."
       ],
       "reason": "size floored to zero by balance reserve"
     }
