@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1793571985762,
+  "generated_ms": 1793572578431,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemma-4-31b-it",
+      "active": "gemma-4-26b-a4b-it",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.6-flash",
+      "active": "gemini-3.8-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -35,7 +35,7 @@
       "cap": 400
     },
     "chat": {
-      "today": 5,
+      "today": 6,
       "cap": 400
     },
     "deep": {
@@ -51,7 +51,7 @@
     "closer": 109,
     "disagree_n": 193,
     "disagree_closer": 96,
-    "open": 105,
+    "open": 106,
     "bets": 153,
     "fav_n": 60,
     "fav_won": 46,
@@ -64,6 +64,11 @@
   "net_worth": 623.98,
   "summary": "Balance M$10. Net worth M$624. 14 open positions, 6 of them closed and awaiting resolution. Brier score over 226 resolved forecasts: yours 0.140, the market's 0.088. You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 109 of 226; on big disagreements, 96 of 193. Resolved bets: 153. Backing the favourite: won 46 of 60. Longshots against the favourite: won 21 of 93.\n\nPerformance and calibration remain weak on speculative, narrative-driven longshots and low-probability NO bets. You forecast worse than the market price overall, and your disagreements have mostly been you being wrong rather than the market. Conversely, backing favourites remains much more reliable (won 46 of 60, compared to longshots against the favourite where you won 21 of 93). Spendable cash is restricted due to balance reserve limits, which repeatedly floors potential trade sizes to zero when capital is tied up awaiting resolutions. Active positions are held steady while awaiting market outcomes, with capital deployed into high-confidence near-term favourites like Louisiana Senate and CA-4 house elections, though some positions have experienced downward price movement against us. \n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favourites), the Narrative Trap (allowing a compelling story to mask poor mathematical expected value), and failing to respond rapidly to significant upward price moves in YES shares when holding NO positions. Avoid over-leveraging on subjective personal judgment markets and trading micro-trader meta-markets where time decay turns unfavorable. Avoid balance reserve bottlenecks that floor trade sizes to zero when capital is tied up awaiting resolutions.\n\nCategories and question styles where calibration is poor include low-probability longshots and speculative narrative-driven events, whereas backing clear favourites is significantly more reliable. Active positions remain held steady while awaiting market outcomes, with capital tied up awaiting upcoming resolutions, including imminent midterm election markets.",
   "journal": [
+    {
+      "ts": 1793572206209,
+      "kind": "score",
+      "text": "Scored 226 resolved forecasts: my Brier 0.140, the market's 0.088. Closer than the market on 109/226."
+    },
     {
       "ts": 1793571984565,
       "kind": "analysis",
@@ -458,11 +463,6 @@
       "ts": 1793503316100,
       "kind": "analysis",
       "text": "Analysed \"What will happen before election day for the 2026 midterms? [Add Answe\": market 15%, my 1% (high). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1793503049639,
-      "kind": "screen",
-      "text": "Passed on \"F1 2026 Prop Bets Mexican \ud83c\uddf2\ud83c\uddfd (Mexico City) Grand Prix [LIVE, Add answe\" at 54%: quick estimate 45%, market 54%. Standard F1 race attrition prop bet dependent entirely on live race incidents, making pre-race analysis speculative."
     }
   ],
   "todos": [
@@ -862,7 +862,7 @@
       "profit": 0.1,
       "prob": 0.728,
       "closed": false,
-      "days_to_close": 1.4
+      "days_to_close": 1.3
     },
     {
       "question": "Will any part of America be under martial law during midterm elections?",
@@ -1685,6 +1685,20 @@
   ],
   "progress": [
     {
+      "start": 1793557742005,
+      "end": 1793572206218,
+      "text": "My net worth is steady at M$624. I spent my remaining cash to buy M$17 of YES on whether all 18 safe Senate seats will be won by their incumbent parties at 72%. While individual seats are nearly certain, I am accounting for the joint probability. My position on GPT-6.1+ Astra being released in October has resolved or been sold. I screened 13 markets and analyzed 5, but I passed on 3 because my balance reserve floored my position sizes to zero. I currently have M$0 in spendable cash. My Brier score remains 0.141, trailing the market's 0.088, though favourite bets have won 46 of 60. All active positions remain thesis-intact. The next thing to watch is the resolution of the Senate seats position.",
+      "nw_open": 623.76,
+      "nw_close": 623.98,
+      "score": {
+        "n": 226,
+        "model": 0.1405,
+        "market": 0.0876,
+        "fav_n": 60,
+        "fav_won": 46
+      }
+    },
+    {
       "start": 1793543184969,
       "end": 1793557742005,
       "text": "My net worth ticked up from M$623 to M$624. Cash increased to M$61, and following the resolution of the weight market where I no longer hold NO, I put available liquidity to work by buying M$51 YES on the Republican win in the 2026 Louisiana Senate election at 88%. This sits on my watchlist as a high-confidence favourite with my estimate at 94% against a 68% market. I screened 7 markets, fully analysing 1 and passing on a longshot. My track record moved to a Brier score of 0.141 against the market's 0.088 over 225 resolved forecasts, with the last two resolving at 0.142, while favourite-longshot bias shows favourite bets won 45 of 59. What is working is disciplined risk management sizing favourites, while my Brier score lag remains a challenge. The one thing worth watching next is the performance of this new Louisiana Senate position ahead of the midterms.",
@@ -1998,20 +2012,6 @@
       "text": "My net worth remains unchanged at M$610. I took no action during this window, as my active positions are steady while I await market resolutions. My spendable cash is currently M$1 above my M$10 reserve. I screened 3 markets and analyzed 1, but I passed on it because my balance reserve floored the position size to zero. My track record shows a Brier score of 0.134 against the market's 0.082 over 200 resolved forecasts, and my favorite bets have won 34 of 46. The main thing to watch is how my balance reserve continues to limit new entries.",
       "nw_open": 609.73,
       "nw_close": 609.78,
-      "score": {
-        "n": 200,
-        "model": 0.1344,
-        "market": 0.0816,
-        "fav_n": 46,
-        "fav_won": 34
-      }
-    },
-    {
-      "start": 1793208520974,
-      "end": 1793223076230,
-      "text": "My net worth ticked up one mana to M$610 in this window. With spendable cash sitting just M$1 above my reserve, I took no action this turn and my active positions remain steady while I await market resolutions. I screened six markets and fully analyzed five, but passed on all four that reached final stages: two were blocked by my balance reserve floor, one was a longshot against an eight percent favourite, and another was against a twenty-two percent favourite. My track record moved slightly over four new resolutions, logging a Brier score of 0.132 against the market's 0.082 across 204 total resolved forecasts, with favourite bets continuing to dominate at 34 wins out of 46. The one thing worth watching next is whether any upcoming resolutions free up enough cash above my reserve to let me re-enter the market.",
-      "nw_open": 608.86,
-      "nw_close": 609.73,
       "score": {
         "n": 200,
         "model": 0.1344,
