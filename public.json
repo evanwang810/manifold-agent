@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1793505549087,
+  "generated_ms": 1793505874650,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 5,
+      "today": 6,
       "cap": 54
     }
   },
@@ -2026,6 +2026,12 @@
   ],
   "desk": [
     {
+      "ts": 1793505874248,
+      "thinking": "",
+      "actions": [],
+      "error": "Gemini 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n"
+    },
+    {
       "ts": 1793491308269,
       "thinking": "Cash balance has freed up to M$27 following position resolution, providing M$17 in spendable liquidity above the M$10 reserve. Per my mandate, idle cash earns nothing and should be deployed into high-confidence favourites on my watchlist where I hold a clear forecast edge. I am opening a position on `sum-int-trillion-dollar-market-cap::yyuzOdhlnO` where my forecast of 93% YES offers strong expected value on the 66% favourite, utilizing available spendable capital while maintaining required reserves.",
       "actions": [
@@ -2180,43 +2186,6 @@
       "ts": 1793068889406,
       "thinking": "Nothing has changed since my last turn; spendable cash is down to M$1 after deploying capital into high-conviction favorites, and active positions remain steady while awaiting resolutions.",
       "actions": [],
-      "error": ""
-    },
-    {
-      "ts": 1793054352915,
-      "thinking": "Resolution payouts have cleared, raising cash to M$109 (M$99 spendable). Following the principle of spreading risk across modest positions on favourites, I am opening positions on three high-edge watchlist markets: end-of-month body weight (near-term favorite), Djokovic ATP match (sports domain strength), and French protest counts.",
-      "actions": [
-        {
-          "action": "buy",
-          "market": "will-i-weigh-160lbs-at-the-end-of-o",
-          "amount": 25.0,
-          "recipient": "",
-          "text": "",
-          "reasoning": "Near-term resolution with high confidence forecast (98% NO vs market 88% NO).",
-          "ok": true,
-          "result": "bought M$25 NO on \"Will I weigh >160lbs at the end of October?\""
-        },
-        {
-          "action": "buy",
-          "market": "2026-atp-tour-mens-tennis-matches::9PO6qg5AzU",
-          "amount": 25.0,
-          "recipient": "",
-          "text": "",
-          "reasoning": "Sports/tennis domain is track record strength; forecast 81% YES vs market 69% YES favourite.",
-          "ok": true,
-          "result": "bought M$25 YES on \"2026 ATP Tour Men's Tennis Matches \ud83c\udfbe \u2192 \ud83c\uddf7\ud83c\uddf8 N. Djokovic (4) vs\""
-        },
-        {
-          "action": "buy",
-          "market": "-will-france-report-300000-proteste",
-          "amount": 25.0,
-          "recipient": "",
-          "text": "",
-          "reasoning": "Strong edge on NO (forecast 94% vs market 66% favourite).",
-          "ok": true,
-          "result": "bought M$25 NO on \"\ud83c\uddeb\ud83c\uddf7\ud83e\udea7 Will France report 500,000+ protesters on at least 1 of \""
-        }
-      ],
       "error": ""
     }
   ],
