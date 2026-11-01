@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1793513910874,
+  "generated_ms": 1793514226782,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -31,11 +31,11 @@
   },
   "usage": {
     "fast": {
-      "today": 32,
+      "today": 33,
       "cap": 400
     },
     "chat": {
-      "today": 1,
+      "today": 2,
       "cap": 400
     },
     "deep": {
@@ -64,6 +64,11 @@
   "net_worth": 624.13,
   "summary": "Balance M$11. Net worth M$624. 14 open positions, 8 of them closed and awaiting resolution. Brier score over 217 resolved forecasts: yours 0.140, the market's 0.085 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 102 of 217; on big disagreements, 89 of 184. Resolved bets: 143. Backing the favourite: won 39 of 52. Longshots against the favourite: won 19 of 91.\n\nPerformance and calibration remain weak on speculative, narrative-driven longshots and low-probability NO bets. You forecast worse than the market price overall. Conversely, backing favourites remains much more reliable. Spendable cash is restricted due to reserve limits, which repeatedly floors potential trade sizes to zero when capital is tied up awaiting resolutions. Active positions are held steady while awaiting market outcomes, with capital deployed into high-confidence near-term favourites resolving at month-end, though some positions like the Anthropic sponsorship have experienced downward price movement against us.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favourites), the Narrative Trap (allowing a compelling story to mask poor mathematical expected value), and failing to respond rapidly to significant upward price moves in YES shares when holding NO positions. Avoid over-leveraging on subjective personal judgment markets and trading micro-trader meta-markets where time decay turns unfavorable. Avoid balance reserve bottlenecks that floor trade sizes to zero when capital is tied up awaiting resolutions.\n\nCategories and question styles where calibration is poor include low-probability longshots and speculative narrative-driven events, whereas backing clear favourites is significantly more reliable. Active positions remain held steady while awaiting market outcomes, with capital tied up awaiting month-end resolutions.",
   "journal": [
+    {
+      "ts": 1793514100228,
+      "kind": "screen",
+      "text": "Passed on \"Will $500 Obamacare rebate checks start going out by Oct. 31 2026? (AC\" at 89%: quick estimate 35%, market 89%. Today is Nov 1, 2026, past the Oct 31 deadline, and no major news of actual disbursements has surfaced."
+    },
     {
       "ts": 1793512246933,
       "kind": "score",
@@ -458,11 +463,6 @@
       "ts": 1793484669302,
       "kind": "analysis",
       "text": "Analysed \"When will Rubin come out? \u2192 Before October 2026\": market 82%, my 4% (high). No trade, would be a longshot bet against the 82% favourite."
-    },
-    {
-      "ts": 1793484536379,
-      "kind": "screen",
-      "text": "Passed on \"NFL Week 8 - Prop Bets \u2192 Any team scores 24+ points before halftime\" at 74%: quick estimate 45%, market 74%. Standard NFL statistical prop depending on high variance offensive outputs, not worth deep analysis."
     }
   ],
   "todos": [
@@ -1688,6 +1688,20 @@
   ],
   "progress": [
     {
+      "start": 1793499573934,
+      "end": 1793514100228,
+      "text": "My net worth remains unchanged at M$624. I screened 18 markets and moved 4 to full analysis. I passed on two of those: one had its size floored to zero by my balance reserve, and the other was a longshot bet against a 91% favorite. One analysis failed due to model errors. Two forecasts resolved during this window, which improved my Brier score to 0.136, though it is still above the market's 0.086 over 218 resolved forecasts. My favorite bets have won 39 of 52. While my Brier score is moving in the right direction, I need to keep an eye on those model errors.",
+      "nw_open": 624.13,
+      "nw_close": 624.13,
+      "score": {
+        "n": 218,
+        "model": 0.1398,
+        "market": 0.0857,
+        "fav_n": 52,
+        "fav_won": 39
+      }
+    },
+    {
       "start": 1793485057143,
       "end": 1793499573934,
       "text": "My net worth increased by M$1 to M$624. Seven more forecasts resolved with a Brier of 0.138, leaving my overall Brier at 0.136 compared to the market's 0.085. I screened 40 markets and fully analyzed 8. I passed on 7 of these, as five were floored to zero by my balance reserve and two were longshots against favorites. I closed my position on Iran striking a US military base for a M$+1 profit. Using M$17 of available liquidity, I bought M$16 NO on America being under martial law during midterm elections at 91%, because no explicit legal declaration has occurred or is planned. My favorite bets are working, winning 39 of 52. I will watch the martial law position next.",
@@ -2008,20 +2022,6 @@
         "fav_n": 46,
         "fav_won": 34
       }
-    },
-    {
-      "start": 1793150566420,
-      "end": 1793165073629,
-      "text": "Net worth ticked up slightly from six hundred eight to six hundred nine manas in this quiet window. The screening phase evaluated just one market, but zero went on to full analysis. My track record holds steady at a Brier score of point one three two against the market's point zero eight two across one hundred ninety six resolved forecasts, with favorite bets having won thirty four of forty six. With almost nothing happening on the analytical front, this was a slow stretch of holding steady rather than making new moves. What looks like it is working is sticking to the favorite bets discipline, while what is not working is the current lack of high-conviction screening opportunities. The one thing worth watching next is whether the market flow picks up enough to trigger full analysis on incoming candidates.",
-      "nw_open": 608.21,
-      "nw_close": 608.93,
-      "score": {
-        "n": 196,
-        "model": 0.1317,
-        "market": 0.0815,
-        "fav_n": 46,
-        "fav_won": 34
-      }
     }
   ],
   "desk": [
@@ -2190,6 +2190,15 @@
     }
   ],
   "screens": [
+    {
+      "ts": 1793514100221,
+      "question": "Will $500 Obamacare rebate checks start going out by Oct. 31 2026? (ACA)",
+      "url": "https://manifold.markets/yeeta/will-500-obamacare-rebate-checks-st",
+      "passed": false,
+      "market_prob": 0.89,
+      "quick_prob": 0.35,
+      "why": "quick estimate 35%, market 89%. Today is Nov 1, 2026, past the Oct 31 deadline, and no major news of actual disbursements has surfaced."
+    },
     {
       "ts": 1793510389002,
       "question": "Will Elon Musk and Donald Trump publicly support different candidates in any 2026 election?",
@@ -2540,15 +2549,6 @@
       "market_prob": 0.675595853457667,
       "quick_prob": 0.52,
       "why": "quick estimate 52%, market 68%. The underlying condition is already met according to creator comments, making this a straight bet on Senate control which is a standard tossup."
-    },
-    {
-      "ts": 1793491964464,
-      "question": "Will Democrats win a majority in the U.S. House of Representatives in the 2026 midterm elections?",
-      "url": "https://manifold.markets/winnerkarthik/will-democrats-win-a-majority-in-th-E55l2cIcuS",
-      "passed": true,
-      "market_prob": 0.95,
-      "quick_prob": 0.52,
-      "why": "flagged: The close margin and conflicting model aggregators like DDHQ vs Kalshi make it worth checking the current polling data."
     }
   ],
   "decisions": [
