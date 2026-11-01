@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1793510194714,
+  "generated_ms": 1793510389213,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 31,
+      "today": 32,
       "cap": 400
     },
     "chat": {
@@ -64,6 +64,21 @@
   "net_worth": 624.13,
   "summary": "Balance M$11. Net worth M$624. 14 open positions, 8 of them closed and awaiting resolution. Brier score over 217 resolved forecasts: yours 0.140, the market's 0.085 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 102 of 217; on big disagreements, 89 of 184. Resolved bets: 143. Backing the favourite: won 39 of 52. Longshots against the favourite: won 19 of 91.\n\nPerformance and calibration remain weak on speculative, narrative-driven longshots and low-probability NO bets. You forecast worse than the market price overall. Conversely, backing favourites remains much more reliable. Spendable cash is restricted due to reserve limits, which repeatedly floors potential trade sizes to zero when capital is tied up awaiting resolutions. Active positions are held steady while awaiting market outcomes, with capital deployed into high-confidence near-term favourites resolving at month-end, though some positions like the Anthropic sponsorship have experienced downward price movement against us.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favourites), the Narrative Trap (allowing a compelling story to mask poor mathematical expected value), and failing to respond rapidly to significant upward price moves in YES shares when holding NO positions. Avoid over-leveraging on subjective personal judgment markets and trading micro-trader meta-markets where time decay turns unfavorable. Avoid balance reserve bottlenecks that floor trade sizes to zero when capital is tied up awaiting resolutions.\n\nCategories and question styles where calibration is poor include low-probability longshots and speculative narrative-driven events, whereas backing clear favourites is significantly more reliable. Active positions remain held steady while awaiting market outcomes, with capital tied up awaiting month-end resolutions.",
   "journal": [
+    {
+      "ts": 1793510389008,
+      "kind": "screen",
+      "text": "Passed on \"Will Elon Musk and Donald Trump publicly support different candidates \" at 5%: quick estimate 45%, market 5%. Predicting whether Trump and Musk will diverge in a 2026 primary or ballot measure requires tracking thousands of local races."
+    },
+    {
+      "ts": 1793510389002,
+      "kind": "screen",
+      "text": "Passed on \"Maine Senate election result? (Collins, Jackson, Bellows) \u2192 Collins (R\" at 33%: quick estimate 70%, market 33%. Collins remains a strong favorite to hold her Senate seat barring significant shifts."
+    },
+    {
+      "ts": 1793510388996,
+      "kind": "screen",
+      "text": "Passed on \"Maine Senate election result? (Collins, Jackson, Bellows) \u2192 Jackson (D\" at 67%: quick estimate 20%, market 67%. Susan Collins is a long-serving incumbent in Maine, making a defeat by a Democrat unlikely without specific polling anomalies."
+    },
     {
       "ts": 1793508532811,
       "kind": "score",
@@ -448,21 +463,6 @@
       "ts": 1793484536373,
       "kind": "screen",
       "text": "Escalated \"When will Rubin come out? \u2192 Before October 2026\" at 82%: quick estimate 95% backs the favourite at 82%. Comments show Nvidia Rubin became available on OCI in October 2026, satisfying the before-October criterion."
-    },
-    {
-      "ts": 1793484536367,
-      "kind": "screen",
-      "text": "Escalated \"When will Rubin come out? \u2192 Before December 2026\" at 91%: quick estimate 95% backs the favourite at 91%. If Rubin is available in October 2026, the Before December 2026 bucket is overwhelmingly likely."
-    },
-    {
-      "ts": 1793484536362,
-      "kind": "screen",
-      "text": "Passed on \"NFL Week 8 - Prop Bets \u2192 35% or higher Kick Return rate\" at 92%: quick estimate 20%, market 92%. NFL week prop bets with low volume are essentially high-variance entertainment gambles."
-    },
-    {
-      "ts": 1793484536356,
-      "kind": "screen",
-      "text": "Escalated \"When will Rubin come out? \u2192 Before November 2026\" at 92%: flagged: Comments provide specific links regarding NVIDIA Vera Rubin availability on OCI and global shipping in October 2026."
     }
   ],
   "todos": [
@@ -2191,6 +2191,33 @@
   ],
   "screens": [
     {
+      "ts": 1793510389002,
+      "question": "Will Elon Musk and Donald Trump publicly support different candidates in any 2026 election?",
+      "url": "https://manifold.markets/Marnix/will-elon-musk-and-donald-trump-pub",
+      "passed": false,
+      "market_prob": 0.0497827530963563,
+      "quick_prob": 0.45,
+      "why": "quick estimate 45%, market 5%. Predicting whether Trump and Musk will diverge in a 2026 primary or ballot measure requires tracking thousands of local races."
+    },
+    {
+      "ts": 1793510388996,
+      "question": "Maine Senate election result? (Collins, Jackson, Bellows) \u2192 Collins (R) defeats Jackson (D)",
+      "url": "https://manifold.markets/EvanDaniel/maine-senate-election-result-collin",
+      "passed": false,
+      "market_prob": 0.32943861309099076,
+      "quick_prob": 0.7,
+      "why": "quick estimate 70%, market 33%. Collins remains a strong favorite to hold her Senate seat barring significant shifts."
+    },
+    {
+      "ts": 1793510388989,
+      "question": "Maine Senate election result? (Collins, Jackson, Bellows) \u2192 Jackson (D) defeats Collins (R)",
+      "url": "https://manifold.markets/EvanDaniel/maine-senate-election-result-collin",
+      "passed": false,
+      "market_prob": 0.6699999999999999,
+      "quick_prob": 0.2,
+      "why": "quick estimate 20%, market 67%. Susan Collins is a long-serving incumbent in Maine, making a defeat by a Democrat unlikely without specific polling anomalies."
+    },
+    {
       "ts": 1793506642566,
       "question": "What will happen before election day for the 2026 midterms? [Add Answers] (Please ensure you read the rules) \u2192 Elizabeth MacDonough is no longer Senate Parliamentarian",
       "url": "https://manifold.markets/AaronSimansky/what-will-happen-before-election-da",
@@ -2522,33 +2549,6 @@
       "market_prob": 0.95,
       "quick_prob": 0.52,
       "why": "flagged: The close margin and conflicting model aggregators like DDHQ vs Kalshi make it worth checking the current polling data."
-    },
-    {
-      "ts": 1793491964458,
-      "question": "Will Talarico outperform Beto O'Rourke in the 2026 US Senate Election in Texas?",
-      "url": "https://manifold.markets/BayesianTom/will-talarico-outperform-beto-orour",
-      "passed": false,
-      "market_prob": 0.8493750268438803,
-      "quick_prob": 0.4,
-      "why": "quick estimate 40%, market 85%. Texas Senate race dynamics in 2026 are speculative and lack definitive polling data to justify deeper analysis."
-    },
-    {
-      "ts": 1793491964453,
-      "question": "Will the Trump administration militarize New York City before the 2026 Midterms?",
-      "url": "https://manifold.markets/Panfilo/will-the-trump-administration-milit-AlRshOuSpp",
-      "passed": false,
-      "market_prob": 0.04400546854826297,
-      "quick_prob": 0.05,
-      "why": "quick estimate 5%, market 4%. Federalizing or deploying military to NYC on this scale before midterms is unprecedented and extremely improbable."
-    },
-    {
-      "ts": 1793491964447,
-      "question": "Will any part of America be under martial law during midterm elections?",
-      "url": "https://manifold.markets/SpeaksForTrees/will-any-part-of-america-be-under-m",
-      "passed": true,
-      "market_prob": 0.08613310990979069,
-      "quick_prob": 0.02,
-      "why": "quick estimate 2% backs the favourite at 9%. Martial law in the US during midterms is an extreme, highly unlikely event without current indicators."
     }
   ],
   "decisions": [
