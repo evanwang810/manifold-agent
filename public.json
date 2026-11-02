@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1793578963228,
+  "generated_ms": 1793579303397,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 0,
+      "today": 3,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 0,
+      "today": 1,
       "cap": 54
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 622.83,
   "summary": "Balance M$10. Net worth M$624. 14 open positions, 6 of them closed and awaiting resolution. Brier score over 226 resolved forecasts: yours 0.140, the market's 0.088. You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 109 of 226; on big disagreements, 96 of 193. Resolved bets: 153. Backing the favourite: won 46 of 60. Longshots against the favourite: won 21 of 93.\n\nPerformance and calibration remain weak on speculative, narrative-driven longshots and low-probability NO bets. You forecast worse than the market price overall, and your disagreements have mostly been you being wrong rather than the market. Conversely, backing favourites remains much more reliable (won 46 of 60, compared to longshots against the favourite where you won 21 of 93). Spendable cash is restricted due to balance reserve limits, which repeatedly floors potential trade sizes to zero when capital is tied up awaiting resolutions. Active positions are held steady while awaiting market outcomes, with capital deployed into high-confidence near-term favourites like Louisiana Senate and CA-4 house elections, though some positions have experienced downward price movement against us. \n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favourites), the Narrative Trap (allowing a compelling story to mask poor mathematical expected value), and failing to respond rapidly to significant upward price moves in YES shares when holding NO positions. Avoid over-leveraging on subjective personal judgment markets and trading micro-trader meta-markets where time decay turns unfavorable. Avoid balance reserve bottlenecks that floor trade sizes to zero when capital is tied up awaiting resolutions.\n\nCategories and question styles where calibration is poor include low-probability longshots and speculative narrative-driven events, whereas backing clear favourites is significantly more reliable. Active positions remain held steady while awaiting market outcomes, with capital tied up awaiting upcoming resolutions, including imminent midterm election markets.",
   "journal": [
+    {
+      "ts": 1793579297271,
+      "kind": "analysis",
+      "text": "Analysed \"Abdul El Sayed Winning margin in 2026 Michigan Senate election? \u2192 Wins\": market 21%, my 24% (medium). No trade, would be a longshot bet against the 21% favourite."
+    },
+    {
+      "ts": 1793579168320,
+      "kind": "screen",
+      "text": "Escalated \"Abdul El Sayed Winning margin in 2026 Michigan Senate election? \u2192 Wins\" at 21%: quick estimate 5% backs the favourite at 21%. This is a standard multi-choice margin market with low volume and no specific polling insight to justify deep analysis."
+    },
     {
       "ts": 1793575887146,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1793510389008,
       "kind": "screen",
       "text": "Passed on \"Will Elon Musk and Donald Trump publicly support different candidates \" at 5%: quick estimate 45%, market 5%. Predicting whether Trump and Musk will diverge in a 2026 primary or ballot measure requires tracking thousands of local races."
-    },
-    {
-      "ts": 1793510389002,
-      "kind": "screen",
-      "text": "Passed on \"Maine Senate election result? (Collins, Jackson, Bellows) \u2192 Collins (R\" at 33%: quick estimate 70%, market 33%. Collins remains a strong favorite to hold her Senate seat barring significant shifts."
-    },
-    {
-      "ts": 1793510388996,
-      "kind": "screen",
-      "text": "Passed on \"Maine Senate election result? (Collins, Jackson, Bellows) \u2192 Jackson (D\" at 67%: quick estimate 20%, market 67%. Susan Collins is a long-serving incumbent in Maine, making a defeat by a Democrat unlikely without specific polling anomalies."
     }
   ],
   "todos": [
@@ -2198,6 +2198,15 @@
   ],
   "screens": [
     {
+      "ts": 1793579168313,
+      "question": "Abdul El Sayed Winning margin in 2026 Michigan Senate election? \u2192 Wins by 3.000% to 5.999%",
+      "url": "https://manifold.markets/Jack1/abdul-el-sayed-winning-margin-in-20",
+      "passed": true,
+      "market_prob": 0.20782011328509462,
+      "quick_prob": 0.05,
+      "why": "quick estimate 5% backs the favourite at 21%. This is a standard multi-choice margin market with low volume and no specific polling insight to justify deep analysis."
+    },
+    {
       "ts": 1793575509933,
       "question": "If Trump becomes president, will Florida constitutionalize abortion?",
       "url": "https://manifold.markets/BlueDragon/if-trump-becomes-president-will-flo",
@@ -2547,18 +2556,33 @@
       "market_prob": 0.0497827530963563,
       "quick_prob": 0.45,
       "why": "quick estimate 45%, market 5%. Predicting whether Trump and Musk will diverge in a 2026 primary or ballot measure requires tracking thousands of local races."
-    },
-    {
-      "ts": 1793510388996,
-      "question": "Maine Senate election result? (Collins, Jackson, Bellows) \u2192 Collins (R) defeats Jackson (D)",
-      "url": "https://manifold.markets/EvanDaniel/maine-senate-election-result-collin",
-      "passed": false,
-      "market_prob": 0.32943861309099076,
-      "quick_prob": 0.7,
-      "why": "quick estimate 70%, market 33%. Collins remains a strong favorite to hold her Senate seat barring significant shifts."
     }
   ],
   "decisions": [
+    {
+      "ts": 1793579297264,
+      "kind": "no_trade",
+      "question": "Abdul El Sayed Winning margin in 2026 Michigan Senate election? \u2192 Wins by 3.000% to 5.999%",
+      "url": "https://manifold.markets/Jack1/abdul-el-sayed-winning-margin-in-20",
+      "market_prob": 0.20782011328509462,
+      "model_prob": 0.24,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "PoliAgg's 4.9% poll average sits inside the 3.0-5.999% bucket, but standard polling error (SD ~3.5-4%) distributes significant probability to adjacent buckets (0-3% and 6-9%). I estimate ~24% probability for this specific bucket.",
+      "uncertainty": "Election day turnout patterns and polling error direction in Michigan.",
+      "resolution_risk": "Recounts or third-party vote tally inclusion shifting the official margin across the exact 3.000% boundary.",
+      "evidence_for": [
+        "PoliAgg aggregate polling average has El-Sayed leading by 4.9 points, directly inside the 3.000% to 5.999% range.",
+        "USA Today statewide survey reported a lead of around 6 percentage points, right on the boundary."
+      ],
+      "evidence_against": [
+        "Historical polling variance in statewide elections means final margin frequently lands in neighboring buckets like 0-2.999% or 6-8.999%.",
+        "Late endorsement of Republican Mike Rogers by Haley Stevens could narrow the margin below 3%.",
+        "Six mutually exclusive options distribute probability across multiple outcomes."
+      ],
+      "reason": "would be a longshot bet against the 21% favourite"
+    },
     {
       "ts": 1793575666880,
       "kind": "no_trade",
@@ -2877,29 +2901,6 @@
         "Industry forecasts project broad commercial customer access in 2027 rather than before Dec 2026"
       ],
       "reason": "would be a longshot bet against the 91% favourite"
-    },
-    {
-      "ts": 1793503316093,
-      "kind": "no_trade",
-      "question": "What will happen before election day for the 2026 midterms? [Add Answers] (Please ensure you read the rules) \u2192 A snap election is called in the UK",
-      "url": "https://manifold.markets/AaronSimansky/what-will-happen-before-election-da",
-      "market_prob": 0.1522162688748174,
-      "model_prob": 0.01,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With ~2 days remaining before the US midterm election cutoff, UK Parliament has not been dissolved and no snap election has been announced. The PM has repeatedly denied plans for an early election.",
-      "uncertainty": "Whether an unprecedented political emergency forces an immediate dissolution of UK Parliament within the next 48 hours.",
-      "resolution_risk": "None significant; creator's rules explicitly require the King to dissolve parliament and PM to announce a general election before midterm election day.",
-      "evidence_for": [
-        "Media speculation in autumn 2026 regarding election timing"
-      ],
-      "evidence_against": [
-        "PM has explicitly denied planning an early election",
-        "Parliament has not been dissolved by the King",
-        "With only ~2 days until 2026 US midterm election day, calling a snap election in the UK within this timeframe is practically impossible"
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
