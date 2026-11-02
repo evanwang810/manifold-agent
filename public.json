@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1793662373314,
+  "generated_ms": 1793662769017,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 39,
+      "today": 42,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 14,
+      "today": 15,
       "cap": 54
     }
   },
@@ -64,6 +64,21 @@
   "net_worth": 637.84,
   "summary": "Balance M$49. Net worth M$635. 13 open positions, 5 of them closed and awaiting resolution. Brier score over 235 resolved forecasts: yours 0.142, the market's 0.086 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 115 of 235; on big disagreements, 102 of 202. Resolved bets: 158. Backing the favourite: won 51 of 65. Longshots against the favourite: won 21 of 93.\n\nPerformance and calibration remain weak on speculative, narrative-driven longshots and low-probability NO bets. You forecast worse than the market price overall, and your disagreements have mostly been you being wrong rather than the market. Conversely, backing favourites remains much more reliable, as demonstrated by backing favourites winning 51 of 65, compared to longshots against the favourite where you won only 21 of 93. Spendable cash is restricted due to balance reserve limits, which repeatedly floors potential trade sizes to zero when capital is tied up awaiting resolutions. Active positions include high-confidence near-term favourites like Louisiana Senate, safe Senate seats, CA-4 house elections, and trillion-dollar market cap sums, though some positions have experienced downward price movement against us.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favourites), the Narrative Trap (allowing a compelling story to mask poor mathematical expected value), and failing to respond rapidly to significant upward price moves in YES shares when holding NO positions. Avoid over-leveraging on subjective personal judgment markets and trading micro-trader meta-markets where time decay turns unfavorable. Avoid balance reserve bottlenecks that floor trade sizes to zero when capital is tied up awaiting resolutions.\n\nCategories and question styles where calibration is poor include low-probability longshots and speculative narrative-driven events, whereas backing clear favourites is significantly more reliable. Active positions remain held steady while awaiting market outcomes, with capital tied up awaiting upcoming resolutions, including imminent midterm election markets.",
   "journal": [
+    {
+      "ts": 1793662768126,
+      "kind": "score",
+      "text": "Scored 235 resolved forecasts: my Brier 0.142, the market's 0.086. Closer than the market on 115/235."
+    },
+    {
+      "ts": 1793662750249,
+      "kind": "analysis",
+      "text": "Analysed \"Abdul El Sayed Winning margin in 2026 Michigan Senate election? \u2192 Wins\": market 19%, my 24% (medium). No trade, would be a longshot bet against the 19% favourite."
+    },
+    {
+      "ts": 1793662576930,
+      "kind": "screen",
+      "text": "Escalated \"Abdul El Sayed Winning margin in 2026 Michigan Senate election? \u2192 Wins\" at 19%: quick estimate 12% backs the favourite at 19%. This is a low-liquidity niche Senate margin bucket with no specific polling data indicating this precise range."
+    },
     {
       "ts": 1793655054859,
       "kind": "score",
@@ -448,21 +463,6 @@
       "ts": 1793582795566,
       "kind": "screen",
       "text": "Passed on \"Jon Ossoff wins the 2026 Georgia Senate election by 8.00% or more?\" at 80%: quick estimate 40%, market 80%. Standard midterm Senate margin prediction far from resolution with very low trading volume and no active discussion."
-    },
-    {
-      "ts": 1793582795559,
-      "kind": "screen",
-      "text": "Escalated \"Abdul El Sayed Winning margin in 2026 Michigan Senate election? \u2192 Wins\" at 18%: quick estimate 15% backs the favourite at 18%. Low liquidity multiple-choice market with arbitrary margin buckets driven mostly by single-user limit orders."
-    },
-    {
-      "ts": 1793579517618,
-      "kind": "score",
-      "text": "Scored 228 resolved forecasts: my Brier 0.139, the market's 0.087. Closer than the market on 111/228."
-    },
-    {
-      "ts": 1793579297271,
-      "kind": "analysis",
-      "text": "Analysed \"Abdul El Sayed Winning margin in 2026 Michigan Senate election? \u2192 Wins\": market 21%, my 24% (medium). No trade, would be a longshot bet against the 21% favourite."
     }
   ],
   "todos": [
@@ -2214,6 +2214,15 @@
   ],
   "screens": [
     {
+      "ts": 1793662576924,
+      "question": "Abdul El Sayed Winning margin in 2026 Michigan Senate election? \u2192 Wins by 0% to 2.999%",
+      "url": "https://manifold.markets/Jack1/abdul-el-sayed-winning-margin-in-20",
+      "passed": true,
+      "market_prob": 0.19032101168635582,
+      "quick_prob": 0.12,
+      "why": "quick estimate 12% backs the favourite at 19%. This is a low-liquidity niche Senate margin bucket with no specific polling data indicating this precise range."
+    },
+    {
       "ts": 1793651256779,
       "question": "Will Google Maps estimate more than 60 minutes to drive from UChicago to O\u2019Hare at exactly 3:00 PM?",
       "url": "https://manifold.markets/VarshiniN/will-google-maps-estimate-more-than-lOzLsI5zUp",
@@ -2563,18 +2572,33 @@
       "market_prob": 0.20782011328509462,
       "quick_prob": 0.05,
       "why": "quick estimate 5% backs the favourite at 21%. This is a standard multi-choice margin market with low volume and no specific polling insight to justify deep analysis."
-    },
-    {
-      "ts": 1793575509933,
-      "question": "If Trump becomes president, will Florida constitutionalize abortion?",
-      "url": "https://manifold.markets/BlueDragon/if-trump-becomes-president-will-flo",
-      "passed": false,
-      "market_prob": 0.09847904767525544,
-      "quick_prob": 0.4,
-      "why": "quick estimate 40%, market 10%. Conditonal on the 2024 presidential election outcome already resolved, making this a stale retro-question."
     }
   ],
   "decisions": [
+    {
+      "ts": 1793662750243,
+      "kind": "no_trade",
+      "question": "Abdul El Sayed Winning margin in 2026 Michigan Senate election? \u2192 Wins by 0% to 2.999%",
+      "url": "https://manifold.markets/Jack1/abdul-el-sayed-winning-margin-in-20",
+      "market_prob": 0.19032101168635582,
+      "model_prob": 0.24,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With polling averages and models centering El-Sayed's projected lead around 2.2% to 3.6%, a 0% to 2.999% winning margin sits near the peak of the probability distribution. Modeling this outcome with a standard historical polling error (~4.5%) yields an estimated probability of 24%.",
+      "uncertainty": "The magnitude and direction of election day polling error in Michigan relative to current D+3.5 average estimates.",
+      "resolution_risk": "Official vote certification delays or recount proceedings slightly adjusting final official margins.",
+      "evidence_for": [
+        "Call the Map model projects El-Sayed winning by 2.2 percentage points, falling directly in the 0% to 2.999% range.",
+        "Pollsmax aggregated poll average shows El-Sayed with a 3.2 point lead, placing a close victory near the median projection."
+      ],
+      "evidence_against": [
+        "Rasmussen Reports survey from October 29 shows El-Sayed leading by 5 points (49% to 44%), which falls in the 3%-5.999% bucket.",
+        "On Point Politics projects a wider 8.7 point margin.",
+        "Rogers could win the race outright or El-Sayed could win by more than 3 points."
+      ],
+      "reason": "would be a longshot bet against the 19% favourite"
+    },
     {
       "ts": 1793652751745,
       "kind": "bet",
@@ -2893,29 +2917,6 @@
       "evidence_against": [
         "Kouam%e is playing on home soil in Paris with full crowd backing.",
         "ADF could face post-Shanghai title fatigue or a letdown performance."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1793568350806,
-      "kind": "no_trade",
-      "question": "2026 ATP Tour Men's Tennis Matches \ud83c\udfbe \u2192 \ud83c\uddf7\ud83c\uddf8 N. Djokovic (10) vs \ud83c\uddf2\ud83c\udde8 V. Vacherot [Paris ATP 1000 \u2013 Round 1]",
-      "url": "https://manifold.markets/polymathematic/2026-atp-tour-mens-tennis-matches",
-      "market_prob": 0.68,
-      "model_prob": 0.89,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Novak Djokovic is heavily favoured against Valentin Vacherot in Round 1 of the Paris ATP 1000. Despite late-career age, his elite floor and match experience make him roughly an 89% favourite to advance.",
-      "uncertainty": "Djokovic's physical sharpness and service performance during match play.",
-      "resolution_risk": "If either player withdraws before the match begins, the market resolves N/A.",
-      "evidence_for": [
-        "Novak Djokovic is a 24-time Grand Slam champion seeded 10th in Paris with overwhelming talent and experience advantages over Valentin Vacherot.",
-        "Djokovic demonstrated active form and motivation at Basel entering the Paris Masters."
-      ],
-      "evidence_against": [
-        "Djokovic is 39 years old and occasionally prone to early-round physical lapses or fatigue.",
-        "Indoor hardcourt matches carry upset risk if an underdog serves exceptionally well."
       ],
       "reason": "size floored to zero by balance reserve"
     }
