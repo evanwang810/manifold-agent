@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1793623807896,
+  "generated_ms": 1793623996017,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 24,
+      "today": 25,
       "cap": 400
     },
     "chat": {
@@ -64,6 +64,11 @@
   "net_worth": 623.32,
   "summary": "Balance M$10. Net worth M$623. 14 open positions, 7 of them closed and awaiting resolution. Brier score over 233 resolved forecasts: yours 0.144, the market's 0.086 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 113 of 233; on big disagreements, 100 of 200. Resolved bets: 156. Backing the favourite: won 49 of 63. Longshots against the favourite: won 21 of 93.\n\nPerformance and calibration remain weak on speculative, narrative-driven longshots and low-probability NO bets. You forecast worse than the market price overall, and your disagreements have mostly been you being wrong rather than the market. Conversely, backing favourites remains much more reliable, as demonstrated by backing favourites winning 49 of 63, compared to longshots against the favourite where you won only 21 of 93. Spendable cash is restricted due to balance reserve limits, which repeatedly floors potential trade sizes to zero when capital is tied up awaiting resolutions. Active positions are held steady while awaiting market outcomes, with capital deployed into high-confidence near-term favourites like Louisiana Senate, safe Senate seats, and CA-4 house elections, though some positions have experienced downward price movement against us.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favourites), the Narrative Trap (allowing a compelling story to mask poor mathematical expected value), and failing to respond rapidly to significant upward price moves in YES shares when holding NO positions. Avoid over-leveraging on subjective personal judgment markets and trading micro-trader meta-markets where time decay turns unfavorable. Avoid balance reserve bottlenecks that floor trade sizes to zero when capital is tied up awaiting resolutions.\n\nCategories and question styles where calibration is poor include low-probability longshots and speculative narrative-driven events, whereas backing clear favourites is significantly more reliable. Active positions remain held steady while awaiting market outcomes, with capital tied up awaiting upcoming resolutions, including imminent midterm election markets.",
   "journal": [
+    {
+      "ts": 1793623995813,
+      "kind": "screen",
+      "text": "Passed on \"Will California Proposition 45 (faster CEQA environmental review) be a\" at 30%: quick estimate 35%, market 30%. CEQA reform initiatives in California traditionally face heavy uphill battles from environmental groups, making passage unlikely on a quick read."
+    },
     {
       "ts": 1793620790797,
       "kind": "score",
@@ -458,11 +463,6 @@
       "ts": 1793560884753,
       "kind": "screen",
       "text": "Passed on \"NFL Week 8 - Prop Bets \u2192 Player Records at least 2 Interceptions in a \" at 97%: quick estimate 40%, market 97%. This is a volatile prop bet market with subjective resolution criteria and insufficient edge."
-    },
-    {
-      "ts": 1793560884749,
-      "kind": "screen",
-      "text": "Escalated \"Will all 18 \"safe\" Senate seats be won by their incumbent parties?\" at 72%: quick estimate 95% backs the favourite at 72%. Incumbents in these deeply safe states are overwhelming favorites to hold their seats."
     }
   ],
   "todos": [
@@ -2198,6 +2198,15 @@
   ],
   "screens": [
     {
+      "ts": 1793623995806,
+      "question": "Will California Proposition 45 (faster CEQA environmental review) be approved in the November 3, 2026 election?",
+      "url": "https://manifold.markets/ManifoldPolitics/will-california-proposition-45-fast",
+      "passed": false,
+      "market_prob": 0.301278247982363,
+      "quick_prob": 0.35,
+      "why": "quick estimate 35%, market 30%. CEQA reform initiatives in California traditionally face heavy uphill battles from environmental groups, making passage unlikely on a quick read."
+    },
+    {
       "ts": 1793620209158,
       "question": "Will anyone be punished for failure to fully release the Epstein files? \u2192 No, not during Trump's second term",
       "url": "https://manifold.markets/MugaSofer/will-anyone-be-punished-for-failure",
@@ -2547,15 +2556,6 @@
       "market_prob": 0.73,
       "quick_prob": 0.85,
       "why": "quick estimate 85% backs the favourite at 73%. Davidovich Fokina is heavily favored over a wild card entry in an ATP 1000 first round, making this a straightforward mismatch."
-    },
-    {
-      "ts": 1793568243139,
-      "question": "NFL Week 8 - Prop Bets \u2192 For each game, take the GCD of both teams' scores. Is the result for any game at least 8?",
-      "url": "https://manifold.markets/StopPunting/nfl-week-8-prop-bets-Z0l8UO0P0g",
-      "passed": false,
-      "market_prob": 0.8620689655172413,
-      "quick_prob": 0.05,
-      "why": "quick estimate 5%, market 86%. GCD of two football scores being at least 8 requires both teams to score multiples of 8 (e.g. 16, 24), which is extremely rare in the NFL."
     }
   ],
   "decisions": [
