@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1793586368439,
+  "generated_ms": 1793587033628,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,15 +31,15 @@
   },
   "usage": {
     "fast": {
-      "today": 6,
+      "today": 9,
       "cap": 400
     },
     "chat": {
-      "today": 0,
+      "today": 1,
       "cap": 400
     },
     "deep": {
-      "today": 2,
+      "today": 3,
       "cap": 54
     }
   },
@@ -51,7 +51,7 @@
     "closer": 112,
     "disagree_n": 197,
     "disagree_closer": 99,
-    "open": 106,
+    "open": 107,
     "bets": 156,
     "fav_n": 63,
     "fav_won": 49,
@@ -64,6 +64,31 @@
   "net_worth": 622.83,
   "summary": "Balance M$10. Net worth M$624. 14 open positions, 6 of them closed and awaiting resolution. Brier score over 226 resolved forecasts: yours 0.140, the market's 0.088. You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 109 of 226; on big disagreements, 96 of 193. Resolved bets: 153. Backing the favourite: won 46 of 60. Longshots against the favourite: won 21 of 93.\n\nPerformance and calibration remain weak on speculative, narrative-driven longshots and low-probability NO bets. You forecast worse than the market price overall, and your disagreements have mostly been you being wrong rather than the market. Conversely, backing favourites remains much more reliable (won 46 of 60, compared to longshots against the favourite where you won 21 of 93). Spendable cash is restricted due to balance reserve limits, which repeatedly floors potential trade sizes to zero when capital is tied up awaiting resolutions. Active positions are held steady while awaiting market outcomes, with capital deployed into high-confidence near-term favourites like Louisiana Senate and CA-4 house elections, though some positions have experienced downward price movement against us. \n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favourites), the Narrative Trap (allowing a compelling story to mask poor mathematical expected value), and failing to respond rapidly to significant upward price moves in YES shares when holding NO positions. Avoid over-leveraging on subjective personal judgment markets and trading micro-trader meta-markets where time decay turns unfavorable. Avoid balance reserve bottlenecks that floor trade sizes to zero when capital is tied up awaiting resolutions.\n\nCategories and question styles where calibration is poor include low-probability longshots and speculative narrative-driven events, whereas backing clear favourites is significantly more reliable. Active positions remain held steady while awaiting market outcomes, with capital tied up awaiting upcoming resolutions, including imminent midterm election markets.",
   "journal": [
+    {
+      "ts": 1793586947265,
+      "kind": "score",
+      "text": "Scored 230 resolved forecasts: my Brier 0.138, the market's 0.087. Closer than the market on 112/230."
+    },
+    {
+      "ts": 1793586935135,
+      "kind": "analysis",
+      "text": "Analysed \"Abdul El Sayed Winning margin in 2026 Michigan Senate election? \u2192 Wins\": market 18%, my 11% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1793586562008,
+      "kind": "screen",
+      "text": "Escalated \"Abdul El Sayed Winning margin in 2026 Michigan Senate election? \u2192 Wins\" at 18%: quick estimate 10% backs the favourite at 18%. Distant midterm senate race margin in Michigan with sparse liquidity and no specific polling insight."
+    },
+    {
+      "ts": 1793586562001,
+      "kind": "screen",
+      "text": "Passed on \"Will the Republicans win a majority in the House of Representatives in\" at 4%: quick estimate 15%, market 4%. Direct complement to market 1 with no extra information to analyze."
+    },
+    {
+      "ts": 1793586561994,
+      "kind": "screen",
+      "text": "Passed on \"Will the Democrats win a majority in the House of Representatives in t\" at 96%: quick estimate 85%, market 96%. Market is efficiently priced near consensus with active trader commentary debating minor percentage points."
+    },
     {
       "ts": 1793583143142,
       "kind": "score",
@@ -438,31 +463,6 @@
       "ts": 1793523325040,
       "kind": "score",
       "text": "Scored 219 resolved forecasts: my Brier 0.139, the market's 0.085. Closer than the market on 103/219."
-    },
-    {
-      "ts": 1793521634847,
-      "kind": "analysis",
-      "text": "Analysed \"Who will win the CA-4 house election? \u2192 Eric Jones (D)\": market 47%, my 28% (medium). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1793521507277,
-      "kind": "screen",
-      "text": "Passed on \"Will Denver, Colorado AND Washington DC both pass Foie Gras bans at th\" at 70%: quick estimate 15%, market 70%. Requiring two separate local ballot measures to both pass makes this a low probability joint event."
-    },
-    {
-      "ts": 1793521507271,
-      "kind": "screen",
-      "text": "Escalated \"Who will win the CA-4 house election? \u2192 Eric Jones (D)\" at 47%: quick estimate 5% backs the favourite at 47%. Eric Jones is the challenger against a safe incumbent in a non-competitive race."
-    },
-    {
-      "ts": 1793521507265,
-      "kind": "screen",
-      "text": "Escalated \"Who will win the CA-4 house election? \u2192 Mike Thompson (D)\" at 53%: quick estimate 95% backs the favourite at 53%. Mike Thompson is a long-standing entrenched incumbent in a safe Democratic district."
-    },
-    {
-      "ts": 1793519638140,
-      "kind": "score",
-      "text": "Scored 218 resolved forecasts: my Brier 0.140, the market's 0.086. Closer than the market on 103/218."
     }
   ],
   "todos": [
@@ -778,7 +778,7 @@
       "profit": -1.2,
       "prob": 0.54,
       "closed": false,
-      "days_to_close": 1.4
+      "days_to_close": 1.3
     },
     {
       "question": "Republican wins 2026 US Senate election in Louisiana?",
@@ -1685,6 +1685,20 @@
   ],
   "progress": [
     {
+      "start": 1793572206218,
+      "end": 1793586947274,
+      "text": "My net worth decreased by M$1 to M$623. I screened 12 markets and moved 6 to full analysis, but I passed on 5 of them. Three had sizes floored to zero by my balance reserve, and two were longshot bets against favorites at 21% and 18%. Four forecasts resolved since the last check with a Brier score of 0.141. My overall Brier is 0.138 against the market's 0.086 over 230 resolved forecasts. While my favorite bets are winning 49 of 63, my Brier score is not keeping pace with the market. The balance reserve is also limiting my ability to enter some positions. I will be watching my Brier score closely.",
+      "nw_open": 623.98,
+      "nw_close": 622.83,
+      "score": {
+        "n": 230,
+        "model": 0.1382,
+        "market": 0.0865,
+        "fav_n": 63,
+        "fav_won": 49
+      }
+    },
+    {
       "start": 1793557742005,
       "end": 1793572206218,
       "text": "My net worth is steady at M$624. I spent my remaining cash to buy M$17 of YES on whether all 18 safe Senate seats will be won by their incumbent parties at 72%. While individual seats are nearly certain, I am accounting for the joint probability. My position on GPT-6.1+ Astra being released in October has resolved or been sold. I screened 13 markets and analyzed 5, but I passed on 3 because my balance reserve floored my position sizes to zero. I currently have M$0 in spendable cash. My Brier score remains 0.141, trailing the market's 0.088, though favourite bets have won 46 of 60. All active positions remain thesis-intact. The next thing to watch is the resolution of the Senate seats position.",
@@ -2005,20 +2019,6 @@
         "fav_n": 46,
         "fav_won": 34
       }
-    },
-    {
-      "start": 1793223076230,
-      "end": 1793237503790,
-      "text": "My net worth remains unchanged at M$610. I took no action during this window, as my active positions are steady while I await market resolutions. My spendable cash is currently M$1 above my M$10 reserve. I screened 3 markets and analyzed 1, but I passed on it because my balance reserve floored the position size to zero. My track record shows a Brier score of 0.134 against the market's 0.082 over 200 resolved forecasts, and my favorite bets have won 34 of 46. The main thing to watch is how my balance reserve continues to limit new entries.",
-      "nw_open": 609.73,
-      "nw_close": 609.78,
-      "score": {
-        "n": 200,
-        "model": 0.1344,
-        "market": 0.0816,
-        "fav_n": 46,
-        "fav_won": 34
-      }
     }
   ],
   "desk": [
@@ -2197,6 +2197,33 @@
     }
   ],
   "screens": [
+    {
+      "ts": 1793586562001,
+      "question": "Abdul El Sayed Winning margin in 2026 Michigan Senate election? \u2192 Wins by 9.000% or more",
+      "url": "https://manifold.markets/Jack1/abdul-el-sayed-winning-margin-in-20",
+      "passed": true,
+      "market_prob": 0.18384526841053103,
+      "quick_prob": 0.1,
+      "why": "quick estimate 10% backs the favourite at 18%. Distant midterm senate race margin in Michigan with sparse liquidity and no specific polling insight."
+    },
+    {
+      "ts": 1793586561994,
+      "question": "Will the Republicans win a majority in the House of Representatives in the 2026 elections?",
+      "url": "https://manifold.markets/HillaryClinton/will-the-republicans-win-a-majority",
+      "passed": false,
+      "market_prob": 0.040000000000000036,
+      "quick_prob": 0.15,
+      "why": "quick estimate 15%, market 4%. Direct complement to market 1 with no extra information to analyze."
+    },
+    {
+      "ts": 1793586561987,
+      "question": "Will the Democrats win a majority in the House of Representatives in the 2026 elections?",
+      "url": "https://manifold.markets/HillaryClinton/will-the-democrats-win-a-majority-i-ClQ6g6lntn",
+      "passed": false,
+      "market_prob": 0.96,
+      "quick_prob": 0.85,
+      "why": "quick estimate 85%, market 96%. Market is efficiently priced near consensus with active trader commentary debating minor percentage points."
+    },
     {
       "ts": 1793582795559,
       "question": "Jon Ossoff wins the 2026 Georgia Senate election by 8.00% or more?",
@@ -2529,36 +2556,33 @@
       "market_prob": 0.6999999999999997,
       "quick_prob": 0.15,
       "why": "quick estimate 15%, market 70%. Requiring two separate local ballot measures to both pass makes this a low probability joint event."
-    },
-    {
-      "ts": 1793521507265,
-      "question": "Who will win the CA-4 house election? \u2192 Eric Jones (D)",
-      "url": "https://manifold.markets/Jack1/who-will-win-the-ca4-house-election-0suAR0A066",
-      "passed": true,
-      "market_prob": 0.4700000000000002,
-      "quick_prob": 0.05,
-      "why": "quick estimate 5% backs the favourite at 47%. Eric Jones is the challenger against a safe incumbent in a non-competitive race."
-    },
-    {
-      "ts": 1793521507258,
-      "question": "Who will win the CA-4 house election? \u2192 Mike Thompson (D)",
-      "url": "https://manifold.markets/Jack1/who-will-win-the-ca4-house-election-0suAR0A066",
-      "passed": true,
-      "market_prob": 0.5299999999999999,
-      "quick_prob": 0.95,
-      "why": "quick estimate 95% backs the favourite at 53%. Mike Thompson is a long-standing entrenched incumbent in a safe Democratic district."
-    },
-    {
-      "ts": 1793517748238,
-      "question": "Will Maura Healey be reelected as Governor of Massachusetts in 2026?",
-      "url": "https://manifold.markets/Gabrielle/will-maura-healey-be-reelected-as-g",
-      "passed": false,
-      "market_prob": 0.9600156721915073,
-      "quick_prob": 0.75,
-      "why": "quick estimate 75%, market 96%. Incumbent Democratic governors in Massachusetts generally hold a strong structural advantage."
     }
   ],
   "decisions": [
+    {
+      "ts": 1793586935127,
+      "kind": "no_trade",
+      "question": "Abdul El Sayed Winning margin in 2026 Michigan Senate election? \u2192 Wins by 9.000% or more",
+      "url": "https://manifold.markets/Jack1/abdul-el-sayed-winning-margin-in-20",
+      "market_prob": 0.18384526841053103,
+      "model_prob": 0.11,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "El-Sayed leads polls by 2 to 7.6 points, but Michigan is competitive. A winning margin of 9.0% or more requires a substantial blowout exceeding 2018 levels (6.5%). Estimating 11% probability for this bucket.",
+      "uncertainty": "Magnitude of final polling error and relative partisan turnout on election day.",
+      "resolution_risk": "Margin calculation based on preliminary vs official certified results.",
+      "evidence_for": [
+        "On Point Politics forecast projects El-Sayed margin up to 7.6 points.",
+        "Rasmussen Reports noted El-Sayed lead widening three days ago."
+      ],
+      "evidence_against": [
+        "Michigan is a highly competitive swing state.",
+        "YouGov poll shows D+4 (51% to 47%) and Call the Map predicts D+2.0.",
+        "In the 2018 Democratic wave, Stabenow won Michigan Senate by 6.5%, remaining below 9%."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1793582923274,
       "kind": "no_trade",
@@ -2876,30 +2900,6 @@
         "Intra-party general elections can produce unpredictable turnout dynamics."
       ],
       "reason": "edge 0.190, kelly 0.40, decay 1.00, bound by balance reserve"
-    },
-    {
-      "ts": 1793521634841,
-      "kind": "no_trade",
-      "question": "Who will win the CA-4 house election? \u2192 Eric Jones (D)",
-      "url": "https://manifold.markets/Jack1/who-will-win-the-ca4-house-election-0suAR0A066",
-      "market_prob": 0.4700000000000002,
-      "model_prob": 0.28,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "While Eric Jones's $15M+ self-funding gives him substantial reach, defeating a 14-term incumbent like Mike Thompson in CA-4 remains an uphill battle given Thompson's entrenched name recognition and institutional support.",
-      "uncertainty": "How Republican and independent voters in the district break between an entrenched moderate incumbent Democrat and a wealthy self-funded challenger.",
-      "resolution_risk": "None; official California Secretary of State certified election results will clearly determine the winner.",
-      "evidence_for": [
-        "Eric Jones has massively out-raised and out-spent the incumbent ($18M vs $5.5M), primarily through $15M+ in self-funding.",
-        "A heavy advertising campaign and generational contrast message can be potent in an intra-party Democrat vs. Democrat top-two general election."
-      ],
-      "evidence_against": [
-        "Rep. Mike Thompson has represented the region for nearly three decades and possesses overwhelming establishment, labor, and local Democratic endorsements.",
-        "Incumbents with deep name recognition and strong district roots historically withstand self-funded intra-party general election challenges the vast majority of the time.",
-        "Thompson's $5.5M is more than sufficient to communicate his record and defend his seat effectively in the Bay Area media market."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
