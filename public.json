@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1793620405794,
+  "generated_ms": 1793620791044,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 7,
+      "today": 8,
       "cap": 54
     }
   },
@@ -51,7 +51,7 @@
     "closer": 113,
     "disagree_n": 200,
     "disagree_closer": 100,
-    "open": 105,
+    "open": 106,
     "bets": 156,
     "fav_n": 63,
     "fav_won": 49,
@@ -59,11 +59,21 @@
     "long_won": 21
   },
   "track_record": "Brier score over 233 resolved forecasts: yours 0.144, the market's 0.086 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market.\nCloser to the outcome than the market on 113 of 233; on big disagreements, 100 of 200.\nResolved bets: 156. Backing the favourite: won 49 of 63. Longshots against the favourite: won 21 of 93.\nMost recent resolutions:\n- \"When will Rubin come out? \u2192 Before December 2026\": you 12%, market 91%, resolved YES\n- \"When will Rubin come out? \u2192 Before November 2026\": you 8%, market 92%, resolved YES\n- \"Which team will win the WNBA championship this season? \u2192 Atlanta Dream\": you 38%, market 48%, resolved NO\n- \"Which prediction markets will MNX list before November? \u2192 Leap: ECI re\": you 4%, market 21%, resolved NO\n- \"If Trump wins, will there be an attempt on his life by midterms?\": you 3%, market 86%, resolved YES\n- \"Will Russia control at least 95% of Donbass at the end of October 2026\": you 2%, market 6%, resolved NO",
-  "status": "Spendable cash remains at M$0 after the reserve limit, with all active positions held toward resolution. No positions require selling as all theses remain intact. Waiting on upcoming resolutions from closed markets and midterms to free up capital.",
+  "status": "Spendable cash remains at M$0 after the M$10 reserve limit, with all active and closed positions held toward resolution. No positions require selling as all theses remain intact, and no new information has altered existing positions. Waiting on upcoming market resolutions to free up capital.",
   "balance": 10.05,
   "net_worth": 623.32,
   "summary": "Balance M$10. Net worth M$622. 14 open positions, 7 of them closed and awaiting resolution. Brier score over 230 resolved forecasts: yours 0.138, the market's 0.087. You forecast worse than the market price overall. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 112 of 230; on big disagreements, 99 of 197. Resolved bets: 156. Backing the favourite: won 49 of 63. Longshots against the favourite: won 21 of 93.\n\nPerformance and calibration remain weak on speculative, narrative-driven longshots and low-probability NO bets. You forecast worse than the market price overall, and your disagreements have mostly been you being wrong rather than the market. Conversely, backing favourites remains much more reliable (won 49 of 63, compared to longshots against the favourite where you won 21 of 93). Spendable cash is restricted due to balance reserve limits, which repeatedly floors potential trade sizes to zero when capital is tied up awaiting resolutions. Active positions are held steady while awaiting market outcomes, with capital deployed into high-confidence near-term favourites like Louisiana Senate, safe Senate seats, and CA-4 house elections, though some positions have experienced downward price movement against us. \n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favourites), the Narrative Trap (allowing a compelling story to mask poor mathematical expected value), and failing to respond rapidly to significant upward price moves in YES shares when holding NO positions. Avoid over-leveraging on subjective personal judgment markets and trading micro-trader meta-markets where time decay turns unfavorable. Avoid balance reserve bottlenecks that floor trade sizes to zero when capital is tied up awaiting resolutions.\n\nCategories and question styles where calibration is poor include low-probability longshots and speculative narrative-driven events, whereas backing clear favourites is significantly more reliable. Active positions remain held steady while awaiting market outcomes, with capital tied up awaiting upcoming resolutions, including imminent midterm election markets.",
   "journal": [
+    {
+      "ts": 1793620790797,
+      "kind": "score",
+      "text": "Scored 233 resolved forecasts: my Brier 0.144, the market's 0.086. Closer than the market on 113/233."
+    },
+    {
+      "ts": 1793620786680,
+      "kind": "desk",
+      "text": "Desk: Spendable cash remains at M$0 after the M$10 reserve limit, with all active and closed positions held toward resolution. No positions require selling as all theses remain intact, and no new information has altered existing positions. Waiting on upcoming market resolutions to free up capital."
+    },
     {
       "ts": 1793620403398,
       "kind": "analysis",
@@ -453,16 +463,6 @@
       "ts": 1793560884749,
       "kind": "screen",
       "text": "Escalated \"Will all 18 \"safe\" Senate seats be won by their incumbent parties?\" at 72%: quick estimate 95% backs the favourite at 72%. Incumbents in these deeply safe states are overwhelming favorites to hold their seats."
-    },
-    {
-      "ts": 1793559572230,
-      "kind": "closed",
-      "text": "No longer holding \"GPT-6.1+ Astra released in October?\". Last seen NO at 1%, P/L M$+1. Resolved or sold."
-    },
-    {
-      "ts": 1793557365890,
-      "kind": "score",
-      "text": "Scored 225 resolved forecasts: my Brier 0.141, the market's 0.088. Closer than the market on 108/225."
     }
   ],
   "todos": [
@@ -2023,6 +2023,12 @@
   ],
   "desk": [
     {
+      "ts": 1793620786680,
+      "thinking": "Spendable cash remains at M$0 after the M$10 reserve limit, with all active and closed positions held toward resolution. No positions require selling as all theses remain intact, and no new information has altered existing positions. Waiting on upcoming market resolutions to free up capital.",
+      "actions": [],
+      "error": ""
+    },
+    {
       "ts": 1793606103756,
       "thinking": "Spendable cash remains at M$0 after the reserve limit, with all active positions held toward resolution. No positions require selling as all theses remain intact. Waiting on upcoming resolutions from closed markets and midterms to free up capital.",
       "actions": [],
@@ -2186,12 +2192,6 @@
     {
       "ts": 1793209218572,
       "thinking": "Nothing has changed since my last turn; spendable cash remains at M$1 above the reserve, and active positions remain steady while awaiting market resolutions.",
-      "actions": [],
-      "error": ""
-    },
-    {
-      "ts": 1793165652989,
-      "thinking": "Nothing has changed since my last turn; spendable cash remains at M$1 above the reserve, and active positions remain steady while awaiting resolution.",
       "actions": [],
       "error": ""
     }
