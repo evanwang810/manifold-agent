@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1793593887368,
+  "generated_ms": 1793594080838,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemini-3.5-flash-lite",
+      "active": "gemma-4-31b-it",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 10,
+      "today": 11,
       "cap": 400
     },
     "chat": {
@@ -64,6 +64,21 @@
   "net_worth": 622.26,
   "summary": "Balance M$10. Net worth M$622. 14 open positions, 7 of them closed and awaiting resolution. Brier score over 230 resolved forecasts: yours 0.138, the market's 0.087. You forecast worse than the market price overall. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 112 of 230; on big disagreements, 99 of 197. Resolved bets: 156. Backing the favourite: won 49 of 63. Longshots against the favourite: won 21 of 93.\n\nPerformance and calibration remain weak on speculative, narrative-driven longshots and low-probability NO bets. You forecast worse than the market price overall, and your disagreements have mostly been you being wrong rather than the market. Conversely, backing favourites remains much more reliable (won 49 of 63, compared to longshots against the favourite where you won 21 of 93). Spendable cash is restricted due to balance reserve limits, which repeatedly floors potential trade sizes to zero when capital is tied up awaiting resolutions. Active positions are held steady while awaiting market outcomes, with capital deployed into high-confidence near-term favourites like Louisiana Senate, safe Senate seats, and CA-4 house elections, though some positions have experienced downward price movement against us. \n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favourites), the Narrative Trap (allowing a compelling story to mask poor mathematical expected value), and failing to respond rapidly to significant upward price moves in YES shares when holding NO positions. Avoid over-leveraging on subjective personal judgment markets and trading micro-trader meta-markets where time decay turns unfavorable. Avoid balance reserve bottlenecks that floor trade sizes to zero when capital is tied up awaiting resolutions.\n\nCategories and question styles where calibration is poor include low-probability longshots and speculative narrative-driven events, whereas backing clear favourites is significantly more reliable. Active positions remain held steady while awaiting market outcomes, with capital tied up awaiting upcoming resolutions, including imminent midterm election markets.",
   "journal": [
+    {
+      "ts": 1793594080411,
+      "kind": "screen",
+      "text": "Passed on \"NFL Week 8 - Prop Bets \u2192 A Starting QB gets a likely Season Ending Inj\" at 68%: quick estimate 20%, market 68%. Season-ending starting QB injuries in any specific week are relatively low probability events."
+    },
+    {
+      "ts": 1793594080404,
+      "kind": "screen",
+      "text": "Passed on \"Which Party will win the 2026 South Carolina Gubernatorial Election? \u2192\" at 94%: quick estimate 85%, market 94%. Republicans are heavily favored to retain the South Carolina governorship."
+    },
+    {
+      "ts": 1793594080398,
+      "kind": "screen",
+      "text": "Passed on \"Which Party will win the 2026 South Carolina Gubernatorial Election? \u2192\" at 6%: quick estimate 15%, market 6%. South Carolina is a heavily Republican state and Democrats are unlikely to win the governorship."
+    },
     {
       "ts": 1793590645192,
       "kind": "score",
@@ -448,21 +463,6 @@
       "ts": 1793529041862,
       "kind": "screen",
       "text": "Passed on \"Will Texas elect a Democratic Senator in 2026, and will they elect at \" at 20%: quick estimate 85%, market 20%. Texas remains a heavily Republican state making a non-Democrat senator and fewer than 14 Dem reps extremely likely."
-    },
-    {
-      "ts": 1793526979755,
-      "kind": "score",
-      "text": "Scored 222 resolved forecasts: my Brier 0.143, the market's 0.089. Closer than the market on 105/222."
-    },
-    {
-      "ts": 1793526035381,
-      "kind": "desk",
-      "text": "Desk: Spendable cash remains at M$0 after reserving M$10. A position on CA-4 House election (Mike Thompson) was recently executed, and the gas price market resolved. Active positions are tracking as expected and held toward resolution with no thesis changes."
-    },
-    {
-      "ts": 1793525883775,
-      "kind": "closed",
-      "text": "No longer holding \"US Average Gas Price Is $4.000 or more on November 1 2026?\". Last seen YES at 99%, P/L M$+7. Resolved or sold."
     }
   ],
   "todos": [
@@ -2198,6 +2198,33 @@
   ],
   "screens": [
     {
+      "ts": 1793594080404,
+      "question": "NFL Week 8 - Prop Bets \u2192 A Starting QB gets a likely Season Ending Injury",
+      "url": "https://manifold.markets/StopPunting/nfl-week-8-prop-bets-Z0l8UO0P0g",
+      "passed": false,
+      "market_prob": 0.681947261663286,
+      "quick_prob": 0.2,
+      "why": "quick estimate 20%, market 68%. Season-ending starting QB injuries in any specific week are relatively low probability events."
+    },
+    {
+      "ts": 1793594080398,
+      "question": "Which Party will win the 2026 South Carolina Gubernatorial Election? \u2192 Republicans",
+      "url": "https://manifold.markets/TheDucksFan/which-party-will-win-the-2026-south-E22N0t2lNg",
+      "passed": false,
+      "market_prob": 0.9401734276579528,
+      "quick_prob": 0.85,
+      "why": "quick estimate 85%, market 94%. Republicans are heavily favored to retain the South Carolina governorship."
+    },
+    {
+      "ts": 1793594080390,
+      "question": "Which Party will win the 2026 South Carolina Gubernatorial Election? \u2192 Democrats",
+      "url": "https://manifold.markets/TheDucksFan/which-party-will-win-the-2026-south-E22N0t2lNg",
+      "passed": false,
+      "market_prob": 0.05982657234204728,
+      "quick_prob": 0.15,
+      "why": "quick estimate 15%, market 6%. South Carolina is a heavily Republican state and Democrats are unlikely to win the governorship."
+    },
+    {
       "ts": 1793590255921,
       "question": "NFL Week 8 - Prop Bets \u2192 Largest FG made is from 57+ yards out",
       "url": "https://manifold.markets/StopPunting/nfl-week-8-prop-bets-Z0l8UO0P0g",
@@ -2529,33 +2556,6 @@
       "market_prob": 0.19422730804145702,
       "quick_prob": 0.15,
       "why": "quick estimate 15% backs the favourite at 19%. Michigan and Ohio are heavily Democratic or competitive, making Republicans winning 5 of these 6 races a significant longshot."
-    },
-    {
-      "ts": 1793532739482,
-      "question": "Will Texas elect a Democratic Senator in 2026, and will they elect at least 14 Democratic Representatives? \u2192 Dem Senator, < 14 Dem Reps",
-      "url": "https://manifold.markets/Evansbot/will-texas-elect-a-democratic-senat",
-      "passed": true,
-      "market_prob": 0.3210086625032576,
-      "quick_prob": 0.08,
-      "why": "quick estimate 8% backs the favourite at 32%. A Democratic Senate win in Texas is very unlikely, making this joint probability low without needing deep analysis."
-    },
-    {
-      "ts": 1793529041868,
-      "question": "Will Texas elect a Democratic Senator in 2026, and will they elect at least 14 Democratic Representatives? \u2192 Dem Senator, >= 14 Dem Reps",
-      "url": "https://manifold.markets/Evansbot/will-texas-elect-a-democratic-senat",
-      "passed": true,
-      "market_prob": 0.4331953292625871,
-      "quick_prob": 0.05,
-      "why": "quick estimate 5% backs the favourite at 43%. A Democratic Senate win combined with strong House performance in Texas goes against all recent electoral trends."
-    },
-    {
-      "ts": 1793529041862,
-      "question": "Will Texas elect a Democratic Senator in 2026, and will they elect at least 14 Democratic Representatives? \u2192 Dem Senator, < 14 Dem Reps",
-      "url": "https://manifold.markets/Evansbot/will-texas-elect-a-democratic-senat",
-      "passed": true,
-      "market_prob": 0.3210086625032576,
-      "quick_prob": 0.05,
-      "why": "quick estimate 5% backs the favourite at 32%. A Democratic Senate win in Texas is highly unlikely under current partisan leanings."
     }
   ],
   "decisions": [
