@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1793620018892,
+  "generated_ms": 1793620405794,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 21,
+      "today": 24,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 6,
+      "today": 7,
       "cap": 54
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 623.32,
   "summary": "Balance M$10. Net worth M$622. 14 open positions, 7 of them closed and awaiting resolution. Brier score over 230 resolved forecasts: yours 0.138, the market's 0.087. You forecast worse than the market price overall. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 112 of 230; on big disagreements, 99 of 197. Resolved bets: 156. Backing the favourite: won 49 of 63. Longshots against the favourite: won 21 of 93.\n\nPerformance and calibration remain weak on speculative, narrative-driven longshots and low-probability NO bets. You forecast worse than the market price overall, and your disagreements have mostly been you being wrong rather than the market. Conversely, backing favourites remains much more reliable (won 49 of 63, compared to longshots against the favourite where you won 21 of 93). Spendable cash is restricted due to balance reserve limits, which repeatedly floors potential trade sizes to zero when capital is tied up awaiting resolutions. Active positions are held steady while awaiting market outcomes, with capital deployed into high-confidence near-term favourites like Louisiana Senate, safe Senate seats, and CA-4 house elections, though some positions have experienced downward price movement against us. \n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favourites), the Narrative Trap (allowing a compelling story to mask poor mathematical expected value), and failing to respond rapidly to significant upward price moves in YES shares when holding NO positions. Avoid over-leveraging on subjective personal judgment markets and trading micro-trader meta-markets where time decay turns unfavorable. Avoid balance reserve bottlenecks that floor trade sizes to zero when capital is tied up awaiting resolutions.\n\nCategories and question styles where calibration is poor include low-probability longshots and speculative narrative-driven events, whereas backing clear favourites is significantly more reliable. Active positions remain held steady while awaiting market outcomes, with capital tied up awaiting upcoming resolutions, including imminent midterm election markets.",
   "journal": [
+    {
+      "ts": 1793620403398,
+      "kind": "analysis",
+      "text": "Analysed \"Will anyone be punished for failure to fully release the Epstein files\": market 79%, my 92% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1793620209165,
+      "kind": "screen",
+      "text": "Escalated \"Will anyone be punished for failure to fully release the Epstein files\" at 79%: quick estimate 88% backs the favourite at 79%. Political inertia and institutional protection make official punishment of high-level officials for redaction delays unlikely during this term."
+    },
     {
       "ts": 1793616864506,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1793557365890,
       "kind": "score",
       "text": "Scored 225 resolved forecasts: my Brier 0.141, the market's 0.088. Closer than the market on 108/225."
-    },
-    {
-      "ts": 1793557351416,
-      "kind": "analysis",
-      "text": "Analysed \"Will Republican chances to win the house go above 10% again?\": market 13%, my 18% (medium). No trade, would be a longshot bet against the 13% favourite."
-    },
-    {
-      "ts": 1793557192330,
-      "kind": "screen",
-      "text": "Passed on \"Will the US and Canada publicly strike a trade deal by the end of this\" at 10%: quick estimate 10%, market 10%. Comments indicate Canadian leadership is willing to wait out the administration, making a deal this week extremely unlikely."
     }
   ],
   "todos": [
@@ -2198,6 +2198,15 @@
   ],
   "screens": [
     {
+      "ts": 1793620209158,
+      "question": "Will anyone be punished for failure to fully release the Epstein files? \u2192 No, not during Trump's second term",
+      "url": "https://manifold.markets/MugaSofer/will-anyone-be-punished-for-failure",
+      "passed": true,
+      "market_prob": 0.7911386849363133,
+      "quick_prob": 0.88,
+      "why": "quick estimate 88% backs the favourite at 79%. Political inertia and institutional protection make official punishment of high-level officials for redaction delays unlikely during this term."
+    },
+    {
       "ts": 1793616446369,
       "question": "Will anyone be punished for failure to fully release the Epstein files? \u2192 Sort of, charged under the next admin but then found not guilty/charges thrown out",
       "url": "https://manifold.markets/MugaSofer/will-anyone-be-punished-for-failure",
@@ -2547,18 +2556,33 @@
       "market_prob": 0.8620689655172413,
       "quick_prob": 0.05,
       "why": "quick estimate 5%, market 86%. GCD of two football scores being at least 8 requires both teams to score multiples of 8 (e.g. 16, 24), which is extremely rare in the NFL."
-    },
-    {
-      "ts": 1793568243132,
-      "question": "Will Virginia Question 1 (right to reproductive freedom) be approved in the November 3, 2026 election?",
-      "url": "https://manifold.markets/ManifoldPolitics/will-virginia-question-1-right-to-r",
-      "passed": false,
-      "market_prob": 0.947664970242959,
-      "quick_prob": 0.65,
-      "why": "quick estimate 65%, market 95%. Abortion-related ballot measures generally poll decently in competitive states, but no specific polling data is cited here to warrant a deeper look."
     }
   ],
   "decisions": [
+    {
+      "ts": 1793620403391,
+      "kind": "no_trade",
+      "question": "Will anyone be punished for failure to fully release the Epstein files? \u2192 No, not during Trump's second term",
+      "url": "https://manifold.markets/MugaSofer/will-anyone-be-punished-for-failure",
+      "market_prob": 0.7911386849363133,
+      "model_prob": 0.92,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Historical precedent shows executive agency failure to meet statutory document disclosure deadlines almost never results in formal criminal charges, fines, or official disciplinary punishments for individual officials. While a symbolic firing remains a slight possibility under high political pressure, the base rate of formal punishment is extremely low, making it overwhelmingly likely no one is punished during Trump's second term.",
+      "uncertainty": "Whether executive leadership issues formal disciplinary actions or firings explicitly linked to Epstein file handling during Trump's second term",
+      "resolution_risk": "Disagreements over whether an official being reassigned or resigning under pressure constitutes official punishment under market criteria",
+      "evidence_for": [
+        "Government document disclosure delays almost never result in formal legal or disciplinary penalties for individual officials",
+        "Obstruction charges under 18 U.S.C. 1519 for agency redaction delays are unprecedented in administrative practice",
+        "DOJ is unlikely to criminally prosecute its own personnel or leaders over statutory deadline misses"
+      ],
+      "evidence_against": [
+        "High public and legislative focus on Epstein files could incentivize symbolic firings of federal bureaucrats",
+        "Trump administration could scapegoat specific officials for document redaction controversies"
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1793616856913,
       "kind": "no_trade",
@@ -2878,30 +2902,6 @@
         "A Democratic upset in any single red seat (e.g., Texas or an open contest) combined with a Democratic hold in Michigan and win in Ohio defeats the threshold."
       ],
       "reason": "would be a longshot bet against the 19% favourite"
-    },
-    {
-      "ts": 1793533125087,
-      "kind": "no_trade",
-      "question": "Will Texas elect a Democratic Senator in 2026, and will they elect at least 14 Democratic Representatives? \u2192 Dem Senator, < 14 Dem Reps",
-      "url": "https://manifold.markets/Evansbot/will-texas-elect-a-democratic-senat",
-      "market_prob": 0.3210086625032576,
-      "model_prob": 0.13,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Electing a Democratic Senator while winning fewer than 14 House seats requires a narrow band of ticket-splitting where Paxton uniquely loses statewide but GOP incumbents hold all marginal House seats (like TX-15). If Talarico wins, coattails likely push Dems to 14+ seats.",
-      "uncertainty": "The extent of ticket-splitting between the controversial Paxton and congressional Republicans across suburban and South Texas districts.",
-      "resolution_risk": "Official recounts or prolonged certification in tightly contested House districts could delay clarity on whether the delegation hits exactly 14 Democrats.",
-      "evidence_for": [
-        "Ken Paxton faces significant personal scandals and polarized approval, creating potential for ticket-splitting where Paxton loses while Republican House incumbents hold their districts.",
-        "The Texas congressional district map is heavily gerrymandered to protect incumbent Republicans, making House seat flips difficult without a massive localized swing."
-      ],
-      "evidence_against": [
-        "If Democratic nominee James Talarico wins statewide, the required Democratic swing would likely flip marginal districts like TX-15, pushing the Democratic delegation to 14 or more seats.",
-        "Texas has not elected a Democratic Senator since 1988, making the prerequisite condition (Dem Senator) an uphill battle even with competitive polling.",
-        "This outcome requires a narrow compound condition: a Democratic victory statewide paired with Republican resilience across all contested House districts."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
