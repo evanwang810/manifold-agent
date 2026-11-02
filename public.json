@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1793616257013,
+  "generated_ms": 1793616864749,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.7-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 18,
+      "today": 21,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 5,
+      "today": 6,
       "cap": 54
     }
   },
@@ -51,7 +51,7 @@
     "closer": 113,
     "disagree_n": 200,
     "disagree_closer": 100,
-    "open": 104,
+    "open": 105,
     "bets": 156,
     "fav_n": 63,
     "fav_won": 49,
@@ -64,6 +64,31 @@
   "net_worth": 623.32,
   "summary": "Balance M$10. Net worth M$622. 14 open positions, 7 of them closed and awaiting resolution. Brier score over 230 resolved forecasts: yours 0.138, the market's 0.087. You forecast worse than the market price overall. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 112 of 230; on big disagreements, 99 of 197. Resolved bets: 156. Backing the favourite: won 49 of 63. Longshots against the favourite: won 21 of 93.\n\nPerformance and calibration remain weak on speculative, narrative-driven longshots and low-probability NO bets. You forecast worse than the market price overall, and your disagreements have mostly been you being wrong rather than the market. Conversely, backing favourites remains much more reliable (won 49 of 63, compared to longshots against the favourite where you won 21 of 93). Spendable cash is restricted due to balance reserve limits, which repeatedly floors potential trade sizes to zero when capital is tied up awaiting resolutions. Active positions are held steady while awaiting market outcomes, with capital deployed into high-confidence near-term favourites like Louisiana Senate, safe Senate seats, and CA-4 house elections, though some positions have experienced downward price movement against us. \n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favourites), the Narrative Trap (allowing a compelling story to mask poor mathematical expected value), and failing to respond rapidly to significant upward price moves in YES shares when holding NO positions. Avoid over-leveraging on subjective personal judgment markets and trading micro-trader meta-markets where time decay turns unfavorable. Avoid balance reserve bottlenecks that floor trade sizes to zero when capital is tied up awaiting resolutions.\n\nCategories and question styles where calibration is poor include low-probability longshots and speculative narrative-driven events, whereas backing clear favourites is significantly more reliable. Active positions remain held steady while awaiting market outcomes, with capital tied up awaiting upcoming resolutions, including imminent midterm election markets.",
   "journal": [
+    {
+      "ts": 1793616864506,
+      "kind": "score",
+      "text": "Scored 233 resolved forecasts: my Brier 0.144, the market's 0.086. Closer than the market on 113/233."
+    },
+    {
+      "ts": 1793616856920,
+      "kind": "analysis",
+      "text": "Analysed \"Will anyone be punished for failure to fully release the Epstein files\": market 45%, my 3% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1793616446376,
+      "kind": "screen",
+      "text": "Passed on \"Will anyone be punished for failure to fully release the Epstein files\" at 54%: quick estimate 10%, market 54%. Specific conditional outcomes involving charges and dismissals are too speculative to warrant deep analysis."
+    },
+    {
+      "ts": 1793616446369,
+      "kind": "screen",
+      "text": "Escalated \"Will anyone be punished for failure to fully release the Epstein files\" at 45%: quick estimate 5% backs the favourite at 45%. Fines are a rare and weak penalty for alleged obstruction of justice compared to other potential actions."
+    },
+    {
+      "ts": 1793616446362,
+      "kind": "screen",
+      "text": "Escalated \"Will anyone be punished for failure to fully release the Epstein files\" at 79%: quick estimate 85% backs the favourite at 79%. Political inertia makes official punishment for bureaucratic redactions highly unlikely during Trump's term."
+    },
     {
       "ts": 1793613196468,
       "kind": "score",
@@ -438,31 +463,6 @@
       "ts": 1793557192330,
       "kind": "screen",
       "text": "Passed on \"Will the US and Canada publicly strike a trade deal by the end of this\" at 10%: quick estimate 10%, market 10%. Comments indicate Canadian leadership is willing to wait out the administration, making a deal this week extremely unlikely."
-    },
-    {
-      "ts": 1793557192326,
-      "kind": "screen",
-      "text": "Passed on \"Will the Denver, CO ballot measure, Prohibit Force Feeding Birds and S\" at 71%: quick estimate 40%, market 71%. Standard local animal welfare ballot measure in Denver with no specific polling data to analyze, making it a coin flip."
-    },
-    {
-      "ts": 1793557192322,
-      "kind": "screen",
-      "text": "Escalated \"Will Republican chances to win the house go above 10% again?\" at 13%: quick estimate 5% backs the favourite at 13%. With only 2 days left and large limit orders blocking the price at 9%, it is very unlikely to hit 10%."
-    },
-    {
-      "ts": 1793553623300,
-      "kind": "score",
-      "text": "Scored 225 resolved forecasts: my Brier 0.141, the market's 0.088. Closer than the market on 108/225."
-    },
-    {
-      "ts": 1793553607707,
-      "kind": "screen",
-      "text": "Passed on \"How Many Statewide Offices Will Democrats win in Texas in 2026? \u2192 4 or\" at 51%: quick estimate 1%, market 51%. A Democratic sweep of four or more statewide offices in Texas is practically impossible."
-    },
-    {
-      "ts": 1793553607703,
-      "kind": "screen",
-      "text": "Passed on \"How Many Statewide Offices Will Democrats win in Texas in 2026? \u2192 2 or\" at 60%: quick estimate 5%, market 60%. Winning two or more statewide offices in Texas is historically unprecedented in the modern era."
     }
   ],
   "todos": [
@@ -790,7 +790,7 @@
       "profit": -1.6,
       "prob": 0.86,
       "closed": false,
-      "days_to_close": 1.6
+      "days_to_close": 1.5
     },
     {
       "question": "Will Magnus Carlsen be dethroned from his #1 spot in FIDE rating before GTA 6 is released?",
@@ -886,7 +886,7 @@
       "profit": 1.5,
       "prob": 0.095,
       "closed": false,
-      "days_to_close": 0.6
+      "days_to_close": 0.5
     },
     {
       "question": "Will the US attack Cuba before the 2026 midterm elections?",
@@ -898,7 +898,7 @@
       "profit": 0.2,
       "prob": 0.025,
       "closed": false,
-      "days_to_close": 0.6
+      "days_to_close": 0.5
     },
     {
       "question": "Will Anthropic pull out as a sponsor of the Caltech Mathathon?",
@@ -910,7 +910,7 @@
       "profit": -0.6,
       "prob": 0.5,
       "closed": false,
-      "days_to_close": 11.6
+      "days_to_close": 11.5
     }
   ],
   "trades": [
@@ -2198,6 +2198,33 @@
   ],
   "screens": [
     {
+      "ts": 1793616446369,
+      "question": "Will anyone be punished for failure to fully release the Epstein files? \u2192 Sort of, charged under the next admin but then found not guilty/charges thrown out",
+      "url": "https://manifold.markets/MugaSofer/will-anyone-be-punished-for-failure",
+      "passed": false,
+      "market_prob": 0.5376713785874824,
+      "quick_prob": 0.1,
+      "why": "quick estimate 10%, market 54%. Specific conditional outcomes involving charges and dismissals are too speculative to warrant deep analysis."
+    },
+    {
+      "ts": 1793616446362,
+      "question": "Will anyone be punished for failure to fully release the Epstein files? \u2192 Yes, fined under the administration after Trump",
+      "url": "https://manifold.markets/MugaSofer/will-anyone-be-punished-for-failure",
+      "passed": true,
+      "market_prob": 0.45104241766922737,
+      "quick_prob": 0.05,
+      "why": "quick estimate 5% backs the favourite at 45%. Fines are a rare and weak penalty for alleged obstruction of justice compared to other potential actions."
+    },
+    {
+      "ts": 1793616446354,
+      "question": "Will anyone be punished for failure to fully release the Epstein files? \u2192 No, not during Trump's second term",
+      "url": "https://manifold.markets/MugaSofer/will-anyone-be-punished-for-failure",
+      "passed": true,
+      "market_prob": 0.7911386849363133,
+      "quick_prob": 0.85,
+      "why": "quick estimate 85% backs the favourite at 79%. Political inertia makes official punishment for bureaucratic redactions highly unlikely during Trump's term."
+    },
+    {
       "ts": 1793609090946,
       "question": "Will Abdul El-Sayed win the 2026 U.S. Senate election in Michigan?",
       "url": "https://manifold.markets/JasonMendoza2008/will-abdul-elsayed-win-the-2026-us-SEIzOqRU0y",
@@ -2529,36 +2556,33 @@
       "market_prob": 0.947664970242959,
       "quick_prob": 0.65,
       "why": "quick estimate 65%, market 95%. Abortion-related ballot measures generally poll decently in competitive states, but no specific polling data is cited here to warrant a deeper look."
-    },
-    {
-      "ts": 1793568243125,
-      "question": "Will Democrat Angie Nixon win Miami Dade County in the Florida Senate Election?",
-      "url": "https://manifold.markets/Jack1/will-democrat-angie-nixon-win-miami",
-      "passed": false,
-      "market_prob": 0.51,
-      "quick_prob": 0.45,
-      "why": "quick estimate 45%, market 51%. Statewide Florida Senate race dynamics in Miami-Dade depend heavily on broader trends that require detailed electoral analysis beyond a quick read."
-    },
-    {
-      "ts": 1793564534577,
-      "question": "NFL Week 8 - Prop Bets \u2192 Quarterback gets benched in the middle of a game",
-      "url": "https://manifold.markets/StopPunting/nfl-week-8-prop-bets-Z0l8UO0P0g",
-      "passed": false,
-      "market_prob": 0.9533221702428835,
-      "quick_prob": 0.15,
-      "why": "quick estimate 15%, market 95%. Benchings for performance in Week 8 are rare and depend on subjective creator judgment."
-    },
-    {
-      "ts": 1793564534568,
-      "question": "After the Binance hack, will the S&P 500 or Nasdaq drop sharply by Nov 3, 2026?",
-      "url": "https://manifold.markets/MachiNi/will-the-binance-hack-cause-a-crash",
-      "passed": true,
-      "market_prob": 0.09833699514041656,
-      "quick_prob": 0.05,
-      "why": "quick estimate 5% backs the favourite at 10%. A 5-7 percent market drop or circuit breaker from a crypto exchange hack is extremely unlikely."
     }
   ],
   "decisions": [
+    {
+      "ts": 1793616856913,
+      "kind": "no_trade",
+      "question": "Will anyone be punished for failure to fully release the Epstein files? \u2192 Yes, fined under the administration after Trump",
+      "url": "https://manifold.markets/MugaSofer/will-anyone-be-punished-for-failure",
+      "market_prob": 0.45104241766922737,
+      "model_prob": 0.03,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Personal criminal or civil fines against government officials for over-redaction or statutory disclosure delays are virtually unprecedented. Any action under the post-Trump administration (2029+) faces high legal hurdles and immunities.",
+      "uncertainty": "Whether future DOJ leadership in 2029+ or a federal court would establish an unprecedented precedent of pursuing personal fines or criminal sanctions against officials involved in file redactions.",
+      "resolution_risk": "Ambiguity around what constitutes an official 'punishment' or 'fine' (e.g., judicial sanctions vs. criminal fines vs. administrative settlement penalties).",
+      "evidence_for": [
+        "Ongoing legal challenges, such as the Katie Phang lawsuit and pressure from 17 state attorneys general, keep Epstein files transparency under intense scrutiny.",
+        "Lawmakers like Rep. Thomas Massie have publicly argued that improper redactions could constitute obstruction under 18 U.S.C. \u00a7 1519, which carries statutory penalties including fines."
+      ],
+      "evidence_against": [
+        "Government officials and DOJ attorneys almost never face personal criminal prosecution or individual fines for administrative delays or over-redacting records pursuant to disclosure legislation.",
+        "Any such action under the post-Trump administration would require investigations starting in 2029 or later, well past initial processing timelines.",
+        "Courts typically remedy disclosure failures via orders to produce documents or civil contempt against agencies, not personal punitive fines against former officials."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1793602054987,
       "kind": "no_trade",
@@ -2876,29 +2900,6 @@
         "If Democratic nominee James Talarico wins statewide, the required Democratic swing would likely flip marginal districts like TX-15, pushing the Democratic delegation to 14 or more seats.",
         "Texas has not elected a Democratic Senator since 1988, making the prerequisite condition (Dem Senator) an uphill battle even with competitive polling.",
         "This outcome requires a narrow compound condition: a Democratic victory statewide paired with Republican resilience across all contested House districts."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1793529375564,
-      "kind": "no_trade",
-      "question": "Will Texas elect a Democratic Senator in 2026, and will they elect at least 14 Democratic Representatives? \u2192 Dem Senator, >= 14 Dem Reps",
-      "url": "https://manifold.markets/Evansbot/will-texas-elect-a-democratic-senat",
-      "market_prob": 0.4331953292625871,
-      "model_prob": 0.13,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Winning a Texas Senate seat requires an extraordinary wave overcoming an 8+ point baseline GOP advantage. While >=14 Dem House seats would almost certainly follow a statewide Dem win, the joint probability is bounded by the Senate race around 13-15%.",
-      "uncertainty": "Whether the national midterm political environment produces a large enough swing in Texas to overcome the ~8-10 point Republican baseline advantage statewide.",
-      "resolution_risk": "Resolves strictly according to the linked underlying markets on Manifold (Senate market YES and Republican Reps <= 24).",
-      "evidence_for": [
-        "2026 is a midterm cycle under a Republican presidency, historically providing favorable national tailwinds for Democrats.",
-        "Reaching at least 14 Democratic Representatives requires netting only one flipped seat from the current 13-seat delegation, which would almost certainly happen in any environment where Democrats win statewide."
-      ],
-      "evidence_against": [
-        "Texas has not elected a Democratic Senator since 1988, and the state backed Donald Trump and Ted Cruz by 8 to 14 points in 2024.",
-        "The Texas congressional district map remains heavily gerrymandered to favor Republicans winning at least 25 seats."
       ],
       "reason": "size floored to zero by balance reserve"
     }
