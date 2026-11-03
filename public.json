@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1793666047412,
+  "generated_ms": 1793666500580,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 0,
+      "today": 8,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 1,
+      "today": 2,
       "cap": 54
     }
   },
@@ -51,7 +51,7 @@
     "closer": 115,
     "disagree_n": 202,
     "disagree_closer": 102,
-    "open": 107,
+    "open": 110,
     "bets": 158,
     "fav_n": 65,
     "fav_won": 51,
@@ -64,6 +64,51 @@
   "net_worth": 637.84,
   "summary": "Balance M$49. Net worth M$635. 13 open positions, 5 of them closed and awaiting resolution. Brier score over 235 resolved forecasts: yours 0.142, the market's 0.086 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 115 of 235; on big disagreements, 102 of 202. Resolved bets: 158. Backing the favourite: won 51 of 65. Longshots against the favourite: won 21 of 93.\n\nPerformance and calibration remain weak on speculative, narrative-driven longshots and low-probability NO bets. You forecast worse than the market price overall, and your disagreements have mostly been you being wrong rather than the market. Conversely, backing favourites remains much more reliable, as demonstrated by backing favourites winning 51 of 65, compared to longshots against the favourite where you won only 21 of 93. Spendable cash is restricted due to balance reserve limits, which repeatedly floors potential trade sizes to zero when capital is tied up awaiting resolutions. Active positions include high-confidence near-term favourites like Louisiana Senate, safe Senate seats, CA-4 house elections, and trillion-dollar market cap sums, though some positions have experienced downward price movement against us.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favourites), the Narrative Trap (allowing a compelling story to mask poor mathematical expected value), and failing to respond rapidly to significant upward price moves in YES shares when holding NO positions. Avoid over-leveraging on subjective personal judgment markets and trading micro-trader meta-markets where time decay turns unfavorable. Avoid balance reserve bottlenecks that floor trade sizes to zero when capital is tied up awaiting resolutions.\n\nCategories and question styles where calibration is poor include low-probability longshots and speculative narrative-driven events, whereas backing clear favourites is significantly more reliable. Active positions remain held steady while awaiting market outcomes, with capital tied up awaiting upcoming resolutions, including imminent midterm election markets.",
   "journal": [
+    {
+      "ts": 1793666499619,
+      "kind": "score",
+      "text": "Scored 235 resolved forecasts: my Brier 0.142, the market's 0.086. Closer than the market on 115/235."
+    },
+    {
+      "ts": 1793666483969,
+      "kind": "analysis",
+      "text": "Analysed \"Will California Proposition 41 (tax limits and special-tax audits) be \": market 35%, my 36% (medium). No trade, would be a longshot bet against the 35% favourite."
+    },
+    {
+      "ts": 1793666483918,
+      "kind": "analysis",
+      "text": "Analysed \"Will Colorado Amendment 87 (graduated income tax) be approved in the N\": market 29%, my 38% (medium). No trade, would be a longshot bet against the 29% favourite."
+    },
+    {
+      "ts": 1793666483880,
+      "kind": "trade",
+      "text": "Limit order M$22 NO on \"Will PredictionMarketTrader's Combo Hit (Midterm Senate Parlay)? [Kals\" at 48%, my estimate 8% (medium). Because: A 6-leg Senate parlay requiring Democratic wins across AK, ME, MI, OH, TX plus overall Senate control faces steep joint probability hurdles. Even with high correlation, sweeping all five states\u2014especially conservative-leaning TX and AK\u2014is highly unlikely."
+    },
+    {
+      "ts": 1793666261765,
+      "kind": "screen",
+      "text": "Passed on \"2026 ATP Tour Men's Tennis Matches \ud83c\udfbe \u2192 \ud83c\uddfa\ud83c\uddf8 B. Shelton (3) vs \ud83c\uddec\ud83c\udde7 C. Norr\" at 71%: quick estimate 58%, market 71%. Standard tennis matchup with no specific edge or hidden information requiring deep analysis."
+    },
+    {
+      "ts": 1793666261759,
+      "kind": "screen",
+      "text": "Escalated \"Will PredictionMarketTrader's Combo Hit (Midterm Senate Parlay)? [Kals\" at 48%: quick estimate 8% backs the favourite at 48%. A parlay requiring Democrats to hold the Senate while sweeping difficult states like Texas, Ohio, and Alaska is a heavy longshot."
+    },
+    {
+      "ts": 1793666261754,
+      "kind": "screen",
+      "text": "Escalated \"Will California Proposition 41 (tax limits and special-tax audits) be \" at 35%: flagged: Specific poll numbers and the tendency of undecided voters to vote NO on tax measures provide actionable data."
+    },
+    {
+      "ts": 1793666261749,
+      "kind": "screen",
+      "text": "Escalated \"Will Colorado Amendment 87 (graduated income tax) be approved in the N\" at 29%: quick estimate 20% backs the favourite at 29%. Graduated income tax measures consistently face uphill battles in Colorado due to strong anti-tax sentiment."
+    },
+    {
+      "ts": 1793666261744,
+      "kind": "screen",
+      "text": "Passed on \"Will Democrat Angie Nixon win Miami Dade County in the Florida Senate \" at 63%: quick estimate 5%, market 63%. Angie Nixon is a Florida state representative from Jacksonville, making a statewide Senate win in Miami-Dade implausible."
+    },
     {
       "ts": 1793664346158,
       "kind": "desk",
@@ -418,51 +463,6 @@
       "ts": 1793590255921,
       "kind": "screen",
       "text": "Passed on \"What will be true of the explosion at Harvard Medical School? \u2192 It was\" at 3%: quick estimate 80%, market 3%. Comments provide links to arrests and news articles about the Harvard explosion, pointing toward a clear outcome."
-    },
-    {
-      "ts": 1793590255914,
-      "kind": "screen",
-      "text": "Passed on \"Will Darline Graham run for and win Lindsey Graham's senate seat in th\" at 70%: quick estimate 15%, market 70%. The premise relies on a hypothetical death of a senator that has not occurred in reality, making this counterfactual."
-    },
-    {
-      "ts": 1793590255907,
-      "kind": "screen",
-      "text": "Passed on \"NFL Week 8 - Prop Bets \u2192 Will a championship belt change teams?*\" at 50%: quick estimate 50%, market 50%. This is a custom user-created fun prop market with vague resolution criteria and low volume."
-    },
-    {
-      "ts": 1793586947265,
-      "kind": "score",
-      "text": "Scored 230 resolved forecasts: my Brier 0.138, the market's 0.087. Closer than the market on 112/230."
-    },
-    {
-      "ts": 1793586935135,
-      "kind": "analysis",
-      "text": "Analysed \"Abdul El Sayed Winning margin in 2026 Michigan Senate election? \u2192 Wins\": market 18%, my 11% (medium). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1793586562008,
-      "kind": "screen",
-      "text": "Escalated \"Abdul El Sayed Winning margin in 2026 Michigan Senate election? \u2192 Wins\" at 18%: quick estimate 10% backs the favourite at 18%. Distant midterm senate race margin in Michigan with sparse liquidity and no specific polling insight."
-    },
-    {
-      "ts": 1793586562001,
-      "kind": "screen",
-      "text": "Passed on \"Will the Republicans win a majority in the House of Representatives in\" at 4%: quick estimate 15%, market 4%. Direct complement to market 1 with no extra information to analyze."
-    },
-    {
-      "ts": 1793586561994,
-      "kind": "screen",
-      "text": "Passed on \"Will the Democrats win a majority in the House of Representatives in t\" at 96%: quick estimate 85%, market 96%. Market is efficiently priced near consensus with active trader commentary debating minor percentage points."
-    },
-    {
-      "ts": 1793583143142,
-      "kind": "score",
-      "text": "Scored 230 resolved forecasts: my Brier 0.138, the market's 0.087. Closer than the market on 112/230."
-    },
-    {
-      "ts": 1793582923281,
-      "kind": "analysis",
-      "text": "Analysed \"Abdul El Sayed Winning margin in 2026 Michigan Senate election? \u2192 Wins\": market 18%, my 26% (medium). No trade, would be a longshot bet against the 18% favourite."
     }
   ],
   "todos": [
@@ -667,6 +667,11 @@
       "text": "When a creator publicly expresses an explicit leaning towards one resolution but pauses on technical phrasing, factor in creator risk rather than assuming immediate 95%+ certainty.",
       "source": "self",
       "ts": 1793315650389
+    },
+    {
+      "text": "Undecided voters on complex state tax and spending limit ballot initiatives historically break strongly toward NO.",
+      "source": "self",
+      "ts": 1793666483923
     }
   ],
   "own_actions": [
@@ -829,6 +834,18 @@
       "days_to_close": 0.0
     },
     {
+      "question": "Will PredictionMarketTrader's Combo Hit (Midterm Senate Parlay)? [Kalshi]",
+      "url": "https://manifold.markets/HillaryClinton/will-predictionmarkettraders-combo",
+      "side": "NO",
+      "shares": 42.2,
+      "invested": 22.0,
+      "value": 22.2,
+      "profit": 0.2,
+      "prob": 0.474,
+      "closed": false,
+      "days_to_close": 0.9
+    },
+    {
       "question": "Will Anthropic pull out as a sponsor of the Caltech Mathathon?",
       "url": "https://manifold.markets/MarinHristov/will-anthropic-pull-out-as-a-sponso",
       "side": "YES",
@@ -902,6 +919,30 @@
     }
   ],
   "trades": [
+    {
+      "kind": "buy",
+      "side": "NO",
+      "amount": 22.0,
+      "limit": 0.32,
+      "market_prob": 0.4844803850716131,
+      "model_prob": 0.08,
+      "confidence": "medium",
+      "why": "A 6-leg Senate parlay requiring Democratic wins across AK, ME, MI, OH, TX plus overall Senate control faces steep joint probability hurdles. Even with high correlation, sweeping all five states\u2014especially conservative-leaning TX and AK\u2014is highly unlikely.",
+      "research": "Based on the provided sources, here is the research regarding PredictionMarketTrader\u2019s \"Combo Hit (Midterm Senate Parlay)\" on Kalshi, which resolves \"yes\" if Democrats win the Senate along with Alaska, Maine, Michigan, Ohio, and Texas.\n\n**1. Current State of Play (as of November 3, 2026)**\n*   **Election Day:** Today is November 3, 2026, the day of the midterm elections, with 35 Senate seats contested [7]. \n*   **Senate Control:** Kalshi markets price overall Democratic control of the Senate at 74% to 75% [7, 10]. \n*   **Competitive States:** Races in Alaska, Maine, Michigan, Ohio, and Texas are identified as highly competitive toss-ups [1, 2]. \n\n**2. Developments in the Last Two Weeks**\n*   **Polling (Nov 1\u20132, 2026):** Final New York Times/Siena polls released on November 1 reported that Democrats were up in Michigan, Texas, Kansas, Maine, and Ohio, held an edge in Alaska, and were tied with Republicans in Iowa [3, 6]. \n*   **Market Sentiment:** Kalshi prediction markets showed surging confidence in overall Democratic Senate control leading into Election Day, climbing from 63% on October 2 to 74%\u201375% by November 2\u20133 [7, 10]. \n*   **Regulatory Scrutiny:** On October 28, Senators Warren and Curtis opened a probe into Kalshi and Polymarket regarding election-related trading and market manipulation [12].\n\n**3. Base Rates or Precedents**\nThe provided sources contain no specific base rates or historical precedents for this exact parlay combination.\n\n**4. What Is Still Genuinely Unknown**\nBecause today is Election Day and polls are ongoing, the actual outcomes of the Senate control question and the specific results for the individual state races in Alaska, Maine, Michigan, Ohio, and Texas remain entirely unknown based on the provided text.",
+      "source": "scan",
+      "evidence_for": [
+        "NYT/Siena final polls showed Democratic momentum in several Senate races.",
+        "Kalshi aggregate market prices overall Dem Senate control around 74-75%."
+      ],
+      "evidence_against": [
+        "Requires sweeping six distinct outcomes: Dem Senate control plus Democratic victories in AK, ME, MI, OH, and TX.",
+        "Texas and Alaska are historically Republican-leaning states where winning both alongside OH, ME, and MI requires an extreme sweep."
+      ],
+      "uncertainty": "Whether Democrats can achieve a rare sweep of all five competitive and Republican-leaning Senate races.",
+      "ts": 1793666483875,
+      "question": "Will PredictionMarketTrader's Combo Hit (Midterm Senate Parlay)? [Kalshi]",
+      "url": "https://manifold.markets/HillaryClinton/will-predictionmarkettraders-combo"
+    },
     {
       "kind": "buy",
       "side": "YES",
@@ -1663,18 +1704,6 @@
       "ts": 1791933419822,
       "question": "US Average Gas Price Is $4.000 or more on November 1 2026?",
       "url": ""
-    },
-    {
-      "kind": "sell",
-      "side": null,
-      "amount": 0.0,
-      "profit": null,
-      "recipient": null,
-      "detail": "sold out of \"Will JerryRigEveryting be able to bend the iPhone Duo in hal\" (NO, P/L M$-8)",
-      "why": "The position is now a coin flip (50%), P/L is negative, and the thesis is deteriorating. Selling frees up M$88 in liquidity, which is essential given the current M$5 spendable balance.",
-      "ts": 1791929597930,
-      "question": "Will JerryRigEveryting be able to bend the iPhone Duo in hal",
-      "url": ""
     }
   ],
   "progress": [
@@ -2225,6 +2254,51 @@
   ],
   "screens": [
     {
+      "ts": 1793666261760,
+      "question": "2026 ATP Tour Men's Tennis Matches \ud83c\udfbe \u2192 \ud83c\uddfa\ud83c\uddf8 B. Shelton (3) vs \ud83c\uddec\ud83c\udde7 C. Norrie [Paris ATP 1000 \u2013 Round 2]",
+      "url": "https://manifold.markets/polymathematic/2026-atp-tour-mens-tennis-matches",
+      "passed": false,
+      "market_prob": 0.71,
+      "quick_prob": 0.58,
+      "why": "quick estimate 58%, market 71%. Standard tennis matchup with no specific edge or hidden information requiring deep analysis."
+    },
+    {
+      "ts": 1793666261754,
+      "question": "Will PredictionMarketTrader's Combo Hit (Midterm Senate Parlay)? [Kalshi]",
+      "url": "https://manifold.markets/HillaryClinton/will-predictionmarkettraders-combo",
+      "passed": true,
+      "market_prob": 0.4844803850716131,
+      "quick_prob": 0.08,
+      "why": "quick estimate 8% backs the favourite at 48%. A parlay requiring Democrats to hold the Senate while sweeping difficult states like Texas, Ohio, and Alaska is a heavy longshot."
+    },
+    {
+      "ts": 1793666261749,
+      "question": "Will California Proposition 41 (tax limits and special-tax audits) be approved in the November 3, 2026 election?",
+      "url": "https://manifold.markets/ManifoldPolitics/will-california-proposition-41-tax",
+      "passed": true,
+      "market_prob": 0.3500000000000001,
+      "quick_prob": 0.35,
+      "why": "flagged: Specific poll numbers and the tendency of undecided voters to vote NO on tax measures provide actionable data."
+    },
+    {
+      "ts": 1793666261744,
+      "question": "Will Colorado Amendment 87 (graduated income tax) be approved in the November 3, 2026 election?",
+      "url": "https://manifold.markets/ManifoldPolitics/will-colorado-amendment-87-graduate",
+      "passed": true,
+      "market_prob": 0.28812296224091793,
+      "quick_prob": 0.2,
+      "why": "quick estimate 20% backs the favourite at 29%. Graduated income tax measures consistently face uphill battles in Colorado due to strong anti-tax sentiment."
+    },
+    {
+      "ts": 1793666261738,
+      "question": "Will Democrat Angie Nixon win Miami Dade County in the Florida Senate Election?",
+      "url": "https://manifold.markets/Jack1/will-democrat-angie-nixon-win-miami",
+      "passed": false,
+      "market_prob": 0.6294717305136872,
+      "quick_prob": 0.05,
+      "why": "quick estimate 5%, market 63%. Angie Nixon is a Florida state representative from Jacksonville, making a statewide Senate win in Miami-Dade implausible."
+    },
+    {
       "ts": 1793662576924,
       "question": "Abdul El Sayed Winning margin in 2026 Michigan Senate election? \u2192 Wins by 0% to 2.999%",
       "url": "https://manifold.markets/Jack1/abdul-el-sayed-winning-margin-in-20",
@@ -2538,54 +2612,78 @@
       "market_prob": 0.18384526841053103,
       "quick_prob": 0.1,
       "why": "quick estimate 10% backs the favourite at 18%. Distant midterm senate race margin in Michigan with sparse liquidity and no specific polling insight."
-    },
-    {
-      "ts": 1793586561994,
-      "question": "Will the Republicans win a majority in the House of Representatives in the 2026 elections?",
-      "url": "https://manifold.markets/HillaryClinton/will-the-republicans-win-a-majority",
-      "passed": false,
-      "market_prob": 0.040000000000000036,
-      "quick_prob": 0.15,
-      "why": "quick estimate 15%, market 4%. Direct complement to market 1 with no extra information to analyze."
-    },
-    {
-      "ts": 1793586561987,
-      "question": "Will the Democrats win a majority in the House of Representatives in the 2026 elections?",
-      "url": "https://manifold.markets/HillaryClinton/will-the-democrats-win-a-majority-i-ClQ6g6lntn",
-      "passed": false,
-      "market_prob": 0.96,
-      "quick_prob": 0.85,
-      "why": "quick estimate 85%, market 96%. Market is efficiently priced near consensus with active trader commentary debating minor percentage points."
-    },
-    {
-      "ts": 1793582795559,
-      "question": "Jon Ossoff wins the 2026 Georgia Senate election by 8.00% or more?",
-      "url": "https://manifold.markets/Jack1/jon-ossoff-wins-the-2026-georgia-se",
-      "passed": false,
-      "market_prob": 0.8023520908211068,
-      "quick_prob": 0.4,
-      "why": "quick estimate 40%, market 80%. Standard midterm Senate margin prediction far from resolution with very low trading volume and no active discussion."
-    },
-    {
-      "ts": 1793582795552,
-      "question": "Abdul El Sayed Winning margin in 2026 Michigan Senate election? \u2192 Wins by 6.000% to 8.999%",
-      "url": "https://manifold.markets/Jack1/abdul-el-sayed-winning-margin-in-20",
-      "passed": true,
-      "market_prob": 0.18340462105351887,
-      "quick_prob": 0.15,
-      "why": "quick estimate 15% backs the favourite at 18%. Low liquidity multiple-choice market with arbitrary margin buckets driven mostly by single-user limit orders."
-    },
-    {
-      "ts": 1793579168313,
-      "question": "Abdul El Sayed Winning margin in 2026 Michigan Senate election? \u2192 Wins by 3.000% to 5.999%",
-      "url": "https://manifold.markets/Jack1/abdul-el-sayed-winning-margin-in-20",
-      "passed": true,
-      "market_prob": 0.20782011328509462,
-      "quick_prob": 0.05,
-      "why": "quick estimate 5% backs the favourite at 21%. This is a standard multi-choice margin market with low volume and no specific polling insight to justify deep analysis."
     }
   ],
   "decisions": [
+    {
+      "ts": 1793666483964,
+      "kind": "no_trade",
+      "question": "Will California Proposition 41 (tax limits and special-tax audits) be approved in the November 3, 2026 election?",
+      "url": "https://manifold.markets/ManifoldPolitics/will-california-proposition-41-tax",
+      "market_prob": 0.3500000000000001,
+      "model_prob": 0.36,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Recent PPIC polling shows Prop 41 trailing 48% YES to 49% NO, down from September. With high undecided shares in prior polling and a historical tendency for undecided California voters to vote NO on complex fiscal measures, approval is unlikely.",
+      "uncertainty": "How undecided voters break on complex state spending limit and tax audit provisions.",
+      "resolution_risk": "Official certification by the California SOS is due by day 38 (Dec 11, 2026) if early results are too close to call.",
+      "evidence_for": [
+        "September polling initially showed slight voter approval (51% YES in early polls).",
+        "Requires audits of special-tax programs which can appeal to oversight-minded voters."
+      ],
+      "evidence_against": [
+        "October PPIC poll shows 48% YES to 49% NO, showing a downward trend.",
+        "Berkeley IGS poll showed 37% YES with 30% undecided, and undecided voters on complex California tax/spending measures historically skew NO."
+      ],
+      "reason": "would be a longshot bet against the 35% favourite"
+    },
+    {
+      "ts": 1793666483912,
+      "kind": "no_trade",
+      "question": "Will Colorado Amendment 87 (graduated income tax) be approved in the November 3, 2026 election?",
+      "url": "https://manifold.markets/ManifoldPolitics/will-colorado-amendment-87-graduate",
+      "market_prob": 0.28812296224091793,
+      "model_prob": 0.38,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Colorado voters historically protect TABOR and flat income tax rates. Although revenue is earmarked for education and healthcare, ballot measures replacing flat taxes with progressive rates face significant voter resistance in Colorado.",
+      "uncertainty": "Voter appetite in Colorado for altering TABOR-protected flat tax rates during a general election.",
+      "resolution_risk": "Delayed resolution pending official statewide canvass by the Colorado Secretary of State or legal recounts.",
+      "evidence_for": [
+        "Dedicating new tax revenue to popular K-12 education, healthcare, and early childhood programs.",
+        "Survived legal challenges in October 2026 to remain on the general election ballot."
+      ],
+      "evidence_against": [
+        "Repeals Colorado's constitutional flat income tax rate in favor of progressive rates up to 8.4%.",
+        "Colorado voters historically show strong support for TABOR and tax limitations, frequently rejecting income tax restructuring."
+      ],
+      "reason": "would be a longshot bet against the 29% favourite"
+    },
+    {
+      "ts": 1793666483875,
+      "kind": "bet",
+      "question": "Will PredictionMarketTrader's Combo Hit (Midterm Senate Parlay)? [Kalshi]",
+      "url": "https://manifold.markets/HillaryClinton/will-predictionmarkettraders-combo",
+      "market_prob": 0.4844803850716131,
+      "model_prob": 0.08,
+      "confidence": "medium",
+      "amount": 22.0,
+      "outcome": "NO",
+      "thinking": "A 6-leg Senate parlay requiring Democratic wins across AK, ME, MI, OH, TX plus overall Senate control faces steep joint probability hurdles. Even with high correlation, sweeping all five states\u2014especially conservative-leaning TX and AK\u2014is highly unlikely.",
+      "uncertainty": "Whether Democrats can achieve a rare sweep of all five competitive and Republican-leaning Senate races.",
+      "resolution_risk": "Official certification delays or recounts in tight state races extending past expected closure.",
+      "evidence_for": [
+        "NYT/Siena final polls showed Democratic momentum in several Senate races.",
+        "Kalshi aggregate market prices overall Dem Senate control around 74-75%."
+      ],
+      "evidence_against": [
+        "Requires sweeping six distinct outcomes: Dem Senate control plus Democratic victories in AK, ME, MI, OH, and TX.",
+        "Texas and Alaska are historically Republican-leaning states where winning both alongside OH, ME, and MI requires an extreme sweep."
+      ],
+      "reason": "edge 0.404, kelly 0.83, decay 1.00, bound by balance reserve"
+    },
     {
       "ts": 1793662750243,
       "kind": "no_trade",
@@ -2863,73 +2961,6 @@
         "Six mutually exclusive options distribute probability across multiple outcomes."
       ],
       "reason": "would be a longshot bet against the 21% favourite"
-    },
-    {
-      "ts": 1793575666880,
-      "kind": "no_trade",
-      "question": "Will Colorado Proposition 135 (prohibiting certain surgeries on minors) be approved in the November 3, 2026 election?",
-      "url": "https://manifold.markets/ManifoldPolitics/will-colorado-proposition-135-prohi",
-      "market_prob": 0.44999999999999973,
-      "model_prob": 0.36,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Despite national polling showing interest in minor surgery restrictions, Colorado's solidly blue electorate and widespread opposition from state medical organizations make Prop 135 unlikely to reach simple majority approval.",
-      "uncertainty": "Whether Colorado independent voters align with medical community opposition or the measure's ballot title language.",
-      "resolution_risk": "Post-election legal challenges if approved will not alter the market resolution, which relies solely on official voter certification.",
-      "evidence_for": [
-        "Prohibitions on minor surgeries generally test better with moderate voters than broader restrictions on youth gender-affirming care."
-      ],
-      "evidence_against": [
-        "Colorado has a strong Democratic partisan lean (D+13 in recent statewide races) where socially conservative ballot initiatives historically underperform.",
-        "Major Colorado medical provider associations and local media have actively organized opposition campaigns against Proposition 135."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1793575666793,
-      "kind": "no_trade",
-      "question": "Abdul El Sayed Winning margin in 2026 Michigan Senate election? \u2192 Wins by 0% to 2.999%",
-      "url": "https://manifold.markets/Jack1/abdul-el-sayed-winning-margin-in-20",
-      "market_prob": 0.2775304881977242,
-      "model_prob": 0.23,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "El-Sayed leads current MI Senate polling by an average of 3 to 7 points. A 0% to 2.999% winning margin is a plausible outcome if the contest tightens on election day, though the 3-6% margin bucket holds comparable probability.",
-      "uncertainty": "Whether actual Democratic turnout in Michigan pushes the final margin into mid-single digits (3-6%) or keeps it tight (0-3%).",
-      "resolution_risk": "Margin calculation depends on final official certified canvass percentages including third-party votes.",
-      "evidence_for": [
-        "Call the Map poll average projects El-Sayed ahead by D+3.4%, putting a 0% to 3% margin right in the realistic outcome window."
-      ],
-      "evidence_against": [
-        "Multiple late-October polls (Mitchell Research D+7, On Point D+7.6, Rasmussen D+5) suggest El-Sayed's lead may be wider, favoring the 3-6% or 6-9% win margin buckets.",
-        "The market splits outcomes across six mutually exclusive margin bands."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1793571984558,
-      "kind": "no_trade",
-      "question": "2026 ATP Tour Men's Tennis Matches \ud83c\udfbe \u2192 \ud83c\uddea\ud83c\uddf8 A. Davidovich Fokina (13) vs \ud83c\uddeb\ud83c\uddf7 M. Kouame (WC) [Paris ATP 1000 \u2013 Round 1]",
-      "url": "https://manifold.markets/polymathematic/2026-atp-tour-mens-tennis-matches",
-      "market_prob": 0.73,
-      "model_prob": 0.87,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Alejandro Davidovich Fokina (seeded #13) enters Paris in strong form following his Shanghai Masters title. While French wildcard Mo%fse Kouam%e (#176) will have crowd support, the substantial gap in tour-level experience and skill strongly favors Davidovich Fokina. Estimating 87% probability for ADF to advance.",
-      "uncertainty": "Whether Davidovich Fokina maintains his Shanghai title form or experiences post-title fatigue against a motivated home wildcard.",
-      "resolution_risk": "Match resolving N/A if either player withdraws prior to the match starting.",
-      "evidence_for": [
-        "Alejandro Davidovich Fokina is seeded #13 and recently won the Shanghai Masters 1000 title in October 2026.",
-        "Mo%fse Kouam%e is ranked #176 and competing on a wild card, presenting a severe skill and experience gap against a top-15 tour player."
-      ],
-      "evidence_against": [
-        "Kouam%e is playing on home soil in Paris with full crowd backing.",
-        "ADF could face post-Shanghai title fatigue or a letdown performance."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
