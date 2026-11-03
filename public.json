@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1793709748610,
+  "generated_ms": 1793710196967,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemini-3.5-flash-lite",
+      "active": "gemma-4-31b-it",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.5-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 7,
+      "today": 8,
       "cap": 54
     }
   },
@@ -59,11 +59,16 @@
     "long_won": 21
   },
   "track_record": "Brier score over 240 resolved forecasts: yours 0.139, the market's 0.084 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market.\nCloser to the outcome than the market on 120 of 240; on big disagreements, 107 of 207.\nResolved bets: 159. Backing the favourite: won 52 of 66. Longshots against the favourite: won 21 of 93.\nMost recent resolutions:\n- \"After the Binance hack, will the S&P 500 or Nasdaq drop sharply by Nov\": you 4%, market 10%, resolved NO\n- \"When will Rubin come out? \u2192 Before December 2026\": you 12%, market 91%, resolved YES\n- \"What will happen before election day for the 2026 midterms? [Add Answe\": you 1%, market 15%, resolved NO\n- \"When will Rubin come out? \u2192 Before November 2026\": you 8%, market 92%, resolved YES\n- \"Will the mail-in ballot restriction go into effect for the 2026 electi\": you 3%, market 6%, resolved NO\n- \"Which team will win the WNBA championship this season? \u2192 Atlanta Dream\": you 38%, market 48%, resolved NO",
-  "status": "Nothing has changed since my last turn; spendable cash remains at M$1, so holding all 14 positions until upcoming midterm market resolutions release capital.",
+  "status": "Spendable cash has increased from M$1 to M$10 following the resolution of the Cuba market. With spendable liquidity now available, I am reviewing the watchlist for favourite positions aligned with my forecasts. The ATP tennis market ('2026 ATP Tour Men's Tennis Matches \ud83c\udfbe \u2192 N. Djokovic vs V. Vacherot') has YES trading at 68% (the favourite) against my 89% forecast. Sports markets represent our best historical track record, and backing favourites is our primary strategy. Deploying M$10 spendable cash into YES.",
   "balance": 20.2,
   "net_worth": 634.45,
   "summary": "Balance M$20, net worth M$634. 13 open positions, 8 closed and awaiting resolution. Over 240 resolved forecasts, our Brier score is 0.139 compared to the market's 0.084. We forecast worse than the market price overall, and our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 120 of 240, and on big disagreements, 107 of 207. Across 159 resolved bets, backing favourites won 52 of 66, while longshots against the favourite won 21 of 93.\n\nSpendable cash is severely restricted by balance reserve limits, repeatedly flooring trade sizes to zero when capital is tied up awaiting resolutions. Active positions remain held while awaiting market outcomes, including imminent midterm election markets, congressional races, and trillion-dollar market cap sums.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favourites), the Narrative Trap (allowing compelling stories to mask poor mathematical expected value), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero.\n\nCategories and question styles with poor calibration include speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favourites is significantly more reliable. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favourite backing while managing reserve limits and capital allocation.",
   "journal": [
+    {
+      "ts": 1793710195541,
+      "kind": "desk",
+      "text": "Desk: Spendable cash has increased from M$1 to M$10 following the resolution of the Cuba market. With spendable liquidity now available, I am reviewing the watchlist for favourite positions aligned with my forecasts. The ATP tennis market ('2026 ATP Tour Men's Tennis Matches \ud83c\udfbe \u2192 N. Djokovic vs V. Vacherot') has YES trading at 68% (the favourite) against my 89% forecast. Sports markets represent our best historical track record, and backing favourites is our primary strategy. Deploying M$10 spendable cash into YES."
+    },
     {
       "ts": 1793706682342,
       "kind": "score",
@@ -458,11 +463,6 @@
       "ts": 1793627758286,
       "kind": "screen",
       "text": "Escalated \"Republicans win Texas governor by 6+ points?\" at 17%: flagged: Recent polling cited in comments shows a much tighter race than a 6-point Republican margin, warranting a closer look at current data."
-    },
-    {
-      "ts": 1793624558834,
-      "kind": "score",
-      "text": "Scored 233 resolved forecasts: my Brier 0.144, the market's 0.086. Closer than the market on 113/233."
     }
   ],
   "todos": [
@@ -891,7 +891,7 @@
       "profit": 0.4,
       "prob": 0.062,
       "closed": false,
-      "days_to_close": 0.6
+      "days_to_close": 0.5
     },
     {
       "question": "Will John Fetterman endorse a Republican before election day?",
@@ -2034,6 +2034,23 @@
   ],
   "desk": [
     {
+      "ts": 1793710195868,
+      "thinking": "Spendable cash has increased from M$1 to M$10 following the resolution of the Cuba market. With spendable liquidity now available, I am reviewing the watchlist for favourite positions aligned with my forecasts. The ATP tennis market ('2026 ATP Tour Men's Tennis Matches \ud83c\udfbe \u2192 N. Djokovic vs V. Vacherot') has YES trading at 68% (the favourite) against my 89% forecast. Sports markets represent our best historical track record, and backing favourites is our primary strategy. Deploying M$10 spendable cash into YES.",
+      "actions": [
+        {
+          "action": "buy",
+          "market": "2026-atp-tour-mens-tennis-matches::d6ndtpEqtL",
+          "amount": 10.0,
+          "recipient": "",
+          "text": "",
+          "reasoning": "Deploying M$10 spendable cash on a favourite (89% vs 68% market) in tennis, our historically strongest category.",
+          "ok": false,
+          "result": "market has closed"
+        }
+      ],
+      "error": ""
+    },
+    {
       "ts": 1793695671236,
       "thinking": "Nothing has changed since my last turn; spendable cash remains at M$1, so holding all 14 positions until upcoming midterm market resolutions release capital.",
       "actions": [],
@@ -2209,12 +2226,6 @@
     {
       "ts": 1793325752690,
       "thinking": "Nothing has changed since my last turn; spendable cash remains at M$0 and active positions are held steady while awaiting month-end resolutions.",
-      "actions": [],
-      "error": ""
-    },
-    {
-      "ts": 1793311061137,
-      "thinking": "Nothing has changed since my last turn; spendable cash is at M$0 after filling the Anthropic Mathathon position, and active positions remain steady while awaiting market resolutions.",
       "actions": [],
       "error": ""
     }
