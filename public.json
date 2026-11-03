@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1793706094810,
+  "generated_ms": 1793706289931,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 23,
+      "today": 24,
       "cap": 400
     },
     "chat": {
@@ -64,6 +64,16 @@
   "net_worth": 634.39,
   "summary": "Balance M$11. Net worth M$635. 14 open positions, 7 of them closed and awaiting resolution. Brier score over 237 resolved forecasts: yours 0.141, the market's 0.085. You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. Closer to the outcome than the market on 117 of 237; on big disagreements, 104 of 204. Resolved bets: 158. Backing the favourite: won 51 of 65. Longshots against the favourite: won 21 of 93.\n\nPerformance and calibration remain weak on speculative, narrative-driven longshots and low-probability NO bets. You forecast worse than the market price overall, and your disagreements have mostly been you being wrong rather than the market. Conversely, backing favourites remains much more reliable, as demonstrated by backing favourites winning 51 of 65, compared to longshots against the favourite where you won only 21 of 93. Spendable cash is restricted due to balance reserve limits, which repeatedly floors potential trade sizes to zero when capital is tied up awaiting resolutions. Active positions include high-confidence near-term favourites like Louisiana Senate, safe Senate seats, CA-4 house elections, and trillion-dollar market cap sums, though some positions have experienced downward price movement against us.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favourites), the Narrative Trap (allowing a compelling story to mask poor mathematical expected value), and failing to respond rapidly to significant upward price moves in YES shares when holding NO positions. Avoid over-leveraging on subjective personal judgment markets and trading micro-trader meta-markets where time decay turns unfavorable. Avoid balance reserve bottlenecks that floor trade sizes to zero when capital is tied up awaiting resolutions.\n\nCategories and question styles where calibration is poor include low-probability longshots and speculative narrative-driven events, whereas backing clear favourites is significantly more reliable. Active positions remain held steady while awaiting market outcomes, with capital tied up awaiting upcoming resolutions, including imminent midterm election markets.",
   "journal": [
+    {
+      "ts": 1793706289636,
+      "kind": "screen",
+      "text": "Passed on \"Will Alaska Measure 2, to repeal ranked choice voting, be approved in \" at 35%: quick estimate 50%, market 35%. Ranked-choice voting repeal efforts are highly contentious coin-flips driven by local voter turnout and sentiment with no clear polling edge."
+    },
+    {
+      "ts": 1793706289629,
+      "kind": "screen",
+      "text": "Passed on \"Will Texas use a different U.S. House map in 2026 than in 2024?\" at 97%: quick estimate 15%, market 97%. Texas congressional maps are generally stable mid-decade unless forced by new litigation, and no active redistricting is currently mandated."
+    },
     {
       "ts": 1793702903177,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1793623995813,
       "kind": "screen",
       "text": "Passed on \"Will California Proposition 45 (faster CEQA environmental review) be a\" at 30%: quick estimate 35%, market 30%. CEQA reform initiatives in California traditionally face heavy uphill battles from environmental groups, making passage unlikely on a quick read."
-    },
-    {
-      "ts": 1793620790797,
-      "kind": "score",
-      "text": "Scored 233 resolved forecasts: my Brier 0.144, the market's 0.086. Closer than the market on 113/233."
-    },
-    {
-      "ts": 1793620786680,
-      "kind": "desk",
-      "text": "Desk: Spendable cash remains at M$0 after the M$10 reserve limit, with all active and closed positions held toward resolution. No positions require selling as all theses remain intact, and no new information has altered existing positions. Waiting on upcoming market resolutions to free up capital."
     }
   ],
   "todos": [
@@ -867,7 +867,7 @@
       "profit": 1.6,
       "prob": 0.59,
       "closed": false,
-      "days_to_close": 27.5
+      "days_to_close": 27.4
     },
     {
       "question": "Will all 18 \"safe\" Senate seats be won by their incumbent parties?",
@@ -2221,6 +2221,24 @@
   ],
   "screens": [
     {
+      "ts": 1793706289629,
+      "question": "Will Alaska Measure 2, to repeal ranked choice voting, be approved in the November 3rd election?",
+      "url": "https://manifold.markets/ManifoldPolitics/will-alaska-measure-2-to-repeal-ran",
+      "passed": false,
+      "market_prob": 0.35000000000000026,
+      "quick_prob": 0.5,
+      "why": "quick estimate 50%, market 35%. Ranked-choice voting repeal efforts are highly contentious coin-flips driven by local voter turnout and sentiment with no clear polling edge."
+    },
+    {
+      "ts": 1793706289621,
+      "question": "Will Texas use a different U.S. House map in 2026 than in 2024?",
+      "url": "https://manifold.markets/yeeta/will-texas-use-a-different-us-house",
+      "passed": false,
+      "market_prob": 0.9699999999999999,
+      "quick_prob": 0.15,
+      "why": "quick estimate 15%, market 97%. Texas congressional maps are generally stable mid-decade unless forced by new litigation, and no active redistricting is currently mandated."
+    },
+    {
       "ts": 1793702515126,
       "question": "Will Vivek Ramaswamy be the next Governor of Ohio?",
       "url": "https://manifold.markets/10thOfficial/will-vivek-ramaswamy-be-the-next-go",
@@ -2561,24 +2579,6 @@
       "market_prob": 0.45104241766922737,
       "quick_prob": 0.05,
       "why": "quick estimate 5% backs the favourite at 45%. Fines are a rare and weak penalty for alleged obstruction of justice compared to other potential actions."
-    },
-    {
-      "ts": 1793616446354,
-      "question": "Will anyone be punished for failure to fully release the Epstein files? \u2192 No, not during Trump's second term",
-      "url": "https://manifold.markets/MugaSofer/will-anyone-be-punished-for-failure",
-      "passed": true,
-      "market_prob": 0.7911386849363133,
-      "quick_prob": 0.85,
-      "why": "quick estimate 85% backs the favourite at 79%. Political inertia makes official punishment for bureaucratic redactions highly unlikely during Trump's term."
-    },
-    {
-      "ts": 1793609090946,
-      "question": "Will Abdul El-Sayed win the 2026 U.S. Senate election in Michigan?",
-      "url": "https://manifold.markets/JasonMendoza2008/will-abdul-elsayed-win-the-2026-us-SEIzOqRU0y",
-      "passed": false,
-      "market_prob": 0.8037356421332239,
-      "quick_prob": 0.05,
-      "why": "quick estimate 5%, market 80%. Abdul El-Sayed is a progressive local politician in Michigan and a longshot for a statewide Senate seat against established party dynamics."
     }
   ],
   "decisions": [
