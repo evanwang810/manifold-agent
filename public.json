@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1793824460379,
+  "generated_ms": 1793824776049,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 108,
+      "today": 111,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 21,
+      "today": 22,
       "cap": 54
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 584.51,
   "summary": "Balance M$78. Net worth M$584. 13 open positions, 8 of them closed and awaiting resolution. Over 264 resolved forecasts, our Brier score is 0.149 compared to the market's 0.091. We forecast worse than the market price overall, and our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 133 of 264, and on big disagreements, 120 of 230. Across 165 resolved bets, backing favourites won 58 of 72, while longshots against the favourite won 21 of 93.\n\nSpendable cash remains restricted by balance reserve limits, which repeatedly floor trade sizes to zero when capital is tied up awaiting resolutions. Active positions remain held while awaiting market outcomes, including imminent midterm election markets, congressional races, and geopolitical stakes. We recently cut losses and sold our position on the CA-4 house election market after dropping to 4% following a thesis collapse, acknowledging it as a narrative trap.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favourites), the Narrative Trap (allowing compelling stories like \"incumbents always win\" to mask poor mathematical expected value), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero.\n\nCategories and question styles with poor calibration include speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favourites is significantly more reliable, evidenced by winning 58 of 72 bets when backing favourites. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favourite backing while managing reserve limits and capital allocation.",
   "journal": [
+    {
+      "ts": 1793824656046,
+      "kind": "screen",
+      "text": "Passed on \"When will NYC get free buses rides (for some bus lines)? \u2192 2027 Q1\" at 10%: quick estimate 15%, market 10%. Volume is extremely low at M$12 and predicting exact quarterly policy rollouts for MTA bus lines is mostly noise."
+    },
+    {
+      "ts": 1793824656038,
+      "kind": "screen",
+      "text": "Escalated \"Will Ritchie Torres be the next governor of New York?\" at 11%: quick estimate 5% backs the favourite at 11%. Ritchie Torres is a US Representative, and the governorship race timing and field are speculative with no strong indication of him running or winning."
+    },
     {
       "ts": 1793824269699,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1793783223844,
       "kind": "screen",
       "text": "Escalated \"Will I (McPqndq) reach IGM on Codeforces before the 2026 ICPC World Fi\" at 26%: quick estimate 15% backs the favourite at 26%. Personal rating goals with tight deadlines and no public confirmation are classic longshot NO bets."
-    },
-    {
-      "ts": 1793783223837,
-      "kind": "screen",
-      "text": "Passed on \"How many of these democrats will be elected senators in November? \u2192 3 \" at 92%: quick estimate 5%, market 92%. List contains multiple non-existent or longshot candidacies for 2026 Senate seats."
-    },
-    {
-      "ts": 1793783223829,
-      "kind": "screen",
-      "text": "Escalated \"Will Federal Agents draw guns on voters on Election Day 2026\" at 6%: quick estimate 2% backs the favourite at 6%. Extremely rare and illegal scenario with no credible news reports indicating it happened."
     }
   ],
   "todos": [
@@ -903,7 +903,7 @@
       "profit": 0.0,
       "prob": 0.25,
       "closed": false,
-      "days_to_close": 11.4
+      "days_to_close": 11.3
     }
   ],
   "trades": [
@@ -2313,6 +2313,24 @@
   ],
   "screens": [
     {
+      "ts": 1793824656038,
+      "question": "When will NYC get free buses rides (for some bus lines)? \u2192 2027 Q1",
+      "url": "https://manifold.markets/AmmonLam/when-will-nyc-get-free-buses-rides-6RdAA2pgtc",
+      "passed": false,
+      "market_prob": 0.09930758639828431,
+      "quick_prob": 0.15,
+      "why": "quick estimate 15%, market 10%. Volume is extremely low at M$12 and predicting exact quarterly policy rollouts for MTA bus lines is mostly noise."
+    },
+    {
+      "ts": 1793824656030,
+      "question": "Will Ritchie Torres be the next governor of New York?",
+      "url": "https://manifold.markets/LeeBressler/will-ritchie-torres-be-the-next-gov",
+      "passed": true,
+      "market_prob": 0.10504976568130006,
+      "quick_prob": 0.05,
+      "why": "quick estimate 5% backs the favourite at 11%. Ritchie Torres is a US Representative, and the governorship race timing and field are speculative with no strong indication of him running or winning."
+    },
+    {
       "ts": 1793821074327,
       "question": "When will NYC get free buses rides (for some bus lines)? \u2192 2026 Q4",
       "url": "https://manifold.markets/AmmonLam/when-will-nyc-get-free-buses-rides-6RdAA2pgtc",
@@ -2653,24 +2671,6 @@
       "market_prob": 0.8155388771428108,
       "quick_prob": 0.15,
       "why": "quick estimate 15%, market 82%. Several candidates on this list are unlikely to win Senate seats, making five or more an extreme longshot."
-    },
-    {
-      "ts": 1793786919247,
-      "question": "Will Clint Eastwood, William Shatner, and Rita Moreno all be alive on Thanksgiving 2026?",
-      "url": "https://manifold.markets/AdamBraff/will-clint-eastwood-william-shatner",
-      "passed": false,
-      "market_prob": 0.867414725478442,
-      "quick_prob": 0.72,
-      "why": "quick estimate 72%, market 87%. This is a straightforward actuarial survival question over a short horizon where the baseline mortality risk is manageable."
-    },
-    {
-      "ts": 1793786919240,
-      "question": "Will I (McPqndq) reach IGM on Codeforces before the 2026 ICPC World Finals.",
-      "url": "https://manifold.markets/mcpqndq/will-i-mcpqndq-reach-igm-on-codefor",
-      "passed": true,
-      "market_prob": 0.2618472660096651,
-      "quick_prob": 0.15,
-      "why": "quick estimate 15% backs the favourite at 26%. With the deadline in November 2026 and no public confirmation of reaching International Grandmaster, the longshot price is fair."
     }
   ],
   "decisions": [
