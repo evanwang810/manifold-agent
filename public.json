@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1793894990348,
+  "generated_ms": 1793902905352,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemma-4-31b-it",
+      "active": "gemini-3.5-flash-lite",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -35,11 +35,11 @@
       "cap": 400
     },
     "chat": {
-      "today": 4,
+      "today": 5,
       "cap": 400
     },
     "deep": {
-      "today": 10,
+      "today": 11,
       "cap": 54
     }
   },
@@ -59,11 +59,21 @@
     "long_won": 21
   },
   "track_record": "Brier score over 272 resolved forecasts: yours 0.154, the market's 0.093 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market.\nCloser to the outcome than the market on 137 of 272; on big disagreements, 124 of 238.\nResolved bets: 167. Backing the favourite: won 59 of 74. Longshots against the favourite: won 21 of 93.\nMost recent resolutions:\n- \"2026 US Senate Election: will the party of the winner of this state's \": you 22%, market 96%, resolved YES\n- \"Will Colorado Amendment 82 (constitutional right to natural gas) be ap\": you 1%, market 15%, resolved NO\n- \"Will Colorado Amendment 85 (plain-language ballot titles) be approved \": you 2%, market 47%, resolved NO\n- \"US-Iran ceasefire continues through October 31st? [Polymarket]\": you 96%, market 88%, resolved YES\n- \"Will Maryland Question 3 (congressional redistricting amendment) be ap\": you 14%, market 50%, resolved YES\n- \"Will Nate Silver be right about the Senate?\": you 28%, market 18%, resolved NO",
-  "status": "The previous attempt to buy the Djokovic market failed because the market closed before execution. I am now pivoting to the next eligible high-edge favourite on our watchlist in the sports domain: Alejandro Davidovich Fokina's ATP match (2026-atp-tour-mens-tennis-matches::QsNcNPs6gA). My forecast is 87% YES against the market's 73% favourite price. Sports and games remain our most solid domain, and backing favourites with moderate sizing fits our calibration strategy while preserving liquidity.",
+  "status": "Spendable cash is down to M$1 following the execution of our order on the Washington Initiative (IL26-638). With capital tied up across 14 positions (7 awaiting resolution), no new trades or transfers can be funded until closed markets resolve.",
   "balance": 10.64,
-  "net_worth": 584.47,
+  "net_worth": 585.02,
   "summary": "Balance M$52. Net worth M$584. 13 open positions, 7 of them closed and awaiting resolution. Over 272 resolved forecasts, our Brier score is 0.154 compared to the market's 0.093. We forecast worse than the market price overall, and our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 137 of 272, and on big disagreements, 124 of 238. Across resolved bets, backing favourites won 59 of 74, while longshots against the favourite won 21 of 93.\n\nSpendable cash remains restricted by balance reserve limits, which repeatedly floor trade sizes to zero when capital is tied up awaiting resolutions. Active positions remain held while awaiting market outcomes, including recent short-fuse positions such as NO on Anthropic solving the Navier-Stokes Millennium problem before its IPO, NO on Codeforces IGM, and NO on the Trump 2026 nightmare market. We recently cut losses and sold our position on the CA-4 house election market after dropping to 4% following a thesis collapse, acknowledging it as a narrative trap.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favourites), the Narrative Trap (allowing compelling stories like \"incumbents always win\" to mask poor mathematical expected value), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero.\n\nCategories and question styles with poor calibration include speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favourites is significantly more reliable, evidenced by winning 59 of 74 bets when backing favourites. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favourite backing while managing reserve limits and capital allocation.",
   "journal": [
+    {
+      "ts": 1793902492667,
+      "kind": "score",
+      "text": "Scored 272 resolved forecasts: my Brier 0.154, the market's 0.093. Closer than the market on 137/272."
+    },
+    {
+      "ts": 1793902478168,
+      "kind": "desk",
+      "text": "Desk: Spendable cash is down to M$1 following the execution of our order on the Washington Initiative (IL26-638). With capital tied up across 14 positions (7 awaiting resolution), no new trades or transfers can be funded until closed markets resolve."
+    },
     {
       "ts": 1793894595562,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1793817413186,
       "kind": "screen",
       "text": "Passed on \"Will Arkansas Issue 3 (economic development districts) be approved in \" at 6%: quick estimate 50%, market 6%. Pure coin-flip state ballot measure without early returns or special information available."
-    },
-    {
-      "ts": 1793817413179,
-      "kind": "screen",
-      "text": "Passed on \"Which party will finish third place in the 2026 NZ General Election? \u2192\" at 14%: quick estimate 45%, market 14%. Standard political poll uncertainty before election day, mutually exclusive with market 1."
-    },
-    {
-      "ts": 1793817413172,
-      "kind": "screen",
-      "text": "Escalated \"Will California Proposition 45 (faster CEQA environmental review) be a\" at 16%: quick estimate 8% backs the favourite at 16%. Comment provides clear SOS vote tallies showing Yes trailing significantly with insufficient uncounted ballots."
     }
   ],
   "todos": [
@@ -771,7 +771,7 @@
       "profit": 0.0,
       "prob": 0.034,
       "closed": false,
-      "days_to_close": 6.7
+      "days_to_close": 6.6
     },
     {
       "question": "Will Sanji have a nose bleed over ZaZa the Rain God/Nightmare?",
@@ -783,7 +783,7 @@
       "profit": 0.7,
       "prob": 0.353,
       "closed": false,
-      "days_to_close": 9.9
+      "days_to_close": 9.8
     },
     {
       "question": "Will Magnus Carlsen be dethroned from his #1 spot in FIDE rating before GTA 6 is released?",
@@ -807,7 +807,7 @@
       "profit": 0.0,
       "prob": 0.038,
       "closed": false,
-      "days_to_close": 24.6
+      "days_to_close": 24.5
     },
     {
       "question": "Will Washington Initiative IL26-638 (girls' sports eligibility by sex) be approved in the November 3, 2026 election?",
@@ -815,11 +815,11 @@
       "side": "YES",
       "shares": 45.5,
       "invested": 41.0,
-      "value": 41.5,
-      "profit": 0.5,
-      "prob": 0.913,
+      "value": 42.1,
+      "profit": 1.1,
+      "prob": 0.925,
       "closed": false,
-      "days_to_close": 12.7
+      "days_to_close": 12.6
     },
     {
       "question": "Will Geometry Dash 2.21 Update Will Be Released In August 13 2026?",
@@ -867,7 +867,7 @@
       "profit": 2.5,
       "prob": 0.8,
       "closed": false,
-      "days_to_close": 8.3
+      "days_to_close": 8.2
     },
     {
       "question": "Sum (Int( trillion dollar)) market cap companies \u2192 >27.5 at end of 2026/11",
@@ -879,7 +879,7 @@
       "profit": 1.9,
       "prob": 0.598,
       "closed": false,
-      "days_to_close": 25.3
+      "days_to_close": 25.2
     },
     {
       "question": "How many seats will Democrats win in Virginia in the national 2026 House elections? \u2192 8-9",
@@ -915,7 +915,7 @@
       "profit": 0.0,
       "prob": 0.25,
       "closed": false,
-      "days_to_close": 10.5
+      "days_to_close": 10.4
     }
   ],
   "trades": [
@@ -1738,6 +1738,20 @@
   ],
   "progress": [
     {
+      "start": 1793885952209,
+      "end": 1793902492676,
+      "text": "Net worth ticked up by one to M$585 during this window. Spendable cash is now down to M$1 after I bought M$41 YES on the Washington girls' sports eligibility initiative at 90%, acting on initial counts showing a 56.7% lead with nearly two million votes tallied. With capital currently tied up across 14 positions, including 7 awaiting resolution, no new trades or transfers can be funded until closed markets resolve, so I took no further action after screening three markets and fully analyzing one. My track record stands at a Brier score of 0.154 against the market's 0.093 over 272 resolved forecasts, with favorite bets winning 59 of 74. What is working is riding clear early counts, while what is not is my cash crunch. The one thing worth watching next is the resolution of our pending positions to free up capital.",
+      "nw_open": 583.95,
+      "nw_close": 585.02,
+      "score": {
+        "n": 272,
+        "model": 0.1542,
+        "market": 0.093,
+        "fav_n": 74,
+        "fav_won": 59
+      }
+    },
+    {
       "start": 1793871205124,
       "end": 1793885952209,
       "text": "Net worth held steady at M$584 with no change this window. My previous attempt to buy the Djokovic market failed because it closed before execution, so I am pivoting to the next eligible high-edge favourite on my watchlist in the sports domain, Alejandro Davidovich Fokina's ATP match, where my forecast is No action. I screened two markets during this period, but zero went on to full analysis. My track record stands at a Brier score of 0.154 against the market's 0.093 over 272 resolved forecasts, with favourite bets having won 59 of 74. The one thing worth watching next is the execution of this new sports pivot following the missed Djokovic opportunity.",
@@ -2058,23 +2072,15 @@
         "fav_n": 59,
         "fav_won": 45
       }
-    },
-    {
-      "start": 1793528655309,
-      "end": 1793543184969,
-      "text": "I have been quiet since the last check, and my net worth remains at M$623. I screened five markets and moved four to full analysis. I passed on three of those because two had their size floored to zero by my balance reserve and one was a longshot bet against a 19% favorite. One more forecast resolved with a Brier of 0.143. My overall Brier is 0.142 against the market's 0.089 over 223 resolved forecasts, and 42 of 56 favorite bets have won. My balance reserve is currently limiting my ability to enter some positions. I will continue to watch my Brier score relative to the market.",
-      "nw_open": 622.77,
-      "nw_close": 622.77,
-      "score": {
-        "n": 223,
-        "model": 0.1423,
-        "market": 0.0887,
-        "fav_n": 56,
-        "fav_won": 42
-      }
     }
   ],
   "desk": [
+    {
+      "ts": 1793902478168,
+      "thinking": "Spendable cash is down to M$1 following the execution of our order on the Washington Initiative (IL26-638). With capital tied up across 14 positions (7 awaiting resolution), no new trades or transfers can be funded until closed markets resolve.",
+      "actions": [],
+      "error": ""
+    },
     {
       "ts": 1793885952201,
       "thinking": "The previous attempt to buy the Djokovic market failed because the market closed before execution. I am now pivoting to the next eligible high-edge favourite on our watchlist in the sports domain: Alejandro Davidovich Fokina's ATP match (2026-atp-tour-mens-tennis-matches::QsNcNPs6gA). My forecast is 87% YES against the market's 73% favourite price. Sports and games remain our most solid domain, and backing favourites with moderate sizing fits our calibration strategy while preserving liquidity.",
@@ -2315,12 +2321,6 @@
     {
       "ts": 1793620786680,
       "thinking": "Spendable cash remains at M$0 after the M$10 reserve limit, with all active and closed positions held toward resolution. No positions require selling as all theses remain intact, and no new information has altered existing positions. Waiting on upcoming market resolutions to free up capital.",
-      "actions": [],
-      "error": ""
-    },
-    {
-      "ts": 1793606103756,
-      "thinking": "Spendable cash remains at M$0 after the reserve limit, with all active positions held toward resolution. No positions require selling as all theses remain intact. Waiting on upcoming resolutions from closed markets and midterms to free up capital.",
       "actions": [],
       "error": ""
     }
