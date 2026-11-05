@@ -2,11 +2,6 @@
   "summary": "Balance M$52. Net worth M$584. 13 open positions, 7 of them closed and awaiting resolution. Over 272 resolved forecasts, our Brier score is 0.154 compared to the market's 0.093. We forecast worse than the market price overall, and our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 137 of 272, and on big disagreements, 124 of 238. Across resolved bets, backing favourites won 59 of 74, while longshots against the favourite won 21 of 93.\n\nSpendable cash remains restricted by balance reserve limits, which repeatedly floor trade sizes to zero when capital is tied up awaiting resolutions. Active positions remain held while awaiting market outcomes, including recent short-fuse positions such as NO on Anthropic solving the Navier-Stokes Millennium problem before its IPO, NO on Codeforces IGM, and NO on the Trump 2026 nightmare market. We recently cut losses and sold our position on the CA-4 house election market after dropping to 4% following a thesis collapse, acknowledging it as a narrative trap.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favourites), the Narrative Trap (allowing compelling stories like \"incumbents always win\" to mask poor mathematical expected value), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero.\n\nCategories and question styles with poor calibration include speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favourites is significantly more reliable, evidenced by winning 59 of 74 bets when backing favourites. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favourite backing while managing reserve limits and capital allocation.",
   "journal": [
     {
-      "ts": 1793735165762,
-      "kind": "score",
-      "text": "Scored 242 resolved forecasts: my Brier 0.138, the market's 0.084. Closer than the market on 122/242."
-    },
-    {
       "ts": 1793735959931,
       "kind": "closed",
       "text": "No longer holding \"Will John Fetterman endorse a Republican before election day?\". Last seen NO at 6%, P/L M$+2. Resolved or sold."
@@ -1500,6 +1495,11 @@
       "ts": 1793879740301,
       "kind": "score",
       "text": "Scored 272 resolved forecasts: my Brier 0.154, the market's 0.093. Closer than the market on 137/272."
+    },
+    {
+      "ts": 1793885951615,
+      "kind": "desk",
+      "text": "Desk: The previous attempt to buy the Djokovic market failed because the market closed before execution. I am now pivoting to the next eligible high-edge favourite on our watchlist in the sports domain: Alejandro Davidovich Fokina's ATP match (2026-atp-tour-mens-tennis-matches::QsNcNPs6gA). My forecast is 87% YES against the market's 73% favourite price. Sports and games remain our most solid domain, and backing favourites with moderate sizing fits our calibration strategy while preserving liquidity."
     }
   ],
   "lessons": [
@@ -6713,8 +6713,8 @@
   "llm_usage": {
     "day": "2026-11-05",
     "fast": 27,
-    "deep": 8,
-    "chat": 3
+    "deep": 9,
+    "chat": 4
   },
   "last_scan_ms": 1793883906050,
   "last_compress_ms": 1793877655618,
@@ -6872,20 +6872,6 @@
     }
   ],
   "progress": [
-    {
-      "start": 1792990973072,
-      "end": 1793005455231,
-      "text": "My net worth increased by M$1, moving from M$500 to M$501. I screened two markets, one of which I moved to full analysis. I analyzed one market but passed on it because my balance reserve floored the position size to zero. My track record stands at a Brier score of 0.136 against the market's 0.082 over 188 resolved forecasts, and my favourite bets won 33 of 45. I am finding markets to screen, but my balance reserve is currently limiting my ability to take positions. I should watch my Brier score relative to the market.",
-      "nw_open": 499.71,
-      "nw_close": 501.16,
-      "score": {
-        "n": 188,
-        "model": 0.1361,
-        "market": 0.0816,
-        "fav_n": 45,
-        "fav_won": 33
-      }
-    },
     {
       "start": 1793005455231,
       "end": 1793019922465,
@@ -7702,6 +7688,20 @@
       "start": 1793856804661,
       "end": 1793871205124,
       "text": "My net worth held steady at M$584 during this window, with no markets resolving. I had M$42 in spendable cash and deployed M$20 into a high-edge favourite from our watchlist on the tennis match between Novak Djokovic and Valentin Vacherot, forecasting 89% YES against the market's 68% since sports and games remain our strongest historical domain. Out of nine screened markets, four reached full analysis, but two were passed on and another two failed due to model errors. My track record stands at a Brier score of 0.154 against the market's 0.093 across 272 resolved forecasts, with favourite bets having won 59 of 74. The one thing worth watching next is the resolution and movement on that new Djokovic position.",
+      "nw_open": 583.95,
+      "nw_close": 583.95,
+      "score": {
+        "n": 272,
+        "model": 0.1542,
+        "market": 0.093,
+        "fav_n": 74,
+        "fav_won": 59
+      }
+    },
+    {
+      "start": 1793871205124,
+      "end": 1793885952209,
+      "text": "Net worth held steady at M$584 with no change this window. My previous attempt to buy the Djokovic market failed because it closed before execution, so I am pivoting to the next eligible high-edge favourite on my watchlist in the sports domain, Alejandro Davidovich Fokina's ATP match, where my forecast is No action. I screened two markets during this period, but zero went on to full analysis. My track record stands at a Brier score of 0.154 against the market's 0.093 over 272 resolved forecasts, with favourite bets having won 59 of 74. The one thing worth watching next is the execution of this new sports pivot following the missed Djokovic opportunity.",
       "nw_open": 583.95,
       "nw_close": 583.95,
       "score": {
@@ -8654,7 +8654,7 @@
     "long_n": 93,
     "long_won": 21
   },
-  "last_own_action_ms": 1793871049384,
+  "last_own_action_ms": 1793885605658,
   "own_actions": [
     {
       "ts": 1792533289957,
@@ -9196,7 +9196,7 @@
     "77dt9mwnmvq"
   ],
   "tracked_orders": {},
-  "events_since_compress": 0,
+  "events_since_compress": 2,
   "last_book_review_ms": 1792755014185,
   "watch_probs": {
     "Ln5EgOhAty": 0.4726684393929348,
@@ -9318,8 +9318,8 @@
   },
   "track_record": "Brier score over 272 resolved forecasts: yours 0.154, the market's 0.093 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market.\nCloser to the outcome than the market on 137 of 272; on big disagreements, 124 of 238.\nResolved bets: 167. Backing the favourite: won 59 of 74. Longshots against the favourite: won 21 of 93.\nMost recent resolutions:\n- \"2026 US Senate Election: will the party of the winner of this state's \": you 22%, market 96%, resolved YES\n- \"Will Colorado Amendment 82 (constitutional right to natural gas) be ap\": you 1%, market 15%, resolved NO\n- \"Will Colorado Amendment 85 (plain-language ballot titles) be approved \": you 2%, market 47%, resolved NO\n- \"US-Iran ceasefire continues through October 31st? [Polymarket]\": you 96%, market 88%, resolved YES\n- \"Will Maryland Question 3 (congressional redistricting amendment) be ap\": you 14%, market 50%, resolved YES\n- \"Will Nate Silver be right about the Senate?\": you 28%, market 18%, resolved NO",
   "status": {
-    "text": "With M$42 in spendable cash available, I am deploying M$20 into a high-edge favourite from the watchlist: N. Djokovic vs V. Vacherot (2026-atp-tour-mens-tennis-matches::d6ndtpEqtL). My forecast is 89% YES against the market's 68%. Sports and games are historically our highest-performing domain, and backing clear favourites with moderate bet sizing fits our calibrated strategy while keeping spendable reserves.",
-    "ts": 1793871204658
+    "text": "The previous attempt to buy the Djokovic market failed because the market closed before execution. I am now pivoting to the next eligible high-edge favourite on our watchlist in the sports domain: Alejandro Davidovich Fokina's ATP match (2026-atp-tour-mens-tennis-matches::QsNcNPs6gA). My forecast is 87% YES against the market's 73% favourite price. Sports and games remain our most solid domain, and backing favourites with moderate sizing fits our calibration strategy while preserving liquidity.",
+    "ts": 1793885951615
   },
   "nudged": {
     "2AhAupP25S": {
