@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1793891231988,
+  "generated_ms": 1793891732990,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 27,
+      "today": 30,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 9,
+      "today": 10,
       "cap": 54
     }
   },
@@ -64,6 +64,26 @@
   "net_worth": 583.95,
   "summary": "Balance M$52. Net worth M$584. 13 open positions, 7 of them closed and awaiting resolution. Over 272 resolved forecasts, our Brier score is 0.154 compared to the market's 0.093. We forecast worse than the market price overall, and our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 137 of 272, and on big disagreements, 124 of 238. Across resolved bets, backing favourites won 59 of 74, while longshots against the favourite won 21 of 93.\n\nSpendable cash remains restricted by balance reserve limits, which repeatedly floor trade sizes to zero when capital is tied up awaiting resolutions. Active positions remain held while awaiting market outcomes, including recent short-fuse positions such as NO on Anthropic solving the Navier-Stokes Millennium problem before its IPO, NO on Codeforces IGM, and NO on the Trump 2026 nightmare market. We recently cut losses and sold our position on the CA-4 house election market after dropping to 4% following a thesis collapse, acknowledging it as a narrative trap.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favourites), the Narrative Trap (allowing compelling stories like \"incumbents always win\" to mask poor mathematical expected value), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero.\n\nCategories and question styles with poor calibration include speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favourites is significantly more reliable, evidenced by winning 59 of 74 bets when backing favourites. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favourite backing while managing reserve limits and capital allocation.",
   "journal": [
+    {
+      "ts": 1793891732413,
+      "kind": "trade",
+      "text": "Limit order M$41 YES on \"Will Washington Initiative IL26-638 (girls' sports eligibility by sex)\" at 90%, my estimate 96% (high). Because: Initial election counts show Initiative IL26-638 leading 56.7% to 43.3% with nearly 2 million votes tallied, aligning with pre-election polling (56%). While Washington late mail-in ballots lean left, overcoming a 265,000-vote (13.4-point) gap in a midterm electorate is extremely unlikely."
+    },
+    {
+      "ts": 1793891443435,
+      "kind": "screen",
+      "text": "Passed on \"CI2026: Will the Swiss ban noisy fireworks?\" at 71%: quick estimate 50%, market 71%. This is a standard pending referendum vote with no strong public polling data available to form a lean."
+    },
+    {
+      "ts": 1793891443427,
+      "kind": "screen",
+      "text": "Passed on \"US Average Gas Price Is $5.000 or more on any day in November 2026?\" at 6%: quick estimate 15%, market 6%. No major catalyst suggests gas prices will spike above $5.00 in November without specific supply shocks."
+    },
+    {
+      "ts": 1793891443420,
+      "kind": "screen",
+      "text": "Escalated \"Will Washington Initiative IL26-638 (girls' sports eligibility by sex)\" at 90%: quick estimate 95% backs the favourite at 90%. Initial election counts show a strong 57-43 lead for Yes, making it nearly certain to pass."
+    },
     {
       "ts": 1793887248750,
       "kind": "score",
@@ -443,26 +463,6 @@
       "ts": 1793817413157,
       "kind": "screen",
       "text": "Escalated \"Who will win the 2026 Alaska House election? \u2192 Bill Hill (I)\" at 11%: quick estimate 5% backs the favourite at 11%. Longshot independent candidate with no indication of an upset in the comments."
-    },
-    {
-      "ts": 1793817413149,
-      "kind": "screen",
-      "text": "Passed on \"Who will win the 2026 Alaska House election? \u2192 Nick Begich III (R)\" at 88%: quick estimate 65%, market 88%. Standard lean toward the Republican in a red-leaning state district without actionable news."
-    },
-    {
-      "ts": 1793817413142,
-      "kind": "screen",
-      "text": "Passed on \"What will be the outcome of the 2026 New Zealand General Election? \u2192 N\" at 40%: quick estimate 50%, market 40%. Companion outcome in a tight multi-way election; no specific mispricing identified."
-    },
-    {
-      "ts": 1793817413134,
-      "kind": "screen",
-      "text": "Passed on \"What will be the outcome of the 2026 New Zealand General Election? \u2192 L\" at 59%: quick estimate 45%, market 59%. Standard close political contest with no clear information edge available on a quick read."
-    },
-    {
-      "ts": 1793816974273,
-      "kind": "score",
-      "text": "Scored 264 resolved forecasts: my Brier 0.149, the market's 0.091. Closer than the market on 133/264."
     }
   ],
   "todos": [
@@ -807,7 +807,19 @@
       "profit": 0.0,
       "prob": 0.038,
       "closed": false,
-      "days_to_close": 24.7
+      "days_to_close": 24.6
+    },
+    {
+      "question": "Will Washington Initiative IL26-638 (girls' sports eligibility by sex) be approved in the November 3, 2026 election?",
+      "url": "https://manifold.markets/ManifoldPolitics/will-washington-initiative-il26638",
+      "side": "YES",
+      "shares": 45.5,
+      "invested": 41.0,
+      "value": 41.1,
+      "profit": 0.1,
+      "prob": 0.903,
+      "closed": false,
+      "days_to_close": 12.7
     },
     {
       "question": "Will Geometry Dash 2.21 Update Will Be Released In August 13 2026?",
@@ -907,6 +919,30 @@
     }
   ],
   "trades": [
+    {
+      "kind": "buy",
+      "side": "YES",
+      "amount": 41.0,
+      "limit": 0.92,
+      "market_prob": 0.8996473248722363,
+      "model_prob": 0.96,
+      "confidence": "high",
+      "why": "Initial election counts show Initiative IL26-638 leading 56.7% to 43.3% with nearly 2 million votes tallied, aligning with pre-election polling (56%). While Washington late mail-in ballots lean left, overcoming a 265,000-vote (13.4-point) gap in a midterm electorate is extremely unlikely.",
+      "research": "Based on the provided sources, here is the research regarding Washington Initiative IL26-638 (girls' sports eligibility by sex) for the November 3, 2026 election:\n\n**1. Current State of Play and Recent Events**\n* **Election Day and Early Returns:** The general election took place on November 3, 2026. Preliminary election returns and election-night tallies showed Initiative 638 leading with nearly 57% of the total votes counted (specifically, 56.74% with 1,117,424 \"yes\" votes to 851,957 \"no\" votes in early reports). \n* **Preceding Polling:** An October 8, 2026 survey of 7,500 likely Washington voters similarly showed 56% support for the measure.\n* **Certification Timeline:** The current results remain unofficial. Official statewide results are scheduled to be certified by the Washington Secretary of State by December 3, 2026. \n\n**2. Base Rates or Precedents**\nThe provided sources do not cite specific historical base rates or precedents for this type of ballot measure in Washington.\n\n**3. What Is Still Genuinely Unknown**\n* **Final Vote Tallies:** Because the early returns reflect only initial counts, the exact final margin and total vote count remain unknown until all ballots are processed.\n* **Official Certification:** The final outcome is subject to the formal certification process by the Washington Secretary of State, which is not complete until December 3, 2026.",
+      "source": "scan",
+      "evidence_for": [
+        "Initial election returns show Initiative IL26-638 leading 56.74% to 43.26% (1,117,424 YES vs 851,957 NO).",
+        "Pre-election polling from October 2026 showed 56% support."
+      ],
+      "evidence_against": [
+        "Washington state late-arriving mail-in ballots historically lean against conservative ballot initiatives.",
+        "Official certification by the Secretary of State is pending until December 3, 2026."
+      ],
+      "uncertainty": "Whether remaining uncounted mail-in ballots could shift the overall result by more than 6.7 percentage points toward NO.",
+      "ts": 1793891732405,
+      "question": "Will Washington Initiative IL26-638 (girls' sports eligibility by sex) be approved in the November 3, 2026 election?",
+      "url": "https://manifold.markets/ManifoldPolitics/will-washington-initiative-il26638"
+    },
     {
       "kind": "buy",
       "side": "NO",
@@ -1698,30 +1734,6 @@
       "ts": 1791994855916,
       "question": "By Oct 31, 2026, will openai.com say its agents accessed a U",
       "url": ""
-    },
-    {
-      "kind": "buy",
-      "side": "NO",
-      "amount": 51.0,
-      "limit": 0.11,
-      "market_prob": 0.16471926326525776,
-      "model_prob": 0.04,
-      "confidence": "high",
-      "why": "OpenAI will not explicitly self-report unauthorized access to US federal systems on its own site given the legal and regulatory exposure.",
-      "research": "",
-      "source": "scan",
-      "evidence_for": [
-        "Media reports indicate OpenAI models engaged with various websites including US government domains, which some commentators interpreted broadly as scraping or access."
-      ],
-      "evidence_against": [
-        "OpenAI's official statements so far emphasize public information and no evidence of compromise.",
-        "A company facing severe potential liability under the Computer Fraud and Abuse Act (CFAA) or similar laws will not self-report unauthorized access on its official site.",
-        "The strict resolution criteria require an explicit assertion on openai.com itself, not merely media reports or third-party interpretations."
-      ],
-      "uncertainty": "Whether an unexpected legal settlement or intense regulatory pressure forces OpenAI to issue a formal disclosure admitting unauthorized access before the end of October.",
-      "ts": 1791991449350,
-      "question": "By Oct 31, 2026, will openai.com say its agents accessed a U.S. federal government system without authorization?",
-      "url": "https://manifold.markets/JaimeM/by-oct-31-2026-will-openaicom-say-i"
     }
   ],
   "progress": [
@@ -2315,6 +2327,33 @@
   ],
   "screens": [
     {
+      "ts": 1793891443427,
+      "question": "CI2026: Will the Swiss ban noisy fireworks?",
+      "url": "https://manifold.markets/FrankfurtSchool/ci2026-will-the-swiss-ban-noisy-fir",
+      "passed": false,
+      "market_prob": 0.71,
+      "quick_prob": 0.5,
+      "why": "quick estimate 50%, market 71%. This is a standard pending referendum vote with no strong public polling data available to form a lean."
+    },
+    {
+      "ts": 1793891443420,
+      "question": "US Average Gas Price Is $5.000 or more on any day in November 2026?",
+      "url": "https://manifold.markets/Jack1/us-average-gas-price-is-5000-or-mor-LUd6hcgucS",
+      "passed": false,
+      "market_prob": 0.05836549800664049,
+      "quick_prob": 0.15,
+      "why": "quick estimate 15%, market 6%. No major catalyst suggests gas prices will spike above $5.00 in November without specific supply shocks."
+    },
+    {
+      "ts": 1793891443411,
+      "question": "Will Washington Initiative IL26-638 (girls' sports eligibility by sex) be approved in the November 3, 2026 election?",
+      "url": "https://manifold.markets/ManifoldPolitics/will-washington-initiative-il26638",
+      "passed": true,
+      "market_prob": 0.8996473248722363,
+      "quick_prob": 0.95,
+      "why": "quick estimate 95% backs the favourite at 90%. Initial election counts show a strong 57-43 lead for Yes, making it nearly certain to pass."
+    },
+    {
       "ts": 1793876479530,
       "question": "Will Impostor Dan Sullivan finish third in the Alaska Senate election?",
       "url": "https://manifold.markets/Jack1/will-impostor-dan-sullivan-finish-t",
@@ -2646,36 +2685,32 @@
       "market_prob": 0.7974011967869418,
       "quick_prob": 0.1,
       "why": "quick estimate 10%, market 80%. The Opportunity Party consistently struggles to win electorate seats or cross the 5 percent threshold in New Zealand."
-    },
-    {
-      "ts": 1793821074297,
-      "question": "Israel's next Prime minister \u2192 Avigdor Lieberman",
-      "url": "https://manifold.markets/dkgsAiogjertg/israels-next-prime-minister",
-      "passed": false,
-      "market_prob": 0.0500246166860761,
-      "quick_prob": 0.05,
-      "why": "quick estimate 5%, market 5%. Avigdor Lieberman is a fringe longshot for Prime Minister of Israel given current polling dynamics."
-    },
-    {
-      "ts": 1793821074289,
-      "question": "How many Republican Representatives will Texas elect in 2026? \u2192 27",
-      "url": "https://manifold.markets/EvanDaniel/how-many-republican-representatives",
-      "passed": false,
-      "market_prob": 0.17109476054266162,
-      "quick_prob": 0.15,
-      "why": "quick estimate 15%, market 17%. Texas redistricting and historical trends make 27 quite high compared to the usual 25, but it is a standard low-volume political prop."
-    },
-    {
-      "ts": 1793821074282,
-      "question": "How many Republican Representatives will Texas elect in 2026? \u2192 26",
-      "url": "https://manifold.markets/EvanDaniel/how-many-republican-representatives",
-      "passed": false,
-      "market_prob": 0.2805673144832145,
-      "quick_prob": 0.3,
-      "why": "quick estimate 30%, market 28%. Congressional seat counts depend on complex redistricting and general election swings that cannot be resolved on a quick glance."
     }
   ],
   "decisions": [
+    {
+      "ts": 1793891732405,
+      "kind": "bet",
+      "question": "Will Washington Initiative IL26-638 (girls' sports eligibility by sex) be approved in the November 3, 2026 election?",
+      "url": "https://manifold.markets/ManifoldPolitics/will-washington-initiative-il26638",
+      "market_prob": 0.8996473248722363,
+      "model_prob": 0.96,
+      "confidence": "high",
+      "amount": 41.0,
+      "outcome": "YES",
+      "thinking": "Initial election counts show Initiative IL26-638 leading 56.7% to 43.3% with nearly 2 million votes tallied, aligning with pre-election polling (56%). While Washington late mail-in ballots lean left, overcoming a 265,000-vote (13.4-point) gap in a midterm electorate is extremely unlikely.",
+      "uncertainty": "Whether remaining uncounted mail-in ballots could shift the overall result by more than 6.7 percentage points toward NO.",
+      "resolution_risk": "A late recount or legal order halting vote counting could theoretically alter the outcome, though resolution relies on certified results.",
+      "evidence_for": [
+        "Initial election returns show Initiative IL26-638 leading 56.74% to 43.26% (1,117,424 YES vs 851,957 NO).",
+        "Pre-election polling from October 2026 showed 56% support."
+      ],
+      "evidence_against": [
+        "Washington state late-arriving mail-in ballots historically lean against conservative ballot initiatives.",
+        "Official certification by the Secretary of State is pending until December 3, 2026."
+      ],
+      "reason": "edge 0.060, kelly 0.60, decay 0.79, bound by balance reserve"
+    },
     {
       "ts": 1793865623439,
       "kind": "no_trade",
@@ -2999,30 +3034,6 @@
         "Early coverage indicates voters balked at the specific eighth-grade reading level standard."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1793779850828,
-      "kind": "bet",
-      "question": "Will Sanji have a nose bleed over ZaZa the Rain God/Nightmare?",
-      "url": "https://manifold.markets/EmperorCheeks/will-sanji-have-a-nose-bleed-over-z",
-      "market_prob": 0.3705206077513031,
-      "model_prob": 0.03,
-      "confidence": "high",
-      "amount": 51.0,
-      "outcome": "NO",
-      "thinking": "Sanji's nosebleed gag requires an attractive female character. ZaZa the Rain God is a speculative/mythical entity unlikely to fit this criteria, and combat nosebleeds explicitly do not count per creator clarification.",
-      "uncertainty": "Whether ZaZa is actually introduced as a character that triggers Sanji's romantic visual reaction.",
-      "resolution_risk": "Official manga translation nuances for character names and intent behind gag panels.",
-      "evidence_for": [
-        "ZaZa the Rain God has been referenced or discussed in recent One Piece Elbaph arc chapters.",
-        "Sanji's nosebleed gag is a recurring element in One Piece when encountering attractive female characters."
-      ],
-      "evidence_against": [
-        "ZaZa is not established as an attractive female character capable of triggering Sanji's romantic gag.",
-        "The market creator clarified that nosebleeds from physical combat/strikes do not count.",
-        "It is highly speculative that this character exists in a form that fulfills the specific gag condition."
-      ],
-      "reason": "edge 0.341, kelly 0.92, decay 0.89, bound by balance reserve"
     }
   ]
 }
