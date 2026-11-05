@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1793921331020,
+  "generated_ms": 1793921673084,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.5-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 45,
+      "today": 48,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 14,
+      "today": 15,
       "cap": 54
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 586.42,
   "summary": "Balance M$11. Net worth M$584. 14 open positions, 7 of them closed and awaiting resolution. Over 275 resolved forecasts, our Brier score is 0.155 compared to the market's 0.096. We forecast worse than the market price overall, and our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 139 of 275, and on big disagreements, 126 of 241. Across resolved bets, backing favourites won 59 of 74, while longshots against the favourite won 21 of 93.\n\nSpendable cash remains heavily restricted by balance reserve limits, which repeatedly floor trade sizes to zero when capital is tied up awaiting resolutions. Active positions include short-fuse bets on Codeforces IGM, Trump 2026 nightmare outcomes, Navier-Stokes solutions before IPO, and Washington girls' sports eligibility. We recently cut losses and sold our position on the CA-4 house election market after dropping to 4% following a thesis collapse, acknowledging it as a narrative trap.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favourites), the Narrative Trap (allowing compelling stories like \"incumbents always win\" to mask poor mathematical expected value), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero.\n\nCategories and question styles with poor calibration include speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favourites is significantly more reliable, evidenced by winning 59 of 74 bets when backing favourites. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favourite backing while managing reserve limits and capital allocation.",
   "journal": [
+    {
+      "ts": 1793921672413,
+      "kind": "analysis",
+      "text": "Analysed \"Will Angela Rayner be Prime Minister of the UK before December?\": market 4%, my 3% (high). No trade, edge 0.16 log-odds below minimum 0.2."
+    },
+    {
+      "ts": 1793921541988,
+      "kind": "screen",
+      "text": "Escalated \"Will Angela Rayner be Prime Minister of the UK before December?\" at 4%: quick estimate 2% backs the favourite at 4%. Keir Starmer holds a massive majority and there is no active leadership challenge threatening to depose him within a month."
+    },
     {
       "ts": 1793920942623,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1793842704037,
       "kind": "score",
       "text": "Scored 272 resolved forecasts: my Brier 0.154, the market's 0.093. Closer than the market on 137/272."
-    },
-    {
-      "ts": 1793839615852,
-      "kind": "analysis",
-      "text": "Analysed \"Who will be elected New Zealand Prime Minister in the next election? \u2192\": market 47%, my 42% (medium). No trade, edge 0.19 log-odds below minimum 0.2."
-    },
-    {
-      "ts": 1793839453679,
-      "kind": "screen",
-      "text": "Passed on \"Will there be polling about AI voting advice in 2026 midterms?\" at 96%: quick estimate 95%, market 96%. Comment points directly to a Pew Research poll matching the exact resolution criteria."
     }
   ],
   "todos": [
@@ -2350,6 +2350,15 @@
   ],
   "screens": [
     {
+      "ts": 1793921541981,
+      "question": "Will Angela Rayner be Prime Minister of the UK before December?",
+      "url": "https://manifold.markets/DaisyWelham/will-angela-rayner-be-prime-ministe",
+      "passed": true,
+      "market_prob": 0.0351585128507406,
+      "quick_prob": 0.02,
+      "why": "quick estimate 2% backs the favourite at 4%. Keir Starmer holds a massive majority and there is no active leadership challenge threatening to depose him within a month."
+    },
+    {
       "ts": 1793917735152,
       "question": "GPT Astra 6.1+ Released By End of November 2026?",
       "url": "https://manifold.markets/Jack1/gpt-astra-61-released-by-end-of-nov",
@@ -2699,18 +2708,32 @@
       "market_prob": 0.7390425258336201,
       "quick_prob": 0.5,
       "why": "quick estimate 50%, market 74%. State ballot initiative outcomes on specific tax measures depend entirely on local election results that require detailed polling or vote-count data unavailable to a quick read."
-    },
-    {
-      "ts": 1793846866002,
-      "question": "Dec 1 2023 to Nov 30 2026,  will a UK strike price of \u00a365 (2012 prices) for offshore wind save consumers money?",
-      "url": "https://manifold.markets/MT98/dec-1-2023-to-nov-30-2026-will-a-uk",
-      "passed": false,
-      "market_prob": 0.09818963077293995,
-      "quick_prob": 0.5,
-      "why": "quick estimate 50%, market 10%. This is a retrospective or ongoing complex financial calculation dependent on wholesale energy prices and inflation, with no obvious mispricing evident in the title."
     }
   ],
   "decisions": [
+    {
+      "ts": 1793921672406,
+      "kind": "no_trade",
+      "question": "Will Angela Rayner be Prime Minister of the UK before December?",
+      "url": "https://manifold.markets/DaisyWelham/will-angela-rayner-be-prime-ministe",
+      "market_prob": 0.0351585128507406,
+      "model_prob": 0.03,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With Keir Starmer resigning, the Labour leadership contest is underway with Andy Burnham reported as frontrunner. Angela Rayner resigned her cabinet post in September 2025 and is not a main contender for PM before Dec 1.",
+      "uncertainty": "Whether the Labour leadership contest produces a surprise outcome or temporary caretaker PM before December 1.",
+      "resolution_risk": "None significant beyond basic verification of who officially holds the PM post by Dec 1.",
+      "evidence_for": [
+        "Keir Starmer has resigned as Prime Minister, creating an active leadership transition before December 1."
+      ],
+      "evidence_against": [
+        "Andy Burnham is reported as the leading contender to replace Starmer in the ongoing leadership contest.",
+        "Angela Rayner resigned as Deputy Prime Minister in September 2025 following a tax inquiry and is not reported to be running.",
+        "Only 25 days remain before the December 1 deadline."
+      ],
+      "reason": "edge 0.16 log-odds below minimum 0.2"
+    },
     {
       "ts": 1793917930573,
       "kind": "no_trade",
@@ -3038,30 +3061,6 @@
         "No official BEA recession declared for Q4 2025 - Q4 2026"
       ],
       "reason": "edge 0.010, kelly 0.25, decay 0.42, bound by kelly target"
-    },
-    {
-      "ts": 1793787229913,
-      "kind": "bet",
-      "question": "Will I (McPqndq) reach IGM on Codeforces before the 2026 ICPC World Finals.",
-      "url": "https://manifold.markets/mcpqndq/will-i-mcpqndq-reach-igm-on-codefor",
-      "market_prob": 0.2618472660096651,
-      "model_prob": 0.22,
-      "confidence": "medium",
-      "amount": 32.0,
-      "outcome": "NO",
-      "thinking": "Jumping from IM (2300) to IGM (2600) on Codeforces within a few months requires entering the top ~200 globally, an extremely steep hurdle.",
-      "uncertainty": "McPqndq's current exact rating and rate of rating gain over recent contests.",
-      "resolution_risk": "Postponement of ICPC World Finals extends the deadline automatically.",
-      "evidence_for": [
-        "McPqndq recently reached International Master (2300+) status on Codeforces",
-        "McPqndq is actively grinding competitive programming problems"
-      ],
-      "evidence_against": [
-        "Reaching 2600 (IGM) requires a massive 300 rating point jump at elite competitive levels",
-        "Fewer than 200 active competitive programmers globally hold IGM status",
-        "The remaining timeframe before the ICPC World Finals is very short for such a leap"
-      ],
-      "reason": "edge 0.042, kelly 0.16, decay 0.85, bound by kelly target"
     }
   ]
 }
