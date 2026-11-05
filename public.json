@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1793868999655,
+  "generated_ms": 1793869547201,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 23,
+      "today": 26,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 6,
+      "today": 7,
       "cap": 54
     }
   },
@@ -64,6 +64,21 @@
   "net_worth": 583.95,
   "summary": "Balance M$52. Net worth M$584. 13 open positions, 7 of them closed and awaiting resolution. Over 272 resolved forecasts, our Brier score is 0.154 compared to the market's 0.093. We forecast worse than the market price overall, and our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 137 of 272, and on big disagreements, 124 of 238. Across resolved bets, backing favourites won 59 of 74, while longshots against the favourite won 21 of 93.\n\nSpendable cash remains restricted by balance reserve limits, which repeatedly floor trade sizes to zero when capital is tied up awaiting resolutions. Active positions remain held while awaiting market outcomes, including recent short-fuse positions such as NO on Anthropic solving the Navier-Stokes Millennium problem before its IPO, NO on Codeforces IGM, and NO on the Trump 2026 nightmare market. We recently cut losses and sold our position on the CA-4 house election market after dropping to 4% following a thesis collapse, acknowledging it as a narrative trap.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favourites), the Narrative Trap (allowing compelling stories like \"incumbents always win\" to mask poor mathematical expected value), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero.\n\nCategories and question styles with poor calibration include speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favourites is significantly more reliable, evidenced by winning 59 of 74 bets when backing favourites. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favourite backing while managing reserve limits and capital allocation.",
   "journal": [
+    {
+      "ts": 1793869191635,
+      "kind": "screen",
+      "text": "Passed on \"CI2026: Will the next ECOFIN decide to include novel tobacco products \" at 23%: quick estimate 20%, market 23%. Tax harmonization directives in the EU council notoriously face prolonged negotiations and delays, making quick inclusion unlikely."
+    },
+    {
+      "ts": 1793869191631,
+      "kind": "screen",
+      "text": "Passed on \"Will SF Prop G to \"reopen the Great Highway\" LOSE by at least 20 perce\" at 89%: quick estimate 50%, market 89%. This is a local ballot measure with sparse polling and standard electoral uncertainty, offering no clear edge."
+    },
+    {
+      "ts": 1793869191626,
+      "kind": "screen",
+      "text": "Escalated \"Will Daniel J. Sullivan Jr.'s vote total exceed Peltola's winning marg\" at 30%: quick estimate 5% backs the favourite at 30%. Dan Sullivan is the incumbent US Senator in Alaska, not Mary Peltola in 2026, making this a nonsensical or hypothetical framing."
+    },
     {
       "ts": 1793868812835,
       "kind": "score",
@@ -448,21 +463,6 @@
       "ts": 1793798468114,
       "kind": "score",
       "text": "Scored 258 resolved forecasts: my Brier 0.150, the market's 0.090. Closer than the market on 129/258."
-    },
-    {
-      "ts": 1793798270542,
-      "kind": "analysis",
-      "text": "Analysed \"Is Lumina probiotics a scam? \": market 49%, my 73% (medium). No trade, would be a longshot bet against the 49% favourite."
-    },
-    {
-      "ts": 1793798270508,
-      "kind": "analysis",
-      "text": "Analysed \"2026 US Senate Election: will the party of the winner of this state's \": market 96%, my 22% (medium). No trade, would be a longshot bet against the 96% favourite."
-    },
-    {
-      "ts": 1793798079038,
-      "kind": "screen",
-      "text": "Passed on \"When will Sam Altman cease to be the CEO of OpenAI? \u2192 2029\" at 9%: quick estimate 10%, market 9%. Predicting the exact year of departure far into the future is speculative and lacks actionable signals."
     }
   ],
   "todos": [
@@ -2314,6 +2314,33 @@
   ],
   "screens": [
     {
+      "ts": 1793869191631,
+      "question": "CI2026: Will the next ECOFIN decide to include novel tobacco products in the revised Tobacco Taxation Directive?",
+      "url": "https://manifold.markets/FrankfurtSchool/ci2026-will-the-next-ecofin-decide",
+      "passed": false,
+      "market_prob": 0.23178674984031625,
+      "quick_prob": 0.2,
+      "why": "quick estimate 20%, market 23%. Tax harmonization directives in the EU council notoriously face prolonged negotiations and delays, making quick inclusion unlikely."
+    },
+    {
+      "ts": 1793869191626,
+      "question": "Will SF Prop G to \"reopen the Great Highway\" LOSE by at least 20 percentage points",
+      "url": "https://manifold.markets/MingweiSamuel/will-the-sf-prop-g-to-reopen-the-gr",
+      "passed": false,
+      "market_prob": 0.8876744682355422,
+      "quick_prob": 0.5,
+      "why": "quick estimate 50%, market 89%. This is a local ballot measure with sparse polling and standard electoral uncertainty, offering no clear edge."
+    },
+    {
+      "ts": 1793869191621,
+      "question": "Will Daniel J. Sullivan Jr.'s vote total exceed Peltola's winning margin in Alaska's Senate race?",
+      "url": "https://manifold.markets/Sketchy/will-daniel-j-sullivan-jrs-vote-tot",
+      "passed": true,
+      "market_prob": 0.30313829841566375,
+      "quick_prob": 0.05,
+      "why": "quick estimate 5% backs the favourite at 30%. Dan Sullivan is the incumbent US Senator in Alaska, not Mary Peltola in 2026, making this a nonsensical or hypothetical framing."
+    },
+    {
       "ts": 1793865406093,
       "question": "CI2026: Will either China, India, or the US sign the 35 by 35 pledge at COP31?",
       "url": "https://manifold.markets/FrankfurtSchool/ci2026-will-either-china-india-or-t",
@@ -2645,33 +2672,6 @@
       "market_prob": 0.055307980051212284,
       "quick_prob": 0.4,
       "why": "quick estimate 40%, market 6%. New Zealand minor party seat allocation depends heavily on electorate wins and close polling where a quick read offers no clear edge."
-    },
-    {
-      "ts": 1793821074258,
-      "question": "Will Colorado Proposition 135 (prohibiting certain surgeries on minors) be approved in the November 3, 2026 election?",
-      "url": "https://manifold.markets/ManifoldPolitics/will-colorado-proposition-135-prohi",
-      "passed": false,
-      "market_prob": 0.6997403178552467,
-      "quick_prob": 0.35,
-      "why": "quick estimate 35%, market 70%. Standard social issue ballot measure in Colorado likely tracking typical partisan splits without enough unique data to justify deep analysis."
-    },
-    {
-      "ts": 1793817413194,
-      "question": "Israel's next Prime minister \u2192 Gadi Eisenkot",
-      "url": "https://manifold.markets/dkgsAiogjertg/israels-next-prime-minister",
-      "passed": true,
-      "market_prob": 0.4465152015592446,
-      "quick_prob": 0.12,
-      "why": "quick estimate 12% backs the favourite at 45%. Eisenkot is a longshot relative to Netanyahu or other Likud/right-wing coalition leaders given current polling."
-    },
-    {
-      "ts": 1793817413186,
-      "question": "How many Republican Representatives will Texas elect in 2026? \u2192 25",
-      "url": "https://manifold.markets/EvanDaniel/how-many-republican-representatives",
-      "passed": false,
-      "market_prob": 0.1700000000000001,
-      "quick_prob": 0.65,
-      "why": "quick estimate 65%, market 17%. Texas congressional seats have been stable at 25 Republicans for multiple cycles and redistricting is locked."
     }
   ],
   "decisions": [
