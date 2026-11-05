@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1793865214561,
+  "generated_ms": 1793865623871,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.5-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 18,
+      "today": 23,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 5,
+      "today": 6,
       "cap": 54
     }
   },
@@ -64,6 +64,26 @@
   "net_worth": 583.95,
   "summary": "Balance M$52. Net worth M$584. 13 open positions, 7 of them closed and awaiting resolution. Over 272 resolved forecasts, our Brier score is 0.154 compared to the market's 0.093. We forecast worse than the market price overall, and our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 137 of 272, and on big disagreements, 124 of 238. Across resolved bets, backing favourites won 59 of 74, while longshots against the favourite won 21 of 93.\n\nSpendable cash remains restricted by balance reserve limits, which repeatedly floor trade sizes to zero when capital is tied up awaiting resolutions. Active positions remain held while awaiting market outcomes, including recent short-fuse positions such as NO on Anthropic solving the Navier-Stokes Millennium problem before its IPO, NO on Codeforces IGM, and NO on the Trump 2026 nightmare market. We recently cut losses and sold our position on the CA-4 house election market after dropping to 4% following a thesis collapse, acknowledging it as a narrative trap.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favourites), the Narrative Trap (allowing compelling stories like \"incumbents always win\" to mask poor mathematical expected value), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero.\n\nCategories and question styles with poor calibration include speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favourites is significantly more reliable, evidenced by winning 59 of 74 bets when backing favourites. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favourite backing while managing reserve limits and capital allocation.",
   "journal": [
+    {
+      "ts": 1793865623444,
+      "kind": "analysis",
+      "text": "Analysed \"CI2026: Will either China, India, or the US sign the 35 by 35 pledge a\": market 33%, my 58% (low). No trade, would be a longshot bet against the 33% favourite."
+    },
+    {
+      "ts": 1793865623395,
+      "kind": "analysis",
+      "text": "Analysed \"Will the \u2018Worst Democratic Candidates\u2019 all win?\": market 17%, my 18% (medium). No trade, would be a longshot bet against the 17% favourite."
+    },
+    {
+      "ts": 1793865406097,
+      "kind": "screen",
+      "text": "Escalated \"CI2026: Will either China, India, or the US sign the 35 by 35 pledge a\" at 33%: quick estimate 15% backs the favourite at 33%. US, China, and India rarely sign up for binding international climate pledges of this specificity on short timelines."
+    },
+    {
+      "ts": 1793865406093,
+      "kind": "screen",
+      "text": "Escalated \"Will the \u2018Worst Democratic Candidates\u2019 all win?\" at 17%: quick estimate 5% backs the favourite at 17%. Requires multiple specific candidates to all win in a parlay-style condition, making a YES outcome extremely unlikely."
+    },
     {
       "ts": 1793865027802,
       "kind": "score",
@@ -443,26 +463,6 @@
       "ts": 1793798079030,
       "kind": "screen",
       "text": "Passed on \"When will Sam Altman cease to be the CEO of OpenAI? \u2192 2028\" at 11%: quick estimate 15%, market 11%. This is a low-liquidity long-term speculation on CEO tenure without clear indicators pointing specifically to 2028."
-    },
-    {
-      "ts": 1793798079023,
-      "kind": "screen",
-      "text": "Passed on \"When will Sam Altman cease to be the CEO of OpenAI? \u2192 2027\" at 13%: quick estimate 25%, market 13%. Purely speculative multi-year executive tenure forecasting with low volume."
-    },
-    {
-      "ts": 1793798079015,
-      "kind": "screen",
-      "text": "Escalated \"2026 US Senate Election: will the party of the winner of this state's \" at 96%: quick estimate 99% backs the favourite at 96%. Kansas is a heavily safe Republican Senate seat and the GOP is favored to hold the Senate."
-    },
-    {
-      "ts": 1793798079008,
-      "kind": "screen",
-      "text": "Passed on \"CI2026: Will the Swiss ban noisy fireworks?\" at 84%: quick estimate 50%, market 84%. Standard Swiss referendum coin-flip with no immediate breaking information to exploit."
-    },
-    {
-      "ts": 1793798079000,
-      "kind": "screen",
-      "text": "Escalated \"Is Lumina probiotics a scam? \" at 49%: quick estimate 40% backs the favourite at 49%. Vague scam criteria relying heavily on subjective interpretation and mod discretion."
     }
   ],
   "todos": [
@@ -807,7 +807,7 @@
       "profit": 0.0,
       "prob": 0.038,
       "closed": false,
-      "days_to_close": 25.0
+      "days_to_close": 24.9
     },
     {
       "question": "Will Geometry Dash 2.21 Update Will Be Released In August 13 2026?",
@@ -2314,6 +2314,24 @@
   ],
   "screens": [
     {
+      "ts": 1793865406093,
+      "question": "CI2026: Will either China, India, or the US sign the 35 by 35 pledge at COP31?",
+      "url": "https://manifold.markets/FrankfurtSchool/ci2026-will-either-china-india-or-t",
+      "passed": true,
+      "market_prob": 0.33000000000000007,
+      "quick_prob": 0.15,
+      "why": "quick estimate 15% backs the favourite at 33%. US, China, and India rarely sign up for binding international climate pledges of this specificity on short timelines."
+    },
+    {
+      "ts": 1793865406088,
+      "question": "Will the \u2018Worst Democratic Candidates\u2019 all win?",
+      "url": "https://manifold.markets/Jack1/will-the-worst-democratic-candidate",
+      "passed": true,
+      "market_prob": 0.17393155763181586,
+      "quick_prob": 0.05,
+      "why": "quick estimate 5% backs the favourite at 17%. Requires multiple specific candidates to all win in a parlay-style condition, making a YES outcome extremely unlikely."
+    },
+    {
       "ts": 1793861724698,
       "question": "Will California Proposition 41 (tax limits and special-tax audits) be approved in the November 3, 2026 election?",
       "url": "https://manifold.markets/ManifoldPolitics/will-california-proposition-41-tax",
@@ -2654,27 +2672,57 @@
       "market_prob": 0.1700000000000001,
       "quick_prob": 0.65,
       "why": "quick estimate 65%, market 17%. Texas congressional seats have been stable at 25 Republicans for multiple cycles and redistricting is locked."
-    },
-    {
-      "ts": 1793817413179,
-      "question": "Will Arkansas Issue 3 (economic development districts) be approved in the November 3, 2026 election?",
-      "url": "https://manifold.markets/ManifoldPolitics/will-arkansas-issue-3-economic-deve",
-      "passed": false,
-      "market_prob": 0.05569242525401949,
-      "quick_prob": 0.5,
-      "why": "quick estimate 50%, market 6%. Pure coin-flip state ballot measure without early returns or special information available."
-    },
-    {
-      "ts": 1793817413172,
-      "question": "Which party will finish third place in the 2026 NZ General Election? \u2192 NZ First",
-      "url": "https://manifold.markets/Jack1/which-party-will-finish-third-place",
-      "passed": false,
-      "market_prob": 0.14419917338179555,
-      "quick_prob": 0.45,
-      "why": "quick estimate 45%, market 14%. Standard political poll uncertainty before election day, mutually exclusive with market 1."
     }
   ],
   "decisions": [
+    {
+      "ts": 1793865623439,
+      "kind": "no_trade",
+      "question": "CI2026: Will either China, India, or the US sign the 35 by 35 pledge at COP31?",
+      "url": "https://manifold.markets/FrankfurtSchool/ci2026-will-either-china-india-or-t",
+      "market_prob": 0.33000000000000007,
+      "model_prob": 0.58,
+      "confidence": "low",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With a three-country disjunction (China, India, US) and China expressing pre-COP support for electrification goals in late October, there is a reasonable chance of at least one signature.",
+      "uncertainty": "Whether China or the US converts pre-COP support into an official pledge signing on cop31.tr before November 20.",
+      "resolution_risk": "Endorsement or joint statement language on cop31.tr might be phrased loosely, creating ambiguity about whether it constitutes a formal 'pledge signing'.",
+      "evidence_for": [
+        "Disjunction criteria: market resolves YES if ANY ONE of China, India, or the US signs.",
+        "China indicated support for electrification goals in late October 2026 pre-COP consultations hosted by IRENA.",
+        "COP summits routinely feature at least one major power signing global pledge initiatives."
+      ],
+      "evidence_against": [
+        "No formal signature or official statement on cop31.tr has been published as of November 5.",
+        "Major powers frequently decline binding quantitative target pledges to retain policy flexibility.",
+        "India emphasized focusing on existing buildout commitments rather than new international pledges."
+      ],
+      "reason": "would be a longshot bet against the 33% favourite"
+    },
+    {
+      "ts": 1793865623390,
+      "kind": "no_trade",
+      "question": "Will the \u2018Worst Democratic Candidates\u2019 all win?",
+      "url": "https://manifold.markets/Jack1/will-the-worst-democratic-candidate",
+      "market_prob": 0.17393155763181586,
+      "model_prob": 0.18,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "This is a 4-leg compound parlay requiring all four candidates to win. Even with favorable national midterm tailwinds, conjunctions scale down exponentially.",
+      "uncertainty": "Whether all four individual candidates secured wins in their respective 2026 midterm contests.",
+      "resolution_risk": "Official vote certification timelines extending past the 2.7-day closing window.",
+      "evidence_for": [
+        "2026 midterm election context indicates broad Democratic wave momentum in federal and state legislative races."
+      ],
+      "evidence_against": [
+        "Requires ALL 4 specified candidates (Troy Jackson, Abdul El-Sayed, William Lawrence, Matt Dunlap) to win their respective races.",
+        "Compound conjunctions scale down exponentially; a single loss among the four resolves the market to NO.",
+        "Districts such as ME-02 and MI-07 represent historically competitive or swing territories where individual wins are not guaranteed."
+      ],
+      "reason": "would be a longshot bet against the 17% favourite"
+    },
     {
       "ts": 1793839615843,
       "kind": "no_trade",
@@ -2974,52 +3022,6 @@
         "It is highly speculative that this character exists in a form that fulfills the specific gag condition."
       ],
       "reason": "edge 0.341, kelly 0.92, decay 0.89, bound by balance reserve"
-    },
-    {
-      "ts": 1793753530929,
-      "kind": "no_trade",
-      "question": "Who will be elected mayor of Los Angeles in 2026? \u2192 Nithya Raman",
-      "url": "https://manifold.markets/cash/who-will-be-elected-mayor-of-los-an",
-      "market_prob": 0.2590406140740458,
-      "model_prob": 0.46,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Raman has run a competitive campaign and tied Bass in final polls, but remains a slight underdog against the incumbent citywide coalition.",
-      "uncertainty": "Which candidate captures the roughly 19% of undecided voters in final ballots.",
-      "resolution_risk": "Extended ballot processing timelines typical of Los Angeles County mail-in counting.",
-      "evidence_for": [
-        "Nithya Raman achieved a statistical dead heat (40-40) against incumbent Bass in late October polling.",
-        "Strong progressive mobilization and anti-incumbent sentiment regarding housing affordability and homelessness."
-      ],
-      "evidence_against": [
-        "Bass possesses broader establishment Democratic and union support across moderate and older demographics in LA.",
-        "DSA-aligned progressive challengers have historically faced high hurdles in citywide LA runoffs compared to district council races."
-      ],
-      "reason": "would be a longshot bet against the 26% favourite"
-    },
-    {
-      "ts": 1793753530889,
-      "kind": "no_trade",
-      "question": "Who will win the 2026 Los Angeles mayoral election? \u2192 Karen Bass",
-      "url": "https://manifold.markets/AndrewG/who-will-win-the-2026-los-angeles-m-INuczUPcU0",
-      "market_prob": 0.74,
-      "model_prob": 0.54,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "The race is a toss-up per recent polling, but Bass maintains a slight historical edge due to incumbency and mainstream coalition support in LA runoffs.",
-      "uncertainty": "Late-deciding voters and youth/progressive turnout vs older high-propensity moderate voters.",
-      "resolution_risk": "Slow vote counting in Los Angeles County leading to protracted resolution delays.",
-      "evidence_for": [
-        "Karen Bass is the incumbent mayor with strong institutional, labor, and establishment Democratic backing across Los Angeles.",
-        "Citywide electorates in Los Angeles general runoffs historically lean toward establishment Democrats over DSA challengers."
-      ],
-      "evidence_against": [
-        "Late October UC Berkeley/LA Times polling showed Bass tied 40-40 with Raman, with 19% undecided.",
-        "Bass has faced voter frustration over homelessness and cost of living."
-      ],
-      "reason": "would be a longshot bet against the 74% favourite"
     }
   ]
 }
