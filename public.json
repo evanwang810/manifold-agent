@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1793943658636,
+  "generated_ms": 1793943866380,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 6,
+      "today": 7,
       "cap": 400
     },
     "chat": {
@@ -64,6 +64,26 @@
   "net_worth": 586.42,
   "summary": "Balance M$10. Net worth M$586. 14 open positions, 7 of them closed and awaiting resolution. Over 281 resolved forecasts, our Brier score is 0.156 compared to the market's 0.098. We forecast worse than the market price overall, and our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 142 of 281, and on big disagreements, 129 of 246. Across resolved bets, backing favourites won 60 of 75, while longshots against the favourite won 21 of 93.\n\nSpendable cash remains heavily restricted by balance reserve limits, which repeatedly floor trade sizes to zero when capital is tied up awaiting resolutions. Active positions include bets on Codeforces IGM, Trump 2026 outcomes, Navier-Stokes solutions before IPO, US midterm turnout exceeding 2022, and state political races. Washington Initiative IL26-638 recently resolved YES, freeing up cash and adding to our P/L.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favourites), the Narrative Trap (allowing compelling stories like \"incumbents always win\" to mask poor mathematical expected value), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero.\n\nCategories and question styles with poor calibration include speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favourites is significantly more reliable, evidenced by winning 60 of 75 bets when backing favourites. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favourite backing while managing reserve limits and capital allocation.",
   "journal": [
+    {
+      "ts": 1793943865701,
+      "kind": "score",
+      "text": "Scored 281 resolved forecasts: my Brier 0.156, the market's 0.098. Closer than the market on 142/281."
+    },
+    {
+      "ts": 1793943852292,
+      "kind": "screen",
+      "text": "Passed on \"Will @mira make a comeback?...\" at 20%: quick estimate 30%, market 20%. This is a subjective platform user balance market dependent on individual trading activity."
+    },
+    {
+      "ts": 1793943852285,
+      "kind": "screen",
+      "text": "Passed on \"Which party will finish third place in the 2026 NZ General Election? \u2192\" at 6%: quick estimate 50%, market 6%. NZ First vs Greens is a close contest depending on final election day momentum and poll noise."
+    },
+    {
+      "ts": 1793943852279,
+      "kind": "screen",
+      "text": "Passed on \"Which party will finish third place in the 2026 NZ General Election? \u2192\" at 88%: quick estimate 35%, market 88%. Polling shows NZ First and Greens competing tightly for third, but this is a standard political forecast with no hidden edge."
+    },
     {
       "ts": 1793940094862,
       "kind": "score",
@@ -443,26 +463,6 @@
       "ts": 1793861344213,
       "kind": "score",
       "text": "Scored 272 resolved forecasts: my Brier 0.154, the market's 0.093. Closer than the market on 137/272."
-    },
-    {
-      "ts": 1793857968078,
-      "kind": "screen",
-      "text": "Passed on \"Will Colorado Proposition 136 (4.4% income tax rate cap) be approved i\" at 3%: quick estimate 45%, market 3%. This is a state tax limitation ballot measure with no specific polls or insider details provided to override standard uncertainty."
-    },
-    {
-      "ts": 1793857968073,
-      "kind": "screen",
-      "text": "Passed on \"Will OpenAI publicly claim a solution to a SECOND Millennium Prize Pro\" at 6%: quick estimate 11%, market 6%. The creator's comments track a larger external prediction market showing low probability for a second proof by late 2026."
-    },
-    {
-      "ts": 1793857590131,
-      "kind": "score",
-      "text": "Scored 272 resolved forecasts: my Brier 0.154, the market's 0.093. Closer than the market on 137/272."
-    },
-    {
-      "ts": 1793854245116,
-      "kind": "screen",
-      "text": "Passed on \"DEMS/IND win ANY of Florida, Mississippi, Montana or Louisiana?\" at 96%: quick estimate 32%, market 96%. Standard midterm senate aggregation with competing takes on turnout and close polls in Mississippi, but no clear mispricing requiring deep modeling."
     }
   ],
   "todos": [
@@ -2339,6 +2339,33 @@
   ],
   "screens": [
     {
+      "ts": 1793943852285,
+      "question": "Will @mira make a comeback?...",
+      "url": "https://manifold.markets/Velaris/will-mira-make-a-comeback",
+      "passed": false,
+      "market_prob": 0.19898136989070006,
+      "quick_prob": 0.3,
+      "why": "quick estimate 30%, market 20%. This is a subjective platform user balance market dependent on individual trading activity."
+    },
+    {
+      "ts": 1793943852279,
+      "question": "Which party will finish third place in the 2026 NZ General Election? \u2192 NZ First",
+      "url": "https://manifold.markets/Jack1/which-party-will-finish-third-place",
+      "passed": false,
+      "market_prob": 0.057294036420783234,
+      "quick_prob": 0.5,
+      "why": "quick estimate 50%, market 6%. NZ First vs Greens is a close contest depending on final election day momentum and poll noise."
+    },
+    {
+      "ts": 1793943852272,
+      "question": "Which party will finish third place in the 2026 NZ General Election? \u2192 Greens",
+      "url": "https://manifold.markets/Jack1/which-party-will-finish-third-place",
+      "passed": false,
+      "market_prob": 0.8778936481077488,
+      "quick_prob": 0.35,
+      "why": "quick estimate 35%, market 88%. Polling shows NZ First and Greens competing tightly for third, but this is a standard political forecast with no hidden edge."
+    },
+    {
       "ts": 1793940082110,
       "question": "Will the October 2026 U.S. unemployment rate be at least 4.5%?",
       "url": "https://manifold.markets/CalibratedGhosts/will-the-october-2026-us-unemployme",
@@ -2670,33 +2697,6 @@
       "market_prob": 0.33000000000000007,
       "quick_prob": 0.15,
       "why": "quick estimate 15% backs the favourite at 33%. US, China, and India rarely sign up for binding international climate pledges of this specificity on short timelines."
-    },
-    {
-      "ts": 1793865406088,
-      "question": "Will the \u2018Worst Democratic Candidates\u2019 all win?",
-      "url": "https://manifold.markets/Jack1/will-the-worst-democratic-candidate",
-      "passed": true,
-      "market_prob": 0.17393155763181586,
-      "quick_prob": 0.05,
-      "why": "quick estimate 5% backs the favourite at 17%. Requires multiple specific candidates to all win in a parlay-style condition, making a YES outcome extremely unlikely."
-    },
-    {
-      "ts": 1793861724698,
-      "question": "Will California Proposition 41 (tax limits and special-tax audits) be approved in the November 3, 2026 election?",
-      "url": "https://manifold.markets/ManifoldPolitics/will-california-proposition-41-tax",
-      "passed": true,
-      "market_prob": 0.07558292652773449,
-      "quick_prob": 0.05,
-      "why": "quick estimate 5% backs the favourite at 8%. Live vote returns already show NO leading with most votes counted, making this effectively resolved."
-    },
-    {
-      "ts": 1793861724693,
-      "question": "Will any US Senate candidate lead the polling average by 3% or more and lose?",
-      "url": "https://manifold.markets/Jack1/will-any-us-senate-candidate-lead-t",
-      "passed": false,
-      "market_prob": 0.93104744514429,
-      "quick_prob": 0.15,
-      "why": "quick estimate 15%, market 93%. Polling leads of 3+ points rarely lose, making this an unlikely event without specific high-error races to analyze."
     }
   ],
   "decisions": [
