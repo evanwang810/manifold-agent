@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1793985309066,
+  "generated_ms": 1793990049086,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 17,
+      "today": 25,
       "cap": 400
     },
     "chat": {
@@ -39,31 +39,76 @@
       "cap": 400
     },
     "deep": {
-      "today": 6,
+      "today": 7,
       "cap": 54
     }
   },
   "dry_run": false,
   "score": {
-    "n": 282,
-    "model": 0.1556,
-    "market": 0.0974,
-    "closer": 143,
-    "disagree_n": 247,
-    "disagree_closer": 130,
-    "open": 94,
+    "n": 283,
+    "model": 0.155,
+    "market": 0.0972,
+    "closer": 144,
+    "disagree_n": 248,
+    "disagree_closer": 131,
+    "open": 95,
     "bets": 168,
     "fav_n": 75,
     "fav_won": 60,
     "long_n": 93,
     "long_won": 21
   },
-  "track_record": "Brier score over 282 resolved forecasts: yours 0.156, the market's 0.097 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market.\nCloser to the outcome than the market on 143 of 282; on big disagreements, 130 of 247.\nResolved bets: 168. Backing the favourite: won 60 of 75. Longshots against the favourite: won 21 of 93.\nMost recent resolutions:\n- \"Will Washington Initiative IL26-638 (girls' sports eligibility by sex)\": you 96%, market 90%, resolved YES\n- \"Will the \u2018Worst Democratic Candidates\u2019 all win?\": you 18%, market 17%, resolved NO\n- \"2026 US Senate Election: will the party of the winner of this state's \": you 22%, market 96%, resolved YES\n- \"Democratic odds of senate control on Tuesday November 3 2026? \u2192 80.00%\": you 12%, market 9%, resolved NO\n- \"Will Federal Agents draw guns on voters on Election Day 2026\": you 1%, market 6%, resolved NO\n- \"Will Colorado Amendment 82 (constitutional right to natural gas) be ap\": you 1%, market 15%, resolved NO",
+  "track_record": "Brier score over 283 resolved forecasts: yours 0.155, the market's 0.097 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market.\nCloser to the outcome than the market on 144 of 283; on big disagreements, 131 of 248.\nResolved bets: 168. Backing the favourite: won 60 of 75. Longshots against the favourite: won 21 of 93.\nMost recent resolutions:\n- \"Will Colorado Initiative 85 pass in 2026?\": you 93%, market 80%, resolved YES\n- \"Will Washington Initiative IL26-638 (girls' sports eligibility by sex)\": you 96%, market 90%, resolved YES\n- \"Will the \u2018Worst Democratic Candidates\u2019 all win?\": you 18%, market 17%, resolved NO\n- \"2026 US Senate Election: will the party of the winner of this state's \": you 22%, market 96%, resolved YES\n- \"Democratic odds of senate control on Tuesday November 3 2026? \u2192 80.00%\": you 12%, market 9%, resolved NO\n- \"Will Federal Agents draw guns on voters on Election Day 2026\": you 1%, market 6%, resolved NO",
   "status": "Nothing has changed since my last turn; spendable cash remains at M$0 while 7 positions await resolution.",
   "balance": 9.13,
   "net_worth": 588.37,
   "summary": "Balance M$5, net worth M$585. 14 open positions, 7 of them closed and awaiting resolution. Over 282 resolved forecasts, our Brier score is 0.156 compared to the market's 0.097. We forecast worse than the market price overall, and our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 143 of 282, and on big disagreements, 130 of 247. Across resolved bets, backing favourites won 60 of 75, while longshots against the favourite won 21 of 93. Washington Initiative IL26-638 recently resolved YES, while several other midterm and state elections await final resolution.\n\nSpendable cash remains heavily restricted by balance reserve limits, which repeatedly floor trade sizes to zero when capital is tied up awaiting resolutions. Active positions include bets on Codeforces IGM, Trump 2026 outcomes, Navier-Stokes solutions before IPO, US midterm turnout exceeding 2022, and state political races. \n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favourites), the Narrative Trap (allowing compelling stories like \"incumbents always win\" to mask poor mathematical expected value), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero.\n\nCategories and question styles with poor calibration include speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favourites is significantly more reliable, evidenced by winning 60 of 75 bets when backing favourites. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favourite backing while managing reserve limits and capital allocation.",
   "journal": [
+    {
+      "ts": 1793990048665,
+      "kind": "score",
+      "text": "Scored 283 resolved forecasts: my Brier 0.155, the market's 0.097. Closer than the market on 144/283."
+    },
+    {
+      "ts": 1793990034697,
+      "kind": "analysis",
+      "text": "Analysed \"Who will win a seat on the Mountain View City Council in November 2026\": market 94%, my 96% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1793990034626,
+      "kind": "analysis",
+      "text": "Analysed \"Will Joe Biden die before the 2028 presidential election (Nov. 7 2028)\": market 33%, my 74% (medium). No trade, would be a longshot bet against the 33% favourite."
+    },
+    {
+      "ts": 1793990034575,
+      "kind": "analysis",
+      "text": "Analysed \"CI2026: Will either China, India, or the US sign the 35 by 35 pledge a\": market 42%, my 38% (medium). No trade, edge 0.17 log-odds below minimum 0.2."
+    },
+    {
+      "ts": 1793989557023,
+      "kind": "screen",
+      "text": "Passed on \"Who will win a seat on the Mountain View City Council in November 2026\" at 73%: quick estimate 35%, market 73%. Local city council election with low liquidity and no recent polling data to warrant a deep dive."
+    },
+    {
+      "ts": 1793989557017,
+      "kind": "screen",
+      "text": "Escalated \"Who will win a seat on the Mountain View City Council in November 2026\" at 94%: flagged: The election occurred on Nov 3, 2026, so preliminary vote totals from Santa Clara County are already available."
+    },
+    {
+      "ts": 1793989557011,
+      "kind": "screen",
+      "text": "Passed on \"CI2026: Will the next ECOFIN decide to include novel tobacco products \" at 8%: quick estimate 45%, market 8%. EU tax harmonisation on novel tobacco is a standard policy debate with an uncertain outcome."
+    },
+    {
+      "ts": 1793989557006,
+      "kind": "screen",
+      "text": "Escalated \"CI2026: Will either China, India, or the US sign the 35 by 35 pledge a\" at 42%: quick estimate 10% backs the favourite at 42%. Major powers rarely sign joint binding pledges of this nature without extensive pre-drafting."
+    },
+    {
+      "ts": 1793989557000,
+      "kind": "screen",
+      "text": "Escalated \"Will Joe Biden die before the 2028 presidential election (Nov. 7 2028)\" at 33%: quick estimate 22% backs the favourite at 33%. Standard actuarial risk for an 83-year-old male over two years; no immediate news triggers."
+    },
     {
       "ts": 1793980085209,
       "kind": "score",
@@ -418,51 +463,6 @@
       "ts": 1793903103754,
       "kind": "screen",
       "text": "Passed on \"F1 2026 Prop Bets Mexican \ud83c\uddf2\ud83c\uddfd (Mexico City) Grand Prix [LIVE, Add answe\" at 10%: quick estimate 90%, market 10%. This is a tip-jar / meta-option on an open-ended multi-choice market which typically stays active."
-    },
-    {
-      "ts": 1793903103748,
-      "kind": "screen",
-      "text": "Escalated \"Will Anthropic IPO by Nov 20?\" at 40%: quick estimate 5% backs the favourite at 40%. An IPO by November 20 with no active filing news is extremely unlikely."
-    },
-    {
-      "ts": 1793903103742,
-      "kind": "screen",
-      "text": "Escalated \"Will OpenAI announce a massively recursive model, a new mechinterp sys\" at 4%: quick estimate 2% backs the favourite at 4%. Resolves on a specific private tweet bet with low probability and extreme requirements before December."
-    },
-    {
-      "ts": 1793903103736,
-      "kind": "screen",
-      "text": "Passed on \"Will Colorado Proposition 134 (male and female school sports) be appro\" at 97%: quick estimate 50%, market 97%. Standard state ballot measure with no polling data provided in the prompt; a coin flip for a quick read."
-    },
-    {
-      "ts": 1793902492667,
-      "kind": "score",
-      "text": "Scored 272 resolved forecasts: my Brier 0.154, the market's 0.093. Closer than the market on 137/272."
-    },
-    {
-      "ts": 1793902478168,
-      "kind": "desk",
-      "text": "Desk: Spendable cash is down to M$1 following the execution of our order on the Washington Initiative (IL26-638). With capital tied up across 14 positions (7 awaiting resolution), no new trades or transfers can be funded until closed markets resolve."
-    },
-    {
-      "ts": 1793894595562,
-      "kind": "score",
-      "text": "Scored 272 resolved forecasts: my Brier 0.154, the market's 0.093. Closer than the market on 137/272."
-    },
-    {
-      "ts": 1793891916774,
-      "kind": "position",
-      "text": "Opened 45 YES on \"Will Washington Initiative IL26-638 (girls' sports eligibility by sex) be approv\" at 90%, M$41 in."
-    },
-    {
-      "ts": 1793891732413,
-      "kind": "trade",
-      "text": "Limit order M$41 YES on \"Will Washington Initiative IL26-638 (girls' sports eligibility by sex)\" at 90%, my estimate 96% (high). Because: Initial election counts show Initiative IL26-638 leading 56.7% to 43.3% with nearly 2 million votes tallied, aligning with pre-election polling (56%). While Washington late mail-in ballots lean left, overcoming a 265,000-vote (13.4-point) gap in a midterm electorate is extremely unlikely."
-    },
-    {
-      "ts": 1793891443435,
-      "kind": "screen",
-      "text": "Passed on \"CI2026: Will the Swiss ban noisy fireworks?\" at 71%: quick estimate 50%, market 71%. This is a standard pending referendum vote with no strong public polling data available to form a lean."
     }
   ],
   "todos": [
@@ -644,11 +644,6 @@
       "ts": 1790196242628
     },
     {
-      "text": "Resolution Concentration: A significant portion of net worth (~M$312) is currently tied to the resolution speed of a single admin. This highlights the risk of 'paper wealth' during admin bottlenecks and the necessity of maintaining a cash buffer even when fully invested.",
-      "source": "self",
-      "ts": 1792718501549
-    },
-    {
       "text": "@botalobascrob Mana: The M$10 sent by @botalobascrob is categorized as a donation (\"your owner was asking for donations to you\"), not a loan. Repayment is not a priority compared to the @Gen loan.",
       "source": "self",
       "ts": 1792733302107
@@ -672,6 +667,11 @@
       "text": "Compound markets requiring ALL of N events to occur scale down exponentially in probability; always evaluate the least likely condition first.",
       "source": "self",
       "ts": 1793787229927
+    },
+    {
+      "text": "When preliminary post-election vote totals show a candidate in 1st place with a large margin in a multi-seat race, commit at high probability.",
+      "source": "self",
+      "ts": 1793990034632
     }
   ],
   "own_actions": [
@@ -783,7 +783,7 @@
       "profit": 0.7,
       "prob": 0.353,
       "closed": false,
-      "days_to_close": 8.9
+      "days_to_close": 8.8
     },
     {
       "question": "Will Magnus Carlsen be dethroned from his #1 spot in FIDE rating before GTA 6 is released?",
@@ -807,7 +807,7 @@
       "profit": 3.0,
       "prob": 0.895,
       "closed": false,
-      "days_to_close": 24.3
+      "days_to_close": 24.2
     },
     {
       "question": "Will Anthropic announce a solution to the Navier-Stokes Millennium problem before IPO? ",
@@ -819,7 +819,7 @@
       "profit": 0.0,
       "prob": 0.038,
       "closed": false,
-      "days_to_close": 23.6
+      "days_to_close": 23.5
     },
     {
       "question": "Will Geometry Dash 2.21 Update Will Be Released In August 13 2026?",
@@ -867,7 +867,7 @@
       "profit": 2.5,
       "prob": 0.8,
       "closed": false,
-      "days_to_close": 7.3
+      "days_to_close": 7.2
     },
     {
       "question": "Sum (Int( trillion dollar)) market cap companies \u2192 >27.5 at end of 2026/11",
@@ -915,7 +915,7 @@
       "profit": 0.0,
       "prob": 0.25,
       "closed": false,
-      "days_to_close": 9.5
+      "days_to_close": 9.4
     }
   ],
   "trades": [
@@ -2317,6 +2317,51 @@
   ],
   "screens": [
     {
+      "ts": 1793989557017,
+      "question": "Who will win a seat on the Mountain View City Council in November 2026? \u2192 Robert Cox",
+      "url": "https://manifold.markets/DavidFWatson/who-will-win-a-seat-on-the-mountain",
+      "passed": false,
+      "market_prob": 0.7252593199544234,
+      "quick_prob": 0.35,
+      "why": "quick estimate 35%, market 73%. Local city council election with low liquidity and no recent polling data to warrant a deep dive."
+    },
+    {
+      "ts": 1793989557011,
+      "question": "Who will win a seat on the Mountain View City Council in November 2026? \u2192 IdaRose Sylvester",
+      "url": "https://manifold.markets/DavidFWatson/who-will-win-a-seat-on-the-mountain",
+      "passed": true,
+      "market_prob": 0.9436026677774564,
+      "quick_prob": 0.33,
+      "why": "flagged: The election occurred on Nov 3, 2026, so preliminary vote totals from Santa Clara County are already available."
+    },
+    {
+      "ts": 1793989557006,
+      "question": "CI2026: Will the next ECOFIN decide to include novel tobacco products in the revised Tobacco Taxation Directive?",
+      "url": "https://manifold.markets/FrankfurtSchool/ci2026-will-the-next-ecofin-decide",
+      "passed": false,
+      "market_prob": 0.07999999999999993,
+      "quick_prob": 0.45,
+      "why": "quick estimate 45%, market 8%. EU tax harmonisation on novel tobacco is a standard policy debate with an uncertain outcome."
+    },
+    {
+      "ts": 1793989557000,
+      "question": "CI2026: Will either China, India, or the US sign the 35 by 35 pledge at COP31?",
+      "url": "https://manifold.markets/FrankfurtSchool/ci2026-will-either-china-india-or-t",
+      "passed": true,
+      "market_prob": 0.4199999999999998,
+      "quick_prob": 0.1,
+      "why": "quick estimate 10% backs the favourite at 42%. Major powers rarely sign joint binding pledges of this nature without extensive pre-drafting."
+    },
+    {
+      "ts": 1793989556993,
+      "question": "Will Joe Biden die before the 2028 presidential election (Nov. 7 2028)?",
+      "url": "https://manifold.markets/HenryFT/will-joe-biden-die-before-the-2028",
+      "passed": true,
+      "market_prob": 0.3300907507272636,
+      "quick_prob": 0.22,
+      "why": "quick estimate 22% backs the favourite at 33%. Standard actuarial risk for an 83-year-old male over two years; no immediate news triggers."
+    },
+    {
       "ts": 1793979781261,
       "question": "Will Washington Initiative IL26-001 (restoring 2024 parents' rights law) be approved in the November 3, 2026 election?",
       "url": "https://manifold.markets/ManifoldPolitics/will-washington-initiative-il26001",
@@ -2630,54 +2675,77 @@
       "market_prob": 0.4936515094248688,
       "quick_prob": 0.45,
       "why": "quick estimate 45%, market 49%. New Zealand politics is a close race with sparse comment info, making a deep look unnecessary."
-    },
-    {
-      "ts": 1793903103748,
-      "question": "F1 2026 Prop Bets Mexican \ud83c\uddf2\ud83c\uddfd (Mexico City) Grand Prix [LIVE, Add answers] \u2192 Leave it open for the upcoming GP (tip jar)",
-      "url": "https://manifold.markets/BlitzEver/f1-2026-prop-bets-australia-melbour",
-      "passed": false,
-      "market_prob": 0.10263077578986392,
-      "quick_prob": 0.9,
-      "why": "quick estimate 90%, market 10%. This is a tip-jar / meta-option on an open-ended multi-choice market which typically stays active."
-    },
-    {
-      "ts": 1793903103742,
-      "question": "Will Anthropic IPO by Nov 20?",
-      "url": "https://manifold.markets/EriccNsnA/will-anthropic-ipo-by-nov-20",
-      "passed": true,
-      "market_prob": 0.4019855173527462,
-      "quick_prob": 0.05,
-      "why": "quick estimate 5% backs the favourite at 40%. An IPO by November 20 with no active filing news is extremely unlikely."
-    },
-    {
-      "ts": 1793903103736,
-      "question": "Will OpenAI announce a massively recursive model, a new mechinterp system, and non-token based pricing, before December?",
-      "url": "https://manifold.markets/Bayesian/will-openai-announce-a-massively-re",
-      "passed": true,
-      "market_prob": 0.04459311740559463,
-      "quick_prob": 0.02,
-      "why": "quick estimate 2% backs the favourite at 4%. Resolves on a specific private tweet bet with low probability and extreme requirements before December."
-    },
-    {
-      "ts": 1793903103729,
-      "question": "Will Colorado Proposition 134 (male and female school sports) be approved in the November 3, 2026 election?",
-      "url": "https://manifold.markets/ManifoldPolitics/will-colorado-proposition-134-male",
-      "passed": false,
-      "market_prob": 0.9660233112063756,
-      "quick_prob": 0.5,
-      "why": "quick estimate 50%, market 97%. Standard state ballot measure with no polling data provided in the prompt; a coin flip for a quick read."
-    },
-    {
-      "ts": 1793891443427,
-      "question": "CI2026: Will the Swiss ban noisy fireworks?",
-      "url": "https://manifold.markets/FrankfurtSchool/ci2026-will-the-swiss-ban-noisy-fir",
-      "passed": false,
-      "market_prob": 0.71,
-      "quick_prob": 0.5,
-      "why": "quick estimate 50%, market 71%. This is a standard pending referendum vote with no strong public polling data available to form a lean."
     }
   ],
   "decisions": [
+    {
+      "ts": 1793990034691,
+      "kind": "no_trade",
+      "question": "Who will win a seat on the Mountain View City Council in November 2026? \u2192 IdaRose Sylvester",
+      "url": "https://manifold.markets/DavidFWatson/who-will-win-a-seat-on-the-mountain",
+      "market_prob": 0.9436026677774564,
+      "model_prob": 0.96,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Initial post-election counts show IdaRose Sylvester in 1st place with 4,528 votes. With 3 council seats up for grabs, her strong lead over the field makes winning a seat almost certain (96%).",
+      "uncertainty": "Whether uncounted mail-in ballots could shift vote distribution enough to knock her out of top 3.",
+      "resolution_risk": "Minimal risk given the magnitude of her initial vote lead.",
+      "evidence_for": [
+        "Preliminary Nov 3 election returns from Palo Alto Daily Post show IdaRose Sylvester leading the candidate field in 1st place with 4,528 votes",
+        "Three seats are available, giving her a wide margin over the 4th place candidate"
+      ],
+      "evidence_against": [
+        "Remaining late mail-in and provisional ballots are still being counted before certification"
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
+      "ts": 1793990034621,
+      "kind": "no_trade",
+      "question": "Will Joe Biden die before the 2028 presidential election (Nov. 7 2028)?",
+      "url": "https://manifold.markets/HenryFT/will-joe-biden-die-before-the-2028",
+      "market_prob": 0.3300907507272636,
+      "model_prob": 0.74,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Given Joe Biden's age (84) and reported stage 4 metastatic cancer diagnosis in late 2026, 2-year mortality risk through Nov 7, 2028 is estimated at 74%.",
+      "uncertainty": "Clinical progression speed of his stage 4 cancer over the next two years.",
+      "resolution_risk": "Market close date is listed in 1.4 days, ahead of the actual Nov 2028 election target date.",
+      "evidence_for": [
+        "Joe Biden is 84 years old in late 2026",
+        "Reports indicate an ongoing battle with stage 4 metastatic cancer, which carries high 2-year mortality"
+      ],
+      "evidence_against": [
+        "He remains politically active and making public appearances",
+        "Access to world-class presidential medical care can extend survival"
+      ],
+      "reason": "would be a longshot bet against the 33% favourite"
+    },
+    {
+      "ts": 1793990034569,
+      "kind": "no_trade",
+      "question": "CI2026: Will either China, India, or the US sign the 35 by 35 pledge at COP31?",
+      "url": "https://manifold.markets/FrankfurtSchool/ci2026-will-either-china-india-or-t",
+      "market_prob": 0.4199999999999998,
+      "model_prob": 0.38,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With COP31 starting Nov 9, the disjunction across US, China, and India faces strong hurdles. China and India historically decline host-driven numerical energy mix targets (as seen at COP28), and US sign-on is unlikely. Estimating 38% chance at least one signs.",
+      "uncertainty": "Whether China or India agrees to join host Turkey's pledge during COP31 negotiations.",
+      "resolution_risk": "Pledge could be announced under a modified name or non-binding side agreement.",
+      "evidence_for": [
+        "COP31 host Turkey is actively organizing consultation meetings for the 35 by 35 pledge",
+        "Disjunction of three major nations (US, China, India) increases the probability relative to any single country"
+      ],
+      "evidence_against": [
+        "Major emitters like China and India historically resist host-driven specific percentage target pledges at COPs",
+        "US political alignment in 2026 makes signing host-backed climate targets improbable"
+      ],
+      "reason": "edge 0.17 log-odds below minimum 0.2"
+    },
     {
       "ts": 1793968934281,
       "kind": "no_trade",
@@ -2959,77 +3027,6 @@
         "Districts such as ME-02 and MI-07 represent historically competitive or swing territories where individual wins are not guaranteed."
       ],
       "reason": "would be a longshot bet against the 17% favourite"
-    },
-    {
-      "ts": 1793839615843,
-      "kind": "no_trade",
-      "question": "Who will be elected New Zealand Prime Minister in the next election? \u2192 Chris Hipkins",
-      "url": "https://manifold.markets/NcyRocks/who-will-be-elected-new-zealand-pri",
-      "market_prob": 0.4659196585669373,
-      "model_prob": 0.42,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Labour and National are neck-and-neck in final pre-election polling, but incumbency advantage and right-bloc coalition potential keep Hipkins slightly under 50% (42%).",
-      "uncertainty": "Whether the left bloc (Labour, Greens, TPM) can secure a combined majority of seats over the right bloc in the November 7 election.",
-      "resolution_risk": "Post-election coalition negotiations could delay formal appointment of the Prime Minister beyond the market closing time.",
-      "evidence_for": [
-        "Late polls in October/November 2026 show Labour and National neck-and-neck.",
-        "Potential left-bloc coalition (Labour + Greens + Te P\u0101ti M\u0101ori) gaining momentum in final campaign days."
-      ],
-      "evidence_against": [
-        "One-term governments in New Zealand are historically rare under MMP; incumbent Luxon holds structural advantage.",
-        "Right-leaning coalition options (National + ACT + NZ First) remain a viable path to 61 seats."
-      ],
-      "reason": "edge 0.19 log-odds below minimum 0.2"
-    },
-    {
-      "ts": 1793836077349,
-      "kind": "bet",
-      "question": "Will Anthropic announce a solution to the Navier-Stokes Millennium problem before IPO? ",
-      "url": "https://manifold.markets/Bayesian/did-claude-just-solve-navier-stokes",
-      "market_prob": 0.037577976764903626,
-      "model_prob": 0.02,
-      "confidence": "high",
-      "amount": 43.0,
-      "outcome": "NO",
-      "thinking": "With Anthropic's S-1 filed and IPO debut targeted for late November 2026, the remaining timeline is under three weeks. A full solution to the 3D Navier-Stokes Millennium problem announced in this window is extremely unlikely, especially given strict resolution criteria excluding partial variants.",
-      "uncertainty": "Whether Anthropic holds an unreleased internal proof timed for pre-IPO publicity.",
-      "resolution_risk": "Ambiguity over whether a employee paper or partial result counts as an official Anthropic announcement.",
-      "evidence_for": [
-        "Anthropic employs leading researchers in mathematics and AI reasoning."
-      ],
-      "evidence_against": [
-        "Anthropic has already filed its S-1 with an expected IPO in late November 2026, leaving a window of under three weeks.",
-        "The 3D Navier-Stokes problem remains unsolved with no verified breakthrough announced.",
-        "Resolution criteria explicitly exclude weaker variants or partial proofs."
-      ],
-      "reason": "edge 0.018, kelly 0.47, decay 0.40, bound by kelly target"
-    },
-    {
-      "ts": 1793798270534,
-      "kind": "no_trade",
-      "question": "Is Lumina probiotics a scam? ",
-      "url": "https://manifold.markets/drcat/will-lumina-probiotics-be-discovere",
-      "market_prob": 0.49416756074347634,
-      "model_prob": 0.73,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Creator @drcat has clarified that existing Substack breakdowns meet the resolution criteria for a dossier/exposed text, and recent reports highlight product failure and domain scam alerts. While NO traders point to possible version 2 iterations, creator criteria strongly favor YES.",
-      "uncertainty": "Whether creator resolves YES based on blog write-ups or if moderators override the resolution.",
-      "resolution_risk": "High creator bias towards YES creates risk of user dispute and moderator review.",
-      "evidence_for": [
-        "Creator @drcat explicitly affirmed that existing Substack write-ups qualify under their criteria as a decent dossier or exposed text.",
-        "Lumina publicly acknowledged that the initial product failed to maintain colonization in users.",
-        "Recent consumer alert and malware monitoring sites (e.g. MalwareTips) have flagged Lumina domains."
-      ],
-      "evidence_against": [
-        "No mainstream legacy news outlet has published a formal expose.",
-        "The company claims to be working on a second version and could theoretically enter clinical trials to attempt a NO resolution.",
-        "Several traders argue early product failure in a biotech startup is not equivalent to a fraudulent scam."
-      ],
-      "reason": "would be a longshot bet against the 49% favourite"
     }
   ]
 }
