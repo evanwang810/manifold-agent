@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1793928846106,
+  "generated_ms": 1793929299735,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 1,
+      "today": 4,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 0,
+      "today": 1,
       "cap": 54
     }
   },
@@ -64,6 +64,21 @@
   "net_worth": 586.42,
   "summary": "Balance M$11. Net worth M$584. 14 open positions, 7 of them closed and awaiting resolution. Over 275 resolved forecasts, our Brier score is 0.155 compared to the market's 0.096. We forecast worse than the market price overall, and our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 139 of 275, and on big disagreements, 126 of 241. Across resolved bets, backing favourites won 59 of 74, while longshots against the favourite won 21 of 93.\n\nSpendable cash remains heavily restricted by balance reserve limits, which repeatedly floor trade sizes to zero when capital is tied up awaiting resolutions. Active positions include short-fuse bets on Codeforces IGM, Trump 2026 nightmare outcomes, Navier-Stokes solutions before IPO, and Washington girls' sports eligibility. We recently cut losses and sold our position on the CA-4 house election market after dropping to 4% following a thesis collapse, acknowledging it as a narrative trap.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favourites), the Narrative Trap (allowing compelling stories like \"incumbents always win\" to mask poor mathematical expected value), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero.\n\nCategories and question styles with poor calibration include speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favourites is significantly more reliable, evidenced by winning 59 of 74 bets when backing favourites. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favourite backing while managing reserve limits and capital allocation.",
   "journal": [
+    {
+      "ts": 1793929299288,
+      "kind": "analysis",
+      "text": "Analysed \"Will Labour recieve more party vote than Greens, ACT and NZ first comb\": market 31%, my 68% (medium). No trade, would be a longshot bet against the 31% favourite."
+    },
+    {
+      "ts": 1793929039898,
+      "kind": "screen",
+      "text": "Escalated \"Will Labour recieve more party vote than Greens, ACT and NZ first comb\" at 31%: flagged: Comments provide specific recent polling data showing combined minor parties outperforming Labour contrary to market pricing."
+    },
+    {
+      "ts": 1793929039891,
+      "kind": "screen",
+      "text": "Passed on \"Bitcoin reaches 90k USD at any point before December\" at 15%: quick estimate 65%, market 15%. Standard price-action momentum question without specific structural wrinkles to investigate."
+    },
     {
       "ts": 1793928469946,
       "kind": "score",
@@ -448,21 +463,6 @@
       "ts": 1793846866018,
       "kind": "screen",
       "text": "Passed on \"Will Colorado Proposition 137 (sporting goods tax for conservation) be\" at 74%: quick estimate 50%, market 74%. State ballot initiative outcomes on specific tax measures depend entirely on local election results that require detailed polling or vote-count data unavailable to a quick read."
-    },
-    {
-      "ts": 1793846866010,
-      "kind": "screen",
-      "text": "Passed on \"Dec 1 2023 to Nov 30 2026, will a UK strike price of \u00a365 (2012 prices\" at 10%: quick estimate 50%, market 10%. This is a retrospective or ongoing complex financial calculation dependent on wholesale energy prices and inflation, with no obvious mispricing evident in the title."
-    },
-    {
-      "ts": 1793846463386,
-      "kind": "score",
-      "text": "Scored 272 resolved forecasts: my Brier 0.154, the market's 0.093. Closer than the market on 137/272."
-    },
-    {
-      "ts": 1793843078977,
-      "kind": "screen",
-      "text": "Passed on \"2026 US Senate Election: will the party of the winner of this state's \" at 87%: quick estimate 52%, market 87%. Alaska Senate outcome and overall senate control depend on complex mid-term forecasting that is essentially a coin flip."
     }
   ],
   "todos": [
@@ -2350,6 +2350,24 @@
   ],
   "screens": [
     {
+      "ts": 1793929039891,
+      "question": "Will Labour recieve more party vote than Greens, ACT and NZ first combined in the 2026 NZ election?",
+      "url": "https://manifold.markets/Jack1/will-labour-recieve-more-party-vote",
+      "passed": true,
+      "market_prob": 0.31215414571190125,
+      "quick_prob": 0.35,
+      "why": "flagged: Comments provide specific recent polling data showing combined minor parties outperforming Labour contrary to market pricing."
+    },
+    {
+      "ts": 1793929039877,
+      "question": "Bitcoin reaches 90k USD at any point before December",
+      "url": "https://manifold.markets/rg26/bitcoin-reaches-90k-usd-at-any-poin-2z69zOZOIP",
+      "passed": false,
+      "market_prob": 0.14872994044060403,
+      "quick_prob": 0.65,
+      "why": "quick estimate 65%, market 15%. Standard price-action momentum question without specific structural wrinkles to investigate."
+    },
+    {
       "ts": 1793925275582,
       "question": "Will Fernando Alonso be an Aston Martin Formula 1 driver by the end of the season?",
       "url": "https://manifold.markets/LukasscIzc/will-fernando-alonso-be-an-aston-ma",
@@ -2690,27 +2708,33 @@
       "market_prob": 0.062344072104291846,
       "quick_prob": 0.11,
       "why": "quick estimate 11%, market 6%. The creator's comments track a larger external prediction market showing low probability for a second proof by late 2026."
-    },
-    {
-      "ts": 1793854245111,
-      "question": "DEMS/IND win ANY of Florida, Mississippi, Montana or Louisiana?",
-      "url": "https://manifold.markets/Jack1/demsind-win-any-of-florida-mississi",
-      "passed": false,
-      "market_prob": 0.9644625352009527,
-      "quick_prob": 0.32,
-      "why": "quick estimate 32%, market 96%. Standard midterm senate aggregation with competing takes on turnout and close polls in Mississippi, but no clear mispricing requiring deep modeling."
-    },
-    {
-      "ts": 1793850503363,
-      "question": "Will California Proposition 42 (ban on new state personal property taxes) be approved in the November 3, 2026 election?",
-      "url": "https://manifold.markets/ManifoldPolitics/will-california-proposition-42-ban",
-      "passed": false,
-      "market_prob": 0.954200033169928,
-      "quick_prob": 0.93,
-      "why": "quick estimate 93%, market 95%. The election occurred two days ago and live vote counts show YES leading comfortably at 54.5% with over 6.7M ballots counted."
     }
   ],
   "decisions": [
+    {
+      "ts": 1793929299281,
+      "kind": "no_trade",
+      "question": "Will Labour recieve more party vote than Greens, ACT and NZ first combined in the 2026 NZ election?",
+      "url": "https://manifold.markets/Jack1/will-labour-recieve-more-party-vote",
+      "market_prob": 0.31215414571190125,
+      "model_prob": 0.68,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With Labour polling around 29-31% and the combined total of Greens (~11%), ACT (~8.5%), and NZ First (~6.5%) averaging ~26%, Labour holds a moderate expected lead over their combined party vote share. Historical 2023 results also favored Labour (26.9% vs 26.3% combined). Estimating a 68% chance Labour exceeds their combined total.",
+      "uncertainty": "The exact election day party vote split between Labour and the three minor parties.",
+      "resolution_risk": "None significant; resolves clearly on official election results released by the NZ Electoral Commission.",
+      "evidence_for": [
+        "Labour is polling around 29-31% ahead of election day.",
+        "The combined polling for Greens (~11%), ACT (~8.5%), and NZ First (~6.5%) averages around 26%, giving Labour a ~3-4 percentage point cushion.",
+        "In the 2023 election, Labour received 26.9% compared to 26.3% combined for Greens, ACT, and NZ First."
+      ],
+      "evidence_against": [
+        "If minor parties overperform (e.g. Greens 12%, ACT 9%, NZ First 8% = 29%) and Labour falls to 28%, the combined minor vote would exceed Labour.",
+        "NZ First and Greens have historically had late polling surges."
+      ],
+      "reason": "would be a longshot bet against the 31% favourite"
+    },
     {
       "ts": 1793921672406,
       "kind": "no_trade",
@@ -3037,30 +3061,6 @@
         "Initial trailer silhouette had slight costume differences."
       ],
       "reason": "would be a longshot bet against the 22% favourite"
-    },
-    {
-      "ts": 1793787230124,
-      "kind": "bet",
-      "question": "2026 a nightmare year for Trump?",
-      "url": "https://manifold.markets/Jack1/2026-a-nightmare-year-for-trump",
-      "market_prob": 0.04000000000000002,
-      "model_prob": 0.03,
-      "confidence": "high",
-      "amount": 25.0,
-      "outcome": "NO",
-      "thinking": "This market requires ALL four conditions to trigger. With U-3 unemployment steady at 4.1-4.3% through September 2026, hitting 5.0%+ this year is virtually impossible, failing the combo.",
-      "uncertainty": "Whether U-3 unemployment could unexpectedly surge above 5.0% in the final quarter of 2026.",
-      "resolution_risk": "Differences in Kalshi resolution source mappings for recession determinations.",
-      "evidence_for": [
-        "Trump approval ratings have hovered around late-30s in national trackers",
-        "Democrats are competitive in the 2026 House midterms"
-      ],
-      "evidence_against": [
-        "Requires ALL 4 compound conditions to occur simultaneously",
-        "BLS U-3 unemployment rate was 4.2% in September 2026 and stayed between 4.1-4.3% all year, making 5.0%+ in 2026 virtually impossible",
-        "No official BEA recession declared for Q4 2025 - Q4 2026"
-      ],
-      "reason": "edge 0.010, kelly 0.25, decay 0.42, bound by kelly target"
     }
   ]
 }
