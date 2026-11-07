@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1794082235594,
+  "generated_ms": 1794082590136,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 29,
+      "today": 34,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 9,
+      "today": 10,
       "cap": 54
     }
   },
@@ -64,6 +64,31 @@
   "net_worth": 591.74,
   "summary": "Balance M$10. Net worth M$592. 15 open positions, 7 of them closed and awaiting resolution. Spendable cash remains heavily restricted by balance reserve limits, which repeatedly floor trade sizes to zero when capital is tied up awaiting resolutions. Over 287 resolved forecasts, our Brier score is 0.155 compared to the market's 0.098 (lower is better, 0.25 is a coin flip). We forecast worse than the market price overall, and our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 146 of 287; on big disagreements, 133 of 251. Resolved bets: 170. Backing the favourite: won 62 of 77. Longshots against the favourite: won 21 of 93.\n\nActive open positions include bets on Codeforces IGM, Trump 2026 outcomes, Navier-Stokes solutions before IPO, US midterm turnout exceeding 2022, state political races, tennis matches, and the Mountain View City Council and US Congress races. Recent resolutions include Colorado Initiative 85 and Washington Initiative IL26-638 resolving YES, alongside several senate and election outcome markers.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favourites), the Narrative Trap (allowing compelling stories to mask poor mathematical expected value), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero. \n\nCategories and question styles with poor calibration include speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favourites is significantly more reliable, evidenced by winning 62 of 77 bets when backing favourites. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favourite backing while managing reserve limits and capital allocation.",
   "journal": [
+    {
+      "ts": 1794082589437,
+      "kind": "analysis",
+      "text": "Analysed \"What combination of Netanyahu/Bennett/Lapid will be in the next Israel\": market 12%, my 6% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1794082589382,
+      "kind": "analysis",
+      "text": "Analysed \"Will I run 5 km every day in November 2026?\": market 44%, my 38% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1794082428542,
+      "kind": "screen",
+      "text": "Escalated \"What combination of Netanyahu/Bennett/Lapid will be in the next Israel\" at 12%: quick estimate 10% backs the favourite at 12%. Netanyahu and Bennett have had a strained political relationship making this specific coalition unlikely."
+    },
+    {
+      "ts": 1794082428535,
+      "kind": "screen",
+      "text": "Escalated \"Will I run 5 km every day in November 2026?\" at 44%: quick estimate 5% backs the favourite at 44%. Running 5 km every single day for a month with zero exceptions is extremely fragile and already underway."
+    },
+    {
+      "ts": 1794082428529,
+      "kind": "screen",
+      "text": "Passed on \"CI2026: Will the Swiss ban noisy fireworks?\" at 62%: quick estimate 15%, market 62%. Constitutional referendums banning popular items like fireworks face high hurdles in Switzerland."
+    },
     {
       "ts": 1794079388140,
       "kind": "score",
@@ -438,31 +463,6 @@
       "ts": 1793990034697,
       "kind": "analysis",
       "text": "Analysed \"Who will win a seat on the Mountain View City Council in November 2026\": market 94%, my 96% (high). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1793990034626,
-      "kind": "analysis",
-      "text": "Analysed \"Will Joe Biden die before the 2028 presidential election (Nov. 7 2028)\": market 33%, my 74% (medium). No trade, would be a longshot bet against the 33% favourite."
-    },
-    {
-      "ts": 1793990034575,
-      "kind": "analysis",
-      "text": "Analysed \"CI2026: Will either China, India, or the US sign the 35 by 35 pledge a\": market 42%, my 38% (medium). No trade, edge 0.17 log-odds below minimum 0.2."
-    },
-    {
-      "ts": 1793989557023,
-      "kind": "screen",
-      "text": "Passed on \"Who will win a seat on the Mountain View City Council in November 2026\" at 73%: quick estimate 35%, market 73%. Local city council election with low liquidity and no recent polling data to warrant a deep dive."
-    },
-    {
-      "ts": 1793989557017,
-      "kind": "screen",
-      "text": "Escalated \"Who will win a seat on the Mountain View City Council in November 2026\" at 94%: flagged: The election occurred on Nov 3, 2026, so preliminary vote totals from Santa Clara County are already available."
-    },
-    {
-      "ts": 1793989557011,
-      "kind": "screen",
-      "text": "Passed on \"CI2026: Will the next ECOFIN decide to include novel tobacco products \" at 8%: quick estimate 45%, market 8%. EU tax harmonisation on novel tobacco is a standard policy debate with an uncertain outcome."
     }
   ],
   "todos": [
@@ -2344,6 +2344,33 @@
   ],
   "screens": [
     {
+      "ts": 1794082428535,
+      "question": "What combination of Netanyahu/Bennett/Lapid will be in the next Israeli govt? \u2192 Netanyahu + Bennet",
+      "url": "https://manifold.markets/UnspecifiedPerson/what-combination-of-netanyahubennet",
+      "passed": true,
+      "market_prob": 0.12218908898661686,
+      "quick_prob": 0.1,
+      "why": "quick estimate 10% backs the favourite at 12%. Netanyahu and Bennett have had a strained political relationship making this specific coalition unlikely."
+    },
+    {
+      "ts": 1794082428529,
+      "question": "Will I run 5 km every day in November 2026?",
+      "url": "https://manifold.markets/AdamKruger/will-i-run-5-km-every-day-in-novemb",
+      "passed": true,
+      "market_prob": 0.4421587722943475,
+      "quick_prob": 0.05,
+      "why": "quick estimate 5% backs the favourite at 44%. Running 5 km every single day for a month with zero exceptions is extremely fragile and already underway."
+    },
+    {
+      "ts": 1794082428521,
+      "question": "CI2026: Will the Swiss ban noisy fireworks?",
+      "url": "https://manifold.markets/FrankfurtSchool/ci2026-will-the-swiss-ban-noisy-fir",
+      "passed": false,
+      "market_prob": 0.6187633009368358,
+      "quick_prob": 0.15,
+      "why": "quick estimate 15%, market 62%. Constitutional referendums banning popular items like fireworks face high hurdles in Switzerland."
+    },
+    {
       "ts": 1794078697371,
       "question": "What combination of Netanyahu/Bennett/Lapid will be in the next Israeli govt? \u2192 Bennet + Lapid",
       "url": "https://manifold.markets/UnspecifiedPerson/what-combination-of-netanyahubennet",
@@ -2675,36 +2702,56 @@
       "market_prob": 0.6925284318282083,
       "quick_prob": 0.05,
       "why": "quick estimate 5%, market 69%. Lagarde's ECB term runs until late 2027, making a WEF move in November 2026 unlikely."
-    },
-    {
-      "ts": 1793989557017,
-      "question": "Who will win a seat on the Mountain View City Council in November 2026? \u2192 Robert Cox",
-      "url": "https://manifold.markets/DavidFWatson/who-will-win-a-seat-on-the-mountain",
-      "passed": false,
-      "market_prob": 0.7252593199544234,
-      "quick_prob": 0.35,
-      "why": "quick estimate 35%, market 73%. Local city council election with low liquidity and no recent polling data to warrant a deep dive."
-    },
-    {
-      "ts": 1793989557011,
-      "question": "Who will win a seat on the Mountain View City Council in November 2026? \u2192 IdaRose Sylvester",
-      "url": "https://manifold.markets/DavidFWatson/who-will-win-a-seat-on-the-mountain",
-      "passed": true,
-      "market_prob": 0.9436026677774564,
-      "quick_prob": 0.33,
-      "why": "flagged: The election occurred on Nov 3, 2026, so preliminary vote totals from Santa Clara County are already available."
-    },
-    {
-      "ts": 1793989557006,
-      "question": "CI2026: Will the next ECOFIN decide to include novel tobacco products in the revised Tobacco Taxation Directive?",
-      "url": "https://manifold.markets/FrankfurtSchool/ci2026-will-the-next-ecofin-decide",
-      "passed": false,
-      "market_prob": 0.07999999999999993,
-      "quick_prob": 0.45,
-      "why": "quick estimate 45%, market 8%. EU tax harmonisation on novel tobacco is a standard policy debate with an uncertain outcome."
     }
   ],
   "decisions": [
+    {
+      "ts": 1794082589430,
+      "kind": "no_trade",
+      "question": "What combination of Netanyahu/Bennett/Lapid will be in the next Israeli govt? \u2192 Netanyahu + Bennet",
+      "url": "https://manifold.markets/UnspecifiedPerson/what-combination-of-netanyahubennet",
+      "market_prob": 0.12218908898661686,
+      "model_prob": 0.06,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Bennett ran on a joint list with Lapid (B'Yachad) aiming to replace Netanyahu. For 'Netanyahu + Bennett' to resolve YES, Bennett would have to join Netanyahu while excluding Lapid. Given the joint list and post-election coalition dynamics, this specific combination is unlikely (~6%).",
+      "uncertainty": "Whether coalition math forces Bennett to break from Lapid and join Netanyahu without Lapid.",
+      "resolution_risk": "Ambiguity over exact definition of being in government if parties provide external support without formal minister posts.",
+      "evidence_for": [
+        "Israeli political negotiations frequently yield unexpected coalition realignments.",
+        "Bennett has previously served in coalitions led by Netanyahu."
+      ],
+      "evidence_against": [
+        "Bennett and Lapid ran on a shared electoral list (B'Yachad), making a coalition containing Bennett but excluding Lapid unlikely.",
+        "Post-election reports indicate Bennett exploring coalitions with religious parties specifically to replace Netanyahu.",
+        "This outcome requires breaking the Bennett-Lapid joint list while simultaneously joining Netanyahu, one of 8 mutually exclusive options."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
+    {
+      "ts": 1794082589375,
+      "kind": "no_trade",
+      "question": "Will I run 5 km every day in November 2026?",
+      "url": "https://manifold.markets/AdamKruger/will-i-run-5-km-every-day-in-novemb",
+      "market_prob": 0.4421587722943475,
+      "model_prob": 0.38,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With 7 days complete out of 30, the initial failure window has passed. However, jumping from a baseline of 1-2 runs/week to daily 5km runs for 30 consecutive days carries significant overuse injury risk in weeks 2\u20134, alongside standard risks of illness or travel disruptions over the remaining 23 days.",
+      "uncertainty": "Whether the runner suffers an overuse injury or illness over the remaining 23 consecutive days.",
+      "resolution_risk": "Strava logging delays, but creator explicitly resolves NO immediately upon a missed day.",
+      "evidence_for": [
+        "Creator successfully completed the first 7 days (1 week down) as of November 7.",
+        "High motivation with 734 YES shares held and home treadmill availability to mitigate weather."
+      ],
+      "evidence_against": [
+        "Prior baseline was only 1-2 runs per week, making a sudden jump to 30 consecutive days a high risk for overuse injury in weeks 2-4.",
+        "Zero margin for error over 23 remaining days; missing a single day for illness, injury, or travel causes instant NO resolution."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1794078817186,
       "kind": "no_trade",
@@ -3001,53 +3048,6 @@
       ],
       "evidence_against": [
         "Uncounted ballots from more progressive urban counties could lean against stiffer criminal penalties."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1793968934245,
-      "kind": "no_trade",
-      "question": "Will NASA livestream of the August 12, 2026 total solar eclipse exceed 2 million concurrent viewers?",
-      "url": "https://manifold.markets/AndrazCadez/will-nasa-livestream-of-the-august",
-      "market_prob": 0.41555189112318014,
-      "model_prob": 0.05,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "The 2024 US eclipse only reached 1.46M concurrent viewers across all NASA platforms. With total YouTube views around 3.5M for 2026, reaching 2M simultaneous viewers is virtually impossible.",
-      "uncertainty": "Whether NASA publishes an official press release before November 12 claiming aggregate digital concurrent viewership above 2 million.",
-      "resolution_risk": "NASA publishing aggregate metrics that aggregate total cumulative viewers or impressions rather than strict simultaneous concurrent viewers.",
-      "evidence_for": [
-        "2017 total solar eclipse achieved between 2 million and 3 million peak concurrent views across NASA platforms."
-      ],
-      "evidence_against": [
-        "2024 total solar eclipse in North America reached only 1.458 million peak concurrent viewers across all NASA platforms.",
-        "NASA primary YouTube livestream total view count reached ~3.5 million, making a 2 million concurrent peak mathematically implausible.",
-        "NASA post-event recap published on August 21 gave no audience metrics exceeding 2 million."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1793965264835,
-      "kind": "no_trade",
-      "question": "Will Astra 6.1+ be released this week (by November 8, 2026)?",
-      "url": "https://manifold.markets/jimbot/will-astra-61-be-released-this-week",
-      "market_prob": 0.09779548291787406,
-      "model_prob": 0.05,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With 5 of the 7 days in the Nov 2\u20138 window already past without a GPT-6.1+ Astra release, only Friday evening and the weekend remain. OpenAI rarely drops major model updates on weekends, making an in-window release unlikely even if an Astra update arrives later in November.",
-      "uncertainty": "Whether OpenAI drops an unexpected release on Friday evening or over the weekend.",
-      "resolution_risk": "A release under a non-Astra name (like Sol or Betelgeuse) could confuse traders, but criteria strictly exclude non-Astra models.",
-      "evidence_for": [
-        "OpenAI teased an Astra-class release in late October 2026.",
-        "A public preview or API rollout could theoretically occur before Sunday, Nov 8 at 23:59 PST."
-      ],
-      "evidence_against": [
-        "Today is Friday, Nov 6; five of the seven days in the target window have passed without a release.",
-        "OpenAI rarely releases major model versions or updates over a weekend.",
-        "GPT-6.1 Astra previously faced safety and alignment delays in late September, reducing the likelihood of a rushed release."
       ],
       "reason": "size floored to zero by balance reserve"
     }
