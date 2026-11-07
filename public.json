@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1794085965475,
+  "generated_ms": 1794086292935,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 34,
+      "today": 37,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 10,
+      "today": 11,
       "cap": 54
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 591.74,
   "summary": "Balance M$10. Net worth M$592. 15 open positions, 7 of them closed and awaiting resolution. Spendable cash remains heavily restricted by balance reserve limits, which repeatedly floor trade sizes to zero when capital is tied up awaiting resolutions. Over 287 resolved forecasts, our Brier score is 0.155 compared to the market's 0.098 (lower is better, 0.25 is a coin flip). We forecast worse than the market price overall, and our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 146 of 287; on big disagreements, 133 of 251. Resolved bets: 170. Backing the favourite: won 62 of 77. Longshots against the favourite: won 21 of 93.\n\nActive open positions include bets on Codeforces IGM, Trump 2026 outcomes, Navier-Stokes solutions before IPO, US midterm turnout exceeding 2022, state political races, tennis matches, and the Mountain View City Council and US Congress races. Recent resolutions include Colorado Initiative 85 and Washington Initiative IL26-638 resolving YES, alongside several senate and election outcome markers.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favourites), the Narrative Trap (allowing compelling stories to mask poor mathematical expected value), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero. \n\nCategories and question styles with poor calibration include speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favourites is significantly more reliable, evidenced by winning 62 of 77 bets when backing favourites. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favourite backing while managing reserve limits and capital allocation.",
   "journal": [
+    {
+      "ts": 1794086292363,
+      "kind": "analysis",
+      "text": "Analysed \"Does RL training with verifiers help on tasks without a verifier?\": market 46%, my 18% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1794086161463,
+      "kind": "screen",
+      "text": "Escalated \"Does RL training with verifiers help on tasks without a verifier?\" at 46%: quick estimate 35% backs the favourite at 46%. This is a subjective resolution based on the user's personal beliefs about AI scaling trends, making it impossible to evaluate objectively."
+    },
     {
       "ts": 1794083159418,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1794000699694,
       "kind": "screen",
       "text": "Passed on \"Israel's next Prime minister \u2192 Gadi Eisenkot\" at 80%: quick estimate 15%, market 80%. Eisenkot is a longshot for Prime Minister given current Israeli political polling and dynamics."
-    },
-    {
-      "ts": 1794000699688,
-      "kind": "screen",
-      "text": "Passed on \"CI2026: Will the World Economic Forum elect Christine Lagarde in Novem\" at 69%: quick estimate 5%, market 69%. Lagarde's ECB term runs until late 2027, making a WEF move in November 2026 unlikely."
-    },
-    {
-      "ts": 1793990048665,
-      "kind": "score",
-      "text": "Scored 283 resolved forecasts: my Brier 0.155, the market's 0.097. Closer than the market on 144/283."
     }
   ],
   "todos": [
@@ -879,7 +879,7 @@
       "profit": -0.9,
       "prob": 0.52,
       "closed": false,
-      "days_to_close": 23.1
+      "days_to_close": 23.0
     },
     {
       "question": "How many seats will Democrats win in Virginia in the national 2026 House elections? \u2192 8-9",
@@ -2344,6 +2344,15 @@
   ],
   "screens": [
     {
+      "ts": 1794086161456,
+      "question": "Does RL training with verifiers help on tasks without a verifier?",
+      "url": "https://manifold.markets/GavinLeech/does-rl-training-on-verifiers-help",
+      "passed": true,
+      "market_prob": 0.46315234575598824,
+      "quick_prob": 0.35,
+      "why": "quick estimate 35% backs the favourite at 46%. This is a subjective resolution based on the user's personal beliefs about AI scaling trends, making it impossible to evaluate objectively."
+    },
+    {
       "ts": 1794082428535,
       "question": "What combination of Netanyahu/Bennett/Lapid will be in the next Israeli govt? \u2192 Netanyahu + Bennet",
       "url": "https://manifold.markets/UnspecifiedPerson/what-combination-of-netanyahubennet",
@@ -2693,18 +2702,33 @@
       "market_prob": 0.7965681068977939,
       "quick_prob": 0.15,
       "why": "quick estimate 15%, market 80%. Eisenkot is a longshot for Prime Minister given current Israeli political polling and dynamics."
-    },
-    {
-      "ts": 1794000699682,
-      "question": "CI2026: Will the World Economic Forum elect Christine Lagarde in November?",
-      "url": "https://manifold.markets/FrankfurtSchool/ci2026-will-the-world-economic-foru",
-      "passed": false,
-      "market_prob": 0.6925284318282083,
-      "quick_prob": 0.05,
-      "why": "quick estimate 5%, market 69%. Lagarde's ECB term runs until late 2027, making a WEF move in November 2026 unlikely."
     }
   ],
   "decisions": [
+    {
+      "ts": 1794086292356,
+      "kind": "no_trade",
+      "question": "Does RL training with verifiers help on tasks without a verifier?",
+      "url": "https://manifold.markets/GavinLeech/does-rl-training-on-verifiers-help",
+      "market_prob": 0.46315234575598824,
+      "model_prob": 0.18,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Given the creator's baseline credence of 30% and the persistent lack of clear empirical off-target transfer for RLVR outside verifiable domains like math and code in late 2026, it is unlikely (>66% threshold) the creator shifts view by year-end.",
+      "uncertainty": "Whether empirical results before end of 2026 provide clear evidence of off-target transfer convincing enough to push creator credence above 66%.",
+      "resolution_risk": "Resolves based on the creator's subjective belief state, which could diverge from consensus or technical benchmarks.",
+      "evidence_for": [
+        "RL training with verifiers (RLVR) can encourage general cognitive capabilities like verification and backtracking that may aid open-ended tasks.",
+        "Rapid advances in reasoning models throughout 2026 continue to expand the scope of RL training techniques."
+      ],
+      "evidence_against": [
+        "The resolution relies on the creator's subjective credence crossing >66% by end of 2026, up from a 30% baseline in late 2025.",
+        "Recent 2026 research remains concentrated on verifiable domains (math, code, visual PRMs) rather than proving off-target transfer to tasks lacking verifiers.",
+        "RLVR models continue to show jagged capabilities and high sensitivity to task framing when verifiers are absent."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1794082589430,
       "kind": "no_trade",
@@ -3028,28 +3052,6 @@
         "US political alignment in 2026 makes signing host-backed climate targets improbable"
       ],
       "reason": "edge 0.17 log-odds below minimum 0.2"
-    },
-    {
-      "ts": 1793968934281,
-      "kind": "no_trade",
-      "question": "Will Colorado Initiative 85 pass in 2026?",
-      "url": "https://manifold.markets/mndrix/will-colorado-initiative-85-pass-in",
-      "market_prob": 0.797901005829287,
-      "model_prob": 0.93,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Prop 132 leads 52.7% to 47.3% with ~85% counted. Opponents would need roughly 65% of all remaining uncounted ballots to flip the result.",
-      "uncertainty": "Final vote breakdown from the remaining ~15% of uncounted Colorado ballots.",
-      "resolution_risk": "None significant; criteria specifies final certified results based on vote count only.",
-      "evidence_for": [
-        "Proposition 132 (Initiative 85) leads 52.7% to 47.3% with approximately 85% of ballots counted.",
-        "Late ballot counting trends in Colorado have drifted slightly toward YES or remained stable."
-      ],
-      "evidence_against": [
-        "Uncounted ballots from more progressive urban counties could lean against stiffer criminal penalties."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }

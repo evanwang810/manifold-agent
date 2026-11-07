@@ -2,16 +2,6 @@
   "summary": "Balance M$10. Net worth M$592. 15 open positions, 7 of them closed and awaiting resolution. Spendable cash remains heavily restricted by balance reserve limits, which repeatedly floor trade sizes to zero when capital is tied up awaiting resolutions. Over 287 resolved forecasts, our Brier score is 0.155 compared to the market's 0.098 (lower is better, 0.25 is a coin flip). We forecast worse than the market price overall, and our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 146 of 287; on big disagreements, 133 of 251. Resolved bets: 170. Backing the favourite: won 62 of 77. Longshots against the favourite: won 21 of 93.\n\nActive open positions include bets on Codeforces IGM, Trump 2026 outcomes, Navier-Stokes solutions before IPO, US midterm turnout exceeding 2022, state political races, tennis matches, and the Mountain View City Council and US Congress races. Recent resolutions include Colorado Initiative 85 and Washington Initiative IL26-638 resolving YES, alongside several senate and election outcome markers.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favourites), the Narrative Trap (allowing compelling stories to mask poor mathematical expected value), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero. \n\nCategories and question styles with poor calibration include speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favourites is significantly more reliable, evidenced by winning 62 of 77 bets when backing favourites. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favourite backing while managing reserve limits and capital allocation.",
   "journal": [
     {
-      "ts": 1793783650817,
-      "kind": "score",
-      "text": "Scored 257 resolved forecasts: my Brier 0.151, the market's 0.090. Closer than the market on 128/257."
-    },
-    {
-      "ts": 1793783836226,
-      "kind": "move",
-      "text": "\"Who will win the CA-4 house election? \u2192 Mike Thompson (D)\" moved +5% to 10%. Holding YES, P/L M$-1."
-    },
-    {
       "ts": 1793784024665,
       "kind": "closed",
       "text": "No longer holding \"Republican wins 2026 US Senate election in Louisiana?\". Last seen YES at 81%, P/L M$-5. Resolved or sold."
@@ -1500,6 +1490,16 @@
       "ts": 1794083159418,
       "kind": "score",
       "text": "Scored 287 resolved forecasts: my Brier 0.155, the market's 0.098. Closer than the market on 146/287."
+    },
+    {
+      "ts": 1794086161463,
+      "kind": "screen",
+      "text": "Escalated \"Does RL training with verifiers help on tasks without a verifier?\" at 46%: quick estimate 35% backs the favourite at 46%. This is a subjective resolution based on the user's personal beliefs about AI scaling trends, making it impossible to evaluate objectively."
+    },
+    {
+      "ts": 1794086292363,
+      "kind": "analysis",
+      "text": "Analysed \"Does RL training with verifiers help on tasks without a verifier?\": market 46%, my 18% (medium). No trade, size floored to zero by balance reserve."
     }
   ],
   "lessons": [
@@ -4192,6 +4192,12 @@
       "question": "Will I run 5 km every day in November 2026?",
       "url": "https://manifold.markets/AdamKruger/will-i-run-5-km-every-day-in-novemb",
       "ts": 1794082589086
+    },
+    "y5htEN022z": {
+      "note": "RLVR off-target transfer market; creator threshold >66% from 30% prior, benchmark evidence in late 2026 still limited to verifiable domains.",
+      "question": "Does RL training with verifiers help on tasks without a verifier?",
+      "url": "https://manifold.markets/GavinLeech/does-rl-training-on-verifiers-help",
+      "ts": 1794086291879
     }
   },
   "seen": {
@@ -7006,6 +7012,10 @@
     "lqhOSgP6O2::A2ln6NtNE2": {
       "ts": 1794075009776,
       "prob": 0.45248868778280543
+    },
+    "y5htEN022z": {
+      "ts": 1794086160540,
+      "prob": 0.46315234575598824
     }
   },
   "budget": {
@@ -7014,11 +7024,11 @@
   },
   "llm_usage": {
     "day": "2026-11-07",
-    "fast": 34,
-    "deep": 10,
+    "fast": 37,
+    "deep": 11,
     "chat": 5
   },
-  "last_scan_ms": 1794082426696,
+  "last_scan_ms": 1794086160448,
   "last_compress_ms": 1794081295577,
   "grounding_out_day": "2026-11-07",
   "todos": [
@@ -9561,7 +9571,7 @@
     "77dt9mwnmvq"
   ],
   "tracked_orders": {},
-  "events_since_compress": 6,
+  "events_since_compress": 8,
   "last_book_review_ms": 1792755014185,
   "watch_probs": {
     "Ln5EgOhAty": 0.4726684393929348,
