@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1794074819147,
+  "generated_ms": 1794075127853,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 23,
+      "today": 26,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 7,
+      "today": 8,
       "cap": 54
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 591.74,
   "summary": "Balance M$10. Net worth M$592. 15 open positions, 7 of them closed and awaiting resolution. Over 287 resolved forecasts, our Brier score is 0.155 compared to the market's 0.098. We forecast worse than the market price overall, and our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 146 of 287; on big disagreements, 133 of 251. Across resolved bets, backing favourites won 62 of 77, while longshots against the favourite won 21 of 93. Colorado Initiative 85 and Washington Initiative IL26-638 recently resolved YES.\n\nSpendable cash remains heavily restricted by balance reserve limits, which repeatedly floor trade sizes to zero when capital is tied up awaiting resolutions. Active open positions include bets on Codeforces IGM, Trump 2026 outcomes, Navier-Stokes solutions before IPO, US midterm turnout exceeding 2022, state political races, tennis matches, and the Mountain View City Council and US Congress races.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favourites), the Narrative Trap (allowing compelling stories to mask poor mathematical expected value), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero.\n\nCategories and question styles with poor calibration include speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favourites is significantly more reliable, evidenced by winning 62 of 77 bets when backing favourites. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favourite backing while managing reserve limits and capital allocation.",
   "journal": [
+    {
+      "ts": 1794075127170,
+      "kind": "analysis",
+      "text": "Analysed \"F1 2026 Prop Bets Brazil (Interlagos) Grand Prix [LIVE, Add answers] \u2192\": market 45%, my 22% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1794075011086,
+      "kind": "screen",
+      "text": "Escalated \"F1 2026 Prop Bets Brazil (Interlagos) Grand Prix [LIVE, Add answers] \u2192\" at 45%: quick estimate 5% backs the favourite at 45%. There are currently no competitive Brazilian drivers in Formula 1 for the 2026 season."
+    },
     {
       "ts": 1794072019593,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1793974914912,
       "kind": "desk",
       "text": "Desk: Nothing has changed since my last turn; spendable cash remains at M$0 while 7 positions await resolution."
-    },
-    {
-      "ts": 1793974710055,
-      "kind": "move",
-      "text": "\"Will 2026 turnout exceed 2022? (US midterms, percentage)\" moved +4% to 89%. Holding YES, P/L M$+3."
-    },
-    {
-      "ts": 1793968938644,
-      "kind": "score",
-      "text": "Scored 282 resolved forecasts: my Brier 0.156, the market's 0.097. Closer than the market on 143/282."
     }
   ],
   "todos": [
@@ -867,7 +867,7 @@
       "profit": 0.1,
       "prob": 0.276,
       "closed": false,
-      "days_to_close": 24.5
+      "days_to_close": 24.4
     },
     {
       "question": "Sum (Int( trillion dollar)) market cap companies \u2192 >27.5 at end of 2026/11",
@@ -927,7 +927,7 @@
       "profit": 0.0,
       "prob": 0.25,
       "closed": false,
-      "days_to_close": 8.5
+      "days_to_close": 8.4
     }
   ],
   "trades": [
@@ -2344,6 +2344,15 @@
   ],
   "screens": [
     {
+      "ts": 1794075011079,
+      "question": "F1 2026 Prop Bets Brazil (Interlagos) Grand Prix [LIVE, Add answers] \u2192 [BRA] Brazilian driver reaches Q3",
+      "url": "https://manifold.markets/BlitzEver/f1-2026-prop-bets-australia-melbour",
+      "passed": true,
+      "market_prob": 0.45248868778280543,
+      "quick_prob": 0.05,
+      "why": "quick estimate 5% backs the favourite at 45%. There are currently no competitive Brazilian drivers in Formula 1 for the 2026 season."
+    },
+    {
       "ts": 1794071260599,
       "question": "The 2026 US Congressional election will be free and fair",
       "url": "https://manifold.markets/MichaeldelaMaza/the-2026-us-congressional-election",
@@ -2693,18 +2702,32 @@
       "market_prob": 0.0362355720994438,
       "quick_prob": 0.08,
       "why": "quick estimate 8%, market 4%. Early returns show No ahead and Washington late ballots trend progressive, making a Yes comeback statistically very unlikely."
-    },
-    {
-      "ts": 1793968548251,
-      "question": "Will NASA livestream of the August 12, 2026 total solar eclipse exceed 2 million concurrent viewers?",
-      "url": "https://manifold.markets/AndrazCadez/will-nasa-livestream-of-the-august",
-      "passed": true,
-      "market_prob": 0.41555189112318014,
-      "quick_prob": 0.05,
-      "why": "quick estimate 5% backs the favourite at 42%. Total views of 3.5 million make a peak concurrent count over 2 million virtually impossible."
     }
   ],
   "decisions": [
+    {
+      "ts": 1794075127163,
+      "kind": "no_trade",
+      "question": "F1 2026 Prop Bets Brazil (Interlagos) Grand Prix [LIVE, Add answers] \u2192 [BRA] Brazilian driver reaches Q3",
+      "url": "https://manifold.markets/BlitzEver/f1-2026-prop-bets-australia-melbour",
+      "market_prob": 0.45248868778280543,
+      "model_prob": 0.22,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Given the 2026 pecking order where top factory teams occupy 8 of the 10 Q3 slots, a driver from the lower midfield reaching Q3 sits at roughly 20-25% baseline probability even with home track advantage.",
+      "uncertainty": "The exact weather and track conditions during qualifying, or whether qualifying has concluded with results yet to be ingested.",
+      "resolution_risk": "Ambiguity over whether 'Q3' could be argued to include 'SQ3' (Sprint Qualifying) if not otherwise specified on a sprint weekend.",
+      "evidence_for": [
+        "Brazilian drivers like Gabriel Bortoleto have strong local motivation and track familiarity at Interlagos.",
+        "Variable weather conditions at S\u00e3o Paulo frequently shake up qualifying grids, giving midfield runners opportunities to sneak into Q3."
+      ],
+      "evidence_against": [
+        "Audi/Kick Sauber has consistently sat outside the top five constructors in 2026, making top-10 qualification a difficult uphill battle against Ferrari, McLaren, Red Bull, and Mercedes.",
+        "There are only 10 spots in Q3, typically dominated by the top four teams, leaving very low baseline probability for lower midfield drivers."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1794068049744,
       "kind": "no_trade",
@@ -3027,29 +3050,6 @@
         "NZ First and Greens have historically had late polling surges."
       ],
       "reason": "would be a longshot bet against the 31% favourite"
-    },
-    {
-      "ts": 1793921672406,
-      "kind": "no_trade",
-      "question": "Will Angela Rayner be Prime Minister of the UK before December?",
-      "url": "https://manifold.markets/DaisyWelham/will-angela-rayner-be-prime-ministe",
-      "market_prob": 0.0351585128507406,
-      "model_prob": 0.03,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With Keir Starmer resigning, the Labour leadership contest is underway with Andy Burnham reported as frontrunner. Angela Rayner resigned her cabinet post in September 2025 and is not a main contender for PM before Dec 1.",
-      "uncertainty": "Whether the Labour leadership contest produces a surprise outcome or temporary caretaker PM before December 1.",
-      "resolution_risk": "None significant beyond basic verification of who officially holds the PM post by Dec 1.",
-      "evidence_for": [
-        "Keir Starmer has resigned as Prime Minister, creating an active leadership transition before December 1."
-      ],
-      "evidence_against": [
-        "Andy Burnham is reported as the leading contender to replace Starmer in the ongoing leadership contest.",
-        "Angela Rayner resigned as Deputy Prime Minister in September 2025 following a tax inquiry and is not reported to be running.",
-        "Only 25 days remain before the December 1 deadline."
-      ],
-      "reason": "edge 0.16 log-odds below minimum 0.2"
     }
   ]
 }
