@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1794067459977,
+  "generated_ms": 1794068051789,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.7-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 19,
+      "today": 22,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 6,
+      "today": 7,
       "cap": 54
     }
   },
@@ -64,6 +64,21 @@
   "net_worth": 591.74,
   "summary": "Balance M$10. Net worth M$592. 15 open positions, 7 of them closed and awaiting resolution. Over 287 resolved forecasts, our Brier score is 0.155 compared to the market's 0.098. We forecast worse than the market price overall, and our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 146 of 287; on big disagreements, 133 of 251. Across resolved bets, backing favourites won 62 of 77, while longshots against the favourite won 21 of 93. Colorado Initiative 85 and Washington Initiative IL26-638 recently resolved YES.\n\nSpendable cash remains heavily restricted by balance reserve limits, which repeatedly floor trade sizes to zero when capital is tied up awaiting resolutions. Active open positions include bets on Codeforces IGM, Trump 2026 outcomes, Navier-Stokes solutions before IPO, US midterm turnout exceeding 2022, state political races, tennis matches, and the Mountain View City Council and US Congress races.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favourites), the Narrative Trap (allowing compelling stories to mask poor mathematical expected value), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero.\n\nCategories and question styles with poor calibration include speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favourites is significantly more reliable, evidenced by winning 62 of 77 bets when backing favourites. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favourite backing while managing reserve limits and capital allocation.",
   "journal": [
+    {
+      "ts": 1794068049753,
+      "kind": "analysis",
+      "text": "Analysed \"Will Alibaba release any Qwen 4 model before November 09, 2026?\": market 11%, my 6% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1794067651644,
+      "kind": "screen",
+      "text": "Escalated \"Will Alibaba release any Qwen 4 model before November 09, 2026?\" at 11%: quick estimate 5% backs the favourite at 11%. The deadline is in just over a day with no current announcement or indicator of a Qwen 4 release."
+    },
+    {
+      "ts": 1794067651636,
+      "kind": "screen",
+      "text": "Passed on \"US Average Gas Price Is $4.000 or less on any day in November 2026?\" at 97%: quick estimate 15%, market 97%. Gas prices in November historically trend lower but current national averages make sub-$4.00 unlikely based on seasonal trends."
+    },
     {
       "ts": 1794064555432,
       "kind": "score",
@@ -448,21 +463,6 @@
       "ts": 1793968548259,
       "kind": "screen",
       "text": "Escalated \"Will NASA livestream of the August 12, 2026 total solar eclipse exceed\" at 42%: quick estimate 5% backs the favourite at 42%. Total views of 3.5 million make a peak concurrent count over 2 million virtually impossible."
-    },
-    {
-      "ts": 1793968548251,
-      "kind": "screen",
-      "text": "Escalated \"Will Colorado Initiative 85 pass in 2026?\" at 80%: quick estimate 95% backs the favourite at 80%. With 85% counted and a 5.4% lead for Yes, the outcome is clear from current election returns."
-    },
-    {
-      "ts": 1793965271446,
-      "kind": "score",
-      "text": "Scored 282 resolved forecasts: my Brier 0.156, the market's 0.097. Closer than the market on 143/282."
-    },
-    {
-      "ts": 1793965264843,
-      "kind": "analysis",
-      "text": "Analysed \"Will Astra 6.1+ be released this week (by November 8, 2026)?\": market 10%, my 5% (medium). No trade, size floored to zero by balance reserve."
     }
   ],
   "todos": [
@@ -2344,6 +2344,24 @@
   ],
   "screens": [
     {
+      "ts": 1794067651636,
+      "question": "Will Alibaba release any Qwen 4 model before November 09, 2026?",
+      "url": "https://manifold.markets/winged_one/will-alibaba-release-any-qwen-4-mod-IctS8I6hgE",
+      "passed": true,
+      "market_prob": 0.11,
+      "quick_prob": 0.05,
+      "why": "quick estimate 5% backs the favourite at 11%. The deadline is in just over a day with no current announcement or indicator of a Qwen 4 release."
+    },
+    {
+      "ts": 1794067651628,
+      "question": "US Average Gas Price Is $4.000 or less on any day in November 2026?",
+      "url": "https://manifold.markets/Jack1/us-average-gas-price-is-4000-or-les",
+      "passed": false,
+      "market_prob": 0.9654539058064929,
+      "quick_prob": 0.15,
+      "why": "quick estimate 15%, market 97%. Gas prices in November historically trend lower but current national averages make sub-$4.00 unlikely based on seasonal trends."
+    },
+    {
       "ts": 1794056552718,
       "question": "Te Pati Maori win 3 or more electorates in next NZ election?",
       "url": "https://manifold.markets/Jack1/te-pati-maori-win-3-or-more-elector",
@@ -2684,27 +2702,34 @@
       "market_prob": 0.797901005829287,
       "quick_prob": 0.95,
       "why": "quick estimate 95% backs the favourite at 80%. With 85% counted and a 5.4% lead for Yes, the outcome is clear from current election returns."
-    },
-    {
-      "ts": 1793964804855,
-      "question": "Will hakeem jeffries be house speaker after the 2026 mid terms? \u2192 No, a different democrat will be",
-      "url": "https://manifold.markets/Jack1/will-hakeem-jeffries-be-house-speak",
-      "passed": false,
-      "market_prob": 0.06398992720736098,
-      "quick_prob": 0.45,
-      "why": "quick estimate 45%, market 6%. Part of the same multi-choice speaker market as index 1, speculative and dependent on seat counts."
-    },
-    {
-      "ts": 1793964804847,
-      "question": "Will Astra 6.1+ be released this week (by November 8, 2026)?",
-      "url": "https://manifold.markets/jimbot/will-astra-61-be-released-this-week",
-      "passed": true,
-      "market_prob": 0.09779548291787406,
-      "quick_prob": 0.05,
-      "why": "quick estimate 5% backs the favourite at 10%. There is no public anticipation of an OpenAI Astra 6.1+ release this week."
     }
   ],
   "decisions": [
+    {
+      "ts": 1794068049744,
+      "kind": "no_trade",
+      "question": "Will Alibaba release any Qwen 4 model before November 09, 2026?",
+      "url": "https://manifold.markets/winged_one/will-alibaba-release-any-qwen-4-mod-IctS8I6hgE",
+      "market_prob": 0.11,
+      "model_prob": 0.06,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With under 36 hours remaining before the Nov 9 00:00 CET deadline spanning a weekend, there are still no active weights, APIs, or chat deployments as of Nov 5. Previews like Qwen4-Exp are excluded by the criteria, making a usable public release within this tight window unlikely.",
+      "uncertainty": "Whether Alibaba has a surprise weekend deployment or scheduled developer event on November 8 launching usable Qwen 4 models.",
+      "resolution_risk": "An unexpected quiet open-weights commit to Hugging Face or unannounced API beta rollout before Sunday midnight CET.",
+      "evidence_for": [
+        "Alibaba has already named and teased four Qwen 4 variants in development previews, showing models are in late development.",
+        "Open-weight releases can sometimes be pushed to Hugging Face or ModelScope without extended advance notice."
+      ],
+      "evidence_against": [
+        "Less than 36 hours remain before the 00:00 CET November 9, 2026 deadline.",
+        "November 7-8 is a weekend, an unlikely window for a major foundation model release without an established keynote.",
+        "As of November 5, there are zero active model cards, usable weights, API endpoints, or Qwen Chat implementations for official Qwen 4 models.",
+        "Architecture previews like Qwen4-Exp and simple announcements or benchmarks are explicitly excluded by the resolution rules."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1794056888622,
       "kind": "no_trade",
@@ -3025,30 +3050,6 @@
         "Only 25 days remain before the December 1 deadline."
       ],
       "reason": "edge 0.16 log-odds below minimum 0.2"
-    },
-    {
-      "ts": 1793917930573,
-      "kind": "no_trade",
-      "question": "GPT Astra 6.1+ Released By End of November 2026?",
-      "url": "https://manifold.markets/Jack1/gpt-astra-61-released-by-end-of-nov",
-      "market_prob": 0.929708979454387,
-      "model_prob": 0.28,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "While internal logs hint at gpt-6.2-astra testing, OpenAI pulled GPT-6.1 Astra in late September over alignment regressions. Completing safety audits and executing a public release within 25 days remains improbable.",
-      "uncertainty": "Whether active internal testing of gpt-6.2-astra can clear safety benchmarks and reach public availability before November 30.",
-      "resolution_risk": "Strict naming and public accessibility requirements: tier-labeled successors, closed betas, or non-Astra models do not qualify.",
-      "evidence_for": [
-        "Codex usage logs from early November 2026 show references to 'gpt-6.2-astra'.",
-        "OpenAI has recently teased updates following the September release pause."
-      ],
-      "evidence_against": [
-        "GPT-6.1 Astra was explicitly pulled in late September 2026 due to safety and honesty regressions.",
-        "Resolving safety regressions and completing red-teaming typically requires extended development cycles beyond 25 days.",
-        "OpenAI has announced no official launch event or public release date for November."
-      ],
-      "reason": "would be a longshot bet against the 93% favourite"
     }
   ]
 }
