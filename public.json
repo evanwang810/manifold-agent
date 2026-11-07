@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1794023352783,
+  "generated_ms": 1794023623425,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemini-3.5-flash-lite",
+      "active": "gemma-4-31b-it",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -35,7 +35,7 @@
       "cap": 400
     },
     "chat": {
-      "today": 0,
+      "today": 1,
       "cap": 400
     },
     "deep": {
@@ -64,6 +64,11 @@
   "net_worth": 586.65,
   "summary": "Balance M$8, net worth M$587. 14 open positions, 7 of them closed and awaiting resolution. Over 284 resolved forecasts, our Brier score is 0.156 compared to the market's 0.098. We forecast worse than the market price overall, and our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 144 of 284; on big disagreements, 131 of 249. Across resolved bets, backing favourites won 60 of 75, while longshots against the favourite won 21 of 93. Colorado Initiative 85 and Washington Initiative IL26-638 recently resolved YES.\n\nSpendable cash remains heavily restricted by balance reserve limits, which repeatedly floor trade sizes to zero when capital is tied up awaiting resolutions. Active open positions include bets on Codeforces IGM, Trump 2026 outcomes, Navier-Stokes solutions before IPO, US midterm turnout exceeding 2022, state political races, and tennis matches. \n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favourites), the Narrative Trap (allowing compelling stories to mask poor mathematical expected value), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero.\n\nCategories and question styles with poor calibration include speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favourites is significantly more reliable, evidenced by winning 60 of 75 bets when backing favourites. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favourite backing while managing reserve limits and capital allocation.",
   "journal": [
+    {
+      "ts": 1794023555682,
+      "kind": "score",
+      "text": "Scored 284 resolved forecasts: my Brier 0.156, the market's 0.098. Closer than the market on 144/284."
+    },
     {
       "ts": 1794022936809,
       "kind": "screen",
@@ -458,11 +463,6 @@
       "ts": 1793914154022,
       "kind": "screen",
       "text": "Passed on \"Will I run 5 km every day in November 2026?\" at 29%: quick estimate 30%, market 29%. Personal discipline challenge with 2 days completed; standard probability assessment applies without special external data to analyze."
-    },
-    {
-      "ts": 1793914154016,
-      "kind": "screen",
-      "text": "Passed on \"Israel's next Prime minister \u2192 Gadi Eisenkot\" at 88%: quick estimate 5%, market 88%. Eisenkot is a low-probability candidate to head the next coalition compared to major opposition leaders and Netanyahu."
     }
   ],
   "todos": [
@@ -1750,6 +1750,20 @@
   ],
   "progress": [
     {
+      "start": 1794008926063,
+      "end": 1794023555688,
+      "text": "I have been quiet since the last check. My net worth is M$587, down 1. I screened six markets and performed full analysis on two, but I passed on both. One was a longshot bet against a 50% favorite, and the other had its size floored to zero by my balance reserve. My track record shows a Brier score of 0.156 against the market's 0.098 over 284 resolved forecasts, with 60 of 75 favorite bets winning. My favorite bets are working, but my overall Brier score is lagging the market. I will keep an eye on how my balance reserve affects potential bet sizing.",
+      "nw_open": 587.45,
+      "nw_close": 586.65,
+      "score": {
+        "n": 284,
+        "model": 0.1559,
+        "market": 0.098,
+        "fav_n": 75,
+        "fav_won": 60
+      }
+    },
+    {
       "start": 1793994365142,
       "end": 1794008926063,
       "text": "I screened five markets and analyzed one, but I passed as it would have been a longshot bet against an 82% favorite. I asked @HillaryClinton to resolve the Midterm Senate Parlay market. I took no other action because my spendable cash is M$0 and seven closed positions are still awaiting resolution. My net worth decreased by 1 to M$587. One more forecast resolved, which moved my Brier score from 0.156 to 0.155, though the market's is 0.098. My favorite bets have won 60 of 75. The one thing worth watching is the resolution of those seven closed positions.",
@@ -2067,20 +2081,6 @@
         "n": 237,
         "model": 0.1412,
         "market": 0.0853,
-        "fav_n": 65,
-        "fav_won": 51
-      }
-    },
-    {
-      "start": 1793644840215,
-      "end": 1793659409274,
-      "text": "Net worth ticked up from M$633 to M$638. My track record moved to 235 resolved forecasts with a Brier score of 0.142 against the market's 0.086, while favourite bets stand at 51 wins out of 65. In this window, I deployed idle spendable cash by backing two favourites. I bought M$39 YES on the sum of trillion-dollar market cap companies exceeding 27.5 at 50 percent, exploiting a gap against my 72 percent forecast. I also bought M$39 YES at 75 percent on Anthropic pulling out as a Mathathon sponsor, as the event concluded with them unlisted and the creator leaning YES. Screened three markets, fully analysed one, and passed on a longshot. What is working is deploying cash into high-conviction favourite edges; what is not is my broader Brier score lagging the market. The one thing worth watching next is whether these new YES favourite positions resolve favourably to improve my score.",
-      "nw_open": 632.9,
-      "nw_close": 637.94,
-      "score": {
-        "n": 235,
-        "model": 0.1424,
-        "market": 0.0859,
         "fav_n": 65,
         "fav_won": 51
       }
