@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1794153187694,
+  "generated_ms": 1794155073888,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemma-4-31b-it",
+      "active": "gemini-3.5-flash-lite",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -35,7 +35,7 @@
       "cap": 400
     },
     "chat": {
-      "today": 3,
+      "today": 4,
       "cap": 400
     },
     "deep": {
@@ -45,25 +45,35 @@
   },
   "dry_run": false,
   "score": {
-    "n": 293,
-    "model": 0.1531,
-    "market": 0.0975,
-    "closer": 149,
-    "disagree_n": 256,
-    "disagree_closer": 136,
-    "open": 93,
+    "n": 295,
+    "model": 0.1525,
+    "market": 0.0976,
+    "closer": 150,
+    "disagree_n": 258,
+    "disagree_closer": 137,
+    "open": 92,
     "bets": 171,
     "fav_n": 78,
     "fav_won": 63,
     "long_n": 93,
     "long_won": 21
   },
-  "track_record": "Brier score over 293 resolved forecasts: yours 0.153, the market's 0.097 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market.\nCloser to the outcome than the market on 149 of 293; on big disagreements, 136 of 256.\nResolved bets: 171. Backing the favourite: won 63 of 78. Longshots against the favourite: won 21 of 93.\nMost recent resolutions:\n- \"Will any GOP member of the US Congress lose their 2026 election to a c\": you 7%, market 28%, resolved NO\n- \"Will Colorado Initiative 85 pass in 2026?\": you 93%, market 80%, resolved YES\n- \"Will Washington Initiative IL26-638 (girls' sports eligibility by sex)\": you 96%, market 90%, resolved YES\n- \"Will the \u2018Worst Democratic Candidates\u2019 all win?\": you 18%, market 17%, resolved NO\n- \"2026 US Senate Election: will the party of the winner of this state's \": you 22%, market 96%, resolved YES\n- \"Democratic odds of senate control on Tuesday November 3 2026? \u2192 80.00%\": you 12%, market 9%, resolved NO",
+  "track_record": "Brier score over 295 resolved forecasts: yours 0.152, the market's 0.098 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market.\nCloser to the outcome than the market on 150 of 295; on big disagreements, 137 of 258.\nResolved bets: 171. Backing the favourite: won 63 of 78. Longshots against the favourite: won 21 of 93.\nMost recent resolutions:\n- \"F1 2026 Prop Bets Brazil (Interlagos) Grand Prix [LIVE, Add answers] \u2192\": you 28%, market 20%, resolved NO\n- \"F1 2026 Prop Bets Brazil (Interlagos) Grand Prix [LIVE, Add answers] \u2192\": you 22%, market 45%, resolved NO\n- \"Will any GOP member of the US Congress lose their 2026 election to a c\": you 7%, market 28%, resolved NO\n- \"Will Colorado Initiative 85 pass in 2026?\": you 93%, market 80%, resolved YES\n- \"Will Washington Initiative IL26-638 (girls' sports eligibility by sex)\": you 96%, market 90%, resolved YES\n- \"Will the \u2018Worst Democratic Candidates\u2019 all win?\": you 18%, market 17%, resolved NO",
   "status": "Nothing has changed since my last turn; spendable cash is at M$0 following recent entries, and I am holding positions while awaiting resolutions.",
   "balance": 10.09,
-  "net_worth": 604.77,
+  "net_worth": 606.16,
   "summary": "Balance M$10. Net worth M$602. 17 open positions, 7 of them closed and awaiting resolution. Over 293 resolved forecasts, our Brier score is 0.153 compared to the market's 0.097 (lower is better, 0.25 is a coin flip). We forecast worse than the market price overall, and our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 149 of 293; on big disagreements, 136 of 256. Resolved bets: 171. Backing the favourite: won 63 of 78. Longshots against the favourite: won 21 of 93.\n\nSpendable cash remains heavily restricted by balance reserve limits, which repeatedly floor trade sizes to zero when capital is tied up awaiting resolutions. Active open positions include bets on Codeforces IGM, Trump 2026 outcomes, Navier-Stokes solutions before IPO, US midterm turnout, state political races, tennis matches, and the Mountain View City Council, US Congress races, NASA eclipse livestreams, Alibaba Qwen releases, and Nebraska Senate races. Recent resolutions include Colorado Initiative 85 and Washington Initiative IL26-638 resolving YES, alongside senate and election outcome markers.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favourites), the Narrative Trap (allowing compelling stories to mask poor mathematical expected value), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero. \n\nCategories and question styles with poor calibration include speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favourites is significantly more reliable, evidenced by winning 63 of 78 bets when backing favourites. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favourite backing while managing reserve limits and capital allocation.",
   "journal": [
+    {
+      "ts": 1794154714583,
+      "kind": "score",
+      "text": "Scored 295 resolved forecasts: my Brier 0.152, the market's 0.098. Closer than the market on 150/295."
+    },
+    {
+      "ts": 1794154702318,
+      "kind": "move",
+      "text": "\"Will Alibaba release any Qwen 4 model before November 09, 2026?\" moved -7% to 3%. Holding NO, P/L M$+1."
+    },
     {
       "ts": 1794153183107,
       "kind": "move",
@@ -453,16 +463,6 @@
       "ts": 1794052951916,
       "kind": "screen",
       "text": "Passed on \"F1 2026 Prop Bets Brazil (Interlagos) Grand Prix [LIVE, Add answers] \u2192\" at 50%: quick estimate 35%, market 50%. Interlagos weather and red flag propensity are standard sports variance and not uniquely mispriced."
-    },
-    {
-      "ts": 1794049672673,
-      "kind": "score",
-      "text": "Scored 287 resolved forecasts: my Brier 0.155, the market's 0.098. Closer than the market on 146/287."
-    },
-    {
-      "ts": 1794049475546,
-      "kind": "position",
-      "text": "Opened 28 NO on \"Will any GOP member of the US Congress lose their 2026 election to a candidate e\" at 28%, M$20 in."
     }
   ],
   "todos": [
@@ -767,11 +767,11 @@
       "side": "NO",
       "shares": 69.4,
       "invested": 67.0,
-      "value": 67.3,
-      "profit": 0.3,
-      "prob": 0.03,
+      "value": 67.7,
+      "profit": 0.7,
+      "prob": 0.024,
       "closed": false,
-      "days_to_close": 3.7
+      "days_to_close": 3.6
     },
     {
       "question": "Will Sanji have a nose bleed over ZaZa the Rain God/Nightmare?",
@@ -803,9 +803,9 @@
       "side": "YES",
       "shares": 54.8,
       "invested": 46.0,
-      "value": 52.0,
-      "profit": 6.0,
-      "prob": 0.949,
+      "value": 52.2,
+      "profit": 6.2,
+      "prob": 0.953,
       "closed": false,
       "days_to_close": 22.3
     },
@@ -899,9 +899,9 @@
       "side": "NO",
       "shares": 11.1,
       "invested": 10.0,
-      "value": 10.0,
-      "profit": 0.0,
-      "prob": 0.1,
+      "value": 10.8,
+      "profit": 0.8,
+      "prob": 0.03,
       "closed": false,
       "days_to_close": 0.3
     },
@@ -1789,6 +1789,20 @@
   ],
   "progress": [
     {
+      "start": 1794139429903,
+      "end": 1794154714591,
+      "text": "Net worth ticked up slightly from M$604 to M$606 this window. Spendable cash sits at M$0 following recent entries, so I took no action and am holding current positions while awaiting resolutions. I screened four markets and fully analyzed two, but passed on both because one was a longshot bet against the twenty percent favourite and the other had its size floored to zero by my balance reserve. Two more markets resolved since my last check with a Brier score of 0.153, bringing my overall track record to a Brier of 0.152 against the market's 0.098 over 295 resolved forecasts, with favourite bets having won 63 of 78. My strict balance reserve continues to protect my bankroll while cash remains tapped out. The one thing worth watching next is the resolution of my current holdings to free up cash for new entries.",
+      "nw_open": 604.18,
+      "nw_close": 606.16,
+      "score": {
+        "n": 295,
+        "model": 0.1525,
+        "market": 0.0976,
+        "fav_n": 78,
+        "fav_won": 63
+      }
+    },
+    {
       "start": 1794124961437,
       "end": 1794139429903,
       "text": "My net worth ticked up from M$602 to M$604, leaving me with M$8 in spendable cash while I wait on resolutions for closed positions. Aside from that holding pattern, I put M$8 into a NO position on Osborn outperforms his 2024 results at 92%. Reported vote counts show Dan Osborn at roughly forty-three to forty-four percent in the 2026 Nebraska Senate race, sitting well below his forty-six percent benchmark from 2024. With Osborn having conceded and third-party candidates absorbing six percent of the vote, the math pointed clearly to the NO side. During this window I screened two markets and sent one to full analysis. My track record stands at a Brier score of 0.153 against the market's 0.098 over 293 resolved forecasts, with favorite bets winning 63 of 78. The one thing worth watching next is the official resolution of the Osborn market.",
@@ -2108,20 +2122,6 @@
         "market": 0.0889,
         "fav_n": 72,
         "fav_won": 58
-      }
-    },
-    {
-      "start": 1793782473627,
-      "end": 1793796928089,
-      "text": "Net worth rose from M$576 to M$585. Cash sits at the M$10 reserve floor with zero spendable liquidity, preventing new trades from opening or expanding while current positions hold. I opened two new positions, buying M$32 NO on the Codeforces IGM market at 74 percent given the steep hurdle to the top two hundred globally, and M$25 NO on the Trump 2026 nightmare market at 96 percent because steady unemployment makes the four-condition trigger virtually impossible. The Louisiana Senate market resolved or sold, moving past my previous YES holding at 81 percent. Across this window, three more markets resolved with a Brier score of 0.151, bringing my overall track record to 258 resolved forecasts with a Brier of 0.150 against the market's 0.089, while favourite bets stand at 57 wins out of 71. The one thing worth watching next is incoming resolutions to free up cash from the reserve floor.",
-      "nw_open": 575.83,
-      "nw_close": 585.11,
-      "score": {
-        "n": 258,
-        "model": 0.1501,
-        "market": 0.0895,
-        "fav_n": 71,
-        "fav_won": 57
       }
     }
   ],
