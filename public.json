@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1794212748063,
+  "generated_ms": 1794213398972,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 12,
+      "today": 15,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 5,
+      "today": 6,
       "cap": 54
     }
   },
@@ -64,6 +64,21 @@
   "net_worth": 607.83,
   "summary": "Balance M$9. Net worth M$607. 19 open positions, 6 of them closed and awaiting resolution. Over 296 resolved forecasts, our Brier score is 0.152 compared to the market's 0.097 (lower is better, 0.25 is a coin flip). We forecast worse than the market price overall, and our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 151 of 296; on big disagreements, 138 of 259. Resolved bets: 172. Backing the favourite: won 64 of 79. Longshots against the favourite: won 21 of 93.\n\nSpendable cash remains heavily restricted by balance reserve limits, which repeatedly floor trade sizes to zero when capital is tied up awaiting resolutions. Active open positions include bets on Codeforces IGM, Trump 2026 outcomes, Navier-Stokes solutions before IPO, US midterm turnout, state political races, tennis matches, Mountain View City Council, US Congress races, NASA eclipse livestreams, Alibaba Qwen releases, Nebraska Senate races, OpenAI recursive models, and League of Legends Worlds outcomes. Recent resolutions include F1 Grand Prix props, Alibaba Qwen 4 releases, GOP Congress election losses, Colorado Initiative 85, and Washington Initiative IL26-638.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favourites), the Narrative Trap (allowing compelling stories to mask poor mathematical expected value), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero. \n\nCategories and question styles with poor calibration include speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favourites is significantly more reliable, evidenced by winning 64 of 79 bets when backing favourites. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favourite backing while managing reserve limits and capital allocation.",
   "journal": [
+    {
+      "ts": 1794213398491,
+      "kind": "analysis",
+      "text": "Analysed \"Will the next White House Press Secretary after Katie Zachariah be a b\": market 43%, my 42% (medium). No trade, edge 0.06 log-odds below minimum 0.2."
+    },
+    {
+      "ts": 1794212940730,
+      "kind": "screen",
+      "text": "Passed on \"NFL Week 9 - Prop Bets \u2192 Will a championship belt change teams?*\" at 96%: quick estimate 50%, market 96%. This is a complex multi-condition prop bet market relying on subjective interpretations of NFL games already played."
+    },
+    {
+      "ts": 1794212940721,
+      "kind": "screen",
+      "text": "Escalated \"Will the next White House Press Secretary after Katie Zachariah be a b\" at 43%: quick estimate 35% backs the favourite at 43%. This is purely dependent on future political staffing choices and lacks specific insider information to analyze."
+    },
     {
       "ts": 1794210438129,
       "kind": "score",
@@ -448,21 +463,6 @@
       "ts": 1794121200947,
       "kind": "position",
       "text": "Opened 11 NO on \"Will NASA livestream of the August 12, 2026 total solar eclipse exceed 2 million\" at 10%, M$10 in."
-    },
-    {
-      "ts": 1794121200947,
-      "kind": "position",
-      "text": "Opened 11 NO on \"Will Alibaba release any Qwen 4 model before November 09, 2026?\" at 10%, M$10 in."
-    },
-    {
-      "ts": 1794121016142,
-      "kind": "trade",
-      "text": "Desk bought M$10 NO on \"Will Alibaba release any Qwen 4 model before November 09, 2026?\" at 11% YES, forecast 6%. Because: Backing NO on Alibaba Qwen 4 model release before Nov 9 (market trading at 89% NO vs my 94% forecast). Near-term resolution on a strong favourite."
-    },
-    {
-      "ts": 1794121015877,
-      "kind": "trade",
-      "text": "Desk bought M$10 NO on \"Will NASA livestream of the August 12, 2026 total solar eclipse exceed\" at 11% YES, forecast 4%. Because: Backing NO on NASA eclipse livestream exceeding 2M viewers (market trading at 85% NO vs my 96% forecast). High confidence edge on a market favourite."
     }
   ],
   "todos": [
@@ -783,7 +783,7 @@
       "profit": 3.5,
       "prob": 0.318,
       "closed": false,
-      "days_to_close": 6.3
+      "days_to_close": 6.2
     },
     {
       "question": "Will Magnus Carlsen be dethroned from his #1 spot in FIDE rating before GTA 6 is released?",
@@ -951,7 +951,7 @@
       "profit": -0.7,
       "prob": 0.36,
       "closed": false,
-      "days_to_close": 6.9
+      "days_to_close": 6.8
     },
     {
       "question": "Who will win the 2026 League of Legends World Championship? \u2192 Bilibili Gaming",
@@ -959,9 +959,9 @@
       "side": "NO",
       "shares": 1.3,
       "invested": 1.0,
-      "value": 0.9,
+      "value": 0.8,
       "profit": 0.0,
-      "prob": 0.37,
+      "prob": 0.372,
       "closed": false,
       "days_to_close": 6.6
     },
@@ -2375,6 +2375,24 @@
   ],
   "screens": [
     {
+      "ts": 1794212940721,
+      "question": "NFL Week 9 - Prop Bets \u2192 Will a championship belt change teams?*",
+      "url": "https://manifold.markets/StopPunting/nfl-week-9-prop-bets-cA5cE08Cl8",
+      "passed": false,
+      "market_prob": 0.9615384615384616,
+      "quick_prob": 0.5,
+      "why": "quick estimate 50%, market 96%. This is a complex multi-condition prop bet market relying on subjective interpretations of NFL games already played."
+    },
+    {
+      "ts": 1794212940712,
+      "question": "Will the next White House Press Secretary after Katie Zachariah be a blonde woman?",
+      "url": "https://manifold.markets/Tetraspace/will-the-next-white-house-press-sec",
+      "passed": true,
+      "market_prob": 0.43485274537180807,
+      "quick_prob": 0.35,
+      "why": "quick estimate 35% backs the favourite at 43%. This is purely dependent on future political staffing choices and lacks specific insider information to analyze."
+    },
+    {
       "ts": 1794209096760,
       "question": "Will Julie Anne Genter win Wellington Bays in 2026?",
       "url": "https://manifold.markets/Jack1/will-julie-anne-genter-win-wellingt",
@@ -2715,27 +2733,33 @@
       "market_prob": 0.26438286729296084,
       "quick_prob": 0.45,
       "why": "quick estimate 45%, market 26%. This is entirely dependent on future personnel appointments with no concrete public tracking yet."
-    },
-    {
-      "ts": 1794075011079,
-      "question": "F1 2026 Prop Bets Brazil (Interlagos) Grand Prix [LIVE, Add answers] \u2192 [BRA] Brazilian driver reaches Q3",
-      "url": "https://manifold.markets/BlitzEver/f1-2026-prop-bets-australia-melbour",
-      "passed": true,
-      "market_prob": 0.45248868778280543,
-      "quick_prob": 0.05,
-      "why": "quick estimate 5% backs the favourite at 45%. There are currently no competitive Brazilian drivers in Formula 1 for the 2026 season."
-    },
-    {
-      "ts": 1794071260599,
-      "question": "The 2026 US Congressional election will be free and fair",
-      "url": "https://manifold.markets/MichaeldelaMaza/the-2026-us-congressional-election",
-      "passed": false,
-      "market_prob": 0.95,
-      "quick_prob": 0.5,
-      "why": "quick estimate 50%, market 95%. This market is explicitly subjective and depends entirely on the creator's personal resolution whims."
     }
   ],
   "decisions": [
+    {
+      "ts": 1794213398483,
+      "kind": "no_trade",
+      "question": "Will the next White House Press Secretary after Katie Zachariah be a blonde woman?",
+      "url": "https://manifold.markets/Tetraspace/will-the-next-white-house-press-sec",
+      "market_prob": 0.43485274537180807,
+      "model_prob": 0.42,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "I estimate a 42% chance the next WH Press Secretary after Katie Zachariah is a blonde woman. While Trump heavily favors female spokespeople (~80% base rate), non-blonde female candidates (e.g., Margo Martin) and male comms directors (e.g., Steven Cheung) combine for a majority of the realistic candidate pool.",
+      "uncertainty": "Whether Trump selects a male official like Steven Cheung or a non-blonde female aide like Margo Martin versus a blonde candidate.",
+      "resolution_risk": "Ambiguity regarding subjective hair shade boundaries (highlights vs. primarily blonde) or interim/acting appointments taking office unexpectedly.",
+      "evidence_for": [
+        "Trump has historically favored female press secretaries (5 of 6 across his terms), and blonde television-savvy spokespeople feature prominently in his media apparatus (e.g., Kayleigh McEnany, Karoline Leavitt).",
+        "Blonde aides and media personalities like Natalie Harp are among potential candidates."
+      ],
+      "evidence_against": [
+        "Prominent non-blonde female aides and comms staff (e.g., Margo Martin, Anna Kelly, Alina Habba) are strong contenders.",
+        "Male comms officials like Steven Cheung or Taylor Budowich could assume acting or permanent press secretary duties.",
+        "Across Trump's 6 press secretaries to date, only 2 (McEnany, Leavitt) have been blonde women (~33% base rate)."
+      ],
+      "reason": "edge 0.06 log-odds below minimum 0.2"
+    },
     {
       "ts": 1794209490484,
       "kind": "no_trade",
@@ -3038,30 +3062,6 @@
         "The resolution relies on the creator's subjective credence crossing >66% by end of 2026, up from a 30% baseline in late 2025.",
         "Recent 2026 research remains concentrated on verifiable domains (math, code, visual PRMs) rather than proving off-target transfer to tasks lacking verifiers.",
         "RLVR models continue to show jagged capabilities and high sensitivity to task framing when verifiers are absent."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1794082589430,
-      "kind": "no_trade",
-      "question": "What combination of Netanyahu/Bennett/Lapid will be in the next Israeli govt? \u2192 Netanyahu + Bennet",
-      "url": "https://manifold.markets/UnspecifiedPerson/what-combination-of-netanyahubennet",
-      "market_prob": 0.12218908898661686,
-      "model_prob": 0.06,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Bennett ran on a joint list with Lapid (B'Yachad) aiming to replace Netanyahu. For 'Netanyahu + Bennett' to resolve YES, Bennett would have to join Netanyahu while excluding Lapid. Given the joint list and post-election coalition dynamics, this specific combination is unlikely (~6%).",
-      "uncertainty": "Whether coalition math forces Bennett to break from Lapid and join Netanyahu without Lapid.",
-      "resolution_risk": "Ambiguity over exact definition of being in government if parties provide external support without formal minister posts.",
-      "evidence_for": [
-        "Israeli political negotiations frequently yield unexpected coalition realignments.",
-        "Bennett has previously served in coalitions led by Netanyahu."
-      ],
-      "evidence_against": [
-        "Bennett and Lapid ran on a shared electoral list (B'Yachad), making a coalition containing Bennett but excluding Lapid unlikely.",
-        "Post-election reports indicate Bennett exploring coalitions with religious parties specifically to replace Netanyahu.",
-        "This outcome requires breaking the Bennett-Lapid joint list while simultaneously joining Netanyahu, one of 8 mutually exclusive options."
       ],
       "reason": "size floored to zero by balance reserve"
     }
