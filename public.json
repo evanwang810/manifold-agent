@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1794354830883,
+  "generated_ms": 1794355185599,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 28,
+      "today": 31,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 8,
+      "today": 9,
       "cap": 54
     }
   },
@@ -51,7 +51,7 @@
     "closer": 154,
     "disagree_n": 264,
     "disagree_closer": 141,
-    "open": 98,
+    "open": 99,
     "bets": 173,
     "fav_n": 80,
     "fav_won": 64,
@@ -64,6 +64,21 @@
   "net_worth": 591.79,
   "summary": "Balance M$5. Net worth M$592. 18 open positions, 5 of them closed and awaiting resolution. Over 301 resolved forecasts, our Brier score is 0.155 compared to the market's 0.100. We forecast worse than the market price overall, and our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 154 of 301; on big disagreements, 141 of 264. Resolved bets: 173. Backing the favourite: won 64 of 80. Longshots against the favourite: won 21 of 93.\n\nSpendable cash remains heavily restricted by balance reserve limits and the M$10 cash reserve, which repeatedly floor trade sizes to zero or leave us with minimal active capital. Active open positions include bets on Codeforces IGM, Navier-Stokes solutions before IPO, US midterm turnout, state political races, tennis matches, Mountain View City Council, US Congress races, NASA eclipse livestreams, Nebraska Senate races, OpenAI recursive models, League of Legends Worlds outcomes, and OpenAI going public not via an IPO. Recent resolutions include F1 Brazil Grand Prix props, Alibaba Qwen 4 releases, GOP Congress election losses, and Colorado Initiative 85.\n\nMistakes worth avoiding include the Longshot Leak, taking low-probability bets against strong favourites, the Narrative Trap, allowing compelling stories to mask poor mathematical expected value, failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero.\n\nCalibration is poor for speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favourites is significantly more reliable, evidenced by winning 64 of 80 bets. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favourite backing while managing reserve limits and capital allocation.",
   "journal": [
+    {
+      "ts": 1794355185137,
+      "kind": "score",
+      "text": "Scored 301 resolved forecasts: my Brier 0.155, the market's 0.100. Closer than the market on 154/301."
+    },
+    {
+      "ts": 1794355175363,
+      "kind": "analysis",
+      "text": "Analysed \"Fable 5.5 released before the end of November?\": market 8%, my 12% (medium). No trade, would be a longshot bet against the 8% favourite."
+    },
+    {
+      "ts": 1794355046388,
+      "kind": "screen",
+      "text": "Escalated \"Fable 5.5 released before the end of November?\" at 8%: quick estimate 5% backs the favourite at 8%. There is no public indication or rumor of an upcoming Anthropic model named Fable 5.5 by the end of November 2026."
+    },
     {
       "ts": 1794347688971,
       "kind": "score",
@@ -448,21 +463,6 @@
       "ts": 1794221576859,
       "kind": "score",
       "text": "Scored 297 resolved forecasts: my Brier 0.154, the market's 0.098. Closer than the market on 151/297."
-    },
-    {
-      "ts": 1794220434036,
-      "kind": "screen",
-      "text": "Passed on \"CI2026: Will the next ECOFIN decide to include novel tobacco products \" at 9%: quick estimate 15%, market 9%. Tax harmonisation in the EU requires unanimity, making major novel tobacco inclusions unlikely to pass quickly without prior leaks."
-    },
-    {
-      "ts": 1794217789735,
-      "kind": "score",
-      "text": "Scored 296 resolved forecasts: my Brier 0.152, the market's 0.097. Closer than the market on 151/296."
-    },
-    {
-      "ts": 1794216644431,
-      "kind": "screen",
-      "text": "Passed on \"GPT Astra 6.1+ Released By End of November 2026?\" at 94%: quick estimate 30%, market 94%. The comment provides specific recent news about the safety regression and cancellation, making the current probability low."
     }
   ],
   "todos": [
@@ -2330,6 +2330,15 @@
   ],
   "screens": [
     {
+      "ts": 1794355046382,
+      "question": "Fable 5.5 released before the end of November?",
+      "url": "https://manifold.markets/256/fable-55-released-before-the-end-of",
+      "passed": true,
+      "market_prob": 0.08449516045068423,
+      "quick_prob": 0.05,
+      "why": "quick estimate 5% backs the favourite at 8%. There is no public indication or rumor of an upcoming Anthropic model named Fable 5.5 by the end of November 2026."
+    },
+    {
       "ts": 1794347488695,
       "question": "Will Anthropic IPO by Nov 20?",
       "url": "https://manifold.markets/EriccNsnA/will-anthropic-ipo-by-nov-20",
@@ -2679,18 +2688,32 @@
       "market_prob": 0.9615384615384616,
       "quick_prob": 0.5,
       "why": "quick estimate 50%, market 96%. This is a complex multi-condition prop bet market relying on subjective interpretations of NFL games already played."
-    },
-    {
-      "ts": 1794212940712,
-      "question": "Will the next White House Press Secretary after Katie Zachariah be a blonde woman?",
-      "url": "https://manifold.markets/Tetraspace/will-the-next-white-house-press-sec",
-      "passed": true,
-      "market_prob": 0.43485274537180807,
-      "quick_prob": 0.35,
-      "why": "quick estimate 35% backs the favourite at 43%. This is purely dependent on future political staffing choices and lacks specific insider information to analyze."
     }
   ],
   "decisions": [
+    {
+      "ts": 1794355175358,
+      "kind": "no_trade",
+      "question": "Fable 5.5 released before the end of November?",
+      "url": "https://manifold.markets/256/fable-55-released-before-the-end-of",
+      "market_prob": 0.08449516045068423,
+      "model_prob": 0.12,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Anthropic just released Claude Fable 5.2 on November 9, 2026. Stepping to 5.5 within 20 days is very unlikely given standard release cadences. Estimating a 12% chance of YES before November 30.",
+      "uncertainty": "Whether Anthropic has a surprise end-of-month release already staged immediately following the 5.2 update.",
+      "resolution_risk": "A preview or partner access build being retroactively acknowledged by Anthropic as the official Fable 5.5 release.",
+      "evidence_for": [
+        "Some speculative timelines suggested a potential late November 2026 launch."
+      ],
+      "evidence_against": [
+        "Anthropic officially shipped Claude Fable 5.2 on November 9, 2026, just one day ago.",
+        "Shipping Fable 5.5 within 20 days of Fable 5.2 is inconsistent with typical AI model release cadences.",
+        "External projections tilt towards late 2026 or January 2027 for a 5.5 release."
+      ],
+      "reason": "would be a longshot bet against the 8% favourite"
+    },
     {
       "ts": 1794340383359,
       "kind": "no_trade",
@@ -3022,27 +3045,6 @@
         "BLG suffered a loss to Top Esports earlier in the Swiss stage."
       ],
       "reason": "edge 0.041, kelly 0.16, decay 1.00, bound by balance reserve"
-    },
-    {
-      "ts": 1794179584107,
-      "kind": "bet",
-      "question": "Will OpenAI go public NOT via an IPO?",
-      "url": "https://manifold.markets/RS/will-openai-go-public-not-via-an-ip",
-      "market_prob": 0.07226587740964971,
-      "model_prob": 0.02,
-      "confidence": "high",
-      "amount": 1.0,
-      "outcome": "NO",
-      "thinking": "OpenAI management has signaled 2027 for any public listing, and a non-IPO route (SPAC/direct listing) for a megacap of this scale with under two months remaining in 2026 is virtually out of the question. Resolves NO if no listing occurs by Dec 31, 2026.",
-      "uncertainty": "Whether OpenAI executes an unexpected surprise backdoor listing or direct listing before year-end 2026.",
-      "resolution_risk": "A minor subsidiary listing or SPAC acquisition attempt that gets misconstrued as the primary operating entity listing.",
-      "evidence_for": [],
-      "evidence_against": [
-        "OpenAI leadership has publicly stated that a public listing will not occur in 2026, targeting 2027 instead.",
-        "A SPAC or direct listing route is extremely unlikely for a company at OpenAI's massive valuation requiring primary capital.",
-        "Less than two months remain before the December 31, 2026 deadline, with no public filing or announcement of any non-IPO deal."
-      ],
-      "reason": "edge 0.052, kelly 0.72, decay 0.35, bound by balance reserve"
     }
   ]
 }
