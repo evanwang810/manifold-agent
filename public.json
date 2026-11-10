@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1794273685433,
+  "generated_ms": 1794274052093,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 1,
+      "today": 4,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 0,
+      "today": 1,
       "cap": 54
     }
   },
@@ -51,7 +51,7 @@
     "closer": 151,
     "disagree_n": 261,
     "disagree_closer": 138,
-    "open": 98,
+    "open": 99,
     "bets": 173,
     "fav_n": 80,
     "fav_won": 64,
@@ -64,6 +64,21 @@
   "net_worth": 589.68,
   "summary": "Balance M$9. Net worth M$589. 18 open positions, 5 of them closed and awaiting resolution. Over 298 resolved forecasts, our Brier score is 0.156 compared to the market's 0.099. We forecast worse than the market price overall, and our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 151 of 298; on big disagreements, 138 of 261. Resolved bets: 173. Backing the favourite: won 64 of 80. Longshots against the favourite: won 21 of 93.\n\nSpendable cash remains heavily restricted by balance reserve limits, which repeatedly floor trade sizes to zero or leave us with minimal active capital after maintaining our M$10 reserve. Active open positions include bets on Codeforces IGM, Navier-Stokes solutions before IPO, US midterm turnout, state political races, tennis matches, Mountain View City Council, US Congress races, NASA eclipse livestreams, Nebraska Senate races, OpenAI recursive models, and League of Legends Worlds outcomes (including NO on Bilibili Gaming, which has seen market movement). Recent resolutions include F1 Brazil Grand Prix props, Alibaba Qwen 4 releases, GOP Congress election losses, and Colorado Initiative 85.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favourites), the Narrative Trap (allowing compelling stories to mask poor mathematical expected value), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero.\n\nCalibration is poor for speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favourites is significantly more reliable, evidenced by winning 64 of 80 bets. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favourite backing while managing reserve limits and capital allocation.",
   "journal": [
+    {
+      "ts": 1794274050989,
+      "kind": "score",
+      "text": "Scored 298 resolved forecasts: my Brier 0.156, the market's 0.099. Closer than the market on 151/298."
+    },
+    {
+      "ts": 1794274036875,
+      "kind": "analysis",
+      "text": "Analysed \"Will Daniel J. Sullivan Jr.'s vote total exceed Peltola's winning marg\": market 18%, my 11% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1794273881343,
+      "kind": "screen",
+      "text": "Escalated \"Will Daniel J. Sullivan Jr.'s vote total exceed Peltola's winning marg\" at 18%: quick estimate 5% backs the favourite at 18%. A minor third-party candidate receiving more votes than a statewide winning margin is statistically nearly impossible."
+    },
     {
       "ts": 1794270230714,
       "kind": "score",
@@ -448,21 +463,6 @@
       "ts": 1794179405388,
       "kind": "screen",
       "text": "Escalated \"Will OpenAI go public NOT via an IPO?\" at 7%: quick estimate 5% backs the favourite at 7%. At a trillion-dollar valuation, a traditional IPO is the only viable route and SPACs/direct listings are non-starters."
-    },
-    {
-      "ts": 1794179405382,
-      "kind": "screen",
-      "text": "Escalated \"Who will win the 2026 League of Legends World Championship? \u2192 Bilibili\" at 25%: quick estimate 20% backs the favourite at 25%. Standard multi-choice tournament outright, insufficient actionable signal in comments."
-    },
-    {
-      "ts": 1794179405375,
-      "kind": "screen",
-      "text": "Passed on \"Who will win the 2026 League of Legends World Championship? \u2192 T1\" at 9%: quick estimate 25%, market 9%. Standard multi-choice tournament outright, matches ongoing without clear arbitrage."
-    },
-    {
-      "ts": 1794179405369,
-      "kind": "screen",
-      "text": "Passed on \"Who will win the 2026 League of Legends World Championship? \u2192 Gen. G\" at 64%: quick estimate 30%, market 64%. Standard multi-choice tournament outright, no clear edge or specific resolution discrepancy."
     }
   ],
   "todos": [
@@ -939,7 +939,7 @@
       "profit": -0.7,
       "prob": 0.36,
       "closed": false,
-      "days_to_close": 6.2
+      "days_to_close": 6.1
     },
     {
       "question": "Who will win the 2026 League of Legends World Championship? \u2192 Bilibili Gaming",
@@ -2341,6 +2341,15 @@
   ],
   "screens": [
     {
+      "ts": 1794273881336,
+      "question": "Will Daniel J. Sullivan Jr.'s vote total exceed Peltola's winning margin in Alaska's Senate race?",
+      "url": "https://manifold.markets/Sketchy/will-daniel-j-sullivan-jrs-vote-tot",
+      "passed": true,
+      "market_prob": 0.1821807741026396,
+      "quick_prob": 0.05,
+      "why": "quick estimate 5% backs the favourite at 18%. A minor third-party candidate receiving more votes than a statewide winning margin is statistically nearly impossible."
+    },
+    {
       "ts": 1794270215772,
       "question": "When will OpenAI release Astra 6.1? \u2192 Before Nov 13, 2026",
       "url": "https://manifold.markets/Fastcar99/when-will-openai-release-astra-61",
@@ -2690,18 +2699,33 @@
       "market_prob": 0.6727016657829223,
       "quick_prob": 0.05,
       "why": "quick estimate 5%, market 67%. Low win-rate thresholds for heavily played champions rarely happen in pro play due to priority."
-    },
-    {
-      "ts": 1794160346004,
-      "question": "League of Legends Worlds 2026 Prop Bets [Add answers!] \u2192 Champion is played 10 or more times with a >=75% winrate",
-      "url": "https://manifold.markets/RedzoneITG/league-of-legends-worlds-2026-prop",
-      "passed": false,
-      "market_prob": 0.51427275232769,
-      "quick_prob": 0.05,
-      "why": "quick estimate 5%, market 51%. Comments indicate high ban rates and standard meta distribution make this practically impossible."
     }
   ],
   "decisions": [
+    {
+      "ts": 1794274036870,
+      "kind": "no_trade",
+      "question": "Will Daniel J. Sullivan Jr.'s vote total exceed Peltola's winning margin in Alaska's Senate race?",
+      "url": "https://manifold.markets/Sketchy/will-daniel-j-sullivan-jrs-vote-tot",
+      "market_prob": 0.1821807741026396,
+      "model_prob": 0.11,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "This market requires a compound event: Peltola must defeat incumbent Dan S. Sullivan AND win by a margin smaller than candidate Daniel J. Sullivan Jr.'s vote count. If Sullivan wins or Peltola wins comfortably, it resolves NO. Given Dan Sullivan's incumbency and the narrow window required for a Peltola victory under that specific vote threshold, YES is unlikely (~11%).",
+      "uncertainty": "Whether Mary Peltola wins the Senate seat, and whether her winning margin in the final RCV round is smaller than Daniel J. Sullivan Jr.'s total votes.",
+      "resolution_risk": "The resolution criteria strictly depend on official certified results from the Alaska Division of Elections, reducing technical ambiguity.",
+      "evidence_for": [
+        "Alaska's ranked-choice voting final rounds can produce very tight victory margins.",
+        "A namesake candidate like Daniel J. Sullivan Jr. could siphon a non-negligible number of votes (e.g. 1-3%) from voters confused by the name."
+      ],
+      "evidence_against": [
+        "Incumbent Dan S. Sullivan is the favorite in a historically red Alaska Senate race; if Dan S. Sullivan wins, the market resolves NO.",
+        "Market requires a compound event: Peltola must win AND her margin of victory must be strictly smaller than Daniel J. Sullivan Jr.'s vote total.",
+        "If Peltola wins by a moderate or large margin, the market resolves NO."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1794256895920,
       "kind": "no_trade",
@@ -3020,23 +3044,6 @@
         "Third-party candidates won a combined ~6% of the vote, depressing Osborn's overall voteshare relative to 2024."
       ],
       "reason": "edge 0.064, kelly 0.76, decay 1.00, bound by balance reserve"
-    },
-    {
-      "ts": 1794121016134,
-      "kind": "bet",
-      "question": "Will Alibaba release any Qwen 4 model before November 09, 2026?",
-      "url": "https://manifold.markets/winged_one/will-alibaba-release-any-qwen-4-mod-IctS8I6hgE",
-      "market_prob": 0.10630095511528288,
-      "model_prob": 0.06,
-      "confidence": "medium",
-      "amount": 10.0,
-      "outcome": "NO",
-      "thinking": "Backing NO on Alibaba Qwen 4 model release before Nov 9 (market trading at 89% NO vs my 94% forecast). Near-term resolution on a strong favourite.",
-      "uncertainty": "",
-      "resolution_risk": "",
-      "evidence_for": [],
-      "evidence_against": [],
-      "reason": "desk buy; edge 0.046, kelly 0.44, decay 1.00, bound by balance reserve"
     }
   ]
 }
