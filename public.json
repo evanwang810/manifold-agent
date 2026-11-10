@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1794339972272,
+  "generated_ms": 1794340398732,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 23,
+      "today": 26,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 7,
+      "today": 8,
       "cap": 54
     }
   },
@@ -51,7 +51,7 @@
     "closer": 154,
     "disagree_n": 264,
     "disagree_closer": 141,
-    "open": 97,
+    "open": 98,
     "bets": 173,
     "fav_n": 80,
     "fav_won": 64,
@@ -64,6 +64,21 @@
   "net_worth": 591.79,
   "summary": "Balance M$5. Net worth M$591. 18 open positions, 5 of them closed and awaiting resolution. Over 301 resolved forecasts, our Brier score is 0.155 compared to the market's 0.100. We forecast worse than the market price overall, and our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 154 of 301; on big disagreements, 141 of 264. Resolved bets: 173. Backing the favourite: won 64 of 80. Longshots against the favourite: won 21 of 93.\n\nSpendable cash remains heavily restricted by balance reserve limits and the M$10 cash reserve, which repeatedly floor trade sizes to zero or leave us with minimal active capital. Active open positions include bets on Codeforces IGM, Navier-Stokes solutions before IPO, US midterm turnout, state political races, tennis matches, Mountain View City Council, US Congress races, NASA eclipse livestreams, Nebraska Senate races, OpenAI recursive models, League of Legends Worlds outcomes, and OpenAI going public not via an IPO. Recent resolutions include F1 Brazil Grand Prix props, Alibaba Qwen 4 releases, GOP Congress election losses, and Colorado Initiative 85.\n\nMistakes worth avoiding include the Longshot Leak, taking low-probability bets against strong favourites, the Narrative Trap, allowing compelling stories to mask poor mathematical expected value, failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero.\n\nCalibration is poor for speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favourites is significantly more reliable, evidenced by winning 64 of 80 bets. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favourite backing while managing reserve limits and capital allocation.",
   "journal": [
+    {
+      "ts": 1794340397787,
+      "kind": "score",
+      "text": "Scored 301 resolved forecasts: my Brier 0.155, the market's 0.100. Closer than the market on 154/301."
+    },
+    {
+      "ts": 1794340383368,
+      "kind": "analysis",
+      "text": "Analysed \"Will my former school literally embezzle my money?\": market 37%, my 62% (medium). No trade, would be a longshot bet against the 37% favourite."
+    },
+    {
+      "ts": 1794340169320,
+      "kind": "screen",
+      "text": "Escalated \"Will my former school literally embezzle my money?\" at 37%: quick estimate 5% backs the favourite at 37%. This is a personal grievance and highly subjective speculation about a former school committing a crime."
+    },
     {
       "ts": 1794336571526,
       "kind": "score",
@@ -448,21 +463,6 @@
       "ts": 1794214160230,
       "kind": "score",
       "text": "Scored 296 resolved forecasts: my Brier 0.152, the market's 0.097. Closer than the market on 151/296."
-    },
-    {
-      "ts": 1794213398491,
-      "kind": "analysis",
-      "text": "Analysed \"Will the next White House Press Secretary after Katie Zachariah be a b\": market 43%, my 42% (medium). No trade, edge 0.06 log-odds below minimum 0.2."
-    },
-    {
-      "ts": 1794212940730,
-      "kind": "screen",
-      "text": "Passed on \"NFL Week 9 - Prop Bets \u2192 Will a championship belt change teams?*\" at 96%: quick estimate 50%, market 96%. This is a complex multi-condition prop bet market relying on subjective interpretations of NFL games already played."
-    },
-    {
-      "ts": 1794212940721,
-      "kind": "screen",
-      "text": "Escalated \"Will the next White House Press Secretary after Katie Zachariah be a b\" at 43%: quick estimate 35% backs the favourite at 43%. This is purely dependent on future political staffing choices and lacks specific insider information to analyze."
     }
   ],
   "todos": [
@@ -2330,6 +2330,15 @@
   ],
   "screens": [
     {
+      "ts": 1794340169310,
+      "question": "Will my former school literally embezzle my money?",
+      "url": "https://manifold.markets/realTomBayes/will-my-former-school-literally-emb",
+      "passed": true,
+      "market_prob": 0.37230949461712104,
+      "quick_prob": 0.05,
+      "why": "quick estimate 5% backs the favourite at 37%. This is a personal grievance and highly subjective speculation about a former school committing a crime."
+    },
+    {
       "ts": 1794336558893,
       "question": "Will anyone get me to give a wrong answer to a puzzle in the comments? [Convince the Machine #26]",
       "url": "https://manifold.markets/Terminator2/will-anyone-get-me-to-give-a-wrong",
@@ -2679,18 +2688,33 @@
       "market_prob": 0.7659619736562153,
       "quick_prob": 0.35,
       "why": "quick estimate 35%, market 77%. Passing yards leader wearing a prime number (like 2, 3, 11) is a fun prop but too random for a high-value escalation."
-    },
-    {
-      "ts": 1794190701984,
-      "question": "NFL Week 9 - Prop Bets \u2192 For each letter of the alphabet, at least one touchdown is scored by a player that has that letter in their first or last name",
-      "url": "https://manifold.markets/StopPunting/nfl-week-9-prop-bets-cA5cE08Cl8",
-      "passed": false,
-      "market_prob": 0.9411764705882353,
-      "quick_prob": 0.15,
-      "why": "quick estimate 15%, market 94%. Covering 26 letters of the alphabet with touchdown scorers requires an immense amount of distinct player names across a single week of NFL games."
     }
   ],
   "decisions": [
+    {
+      "ts": 1794340383359,
+      "kind": "no_trade",
+      "question": "Will my former school literally embezzle my money?",
+      "url": "https://manifold.markets/realTomBayes/will-my-former-school-literally-emb",
+      "market_prob": 0.37230949461712104,
+      "model_prob": 0.62,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "The 7-day contact window starting Nov 21 coincides with Thanksgiving week break for US schools. Given administrative closures and the fact that the school didn't inform the student of the nomination, contact within 7 days is unlikely.",
+      "uncertainty": "Whether school staff or the journalism adviser reach out directly within 7 calendar days despite the Thanksgiving holiday break.",
+      "resolution_risk": "The market title emphasizes embezzlement, but resolution strictly hinges on whether the school attempts to contact the student within 7 days.",
+      "evidence_for": [
+        "Winners announced Nov 21, which falls immediately before Thanksgiving week when US schools are closed.",
+        "The school did not notify the student about the initial nomination despite having contact info.",
+        "The student is a former student, making administrative outreach less routine."
+      ],
+      "evidence_against": [
+        "Schools often celebrate national awards quickly for promotional or PR purposes.",
+        "The journalism teacher or adviser who submitted the nomination may reach out directly."
+      ],
+      "reason": "would be a longshot bet against the 37% favourite"
+    },
     {
       "ts": 1794314979211,
       "kind": "no_trade",
@@ -3019,23 +3043,6 @@
         "Less than two months remain before the December 31, 2026 deadline, with no public filing or announcement of any non-IPO deal."
       ],
       "reason": "edge 0.052, kelly 0.72, decay 0.35, bound by balance reserve"
-    },
-    {
-      "ts": 1794179188191,
-      "kind": "bet",
-      "question": "Will OpenAI announce a massively recursive model, a new mechinterp system, and non-token based pricing, before December?",
-      "url": "https://manifold.markets/Bayesian/will-openai-announce-a-massively-re",
-      "market_prob": 0.04312676879704675,
-      "model_prob": 0.02,
-      "confidence": "high",
-      "amount": 10.0,
-      "outcome": "NO",
-      "thinking": "Deploying available spendable cash into NO on OpenAI recursive model/mechinterp announcement, backing a 96% market favourite where our estimate is 98% NO.",
-      "uncertainty": "",
-      "resolution_risk": "",
-      "evidence_for": [],
-      "evidence_against": [],
-      "reason": "desk buy; edge 0.023, kelly 0.54, decay 0.45, bound by balance reserve"
     }
   ]
 }
