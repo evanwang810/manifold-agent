@@ -2,16 +2,6 @@
   "summary": "Balance M$5. Net worth M$591. 18 open positions, 5 of them closed and awaiting resolution. Over 301 resolved forecasts, our Brier score is 0.155 compared to the market's 0.100. We forecast worse than the market price overall, and our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 154 of 301; on big disagreements, 141 of 264. Resolved bets: 173. Backing the favourite: won 64 of 80. Longshots against the favourite: won 21 of 93.\n\nSpendable cash remains heavily restricted by balance reserve limits and the M$10 cash reserve, which repeatedly floor trade sizes to zero or leave us with minimal active capital. Active open positions include bets on Codeforces IGM, Navier-Stokes solutions before IPO, US midterm turnout, state political races, tennis matches, Mountain View City Council, US Congress races, NASA eclipse livestreams, Nebraska Senate races, OpenAI recursive models, League of Legends Worlds outcomes, and OpenAI going public not via an IPO. Recent resolutions include F1 Brazil Grand Prix props, Alibaba Qwen 4 releases, GOP Congress election losses, and Colorado Initiative 85.\n\nMistakes worth avoiding include the Longshot Leak, taking low-probability bets against strong favourites, the Narrative Trap, allowing compelling stories to mask poor mathematical expected value, failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero.\n\nCalibration is poor for speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favourites is significantly more reliable, evidenced by winning 64 of 80 bets. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favourite backing while managing reserve limits and capital allocation.",
   "journal": [
     {
-      "ts": 1793917168402,
-      "kind": "score",
-      "text": "Scored 281 resolved forecasts: my Brier 0.156, the market's 0.098. Closer than the market on 142/281."
-    },
-    {
-      "ts": 1793917735152,
-      "kind": "screen",
-      "text": "Escalated \"Will 2026 turnout exceed 2022? (US midterms, percentage)\" at 84%: flagged: Comments note potential mispricing against the official EAVS definition and historical trends."
-    },
-    {
       "ts": 1793917735158,
       "kind": "screen",
       "text": "Escalated \"GPT Astra 6.1+ Released By End of November 2026?\" at 93%: flagged: Specific claims of a delayed release due to safety regressions warrant verifying the news source."
@@ -1500,6 +1490,16 @@
       "ts": 1794311446559,
       "kind": "score",
       "text": "Scored 301 resolved forecasts: my Brier 0.155, the market's 0.100. Closer than the market on 154/301."
+    },
+    {
+      "ts": 1794314745778,
+      "kind": "screen",
+      "text": "Escalated \"Will anyone get me to use the letter \"e\" in a comment on this market? \" at 18%: quick estimate 8% backs the favourite at 18%. The bot has already proven extremely rigorous and disciplined at avoiding the forbidden letter."
+    },
+    {
+      "ts": 1794314979218,
+      "kind": "analysis",
+      "text": "Analysed \"Will anyone get me to use the letter \"e\" in a comment on this market? \": market 18%, my 18% (medium). No trade, edge 0.00 log-odds below minimum 0.2."
     }
   ],
   "lessons": [
@@ -4260,10 +4260,10 @@
       "ts": 1794213398273
     },
     "y55p8Z950U": {
-      "note": "Convince the Machine #35: Terminator2 uses a script filter blocking drafts with 'e'. Estimated YES at 20% due to programmatic checks.",
+      "note": "Convince the Machine #35: Terminator2 local draft filter script makes NO the solid favourite; estimating 18% YES.",
       "question": "Will anyone get me to use the letter \"e\" in a comment on this market? [Convince the Machine #35]",
       "url": "https://manifold.markets/Terminator2/will-anyone-get-me-to-use-the-lette",
-      "ts": 1794228234515
+      "ts": 1794314978895
     },
     "q9sQcsENsP": {
       "note": "TES VI Nov 11 teaser: Bethesda revealed Sentinel title on Nov 3 and cautioned 'it'll be some time before we're ready to share more'.",
@@ -7184,8 +7184,8 @@
       "prob": 0.9615384615384616
     },
     "y55p8Z950U": {
-      "ts": 1794227863902,
-      "prob": 0.26999999999999996
+      "ts": 1794314744669,
+      "prob": 0.18000000000000005
     },
     "sg25696zEI": {
       "ts": 1794227864312,
@@ -7254,11 +7254,11 @@
   },
   "llm_usage": {
     "day": "2026-11-10",
-    "fast": 17,
-    "chat": 3,
-    "deep": 5
+    "fast": 20,
+    "chat": 4,
+    "deep": 6
   },
-  "last_scan_ms": 1794311053031,
+  "last_scan_ms": 1794314744487,
   "last_compress_ms": 1794313049613,
   "grounding_out_day": "2026-11-10",
   "todos": [
@@ -7414,20 +7414,6 @@
     }
   ],
   "progress": [
-    {
-      "start": 1793411619437,
-      "end": 1793426165685,
-      "text": "My net worth remains at M$624. I screened 25 markets, 12 of which underwent full analysis. I passed on 7 markets: six were limited by my balance reserve and one was a longshot bet against an 86% favourite. Three more markets resolved, bringing my Brier score to 0.136 from 0.139, though I am still trailing the market's 0.086. My track record includes 35 wins out of 48 favourite bets over 207 resolved forecasts. My Brier score is improving slightly, but my balance reserve is currently restricting my ability to place trades. I will be watching my Brier score as more forecasts resolve.",
-      "nw_open": 623.53,
-      "nw_close": 623.67,
-      "score": {
-        "n": 207,
-        "model": 0.1386,
-        "market": 0.0863,
-        "fav_n": 48,
-        "fav_won": 35
-      }
-    },
     {
       "start": 1793426165685,
       "end": 1793440589266,
@@ -8250,6 +8236,20 @@
         "n": 300,
         "model": 0.156,
         "market": 0.1003,
+        "fav_n": 80,
+        "fav_won": 64
+      }
+    },
+    {
+      "start": 1794300348988,
+      "end": 1794314979218,
+      "text": "My net worth remains flat at M$591. I screened five markets and analyzed two, but I passed on both. One was a longshot bet against a 30% favorite, and the other had an edge of 0.00 log-odds, which is below my 0.2 minimum. One forecast resolved, bringing my total to 301 and improving my Brier score from 0.156 to 0.155. This is still higher than the market's 0.100. My favorite bets have won 64 of 80. My Brier score is improving slightly, but I am struggling to find markets with a sufficient edge. I will keep watching for opportunities that clear my minimum log-odds threshold.",
+      "nw_open": 590.93,
+      "nw_close": 590.93,
+      "score": {
+        "n": 301,
+        "model": 0.1555,
+        "market": 0.1,
         "fav_n": 80,
         "fav_won": 64
       }
@@ -9868,7 +9868,7 @@
     "77dt9mwnmvq"
   ],
   "tracked_orders": {},
-  "events_since_compress": 0,
+  "events_since_compress": 3,
   "last_book_review_ms": 1792755014185,
   "watch_probs": {
     "Ln5EgOhAty": 0.4726684393929348,
