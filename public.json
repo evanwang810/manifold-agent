@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1794307197433,
+  "generated_ms": 1794307672806,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 13,
+      "today": 16,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 4,
+      "today": 5,
       "cap": 54
     }
   },
@@ -64,6 +64,26 @@
   "net_worth": 590.93,
   "summary": "Balance M$5. Net worth M$589. 18 open positions, 5 of them closed and awaiting resolution. Over 298 resolved forecasts, our Brier score is 0.156 compared to the market's 0.099. We forecast worse than the market price overall, and our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 151 of 298; on big disagreements, 138 of 261. Resolved bets: 173. Backing the favourite: won 64 of 80. Longshots against the favourite: won 21 of 93.\n\nSpendable cash remains heavily restricted by balance reserve limits, which repeatedly floor trade sizes to zero or leave us with minimal active capital after maintaining our reserve. Active open positions include bets on Codeforces IGM, Navier-Stokes solutions before IPO, US midterm turnout, state political races, tennis matches, Mountain View City Council, US Congress races, NASA eclipse livestreams, Nebraska Senate races, OpenAI recursive models, and League of Legends Worlds outcomes. Recent resolutions include F1 Brazil Grand Prix props, Alibaba Qwen 4 releases, GOP Congress election losses, and Colorado Initiative 85.\n\nMistakes worth avoiding include the Longshot Leak, taking low-probability bets against strong favourites, the Narrative Trap, allowing compelling stories to mask poor mathematical expected value, failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero.\n\nCalibration is poor for speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favourites is significantly more reliable, evidenced by winning 64 of 80 bets. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favourite backing while managing reserve limits and capital allocation.",
   "journal": [
+    {
+      "ts": 1794307672224,
+      "kind": "score",
+      "text": "Scored 301 resolved forecasts: my Brier 0.155, the market's 0.100. Closer than the market on 154/301."
+    },
+    {
+      "ts": 1794307659056,
+      "kind": "analysis",
+      "text": "Analysed \"CI2026: Will either China, India, or the US sign the 35 by 35 pledge a\": market 30%, my 37% (medium). No trade, would be a longshot bet against the 30% favourite."
+    },
+    {
+      "ts": 1794307437858,
+      "kind": "screen",
+      "text": "Escalated \"CI2026: Will either China, India, or the US sign the 35 by 35 pledge a\" at 30%: quick estimate 10% backs the favourite at 30%. China, India, and the US consistently avoid joining binding multilateral COP target pledges."
+    },
+    {
+      "ts": 1794307437852,
+      "kind": "screen",
+      "text": "Passed on \"Will the next White House Press Secretary after Katie Zachariah be a b\" at 54%: quick estimate 25%, market 54%. Base-rate probability for press secretary demographic without specific candidate announcements does not justify escalation."
+    },
     {
       "ts": 1794303825203,
       "kind": "score",
@@ -443,26 +463,6 @@
       "ts": 1794186995448,
       "kind": "screen",
       "text": "Escalated \"NFL Week 9 - Prop Bets \u2192 At least one missed kicking extra point attem\" at 77%: quick estimate 82% backs the favourite at 77%. Missing an extra point happens in almost every NFL week, making this a high probability event requiring no special insight."
-    },
-    {
-      "ts": 1794186995442,
-      "kind": "screen",
-      "text": "Passed on \"NFL Week 9 - Prop Bets \u2192 Quarterback gets benched in the middle of a g\" at 95%: quick estimate 35%, market 95%. Comments suggest a QB benching already occurred, making this likely a YES, but low volume makes deep analysis unnecessary."
-    },
-    {
-      "ts": 1794186794123,
-      "kind": "analysis",
-      "text": "Analysed \"Who will win the 2026 League of Legends World Championship? \u2192 Bilibili\": market 29%, my 22% (medium). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1794186590594,
-      "kind": "move",
-      "text": "\"Who will win the 2026 League of Legends World Championship? \u2192 Bilibili\" moved +8% to 29%. Holding NO, P/L M$+0."
-    },
-    {
-      "ts": 1794184344601,
-      "kind": "score",
-      "text": "Scored 296 resolved forecasts: my Brier 0.152, the market's 0.097. Closer than the market on 151/296."
     }
   ],
   "todos": [
@@ -807,7 +807,7 @@
       "profit": 8.2,
       "prob": 0.99,
       "closed": false,
-      "days_to_close": 20.6
+      "days_to_close": 20.5
     },
     {
       "question": "Will Anthropic announce a solution to the Navier-Stokes Millennium problem before IPO? ",
@@ -891,7 +891,7 @@
       "profit": 0.0,
       "prob": 0.043,
       "closed": false,
-      "days_to_close": 20.6
+      "days_to_close": 20.5
     },
     {
       "question": "Will NASA livestream of the August 12, 2026 total solar eclipse exceed 2 million concurrent viewers?",
@@ -915,7 +915,7 @@
       "profit": 0.4,
       "prob": 0.04,
       "closed": false,
-      "days_to_close": 4.6
+      "days_to_close": 4.5
     },
     {
       "question": "Who will win a seat on the Mountain View City Council in November 2026? \u2192 IdaRose Sylvester",
@@ -927,7 +927,7 @@
       "profit": 0.1,
       "prob": 0.964,
       "closed": false,
-      "days_to_close": 1.6
+      "days_to_close": 1.5
     },
     {
       "question": "Will I (McPqndq) reach IGM on Codeforces before the 2026 ICPC World Finals.",
@@ -951,7 +951,7 @@
       "profit": -0.2,
       "prob": 0.37,
       "closed": false,
-      "days_to_close": 5.6
+      "days_to_close": 5.5
     },
     {
       "question": "Will OpenAI go public NOT via an IPO?",
@@ -2341,6 +2341,24 @@
   ],
   "screens": [
     {
+      "ts": 1794307437852,
+      "question": "CI2026: Will either China, India, or the US sign the 35 by 35 pledge at COP31?",
+      "url": "https://manifold.markets/FrankfurtSchool/ci2026-will-either-china-india-or-t",
+      "passed": true,
+      "market_prob": 0.2999767550280579,
+      "quick_prob": 0.1,
+      "why": "quick estimate 10% backs the favourite at 30%. China, India, and the US consistently avoid joining binding multilateral COP target pledges."
+    },
+    {
+      "ts": 1794307437844,
+      "question": "Will the next White House Press Secretary after Katie Zachariah be a blonde woman?",
+      "url": "https://manifold.markets/Tetraspace/will-the-next-white-house-press-sec",
+      "passed": false,
+      "market_prob": 0.5399831004281198,
+      "quick_prob": 0.25,
+      "why": "quick estimate 25%, market 54%. Base-rate probability for press secretary demographic without specific candidate announcements does not justify escalation."
+    },
+    {
       "ts": 1794303621916,
       "question": "Daily Coinflip",
       "url": "https://manifold.markets/Traveel/daily-coinflip-l6S0ugtqZL",
@@ -2681,27 +2699,33 @@
       "market_prob": 0.07226587740964971,
       "quick_prob": 0.05,
       "why": "quick estimate 5% backs the favourite at 7%. At a trillion-dollar valuation, a traditional IPO is the only viable route and SPACs/direct listings are non-starters."
-    },
-    {
-      "ts": 1794179405375,
-      "question": "Who will win the 2026 League of Legends World Championship? \u2192 Bilibili Gaming",
-      "url": "https://manifold.markets/SteveSokolowski/who-will-win-the-2026-league-of-leg",
-      "passed": true,
-      "market_prob": 0.25056314219977405,
-      "quick_prob": 0.2,
-      "why": "quick estimate 20% backs the favourite at 25%. Standard multi-choice tournament outright, insufficient actionable signal in comments."
-    },
-    {
-      "ts": 1794179405369,
-      "question": "Who will win the 2026 League of Legends World Championship? \u2192 T1",
-      "url": "https://manifold.markets/SteveSokolowski/who-will-win-the-2026-league-of-leg",
-      "passed": false,
-      "market_prob": 0.08999999999999998,
-      "quick_prob": 0.25,
-      "why": "quick estimate 25%, market 9%. Standard multi-choice tournament outright, matches ongoing without clear arbitrage."
     }
   ],
   "decisions": [
+    {
+      "ts": 1794307659049,
+      "kind": "no_trade",
+      "question": "CI2026: Will either China, India, or the US sign the 35 by 35 pledge at COP31?",
+      "url": "https://manifold.markets/FrankfurtSchool/ci2026-will-either-china-india-or-t",
+      "market_prob": 0.2999767550280579,
+      "model_prob": 0.37,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "China's early support for the 35x35 concept is notable, but major powers (China, India, US) frequently avoid signing standalone COP sector pledges. India has already flagged the goal as unrealistic.",
+      "uncertainty": "Whether China's October support translates into officially signing the specific COP31 pledge text rather than endorsing high-level goals.",
+      "resolution_risk": "A country might endorse the summit declaration in general without being formally listed on cop31.tr as a signatory to this specific pledge.",
+      "evidence_for": [
+        "Bloomberg reported on October 21, 2026 that China offered support for the 35% electrification target push.",
+        "COP31 Presidency officially launched the pledge on November 9, 2026, with the summit running through November 20."
+      ],
+      "evidence_against": [
+        "Reporting on November 10, 2026 indicated the goal is viewed as unrealistic for India.",
+        "China and India historically often decline to sign standalone COP sector pledges (such as the COP28 Global Renewables Pledge) even when supporting the concept.",
+        "US signature on standalone international climate pledges remains low probability."
+      ],
+      "reason": "would be a longshot bet against the 30% favourite"
+    },
     {
       "ts": 1794296394447,
       "kind": "no_trade",
@@ -3022,29 +3046,6 @@
         "Strict 30-day consecutive requirement with zero make-up days creates a severe single-point-of-failure vulnerability.",
         "Chronic nausea has sunk prior challenges; moderate symptoms (levels 1-3) can prevent completing 2 hours without qualifying for the level 4 exemption.",
         "Only direct writing counts; unstructured research, meetings, and admin are explicitly excluded, raising the daily effort bar."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1794152999272,
-      "kind": "no_trade",
-      "question": "F1 2026 Prop Bets Brazil (Interlagos) Grand Prix [LIVE, Add answers] \u2192 [BRA] A Ferrari in top 5",
-      "url": "https://manifold.markets/BlitzEver/f1-2026-prop-bets-australia-melbour",
-      "market_prob": 0.5,
-      "model_prob": 0.78,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Ferrari enters the Brazilian GP with two top-tier cars. Across typical race conditions among the top 4 constructors, the baseline probability of at least one car finishing in the top 5 is high (~75-80%), even factoring in potential wet-weather chaos at Interlagos.",
-      "uncertainty": "Whether rain/scenarios during the Interlagos Grand Prix cause early DNFs or strategy blunders for both Ferrari cars.",
-      "resolution_risk": "If the prop answer does not explicitly specify the Main Race versus Sprint, though default convention for unspecified GP props refers to the Sunday feature race.",
-      "evidence_for": [
-        "Ferrari is one of the top four F1 teams, fielding elite drivers (Leclerc and Hamilton).",
-        "Having two top-tier entries significantly increases the baseline likelihood that at least one car finishes in the top 5 positions."
-      ],
-      "evidence_against": [
-        "Wet or chaotic weather conditions at Interlagos elevate DNF risks and unpredictable strategy outcomes.",
-        "Strong competition from Red Bull, McLaren, and Mercedes leaves only five top spots available for eight top-tier cars."
       ],
       "reason": "size floored to zero by balance reserve"
     }
