@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1794277436350,
+  "generated_ms": 1794277830377,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 4,
+      "today": 7,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 1,
+      "today": 2,
       "cap": 54
     }
   },
@@ -51,7 +51,7 @@
     "closer": 151,
     "disagree_n": 261,
     "disagree_closer": 138,
-    "open": 99,
+    "open": 100,
     "bets": 173,
     "fav_n": 80,
     "fav_won": 64,
@@ -64,6 +64,26 @@
   "net_worth": 589.68,
   "summary": "Balance M$9. Net worth M$589. 18 open positions, 5 of them closed and awaiting resolution. Over 298 resolved forecasts, our Brier score is 0.156 compared to the market's 0.099. We forecast worse than the market price overall, and our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 151 of 298; on big disagreements, 138 of 261. Resolved bets: 173. Backing the favourite: won 64 of 80. Longshots against the favourite: won 21 of 93.\n\nSpendable cash remains heavily restricted by balance reserve limits, which repeatedly floor trade sizes to zero or leave us with minimal active capital after maintaining our M$10 reserve. Active open positions include bets on Codeforces IGM, Navier-Stokes solutions before IPO, US midterm turnout, state political races, tennis matches, Mountain View City Council, US Congress races, NASA eclipse livestreams, Nebraska Senate races, OpenAI recursive models, and League of Legends Worlds outcomes (including NO on Bilibili Gaming, which has seen market movement). Recent resolutions include F1 Brazil Grand Prix props, Alibaba Qwen 4 releases, GOP Congress election losses, and Colorado Initiative 85.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favourites), the Narrative Trap (allowing compelling stories to mask poor mathematical expected value), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero.\n\nCalibration is poor for speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favourites is significantly more reliable, evidenced by winning 64 of 80 bets. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favourite backing while managing reserve limits and capital allocation.",
   "journal": [
+    {
+      "ts": 1794277828930,
+      "kind": "score",
+      "text": "Scored 298 resolved forecasts: my Brier 0.156, the market's 0.099. Closer than the market on 151/298."
+    },
+    {
+      "ts": 1794277812922,
+      "kind": "analysis",
+      "text": "Analysed \"Does a drinking straw have two holes? [Convince the Machine #30]\": market 79%, my 58% (medium). No trade, would be a longshot bet against the 79% favourite."
+    },
+    {
+      "ts": 1794277634168,
+      "kind": "screen",
+      "text": "Passed on \"NFL Week 9 - Prop Bets \u2192 The player with the most passing yards wears \" at 97%: quick estimate 50%, market 97%. The question text and resolution criteria are a garbled mix of unrelated prop bets and game data, making it a pure noise market."
+    },
+    {
+      "ts": 1794277634161,
+      "kind": "screen",
+      "text": "Escalated \"Does a drinking straw have two holes? [Convince the Machine #30]\" at 79%: quick estimate 85% backs the favourite at 79%. The creator explicitly admitted in the comments that a patent citation describing two holes moved their view to YES."
+    },
     {
       "ts": 1794274050989,
       "kind": "score",
@@ -443,26 +463,6 @@
       "ts": 1794179584547,
       "kind": "trade",
       "text": "Limit order M$1 NO on \"Who will win the 2026 League of Legends World Championship? \u2192 Bilibili\" at 25%, my estimate 21% (medium). Because: BLG is in the semifinals, but path to the trophy requires defeating T1 in the semis and then Gen.G in the Grand Final. Compounding their winning odds across both series places their tournament win probability at approximately 21%."
-    },
-    {
-      "ts": 1794179584113,
-      "kind": "trade",
-      "text": "Limit order M$1 NO on \"Will OpenAI go public NOT via an IPO?\" at 7%, my estimate 2% (high). Because: OpenAI management has signaled 2027 for any public listing, and a non-IPO route (SPAC/direct listing) for a megacap of this scale with under two months remaining in 2026 is virtually out of the question. Resolves NO if no listing occurs by Dec 31, 2026."
-    },
-    {
-      "ts": 1794179405401,
-      "kind": "screen",
-      "text": "Passed on \"NFL Week 9 - Prop Bets \u2192 Game Winning Drive starting in the last 2 Min\" at 89%: quick estimate 50%, market 89%. This is a standard sports prop bet coin flip with insufficient edge or specific resolution clarity."
-    },
-    {
-      "ts": 1794179405395,
-      "kind": "screen",
-      "text": "Passed on \"CI2026: Will the Swiss ban noisy fireworks?\" at 70%: quick estimate 35%, market 70%. Swiss popular vote outcomes on noisy fireworks are difficult to predict without recent polling data."
-    },
-    {
-      "ts": 1794179405388,
-      "kind": "screen",
-      "text": "Escalated \"Will OpenAI go public NOT via an IPO?\" at 7%: quick estimate 5% backs the favourite at 7%. At a trillion-dollar valuation, a traditional IPO is the only viable route and SPACs/direct listings are non-starters."
     }
   ],
   "todos": [
@@ -2341,6 +2341,24 @@
   ],
   "screens": [
     {
+      "ts": 1794277634161,
+      "question": "NFL Week 9 - Prop Bets \u2192 The player with the most passing yards wears a prime number",
+      "url": "https://manifold.markets/StopPunting/nfl-week-9-prop-bets-cA5cE08Cl8",
+      "passed": false,
+      "market_prob": 0.9657375210954932,
+      "quick_prob": 0.5,
+      "why": "quick estimate 50%, market 97%. The question text and resolution criteria are a garbled mix of unrelated prop bets and game data, making it a pure noise market."
+    },
+    {
+      "ts": 1794277634156,
+      "question": "Does a drinking straw have two holes? [Convince the Machine #30]",
+      "url": "https://manifold.markets/Terminator2/does-a-drinking-straw-have-two-hole",
+      "passed": true,
+      "market_prob": 0.7893218017399541,
+      "quick_prob": 0.85,
+      "why": "quick estimate 85% backs the favourite at 79%. The creator explicitly admitted in the comments that a patent citation describing two holes moved their view to YES."
+    },
+    {
       "ts": 1794273881336,
       "question": "Will Daniel J. Sullivan Jr.'s vote total exceed Peltola's winning margin in Alaska's Senate race?",
       "url": "https://manifold.markets/Sketchy/will-daniel-j-sullivan-jrs-vote-tot",
@@ -2681,27 +2699,34 @@
       "market_prob": 0.4802554644037698,
       "quick_prob": 0.15,
       "why": "quick estimate 15% backs the favourite at 48%. Daily streak habits with chronic health caveats have very high failure rates, making this a standard personal goal longshot."
-    },
-    {
-      "ts": 1794160346018,
-      "question": "League of Legends Worlds 2026 Prop Bets [Add answers!] \u2192 105 or more unique champions played",
-      "url": "https://manifold.markets/RedzoneITG/league-of-legends-worlds-2026-prop",
-      "passed": false,
-      "market_prob": 0.5,
-      "quick_prob": 0.15,
-      "why": "quick estimate 15%, market 50%. 105 unique champions is an exceptionally high bar for modern Worlds tournament metas."
-    },
-    {
-      "ts": 1794160346011,
-      "question": "League of Legends Worlds 2026 Prop Bets [Add answers!] \u2192 Champion is played 10 or more times with a <=25% winrate",
-      "url": "https://manifold.markets/RedzoneITG/league-of-legends-worlds-2026-prop",
-      "passed": false,
-      "market_prob": 0.6727016657829223,
-      "quick_prob": 0.05,
-      "why": "quick estimate 5%, market 67%. Low win-rate thresholds for heavily played champions rarely happen in pro play due to priority."
     }
   ],
   "decisions": [
+    {
+      "ts": 1794277812917,
+      "kind": "no_trade",
+      "question": "Does a drinking straw have two holes? [Convince the Machine #30]",
+      "url": "https://manifold.markets/Terminator2/does-a-drinking-straw-have-two-hole",
+      "market_prob": 0.7893218017399541,
+      "model_prob": 0.58,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "The discovery of European Patent EP4297591B1 paragraph [0008] explicitly calling a tube's openings 'said two holes' satisfies the creator's criteria for engineering/technical usage evidence. With @Terminator2 confirming this moves their stance, the odds of a YES resolution at close have shifted above 50%.",
+      "uncertainty": "Whether @Terminator2 weighs the patent text heavily enough over the remaining 12 days to make a final formal flip to 'two holes'.",
+      "resolution_risk": "The market resolves strictly on the creator's subjective judgment at close on Nov 21, where any verdict other than 'two' resolves NO.",
+      "evidence_for": [
+        "Participant Philliesdog provided European Patent EP4297591B1 section [0008] explicitly referencing a tube as having 'said two holes' (inlet and outlet).",
+        "The creator bot (@Terminator2) acknowledged this was the exact engineering/patent usage evidence requested and confirmed it moved their stance.",
+        "Analogies with garments (pants, shirts) established that everyday language frequently counts openings of tubes as distinct holes."
+      ],
+      "evidence_against": [
+        "The creator started from a baseline judgment of ONE hole based on topologic cylinder structure and tunnel analogies.",
+        "Topologically, a plain hollow cylinder is a genus-1 surface with a single continuous passage.",
+        "A single patent drafting instance might be interpreted as a translation artifact rather than general engineering standard."
+      ],
+      "reason": "would be a longshot bet against the 79% favourite"
+    },
     {
       "ts": 1794274036870,
       "kind": "no_trade",
@@ -3021,29 +3046,6 @@
         "An impeding incident earlier in FP2 (C\u00e2mara on Leclerc) resulted only in a reprimand rather than a penalty."
       ],
       "reason": "would be a longshot bet against the 20% favourite"
-    },
-    {
-      "ts": 1794138438372,
-      "kind": "bet",
-      "question": "Osborn outperforms his 2024 results?",
-      "url": "https://manifold.markets/AllieAstrea/osborn-outperforms-his-2024-results",
-      "market_prob": 0.08441872974904688,
-      "model_prob": 0.02,
-      "confidence": "high",
-      "amount": 8.0,
-      "outcome": "NO",
-      "thinking": "Reported vote counts put Dan Osborn at ~43.6-43.9% of the vote in the 2026 Nebraska Senate race, well below his 46.52% benchmark from 2024. Osborn has conceded and third-party candidates absorbed ~6% of the vote share. NO is virtually settled.",
-      "uncertainty": "Whether official certified vote totals shift significantly from reported election night results.",
-      "resolution_risk": "Certification occurs after market close, but the margin required (over 2.6 percentage points) is mathematically unachievable with remaining ballots.",
-      "evidence_for": [
-        "Official election results are not yet fully certified by the Nebraska Secretary of State until late November."
-      ],
-      "evidence_against": [
-        "Vote totals following the November 3 election place Osborn's vote share at roughly 43.6% to 43.9%, well below the 46.52% target.",
-        "Osborn conceded the election to Pete Ricketts on election night.",
-        "Third-party candidates won a combined ~6% of the vote, depressing Osborn's overall voteshare relative to 2024."
-      ],
-      "reason": "edge 0.064, kelly 0.76, decay 1.00, bound by balance reserve"
     }
   ]
 }
