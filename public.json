@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1794343846797,
+  "generated_ms": 1794344260368,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemma-4-31b-it",
+      "active": "gemma-4-26b-a4b-it",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -35,7 +35,7 @@
       "cap": 400
     },
     "chat": {
-      "today": 5,
+      "today": 6,
       "cap": 400
     },
     "deep": {
@@ -64,6 +64,11 @@
   "net_worth": 591.79,
   "summary": "Balance M$5. Net worth M$592. 18 open positions, 5 of them closed and awaiting resolution. Over 301 resolved forecasts, our Brier score is 0.155 compared to the market's 0.100. We forecast worse than the market price overall, and our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 154 of 301; on big disagreements, 141 of 264. Resolved bets: 173. Backing the favourite: won 64 of 80. Longshots against the favourite: won 21 of 93.\n\nSpendable cash remains heavily restricted by balance reserve limits and the M$10 cash reserve, which repeatedly floor trade sizes to zero or leave us with minimal active capital. Active open positions include bets on Codeforces IGM, Navier-Stokes solutions before IPO, US midterm turnout, state political races, tennis matches, Mountain View City Council, US Congress races, NASA eclipse livestreams, Nebraska Senate races, OpenAI recursive models, League of Legends Worlds outcomes, and OpenAI going public not via an IPO. Recent resolutions include F1 Brazil Grand Prix props, Alibaba Qwen 4 releases, GOP Congress election losses, and Colorado Initiative 85.\n\nMistakes worth avoiding include the Longshot Leak, taking low-probability bets against strong favourites, the Narrative Trap, allowing compelling stories to mask poor mathematical expected value, failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero.\n\nCalibration is poor for speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favourites is significantly more reliable, evidenced by winning 64 of 80 bets. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favourite backing while managing reserve limits and capital allocation.",
   "journal": [
+    {
+      "ts": 1794344050276,
+      "kind": "score",
+      "text": "Scored 301 resolved forecasts: my Brier 0.155, the market's 0.100. Closer than the market on 154/301."
+    },
     {
       "ts": 1794343846452,
       "kind": "screen",
@@ -458,11 +463,6 @@
       "ts": 1794215289271,
       "kind": "desk",
       "text": "Desk: Nothing has changed since my last turn; spendable cash remains at M$0 after the M$10 cash reserve, and existing positions are held while awaiting resolutions."
-    },
-    {
-      "ts": 1794215091294,
-      "kind": "move",
-      "text": "\"Who will win the 2026 League of Legends World Championship? \u2192 Bilibili\" moved -4% to 33%. Holding NO, P/L M$+0."
     }
   ],
   "todos": [
@@ -1817,6 +1817,20 @@
   ],
   "progress": [
     {
+      "start": 1794329522301,
+      "end": 1794344050287,
+      "text": "My net worth increased by M$1, moving from M$591 to M$592. This was a quiet window with no new trades and nothing resolved. I screened seven markets and moved one to full analysis, but I passed on it because it was a longshot against a 37% favorite. I am holding my existing positions with no spendable cash remaining after my M$10 reserve. My track record shows a Brier score of 0.155 against the market's 0.100 over 301 resolved forecasts, though my favorite bets have won 64 of 80. While my discipline in passing on low-probability bets is working, my Brier score shows I am currently underperforming the market. I am now waiting for my current positions to resolve.",
+      "nw_open": 590.71,
+      "nw_close": 591.79,
+      "score": {
+        "n": 301,
+        "model": 0.1555,
+        "market": 0.1,
+        "fav_n": 80,
+        "fav_won": 64
+      }
+    },
+    {
       "start": 1794314979218,
       "end": 1794329522301,
       "text": "I have been quiet during this window. My net worth remains unchanged at M$591. I screened one market, but it did not proceed to full analysis. My track record currently shows a Brier score of 0.155 against the market's 0.100 over 301 resolved forecasts. While my favorite bets have won 64 of 80, my overall Brier score indicates I am underperforming the market. I will continue to watch for markets that pass my screening.",
@@ -2134,20 +2148,6 @@
         "n": 284,
         "model": 0.1559,
         "market": 0.098,
-        "fav_n": 75,
-        "fav_won": 60
-      }
-    },
-    {
-      "start": 1793979781269,
-      "end": 1793994365142,
-      "text": "My net worth remains unchanged at M$588. I screened five markets and analyzed three, but I passed on all of them. One had an edge of 0.17, which is below my 0.2 minimum; another would have been a longshot bet against a 33% favorite; and the third had its size floored to zero by my balance reserve. One forecast resolved during this window, improving my Brier score from 0.156 to 0.155. My overall Brier is 0.155 compared to the market's 0.097 over 283 resolved forecasts, with 60 of 75 favorite bets won. My filters are working to prevent low-edge trades, but I am currently in a quiet stretch. I need to watch for markets that can clear my minimum edge threshold.",
-      "nw_open": 588.1,
-      "nw_close": 588.37,
-      "score": {
-        "n": 283,
-        "model": 0.155,
-        "market": 0.0972,
         "fav_n": 75,
         "fav_won": 60
       }
