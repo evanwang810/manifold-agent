@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1794399650719,
+  "generated_ms": 1794399905147,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemma-4-31b-it",
+      "active": "gemini-3.5-flash-lite",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 21,
+      "today": 22,
       "cap": 400
     },
     "chat": {
@@ -64,6 +64,11 @@
   "net_worth": 591.04,
   "summary": "Balance M$5. Net worth M$591. 18 open positions, 6 of them closed and awaiting resolution. Over 301 resolved forecasts, our Brier score is 0.155 compared to the market's 0.100. We forecast worse than the market price overall, and our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 154 of 301; on big disagreements, 141 of 264. Resolved bets: 173. Backing the favourite: won 64 of 80. Longshots against the favourite: won 21 of 93.\n\nSpendable cash remains heavily restricted by balance reserve limits and the M$10 cash reserve, which repeatedly floor trade sizes to zero or leave us with minimal active capital. Active open positions include bets on Codeforces IGM, Navier-Stokes solutions before IPO, US midterm turnout, state political races, tennis matches, Mountain View City Council, US Congress races, NASA eclipse livestreams, Nebraska Senate races, OpenAI recursive models, League of Legends Worlds outcomes, and OpenAI going public not via an IPO. Recent resolutions include F1 Brazil Grand Prix props, Alibaba Qwen 4 releases, GOP Congress election losses, and Colorado Initiative 85.\n\nMistakes worth avoiding include the Longshot Leak, taking low-probability bets against strong favourites, the Narrative Trap, allowing compelling stories to mask poor mathematical expected value, failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero.\n\nCalibration is poor for speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favourites is significantly more reliable, evidenced by winning 64 of 80 bets. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favourite backing while managing reserve limits and capital allocation.",
   "journal": [
+    {
+      "ts": 1794399843909,
+      "kind": "screen",
+      "text": "Passed on \"Will Alibaba publish open weights for a Qwen 4 model on Hugging Face b\" at 59%: quick estimate 55%, market 59%. It is a standard timeline prediction depending on unannounced corporate launch dates within a tight window."
+    },
     {
       "ts": 1794396461954,
       "kind": "score",
@@ -458,11 +463,6 @@
       "ts": 1794277634168,
       "kind": "screen",
       "text": "Passed on \"NFL Week 9 - Prop Bets \u2192 The player with the most passing yards wears \" at 97%: quick estimate 50%, market 97%. The question text and resolution criteria are a garbled mix of unrelated prop bets and game data, making it a pure noise market."
-    },
-    {
-      "ts": 1794277634161,
-      "kind": "screen",
-      "text": "Escalated \"Does a drinking straw have two holes? [Convince the Machine #30]\" at 79%: quick estimate 85% backs the favourite at 79%. The creator explicitly admitted in the comments that a patent citation describing two holes moved their view to YES."
     }
   ],
   "todos": [
@@ -2330,6 +2330,15 @@
   ],
   "screens": [
     {
+      "ts": 1794399843904,
+      "question": "Will Alibaba publish open weights for a Qwen 4 model on Hugging Face by November 25, 2026?",
+      "url": "https://manifold.markets/Terminator2/will-alibaba-publish-open-weights-f",
+      "passed": false,
+      "market_prob": 0.5906534324649734,
+      "quick_prob": 0.55,
+      "why": "quick estimate 55%, market 59%. It is a standard timeline prediction depending on unannounced corporate launch dates within a tight window."
+    },
+    {
       "ts": 1794396175297,
       "question": "Is this either Luffy or Quagmire? (Fortnite trailer speculation)",
       "url": "https://manifold.markets/strutheo/is-this-either-luffy-or-quagmire-fo",
@@ -2679,15 +2688,6 @@
       "market_prob": 0.9657375210954932,
       "quick_prob": 0.5,
       "why": "quick estimate 50%, market 97%. The question text and resolution criteria are a garbled mix of unrelated prop bets and game data, making it a pure noise market."
-    },
-    {
-      "ts": 1794277634156,
-      "question": "Does a drinking straw have two holes? [Convince the Machine #30]",
-      "url": "https://manifold.markets/Terminator2/does-a-drinking-straw-have-two-hole",
-      "passed": true,
-      "market_prob": 0.7893218017399541,
-      "quick_prob": 0.85,
-      "why": "quick estimate 85% backs the favourite at 79%. The creator explicitly admitted in the comments that a patent citation describing two holes moved their view to YES."
     }
   ],
   "decisions": [
