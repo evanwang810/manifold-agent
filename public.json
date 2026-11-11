@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1794428785074,
+  "generated_ms": 1794429176044,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 26,
+      "today": 29,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 7,
+      "today": 8,
       "cap": 54
     }
   },
@@ -51,7 +51,7 @@
     "closer": 156,
     "disagree_n": 265,
     "disagree_closer": 142,
-    "open": 100,
+    "open": 101,
     "bets": 173,
     "fav_n": 80,
     "fav_won": 64,
@@ -64,6 +64,26 @@
   "net_worth": 591.04,
   "summary": "Balance M$9. Net worth M$591. There are 18 open positions, 6 of them closed and awaiting resolution. Over 303 resolved forecasts, the Brier score is 0.155 compared to the market's 0.100. You forecast WORSE than the market price, and disagreements have mostly been you being wrong, not the market. You were closer to the outcome than the market on 156 of 303; on big disagreements, 142 of 265. Of 173 resolved bets, backing the favorite won 64 of 80, while longshots against the favorite won 21 of 93.\n\nSpendable cash remains heavily restricted by balance reserve limits and the M$10 cash reserve, which repeatedly floor trade sizes to zero. Open positions include bets on Codeforces IGM, Navier-Stokes solutions before IPO, US midterm turnout, state political races, tennis matches, Mountain View City Council, US Congress races, NASA eclipse livestreams, Nebraska Senate races, OpenAI recursive models, League of Legends Worlds outcomes, and OpenAI going public not via an IPO. Recent activity included deploying cash into NO on the OpenAI recursive model and mechinterp market, and NO on OpenAI going public not via an IPO.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favorites), the Narrative Trap (allowing compelling stories to mask poor mathematical expected value), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero.\n\nCalibration is poor for speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favorites is significantly more reliable, evidenced by winning 64 of 80 bets. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favorite backing while managing reserve limits and capital allocation.",
   "journal": [
+    {
+      "ts": 1794429175793,
+      "kind": "score",
+      "text": "Scored 303 resolved forecasts: my Brier 0.155, the market's 0.100. Closer than the market on 156/303."
+    },
+    {
+      "ts": 1794429171112,
+      "kind": "analysis",
+      "text": "Analysed \"Which 2026 California ballot measures will pass? \u2192 Allow Public Financ\": market 14%, my 36% (medium). No trade, would be a longshot bet against the 14% favourite."
+    },
+    {
+      "ts": 1794428977803,
+      "kind": "screen",
+      "text": "Passed on \"Which 2026 California ballot measures will pass? \u2192 Eliminate State Off\" at 97%: quick estimate 5%, market 97%. The market options do not correspond to the actual official propositions on the 2026 ballot."
+    },
+    {
+      "ts": 1794428977795,
+      "kind": "screen",
+      "text": "Escalated \"Which 2026 California ballot measures will pass? \u2192 Allow Public Financ\" at 14%: quick estimate 5% backs the favourite at 14%. The market options do not match the actual 2026 California ballot measures as confirmed by the creator."
+    },
     {
       "ts": 1794417721296,
       "kind": "score",
@@ -443,26 +463,6 @@
       "ts": 1794303825203,
       "kind": "score",
       "text": "Scored 301 resolved forecasts: my Brier 0.155, the market's 0.100. Closer than the market on 154/301."
-    },
-    {
-      "ts": 1794303621923,
-      "kind": "screen",
-      "text": "Passed on \"Daily Coinflip\" at 50%: quick estimate 50%, market 50%. This is a purely random daily coinflip with no predictive edge or hidden information to uncover."
-    },
-    {
-      "ts": 1794296405630,
-      "kind": "score",
-      "text": "Scored 300 resolved forecasts: my Brier 0.156, the market's 0.100. Closer than the market on 153/300."
-    },
-    {
-      "ts": 1794296394455,
-      "kind": "analysis",
-      "text": "Analysed \"Will Julie Anne Genter win Wellington Bays in 2026?\": market 75%, my 71% (medium). No trade, would be a longshot bet against the 75% favourite."
-    },
-    {
-      "ts": 1794296255272,
-      "kind": "screen",
-      "text": "Escalated \"Will Julie Anne Genter win Wellington Bays in 2026?\" at 75%: flagged: Preliminary count shows a tight 140-vote gap with special votes pending, requiring expert evaluation."
     }
   ],
   "todos": [
@@ -783,7 +783,7 @@
       "profit": 3.5,
       "prob": 0.318,
       "closed": false,
-      "days_to_close": 3.8
+      "days_to_close": 3.7
     },
     {
       "question": "Will Magnus Carlsen be dethroned from his #1 spot in FIDE rating before GTA 6 is released?",
@@ -2330,6 +2330,24 @@
   ],
   "screens": [
     {
+      "ts": 1794428977795,
+      "question": "Which 2026 California ballot measures will pass? \u2192 Eliminate State Officer Recall Successor Elections Amendment",
+      "url": "https://manifold.markets/zax/which-2026-ca-ballot-measures-will",
+      "passed": false,
+      "market_prob": 0.9667111362265122,
+      "quick_prob": 0.05,
+      "why": "quick estimate 5%, market 97%. The market options do not correspond to the actual official propositions on the 2026 ballot."
+    },
+    {
+      "ts": 1794428977786,
+      "question": "Which 2026 California ballot measures will pass? \u2192 Allow Public Financing of Election Campaigns Measure",
+      "url": "https://manifold.markets/zax/which-2026-ca-ballot-measures-will",
+      "passed": true,
+      "market_prob": 0.14149984693958503,
+      "quick_prob": 0.05,
+      "why": "quick estimate 5% backs the favourite at 14%. The market options do not match the actual 2026 California ballot measures as confirmed by the creator."
+    },
+    {
       "ts": 1794414020985,
       "question": "German Gref will mention AI more than twenty times \u0430t the Investor Day",
       "url": "https://manifold.markets/TR6g9s/german-gref-will-mention-ai-more-th",
@@ -2670,27 +2688,33 @@
       "market_prob": 0.5399831004281198,
       "quick_prob": 0.25,
       "why": "quick estimate 25%, market 54%. Base-rate probability for press secretary demographic without specific candidate announcements does not justify escalation."
-    },
-    {
-      "ts": 1794303621916,
-      "question": "Daily Coinflip",
-      "url": "https://manifold.markets/Traveel/daily-coinflip-l6S0ugtqZL",
-      "passed": false,
-      "market_prob": 0.5000000000000001,
-      "quick_prob": 0.5,
-      "why": "quick estimate 50%, market 50%. This is a purely random daily coinflip with no predictive edge or hidden information to uncover."
-    },
-    {
-      "ts": 1794296255265,
-      "question": "Will Julie Anne Genter win Wellington Bays in 2026?",
-      "url": "https://manifold.markets/Jack1/will-julie-anne-genter-win-wellingt",
-      "passed": true,
-      "market_prob": 0.7500000000000001,
-      "quick_prob": 0.55,
-      "why": "flagged: Preliminary count shows a tight 140-vote gap with special votes pending, requiring expert evaluation."
     }
   ],
   "decisions": [
+    {
+      "ts": 1794429171104,
+      "kind": "no_trade",
+      "question": "Which 2026 California ballot measures will pass? \u2192 Allow Public Financing of Election Campaigns Measure",
+      "url": "https://manifold.markets/zax/which-2026-ca-ballot-measures-will",
+      "market_prob": 0.14149984693958503,
+      "model_prob": 0.36,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Public financing of election campaigns has a very difficult historical track record with voters who resist spending public money on political campaigns, leading to an uphill climb despite California's progressive lean.",
+      "uncertainty": "The latest counted vote totals from the California Secretary of State following the November 3 election.",
+      "resolution_risk": "Ambiguity in strike text vs actual ballot designation was resolved when Manifold management took over the market.",
+      "evidence_for": [
+        "Qualified for the California ballot as Proposition 4.",
+        "California electorate leans progressive on structural electoral reforms."
+      ],
+      "evidence_against": [
+        "Measures allocating public funds or allowing public financing of political campaigns are historically very unpopular with voters.",
+        "Historical California campaign finance initiatives (such as Proposition 89) failed by substantial margins.",
+        "Voters tend to break toward NO on complex governance and spending-related ballot measures when uncertain."
+      ],
+      "reason": "would be a longshot bet against the 14% favourite"
+    },
     {
       "ts": 1794403876374,
       "kind": "no_trade",
@@ -3024,29 +3048,6 @@
         "If Peltola wins by a moderate or large margin, the market resolves NO."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1794256895920,
-      "kind": "no_trade",
-      "question": "Will we get another teaser for The Elder Scrolls VI on November 11?",
-      "url": "https://manifold.markets/YogSothoth/will-we-get-another-teaser-for-the",
-      "market_prob": 0.0778718162207774,
-      "model_prob": 0.11,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Bethesda released the Sentinel title reveal on November 3 and explicitly stated it will be some time before they share more. While November 11 is Skyrim's anniversary, dropping another new video teaser eight days after explicit expectation management is very unlikely.",
-      "uncertainty": "Whether Bethesda held back a short clip or secondary teaser specifically reserved for Skyrim's anniversary.",
-      "resolution_risk": "A general Skyrim anniversary retrospective video published on Nov 11 could contain a few seconds of new TES VI material that triggers a YES resolution.",
-      "evidence_for": [
-        "November 11 is Skyrim's launch anniversary (11/11/11), historically a key date for Elder Scrolls marketing."
-      ],
-      "evidence_against": [
-        "Bethesda already released a title reveal teaser on November 3, 2026.",
-        "Bethesda explicitly stated following the November 3 reveal that 'it'll be some time before we're ready to share more'.",
-        "Major AAA game marketing beats are typically spaced months apart, not eight days apart."
-      ],
-      "reason": "would be a longshot bet against the 8% favourite"
     }
   ]
 }
