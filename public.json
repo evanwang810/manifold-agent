@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1794366210781,
+  "generated_ms": 1794366570278,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 6,
+      "today": 9,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 1,
+      "today": 2,
       "cap": 54
     }
   },
@@ -51,7 +51,7 @@
     "closer": 154,
     "disagree_n": 264,
     "disagree_closer": 141,
-    "open": 100,
+    "open": 101,
     "bets": 173,
     "fav_n": 80,
     "fav_won": 64,
@@ -64,6 +64,26 @@
   "net_worth": 591.01,
   "summary": "Balance M$5. Net worth M$592. 18 open positions, 5 of them closed and awaiting resolution. Over 301 resolved forecasts, our Brier score is 0.155 compared to the market's 0.100. We forecast worse than the market price overall, and our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 154 of 301; on big disagreements, 141 of 264. Resolved bets: 173. Backing the favourite: won 64 of 80. Longshots against the favourite: won 21 of 93.\n\nSpendable cash remains heavily restricted by balance reserve limits and the M$10 cash reserve, which repeatedly floor trade sizes to zero or leave us with minimal active capital. Active open positions include bets on Codeforces IGM, Navier-Stokes solutions before IPO, US midterm turnout, state political races, tennis matches, Mountain View City Council, US Congress races, NASA eclipse livestreams, Nebraska Senate races, OpenAI recursive models, League of Legends Worlds outcomes, and OpenAI going public not via an IPO. Recent resolutions include F1 Brazil Grand Prix props, Alibaba Qwen 4 releases, GOP Congress election losses, and Colorado Initiative 85.\n\nMistakes worth avoiding include the Longshot Leak, taking low-probability bets against strong favourites, the Narrative Trap, allowing compelling stories to mask poor mathematical expected value, failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero.\n\nCalibration is poor for speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favourites is significantly more reliable, evidenced by winning 64 of 80 bets. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favourite backing while managing reserve limits and capital allocation.",
   "journal": [
+    {
+      "ts": 1794366569665,
+      "kind": "score",
+      "text": "Scored 301 resolved forecasts: my Brier 0.155, the market's 0.100. Closer than the market on 154/301."
+    },
+    {
+      "ts": 1794366557893,
+      "kind": "analysis",
+      "text": "Analysed \"Will Jack MA return as a senior executive to Alibaba by 2026 year end?\": market 15%, my 8% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1794366412115,
+      "kind": "screen",
+      "text": "Passed on \"Does a drinking straw have two holes? [Convince the Machine #30]\" at 70%: quick estimate 15%, market 70%. This is a subjective resolution by the market creator based on linguistic and philosophical arguments about topology and definitions."
+    },
+    {
+      "ts": 1794366412110,
+      "kind": "screen",
+      "text": "Escalated \"Will Jack MA return as a senior executive to Alibaba by 2026 year end?\" at 15%: quick estimate 5% backs the favourite at 15%. There is no credible public indication Jack Ma will return to a formal senior executive role at Alibaba by year-end."
+    },
     {
       "ts": 1794359232418,
       "kind": "score",
@@ -443,26 +463,6 @@
       "ts": 1794241724092,
       "kind": "screen",
       "text": "Passed on \"Will SP500 close at 7500.00 or more between Nov 9 and Nov 30 2026\" at 78%: quick estimate 45%, market 78%. Standard market index prediction with insufficient edge to justify deep model cost."
-    },
-    {
-      "ts": 1794236319550,
-      "kind": "score",
-      "text": "Scored 298 resolved forecasts: my Brier 0.156, the market's 0.099. Closer than the market on 151/298."
-    },
-    {
-      "ts": 1794235361131,
-      "kind": "screen",
-      "text": "Passed on \"2027 Album of the Year Grammy nominees \u2192 'Lux' (Rosalia)\" at 86%: quick estimate 15%, market 86%. Grammy nominations for 2027 are entirely speculative entertainment industry awards with no public tracking data to analyze."
-    },
-    {
-      "ts": 1794235361123,
-      "kind": "screen",
-      "text": "Passed on \"2026 US Senate Election: will the party of the winner of this state's \" at 97%: quick estimate 52%, market 97%. This is a standard conditional probability on Senate control tied to a specific state outcome, offering no unique edge."
-    },
-    {
-      "ts": 1794232714453,
-      "kind": "score",
-      "text": "Scored 298 resolved forecasts: my Brier 0.156, the market's 0.099. Closer than the market on 151/298."
     }
   ],
   "todos": [
@@ -2330,6 +2330,24 @@
   ],
   "screens": [
     {
+      "ts": 1794366412110,
+      "question": "Does a drinking straw have two holes? [Convince the Machine #30]",
+      "url": "https://manifold.markets/Terminator2/does-a-drinking-straw-have-two-hole",
+      "passed": false,
+      "market_prob": 0.7,
+      "quick_prob": 0.15,
+      "why": "quick estimate 15%, market 70%. This is a subjective resolution by the market creator based on linguistic and philosophical arguments about topology and definitions."
+    },
+    {
+      "ts": 1794366412104,
+      "question": "Will Jack MA return as a senior executive to Alibaba by 2026 year end?",
+      "url": "https://manifold.markets/MP/will-jack-ma-return-as-a-senior-exe",
+      "passed": true,
+      "market_prob": 0.15000000000000016,
+      "quick_prob": 0.05,
+      "why": "quick estimate 5% backs the favourite at 15%. There is no credible public indication Jack Ma will return to a formal senior executive role at Alibaba by year-end."
+    },
+    {
       "ts": 1794358904638,
       "question": "Which US House districts in the Midwest will a Democrat win? \u2192 Minnesota's 1st district (Finstad-R)",
       "url": "https://manifold.markets/TW5z0p/which-us-house-districts-in-the-mid",
@@ -2670,27 +2688,32 @@
       "market_prob": 0.7782646244884267,
       "quick_prob": 0.45,
       "why": "quick estimate 45%, market 78%. Standard market index prediction with insufficient edge to justify deep model cost."
-    },
-    {
-      "ts": 1794235361123,
-      "question": "2027 Album of the Year Grammy nominees \u2192 'Lux' (Rosalia)",
-      "url": "https://manifold.markets/a_l_e_x/2027-album-of-the-year-grammy-nomin",
-      "passed": false,
-      "market_prob": 0.861246630054709,
-      "quick_prob": 0.15,
-      "why": "quick estimate 15%, market 86%. Grammy nominations for 2027 are entirely speculative entertainment industry awards with no public tracking data to analyze."
-    },
-    {
-      "ts": 1794235361114,
-      "question": "2026 US Senate Election: will the party of the winner of this state's senate seat go on to win senate control? \u2192 Alaska",
-      "url": "https://manifold.markets/RaymondChristopherTanto/2026-us-senate-election-will-the-pa",
-      "passed": false,
-      "market_prob": 0.9687924084946816,
-      "quick_prob": 0.52,
-      "why": "quick estimate 52%, market 97%. This is a standard conditional probability on Senate control tied to a specific state outcome, offering no unique edge."
     }
   ],
   "decisions": [
+    {
+      "ts": 1794366557887,
+      "kind": "no_trade",
+      "question": "Will Jack MA return as a senior executive to Alibaba by 2026 year end?",
+      "url": "https://manifold.markets/MP/will-jack-ma-return-as-a-senior-exe",
+      "market_prob": 0.15000000000000016,
+      "model_prob": 0.08,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "While reports indicate Jack Ma is actively advising on strategic decisions in late 2026, he holds no formal C-suite title (CEO/CTO). With under two months left in 2026, an official executive appointment remains unlikely given political and governance dynamics.",
+      "uncertainty": "Whether Alibaba issues an official governance filing appointing Ma to a formal executive title (CEO, CTO, Executive VP) before Dec 31, 2026.",
+      "resolution_risk": "The market creator might loosely interpret news of Ma's informal strategic guidance as being 'clearly in charge' without a formal C-suite appointment.",
+      "evidence_for": [
+        "Reports in late October 2026 indicate Jack Ma is actively advising and influencing Alibaba's strategy in AI and e-commerce."
+      ],
+      "evidence_against": [
+        "Jack Ma stepped down as Executive Chairman in 2019 and reduced his stake to 4.8%.",
+        "Eddie Wu remains CEO and Joseph Tsai remains Chairman with no official corporate filings indicating a C-suite change.",
+        "Regulatory and political dynamics in China make a formal high-profile executive comeback unlikely."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1794359220974,
       "kind": "no_trade",
@@ -3021,28 +3044,6 @@
       ],
       "evidence_against": [
         "It is theoretically possible for all NFL kickers to go 100 percent on extra points during a single week, though this occurs in under 5 percent of weeks."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1794186794116,
-      "kind": "no_trade",
-      "question": "Who will win the 2026 League of Legends World Championship? \u2192 Bilibili Gaming",
-      "url": "https://manifold.markets/SteveSokolowski/who-will-win-the-2026-league-of-leg",
-      "market_prob": 0.28944376223632534,
-      "model_prob": 0.22,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Re-assessing BLG at 22% win probability for Worlds 2026. While they are a premier team, competing against favorites like Gen.G and T1 in remaining Bo5 series limits their overall championship probability.",
-      "uncertainty": "BLG's tactical preparation and form in the upcoming Bo5 series against tier-one LCK opposition.",
-      "resolution_risk": "None; resolves cleanly to whoever lifts the trophy by November 14.",
-      "evidence_for": [
-        "BLG is one of the premier LPL teams remaining in the deep stages of Worlds 2026."
-      ],
-      "evidence_against": [
-        "Gen.G is currently favored to win the overall tournament.",
-        "BLG faces a tough remaining playoff path requiring consecutive Bo5 wins against top LCK contenders."
       ],
       "reason": "size floored to zero by balance reserve"
     }
