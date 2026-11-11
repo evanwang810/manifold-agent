@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1794381087789,
+  "generated_ms": 1794381623999,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 11,
+      "today": 14,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 3,
+      "today": 4,
       "cap": 54
     }
   },
@@ -51,7 +51,7 @@
     "closer": 154,
     "disagree_n": 264,
     "disagree_closer": 141,
-    "open": 101,
+    "open": 102,
     "bets": 173,
     "fav_n": 80,
     "fav_won": 64,
@@ -64,6 +64,31 @@
   "net_worth": 591.03,
   "summary": "Balance M$5. Net worth M$591. 18 open positions, 6 of them closed and awaiting resolution. Over 301 resolved forecasts, our Brier score is 0.155 compared to the market's 0.100. We forecast worse than the market price overall, and our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 154 of 301; on big disagreements, 141 of 264. Resolved bets: 173. Backing the favourite: won 64 of 80. Longshots against the favourite: won 21 of 93.\n\nSpendable cash remains heavily restricted by balance reserve limits and the M$10 cash reserve, which repeatedly floor trade sizes to zero or leave us with minimal active capital. Active open positions include bets on Codeforces IGM, Navier-Stokes solutions before IPO, US midterm turnout, state political races, tennis matches, Mountain View City Council, US Congress races, NASA eclipse livestreams, Nebraska Senate races, OpenAI recursive models, League of Legends Worlds outcomes, and OpenAI going public not via an IPO. Recent resolutions include F1 Brazil Grand Prix props, Alibaba Qwen 4 releases, GOP Congress election losses, and Colorado Initiative 85.\n\nMistakes worth avoiding include the Longshot Leak, taking low-probability bets against strong favourites, the Narrative Trap, allowing compelling stories to mask poor mathematical expected value, failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero.\n\nCalibration is poor for speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favourites is significantly more reliable, evidenced by winning 64 of 80 bets. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favourite backing while managing reserve limits and capital allocation.",
   "journal": [
+    {
+      "ts": 1794381623398,
+      "kind": "score",
+      "text": "Scored 301 resolved forecasts: my Brier 0.155, the market's 0.100. Closer than the market on 154/301."
+    },
+    {
+      "ts": 1794381613103,
+      "kind": "analysis",
+      "text": "Analysed \"Are neural networks already clean?\": market 23%, my 22% (medium). No trade, edge 0.07 log-odds below minimum 0.2."
+    },
+    {
+      "ts": 1794381312329,
+      "kind": "screen",
+      "text": "Escalated \"Are neural networks already clean?\" at 23%: quick estimate 10% backs the favourite at 23%. Resolves entirely on the creator's subjective opinion of a paper and public discourse, making it untradeable."
+    },
+    {
+      "ts": 1794381312322,
+      "kind": "screen",
+      "text": "Passed on \"Will the GTA VI leaker be publicly identified before GTA VI releases?\" at 7%: quick estimate 35%, market 7%. Relies heavily on subjective creator judgment and future unpredictable news events regarding the leaker."
+    },
+    {
+      "ts": 1794381312315,
+      "kind": "screen",
+      "text": "Passed on \"Will Grand Theft Auto 6 require ID to play legally in the US upon rele\" at 6%: quick estimate 5%, market 6%. Vague resolution criteria and subjective framing make this a coin flip depending on arbitrary interpretations."
+    },
     {
       "ts": 1794377721974,
       "kind": "score",
@@ -438,31 +463,6 @@
       "ts": 1794256615320,
       "kind": "screen",
       "text": "Escalated \"Will we get another teaser for The Elder Scrolls VI on November 11?\" at 8%: quick estimate 5% backs the favourite at 8%. Bethesda rarely drops surprise TES6 trailers on arbitrary dates without long marketing campaigns."
-    },
-    {
-      "ts": 1794256615315,
-      "kind": "screen",
-      "text": "Passed on \"Will China's suspension of its October 2025 rare-earth export controls\" at 86%: quick estimate 50%, market 86%. This is a complex trade policy question with insufficient public tracking on whether the suspension has been extended."
-    },
-    {
-      "ts": 1794256615309,
-      "kind": "screen",
-      "text": "Passed on \"Anthropic will not IPO in November, 2026\" at 19%: quick estimate 95%, market 19%. An immediate IPO in November given reported investor doubts about a $1.5T valuation is extremely unlikely."
-    },
-    {
-      "ts": 1794256615303,
-      "kind": "screen",
-      "text": "Passed on \"Will Claude Fable 5.5 be released before Nov 16?\" at 5%: quick estimate 5%, market 5%. No announcement of Claude Fable 5.5 has been made, and 7 days is too short for Anthropic to drop a major release unannounced."
-    },
-    {
-      "ts": 1794253380027,
-      "kind": "score",
-      "text": "Scored 298 resolved forecasts: my Brier 0.156, the market's 0.099. Closer than the market on 151/298."
-    },
-    {
-      "ts": 1794252994070,
-      "kind": "screen",
-      "text": "Passed on \"If Labour wins the 2026 NZ general election, they are dependent on sup\" at 95%: quick estimate 45%, market 95%. Polling and conditional structure make this a standard uncertainty requiring no deep model intervention."
     }
   ],
   "todos": [
@@ -2330,6 +2330,33 @@
   ],
   "screens": [
     {
+      "ts": 1794381312322,
+      "question": "Are neural networks already clean?",
+      "url": "https://manifold.markets/Bayesian/are-neural-networks-already-clean",
+      "passed": true,
+      "market_prob": 0.23141382774594757,
+      "quick_prob": 0.1,
+      "why": "quick estimate 10% backs the favourite at 23%. Resolves entirely on the creator's subjective opinion of a paper and public discourse, making it untradeable."
+    },
+    {
+      "ts": 1794381312315,
+      "question": "Will the GTA VI leaker be publicly identified before GTA VI releases?",
+      "url": "https://manifold.markets/Zeolite/will-the-gta-vi-leaker-be-publicly",
+      "passed": false,
+      "market_prob": 0.07102991882348757,
+      "quick_prob": 0.35,
+      "why": "quick estimate 35%, market 7%. Relies heavily on subjective creator judgment and future unpredictable news events regarding the leaker."
+    },
+    {
+      "ts": 1794381312308,
+      "question": "Will Grand Theft Auto 6 require ID to play legally in the US upon release?",
+      "url": "https://manifold.markets/Ataraxia/will-grand-theft-auto-6-require-id",
+      "passed": false,
+      "market_prob": 0.056097867151610185,
+      "quick_prob": 0.05,
+      "why": "quick estimate 5%, market 6%. Vague resolution criteria and subjective framing make this a coin flip depending on arbitrary interpretations."
+    },
+    {
       "ts": 1794377518232,
       "question": "Will Donald Trump and/or MAGA be satirized in GTA VI?",
       "url": "https://manifold.markets/snazzlePop/will-donald-trump-or-maga-be-satiri",
@@ -2661,36 +2688,32 @@
       "market_prob": 0.86,
       "quick_prob": 0.5,
       "why": "quick estimate 50%, market 86%. This is a complex trade policy question with insufficient public tracking on whether the suspension has been extended."
-    },
-    {
-      "ts": 1794256615303,
-      "question": "Anthropic will not IPO in November, 2026",
-      "url": "https://manifold.markets/MichaeldelaMaza/anthropic-will-not-ipo-in-november",
-      "passed": false,
-      "market_prob": 0.19,
-      "quick_prob": 0.95,
-      "why": "quick estimate 95%, market 19%. An immediate IPO in November given reported investor doubts about a $1.5T valuation is extremely unlikely."
-    },
-    {
-      "ts": 1794256615297,
-      "question": "Will Claude Fable 5.5 be released before Nov 16?",
-      "url": "https://manifold.markets/EvanWang11j3/will-claude-fable-55-be-released-be",
-      "passed": false,
-      "market_prob": 0.04878482760735257,
-      "quick_prob": 0.05,
-      "why": "quick estimate 5%, market 5%. No announcement of Claude Fable 5.5 has been made, and 7 days is too short for Anthropic to drop a major release unannounced."
-    },
-    {
-      "ts": 1794252994064,
-      "question": "If Labour wins the 2026 NZ general election, they are dependent on support from Te P\u0101ti M\u0101ori to govern",
-      "url": "https://manifold.markets/B/if-labour-wins-the-2026-nz-general",
-      "passed": false,
-      "market_prob": 0.9492900348829274,
-      "quick_prob": 0.45,
-      "why": "quick estimate 45%, market 95%. Polling and conditional structure make this a standard uncertainty requiring no deep model intervention."
     }
   ],
   "decisions": [
+    {
+      "ts": 1794381613096,
+      "kind": "no_trade",
+      "question": "Are neural networks already clean?",
+      "url": "https://manifold.markets/Bayesian/are-neural-networks-already-clean",
+      "market_prob": 0.23141382774594757,
+      "model_prob": 0.22,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "While Nick Cammarata's Goodfire post sparked debate, the broader mechanistic interpretability community remains skeptical of the claim that superposition is a non-issue. Since the creator intends to weight community consensus heavily, a YES resolution appears unlikely.",
+      "uncertainty": "Whether the creator interprets community nuance as refuting the paper's thesis or validating its core observation.",
+      "resolution_risk": "Subjective resolution reliant on a non-expert creator's personal summary of ongoing AI safety debate.",
+      "evidence_for": [
+        "Nick Cammarata (Goodfire) published an essay claiming modern neural network neurons are largely monosemantic and legible without complex SAEs."
+      ],
+      "evidence_against": [
+        "Established mechanistic interpretability literature from Anthropic and OpenAI extensively documents superposition and polysemanticity.",
+        "Community discourse in late October 2026 pushed back on Cammarata's essay, viewing it as an oversimplification rather than a total shift in paradigm.",
+        "The creator explicitly states their verdict will depend on community reactions, which lean skeptical of the absolute claim."
+      ],
+      "reason": "edge 0.07 log-odds below minimum 0.2"
+    },
     {
       "ts": 1794366557887,
       "kind": "no_trade",
@@ -3024,28 +3047,6 @@
         "Labour also gains from special votes relative to right-leaning parties, meaning Green candidates must significantly outpace Labour on special ballots to erase the 140-vote deficit."
       ],
       "reason": "edge 0.20 log-odds below minimum 0.2"
-    },
-    {
-      "ts": 1794187128067,
-      "kind": "no_trade",
-      "question": "NFL Week 9 - Prop Bets \u2192 At least one missed kicking extra point attempt",
-      "url": "https://manifold.markets/StopPunting/nfl-week-9-prop-bets-cA5cE08Cl8",
-      "market_prob": 0.772446094395226,
-      "model_prob": 0.96,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "NFL weekly base rates strongly favor at least one missed extra point attempt across 14+ games, as kickers average 3-4 missed PATs per week league-wide.",
-      "uncertainty": "Box score confirmation for all Week 9 games played Nov 5-9, 2026.",
-      "resolution_risk": "Two-point conversion failures or aborted snaps not counted as kicked PAT attempts could cause confusion, though standard missed kick attempts are unambiguous.",
-      "evidence_for": [
-        "NFL kickers average 3-4 missed extra point attempts per week league-wide since the 33-yard PAT rule change.",
-        "With 60 to 80 PAT attempts across a full NFL game slate at a ~95 percent success rate, the probability of at least one miss is mathematically high."
-      ],
-      "evidence_against": [
-        "It is theoretically possible for all NFL kickers to go 100 percent on extra points during a single week, though this occurs in under 5 percent of weeks."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
