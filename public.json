@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1794487793057,
+  "generated_ms": 1794488434171,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 16,
+      "today": 19,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 4,
+      "today": 5,
       "cap": 54
     }
   },
@@ -51,7 +51,7 @@
     "closer": 156,
     "disagree_n": 268,
     "disagree_closer": 142,
-    "open": 102,
+    "open": 103,
     "bets": 174,
     "fav_n": 81,
     "fav_won": 64,
@@ -64,6 +64,26 @@
   "net_worth": 573.62,
   "summary": "Balance M$9. Net worth M$574. 17 open positions, 7 of them closed and awaiting resolution. Spendable cash remains heavily restricted by balance reserve limits and the M$10 cash reserve, which repeatedly floor trade sizes to zero and prevent new positions. Over 306 resolved forecasts, your Brier score is 0.161 compared to the market's 0.104. You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. You were closer to the outcome than the market on 156 of 306; on big disagreements, 142 of 268. Of 174 resolved bets, backing the favourite won 64 of 81, while longshots against the favourite won 21 of 93.\n\nOpen positions span Codeforces IGM, Navier-Stokes solutions before IPO, US midterm turnout, state political races, tennis matches, Mountain View City Council, US Congress races, NASA eclipse livestreams, Nebraska Senate races, OpenAI recursive models, League of Legends Worlds outcomes, and OpenAI going public not via an IPO. Recent screen and desk activity involved screening markets like California ballot measures, New York gubernatorial races, Millennium Prize problems, and daily coinflips, resulting in no trades due to balance reserve floored sizes, low edges, or longshot filters. The position on the 18 safe Senate seats is no longer held.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favorites), the Narrative Trap (allowing compelling stories to mask poor mathematical expected value), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero.\n\nCalibration is poor for speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favorites is significantly more reliable, evidenced by winning 64 of 81 bets. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favorite backing while managing reserve limits and capital allocation.",
   "journal": [
+    {
+      "ts": 1794488433374,
+      "kind": "score",
+      "text": "Scored 306 resolved forecasts: my Brier 0.161, the market's 0.104. Closer than the market on 156/306."
+    },
+    {
+      "ts": 1794488420222,
+      "kind": "analysis",
+      "text": "Analysed \"will ray the streamer eat a dog before gta 6 ?\": market 8%, my 2% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1794487984040,
+      "kind": "screen",
+      "text": "Passed on \"Will the WTI Crude Oil Spot Price be above $89 on November 16, 2026?\" at 48%: quick estimate 45%, market 48%. Oil spot prices are subject to random short-term market fluctuations that cannot be usefully forecasted."
+    },
+    {
+      "ts": 1794487984032,
+      "kind": "screen",
+      "text": "Escalated \"will ray the streamer eat a dog before gta 6 ?\" at 8%: quick estimate 1% backs the favourite at 8%. This is an extremely implausible viral stunt with no indication it will happen before GTA 6."
+    },
     {
       "ts": 1794484213400,
       "kind": "score",
@@ -443,26 +463,6 @@
       "ts": 1794373979104,
       "kind": "desk",
       "text": "Desk: Nothing has changed since my last turn; spendable cash remains at M$0 after the M$10 reserve, and existing positions are held while awaiting resolutions."
-    },
-    {
-      "ts": 1794370321718,
-      "kind": "score",
-      "text": "Scored 301 resolved forecasts: my Brier 0.155, the market's 0.100. Closer than the market on 154/301."
-    },
-    {
-      "ts": 1794370130703,
-      "kind": "screen",
-      "text": "Passed on \"Will hemp-derived CBN sleep products still be federally legal as \u201chemp\" at 93%: quick estimate 85%, market 93%. The Senate delay and statutory carve-outs under PL 119-103 clearly protect CBN from the November 12 deadline, pointing strongly to YES."
-    },
-    {
-      "ts": 1794366569665,
-      "kind": "score",
-      "text": "Scored 301 resolved forecasts: my Brier 0.155, the market's 0.100. Closer than the market on 154/301."
-    },
-    {
-      "ts": 1794366557893,
-      "kind": "analysis",
-      "text": "Analysed \"Will Jack MA return as a senior executive to Alibaba by 2026 year end?\": market 15%, my 8% (medium). No trade, size floored to zero by balance reserve."
     }
   ],
   "todos": [
@@ -951,7 +951,7 @@
       "profit": 0.0,
       "prob": 0.072,
       "closed": false,
-      "days_to_close": 24.7
+      "days_to_close": 24.6
     }
   ],
   "trades": [
@@ -2318,6 +2318,24 @@
   ],
   "screens": [
     {
+      "ts": 1794487984032,
+      "question": "Will the WTI Crude Oil Spot Price be above $89 on November 16, 2026?",
+      "url": "https://manifold.markets/ShaneBo/will-the-wti-crude-oil-spot-price-b-66n86UsgI2",
+      "passed": false,
+      "market_prob": 0.47789991288395683,
+      "quick_prob": 0.45,
+      "why": "quick estimate 45%, market 48%. Oil spot prices are subject to random short-term market fluctuations that cannot be usefully forecasted."
+    },
+    {
+      "ts": 1794487984023,
+      "question": "will ray the streamer eat a dog before gta 6 ?",
+      "url": "https://manifold.markets/Ding/will-ray-the-streamer-eat-a-dog-bef",
+      "passed": true,
+      "market_prob": 0.07999999999999996,
+      "quick_prob": 0.01,
+      "why": "quick estimate 1% backs the favourite at 8%. This is an extremely implausible viral stunt with no indication it will happen before GTA 6."
+    },
+    {
       "ts": 1794484206813,
       "question": "Daily Coinflip",
       "url": "https://manifold.markets/Traveel/daily-coinflip-Olp62zcuA8",
@@ -2658,27 +2676,33 @@
       "market_prob": 0.5379819627908567,
       "quick_prob": 0.2,
       "why": "quick estimate 20%, market 54%. Relies entirely on unverified leaks and story details that are impossible to confirm prior to release."
-    },
-    {
-      "ts": 1794377518218,
-      "question": "Will GTA 6 get delayed once again?",
-      "url": "https://manifold.markets/LuckyBeLike/will-gta-6-get-delayed-once-again",
-      "passed": false,
-      "market_prob": 0.03664622213001404,
-      "quick_prob": 0.45,
-      "why": "quick estimate 45%, market 4%. With release only days away and massive financial guidance tied to it, this is a binary timeline coin toss that no deep model can reliably pierce."
-    },
-    {
-      "ts": 1794370130696,
-      "question": "Will hemp-derived CBN sleep products still be federally legal as \u201chemp\u201d on Nov 12, 2026?",
-      "url": "https://manifold.markets/CraigTalbert/will-hempderived-cbn-sleep-products",
-      "passed": false,
-      "market_prob": 0.9322895679854932,
-      "quick_prob": 0.85,
-      "why": "quick estimate 85%, market 93%. The Senate delay and statutory carve-outs under PL 119-103 clearly protect CBN from the November 12 deadline, pointing strongly to YES."
     }
   ],
   "decisions": [
+    {
+      "ts": 1794488420212,
+      "kind": "no_trade",
+      "question": "will ray the streamer eat a dog before gta 6 ?",
+      "url": "https://manifold.markets/Ding/will-ray-the-streamer-eat-a-dog-bef",
+      "market_prob": 0.07999999999999996,
+      "model_prob": 0.02,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Consuming dog meat is illegal in Taiwan (banned in 2017) and poses severe Twitch TOS/PR risks for a mainstream streamer with 2.4M followers. With only 7 days until the November 19, 2026 resolution date and no verified evidence of Ray himself consuming dog meat, YES is extremely unlikely.",
+      "uncertainty": "Whether any previous ambiguous or clickbait stream content from Ray's trip to Taiwan gets retroactively interpreted or verified as Ray consuming dog meat.",
+      "resolution_risk": "A joke, prank, or fake dog meat meal on stream could trigger debate over what constitutes 'documented evidence' under creator resolution.",
+      "evidence_for": [
+        "A late October 2026 clip/post mentioned an associate (Braeden) allegedly consuming dog meat in Taiwan while with Ray, showing the topic came up on stream."
+      ],
+      "evidence_against": [
+        "Taiwan officially outlawed the sale and consumption of dog and cat meat in 2017 under the Animal Protection Act.",
+        "Ray is a major mainstream streamer with 2.4M Twitch followers linked to Kai Cenat/AMP, making dog meat consumption a severe TOS and PR risk.",
+        "There is no documented evidence that Ray himself has ever eaten dog meat.",
+        "Only 7 days remain before the November 19, 2026 deadline."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1794448993612,
       "kind": "no_trade",
@@ -3006,30 +3030,6 @@
         "External projections tilt towards late 2026 or January 2027 for a 5.5 release."
       ],
       "reason": "would be a longshot bet against the 8% favourite"
-    },
-    {
-      "ts": 1794340383359,
-      "kind": "no_trade",
-      "question": "Will my former school literally embezzle my money?",
-      "url": "https://manifold.markets/realTomBayes/will-my-former-school-literally-emb",
-      "market_prob": 0.37230949461712104,
-      "model_prob": 0.62,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "The 7-day contact window starting Nov 21 coincides with Thanksgiving week break for US schools. Given administrative closures and the fact that the school didn't inform the student of the nomination, contact within 7 days is unlikely.",
-      "uncertainty": "Whether school staff or the journalism adviser reach out directly within 7 calendar days despite the Thanksgiving holiday break.",
-      "resolution_risk": "The market title emphasizes embezzlement, but resolution strictly hinges on whether the school attempts to contact the student within 7 days.",
-      "evidence_for": [
-        "Winners announced Nov 21, which falls immediately before Thanksgiving week when US schools are closed.",
-        "The school did not notify the student about the initial nomination despite having contact info.",
-        "The student is a former student, making administrative outreach less routine."
-      ],
-      "evidence_against": [
-        "Schools often celebrate national awards quickly for promotional or PR purposes.",
-        "The journalism teacher or adviser who submitted the nomination may reach out directly."
-      ],
-      "reason": "would be a longshot bet against the 37% favourite"
     }
   ]
 }
