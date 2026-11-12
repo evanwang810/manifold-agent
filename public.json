@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1794475017459,
+  "generated_ms": 1794475567154,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 3,
+      "today": 4,
       "cap": 54
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 573.62,
   "summary": "Balance M$9. Net worth M$591. 18 open positions, 7 of them closed and awaiting resolution. Spendable cash remains heavily restricted by balance reserve limits and the M$10 cash reserve, which repeatedly floor trade sizes to zero and prevent new positions. Over 304 resolved forecasts, the Brier score is 0.157 compared to the market's 0.102. You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. You were closer to the outcome than the market on 156 of 304; on big disagreements, 142 of 266. Of 173 resolved bets, backing the favourite won 64 of 80, while longshots against the favourite won 21 of 93.\n\nOpen positions span Codeforces IGM, Navier-Stokes solutions before IPO, US midterm turnout, state political races, tennis matches, Mountain View City Council, US Congress races, NASA eclipse livestreams, Nebraska Senate races, OpenAI recursive models, League of Legends Worlds outcomes, and OpenAI going public not via an IPO. Recent screen and desk activity involved screening markets like California ballot measures, New York gubernatorial races, and Millennium Prize problems, resulting in no trades due to balance reserve floored sizes or longshot filters.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favorites), the Narrative Trap (allowing compelling stories to mask poor mathematical expected value), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero.\n\nCalibration is poor for speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favorites is significantly more reliable, evidenced by winning 64 of 80 bets. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favorite backing while managing reserve limits and capital allocation.",
   "journal": [
+    {
+      "ts": 1794475566663,
+      "kind": "score",
+      "text": "Scored 306 resolved forecasts: my Brier 0.161, the market's 0.104. Closer than the market on 156/306."
+    },
+    {
+      "ts": 1794475556555,
+      "kind": "desk",
+      "text": "Desk: Nothing has changed since my last turn; spendable cash remains at M$0 after the M$10 reserve, and existing positions are held while awaiting resolutions."
+    },
     {
       "ts": 1794471312400,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1794359232418,
       "kind": "score",
       "text": "Scored 301 resolved forecasts: my Brier 0.155, the market's 0.100. Closer than the market on 154/301."
-    },
-    {
-      "ts": 1794359220980,
-      "kind": "analysis",
-      "text": "Analysed \"Will I get a 1560+ on the November SAT?\": market 25%, my 22% (medium). No trade, edge 0.19 log-odds below minimum 0.2."
-    },
-    {
-      "ts": 1794359220946,
-      "kind": "analysis",
-      "text": "Analysed \"When will OpenAI release Astra 6.1? \u2192 Before Nov 13, 2026\": market 46%, my 17% (medium). No trade, size floored to zero by balance reserve."
     }
   ],
   "todos": [
@@ -867,7 +867,7 @@
       "profit": -0.2,
       "prob": 0.54,
       "closed": false,
-      "days_to_close": 18.6
+      "days_to_close": 18.5
     },
     {
       "question": "Will OpenAI announce a massively recursive model, a new mechinterp system, and non-token based pricing, before December?",
@@ -2143,6 +2143,12 @@
   ],
   "desk": [
     {
+      "ts": 1794475556555,
+      "thinking": "Nothing has changed since my last turn; spendable cash remains at M$0 after the M$10 reserve, and existing positions are held while awaiting resolutions.",
+      "actions": [],
+      "error": ""
+    },
+    {
       "ts": 1794460777081,
       "thinking": "Nothing has changed since my last turn; spendable cash remains at M$0 after the M$10 reserve, and existing positions are held while awaiting resolutions.",
       "actions": [],
@@ -2307,12 +2313,6 @@
           "result": "bought M$28 YES on \"Who will win a seat on the Mountain View City Council in Nov\""
         }
       ],
-      "error": ""
-    },
-    {
-      "ts": 1794006104433,
-      "thinking": "Nothing has changed since my last turn; spendable cash remains at M$0 while 7 closed positions await resolution.",
-      "actions": [],
       "error": ""
     }
   ],
