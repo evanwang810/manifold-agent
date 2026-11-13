@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1794541421586,
+  "generated_ms": 1794541808251,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 1,
+      "today": 4,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 0,
+      "today": 1,
       "cap": 54
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 574.12,
   "summary": "Balance M$9. Net worth M$574. 17 open positions, 7 of them closed and awaiting resolution. Spendable cash remains heavily restricted by balance reserve limits and the M$10 cash reserve, which repeatedly floor trade sizes to zero and prevent new positions. Over 306 resolved forecasts, your Brier score is 0.161 compared to the market's 0.104. You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. You were closer to the outcome than the market on 156 of 306; on big disagreements, 142 of 268. Of 174 resolved bets, backing the favourite won 64 of 81, while longshots against the favourite won 21 of 93.\n\nOpen positions span Codeforces IGM, Navier-Stokes solutions before IPO, US midterm turnout, state political races, tennis matches, Mountain View City Council, US Congress races, NASA eclipse livestreams, Nebraska Senate races, OpenAI recursive models, League of Legends Worlds outcomes, and OpenAI going public not via an IPO. Recent screen and desk activity involved screening markets like Polymarket Fed decisions, OpenAI Astra releases, Alaska Senate vote totals, drinking straw holes, California ballot measures, New York gubernatorial races, and Jensen Huang resignation rumors, resulting in no trades due to balance reserve floored sizes, low edges, or longshot filters. The position on the 18 safe Senate seats is no longer held.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favorites), the Narrative Trap (allowing compelling stories to mask poor mathematical expected value), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero.\n\nCalibration is poor for speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favorites is significantly more reliable, evidenced by winning 64 of 81 bets. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favorite backing while managing reserve limits and capital allocation.",
   "journal": [
+    {
+      "ts": 1794541807365,
+      "kind": "analysis",
+      "text": "Analysed \"Which team will win 2026 PUMaC division A? (Add answers!) \u2192 ultraviole\": market 26%, my 6% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1794541613696,
+      "kind": "screen",
+      "text": "Escalated \"Which team will win 2026 PUMaC division A? (Add answers!) \u2192 ultraviole\" at 26%: quick estimate 8% backs the favourite at 26%. This is a niche math competition with many competing teams and sparse information making deep analysis speculative."
+    },
     {
       "ts": 1794541421055,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1794403876380,
       "kind": "analysis",
       "text": "Analysed \"Is Lumina probiotics a scam? \": market 49%, my 58% (medium). No trade, would be a longshot bet against the 49% favourite."
-    },
-    {
-      "ts": 1794403518762,
-      "kind": "screen",
-      "text": "Passed on \"Will anyone get me to use the letter \"e\" in a comment on this market? \" at 8%: quick estimate 15%, market 8%. The bot has shown strong adherence to the lipogram constraint so far, making a slip unlikely."
-    },
-    {
-      "ts": 1794403518757,
-      "kind": "screen",
-      "text": "Escalated \"Is Lumina probiotics a scam? \" at 49%: quick estimate 40% backs the favourite at 49%. Vibe-based scam criteria and subjective trader opinions make this too ambiguous for a useful deep look."
     }
   ],
   "todos": [
@@ -927,7 +927,7 @@
       "profit": -0.7,
       "prob": 0.36,
       "closed": false,
-      "days_to_close": 3.1
+      "days_to_close": 3.0
     },
     {
       "question": "Who will win the 2026 League of Legends World Championship? \u2192 Bilibili Gaming",
@@ -2297,6 +2297,15 @@
   ],
   "screens": [
     {
+      "ts": 1794541613686,
+      "question": "Which team will win 2026 PUMaC division A? (Add answers!) \u2192 ultraviolet catastrophe",
+      "url": "https://manifold.markets/E142/which-team-will-win-2026-pumac-divi",
+      "passed": true,
+      "market_prob": 0.2577076301601483,
+      "quick_prob": 0.08,
+      "why": "quick estimate 8% backs the favourite at 26%. This is a niche math competition with many competing teams and sparse information making deep analysis speculative."
+    },
+    {
       "ts": 1794537838468,
       "question": "What will be the next country to send a manned flight to the moon \u2192 Other",
       "url": "https://manifold.markets/BillBress/what-will-be-the-next-country-to-se",
@@ -2646,18 +2655,31 @@
       "market_prob": 0.49185634054924204,
       "quick_prob": 0.85,
       "why": "quick estimate 85%, market 49%. German Gref is a prominent advocate for AI and regularly dominates Sber Investor Days with high counts, making 21 mentions very likely."
-    },
-    {
-      "ts": 1794403518757,
-      "question": "Will anyone get me to use the letter \"e\" in a comment on this market? [Convince the Machine #35]",
-      "url": "https://manifold.markets/Terminator2/will-anyone-get-me-to-use-the-lette",
-      "passed": false,
-      "market_prob": 0.07791453993207043,
-      "quick_prob": 0.15,
-      "why": "quick estimate 15%, market 8%. The bot has shown strong adherence to the lipogram constraint so far, making a slip unlikely."
     }
   ],
   "decisions": [
+    {
+      "ts": 1794541807356,
+      "kind": "no_trade",
+      "question": "Which team will win 2026 PUMaC division A? (Add answers!) \u2192 ultraviolet catastrophe",
+      "url": "https://manifold.markets/E142/which-team-will-win-2026-pumac-divi",
+      "market_prob": 0.2577076301601483,
+      "model_prob": 0.06,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "PUMaC Division A usually goes to established math competition powerhouses like Lehigh Valley, Alphastar, or Texas Ramanujan. In a crowded field of 13+ answers, single team entries without confirmed stacked rosters sit around 5-7%.",
+      "uncertainty": "Whether team 'ultraviolet catastrophe' contains top USAMO or IMO team members that make it a hidden powerhouse.",
+      "resolution_risk": "Description specifies that a first-place tie resolves as (100/N)% for each tied team.",
+      "evidence_for": [
+        "Team 'ultraviolet catastrophe' is registered as a competing team in PUMaC 2026 Division A."
+      ],
+      "evidence_against": [
+        "PUMaC Division A is historically dominated by elite math competition powerhouses such as Lehigh Valley Fire, Alphastar AIR, Texas Ramanujan, and Thomas Jefferson A.",
+        "In a field of 13+ options, any single non-dominant entry carries a low prior probability of winning outright."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1794527157511,
       "kind": "no_trade",
@@ -2985,30 +3007,6 @@
         "Minimal structured study time remaining before test day."
       ],
       "reason": "edge 0.19 log-odds below minimum 0.2"
-    },
-    {
-      "ts": 1794359220940,
-      "kind": "no_trade",
-      "question": "When will OpenAI release Astra 6.1? \u2192 Before Nov 13, 2026",
-      "url": "https://manifold.markets/Fastcar99/when-will-openai-release-astra-61",
-      "market_prob": 0.4600000000000001,
-      "model_prob": 0.17,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Astra 6.1 was shelved in late September due to alignment issues, and recent reports suggest focus has shifted toward GPT-6.2 or revised Astra versions. With under 48 hours remaining until November 13 and no official announcement, a release of Astra 6.1 in this window is unlikely.",
-      "uncertainty": "Whether OpenAI makes an unannounced surprise release of Astra 6.1 within the next 48 hours.",
-      "resolution_risk": "OpenAI releases an Astra model under a version name other than 6.1, resolving the Kalshi market NO on technicality.",
-      "evidence_for": [
-        "OpenAI reportedly teased Astra-class developments in late October and early November.",
-        "Kalshi probability for this window was listed at around 53 percent on November 7."
-      ],
-      "evidence_against": [
-        "GPT-6.1 Astra was shelved in late September 2026 due to safety and alignment concerns.",
-        "Less than 48 hours remain before the November 13 deadline without an official release.",
-        "Recent leaks and trackers highlight GPT-6.2 or Astra 6.2 rather than 6.1 specifically."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
