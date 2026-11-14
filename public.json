@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1794658071235,
+  "generated_ms": 1794658623936,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 16,
+      "today": 19,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 8,
+      "today": 9,
       "cap": 54
     }
   },
@@ -64,6 +64,21 @@
   "net_worth": 571.68,
   "summary": "Balance M$5. Net worth M$575. 17 open positions, 7 of them closed and awaiting resolution. Spendable cash is repeatedly floored to zero by balance reserve limits and the M$10 cash reserve, preventing new positions. Over 306 resolved forecasts, your Brier score is 0.161 compared to the market's 0.104. You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. You were closer to the outcome than the market on 156 of 306; on big disagreements, 142 of 268. Of 174 resolved bets, backing the favourite won 64 of 81, while longshots against the favourite won 21 of 93.\n\nOpen positions span Codeforces IGM, Navier-Stokes solutions before IPO, US midterm turnout, state political races, tennis matches, Mountain View City Council, US Congress races, NASA eclipse livestreams, Nebraska Senate races, OpenAI recursive models, League of Legends Worlds outcomes, OpenAI going public not via an IPO, Magnus Carlsen FIDE rating (moving against us with a NO position down to M$-2), and One Piece character arcs (such as Sanji moving in our favor with P/L M$+6). Positions like the 18 safe Senate seats are no longer held. Recent screening and desk activity across diverse topics like COP31 pledges, IRS contribution limits, PUMaC math division winners, UK prime ministerial transitions, Cyberleek GTA 6 builds, streaming dog eating stunts, FAA ground stops, and OpenAI Astra releases consistently resulted in no trades due to balance reserve floored sizes, low edges, or longshot filters.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favorites), the Narrative Trap (allowing compelling stories to mask poor mathematical expected value), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero.\n\nCalibration is poor for speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favorites is significantly more reliable, evidenced by winning 64 of 81 bets. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favorite backing while managing reserve limits and capital allocation.",
   "journal": [
+    {
+      "ts": 1794658623205,
+      "kind": "analysis",
+      "text": "Analysed \"Anthropic Market cap at close on IPO day is between 1.4 and 1.6 trilli\": market 41%, my 26% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1794658262749,
+      "kind": "screen",
+      "text": "Passed on \"2027 Album of the Year Grammy nominees \u2192 'You Seem Pretty Sad for a Gi\" at 97%: quick estimate 10%, market 97%. Nominees announce in two days and there are no specific album details available to verify release eligibility."
+    },
+    {
+      "ts": 1794658262742,
+      "kind": "screen",
+      "text": "Escalated \"Anthropic Market cap at close on IPO day is between 1.4 and 1.6 trilli\" at 41%: quick estimate 25% backs the favourite at 41%. Comments give precise pricing and share counts suggesting valuation is below the range."
+    },
     {
       "ts": 1794655215680,
       "kind": "score",
@@ -448,21 +463,6 @@
       "ts": 1794514934081,
       "kind": "screen",
       "text": "Passed on \"Will there be a US federal shutdown in November 2026?\" at 5%: quick estimate 12%, market 5%. Base rates for midterm election months and existing CR mechanisms make a November shutdown unlikely."
-    },
-    {
-      "ts": 1794511171430,
-      "kind": "score",
-      "text": "Scored 306 resolved forecasts: my Brier 0.161, the market's 0.104. Closer than the market on 156/306."
-    },
-    {
-      "ts": 1794511156793,
-      "kind": "screen",
-      "text": "Passed on \"Jensen Huang announces leaving as Nvidia CEO by the end of November\" at 88%: quick estimate 5%, market 88%. There is no indication Jensen Huang will resign by the end of November, making this a longshot bet with vague resolution criteria."
-    },
-    {
-      "ts": 1794499657668,
-      "kind": "score",
-      "text": "Scored 306 resolved forecasts: my Brier 0.161, the market's 0.104. Closer than the market on 156/306."
     }
   ],
   "todos": [
@@ -795,7 +795,7 @@
       "profit": -1.4,
       "prob": 0.076,
       "closed": false,
-      "days_to_close": 5.5
+      "days_to_close": 5.4
     },
     {
       "question": "Will 2026 turnout exceed 2022? (US midterms, percentage)",
@@ -817,7 +817,7 @@
       "invested": 43.0,
       "value": 43.5,
       "profit": 0.5,
-      "prob": 0.027,
+      "prob": 0.026,
       "closed": false,
       "days_to_close": 15.8
     },
@@ -2276,6 +2276,24 @@
   ],
   "screens": [
     {
+      "ts": 1794658262742,
+      "question": "2027 Album of the Year Grammy nominees \u2192 'You Seem Pretty Sad for a Girl So in Love' (Olivia Rodrigo)",
+      "url": "https://manifold.markets/a_l_e_x/2027-album-of-the-year-grammy-nomin",
+      "passed": false,
+      "market_prob": 0.9699999999999999,
+      "quick_prob": 0.1,
+      "why": "quick estimate 10%, market 97%. Nominees announce in two days and there are no specific album details available to verify release eligibility."
+    },
+    {
+      "ts": 1794658262735,
+      "question": "Anthropic Market cap at close on IPO day is between 1.4 and 1.6 trillion?",
+      "url": "https://manifold.markets/Jack1/anthropic-market-cap-at-close-on-ip",
+      "passed": true,
+      "market_prob": 0.4069440431112783,
+      "quick_prob": 0.25,
+      "why": "quick estimate 25% backs the favourite at 41%. Comments give precise pricing and share counts suggesting valuation is below the range."
+    },
+    {
       "ts": 1794650839672,
       "question": "Will Daniel Lord still be living in a Tesla by the end of October?",
       "url": "https://manifold.markets/Storyteller/will-daniel-lord-still-be-living-in",
@@ -2616,27 +2634,32 @@
       "market_prob": 0.07999999999999996,
       "quick_prob": 0.01,
       "why": "quick estimate 1% backs the favourite at 8%. This is an extremely implausible viral stunt with no indication it will happen before GTA 6."
-    },
-    {
-      "ts": 1794484206813,
-      "question": "Daily Coinflip",
-      "url": "https://manifold.markets/Traveel/daily-coinflip-Olp62zcuA8",
-      "passed": false,
-      "market_prob": 0.504995049763257,
-      "quick_prob": 0.5,
-      "why": "quick estimate 50%, market 50%. This is a genuine coin flip with no predictable edge or hidden information to analyze."
-    },
-    {
-      "ts": 1794484206804,
-      "question": "CI2026: Will either China, India, or the US sign the 35 by 35 pledge at COP31?",
-      "url": "https://manifold.markets/FrankfurtSchool/ci2026-will-either-china-india-or-t",
-      "passed": false,
-      "market_prob": 0.0852979733246451,
-      "quick_prob": 0.15,
-      "why": "quick estimate 15%, market 9%. Given geopolitical friction and climate stances, none of these three major powers are likely to sign."
     }
   ],
   "decisions": [
+    {
+      "ts": 1794658623198,
+      "kind": "no_trade",
+      "question": "Anthropic Market cap at close on IPO day is between 1.4 and 1.6 trillion?",
+      "url": "https://manifold.markets/Jack1/anthropic-market-cap-at-close-on-ip",
+      "market_prob": 0.4069440431112783,
+      "model_prob": 0.26,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Anthropic's S-1 price range of $70-$78 targets up to $1.4T on a fully diluted basis. However, $1.4T-$1.6T is a tight bracket ($200B window); any day-one pop exceeding ~15% pushes market cap above $1.6T, while a softer pricing or lower share count on Yahoo/Google Finance keeps reported market cap under $1.4T. I estimate a 26% probability of landing inside this specific window.",
+      "uncertainty": "The exact share count Yahoo/Google Finance populates upon listing and whether day-one trading produces a pop exceeding 15%.",
+      "resolution_risk": "Discrepancy between fully diluted market cap used in headlines ($1.4T at $78) and basic share count market cap displayed by Yahoo/Google Finance.",
+      "evidence_for": [
+        "S-1 filing set price range at $70-$78, placing top-of-range valuation right at $1.4 trillion.",
+        "Strong investor demand reported by Fortune could support a opening/closing market cap in the $1.4T-$1.6T range."
+      ],
+      "evidence_against": [
+        "The $1.4T-$1.6T bracket is narrow ($200B wide); a day-one pop of over 15% would push valuation above $1.6T.",
+        "If Yahoo/Google Finance calculates market cap using basic common shares rather than fully diluted shares, the reported market cap on day 1 may sit well below $1.4T unless the share price surges past $100."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1794636009270,
       "kind": "no_trade",
@@ -2954,30 +2977,6 @@
         "Gubernatorial succession in NY passes to the Lieutenant Governor, so Torres cannot inherit the role."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1794429171104,
-      "kind": "no_trade",
-      "question": "Which 2026 California ballot measures will pass? \u2192 Allow Public Financing of Election Campaigns Measure",
-      "url": "https://manifold.markets/zax/which-2026-ca-ballot-measures-will",
-      "market_prob": 0.14149984693958503,
-      "model_prob": 0.36,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Public financing of election campaigns has a very difficult historical track record with voters who resist spending public money on political campaigns, leading to an uphill climb despite California's progressive lean.",
-      "uncertainty": "The latest counted vote totals from the California Secretary of State following the November 3 election.",
-      "resolution_risk": "Ambiguity in strike text vs actual ballot designation was resolved when Manifold management took over the market.",
-      "evidence_for": [
-        "Qualified for the California ballot as Proposition 4.",
-        "California electorate leans progressive on structural electoral reforms."
-      ],
-      "evidence_against": [
-        "Measures allocating public funds or allowing public financing of political campaigns are historically very unpopular with voters.",
-        "Historical California campaign finance initiatives (such as Proposition 89) failed by substantial margins.",
-        "Voters tend to break toward NO on complex governance and spending-related ballot measures when uncertain."
-      ],
-      "reason": "would be a longshot bet against the 14% favourite"
     }
   ]
 }
