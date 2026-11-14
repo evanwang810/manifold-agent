@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1794620935419,
+  "generated_ms": 1794621256507,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 2,
+      "today": 5,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 1,
+      "today": 2,
       "cap": 54
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 572.63,
   "summary": "Balance M$5. Net worth M$575. 17 open positions, 7 of them closed and awaiting resolution. Spendable cash is restricted by balance reserve limits and the M$10 cash reserve, which repeatedly floor trade sizes to zero and prevent new positions. Over 306 resolved forecasts, your Brier score is 0.161 compared to the market's 0.104. You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. You were closer to the outcome than the market on 156 of 306; on big disagreements, 142 of 268. Of 174 resolved bets, backing the favourite won 64 of 81, while longshots against the favourite won 21 of 93.\n\nOpen positions span Codeforces IGM, Navier-Stokes solutions before IPO, US midterm turnout, state political races, tennis matches, Mountain View City Council, US Congress races, NASA eclipse livestreams, Nebraska Senate races, OpenAI recursive models, League of Legends Worlds outcomes, and OpenAI going public not via an IPO. Recent desktop monitoring shows positions such as Magnus Carlsen FIDE rating moving against us (+5% to 9% while holding NO, P/L M$-2), while the position on the 18 safe Senate seats is no longer held. Recent screening and desk activity across diverse topics like Anthropic IPO valuations, F1 props, OpenAI Astra releases, SAT scores, Jack Ma's corporate return, CBN sleep products, GTA 6 release and leak timelines, mechanistic interpretability claims, Last Week Tonight appearances, One Piece character arcs, presidential survival on Thanksgiving, AI agent economic impact, AI polling, Left/Right AI culture war, Millennium Prize problems, offshore wind strike prices, streaming dog eating stunts, Jensen Huang resignation rumors, Grammy album nominations, US federal shutdowns, Iranian military strikes, Gemini model releases, PUMaC math division winners, UK prime ministerial transitions, and manned lunar landing timelines consistently resulted in no trades due to balance reserve floored sizes, low edges, or longshot filters.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favorites), the Narrative Trap (allowing compelling stories to mask poor mathematical expected value), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero.\n\nCalibration is poor for speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favorites is significantly more reliable, evidenced by winning 64 of 81 bets. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favorite backing while managing reserve limits and capital allocation.",
   "journal": [
+    {
+      "ts": 1794621256224,
+      "kind": "analysis",
+      "text": "Analysed \"Which team will win 2026 PUMaC division A? (Add answers!) \u2192 Texas ACES\": market 17%, my 14% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1794621124715,
+      "kind": "screen",
+      "text": "Escalated \"Which team will win 2026 PUMaC division A? (Add answers!) \u2192 Texas ACES\" at 17%: quick estimate 8% backs the favourite at 17%. Math competition winner prediction with many strong teams is a low-information guess where a deep model cannot gain an edge."
+    },
     {
       "ts": 1794618145855,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1794445329562,
       "kind": "analysis",
       "text": "Analysed \"If the left/right culture war comes for AI before US elections, will t\": market 71%, my 62% (medium). No trade, would be a longshot bet against the 71% favourite."
-    },
-    {
-      "ts": 1794445329518,
-      "kind": "analysis",
-      "text": "Analysed \"Will there be polling about AI voting advice in 2026 midterms?\": market 96%, my 94% (high). No trade, would be a longshot bet against the 96% favourite."
-    },
-    {
-      "ts": 1794445068518,
-      "kind": "screen",
-      "text": "Escalated \"Will there be polling about AI voting advice in 2026 midterms?\" at 96%: quick estimate 99% backs the favourite at 96%. Pew already conducted and published a poll explicitly matching the criteria in October 2026."
     }
   ],
   "todos": [
@@ -2297,6 +2297,15 @@
   ],
   "screens": [
     {
+      "ts": 1794621124706,
+      "question": "Which team will win 2026 PUMaC division A? (Add answers!) \u2192 Texas ACES",
+      "url": "https://manifold.markets/E142/which-team-will-win-2026-pumac-divi",
+      "passed": true,
+      "market_prob": 0.17011933175060143,
+      "quick_prob": 0.08,
+      "why": "quick estimate 8% backs the favourite at 17%. Math competition winner prediction with many strong teams is a low-information guess where a deep model cannot gain an edge."
+    },
+    {
       "ts": 1794617363761,
       "question": "Which team will win 2026 PUMaC division A? (Add answers!) \u2192 Texas ACES",
       "url": "https://manifold.markets/E142/which-team-will-win-2026-pumac-divi",
@@ -2646,18 +2655,31 @@
       "market_prob": 0.08737682820703514,
       "quick_prob": 0.65,
       "why": "quick estimate 65%, market 9%. Relies heavily on unpredictable future legal rulings with vague timelines and broad immunity standards."
-    },
-    {
-      "ts": 1794445068493,
-      "question": "If the left/right culture war comes for AI before US elections, will the right be the pro-AI side?",
-      "url": "https://manifold.markets/MGG/if-the-leftright-culture-war-comes-1cc8384e933c",
-      "passed": true,
-      "market_prob": 0.7095725515187813,
-      "quick_prob": 0.75,
-      "why": "quick estimate 75% backs the favourite at 71%. Vibes-based definition and missing resolution criteria make this impossible to analyse rigorously."
     }
   ],
   "decisions": [
+    {
+      "ts": 1794621256216,
+      "kind": "no_trade",
+      "question": "Which team will win 2026 PUMaC division A? (Add answers!) \u2192 Texas ACES",
+      "url": "https://manifold.markets/E142/which-team-will-win-2026-pumac-divi",
+      "market_prob": 0.17011933175060143,
+      "model_prob": 0.14,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Texas ACES is a strong team, but Division A features a crowded field of elite teams (Alphastar, Lehigh Valley, TJ A, etc.), giving any single entry around a 10-18% win chance.",
+      "uncertainty": "The exact student roster alignment for Texas ACES relative to rival elite teams like Alphastar AIR and Lehigh Valley Fire for 2026.",
+      "resolution_risk": "Official PUMaC results format or team naming variations, though ties split standardly per description.",
+      "evidence_for": [
+        "Texas ACES is consistently a top-tier contestant in national high school math competitions like PUMaC, HMMT, and ARML."
+      ],
+      "evidence_against": [
+        "Extremely competitive field in Division A including Lehigh Valley Fire, Alphastar AIR, Texas Ramanujan, Thomas Jefferson A, and Lexington Alpha.",
+        "Single-winner outcome across more than 10 highly competitive math teams leads to high variance."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1794584103064,
       "kind": "no_trade",
@@ -2985,29 +3007,6 @@
         "Fortnite trailer background models frequently turn out to be standard NPCs, unrelated battle pass skins, or visual artifacts rather than specific teased crossover characters."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1794381613096,
-      "kind": "no_trade",
-      "question": "Are neural networks already clean?",
-      "url": "https://manifold.markets/Bayesian/are-neural-networks-already-clean",
-      "market_prob": 0.23141382774594757,
-      "model_prob": 0.22,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "While Nick Cammarata's Goodfire post sparked debate, the broader mechanistic interpretability community remains skeptical of the claim that superposition is a non-issue. Since the creator intends to weight community consensus heavily, a YES resolution appears unlikely.",
-      "uncertainty": "Whether the creator interprets community nuance as refuting the paper's thesis or validating its core observation.",
-      "resolution_risk": "Subjective resolution reliant on a non-expert creator's personal summary of ongoing AI safety debate.",
-      "evidence_for": [
-        "Nick Cammarata (Goodfire) published an essay claiming modern neural network neurons are largely monosemantic and legible without complex SAEs."
-      ],
-      "evidence_against": [
-        "Established mechanistic interpretability literature from Anthropic and OpenAI extensively documents superposition and polysemanticity.",
-        "Community discourse in late October 2026 pushed back on Cammarata's essay, viewing it as an oversimplification rather than a total shift in paradigm.",
-        "The creator explicitly states their verdict will depend on community reactions, which lean skeptical of the absolute claim."
-      ],
-      "reason": "edge 0.07 log-odds below minimum 0.2"
     }
   ]
 }
