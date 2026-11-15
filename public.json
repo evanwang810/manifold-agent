@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1794748551106,
+  "generated_ms": 1794749310124,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.7-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 13,
+      "today": 16,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 5,
+      "today": 6,
       "cap": 54
     }
   },
@@ -51,7 +51,7 @@
     "closer": 157,
     "disagree_n": 271,
     "disagree_closer": 143,
-    "open": 110,
+    "open": 111,
     "bets": 174,
     "fav_n": 81,
     "fav_won": 64,
@@ -64,6 +64,21 @@
   "net_worth": 567.15,
   "summary": "Balance M$8. Net worth M$567. 17 open positions, 8 closed and awaiting resolution. Over 310 resolved forecasts, our Brier score is 0.162 compared to the market's 0.104. We forecast WORSE than the market price. Our disagreements have mostly been us being wrong, not the market. Closer to the outcome than the market on 157 of 310; on big disagreements, 143 of 271. Of 174 resolved bets, backing the favourite won 64 of 81, while longshots against the favourite won 21 of 93. Spendable cash is repeatedly floored to zero by balance reserve limits and the M$10 cash reserve, preventing new positions.\n\nOpen positions span Codeforces IGM, Navier-Stokes solutions before IPO, US midterm turnout, state political races, tennis matches, Mountain View City Council, US Congress races, NASA eclipse livestreams, Nebraska Senate races, OpenAI recursive models, League of Legends Worlds outcomes (including Bilibili Gaming moving sharply against our held NO position up to 99%), OpenAI going public not via an IPO, Magnus Carlsen FIDE rating, and One Piece character arcs. A nudge was recently sent to @MattF to resolve the Dome of the Rock market where M$69 of ours is riding. Recent screening and desk activity across topics like GTA 6 dev builds, Jensen Huang divorce rumors, LoL Worlds winrate props, and COP31 pledges consistently resulted in no trades due to balance reserve floored sizes, low edges, or longshot filters.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favorites), the Narrative Trap (allowing compelling stories to mask poor mathematical expected value), failing to respond rapidly to upward price moves in YES shares when holding NO positions (such as the adverse movement on Bilibili Gaming in the League of Legends Worlds market), over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero.\n\nCalibration is poor for speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favorites is significantly more reliable, evidenced by winning 64 of 81 bets. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favorite backing while managing reserve limits and capital allocation. Spendable cash remains floored at M$0 after the M$10 reserve, keeping us inactive on new opportunities while existing positions await resolution.",
   "journal": [
+    {
+      "ts": 1794749309112,
+      "kind": "score",
+      "text": "Scored 310 resolved forecasts: my Brier 0.162, the market's 0.104. Closer than the market on 157/310."
+    },
+    {
+      "ts": 1794749298961,
+      "kind": "analysis",
+      "text": "Analysed \"Will I play GTA6 on my PC within two weeks from its launch?\": market 24%, my 4% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1794748742399,
+      "kind": "screen",
+      "text": "Escalated \"Will I play GTA6 on my PC within two weeks from its launch?\" at 24%: quick estimate 10% backs the favourite at 24%. PS5 emulation is nowhere near capable of running GTA6 at 20 FPS within two weeks, making a leak the only vector."
+    },
     {
       "ts": 1794742006674,
       "kind": "score",
@@ -448,21 +463,6 @@
       "ts": 1794673708759,
       "kind": "score",
       "text": "Scored 307 resolved forecasts: my Brier 0.161, the market's 0.104. Closer than the market on 156/307."
-    },
-    {
-      "ts": 1794673319515,
-      "kind": "analysis",
-      "text": "Analysed \"Anthropic Market cap close on IPO day is $1.5trillion or more?\": market 37%, my 33% (medium). No trade, edge 0.16 log-odds below minimum 0.2."
-    },
-    {
-      "ts": 1794673146832,
-      "kind": "screen",
-      "text": "Passed on \"Will the WTI Crude Oil Spot Price be above $89 on November 16, 2026?\" at 71%: quick estimate 45%, market 71%. This is a standard short-term commodity price prediction with no obvious mispricing or unique edge."
-    },
-    {
-      "ts": 1794673146825,
-      "kind": "screen",
-      "text": "Escalated \"Anthropic Market cap close on IPO day is $1.5trillion or more?\" at 37%: quick estimate 5% backs the favourite at 37%. There has been no announcement of an Anthropic IPO closing by the end of 2026, making this a near-certain N/A."
     }
   ],
   "todos": [
@@ -783,7 +783,7 @@
       "profit": 4.1,
       "prob": 0.31,
       "closed": false,
-      "days_to_close": 0.1
+      "days_to_close": 0.0
     },
     {
       "question": "Will Magnus Carlsen be dethroned from his #1 spot in FIDE rating before GTA 6 is released?",
@@ -927,7 +927,7 @@
       "profit": -0.4,
       "prob": 0.312,
       "closed": false,
-      "days_to_close": 0.7
+      "days_to_close": 0.6
     },
     {
       "question": "Who will win the 2026 League of Legends World Championship? \u2192 Bilibili Gaming",
@@ -2276,6 +2276,15 @@
   ],
   "screens": [
     {
+      "ts": 1794748742392,
+      "question": "Will I play GTA6 on my PC within two weeks from its launch?",
+      "url": "https://manifold.markets/Bandors/will-i-play-gta6-on-my-pc-within-tw",
+      "passed": true,
+      "market_prob": 0.24040796563476546,
+      "quick_prob": 0.1,
+      "why": "quick estimate 10% backs the favourite at 24%. PS5 emulation is nowhere near capable of running GTA6 at 20 FPS within two weeks, making a leak the only vector."
+    },
+    {
       "ts": 1794741433681,
       "question": "Will Reuters or AP publish a photo of Trump, Xi and Putin together in Shenzhen, with no other leader, by Nov 23, 2026?",
       "url": "https://manifold.markets/JaimeM/will-reuters-or-ap-publish-a-photo",
@@ -2625,18 +2634,34 @@
       "market_prob": 0.9601605248261167,
       "quick_prob": 0.99,
       "why": "quick estimate 99% backs the favourite at 96%. Comments provide the exact IRS newsroom release from November 12, 2026 confirming the limit stays at 7500."
-    },
-    {
-      "ts": 1794621124706,
-      "question": "Which team will win 2026 PUMaC division A? (Add answers!) \u2192 Texas ACES",
-      "url": "https://manifold.markets/E142/which-team-will-win-2026-pumac-divi",
-      "passed": true,
-      "market_prob": 0.17011933175060143,
-      "quick_prob": 0.08,
-      "why": "quick estimate 8% backs the favourite at 17%. Math competition winner prediction with many strong teams is a low-information guess where a deep model cannot gain an edge."
     }
   ],
   "decisions": [
+    {
+      "ts": 1794749298953,
+      "kind": "no_trade",
+      "question": "Will I play GTA6 on my PC within two weeks from its launch?",
+      "url": "https://manifold.markets/Bandors/will-i-play-gta6-on-my-pc-within-tw",
+      "market_prob": 0.24040796563476546,
+      "model_prob": 0.04,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Emulating a brand new flagship PS5 release at 20 FPS on consumer hardware within 14 days of launch is technically near-impossible given the current state of PS5 emulation. Rockstar has no day-and-date PC release planned, and cloud streaming is excluded. The only marginal path is a playable leaked PC build, which remains extremely improbable.",
+      "uncertainty": "Whether an unannounced PC release or an unexpectedly playable leaked PC build emerges.",
+      "resolution_risk": "Creator discretion on whether an unfinished leaked build counts as 'playing GTA6'.",
+      "evidence_for": [
+        "Rockstar could theoretically announce a surprise PC release close to console launch.",
+        "A leaked PC development build might be released and deemed 'complete enough' by the creator."
+      ],
+      "evidence_against": [
+        "GTA VI is launching exclusively on PS5 and Xbox Series X/S with no PC launch scheduled.",
+        "PS5 emulation is in its infancy and cannot run complex, bleeding-edge AAA open-world titles at 20 FPS within 14 days of release.",
+        "Cloud streaming is explicitly disqualified by the resolution criteria.",
+        "Leaked builds from past breaches are early debug builds, not full playable games."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1794734475966,
       "kind": "no_trade",
@@ -2954,25 +2979,6 @@
         "Integer truncation creates high sensitivity to boundary thresholds where minor market pullbacks in borderline companies or mega-caps near integer boundaries can quickly reduce the sum by 1-2 points"
       ],
       "reason": "would be a longshot bet against the 46% favourite"
-    },
-    {
-      "ts": 1794628747701,
-      "kind": "no_trade",
-      "question": "What will be the IRS limit for IRA contributions in 2027? \u2192 7500",
-      "url": "https://manifold.markets/Kronopath/what-will-be-the-irs-limit-for-ira-Z8CACcOhZh",
-      "market_prob": 0.9601605248261167,
-      "model_prob": 0.98,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "The IRS officially announced on November 12, 2026 (IR-2026-136 / Notice 2026-66) that the base IRA contribution limit for 2027 remains at $7,500.",
-      "uncertainty": "None, as the official IRS newsroom announcement has already taken place.",
-      "resolution_risk": "Minor delay by the creator in confirming and resolving the market.",
-      "evidence_for": [
-        "On November 12, 2026, the IRS officially published IR-2026-136 / Notice 2026-66 stating the 2027 IRA base contribution limit remains $7,500."
-      ],
-      "evidence_against": [],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
