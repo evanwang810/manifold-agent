@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1794733724213,
+  "generated_ms": 1794734486168,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 8,
+      "today": 11,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 4,
+      "today": 5,
       "cap": 54
     }
   },
@@ -51,7 +51,7 @@
     "closer": 157,
     "disagree_n": 271,
     "disagree_closer": 143,
-    "open": 109,
+    "open": 110,
     "bets": 174,
     "fav_n": 81,
     "fav_won": 64,
@@ -64,6 +64,21 @@
   "net_worth": 567.15,
   "summary": "Balance M$9. Net worth M$568. 17 open positions, 8 of them closed and awaiting resolution. Over 310 resolved forecasts, your Brier score is 0.162 compared to the market's 0.104. You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market. You were closer to the outcome than the market on 157 of 310; on big disagreements, 143 of 271. Of 174 resolved bets, backing the favourite won 64 of 81, while longshots against the favourite won 21 of 93. Spendable cash is repeatedly floored to zero by balance reserve limits and the M$10 cash reserve, preventing new positions.\n\nOpen positions span Codeforces IGM, Navier-Stokes solutions before IPO, US midterm turnout, state political races, tennis matches, Mountain View City Council, US Congress races, NASA eclipse livestreams, Nebraska Senate races, OpenAI recursive models, League of Legends Worlds outcomes (including Bilibili Gaming moving sharply against our held NO position up to 99%), OpenAI going public not via an IPO, Magnus Carlsen FIDE rating, and One Piece character arcs. Recent screening and desk activity across topics like UK prime ministerial transitions, COP31 pledges, Eurovision Asia, IRS contribution limits, PUMaC math division winners, Cyberleek GTA 6 builds, FAA ground stops, and OpenAI Astra releases consistently resulted in no trades due to balance reserve floored sizes, low edges, or longshot filters.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favorites), the Narrative Trap (allowing compelling stories to mask poor mathematical expected value), failing to respond rapidly to upward price moves in YES shares when holding NO positions (such as the adverse movement on Bilibili Gaming in the League of Legends Worlds market), over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero.\n\nCalibration is poor for speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favorites is significantly more reliable, evidenced by winning 64 of 81 bets. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favorite backing while managing reserve limits and capital allocation. Spendable cash remains floored at M$0 after the M$10 reserve, keeping us inactive on new opportunities while existing positions await resolution.",
   "journal": [
+    {
+      "ts": 1794734485665,
+      "kind": "score",
+      "text": "Scored 310 resolved forecasts: my Brier 0.162, the market's 0.104. Closer than the market on 157/310."
+    },
+    {
+      "ts": 1794734475973,
+      "kind": "analysis",
+      "text": "Analysed \"League of Legends Worlds 2026 Prop Bets [Add answers!] \u2192 Champion is p\": market 14%, my 82% (medium). No trade, would be a longshot bet against the 14% favourite."
+    },
+    {
+      "ts": 1794733914468,
+      "kind": "screen",
+      "text": "Escalated \"League of Legends Worlds 2026 Prop Bets [Add answers!] \u2192 Champion is p\" at 14%: quick estimate 5% backs the favourite at 14%. Commenters note stats show champions do not meet the 10 games with 75% winrate threshold."
+    },
     {
       "ts": 1794730161362,
       "kind": "score",
@@ -448,21 +463,6 @@
       "ts": 1794669419540,
       "kind": "screen",
       "text": "Escalated \"Which country will win the Eurovision Song Contest Asia 2026? \u2192 \ud83c\uddf5\ud83c\udded Phi\" at 44%: quick estimate 15% backs the favourite at 44%. Eurovision Asia 2026 has no confirmed broadcast or contest schedule, making this pure speculation."
-    },
-    {
-      "ts": 1794669419533,
-      "kind": "screen",
-      "text": "Passed on \"Which country will win the Eurovision Song Contest Asia 2026? \u2192 \ud83c\uddf0\ud83c\uddf7 Sou\" at 6%: quick estimate 15%, market 6%. Eurovision Asia 2026 has no confirmed broadcast or contest schedule, making this pure speculation."
-    },
-    {
-      "ts": 1794662584737,
-      "kind": "score",
-      "text": "Scored 307 resolved forecasts: my Brier 0.161, the market's 0.104. Closer than the market on 156/307."
-    },
-    {
-      "ts": 1794662022039,
-      "kind": "screen",
-      "text": "Passed on \"Will the Grand Theft Auto 6 release be delayed until December 1st 2026\" at 3%: quick estimate 20%, market 3%. GTA 6 release date tracking is well-covered by public news and does not require deep escalation."
     }
   ],
   "todos": [
@@ -867,7 +867,7 @@
       "profit": -4.4,
       "prob": 0.442,
       "closed": false,
-      "days_to_close": 15.6
+      "days_to_close": 15.5
     },
     {
       "question": "Will OpenAI announce a massively recursive model, a new mechinterp system, and non-token based pricing, before December?",
@@ -2276,6 +2276,15 @@
   ],
   "screens": [
     {
+      "ts": 1794733914461,
+      "question": "League of Legends Worlds 2026 Prop Bets [Add answers!] \u2192 Champion is played 10 or more times with a >=75% winrate",
+      "url": "https://manifold.markets/RedzoneITG/league-of-legends-worlds-2026-prop",
+      "passed": true,
+      "market_prob": 0.14167776143909916,
+      "quick_prob": 0.05,
+      "why": "quick estimate 5% backs the favourite at 14%. Commenters note stats show champions do not meet the 10 games with 75% winrate threshold."
+    },
+    {
       "ts": 1794726148245,
       "question": "League of Legends Worlds 2026 Prop Bets [Add answers!] \u2192 Player dies 10 or more times in a game",
       "url": "https://manifold.markets/RedzoneITG/league-of-legends-worlds-2026-prop",
@@ -2625,18 +2634,32 @@
       "market_prob": 0.05753971724483633,
       "quick_prob": 0.02,
       "why": "quick estimate 2% backs the favourite at 6%. Historical baseline is over 600k deaths, making a drop below 500k in 2025 extremely unlikely."
-    },
-    {
-      "ts": 1794617363743,
-      "question": "Which team will win 2026 PUMaC division A? (Add answers!) \u2192 Texas Ramanujan",
-      "url": "https://manifold.markets/E142/which-team-will-win-2026-pumac-divi",
-      "passed": true,
-      "market_prob": 0.49413514990925234,
-      "quick_prob": 0.05,
-      "why": "quick estimate 5% backs the favourite at 49%. This is a niche math competition multiple-choice market where probability is mostly vibes and crowd noise."
     }
   ],
   "decisions": [
+    {
+      "ts": 1794734475966,
+      "kind": "no_trade",
+      "question": "League of Legends Worlds 2026 Prop Bets [Add answers!] \u2192 Champion is played 10 or more times with a >=75% winrate",
+      "url": "https://manifold.markets/RedzoneITG/league-of-legends-worlds-2026-prop",
+      "market_prob": 0.14167776143909916,
+      "model_prob": 0.82,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Historically at LoL Worlds, top teams carry signature picks to high win rates over 10+ games (e.g., 8-2, 10-2, 12-4). With ~80-120 total games played across the tournament, the base rate for at least one champion achieving >=75% win rate over 10+ games is high.",
+      "uncertainty": "Whether the official tournament statistics summary on gol.gg or Leaguepedia records at least one champion meeting both the 10+ game count and >=75% winrate threshold.",
+      "resolution_risk": "Discrepancies between stat tracking platforms (gol.gg vs Leaguepedia) or whether Play-In stage matches are counted.",
+      "evidence_for": [
+        "Historically across League of Legends World Championships, multiple champions routinely reach 10+ picks with >=75% winrates (e.g., 8-2, 10-2, 12-4) driven by dominant top-tier teams.",
+        "A threshold of 10 games is relatively easy to hit across a full tournament schedule of 80 to 120+ total games."
+      ],
+      "evidence_against": [
+        "Increased draft diversity or Fearless Draft rules can spread games across a wider champion pool.",
+        "High winrate champions are often quickly permabanned by opponents before accumulating 10 games."
+      ],
+      "reason": "would be a longshot bet against the 14% favourite"
+    },
     {
       "ts": 1794726275472,
       "kind": "no_trade",
@@ -2949,28 +2972,6 @@
         "On November 12, 2026, the IRS officially published IR-2026-136 / Notice 2026-66 stating the 2027 IRA base contribution limit remains $7,500."
       ],
       "evidence_against": [],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1794621256216,
-      "kind": "no_trade",
-      "question": "Which team will win 2026 PUMaC division A? (Add answers!) \u2192 Texas ACES",
-      "url": "https://manifold.markets/E142/which-team-will-win-2026-pumac-divi",
-      "market_prob": 0.17011933175060143,
-      "model_prob": 0.14,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Texas ACES is a strong team, but Division A features a crowded field of elite teams (Alphastar, Lehigh Valley, TJ A, etc.), giving any single entry around a 10-18% win chance.",
-      "uncertainty": "The exact student roster alignment for Texas ACES relative to rival elite teams like Alphastar AIR and Lehigh Valley Fire for 2026.",
-      "resolution_risk": "Official PUMaC results format or team naming variations, though ties split standardly per description.",
-      "evidence_for": [
-        "Texas ACES is consistently a top-tier contestant in national high school math competitions like PUMaC, HMMT, and ARML."
-      ],
-      "evidence_against": [
-        "Extremely competitive field in Division A including Lehigh Valley Fire, Alphastar AIR, Texas Ramanujan, Thomas Jefferson A, and Lexington Alpha.",
-        "Single-winner outcome across more than 10 highly competitive math teams leads to high variance."
-      ],
       "reason": "size floored to zero by balance reserve"
     }
   ]
