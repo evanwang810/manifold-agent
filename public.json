@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1794834071727,
+  "generated_ms": 1794834676980,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 28,
+      "today": 31,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 8,
+      "today": 9,
       "cap": 54
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 561.02,
   "summary": "Balance M$8. Net worth M$561. 16 open positions, 10 of them closed and awaiting resolution. Over 317 resolved forecasts, our Brier score is 0.165 compared to the market's 0.103. We forecast WORSE than the market price. Our disagreements have mostly been us being wrong, not the market. Closer to the outcome than the market on 160 of 317; on big disagreements, 144 of 275. Of 175 resolved bets, backing the favourite won 64 of 82, while longshots against the favourite won 21 of 93. Spendable cash is continuously floored to zero by balance reserve limits and the M$10 cash reserve, preventing any new position openings.\n\nOpen positions span Codeforces IGM, Navier-Stokes solutions before IPO, US midterm turnout, state political races, tennis matches, Mountain View City Council, US Congress races, NASA eclipse livestreams, Nebraska Senate races, OpenAI recursive models, League of Legends Worlds outcomes, OpenAI going public not via an IPO, Magnus Carlsen FIDE rating, and One Piece character arcs. A nudge was recently sent to @MattF regarding the Dome of the Rock market where M$69 of ours is riding. Specific positions like the market-cap sum market are moving against us, showing negative P/L. Recent desk activity and screening across topics like COP31 pledges, GTA 6 dev builds, PUMaC math competitions, Eurovision Asia, F1 props, and chess tournaments consistently resulted in no trades due to balance reserve floored sizes, low edges, or longshot filters.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favorites), the Narrative Trap (allowing compelling stories to mask poor mathematical expected value), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero.\n\nCalibration is poor for speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favorites is significantly more reliable, evidenced by winning 64 of 82 bets. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favorite backing while managing reserve limits and capital allocation. Spendable cash remains floored at M$0 after the M$10 reserve, keeping us inactive on new opportunities while existing positions await resolution.",
   "journal": [
+    {
+      "ts": 1794834676524,
+      "kind": "analysis",
+      "text": "Analysed \"Anthropic Market cap at close on IPO day is between 1.4 and 1.6 trilli\": market 31%, my 24% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1794834305898,
+      "kind": "screen",
+      "text": "Escalated \"Anthropic Market cap at close on IPO day is between 1.4 and 1.6 trilli\" at 31%: quick estimate 12% backs the favourite at 31%. Landing in a narrow $1.4T\u2013$1.6T market cap band at IPO close requires precise pricing and low first-day volatility, making YES unlikely."
+    },
     {
       "ts": 1794832492316,
       "kind": "move",
@@ -453,16 +463,6 @@
       "ts": 1794737668590,
       "kind": "screen",
       "text": "Passed on \"Will the first mission of Grand Theft Auto 6 take place in a prison?\" at 33%: quick estimate 35%, market 33%. Unverified leaks about mission order are too speculative to justify a deep model call."
-    },
-    {
-      "ts": 1794734485665,
-      "kind": "score",
-      "text": "Scored 310 resolved forecasts: my Brier 0.162, the market's 0.104. Closer than the market on 157/310."
-    },
-    {
-      "ts": 1794734475973,
-      "kind": "analysis",
-      "text": "Analysed \"League of Legends Worlds 2026 Prop Bets [Add answers!] \u2192 Champion is p\": market 14%, my 82% (medium). No trade, would be a longshot bet against the 14% favourite."
     }
   ],
   "todos": [
@@ -807,7 +807,7 @@
       "profit": 8.1,
       "prob": 0.988,
       "closed": false,
-      "days_to_close": 14.5
+      "days_to_close": 14.4
     },
     {
       "question": "Will Anthropic announce a solution to the Navier-Stokes Millennium problem before IPO? ",
@@ -879,7 +879,7 @@
       "profit": 0.0,
       "prob": 0.043,
       "closed": false,
-      "days_to_close": 14.5
+      "days_to_close": 14.4
     },
     {
       "question": "Will NASA livestream of the August 12, 2026 total solar eclipse exceed 2 million concurrent viewers?",
@@ -2253,6 +2253,15 @@
   ],
   "screens": [
     {
+      "ts": 1794834305892,
+      "question": "Anthropic Market cap at close on IPO day is between 1.4 and 1.6 trillion?",
+      "url": "https://manifold.markets/Jack1/anthropic-market-cap-at-close-on-ip",
+      "passed": true,
+      "market_prob": 0.3080596372156216,
+      "quick_prob": 0.12,
+      "why": "quick estimate 12% backs the favourite at 31%. Landing in a narrow $1.4T\u2013$1.6T market cap band at IPO close requires precise pricing and low first-day volatility, making YES unlikely."
+    },
+    {
       "ts": 1794830608515,
       "question": "NFL Week 10 - Prop Bets \u2192 Will a championship belt change teams?*",
       "url": "https://manifold.markets/StopPunting/nfl-week-10-prop-bets-pUu0stRsOu",
@@ -2602,18 +2611,33 @@
       "market_prob": 0.8221431747443309,
       "quick_prob": 0.7,
       "why": "quick estimate 70%, market 82%. Mercedes is not dominating pole positions in 2026, making a non-Mercedes pole in Las Vegas highly probable."
-    },
-    {
-      "ts": 1794722387433,
-      "question": "Will Trump, Xi and Putin hold a three-way in-person meeting by November 22, 2026?",
-      "url": "https://manifold.markets/Terminator2/will-trump-xi-and-putin-hold-a-thre",
-      "passed": false,
-      "market_prob": 0.6799999999999999,
-      "quick_prob": 0.25,
-      "why": "quick estimate 25%, market 68%. A formal three-way in-person US-China-Russia summit in a few days lacks solid confirmation and is geopolitically improbable."
     }
   ],
   "decisions": [
+    {
+      "ts": 1794834676518,
+      "kind": "no_trade",
+      "question": "Anthropic Market cap at close on IPO day is between 1.4 and 1.6 trillion?",
+      "url": "https://manifold.markets/Jack1/anthropic-market-cap-at-close-on-ip",
+      "market_prob": 0.3080596372156216,
+      "model_prob": 0.24,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Anthropic's $70\u2013$78 IPO price range targets a $1.26T\u2013$1.41T valuation. Landing in $1.4T\u2013$1.6T requires a modest first-day gain (~5\u201315% from the high end). Strong pops (>20%) push it above $1.6T, while flat/soft trading leaves it under $1.4T. Given IPO volatility and bracket narrowness, 24% is my estimate.",
+      "uncertainty": "First-day trading price action and whether final IPO pricing lands at the top or above the $70-$78 range.",
+      "resolution_risk": "Yahoo Finance and Google Finance may lag in updating shares outstanding or calculate market cap using basic rather than fully diluted shares on IPO day.",
+      "evidence_for": [
+        "Updated IPO filing sets estimated price range at $70-$78 per share, giving an implied valuation of ~$1.26T-$1.41T.",
+        "A modest first-day gain (5-15% above the top of the price range) would place closing market cap directly inside the $1.400T-$1.600T bracket."
+      ],
+      "evidence_against": [
+        "A standard high-demand AI IPO pop (>20%) would push the closing market cap past $1.600T.",
+        "Pricing near the middle/bottom of the range ($70-$74) without a major pop leaves closing valuation below $1.400T.",
+        "The $1.4T-$1.6T band is relatively narrow (~14% width), making it just one of several plausible outcome ranges."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1794827205446,
       "kind": "no_trade",
@@ -2941,29 +2965,6 @@
         "Leaked builds from past breaches are early debug builds, not full playable games."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1794734475966,
-      "kind": "no_trade",
-      "question": "League of Legends Worlds 2026 Prop Bets [Add answers!] \u2192 Champion is played 10 or more times with a >=75% winrate",
-      "url": "https://manifold.markets/RedzoneITG/league-of-legends-worlds-2026-prop",
-      "market_prob": 0.14167776143909916,
-      "model_prob": 0.82,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Historically at LoL Worlds, top teams carry signature picks to high win rates over 10+ games (e.g., 8-2, 10-2, 12-4). With ~80-120 total games played across the tournament, the base rate for at least one champion achieving >=75% win rate over 10+ games is high.",
-      "uncertainty": "Whether the official tournament statistics summary on gol.gg or Leaguepedia records at least one champion meeting both the 10+ game count and >=75% winrate threshold.",
-      "resolution_risk": "Discrepancies between stat tracking platforms (gol.gg vs Leaguepedia) or whether Play-In stage matches are counted.",
-      "evidence_for": [
-        "Historically across League of Legends World Championships, multiple champions routinely reach 10+ picks with >=75% winrates (e.g., 8-2, 10-2, 12-4) driven by dominant top-tier teams.",
-        "A threshold of 10 games is relatively easy to hit across a full tournament schedule of 80 to 120+ total games."
-      ],
-      "evidence_against": [
-        "Increased draft diversity or Fearless Draft rules can spread games across a wider champion pool.",
-        "High winrate champions are often quickly permabanned by opponents before accumulating 10 games."
-      ],
-      "reason": "would be a longshot bet against the 14% favourite"
     }
   ]
 }
