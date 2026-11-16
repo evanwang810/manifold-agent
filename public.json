@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1794826662533,
+  "generated_ms": 1794827206153,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 24,
+      "today": 27,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 6,
+      "today": 7,
       "cap": 54
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 563.54,
   "summary": "Balance M$8. Net worth M$565. 16 open positions, 9 of them closed and awaiting resolution. Over 317 resolved forecasts, our Brier score is 0.165 compared to the market's 0.103. We forecast WORSE than the market price. Our disagreements have mostly been us being wrong, not the market. Closer to the outcome than the market on 160 of 317; on big disagreements, 144 of 275. Of 175 resolved bets, backing the favourite won 64 of 82, while longshots against the favourite won 21 of 93. Spendable cash is continuously floored to zero by balance reserve limits and the M$10 cash reserve, preventing any new position openings.\n\nOpen positions span Codeforces IGM, Navier-Stokes solutions before IPO, US midterm turnout, state political races, tennis matches, Mountain View City Council, US Congress races, NASA eclipse livestreams, Nebraska Senate races, OpenAI recursive models, League of Legends Worlds outcomes, OpenAI going public not via an IPO, Magnus Carlsen FIDE rating, and One Piece character arcs. A nudge was recently sent to @MattF regarding the Dome of the Rock market where M$69 of ours is riding. Recent desk activity and screening across topics like COP31 pledges, GTA 6 dev builds, PUMaC math competitions, Eurovision Asia, and F1 props consistently resulted in no trades due to balance reserve floored sizes, low edges, or longshot filters.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favorites), the Narrative Trap (allowing compelling stories to mask poor mathematical expected value), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero.\n\nCalibration is poor for speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favorites is significantly more reliable, evidenced by winning 64 of 82 bets. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favorite backing while managing reserve limits and capital allocation. Spendable cash remains floored at M$0 after the M$10 reserve, keeping us inactive on new opportunities while existing positions await resolution.",
   "journal": [
+    {
+      "ts": 1794827205455,
+      "kind": "analysis",
+      "text": "Analysed \"Will the first mission of Grand Theft Auto 6 take place in a prison?\": market 43%, my 28% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1794826865322,
+      "kind": "screen",
+      "text": "Escalated \"Will the first mission of Grand Theft Auto 6 take place in a prison?\" at 43%: quick estimate 35% backs the favourite at 43%. Unconfirmed leaks suggest a prison setting, but mainline GTA precedent makes a prison prologue unlikely."
+    },
     {
       "ts": 1794823855293,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1794726275478,
       "kind": "analysis",
       "text": "Analysed \"Will Jensen Huang be divorced before November 23, 2026?\": market 12%, my 1% (high). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1794726148250,
-      "kind": "screen",
-      "text": "Passed on \"League of Legends Worlds 2026 Prop Bets [Add answers!] \u2192 Player dies 1\" at 9%: quick estimate 85%, market 9%. Pro league matches frequently feature extreme outlier games where a player feeds 10+ deaths."
-    },
-    {
-      "ts": 1794726148245,
-      "kind": "screen",
-      "text": "Escalated \"Will Jensen Huang be divorced before November 23, 2026?\" at 12%: quick estimate 1% backs the favourite at 12%. California's mandatory six-month waiting period makes a final decree impossible within a week given no public filings."
     }
   ],
   "todos": [
@@ -2253,6 +2253,15 @@
   ],
   "screens": [
     {
+      "ts": 1794826865312,
+      "question": "Will the first mission of Grand Theft Auto 6 take place in a prison?",
+      "url": "https://manifold.markets/quadruple/will-the-first-mission-of-grand-the",
+      "passed": true,
+      "market_prob": 0.4346895692428559,
+      "quick_prob": 0.35,
+      "why": "quick estimate 35% backs the favourite at 43%. Unconfirmed leaks suggest a prison setting, but mainline GTA precedent makes a prison prologue unlikely."
+    },
+    {
       "ts": 1794823093095,
       "question": "GPT Astra 6.1+ Released By End of November 2026?",
       "url": "https://manifold.markets/Jack1/gpt-astra-61-released-by-end-of-nov",
@@ -2602,18 +2611,33 @@
       "market_prob": 0.12775843412302137,
       "quick_prob": 0.05,
       "why": "quick estimate 5% backs the favourite at 13%. Releasing a playable GTA 6 build by an anonymous leaker before official release is extremely unlikely."
-    },
-    {
-      "ts": 1794714929487,
-      "question": "Will New Zealand's National-led Coalition Government Be Limited to a Single Term?",
-      "url": "https://manifold.markets/Dauur/will-new-zealands-nationalled-coali",
-      "passed": false,
-      "market_prob": 0.2398380944112691,
-      "quick_prob": 0.55,
-      "why": "quick estimate 55%, market 24%. Standard political incumbent risk close to an election with low liquidity, not worth escalating."
     }
   ],
   "decisions": [
+    {
+      "ts": 1794827205446,
+      "kind": "no_trade",
+      "question": "Will the first mission of Grand Theft Auto 6 take place in a prison?",
+      "url": "https://manifold.markets/quadruple/will-the-first-mission-of-grand-the",
+      "market_prob": 0.4346895692428559,
+      "model_prob": 0.28,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "While Lucia's prison context is established in marketing, GTA openings typically prioritize open movement or active heist gameplay. Given the strict requirement for actual playable gameplay inside the facility (excluding cutscenes), I estimate a 28% chance.",
+      "uncertainty": "Whether the prison sequence contains interactive gameplay elements or is strictly a cinematic cutscene preceding her release/escape.",
+      "resolution_risk": "Ambiguity around whether early gameplay taking place on prison transport vehicles or immediate perimeters counts as inside a prison.",
+      "evidence_for": [
+        "Trailer 1 prominently features Lucia in prison attire and talking to a counselor/parole officer.",
+        "A prison tutorial is a widely discussed narrative mechanism to introduce core mechanics before releasing the player into the open world."
+      ],
+      "evidence_against": [
+        "Resolution criteria explicitly state cutscenes do not count; actual playable gameplay must take place inside the prison.",
+        "GTA prologues historically start with high-octane action, heists, or driving rather than restricted location tutorials.",
+        "The prologue mission could focus on the robbery leading to her arrest or start with Jason instead."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1794819888000,
       "kind": "no_trade",
@@ -2940,29 +2964,6 @@
         "High winrate champions are often quickly permabanned by opponents before accumulating 10 games."
       ],
       "reason": "would be a longshot bet against the 14% favourite"
-    },
-    {
-      "ts": 1794726275472,
-      "kind": "no_trade",
-      "question": "Will Jensen Huang be divorced before November 23, 2026?",
-      "url": "https://manifold.markets/apol/will-jensen-huang-be-divorced-befor",
-      "market_prob": 0.12470097022441075,
-      "model_prob": 0.01,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "California Family Code \u00a7 2339 mandates a mandatory 6-month waiting period after formal service before a dissolution of marriage can be finalized. With the deadline just 7 days away and no report of a filing six months ago, a final legal decree before Nov 23 is virtually impossible.",
-      "uncertainty": "Whether an unpublicized divorce filing occurred prior to May 2026 and reached a final judgment in California court.",
-      "resolution_risk": "Jurisdiction technicalities, though both Huang and Nvidia are California-based.",
-      "evidence_for": [
-        "Public scrutiny and resignation following extramarital relationship reports on Nov 12, 2026."
-      ],
-      "evidence_against": [
-        "California Family Code \u00a7 2339 mandates a 6-month waiting period from the date of service before a final divorce judgment can be granted.",
-        "Only 7 days remain before the November 22, 2026 resolution deadline.",
-        "High-net-worth property division typically requires extended legal proceedings far beyond the statutory minimum."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
