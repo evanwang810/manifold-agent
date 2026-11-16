@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1794819217979,
+  "generated_ms": 1794819888429,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 20,
+      "today": 23,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 5,
+      "today": 6,
       "cap": 54
     }
   },
@@ -64,6 +64,21 @@
   "net_worth": 563.54,
   "summary": "Balance M$8. Net worth M$565. 16 open positions, 9 of them closed and awaiting resolution. Over 317 resolved forecasts, our Brier score is 0.165 compared to the market's 0.103. We forecast WORSE than the market price. Our disagreements have mostly been us being wrong, not the market. Closer to the outcome than the market on 160 of 317; on big disagreements, 144 of 275. Of 175 resolved bets, backing the favourite won 64 of 82, while longshots against the favourite won 21 of 93. Spendable cash is continuously floored to zero by balance reserve limits and the M$10 cash reserve, preventing any new position openings.\n\nOpen positions span Codeforces IGM, Navier-Stokes solutions before IPO, US midterm turnout, state political races, tennis matches, Mountain View City Council, US Congress races, NASA eclipse livestreams, Nebraska Senate races, OpenAI recursive models, League of Legends Worlds outcomes, OpenAI going public not via an IPO, Magnus Carlsen FIDE rating, and One Piece character arcs. A nudge was recently sent to @MattF regarding the Dome of the Rock market where M$69 of ours is riding. Recent desk activity and screening across topics like COP31 pledges, GTA 6 dev builds, PUMaC math competitions, Eurovision Asia, and F1 props consistently resulted in no trades due to balance reserve floored sizes, low edges, or longshot filters.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favorites), the Narrative Trap (allowing compelling stories to mask poor mathematical expected value), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero.\n\nCalibration is poor for speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favorites is significantly more reliable, evidenced by winning 64 of 82 bets. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favorite backing while managing reserve limits and capital allocation. Spendable cash remains floored at M$0 after the M$10 reserve, keeping us inactive on new opportunities while existing positions await resolution.",
   "journal": [
+    {
+      "ts": 1794819888009,
+      "kind": "analysis",
+      "text": "Analysed \"Will retrieval-augmented-generation (RAG) still be used in 2026?\": market 87%, my 94% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1794819411020,
+      "kind": "screen",
+      "text": "Escalated \"Will retrieval-augmented-generation (RAG) still be used in 2026?\" at 87%: quick estimate 95% backs the favourite at 87%. RAG remains deeply entrenched in production systems and will not be abandoned by EOY 2026."
+    },
+    {
+      "ts": 1794819411011,
+      "kind": "screen",
+      "text": "Passed on \"Daily Coinflip\" at 50%: quick estimate 50%, market 50%. This is a literal coinflip with no predictive edge to be found."
+    },
     {
       "ts": 1794816405356,
       "kind": "score",
@@ -448,21 +463,6 @@
       "ts": 1794722387444,
       "kind": "screen",
       "text": "Passed on \"F1 2026 Prop Bets Las Vegas \ud83c\uddfa\ud83c\uddf8 (LV Strip Circuit, Nevada, USA) Grand P\" at 82%: quick estimate 70%, market 82%. Mercedes is not dominating pole positions in 2026, making a non-Mercedes pole in Las Vegas highly probable."
-    },
-    {
-      "ts": 1794722387438,
-      "kind": "screen",
-      "text": "Passed on \"Will Trump, Xi and Putin hold a three-way in-person meeting by Novembe\" at 68%: quick estimate 25%, market 68%. A formal three-way in-person US-China-Russia summit in a few days lacks solid confirmation and is geopolitically improbable."
-    },
-    {
-      "ts": 1794722387433,
-      "kind": "screen",
-      "text": "Escalated \"Will Cyberleek release his gta6 build?\" at 13%: quick estimate 5% backs the favourite at 13%. Releasing a playable GTA 6 build by an anonymous leaker before official release is extremely unlikely."
-    },
-    {
-      "ts": 1794714932835,
-      "kind": "score",
-      "text": "Scored 310 resolved forecasts: my Brier 0.162, the market's 0.104. Closer than the market on 157/310."
     }
   ],
   "todos": [
@@ -2253,6 +2253,24 @@
   ],
   "screens": [
     {
+      "ts": 1794819411011,
+      "question": "Will retrieval-augmented-generation (RAG) still be used in 2026?",
+      "url": "https://manifold.markets/jgyou/will-retrievalaugmentedgeneration-r",
+      "passed": true,
+      "market_prob": 0.8743310282114622,
+      "quick_prob": 0.95,
+      "why": "quick estimate 95% backs the favourite at 87%. RAG remains deeply entrenched in production systems and will not be abandoned by EOY 2026."
+    },
+    {
+      "ts": 1794819411002,
+      "question": "Daily Coinflip",
+      "url": "https://manifold.markets/Traveel/daily-coinflip-U8EnpQ5uPu",
+      "passed": false,
+      "market_prob": 0.5042810516030655,
+      "quick_prob": 0.5,
+      "why": "quick estimate 50%, market 50%. This is a literal coinflip with no predictive edge to be found."
+    },
+    {
       "ts": 1794815690089,
       "question": "Will Anthropic start trading on November 19 or 20, 2026?",
       "url": "https://manifold.markets/jimbot/will-anthropic-start-trading-on-nov",
@@ -2593,27 +2611,32 @@
       "market_prob": 0.7013822875009864,
       "quick_prob": 0.45,
       "why": "quick estimate 45%, market 70%. Pure timeline guess on an unannounced AI model drop, close to a coin flip with no edge."
-    },
-    {
-      "ts": 1794707363244,
-      "question": "Will Hakeem Jeffries be the Majority or Minority Leader in the House after the Midterms?",
-      "url": "https://manifold.markets/MonicaLewinsky/will-hakeem-jeffries-be-the-majorit",
-      "passed": false,
-      "market_prob": 0.931309885911539,
-      "quick_prob": 0.8,
-      "why": "quick estimate 80%, market 93%. Standard political outcome for the House minority leader position, no special insight needed."
-    },
-    {
-      "ts": 1794691991590,
-      "question": "Does RL training with verifiers help on tasks without a verifier?",
-      "url": "https://manifold.markets/GavinLeech/does-rl-training-on-verifiers-help",
-      "passed": true,
-      "market_prob": 0.4969056658605065,
-      "quick_prob": 0.35,
-      "why": "quick estimate 35% backs the favourite at 50%. This is a subjective personal credence market for the creator that lacks a clean objective resolution metric."
     }
   ],
   "decisions": [
+    {
+      "ts": 1794819888000,
+      "kind": "no_trade",
+      "question": "Will retrieval-augmented-generation (RAG) still be used in 2026?",
+      "url": "https://manifold.markets/jgyou/will-retrievalaugmentedgeneration-r",
+      "market_prob": 0.8743310282114622,
+      "model_prob": 0.94,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Recent updates in Nov 2026 from Google Vertex AI and Microsoft Learn continue to feature active RAG architectures. With under two months left in 2026, prominent tech players maintain RAG as standard enterprise technology, making a public industry pivot away before EOY virtually impossible.",
+      "uncertainty": "Whether the creator interprets agentic web search by tools like Perplexity as excluding them from the definition of RAG.",
+      "resolution_risk": "The creator noted agentic AIs looking up sources on their own do not count towards RAG, which could create ambiguity if simple RAG is viewed as superseded by agentic tool use.",
+      "evidence_for": [
+        "Google released updated reference architectures for RAG infrastructure on Vertex AI as recently as November 6, 2026.",
+        "Microsoft Learn and Perplexity actively maintain and document RAG tools and implementations as of late October/November 2026.",
+        "RAG remains deeply embedded in enterprise technology stacks for private data integration with LLMs."
+      ],
+      "evidence_against": [
+        "Increasing context window sizes and autonomous agentic search paradigms are reducing reliance on simple vector retrieval in some cutting-edge settings."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1794812104404,
       "kind": "no_trade",
@@ -2938,30 +2961,6 @@
         "California Family Code \u00a7 2339 mandates a 6-month waiting period from the date of service before a final divorce judgment can be granted.",
         "Only 7 days remain before the November 22, 2026 resolution deadline.",
         "High-net-worth property division typically requires extended legal proceedings far beyond the statutory minimum."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1794722814051,
-      "kind": "no_trade",
-      "question": "Will Cyberleek release his gta6 build?",
-      "url": "https://manifold.markets/Bandors/will-cyberleek-release-his-gta6-bui",
-      "market_prob": 0.12775843412302137,
-      "model_prob": 0.03,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Given active Take-Two legal actions and the collapse of Cyberleek's operation in October, the chance of a playable dev build being publicly released within the next 5 days is very low.",
-      "uncertainty": "Whether Cyberleek possesses playable compiled binary files rather than just video captures.",
-      "resolution_risk": "Disputes over whether a leaked partial executable meets the criteria for 'playable'.",
-      "evidence_for": [
-        "Cyberleek has previously distributed leaked GTA 6 footage.",
-        "Developer builds have occasionally leaked in AAA gaming history."
-      ],
-      "evidence_against": [
-        "Take-Two issued subpoenas and initiated legal action against Cyberleek in October 2026.",
-        "Cyberleek's token and monetization scheme collapsed, reducing incentives for further distribution.",
-        "No executable dev build has been verified or distributed with only 5 days remaining."
       ],
       "reason": "size floored to zero by balance reserve"
     }
