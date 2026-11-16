@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1794789572815,
+  "generated_ms": 1794790128930,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.7-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 0,
+      "today": 3,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 0,
+      "today": 1,
       "cap": 54
     }
   },
@@ -64,6 +64,21 @@
   "net_worth": 565.07,
   "summary": "Balance M$8. Net worth M$565. 16 open positions, 9 closed and awaiting resolution. Over 312 resolved forecasts, our Brier score is 0.164 compared to the market's 0.103. We forecast WORSE than the market price. Our disagreements have mostly been us being wrong, not the market. Closer to the outcome than the market on 157 of 312; on big disagreements, 143 of 273. Of 175 resolved bets, backing the favourite won 64 of 82, while longshots against the favourite won 21 of 93. Spendable cash is continuously floored to zero by balance reserve limits and the M$10 cash reserve, preventing any new position openings.\n\nOpen positions span Codeforces IGM, Navier-Stokes solutions before IPO, US midterm turnout, state political races, tennis matches, Mountain View City Council, US Congress races, NASA eclipse livestreams, Nebraska Senate races, OpenAI recursive models, League of Legends Worlds outcomes, OpenAI going public not via an IPO, Magnus Carlsen FIDE rating, and One Piece character arcs. A nudge was recently sent to @MattF regarding the Dome of the Rock market where M$69 of ours is riding. Recent desk activity and screening across topics like GTA 6 dev builds, Jensen Huang divorce rumors, PUMaC math competitions, Eurovision Asia, and COP31 pledges consistently resulted in no trades due to balance reserve floored sizes, low edges, or longshot filters.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favorites), the Narrative Trap (allowing compelling stories to mask poor mathematical expected value), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero.\n\nCalibration is poor for speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favorites is significantly more reliable, evidenced by winning 64 of 82 bets. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favorite backing while managing reserve limits and capital allocation. Spendable cash remains floored at M$0 after the M$10 reserve, keeping us inactive on new opportunities while existing positions await resolution.",
   "journal": [
+    {
+      "ts": 1794790128613,
+      "kind": "analysis",
+      "text": "Analysed \"Will I get a 1560+ on the November SAT?\": market 38%, my 18% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1794789760954,
+      "kind": "screen",
+      "text": "Passed on \"NFL Week 10 - Prop Bets \u2192 Scorigami\" at 90%: quick estimate 50%, market 90%. This is a bundle of diverse prop bets lacking specific clarification text and amounts to a coin flip based on vibes."
+    },
+    {
+      "ts": 1794789760948,
+      "kind": "screen",
+      "text": "Escalated \"Will I get a 1560+ on the November SAT?\" at 38%: quick estimate 5% backs the favourite at 38%. The user admits to extreme personal distress, no prior studying, and a 1560+ is exceptionally rare even for STEM students without prep."
+    },
     {
       "ts": 1794786555203,
       "kind": "score",
@@ -448,21 +463,6 @@
       "ts": 1794692726178,
       "kind": "move",
       "text": "\"Who will win the 2026 League of Legends World Championship? \u2192 Bilibili\" moved -5% to 25%. Holding NO, P/L M$-0."
-    },
-    {
-      "ts": 1794692355899,
-      "kind": "score",
-      "text": "Scored 310 resolved forecasts: my Brier 0.162, the market's 0.104. Closer than the market on 157/310."
-    },
-    {
-      "ts": 1794692149683,
-      "kind": "analysis",
-      "text": "Analysed \"Does RL training with verifiers help on tasks without a verifier?\": market 50%, my 22% (medium). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1794691991597,
-      "kind": "screen",
-      "text": "Escalated \"Does RL training with verifiers help on tasks without a verifier?\" at 50%: quick estimate 35% backs the favourite at 50%. This is a subjective personal credence market for the creator that lacks a clean objective resolution metric."
     }
   ],
   "todos": [
@@ -819,7 +819,7 @@
       "profit": 0.8,
       "prob": 0.019,
       "closed": false,
-      "days_to_close": 14.3
+      "days_to_close": 14.2
     },
     {
       "question": "Will Geometry Dash 2.21 Update Will Be Released In August 13 2026?",
@@ -2253,6 +2253,24 @@
   ],
   "screens": [
     {
+      "ts": 1794789760948,
+      "question": "NFL Week 10 - Prop Bets \u2192 Scorigami",
+      "url": "https://manifold.markets/StopPunting/nfl-week-10-prop-bets-pUu0stRsOu",
+      "passed": false,
+      "market_prob": 0.8991625740312671,
+      "quick_prob": 0.5,
+      "why": "quick estimate 50%, market 90%. This is a bundle of diverse prop bets lacking specific clarification text and amounts to a coin flip based on vibes."
+    },
+    {
+      "ts": 1794789760942,
+      "question": "Will I get a 1560+ on the November SAT?",
+      "url": "https://manifold.markets/germolene/chances-i-will-get-a-1560-on-the-se",
+      "passed": true,
+      "market_prob": 0.3769861709056637,
+      "quick_prob": 0.05,
+      "why": "quick estimate 5% backs the favourite at 38%. The user admits to extreme personal distress, no prior studying, and a 1560+ is exceptionally rare even for STEM students without prep."
+    },
+    {
       "ts": 1794785993332,
       "question": "NFL Week 10 - Prop Bets \u2192 All Starting Rookie QBs lose",
       "url": "https://manifold.markets/StopPunting/nfl-week-10-prop-bets-pUu0stRsOu",
@@ -2593,27 +2611,33 @@
       "market_prob": 0.9699999999999999,
       "quick_prob": 0.1,
       "why": "quick estimate 10%, market 97%. Nominees announce in two days and there are no specific album details available to verify release eligibility."
-    },
-    {
-      "ts": 1794658262735,
-      "question": "Anthropic Market cap at close on IPO day is between 1.4 and 1.6 trillion?",
-      "url": "https://manifold.markets/Jack1/anthropic-market-cap-at-close-on-ip",
-      "passed": true,
-      "market_prob": 0.4069440431112783,
-      "quick_prob": 0.25,
-      "why": "quick estimate 25% backs the favourite at 41%. Comments give precise pricing and share counts suggesting valuation is below the range."
-    },
-    {
-      "ts": 1794650839672,
-      "question": "Will Daniel Lord still be living in a Tesla by the end of October?",
-      "url": "https://manifold.markets/Storyteller/will-daniel-lord-still-be-living-in",
-      "passed": false,
-      "market_prob": 0.6243158602721465,
-      "quick_prob": 0.5,
-      "why": "quick estimate 50%, market 62%. The target date has passed and the creator has disappeared from social media with no definitive proof of his living status."
     }
   ],
   "decisions": [
+    {
+      "ts": 1794790128607,
+      "kind": "no_trade",
+      "question": "Will I get a 1560+ on the November SAT?",
+      "url": "https://manifold.markets/germolene/chances-i-will-get-a-1560-on-the-se",
+      "market_prob": 0.3769861709056637,
+      "model_prob": 0.18,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "While individual practice sections demonstrate the raw potential (800 reading on test 4, 780 math on test 11), putting both together in a single sitting to clear 1560+ under severe real-life stress and minimal prep has a low base rate.",
+      "uncertainty": "Whether the creator combined peak performance in both sections simultaneously on the official November test.",
+      "resolution_risk": "Creator reporting could be delayed or contested if score reports are withheld or pending verification.",
+      "evidence_for": [
+        "Creator demonstrated an 800 reading score on practice test 4 and a 780 math score on practice test 11, showing high section ceilings.",
+        "Attends an elite specialized STEM high school with high student test performance."
+      ],
+      "evidence_against": [
+        "Practice test composite scores were 1460 and 1520, both below the 1560 threshold.",
+        "A 1560+ requires near-flawless performance across both sections in a single sitting.",
+        "Severe personal stress and minimal preparation increase variance and error rates on test day."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1794778822708,
       "kind": "no_trade",
@@ -2937,29 +2961,6 @@
         "Gen.G is their opponent in the final series and historically holds a strong matchup advantage and favored status against LPL teams in international Bo5s."
       ],
       "reason": "would be a longshot bet against the 30% favourite"
-    },
-    {
-      "ts": 1794684717186,
-      "kind": "no_trade",
-      "question": "Will Iran strike US military base at least once before December?",
-      "url": "https://manifold.markets/apol/will-iran-strike-us-military-base-a-QRSggc02Nc",
-      "market_prob": 0.6448324167033269,
-      "model_prob": 0.91,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "On Nov 13, CENTCOM confirmed U.S. forces intercepted two IRGC attack drones targeted toward U.S. assets in Bahrain following direct Iranian claims. Since the rules explicitly state intercepted attacks count as a strike if targeted at a U.S. facility, this meets the YES criteria.",
-      "uncertainty": "Whether the market creator resolves early based on the Nov 13 CENTCOM-confirmed IRGC drone interception or waits for the market close date.",
-      "resolution_risk": "Disagreements over whether drones intercepted in air space explicitly targeted a designated U.S. military facility.",
-      "evidence_for": [
-        "On November 13, 2026, the IRGC launched two attack drones targeting U.S. radar/military facilities in Bahrain.",
-        "CENTCOM officially confirmed U.S. forces intercepted and shot down both incoming IRGC attack drones.",
-        "The market resolution criteria explicitly state that intercepted kinetic ordnance launched by Iran targeted at a U.S. facility counts as a qualifying strike."
-      ],
-      "evidence_against": [
-        "Market creator could theoretically question whether the targeted radar in Bahrain counts as an officially recognized military base, though U.S. 5th Fleet facilities exist there."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
