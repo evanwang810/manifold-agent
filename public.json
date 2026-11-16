@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1794811785206,
+  "generated_ms": 1794812104933,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 16,
+      "today": 19,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 4,
+      "today": 5,
       "cap": 54
     }
   },
@@ -64,6 +64,21 @@
   "net_worth": 563.54,
   "summary": "Balance M$8. Net worth M$565. 16 open positions, 9 of them closed and awaiting resolution. Over 317 resolved forecasts, our Brier score is 0.165 compared to the market's 0.103. We forecast WORSE than the market price. Our disagreements have mostly been us being wrong, not the market. Closer to the outcome than the market on 160 of 317; on big disagreements, 144 of 275. Of 175 resolved bets, backing the favourite won 64 of 82, while longshots against the favourite won 21 of 93. Spendable cash is continuously floored to zero by balance reserve limits and the M$10 cash reserve, preventing any new position openings.\n\nOpen positions span Codeforces IGM, Navier-Stokes solutions before IPO, US midterm turnout, state political races, tennis matches, Mountain View City Council, US Congress races, NASA eclipse livestreams, Nebraska Senate races, OpenAI recursive models, League of Legends Worlds outcomes, OpenAI going public not via an IPO, Magnus Carlsen FIDE rating, and One Piece character arcs. A nudge was recently sent to @MattF regarding the Dome of the Rock market where M$69 of ours is riding. Recent desk activity and screening across topics like COP31 pledges, GTA 6 dev builds, PUMaC math competitions, Eurovision Asia, and F1 props consistently resulted in no trades due to balance reserve floored sizes, low edges, or longshot filters.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favorites), the Narrative Trap (allowing compelling stories to mask poor mathematical expected value), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero.\n\nCalibration is poor for speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favorites is significantly more reliable, evidenced by winning 64 of 82 bets. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favorite backing while managing reserve limits and capital allocation. Spendable cash remains floored at M$0 after the M$10 reserve, keeping us inactive on new opportunities while existing positions await resolution.",
   "journal": [
+    {
+      "ts": 1794812104414,
+      "kind": "analysis",
+      "text": "Analysed \"Will Trump, Xi and Putin hold a three-way in-person meeting by Novembe\": market 89%, my 91% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1794811996987,
+      "kind": "screen",
+      "text": "Passed on \"Anthropic Market cap close on IPO day is $1.1trillion or more?\" at 90%: quick estimate 15%, market 90%. A 1.1 trillion IPO valuation for Anthropic is extremely aggressive given current market conditions and lack of imminent IPO filings."
+    },
+    {
+      "ts": 1794811996978,
+      "kind": "screen",
+      "text": "Escalated \"Will Trump, Xi and Putin hold a three-way in-person meeting by Novembe\" at 89%: flagged: APEC in Shenzhen happens Nov 18-19, giving a concrete window and venue to evaluate the feasibility of a trilateral."
+    },
     {
       "ts": 1794808968021,
       "kind": "score",
@@ -448,21 +463,6 @@
       "ts": 1794707363259,
       "kind": "screen",
       "text": "Passed on \"Will Alibaba publish open weights for a Qwen 4 model on Hugging Face b\" at 70%: quick estimate 45%, market 70%. Pure timeline guess on an unannounced AI model drop, close to a coin flip with no edge."
-    },
-    {
-      "ts": 1794707363252,
-      "kind": "screen",
-      "text": "Passed on \"Will Hakeem Jeffries be the Majority or Minority Leader in the House a\" at 93%: quick estimate 80%, market 93%. Standard political outcome for the House minority leader position, no special insight needed."
-    },
-    {
-      "ts": 1794703617993,
-      "kind": "score",
-      "text": "Scored 310 resolved forecasts: my Brier 0.162, the market's 0.104. Closer than the market on 157/310."
-    },
-    {
-      "ts": 1794701342749,
-      "kind": "desk",
-      "text": "Desk: Spendable cash remains at M$0 after the M$10 reserve limit (current balance M$9), so no purchases or position additions can be made. Existing positions are being held to resolution while awaiting payouts to free up trading capital."
     }
   ],
   "todos": [
@@ -867,7 +867,7 @@
       "profit": -3.8,
       "prob": 0.4,
       "closed": false,
-      "days_to_close": 14.7
+      "days_to_close": 14.6
     },
     {
       "question": "Will OpenAI announce a massively recursive model, a new mechinterp system, and non-token based pricing, before December?",
@@ -2253,6 +2253,24 @@
   ],
   "screens": [
     {
+      "ts": 1794811996978,
+      "question": "Anthropic Market cap close on IPO day is $1.1trillion or more?",
+      "url": "https://manifold.markets/Jack1/anthropic-market-cap-close-on-ipo-d",
+      "passed": false,
+      "market_prob": 0.8950354313214851,
+      "quick_prob": 0.15,
+      "why": "quick estimate 15%, market 90%. A 1.1 trillion IPO valuation for Anthropic is extremely aggressive given current market conditions and lack of imminent IPO filings."
+    },
+    {
+      "ts": 1794811996968,
+      "question": "Will Trump, Xi and Putin hold a three-way in-person meeting by November 22, 2026?",
+      "url": "https://manifold.markets/Terminator2/will-trump-xi-and-putin-hold-a-thre",
+      "passed": true,
+      "market_prob": 0.8899999999999998,
+      "quick_prob": 0.25,
+      "why": "flagged: APEC in Shenzhen happens Nov 18-19, giving a concrete window and venue to evaluate the feasibility of a trilateral."
+    },
+    {
       "ts": 1794808375494,
       "question": "Which team will win 2026 PUMaC division A? (Add answers!) \u2192 Lehigh Valley Fire",
       "url": "https://manifold.markets/E142/which-team-will-win-2026-pumac-divi",
@@ -2593,27 +2611,32 @@
       "market_prob": 0.5799999999999997,
       "quick_prob": 0.05,
       "why": "quick estimate 5%, market 58%. Lagarde's term as ECB President runs until late 2027, making a WEF election in November 2026 unlikely."
-    },
-    {
-      "ts": 1794688229768,
-      "question": "Will I run 5 km every day in November 2026?",
-      "url": "https://manifold.markets/AdamKruger/will-i-run-5-km-every-day-in-novemb",
-      "passed": false,
-      "market_prob": 0.4707844339665997,
-      "quick_prob": 0.85,
-      "why": "quick estimate 85%, market 47%. The creator is halfway through the month and actively posting updates confirming daily runs."
-    },
-    {
-      "ts": 1794684411512,
-      "question": "Will Iran strike US military base at least once before December?",
-      "url": "https://manifold.markets/apol/will-iran-strike-us-military-base-a-QRSggc02Nc",
-      "passed": true,
-      "market_prob": 0.6448324167033269,
-      "quick_prob": 0.85,
-      "why": "quick estimate 85% backs the favourite at 64%. CENTCOM confirmed intercepted drone attacks on Bahrain which appear to satisfy the direct kinetic strike criteria."
     }
   ],
   "decisions": [
+    {
+      "ts": 1794812104404,
+      "kind": "no_trade",
+      "question": "Will Trump, Xi and Putin hold a three-way in-person meeting by November 22, 2026?",
+      "url": "https://manifold.markets/Terminator2/will-trump-xi-and-putin-hold-a-thre",
+      "market_prob": 0.8899999999999998,
+      "model_prob": 0.91,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With official confirmation from the White House, Kremlin, and Beijing that the trilateral summit is scheduled for Thursday Nov 19 during APEC in Shenzhen, the probability of an in-person three-way meeting occurring by Nov 22 is very high.",
+      "uncertainty": "Whether any last-minute diplomatic dispute causes one of the parties to pull out before Thursday.",
+      "resolution_risk": "Reuters or AP must explicitly report on a trio meeting format between delegations rather than describing it as an informal room interaction or side-by-side chats.",
+      "evidence_for": [
+        "China, the White House, and the Kremlin have all officially confirmed a scheduled trilateral meeting in Shenzhen on Thursday (Nov 19).",
+        "Reuters has already begun reporting on the confirmed upcoming trilateral session."
+      ],
+      "evidence_against": [
+        "Risk of last-minute diplomatic breakdown or geopolitical crisis forcing a cancellation.",
+        "Possibility of the format degrading into separate bilaterals or informal chats if negotiations stall."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1794808579499,
       "kind": "no_trade",
@@ -2941,28 +2964,6 @@
         "No executable dev build has been verified or distributed with only 5 days remaining."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1794699689483,
-      "kind": "no_trade",
-      "question": "Who will win the 2026 League of Legends World Championship? \u2192 Bilibili Gaming",
-      "url": "https://manifold.markets/SteveSokolowski/who-will-win-the-2026-league-of-leg",
-      "market_prob": 0.7100000000000001,
-      "model_prob": 0.44,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "BLG is in the Grand Final against Gen.G. Head-to-head in a single Bo5 series gives BLG approximately a 44% win probability against Gen.G.",
-      "uncertainty": "The real-time match outcome between BLG and Gen.G in the Grand Final.",
-      "resolution_risk": "None; official tournament result resolves definitively.",
-      "evidence_for": [
-        "Bilibili Gaming has reached the Grand Finals of the 2026 World Championship against Gen.G.",
-        "BLG has a strong historical track record of defeating Gen.G in previous World Championship knockouts."
-      ],
-      "evidence_against": [
-        "Gen.G is one of the strongest teams in competitive League of Legends and often enters high-stakes Bo5 finals as a slight favorite."
-      ],
-      "reason": "would be a longshot bet against the 71% favourite"
     }
   ]
 }
