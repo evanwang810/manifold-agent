@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1794848898144,
+  "generated_ms": 1794849373449,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 31,
+      "today": 34,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 10,
+      "today": 11,
       "cap": 54
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 559.68,
   "summary": "Balance M$8. Net worth M$561. 16 open positions, 10 of them closed and awaiting resolution. Over 317 resolved forecasts, our Brier score is 0.165 compared to the market's 0.103. We forecast WORSE than the market price. Our disagreements have mostly been us being wrong, not the market. Closer to the outcome than the market on 160 of 317; on big disagreements, 144 of 275. Of 175 resolved bets, backing the favourite won 64 of 82, while longshots against the favourite won 21 of 93. Spendable cash is continuously floored to zero by balance reserve limits and the M$10 cash reserve, preventing any new position openings.\n\nOpen positions span Codeforces IGM, Navier-Stokes solutions before IPO, US midterm turnout, state political races, tennis matches, Mountain View City Council, US Congress races, NASA eclipse livestreams, Nebraska Senate races, OpenAI recursive models, League of Legends Worlds outcomes, OpenAI going public not via an IPO, Magnus Carlsen FIDE rating, and One Piece character arcs. A nudge was recently sent to @MattF regarding the Dome of the Rock market where M$69 of ours is riding. Specific positions like the market-cap sum market are moving against us, showing negative P/L. Recent desk activity and screening across topics like COP31 pledges, GTA 6 dev builds, PUMaC math competitions, Eurovision Asia, F1 props, and chess tournaments consistently resulted in no trades due to balance reserve floored sizes, low edges, or longshot filters.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favorites), the Narrative Trap (allowing compelling stories to mask poor mathematical expected value), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero.\n\nCalibration is poor for speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favorites is significantly more reliable, evidenced by winning 64 of 82 bets. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favorite backing while managing reserve limits and capital allocation. Spendable cash remains floored at M$0 after the M$10 reserve, keeping us inactive on new opportunities while existing positions await resolution.",
   "journal": [
+    {
+      "ts": 1794849372718,
+      "kind": "analysis",
+      "text": "Analysed \"Will this market cause anyone to attend Metagame 2026?\": market 20%, my 18% (medium). No trade, edge 0.11 log-odds below minimum 0.2."
+    },
+    {
+      "ts": 1794849206358,
+      "kind": "screen",
+      "text": "Escalated \"Will this market cause anyone to attend Metagame 2026?\" at 20%: quick estimate 12% backs the favourite at 20%. Self-referential creator-adjudicated market with low volume and a high bar for proving direct causation of attendance."
+    },
     {
       "ts": 1794843394573,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1794768983856,
       "kind": "move",
       "text": "\"Will I (McPqndq) reach IGM on Codeforces before the 2026 ICPC World Fi\" moved +29% to 60%. Holding NO, P/L M$-2."
-    },
-    {
-      "ts": 1794749309112,
-      "kind": "score",
-      "text": "Scored 310 resolved forecasts: my Brier 0.162, the market's 0.104. Closer than the market on 157/310."
-    },
-    {
-      "ts": 1794749298961,
-      "kind": "analysis",
-      "text": "Analysed \"Will I play GTA6 on my PC within two weeks from its launch?\": market 24%, my 4% (high). No trade, size floored to zero by balance reserve."
     }
   ],
   "todos": [
@@ -2253,6 +2253,15 @@
   ],
   "screens": [
     {
+      "ts": 1794849206352,
+      "question": "Will this market cause anyone to attend Metagame 2026?",
+      "url": "https://manifold.markets/IsaacKing/will-this-market-cause-anyone-to-at",
+      "passed": true,
+      "market_prob": 0.19740132482779252,
+      "quick_prob": 0.12,
+      "why": "quick estimate 12% backs the favourite at 20%. Self-referential creator-adjudicated market with low volume and a high bar for proving direct causation of attendance."
+    },
+    {
       "ts": 1794834305892,
       "question": "Anthropic Market cap at close on IPO day is between 1.4 and 1.6 trillion?",
       "url": "https://manifold.markets/Jack1/anthropic-market-cap-at-close-on-ip",
@@ -2602,18 +2611,32 @@
       "market_prob": 0.12470097022441075,
       "quick_prob": 0.01,
       "why": "quick estimate 1% backs the favourite at 12%. California's mandatory six-month waiting period makes a final decree impossible within a week given no public filings."
-    },
-    {
-      "ts": 1794722387438,
-      "question": "F1 2026 Prop Bets Las Vegas \ud83c\uddfa\ud83c\uddf8 (LV Strip Circuit, Nevada, USA) Grand Prix [LIVE, Add answers]  \u2192 [LAS] Non-Mercedes pole position",
-      "url": "https://manifold.markets/BlitzEver/f1-2026-prop-bets-australia-melbour",
-      "passed": false,
-      "market_prob": 0.8221431747443309,
-      "quick_prob": 0.7,
-      "why": "quick estimate 70%, market 82%. Mercedes is not dominating pole positions in 2026, making a non-Mercedes pole in Las Vegas highly probable."
     }
   ],
   "decisions": [
+    {
+      "ts": 1794849372712,
+      "kind": "no_trade",
+      "question": "Will this market cause anyone to attend Metagame 2026?",
+      "url": "https://manifold.markets/IsaacKing/will-this-market-cause-anyone-to-at",
+      "market_prob": 0.19740132482779252,
+      "model_prob": 0.18,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "The event took place November 6-8, 2026. With only 12 traders and zero comments reporting attendance driven by the market, the probability that this market actually caused someone to attend for a full day is low. Estimating 18%.",
+      "uncertainty": "Whether any attendee privately confirmed to the organizer at the event that they discovered or decided to attend via the market.",
+      "resolution_risk": "The creator accepting loose causal attribution (e.g. someone who was already planning to go using a discount code found here).",
+      "evidence_for": [
+        "The market description offered discount codes specifically targeted at prediction market readers.",
+        "The event domain (puzzle hunt, bughouse, vibecoding) strongly overlaps with the Manifold community demographic."
+      ],
+      "evidence_against": [
+        "Attending a game gauntlet/puzzle hunt for at least one full day is a high-friction commitment unlikely to be driven solely by a small prediction market.",
+        "The event took place November 6-8, 2026, and despite the market closing shortly, there are only 12 traders and zero comments from anyone claiming to have attended because of the market."
+      ],
+      "reason": "edge 0.11 log-odds below minimum 0.2"
+    },
     {
       "ts": 1794834676518,
       "kind": "no_trade",
@@ -2940,31 +2963,6 @@
         "The creator explicitly stated 'I will only bet yes', which creates upward price pressure unrelated to fundamental achievement probability."
       ],
       "reason": "would be a longshot bet against the 60% favourite"
-    },
-    {
-      "ts": 1794749298953,
-      "kind": "no_trade",
-      "question": "Will I play GTA6 on my PC within two weeks from its launch?",
-      "url": "https://manifold.markets/Bandors/will-i-play-gta6-on-my-pc-within-tw",
-      "market_prob": 0.24040796563476546,
-      "model_prob": 0.04,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Emulating a brand new flagship PS5 release at 20 FPS on consumer hardware within 14 days of launch is technically near-impossible given the current state of PS5 emulation. Rockstar has no day-and-date PC release planned, and cloud streaming is excluded. The only marginal path is a playable leaked PC build, which remains extremely improbable.",
-      "uncertainty": "Whether an unannounced PC release or an unexpectedly playable leaked PC build emerges.",
-      "resolution_risk": "Creator discretion on whether an unfinished leaked build counts as 'playing GTA6'.",
-      "evidence_for": [
-        "Rockstar could theoretically announce a surprise PC release close to console launch.",
-        "A leaked PC development build might be released and deemed 'complete enough' by the creator."
-      ],
-      "evidence_against": [
-        "GTA VI is launching exclusively on PS5 and Xbox Series X/S with no PC launch scheduled.",
-        "PS5 emulation is in its infancy and cannot run complex, bleeding-edge AAA open-world titles at 20 FPS within 14 days of release.",
-        "Cloud streaming is explicitly disqualified by the resolution criteria.",
-        "Leaked builds from past breaches are early debug builds, not full playable games."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
