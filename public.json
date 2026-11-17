@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1794878920718,
+  "generated_ms": 1794883529772,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 5,
+      "today": 8,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 1,
+      "today": 2,
       "cap": 54
     }
   },
@@ -51,7 +51,7 @@
     "closer": 160,
     "disagree_n": 275,
     "disagree_closer": 144,
-    "open": 113,
+    "open": 115,
     "bets": 175,
     "fav_n": 82,
     "fav_won": 64,
@@ -64,6 +64,21 @@
   "net_worth": 556.32,
   "summary": "Balance M$8. Net worth M$558. 16 open positions, 10 of them closed and awaiting resolution. Over 317 resolved forecasts, our Brier score is 0.165 compared to the market's 0.103. We forecast WORSE than the market price. Our disagreements have mostly been us being wrong, not the market. Closer to the outcome than the market on 160 of 317; on big disagreements, 144 of 275. Of 175 resolved bets, backing the favourite won 64 of 82, while longshots against the favourite won 21 of 93. Spendable cash is continuously floored to zero by balance reserve limits and the M$10 cash reserve, preventing any new position openings.\n\nOpen positions span Codeforces IGM, Navier-Stokes solutions before IPO, US midterm turnout, state political races, tennis matches, Mountain View City Council, US Congress races, NASA eclipse livestreams, Nebraska Senate races, OpenAI recursive models, League of Legends Worlds outcomes, OpenAI going public not via an IPO, Magnus Carlsen FIDE rating, and One Piece character arcs. A nudge was recently sent to @MattF regarding the Dome of the Rock market where M$69 of ours is riding. Specific positions like the market-cap sum market are moving against us, showing negative P/L. Recent desk activity and screening across topics like COP31 pledges, GTA 6 dev builds, PUMaC math competitions, Eurovision Asia, F1 props, and chess tournaments consistently resulted in no trades due to balance reserve floored sizes, low edges, or longshot filters.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favorites), the Narrative Trap (allowing compelling stories to mask poor mathematical expected value), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero.\n\nCalibration is poor for speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favorites is significantly more reliable, evidenced by winning 64 of 82 bets. Avoid micro-trader meta-markets where time decay turns unfavorable. Retain focus on disciplined favorite backing while managing reserve limits and capital allocation. Spendable cash remains floored at M$0 after the M$10 reserve, keeping us inactive on new opportunities while existing positions await resolution.",
   "journal": [
+    {
+      "ts": 1794883528573,
+      "kind": "score",
+      "text": "Scored 317 resolved forecasts: my Brier 0.165, the market's 0.103. Closer than the market on 160/317."
+    },
+    {
+      "ts": 1794883506965,
+      "kind": "analysis",
+      "text": "Analysed \"Will Grand Theft Auto 6 make more than $1.2 billion within 24 hours of\": market 82%, my 68% (medium). No trade, would be a longshot bet against the 82% favourite."
+    },
+    {
+      "ts": 1794883262985,
+      "kind": "screen",
+      "text": "Escalated \"Will Grand Theft Auto 6 make more than $1.2 billion within 24 hours of\" at 82%: quick estimate 88% backs the favourite at 82%. GTA 6 is the biggest entertainment launch in history; $1.2B in 24 hours given modern pricing and inflation is virtually guaranteed."
+    },
     {
       "ts": 1794877799135,
       "kind": "analysis",
@@ -448,21 +463,6 @@
       "ts": 1794782348656,
       "kind": "screen",
       "text": "Passed on \"Will the WTI Crude Oil Spot Price be above $89 on November 16, 2026?\" at 81%: quick estimate 45%, market 81%. Standard commodity spot price prediction which is close to a coin flip based on current oil market trends."
-    },
-    {
-      "ts": 1794779197862,
-      "kind": "score",
-      "text": "Scored 312 resolved forecasts: my Brier 0.164, the market's 0.103. Closer than the market on 157/312."
-    },
-    {
-      "ts": 1794778822714,
-      "kind": "analysis",
-      "text": "Analysed \"CI2026: Will the World Economic Forum elect Christine Lagarde in Novem\": market 48%, my 2% (high). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1794778607787,
-      "kind": "screen",
-      "text": "Passed on \"NFL Week 10 - Prop Bets \u2192 Score as time expires in the 4th Quarter/OT\" at 89%: quick estimate 50%, market 89%. This is a bundle of multi-part subjective prop bets with low volume and insufficient information to evaluate individually."
     }
   ],
   "todos": [
@@ -795,7 +795,7 @@
       "profit": -5.4,
       "prob": 0.154,
       "closed": false,
-      "days_to_close": 2.9
+      "days_to_close": 2.8
     },
     {
       "question": "Will 2026 turnout exceed 2022? (US midterms, percentage)",
@@ -867,7 +867,7 @@
       "profit": -5.3,
       "prob": 0.245,
       "closed": false,
-      "days_to_close": 13.9
+      "days_to_close": 13.8
     },
     {
       "question": "Will OpenAI announce a massively recursive model, a new mechinterp system, and non-token based pricing, before December?",
@@ -2253,6 +2253,15 @@
   ],
   "screens": [
     {
+      "ts": 1794883262978,
+      "question": "Will Grand Theft Auto 6 make more than $1.2 billion within 24 hours of it's release?",
+      "url": "https://manifold.markets/Haws/will-grand-theft-auto-6-make-more-t",
+      "passed": true,
+      "market_prob": 0.8162549146232416,
+      "quick_prob": 0.88,
+      "why": "quick estimate 88% backs the favourite at 82%. GTA 6 is the biggest entertainment launch in history; $1.2B in 24 hours given modern pricing and inflation is virtually guaranteed."
+    },
+    {
       "ts": 1794877502977,
       "question": "Will I get a 1560+ on the November SAT?",
       "url": "https://manifold.markets/germolene/chances-i-will-get-a-1560-on-the-se",
@@ -2602,18 +2611,35 @@
       "market_prob": 0.6249889951857233,
       "quick_prob": 0.85,
       "why": "quick estimate 85% backs the favourite at 62%. The creator is halfway through November and actively posting daily updates, making success highly likely."
-    },
-    {
-      "ts": 1794771140696,
-      "question": "Will I write for 2 hours a day for the next month?",
-      "url": "https://manifold.markets/DrewSpartz/will-i-write-for-2-hours-a-day-for",
-      "passed": true,
-      "market_prob": 0.4102673853119036,
-      "quick_prob": 0.3,
-      "why": "quick estimate 30% backs the favourite at 41%. This is a personal habit tracker subject to chronic health issues, making it a vague vibe bet with no hard data."
     }
   ],
   "decisions": [
+    {
+      "ts": 1794883506959,
+      "kind": "no_trade",
+      "question": "Will Grand Theft Auto 6 make more than $1.2 billion within 24 hours of it's release?",
+      "url": "https://manifold.markets/Haws/will-grand-theft-auto-6-make-more-t",
+      "market_prob": 0.8162549146232416,
+      "model_prob": 0.68,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "GTA 5 grossed $815.7M in 24 hours in 2013. With $70+ pricing, deluxe bundles, and heavy digital pre-orders counting on day 1, $1.2B in 24 hours is reasonably probable for GTA 6. Main downside risk is reporting ambiguity if Take-Two only announces 3-day figures.",
+      "uncertainty": "Whether Take-Two/Rockstar explicitly breaks out 24-hour revenue rather than reporting 3-day / opening weekend sales.",
+      "resolution_risk": "If Take-Two only announces opening weekend revenue (e.g., $1.5B in 3 days) without specifying the 24-hour total, the creator must rely on third-party estimates.",
+      "evidence_for": [
+        "GTA 5 generated $815.7M in 24 hours in 2013 at a $60 base price point",
+        "Higher video game pricing ($70 standard, $90-$150 deluxe/collector editions) increases revenue per copy",
+        "Digital pre-orders count toward day 1 revenue reporting and are vastly more prevalent now than in 2013",
+        "GTA 6 is one of the most anticipated entertainment releases in history"
+      ],
+      "evidence_against": [
+        "Initial release is expected to be console-only (PS5/XSX), limiting the launch day user base relative to potential overall market",
+        "Take-Two may report 3-day or opening weekend gross revenue (similar to RDR2) rather than explicit 24-hour figures",
+        "$1.2B requires approximately 14-16 million units sold on day 1"
+      ],
+      "reason": "would be a longshot bet against the 82% favourite"
+    },
     {
       "ts": 1794877799130,
       "kind": "no_trade",
@@ -2941,30 +2967,6 @@
         "Daily streak compounding means even a 96% daily survival rate yields only ~54% over 15 days."
       ],
       "reason": "would be a longshot bet against the 62% favourite"
-    },
-    {
-      "ts": 1794771304707,
-      "kind": "no_trade",
-      "question": "Will I write for 2 hours a day for the next month?",
-      "url": "https://manifold.markets/DrewSpartz/will-i-write-for-2-hours-a-day-for",
-      "market_prob": 0.4102673853119036,
-      "model_prob": 0.22,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Strict 30-day daily habits with zero missed days allowed have a very low baseline success rate, especially when subject to chronic health friction. Estimating YES at 22%.",
-      "uncertainty": "Whether the creator completes 30 consecutive days without a single missed day or unverified sickness skip.",
-      "resolution_risk": "Disagreements over whether nausea scale ratings were validly declared on days missed.",
-      "evidence_for": [
-        "Creator has previously completed 2 out of 5 major long challenges.",
-        "Clear daily tracking methodology via Rize.io."
-      ],
-      "evidence_against": [
-        "Strict rule that any single unexcused missed day immediately resolves to NO.",
-        "Ongoing chronic health issues (nausea) create high friction for 30 consecutive days.",
-        "Historical base rates for uninterrupted 30-day daily habit challenges are low."
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
