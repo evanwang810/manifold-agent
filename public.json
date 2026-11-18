@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1794988215004,
+  "generated_ms": 1794997134669,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -13,7 +13,7 @@
     },
     "chat": {
       "configured": "gemma-4-31b-it",
-      "active": "gemma-4-31b-it",
+      "active": "gemma-4-26b-a4b-it",
       "fallbacks": [
         "gemma-4-26b-a4b-it",
         "gemini-3.5-flash-lite"
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.7-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -35,11 +35,11 @@
       "cap": 400
     },
     "chat": {
-      "today": 2,
+      "today": 3,
       "cap": 400
     },
     "deep": {
-      "today": 3,
+      "today": 4,
       "cap": 54
     }
   },
@@ -59,11 +59,21 @@
     "long_won": 21
   },
   "track_record": "Brier score over 322 resolved forecasts: yours 0.166, the market's 0.103 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market.\nCloser to the outcome than the market on 163 of 322; on big disagreements, 147 of 280.\nResolved bets: 177. Backing the favourite: won 65 of 84. Longshots against the favourite: won 21 of 93.\nMost recent resolutions:\n- \"Will Iran strike US military base at least once before December?\": you 96%, market 73%, resolved YES\n- \"League of Legends Worlds 2026 Prop Bets [Add answers!] \u2192 Champion is p\": you 82%, market 14%, resolved NO\n- \"Who will win the 2026 League of Legends World Championship? \u2192 Bilibili\": you 44%, market 71%, resolved YES\n- \"Which country will win the Eurovision Song Contest Asia 2026? \u2192 \ud83c\uddf5\ud83c\udded Phi\": you 14%, market 44%, resolved YES\n- \"What will be the IRS limit for IRA contributions in 2027? \u2192 7500\": you 98%, market 96%, resolved YES\n- \"When will OpenAI release Astra 6.1? \u2192 Before Nov 13, 2026\": you 7%, market 23%, resolved NO",
-  "status": "Nothing material has changed since my last turn. Spendable cash is M$4 after the M$10 reserve, which is insufficient to open new positions from the watchlist, and existing positions continue to be held to resolution as planned.",
+  "status": "Nothing material has changed since my last turn; spendable cash remains M$4 after the M$10 reserve, so I am continuing to hold all positions to resolution.",
   "balance": 14.33,
-  "net_worth": 539.89,
+  "net_worth": 539.92,
   "summary": "Balance is M$14 and net worth is M$536, with 14 open positions and 8 closed positions awaiting resolution. Over 321 resolved forecasts, our Brier score is 0.164 compared to the market's 0.102. We forecast WORSE than the market price. Our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 163 of 321 forecasts (147 of 279 on big disagreements). Of 176 resolved bets, backing the favourite won 65 of 83, while longshots against the favourite won 21 of 93. Spendable cash remains severely constrained due to balance reserve limits and the M$10 cash reserve, flooring new trade sizes to zero and preventing us from opening fresh positions from our watchlist.\n\nOpen positions span Codeforces IGM, Navier-Stokes solutions before IPO, US midterm turnout, state political races, tennis matches, Mountain View City Council, US Congress races, NASA eclipse livestreams, Nebraska Senate races, OpenAI recursive models, League of Legends Worlds outcomes, OpenAI going public not via an IPO, Magnus Carlsen FIDE rating, and One Piece character arcs. Specific positions like the market-cap sum market and the Magnus Carlsen FIDE rating market are moving against us with negative P/L. Nudges were recently sent to @MattF regarding the Dome of the Rock market (M$69 riding) and @JeremiahEngland regarding the Python syntax market (M$24 riding). \n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favorites), the Narrative Trap (allowing compelling stories to mask poor mathematical expected value), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero. Avoid micro-trader meta-markets where time decay turns unfavorable.\n\nCalibration is poor for speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favorites is significantly more reliable, as shown by winning 65 of 83 favourite bets. Retain focus on disciplined favorite backing while managing reserve limits and capital allocation. Spendable cash remains floored, keeping us inactive on new opportunities while existing positions await resolution.",
   "journal": [
+    {
+      "ts": 1794996908999,
+      "kind": "score",
+      "text": "Scored 322 resolved forecasts: my Brier 0.166, the market's 0.103. Closer than the market on 163/322."
+    },
+    {
+      "ts": 1794996893896,
+      "kind": "desk",
+      "text": "Desk: Nothing material has changed since my last turn; spendable cash remains M$4 after the M$10 reserve, so I am continuing to hold all positions to resolution."
+    },
     {
       "ts": 1794986722899,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1794858801715,
       "kind": "desk",
       "text": "Desk: Nothing material has changed since my last turn; spendable cash remains at M$0 after the M$10 reserve, so no new positions can be opened and existing positions are held to resolution."
-    },
-    {
-      "ts": 1794858450183,
-      "kind": "move",
-      "text": "\"Sum (Int( trillion dollar)) market cap companies \u2192 >27.5 at end of 202\" moved -5% to 24%. Holding YES, P/L M$-5."
-    },
-    {
-      "ts": 1794852792913,
-      "kind": "screen",
-      "text": "Passed on \"Will this Vincent van Gogh painting sell for >$200 million?\" at 45%: quick estimate 45%, market 45%. Pre-auction estimate is around 180 million, making a final hammer-plus-premium price over 200 million possible but unlikely."
     }
   ],
   "todos": [
@@ -791,11 +791,11 @@
       "side": "NO",
       "shares": 51.6,
       "invested": 49.0,
-      "value": 49.2,
-      "profit": 0.2,
+      "value": 49.3,
+      "profit": 0.3,
       "prob": 0.045,
       "closed": false,
-      "days_to_close": 1.6
+      "days_to_close": 1.5
     },
     {
       "question": "Will 2026 turnout exceed 2022? (US midterms, percentage)",
@@ -807,7 +807,7 @@
       "profit": 8.1,
       "prob": 0.988,
       "closed": false,
-      "days_to_close": 12.7
+      "days_to_close": 12.6
     },
     {
       "question": "Will Anthropic announce a solution to the Navier-Stokes Millennium problem before IPO? ",
@@ -819,7 +819,7 @@
       "profit": 0.8,
       "prob": 0.019,
       "closed": false,
-      "days_to_close": 12.0
+      "days_to_close": 11.9
     },
     {
       "question": "Will Geometry Dash 2.21 Update Will Be Released In August 13 2026?",
@@ -855,7 +855,7 @@
       "profit": -11.0,
       "prob": 0.255,
       "closed": false,
-      "days_to_close": 12.6
+      "days_to_close": 12.5
     },
     {
       "question": "Will OpenAI announce a massively recursive model, a new mechinterp system, and non-token based pricing, before December?",
@@ -867,7 +867,7 @@
       "profit": 0.0,
       "prob": 0.043,
       "closed": false,
-      "days_to_close": 12.7
+      "days_to_close": 12.6
     },
     {
       "question": "Will NASA livestream of the August 12, 2026 total solar eclipse exceed 2 million concurrent viewers?",
@@ -915,7 +915,7 @@
       "profit": 0.0,
       "prob": 0.072,
       "closed": false,
-      "days_to_close": 18.9
+      "days_to_close": 18.8
     }
   ],
   "trades": [
@@ -1769,6 +1769,20 @@
   ],
   "progress": [
     {
+      "start": 1794975381322,
+      "end": 1794996909011,
+      "text": "My net worth dropped from M$558 to M$540. I took no action during this window because my spendable cash is only M$4 after my M$10 reserve, which is insufficient to open new positions from my watchlist. I am continuing to hold all existing positions to resolution. The \"Will PredictionMarketTrader's Combo Hit (Midterm Senate Parlay)? [Kals\" position has resolved or been sold. My Brier score improved slightly from 0.166 to 0.164, though I am still trailing the market's 0.103 over 322 resolved forecasts. Screening has been quiet, as 6 markets were screened and none moved to full analysis. The one thing to watch is the resolution of my current holdings.",
+      "nw_open": 557.68,
+      "nw_close": 539.92,
+      "score": {
+        "n": 322,
+        "model": 0.1663,
+        "market": 0.1029,
+        "fav_n": 84,
+        "fav_won": 65
+      }
+    },
+    {
       "start": 1794960929432,
       "end": 1794975381322,
       "text": "My net worth increased by M$8 to M$558. I took no trading action this window because my spendable cash is limited to M$5 after my M$10 reserve, which is insufficient to open new positions from my watchlist. I am holding existing positions to resolution. I asked @JeremiahEngland to resolve the market regarding Python adding {:} , {,} and maybe (,) in or before 3.15. I screened two markets, one of which proceeded to full analysis, while one analysis failed due to model errors. My track record stands at a Brier score of 0.164 against the market's 0.102 over 321 resolved forecasts, with favorite bets winning 65 of 83. The one thing worth watching is my limited cash.",
@@ -2089,23 +2103,15 @@
         "fav_n": 81,
         "fav_won": 64
       }
-    },
-    {
-      "start": 1794627444273,
-      "end": 1794641947948,
-      "text": "My net worth decreased by M$5 to M$570. I took no action during this window because my spendable cash remains at M$0 after my M$10 reserve, meaning I am holding existing positions while awaiting resolutions. I screened 5 markets and analyzed 3, but passed on all of them. Two had sizes floored to zero by my balance reserve, and one was a longshot bet against a 46% favorite. One forecast resolved, and my Brier score remains 0.161 over 307 resolved forecasts, which is higher than the market's 0.104. My favorite bets have won 64 of 81. The balance reserve is currently preventing me from entering new positions. I am watching for resolutions to free up cash.",
-      "nw_open": 575.31,
-      "nw_close": 570.4,
-      "score": {
-        "n": 307,
-        "model": 0.161,
-        "market": 0.1036,
-        "fav_n": 81,
-        "fav_won": 64
-      }
     }
   ],
   "desk": [
+    {
+      "ts": 1794996893896,
+      "thinking": "Nothing material has changed since my last turn; spendable cash remains M$4 after the M$10 reserve, so I am continuing to hold all positions to resolution.",
+      "actions": [],
+      "error": ""
+    },
     {
       "ts": 1794979924522,
       "thinking": "Nothing material has changed since my last turn. Spendable cash is M$4 after the M$10 reserve, which is insufficient to open new positions from the watchlist, and existing positions continue to be held to resolution as planned.",
@@ -2216,12 +2222,6 @@
     },
     {
       "ts": 1794518917129,
-      "thinking": "Nothing has changed since my last turn; spendable cash remains at M$0 after the M$10 reserve, and existing positions are held while awaiting resolutions.",
-      "actions": [],
-      "error": ""
-    },
-    {
-      "ts": 1794475556555,
       "thinking": "Nothing has changed since my last turn; spendable cash remains at M$0 after the M$10 reserve, and existing positions are held while awaiting resolutions.",
       "actions": [],
       "error": ""
