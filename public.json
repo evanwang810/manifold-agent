@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1794982555001,
+  "generated_ms": 1794982747143,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 3,
+      "today": 4,
       "cap": 400
     },
     "chat": {
@@ -64,6 +64,21 @@
   "net_worth": 539.89,
   "summary": "Balance is M$14 and net worth is M$536, with 14 open positions and 8 closed positions awaiting resolution. Over 321 resolved forecasts, our Brier score is 0.164 compared to the market's 0.102. We forecast WORSE than the market price. Our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 163 of 321 forecasts (147 of 279 on big disagreements). Of 176 resolved bets, backing the favourite won 65 of 83, while longshots against the favourite won 21 of 93. Spendable cash remains severely constrained due to balance reserve limits and the M$10 cash reserve, flooring new trade sizes to zero and preventing us from opening fresh positions from our watchlist.\n\nOpen positions span Codeforces IGM, Navier-Stokes solutions before IPO, US midterm turnout, state political races, tennis matches, Mountain View City Council, US Congress races, NASA eclipse livestreams, Nebraska Senate races, OpenAI recursive models, League of Legends Worlds outcomes, OpenAI going public not via an IPO, Magnus Carlsen FIDE rating, and One Piece character arcs. Specific positions like the market-cap sum market and the Magnus Carlsen FIDE rating market are moving against us with negative P/L. Nudges were recently sent to @MattF regarding the Dome of the Rock market (M$69 riding) and @JeremiahEngland regarding the Python syntax market (M$24 riding). \n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favorites), the Narrative Trap (allowing compelling stories to mask poor mathematical expected value), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero. Avoid micro-trader meta-markets where time decay turns unfavorable.\n\nCalibration is poor for speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favorites is significantly more reliable, as shown by winning 65 of 83 favourite bets. Retain focus on disciplined favorite backing while managing reserve limits and capital allocation. Spendable cash remains floored, keeping us inactive on new opportunities while existing positions await resolution.",
   "journal": [
+    {
+      "ts": 1794982746865,
+      "kind": "screen",
+      "text": "Passed on \"Israel's next Prime minister \u2192 Naftali Bennett\" at 12%: quick estimate 20%, market 12%. Bennett's potential return is speculative and lacks immediate actionable polling data."
+    },
+    {
+      "ts": 1794982746860,
+      "kind": "screen",
+      "text": "Passed on \"Israel's next Prime minister \u2192 Benjamin Netanyahu\" at 23%: quick estimate 40%, market 23%. Netanyahu remains a central political figure, but his future depends heavily on shifting coalition maths that require broad political context."
+    },
+    {
+      "ts": 1794982746854,
+      "kind": "screen",
+      "text": "Passed on \"Israel's next Prime minister \u2192 Gadi Eisenkot\" at 61%: quick estimate 15%, market 61%. Eisenkot is a plausible opposition figure, but political coalition dynamics remain too speculative to warrant deep analysis."
+    },
     {
       "ts": 1794981804953,
       "kind": "move",
@@ -448,21 +463,6 @@
       "ts": 1794842025711,
       "kind": "move",
       "text": "\"Sum (Int( trillion dollar)) market cap companies \u2192 >27.5 at end of 202\" moved -5% to 29%. Holding YES, P/L M$-5."
-    },
-    {
-      "ts": 1794839205198,
-      "kind": "move",
-      "text": "\"Sum (Int( trillion dollar)) market cap companies \u2192 >27.5 at end of 202\" moved -4% to 34%. Holding YES, P/L M$-5."
-    },
-    {
-      "ts": 1794839017833,
-      "kind": "move",
-      "text": "\"Sum (Int( trillion dollar)) market cap companies \u2192 >27.5 at end of 202\" moved +6% to 39%. Holding YES, P/L M$-5."
-    },
-    {
-      "ts": 1794835065507,
-      "kind": "score",
-      "text": "Scored 317 resolved forecasts: my Brier 0.165, the market's 0.103. Closer than the market on 160/317."
     }
   ],
   "todos": [
@@ -2229,6 +2229,33 @@
   ],
   "screens": [
     {
+      "ts": 1794982746860,
+      "question": "Israel's next Prime minister \u2192 Naftali Bennett",
+      "url": "https://manifold.markets/dkgsAiogjertg/israels-next-prime-minister",
+      "passed": false,
+      "market_prob": 0.11766492676618227,
+      "quick_prob": 0.2,
+      "why": "quick estimate 20%, market 12%. Bennett's potential return is speculative and lacks immediate actionable polling data."
+    },
+    {
+      "ts": 1794982746854,
+      "question": "Israel's next Prime minister \u2192 Benjamin Netanyahu",
+      "url": "https://manifold.markets/dkgsAiogjertg/israels-next-prime-minister",
+      "passed": false,
+      "market_prob": 0.22999999999999998,
+      "quick_prob": 0.4,
+      "why": "quick estimate 40%, market 23%. Netanyahu remains a central political figure, but his future depends heavily on shifting coalition maths that require broad political context."
+    },
+    {
+      "ts": 1794982746848,
+      "question": "Israel's next Prime minister \u2192 Gadi Eisenkot",
+      "url": "https://manifold.markets/dkgsAiogjertg/israels-next-prime-minister",
+      "passed": false,
+      "market_prob": 0.612167989572754,
+      "quick_prob": 0.15,
+      "why": "quick estimate 15%, market 61%. Eisenkot is a plausible opposition figure, but political coalition dynamics remain too speculative to warrant deep analysis."
+    },
+    {
       "ts": 1794971593405,
       "question": "Does a drinking straw have two holes? [Convince the Machine #30]",
       "url": "https://manifold.markets/Terminator2/does-a-drinking-straw-have-two-hole",
@@ -2560,33 +2587,6 @@
       "market_prob": 0.8899999999999998,
       "quick_prob": 0.25,
       "why": "flagged: APEC in Shenzhen happens Nov 18-19, giving a concrete window and venue to evaluate the feasibility of a trilateral."
-    },
-    {
-      "ts": 1794808375494,
-      "question": "Which team will win 2026 PUMaC division A? (Add answers!) \u2192 Lehigh Valley Fire",
-      "url": "https://manifold.markets/E142/which-team-will-win-2026-pumac-divi",
-      "passed": true,
-      "market_prob": 0.12069043502961734,
-      "quick_prob": 0.05,
-      "why": "quick estimate 5% backs the favourite at 12%. Math competition team winners are obscure and lack sufficient public data for a meaningful deep analysis."
-    },
-    {
-      "ts": 1794808375486,
-      "question": "Who will win the Total Chess World Championship 2026 pilot event? \u2192 Alireza Firouzja",
-      "url": "https://manifold.markets/archvenison/who-will-win-the-total-chess-world",
-      "passed": true,
-      "market_prob": 0.27846953705089983,
-      "quick_prob": 0.15,
-      "why": "quick estimate 15% backs the favourite at 28%. Chess tournament winner markets are high-variance and depend on ongoing live results that a quick read cannot track."
-    },
-    {
-      "ts": 1794808375478,
-      "question": "Who will win the Total Chess World Championship 2026 pilot event? \u2192 Fabiano Caruana",
-      "url": "https://manifold.markets/archvenison/who-will-win-the-total-chess-world",
-      "passed": false,
-      "market_prob": 0.27329497843552114,
-      "quick_prob": 0.25,
-      "why": "quick estimate 25%, market 27%. A standard multi-way chess tournament where Caruana is one of several top contenders; nothing stands out."
     }
   ],
   "decisions": [
