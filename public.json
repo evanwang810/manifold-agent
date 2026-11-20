@@ -1,12 +1,12 @@
 {
-  "generated_ms": 1795133127819,
+  "generated_ms": 1795133511702,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
   "models": {
     "fast": {
       "configured": "gemini-3.5-flash-lite",
-      "active": "gemini-3.5-flash-lite",
+      "active": "gemini-3.5-flash",
       "fallbacks": [
         "gemini-3.5-flash"
       ]
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 0,
+      "today": 5,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 0,
+      "today": 1,
       "cap": 54
     }
   },
@@ -64,6 +64,26 @@
   "net_worth": 554.6,
   "summary": "Balance M$5. Net worth M$530. 15 open positions, 8 of them closed and awaiting resolution. Over 327 resolved forecasts, our Brier score is 0.166 compared to the market's 0.104. We forecast WORSE than the market price. Our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 167 of 327 forecasts (150 of 284 on big disagreements). Of 177 resolved bets, backing the favourite won 65 of 84, while longshots against the favourite won 21 of 93. Spendable cash remains severely constrained due to balance reserve limits and the M$10 cash reserve, flooring new trade sizes to zero or near-zero, though we managed small M$4 NO bets on Anthropic's IPO market cap and Alireza Firouzja in the Total Chess World Championship when cash briefly permitted.\n\nOpen positions span Codeforces IGM, Navier-Stokes solutions before IPO, US midterm turnout, state political races, Mountain View City Council, US Congress races, NASA eclipse livestreams, Nebraska Senate races, OpenAI recursive models, League of Legends Worlds outcomes, OpenAI going public not via an IPO, Magnus Carlsen FIDE rating, One Piece character arcs, Anthropic IPO caps, and Total Chess winner markets. Specific positions continue to move against us with negative P/L, including the Sum of trillion dollar market cap companies YES position and Alireza Firouzja's chess championship odds which have swung heavily against our NO position. Recent nudges were sent to @MattF regarding the Dome of the Rock market, @JeremiahEngland regarding the Python syntax market, and @EmperorCheeks regarding the Sanji nosebleed market.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favorites), the Narrative Trap (allowing compelling stories to mask poor mathematical expected value), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero. Avoid micro-trader meta-markets where time decay turns unfavorable.\n\nCalibration is poor for speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favorites is significantly more reliable, as shown by winning 65 of 84 favourite bets. Retain focus on disciplined favorite backing while managing reserve limits and capital allocation. Spendable cash remains largely floored near M$4 to M$5, keeping us mostly inactive on new opportunities while existing positions await resolution.",
   "journal": [
+    {
+      "ts": 1795133511228,
+      "kind": "analysis",
+      "text": "Analysed \"Which team will win 2026 PUMaC division A? (Add answers!) \u2192 Washington\": market 12%, my 11% (medium). No trade, edge 0.08 log-odds below minimum 0.2."
+    },
+    {
+      "ts": 1795133511082,
+      "kind": "trade",
+      "text": "Limit order M$55 NO on \"Will Angela Rayner be Prime Minister of the UK before December?\" at 4%, my estimate 1% (high). Because: With only 11 days until December 1 and Starmer commanding an absolute majority, the probability of an unprecedented sudden succession event is virtually negligible."
+    },
+    {
+      "ts": 1795133344595,
+      "kind": "screen",
+      "text": "Escalated \"Which team will win 2026 PUMaC division A? (Add answers!) \u2192 Washington\" at 12%: quick estimate 5% backs the favourite at 12%. PUMaC Division A is highly competitive with many strong math teams, making a specific team a longshot."
+    },
+    {
+      "ts": 1795133344590,
+      "kind": "screen",
+      "text": "Escalated \"Will Angela Rayner be Prime Minister of the UK before December?\" at 4%: quick estimate 1% backs the favourite at 4%. Starmer is secure in his majority and there is no realistic path for Rayner to become PM by December."
+    },
     {
       "ts": 1795132376497,
       "kind": "score",
@@ -443,26 +463,6 @@
       "ts": 1795039687724,
       "kind": "score",
       "text": "Scored 323 resolved forecasts: my Brier 0.167, the market's 0.104. Closer than the market on 163/323."
-    },
-    {
-      "ts": 1795036278057,
-      "kind": "screen",
-      "text": "Passed on \"Will Bitcoin BTC be $66666 or higher at some point on the day Grand Th\" at 10%: quick estimate 50%, market 10%. This depends entirely on unpredictable future Bitcoin price action on an unspecified release date."
-    },
-    {
-      "ts": 1795036278049,
-      "kind": "screen",
-      "text": "Passed on \"Will we get a Trailer 4 for GTA VI?\" at 17%: quick estimate 50%, market 17%. Vague resolution criteria and inactive judge make this too ambiguous to waste deep model calls on."
-    },
-    {
-      "ts": 1795035902705,
-      "kind": "score",
-      "text": "Scored 323 resolved forecasts: my Brier 0.167, the market's 0.104. Closer than the market on 163/323."
-    },
-    {
-      "ts": 1795032580552,
-      "kind": "screen",
-      "text": "Escalated \"Will Asahifuji win the Juryo Yusho at the November 2026 Grand Sumo Tou\" at 40%: flagged: Tournament is currently ongoing with Asahifuji tied for the lead and facing a critical match against Wakatakakage tonight."
     }
   ],
   "todos": [
@@ -774,6 +774,18 @@
       "days_to_close": 0.0
     },
     {
+      "question": "Will Angela Rayner be Prime Minister of the UK before December?",
+      "url": "https://manifold.markets/DaisyWelham/will-angela-rayner-be-prime-ministe",
+      "side": "NO",
+      "shares": 57.0,
+      "invested": 55.0,
+      "value": 55.0,
+      "profit": 0.0,
+      "prob": 0.034,
+      "closed": false,
+      "days_to_close": 11.0
+    },
+    {
       "question": "Will Magnus Carlsen be dethroned from his #1 spot in FIDE rating before GTA 6 is released?",
       "url": "https://manifold.markets/SophusCorry/will-magnus-carlsen-be-dethroned-fr",
       "side": "NO",
@@ -919,6 +931,30 @@
     }
   ],
   "trades": [
+    {
+      "kind": "buy",
+      "side": "NO",
+      "amount": 55.0,
+      "limit": 0.03,
+      "market_prob": 0.0351585128507406,
+      "model_prob": 0.01,
+      "confidence": "high",
+      "why": "With only 11 days until December 1 and Starmer commanding an absolute majority, the probability of an unprecedented sudden succession event is virtually negligible.",
+      "research": "No live search was available, so you are working from training data that may be months stale. Treat anything time-sensitive as unknown.",
+      "source": "scan",
+      "evidence_for": [
+        "Angela Rayner is Deputy Prime Minister, placing her first in line for caretaker succession if Keir Starmer were suddenly incapacitated."
+      ],
+      "evidence_against": [
+        "Keir Starmer holds a massive parliamentary majority and shows no signs of resigning or stepping down.",
+        "There are only 11 days remaining until the December 1, 2026 deadline.",
+        "Even upon a hypothetical sudden resignation or medical event, appointment of a new Prime Minister by the monarch is not guaranteed to resolve immediately to the deputy PM."
+      ],
+      "uncertainty": "An acute, catastrophic health emergency or sudden resignation involving Keir Starmer within the next 11 days.",
+      "ts": 1795133511077,
+      "question": "Will Angela Rayner be Prime Minister of the UK before December?",
+      "url": "https://manifold.markets/DaisyWelham/will-angela-rayner-be-prime-ministe"
+    },
     {
       "kind": "buy",
       "side": "NO",
@@ -1754,31 +1790,6 @@
       "ts": 1792115222262,
       "question": "Will Tesla announce on October 15, 2026 that the new Roadster can accelerate from 0 to 60 mph in under 1 second?",
       "url": "https://manifold.markets/bessarabov/tesla-roadster-sub-1s-2026-10-15"
-    },
-    {
-      "kind": "buy",
-      "side": "NO",
-      "amount": 32.0,
-      "limit": 0.39,
-      "market_prob": 0.41737168188078766,
-      "model_prob": 0.35,
-      "confidence": "medium",
-      "why": "While Musk has teased sub-1-second times informally, official specs meeting the strict criteria are less likely than a promotional or aspirational mention.",
-      "research": "",
-      "source": "scan",
-      "evidence_for": [
-        "Elon Musk previously tweeted in February 2024 that the Roadster can achieve 0-60mph in under 1 second.",
-        "Tesla has previously claimed optional packages including SpaceX thrusters can achieve a 0-60 time of roughly 1.1 seconds, leaving room for further optimization or bold announcement claims.",
-        "The event is specifically a Roadster reveal event on October 15, 2026, where dramatic headline specifications are typical for Tesla product unveilings."
-      ],
-      "evidence_against": [
-        "A 0-60 mph time under 1 second via standard or packaged wheels/thrusters pushes physical and engineering limits for street-legal or even track vehicles, making an official spec announcement a bold and potentially promotional exaggeration rather than a guaranteed production reality.",
-        "Tesla's historical baseline specs for the Roadster have quoted 1.9 seconds, and while Musk hypes sub-1 second informally on X, converting that into an official corporate specification announcement at the event remains uncertain."
-      ],
-      "uncertainty": "Whether Elon Musk or Tesla's official presentation materials will formally list a 0-60 mph time strictly under 1.0 second as an official vehicle specification during the October 15 event.",
-      "ts": 1792032160570,
-      "question": "Will Tesla announce on October 15, 2026 that the new Roadster can accelerate from 0 to 60 mph in under 1 second?",
-      "url": "https://manifold.markets/bessarabov/tesla-roadster-sub-1s-2026-10-15"
     }
   ],
   "progress": [
@@ -2243,6 +2254,24 @@
   ],
   "screens": [
     {
+      "ts": 1795133344590,
+      "question": "Which team will win 2026 PUMaC division A? (Add answers!) \u2192 Washington Gold",
+      "url": "https://manifold.markets/E142/which-team-will-win-2026-pumac-divi",
+      "passed": true,
+      "market_prob": 0.11829631142902826,
+      "quick_prob": 0.05,
+      "why": "quick estimate 5% backs the favourite at 12%. PUMaC Division A is highly competitive with many strong math teams, making a specific team a longshot."
+    },
+    {
+      "ts": 1795133344584,
+      "question": "Will Angela Rayner be Prime Minister of the UK before December?",
+      "url": "https://manifold.markets/DaisyWelham/will-angela-rayner-be-prime-ministe",
+      "passed": true,
+      "market_prob": 0.0351585128507406,
+      "quick_prob": 0.01,
+      "why": "quick estimate 1% backs the favourite at 4%. Starmer is secure in his majority and there is no realistic path for Rayner to become PM by December."
+    },
+    {
       "ts": 1795126055089,
       "question": "Will the PC version of Grand Theft Auto 6 release within six months of the console version?",
       "url": "https://manifold.markets/BryceBowemd39/will-the-pc-version-of-grand-theft",
@@ -2583,27 +2612,56 @@
       "market_prob": 0.49416756074347634,
       "quick_prob": 0.4,
       "why": "quick estimate 40% backs the favourite at 49%. Vague resolution criteria relying on subjective mods or unverified news outlets make this a low-value coin flip."
-    },
-    {
-      "ts": 1795004678975,
-      "question": "Is this either Luffy or Quagmire? (Fortnite trailer speculation)",
-      "url": "https://manifold.markets/strutheo/is-this-either-luffy-or-quagmire-fo",
-      "passed": true,
-      "market_prob": 0.21348606261406797,
-      "quick_prob": 0.05,
-      "why": "quick estimate 5% backs the favourite at 21%. Comments and updates indicate neither character was added, making this effectively a settled NO."
-    },
-    {
-      "ts": 1795004678968,
-      "question": "Will the next White House Press Secretary after Katie Zachariah be a blonde woman?",
-      "url": "https://manifold.markets/Tetraspace/will-the-next-white-house-press-sec",
-      "passed": true,
-      "market_prob": 0.3975247442169593,
-      "quick_prob": 0.35,
-      "why": "quick estimate 35% backs the favourite at 40%. This depends entirely on future personnel appointments which are completely unknown at this stage."
     }
   ],
   "decisions": [
+    {
+      "ts": 1795133511223,
+      "kind": "no_trade",
+      "question": "Which team will win 2026 PUMaC division A? (Add answers!) \u2192 Washington Gold",
+      "url": "https://manifold.markets/E142/which-team-will-win-2026-pumac-divi",
+      "market_prob": 0.11829631142902826,
+      "model_prob": 0.11,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Washington Gold is a contender in Division A, but Lehigh Valley Fire, Texas Ramanujan, and Alphastar make Division A highly competitive. Fair probability is around 10-12%.",
+      "uncertainty": "The exact roster compositions of Washington Gold vs Lehigh Valley Fire and Texas Ramanujan.",
+      "resolution_risk": "A tie for first divides the payout equally across winning teams.",
+      "evidence_for": [
+        "Washington Gold draws from a deep pool of USAMO/MOP-level high school talent in Washington state.",
+        "Washington teams consistently place in the top tier at national competitions like PUMaC, ARML, and HMMT."
+      ],
+      "evidence_against": [
+        "Division A features heavy competition from historical powerhouses such as Lehigh Valley Fire, Texas Ramanujan/ACES, Thomas Jefferson A, and Alphastar AIR.",
+        "Lehigh Valley Fire and other regional all-star teams frequently take top honours at PUMaC over individual state teams.",
+        "Multiple competitive teams split the win probability across a crowded field of over 10 serious options."
+      ],
+      "reason": "edge 0.08 log-odds below minimum 0.2"
+    },
+    {
+      "ts": 1795133511077,
+      "kind": "bet",
+      "question": "Will Angela Rayner be Prime Minister of the UK before December?",
+      "url": "https://manifold.markets/DaisyWelham/will-angela-rayner-be-prime-ministe",
+      "market_prob": 0.0351585128507406,
+      "model_prob": 0.01,
+      "confidence": "high",
+      "amount": 55.0,
+      "outcome": "NO",
+      "thinking": "With only 11 days until December 1 and Starmer commanding an absolute majority, the probability of an unprecedented sudden succession event is virtually negligible.",
+      "uncertainty": "An acute, catastrophic health emergency or sudden resignation involving Keir Starmer within the next 11 days.",
+      "resolution_risk": "None obvious; the criteria explicitly address caretaker appointment and death.",
+      "evidence_for": [
+        "Angela Rayner is Deputy Prime Minister, placing her first in line for caretaker succession if Keir Starmer were suddenly incapacitated."
+      ],
+      "evidence_against": [
+        "Keir Starmer holds a massive parliamentary majority and shows no signs of resigning or stepping down.",
+        "There are only 11 days remaining until the December 1, 2026 deadline.",
+        "Even upon a hypothetical sudden resignation or medical event, appointment of a new Prime Minister by the monarch is not guaranteed to resolve immediately to the deputy PM."
+      ],
+      "reason": "edge 0.025, kelly 0.72, decay 0.91, bound by default cap"
+    },
     {
       "ts": 1795126302276,
       "kind": "no_trade",
@@ -2903,54 +2961,6 @@
         "Strong institutional interest, including $26B in backing from Google and Nvidia, could drive an opening pop well beyond 10-15%."
       ],
       "reason": "edge 0.056, kelly 0.13, decay 1.00, bound by balance reserve"
-    },
-    {
-      "ts": 1794997734125,
-      "kind": "no_trade",
-      "question": "Will Bonney join the Strawhats?",
-      "url": "https://manifold.markets/GabeGarboden/will-bonney-join-the-strawhats",
-      "market_prob": 0.12060272638130423,
-      "model_prob": 0.11,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Jewelry Bonney is traveling with the crew through Egghead and Elbaf, but One Piece precedent (Vivi, Yamato, Carrot, Law) shows guest companions rarely become official Straw Hats without an explicit invitation from Luffy. Her narrative arc centers on Kuma and safety, making official crew membership unlikely (~11%).",
-      "uncertainty": "Whether Oda decides to break the pattern of guest companions and have Luffy explicitly invite Bonney as an official Straw Hat crew member.",
-      "resolution_risk": "The creator might extend the market repeatedly until the manga ends or interpret guest/honorary status as joining.",
-      "evidence_for": [
-        "Bonney is currently traveling with the Straw Hats into the Elbaf arc",
-        "She has a deep narrative connection to Luffy's Nika form"
-      ],
-      "evidence_against": [
-        "Luffy has not invited her to join the crew",
-        "Past long-term traveling companions like Yamato, Carrot, Vivi, and Law did not officially join",
-        "Her character arc is focused on Kuma and finding a safe life rather than the search for One Piece",
-        "She is biologically and mentally a child (12 years old) with Lilith acting as her guardian"
-      ],
-      "reason": "edge 0.10 log-odds below minimum 0.2"
-    },
-    {
-      "ts": 1794945578835,
-      "kind": "no_trade",
-      "question": "Will my former school literally embezzle my money?",
-      "url": "https://manifold.markets/realTomBayes/will-my-former-school-literally-emb",
-      "market_prob": 0.3391029359159512,
-      "model_prob": 0.73,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "The school already failed to notify the creator of the nomination. Combined with administrative latency and Thanksgiving holiday closures starting right after Nov 21, the likelihood of an attempted contact within 7 calendar days is low.",
-      "uncertainty": "Whether NSPA sends an immediate electronic notification to the school advisor who might forward it before Thanksgiving break.",
-      "resolution_risk": "Resolves N/A if the creator does not win; resolution criteria measures contact within 7 days rather than literal embezzlement.",
-      "evidence_for": [
-        "The school did not inform the former student about the nomination despite knowing how to contact them.",
-        "The 7-day window from Nov 21 overlaps directly with Thanksgiving break when school offices are closed.",
-        "Administrative latency for handling mail, awards, and contacting alumni typically exceeds one week."
-      ],
-      "evidence_against": [
-        "The school administration might immediately email upon receiving the announcement to claim PR for a national win."
-      ],
-      "reason": "would be a longshot bet against the 34% favourite"
     }
   ]
 }
