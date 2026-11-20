@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1795204407147,
+  "generated_ms": 1795204698406,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 40,
+      "today": 42,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 12,
+      "today": 13,
       "cap": 54
     }
   },
@@ -61,9 +61,19 @@
   "track_record": "Brier score over 336 resolved forecasts: yours 0.170, the market's 0.108 (lower is better, 0.25 is a coin flip). You forecast WORSE than the market price. Your disagreements have mostly been you being wrong, not the market.\nCloser to the outcome than the market on 171 of 336; on big disagreements, 153 of 292.\nResolved bets: 179. Backing the favourite: won 66 of 86. Longshots against the favourite: won 21 of 93.\nMost recent resolutions:\n- \"Will the Riemann Hypothesis be solved before December 2026\": you 2%, market 17%, resolved YES\n- \"Will a Millennium Prize Problem be solved in November 2026?\": you 5%, market 19%, resolved YES\n- \"Anthropic IPOs in 2026 AND has a closing market cap above 1.8trillion?\": you 32%, market 9%, resolved NO\n- \"Anthropic Market cap at close on IPO day is between 1.25 and 1.5 trill\": you 37%, market 43%, resolved YES\n- \"Will Grand Theft Auto 6 make more than $1.2 billion within 24 hours of\": you 68%, market 82%, resolved YES\n- \"Will Reuters or AP publish a photo of Trump, Xi and Putin together in \": you 78%, market 76%, resolved YES",
   "status": "Nothing material has changed since my last turn; spendable cash remains at M$0 after the M$10 reserve, so I am holding all positions to resolution.",
   "balance": 10.22,
-  "net_worth": 551.63,
+  "net_worth": 550.46,
   "summary": "Balance M$10. Net worth M$553. 16 open positions, 8 of them closed and awaiting resolution. Over 334 resolved forecasts, our Brier score is 0.165 compared to the market's 0.104. We forecast WORSE than the market price. Our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 171 of 334 forecasts (153 of 290 on big disagreements). Of 179 resolved bets, backing the favourite won 66 of 86, while longshots against the favourite won 21 of 93. Spendable cash recently allowed us to deploy funds into high-probability favorites, such as buying NO on Angela Rayner becoming Prime Minister and NO on a Taylor Swift pregnancy announcement before returning to zero spendable cash reserves.\n\nOpen positions span Codeforces IGM, Navier-Stokes solutions before IPO, US midterm turnout, state political races, Mountain View City Council, US Congress races, NASA eclipse livestreams, Nebraska Senate races, OpenAI recursive models, League of Legends Worlds outcomes, OpenAI going public not via an IPO, Magnus Carlsen FIDE rating, One Piece character arcs, Anthropic IPO caps, and Total Chess winner markets. Specific positions continue to move against us with negative P/L, including Alireza Firouzja's chess championship odds which have swung heavily against our NO position. Recent nudges were sent to @MattF regarding the Dome of the Rock market, @JeremiahEngland regarding the Python syntax market, and @EmperorCheeks regarding the Sanji nosebleed market.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favorites), the Narrative Trap (allowing compelling stories to mask poor mathematical expected value), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero. Avoid micro-trader meta-markets where time decay turns unfavorable.\n\nCalibration is poor for speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favorites is significantly more reliable, as shown by winning 66 of 86 favourite bets. Retain focus on disciplined favorite backing while managing reserve limits and capital allocation. Spendable cash fluctuates around cash reserve limits, periodically flooring new trade sizes to zero when reserves constrain activity.",
   "journal": [
+    {
+      "ts": 1795204695044,
+      "kind": "analysis",
+      "text": "Analysed \"Who will win the Total Chess World Championship 2026 pilot event? \u2192 Al\": market 76%, my 78% (medium). No trade, edge 0.13 log-odds below minimum 0.2."
+    },
+    {
+      "ts": 1795204588939,
+      "kind": "move",
+      "text": "\"Who will win the Total Chess World Championship 2026 pilot event? \u2192 Al\" moved +15% to 76%. Holding NO, P/L M$+1."
+    },
     {
       "ts": 1795204404030,
       "kind": "move",
@@ -453,16 +463,6 @@
       "ts": 1795133344590,
       "kind": "screen",
       "text": "Escalated \"Will Angela Rayner be Prime Minister of the UK before December?\" at 4%: quick estimate 1% backs the favourite at 4%. Starmer is secure in his majority and there is no realistic path for Rayner to become PM by December."
-    },
-    {
-      "ts": 1795132376497,
-      "kind": "score",
-      "text": "Scored 332 resolved forecasts: my Brier 0.166, the market's 0.105. Closer than the market on 170/332."
-    },
-    {
-      "ts": 1795132361356,
-      "kind": "closed",
-      "text": "No longer holding \"Will Sanji have a nose bleed over ZaZa the Rain God/Nightmare?\". Last seen NO at 31%, P/L M$+4. Resolved or sold."
     }
   ],
   "todos": [
@@ -923,9 +923,9 @@
       "side": "NO",
       "shares": 7.7,
       "invested": 4.0,
-      "value": 3.0,
+      "value": 1.9,
       "profit": 1.3,
-      "prob": 0.605,
+      "prob": 0.758,
       "closed": false,
       "days_to_close": 5.2
     },
@@ -2642,6 +2642,30 @@
   ],
   "decisions": [
     {
+      "ts": 1795204695037,
+      "kind": "no_trade",
+      "question": "Who will win the Total Chess World Championship 2026 pilot event? \u2192 Alireza Firouzja",
+      "url": "https://manifold.markets/archvenison/who-will-win-the-total-chess-world",
+      "market_prob": 0.7575991462726699,
+      "model_prob": 0.78,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With the Total Chess pilot reaching its Nov 20 conclusion and Armageddon tiebreaks underway/concluded with Magnus struggling, Firouzja's speed-chess prowess puts him in a dominant position to take the title.",
+      "uncertainty": "Whether the final Armageddon game has officially concluded in Firouzja's favor or is currently being played.",
+      "resolution_risk": "Resolution relies on the explicit official winner announcement by tournament organizers.",
+      "evidence_for": [
+        "Firouzja reached the final four and advanced to the ultimate stage of the Total Chess pilot event on Nov 20.",
+        "Commentary indicates Magnus Carlsen faced trouble and the tournament proceeded to Armageddon.",
+        "Firouzja is exceptionally strong in rapid, blitz, and fast classical formats."
+      ],
+      "evidence_against": [
+        "Armageddon tiebreaks carry single-game high variance.",
+        "Remaining opposition in the final field consists of elite super-GMs."
+      ],
+      "reason": "edge 0.13 log-odds below minimum 0.2"
+    },
+    {
       "ts": 1795200676741,
       "kind": "no_trade",
       "question": "Game 1 FIDE World Chess Championship 2026 Result? \u2192 Javokhir Sindarov win",
@@ -2968,30 +2992,6 @@
       "evidence_against": [
         "Rockstar has never released a major mainline title on PC within six months of its console debut (GTA III: 7 months, Vice City: 7 months, San Andreas: 8 months, GTA IV: 7.5 months, GTA V: 19 months, RDR2: 13 months).",
         "Take-Two management continues to emphasize their traditional staggered platform strategy to optimize polish and double-dip purchasing."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1795122560225,
-      "kind": "no_trade",
-      "question": "Will at least one major hurricane make landfall in the US*?",
-      "url": "https://manifold.markets/MachiNi/will-at-least-one-major-hurricane-m",
-      "market_prob": 0.0625151844774059,
-      "model_prob": 0.05,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "The 2026 Atlantic hurricane season has ended with only one U.S. hurricane landfall: Isaias, which struck the Florida Panhandle at Category 2 (105 mph). Category 3 requires 111+ mph at landfall. Absent an unlikely post-season NHC re-analysis upgrade, this resolves NO.",
-      "uncertainty": "Whether the official NHC post-season Best Track report upgrades Isaias's landfall wind speed by 6+ mph to Category 3 threshold.",
-      "resolution_risk": "NHC post-season re-analysis reports are sometimes published early the following year, but resolution relies on official NHC data.",
-      "evidence_for": [
-        "Hurricane Isaias reached Category 3+ strength offshore prior to landfall.",
-        "NHC post-season Best Track re-analysis could potentially revise Isaias's landfall wind speed upward."
-      ],
-      "evidence_against": [
-        "Isaias made landfall in the Florida Panhandle at Category 2 strength (105 mph), below the 111 mph threshold required for Category 3 major hurricane status.",
-        "AccuWeather and hurricane meteorologists confirmed the 2026 Atlantic hurricane season was effectively over by early November.",
-        "Isaias was the only hurricane to make U.S. landfall during the 2026 season."
       ],
       "reason": "size floored to zero by balance reserve"
     }
