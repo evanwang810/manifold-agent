@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1795233906610,
+  "generated_ms": 1795234419558,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 6,
+      "today": 9,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 1,
+      "today": 2,
       "cap": 54
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 547.77,
   "summary": "Balance M$10. Net worth M$548. 15 open positions, 8 of them closed and awaiting resolution. Over 337 resolved forecasts, our Brier score is 0.169 compared to the market's 0.108. We forecast WORSE than the market price. Our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 172 of 337 forecasts (153 of 292 on big disagreements). Of 180 resolved bets, backing the favourite won 66 of 87, while longshots against the favourite won 21 of 93.\n\nOpen positions span Codeforces IGM, Navier-Stokes solutions before IPO, US midterm turnout, state political races, Mountain View City Council, US Congress races, NASA eclipse livestreams, Nebraska Senate races, OpenAI recursive models, League of Legends Worlds outcomes, OpenAI going public not via an IPO, Magnus Carlsen FIDE rating, One Piece character arcs, Anthropic IPO caps, and Total Chess winner markets. Specific positions continue to move against us with negative P/L, though Alireza Firouzja's chess championship pilot event recently resolved. Spendable cash recently allowed us to deploy funds into high-probability favorites, such as buying NO on Angela Rayner becoming Prime Minister and NO on a Taylor Swift pregnancy announcement before returning to zero spendable cash reserves after enforcing our M$10 balance reserve. Recent nudges were sent to @MattF regarding the Dome of the Rock market, @JeremiahEngland regarding the Python syntax market, and @EmperorCheeks regarding the Sanji nosebleed market.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favorites), the Narrative Trap (allowing compelling stories to mask poor mathematical expected value), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero. Avoid micro-trader meta-markets where time decay turns unfavorable.\n\nCalibration is poor for speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favorites is significantly more reliable, as shown by winning 66 of 87 favourite bets. Retain focus on disciplined favorite backing while managing reserve limits and capital allocation. Spendable cash fluctuates around cash reserve limits, periodically flooring new trade sizes to zero when reserves constrain activity.",
   "journal": [
+    {
+      "ts": 1795234419241,
+      "kind": "analysis",
+      "text": "Analysed \"Will I play GTA6 on my PC within two weeks from its launch?\": market 23%, my 5% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1795234099394,
+      "kind": "screen",
+      "text": "Escalated \"Will I play GTA6 on my PC within two weeks from its launch?\" at 23%: quick estimate 12% backs the favourite at 23%. PS5 emulation is nowhere near capable of running GTA6 at 20 FPS in two weeks, and relying on a leaked PC build is a longshot."
+    },
     {
       "ts": 1795231099224,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1795143689986,
       "kind": "score",
       "text": "Scored 333 resolved forecasts: my Brier 0.166, the market's 0.105. Closer than the market on 170/333."
-    },
-    {
-      "ts": 1795140869664,
-      "kind": "analysis",
-      "text": "Analysed \"Will Daniel J. Sullivan Jr.'s vote total exceed Peltola's winning marg\": market 6%, my 2% (high). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1795140869619,
-      "kind": "analysis",
-      "text": "Analysed \"Which team will win 2026 PUMaC division A? (Add answers!) \u2192 Texas Rama\": market 40%, my 12% (medium). No trade, size floored to zero by balance reserve."
     }
   ],
   "todos": [
@@ -2268,6 +2268,15 @@
   ],
   "screens": [
     {
+      "ts": 1795234099384,
+      "question": "Will I play GTA6 on my PC within two weeks from its launch?",
+      "url": "https://manifold.markets/Bandors/will-i-play-gta6-on-my-pc-within-tw",
+      "passed": true,
+      "market_prob": 0.2320582636287269,
+      "quick_prob": 0.12,
+      "why": "quick estimate 12% backs the favourite at 23%. PS5 emulation is nowhere near capable of running GTA6 at 20 FPS in two weeks, and relying on a leaked PC build is a longshot."
+    },
+    {
       "ts": 1795230319829,
       "question": "Will Alibaba publish open weights for a Qwen 4 model on Hugging Face by November 25, 2026?",
       "url": "https://manifold.markets/Terminator2/will-alibaba-publish-open-weights-f",
@@ -2617,18 +2626,34 @@
       "market_prob": 0.11829631142902826,
       "quick_prob": 0.05,
       "why": "quick estimate 5% backs the favourite at 12%. PUMaC Division A is highly competitive with many strong math teams, making a specific team a longshot."
-    },
-    {
-      "ts": 1795133344584,
-      "question": "Will Angela Rayner be Prime Minister of the UK before December?",
-      "url": "https://manifold.markets/DaisyWelham/will-angela-rayner-be-prime-ministe",
-      "passed": true,
-      "market_prob": 0.0351585128507406,
-      "quick_prob": 0.01,
-      "why": "quick estimate 1% backs the favourite at 4%. Starmer is secure in his majority and there is no realistic path for Rayner to become PM by December."
     }
   ],
   "decisions": [
+    {
+      "ts": 1795234419231,
+      "kind": "no_trade",
+      "question": "Will I play GTA6 on my PC within two weeks from its launch?",
+      "url": "https://manifold.markets/Bandors/will-i-play-gta6-on-my-pc-within-tw",
+      "market_prob": 0.2320582636287269,
+      "model_prob": 0.05,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Official PC release is skipped at launch and cloud streaming is excluded. PS5 emulation running a complex title like GTA 6 at 20 FPS within 14 days of release is technologically infeasible. The only realistic YES path is a leaked PC dev build, which remains a low-probability tail event (~5%).",
+      "uncertainty": "Whether a leaked functional PC developer build is released to the public around launch.",
+      "resolution_risk": "Creator subjective evaluation of whether a leaked build is 'complete enough'.",
+      "evidence_for": [
+        "Possibility of a leaked pre-release PC build being leaked publicly around launch",
+        "Creator confirmed a playable leaked build would resolve YES"
+      ],
+      "evidence_against": [
+        "GTA 6 is skipping PC at initial console launch",
+        "PS5 emulation is in its infancy and cannot run brand-new AAA titles at 20 FPS within two weeks of release",
+        "Cloud streaming is explicitly excluded",
+        "Decryption and execution of PS5 dumps on current firmware within 14 days is technologically infeasible"
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1795223234617,
       "kind": "no_trade",
@@ -2956,31 +2981,6 @@
         "Trader comments note Texas Ramanujan may be overpriced relative to the rest of the competitive field."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1795137218102,
-      "kind": "bet",
-      "question": "Will Taylor Swift announce she\u2019s pregnant by Swiftmas (Dec. 13)?",
-      "url": "https://manifold.markets/JimD/will-taylor-swift-announce-shes-pre",
-      "market_prob": 0.13273507748533908,
-      "model_prob": 0.04,
-      "confidence": "medium",
-      "amount": 19.0,
-      "outcome": "NO",
-      "thinking": "With only 23 days remaining until the December 13 deadline and strict criteria requiring verified official confirmation from Swift, Kelce, or their publicists, the baseline probability of an announcement falling in this narrow window is very low.",
-      "uncertainty": "Whether an unannounced pregnancy is intentionally scheduled to be revealed on her birthday.",
-      "resolution_risk": "Ambiguous statements or metaphorical pregnancy jokes during a concert or broadcast that require creator interpretation.",
-      "evidence_for": [
-        "Taylor Swift turns 37 on December 13 ('Swiftmas'), an occasion on which fans frequently anticipate personal or professional announcements.",
-        "She and Travis Kelce have been in an established relationship since 2023, keeping family planning rumors in public discussion."
-      ],
-      "evidence_against": [
-        "Only 23 days remain before the December 13 deadline, an extremely narrow window.",
-        "Resolution strictly requires an official statement from Swift, Kelce, or their official representatives; tabloid gossip and unverified rumors are explicitly excluded.",
-        "The baseline probability of an official pregnancy announcement occurring within any specific 3-week window is inherently low (under 5%).",
-        "No verified evidence or credible indications exist indicating an imminent official pregnancy disclosure."
-      ],
-      "reason": "edge 0.093, kelly 0.70, decay 0.41, bound by balance reserve"
     }
   ]
 }
