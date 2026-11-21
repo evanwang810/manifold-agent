@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1795248726225,
+  "generated_ms": 1795249350841,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 21,
+      "today": 24,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 5,
+      "today": 6,
       "cap": 54
     }
   },
@@ -64,6 +64,21 @@
   "net_worth": 547.82,
   "summary": "Balance M$10. Net worth M$548. 15 open positions, 8 of them closed and awaiting resolution. Over 338 resolved forecasts, our Brier score is 0.169 compared to the market's 0.108. We forecast WORSE than the market price. Our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 173 of 338 forecasts (154 of 293 on big disagreements). Of 180 resolved bets, backing the favourite won 66 of 87, while longshots against the favourite won 21 of 93.\n\nOpen positions span Codeforces IGM, Navier-Stokes solutions before IPO, US midterm turnout, state political races, Mountain View City Council, US Congress races, NASA eclipse livestreams, Nebraska Senate races, OpenAI recursive models, League of Legends Worlds outcomes, OpenAI going public not via an IPO, Magnus Carlsen FIDE rating, One Piece character arcs, Anthropic IPO caps, and Total Chess winner markets. Specific positions continue to move against us with negative P/L, though Alireza Firouzja's chess championship pilot event recently resolved. Spendable cash recently allowed us to deploy funds into high-probability favorites, such as buying NO on Angela Rayner becoming Prime Minister and NO on a Taylor Swift pregnancy announcement before returning to zero spendable cash reserves after enforcing our M$10 balance reserve.\n\nMistakes worth avoiding include the Longshot Leak (taking low-probability bets against strong favorites), the Narrative Trap (allowing compelling stories to mask poor mathematical expected value), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero. Avoid micro-trader meta-markets where time decay turns unfavorable.\n\nCalibration is poor for speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favorites is significantly more reliable, as shown by winning 66 of 87 favourite bets. Retain focus on disciplined favorite backing while managing reserve limits and capital allocation. Spendable cash fluctuates around cash reserve limits, periodically flooring new trade sizes to zero when reserves constrain activity.",
   "journal": [
+    {
+      "ts": 1795249350552,
+      "kind": "analysis",
+      "text": "Analysed \"Will I write for 2 hours a day for the next month?\": market 60%, my 38% (medium). No trade, would be a longshot bet against the 60% favourite."
+    },
+    {
+      "ts": 1795248918937,
+      "kind": "screen",
+      "text": "Passed on \"Who will break the 5/5 stranglehold on Super Mario 64 speedrunning and\" at 10%: quick estimate 15%, market 10%. Low-volume multiple choice speedrunning bounty market where Cheese is a plausible contender but lacks specific real-time tracking data."
+    },
+    {
+      "ts": 1795248918928,
+      "kind": "screen",
+      "text": "Escalated \"Will I write for 2 hours a day for the next month?\" at 60%: quick estimate 75% backs the favourite at 60%. This is a subjective lifestyle tracking market with personal health contingencies that a deep model cannot verify."
+    },
     {
       "ts": 1795245933372,
       "kind": "score",
@@ -448,21 +463,6 @@
       "ts": 1795163001672,
       "kind": "screen",
       "text": "Passed on \"Trump declassifies new UFO files by Nov. 30? [Polymarket]\" at 85%: quick estimate 15%, market 85%. Low volume market relying purely on political whims with no concrete indication of imminent action before the deadline."
-    },
-    {
-      "ts": 1795162255114,
-      "kind": "score",
-      "text": "Scored 333 resolved forecasts: my Brier 0.166, the market's 0.105. Closer than the market on 170/333."
-    },
-    {
-      "ts": 1795159287952,
-      "kind": "screen",
-      "text": "Passed on \"Is a hot dog a sandwich? [Convince the Machine #27]\" at 82%: quick estimate 62%, market 82%. This is a subjective resolution based on the creator's ongoing opinion, currently leaning YES at 62%, and no deep model can out-reason subjective taste."
-    },
-    {
-      "ts": 1795154835390,
-      "kind": "score",
-      "text": "Scored 333 resolved forecasts: my Brier 0.166, the market's 0.105. Closer than the market on 170/333."
     }
   ],
   "todos": [
@@ -2268,6 +2268,24 @@
   ],
   "screens": [
     {
+      "ts": 1795248918928,
+      "question": "Who will break the 5/5 stranglehold on Super Mario 64 speedrunning and collect the world record bounty? \u2192 Cheese",
+      "url": "https://manifold.markets/Tripping/who-will-break-the-55-stranglehold",
+      "passed": false,
+      "market_prob": 0.09804211087563569,
+      "quick_prob": 0.15,
+      "why": "quick estimate 15%, market 10%. Low-volume multiple choice speedrunning bounty market where Cheese is a plausible contender but lacks specific real-time tracking data."
+    },
+    {
+      "ts": 1795248918918,
+      "question": "Will I write for 2 hours a day for the next month?",
+      "url": "https://manifold.markets/DrewSpartz/will-i-write-for-2-hours-a-day-for",
+      "passed": true,
+      "market_prob": 0.6040751120813619,
+      "quick_prob": 0.75,
+      "why": "quick estimate 75% backs the favourite at 60%. This is a subjective lifestyle tracking market with personal health contingencies that a deep model cannot verify."
+    },
+    {
       "ts": 1795245221701,
       "question": "Who will break the 5/5 stranglehold on Super Mario 64 speedrunning and collect the world record bounty? \u2192 Cheese",
       "url": "https://manifold.markets/Tripping/who-will-break-the-55-stranglehold",
@@ -2608,27 +2626,34 @@
       "market_prob": 0.9287348294268143,
       "quick_prob": 0.5,
       "why": "quick estimate 50%, market 93%. Pure NFL statistical prop bet depending on game-by-game variance; coin toss."
-    },
-    {
-      "ts": 1795144461518,
-      "question": "What will be the next country to send a manned flight to the moon \u2192 China",
-      "url": "https://manifold.markets/BillBress/what-will-be-the-next-country-to-se",
-      "passed": true,
-      "market_prob": 0.499511491235947,
-      "quick_prob": 0.35,
-      "why": "quick estimate 35% backs the favourite at 50%. Mutually exclusive complement to the USA moon landing market."
-    },
-    {
-      "ts": 1795144461513,
-      "question": "What will be the next country to send a manned flight to the moon \u2192 USA",
-      "url": "https://manifold.markets/BillBress/what-will-be-the-next-country-to-se",
-      "passed": false,
-      "market_prob": 0.4578400215267888,
-      "quick_prob": 0.65,
-      "why": "quick estimate 65%, market 46%. USA Artemis timeline is slipping, but still favored over China's 2030 target."
     }
   ],
   "decisions": [
+    {
+      "ts": 1795249350543,
+      "kind": "no_trade",
+      "question": "Will I write for 2 hours a day for the next month?",
+      "url": "https://manifold.markets/DrewSpartz/will-i-write-for-2-hours-a-day-for",
+      "market_prob": 0.6040751120813619,
+      "model_prob": 0.38,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Although the challenge is roughly halfway through and reported to be going well, strict zero-miss 30-day habit challenges involving health friction carry high cumulative failure risk across the remaining 15 days. I estimate a 38% chance of perfect adherence.",
+      "uncertainty": "Whether a single non-incapacitating health flare-up, administrative distraction, or fatigue event occurs in the remaining 15 days.",
+      "resolution_risk": "Disputes over whether specific logged time in Rize.io qualifies as writing vs research/admin.",
+      "evidence_for": [
+        "Creator has successfully completed two major long challenges in the past (reading a book daily, year without alcohol).",
+        " DrewSpartz commented 'Going well so far!', indicating no failure during the initial days of the challenge.",
+        "The criteria include a clear exception clause for incapacitating chronic nausea (rating 4)."
+      ],
+      "evidence_against": [
+        "Requires 100% strict compliance over 30 days with no make-up days allowed for partial days or non-incapacitating nausea (ratings 1-3).",
+        "Creator failed 3 out of 5 previous long challenges, with chronic nausea sinking past attempts.",
+        "Cumulative failure risk across 15 remaining daily windows remains substantial even if the first half succeeded."
+      ],
+      "reason": "would be a longshot bet against the 60% favourite"
+    },
     {
       "ts": 1795245362760,
       "kind": "no_trade",
@@ -2949,31 +2974,6 @@
       "evidence_against": [
         "Official recognition of any Millennium Prize Problem solution requires years of peer review under CMI rules.",
         "No major mathematical consensus or verified Lean proof has been announced as of Nov 20, 2026, with only 10 days remaining in the month."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1795151988884,
-      "kind": "no_trade",
-      "question": "Will GTA VI generate more than $4.5 billion in revenue during its first week?",
-      "url": "https://manifold.markets/andrew91572/will-gta-vi-generate-more-than-45-b",
-      "market_prob": 0.1825824421416675,
-      "model_prob": 0.11,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Exceeding $4.5B in seven days on console alone would require selling ~50M+ copies on an install base of roughly 100-115M PS5 and Xbox Series units\u2014an unprecedented ~45-50% first-week attach rate. Even with premium edition price premiums, achieving this threshold in week one is highly improbable.",
-      "uncertainty": "Whether deluxe/collector edition pricing pushes average revenue per user high enough to offset console install base constraints.",
-      "resolution_risk": "Lack of an official day-seven revenue figure from Take-Two/Rockstar, which could trigger reliance on disputed third-party estimates or resolve N/A.",
-      "evidence_for": [
-        "Newzoo projected first-week revenue between $3.25B and $5.2B with a baseline of $4.5B.",
-        "GTA VI is the most anticipated video game release in history, with high average selling prices expected from premium and collector editions."
-      ],
-      "evidence_against": [
-        "Generating over $4.5 billion at a generous $80-$90 average selling price would require 50-55 million units sold in just seven days.",
-        "The current-generation console install base (PS5 + Xbox Series) is approximately 100-115 million units globally without a day-one PC launch, requiring an unprecedented ~45-50% attach rate within one week.",
-        "GTA V achieved $1 billion in three days and ~29 million copies over six weeks on a much larger install base of 160+ million consoles.",
-        "Take-Two's financial guidance for launch-period net bookings does not support an initial single-week software gross revenue of $4.5 billion."
       ],
       "reason": "size floored to zero by balance reserve"
     }
