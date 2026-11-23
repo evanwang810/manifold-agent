@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1795462261772,
+  "generated_ms": 1795462709332,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 20,
+      "today": 23,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 6,
+      "today": 7,
       "cap": 54
     }
   },
@@ -64,6 +64,21 @@
   "net_worth": 549.82,
   "summary": "Balance M$11. Net worth M$547. 15 open positions, 8 of them closed and awaiting resolution. Over 354 resolved forecasts, our Brier score is 0.170, while the market's is 0.110 (lower is better, 0.25 is a coin flip). We forecast worse than the market price, and our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 180 of 354 forecasts (161 of 309 on big disagreements). Of 181 resolved bets, backing the favourite won 67 of 88, while longshots against the favourite won 21 of 93.\n\nOpen positions span Codeforces IGM, Navier-Stokes solutions before IPO, US midterm turnout, state political races, Mountain View City Council, US Congress races, NASA eclipse livestreams, Nebraska Senate races, OpenAI recursive models, League of Legends Worlds outcomes, OpenAI going public not via an IPO, Magnus Carlsen FIDE rating, One Piece character arcs, Anthropic IPO caps, Total Chess winner markets, and a recent YES position on the 2026 Time Person of the Year shortlist. Specific positions continue to move against us with negative P/L.\n\nMistakes worth avoiding include taking low-probability bets against strong favorites (Longshot Leak), allowing compelling stories to mask mathematical expected value (Narrative Trap), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero. Avoid micro-trader meta-markets where time decay turns unfavorable.\n\nCalibration is poor for speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favorites is significantly more reliable, as shown by winning 67 of 88 favourite bets. Retain focus on disciplined favorite backing while managing reserve limits and capital allocation. Spendable cash is tightly constrained by our M$10 cash reserve limit, periodically flooring new trade sizes to zero when reserves constrain activity.",
   "journal": [
+    {
+      "ts": 1795462708901,
+      "kind": "score",
+      "text": "Scored 354 resolved forecasts: my Brier 0.170, the market's 0.110. Closer than the market on 180/354."
+    },
+    {
+      "ts": 1795462703802,
+      "kind": "analysis",
+      "text": "Analysed \"Will I play GTA6 on my PC within two weeks from its launch?\": market 31%, my 4% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1795462454914,
+      "kind": "screen",
+      "text": "Escalated \"Will I play GTA6 on my PC within two weeks from its launch?\" at 31%: quick estimate 12% backs the favourite at 31%. Relying on PS5 emulation reaching 20 FPS or a major leak within two weeks is an extreme longshot."
+    },
     {
       "ts": 1795455486570,
       "kind": "score",
@@ -448,21 +463,6 @@
       "ts": 1795317031817,
       "kind": "screen",
       "text": "Passed on \"Will people be wearing the Apple Vision Pro in public in London by the\" at 6%: quick estimate 30%, market 6%. Subjective personal sighting resolution criteria make deeper analysis unreliable."
-    },
-    {
-      "ts": 1795317031810,
-      "kind": "screen",
-      "text": "Passed on \"Will Alibaba publish open weights for a Qwen 4 model on Hugging Face b\" at 18%: quick estimate 20%, market 18%. Bots have thoroughly investigated the timeline and HF state, leaving little undiscovered signal for a deep model."
-    },
-    {
-      "ts": 1795313457222,
-      "kind": "score",
-      "text": "Scored 348 resolved forecasts: my Brier 0.172, the market's 0.111. Closer than the market on 176/348."
-    },
-    {
-      "ts": 1795313444160,
-      "kind": "analysis",
-      "text": "Analysed \"Will GTA 6 be decompiled within a month of release\": market 47%, my 3% (high). No trade, size floored to zero by balance reserve."
     }
   ],
   "todos": [
@@ -2270,6 +2270,15 @@
   ],
   "screens": [
     {
+      "ts": 1795462454905,
+      "question": "Will I play GTA6 on my PC within two weeks from its launch?",
+      "url": "https://manifold.markets/Bandors/will-i-play-gta6-on-my-pc-within-tw",
+      "passed": true,
+      "market_prob": 0.3147956740827555,
+      "quick_prob": 0.12,
+      "why": "quick estimate 12% backs the favourite at 31%. Relying on PS5 emulation reaching 20 FPS or a major leak within two weeks is an extreme longshot."
+    },
+    {
       "ts": 1795454914664,
       "question": "Will Alibaba publish open weights for a Qwen 4 model on Hugging Face by November 25, 2026?",
       "url": "https://manifold.markets/Terminator2/will-alibaba-publish-open-weights-f",
@@ -2619,18 +2628,34 @@
       "market_prob": 0.18273860694799002,
       "quick_prob": 0.2,
       "why": "quick estimate 20%, market 18%. Bots have thoroughly investigated the timeline and HF state, leaving little undiscovered signal for a deep model."
-    },
-    {
-      "ts": 1795313334833,
-      "question": "Will Calvin Wang successfully adopt my sleep schedule for a week?",
-      "url": "https://manifold.markets/rewind/will-calvin-wang-successfully-adopt",
-      "passed": false,
-      "market_prob": 0.035127303977497214,
-      "quick_prob": 0.05,
-      "why": "quick estimate 5%, market 4%. This is a private personal bet on an MIT student's idiosyncratic sleep habits, lacking public verifiable data."
     }
   ],
   "decisions": [
+    {
+      "ts": 1795462703793,
+      "kind": "no_trade",
+      "question": "Will I play GTA6 on my PC within two weeks from its launch?",
+      "url": "https://manifold.markets/Bandors/will-i-play-gta6-on-my-pc-within-tw",
+      "market_prob": 0.3147956740827555,
+      "model_prob": 0.04,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "GTA 6 launched on Nov 19, 2026 without a PC release, leaving only ~10 days in the two-week window. Running GTA VI via PS5 emulation at 20 FPS on a 4070 Ti in this timeframe is practically impossible given current PS5 emulator compatibility stages. The only realistic YES path is a leaked playable PC build, which remains a low-probability event (<5%). Estimating ~4%.",
+      "uncertainty": "Whether a leaked playable PC developer build emerges before December 3, 2026.",
+      "resolution_risk": "Creator judgment call on whether a leaked build is 'complete enough' to qualify.",
+      "evidence_for": [
+        "Leaked pre-release PC developer builds remain a low-probability possibility",
+        "PS5 emulation progress has been moving faster on GitHub than prior console emulator generations"
+      ],
+      "evidence_against": [
+        "GTA 6 launched on Nov 19, 2026 with no native PC release",
+        "PS5 emulation is currently experimental and unable to achieve 20 FPS on modern AAA titles",
+        "No functional leaked PC build has surfaced four days post-launch",
+        "Cloud streaming is explicitly excluded by the resolution criteria"
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1795429806452,
       "kind": "no_trade",
@@ -2959,31 +2984,6 @@
         "Recent market trajectory has been trending downward toward multi-month lows."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1795249350543,
-      "kind": "no_trade",
-      "question": "Will I write for 2 hours a day for the next month?",
-      "url": "https://manifold.markets/DrewSpartz/will-i-write-for-2-hours-a-day-for",
-      "market_prob": 0.6040751120813619,
-      "model_prob": 0.38,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Although the challenge is roughly halfway through and reported to be going well, strict zero-miss 30-day habit challenges involving health friction carry high cumulative failure risk across the remaining 15 days. I estimate a 38% chance of perfect adherence.",
-      "uncertainty": "Whether a single non-incapacitating health flare-up, administrative distraction, or fatigue event occurs in the remaining 15 days.",
-      "resolution_risk": "Disputes over whether specific logged time in Rize.io qualifies as writing vs research/admin.",
-      "evidence_for": [
-        "Creator has successfully completed two major long challenges in the past (reading a book daily, year without alcohol).",
-        " DrewSpartz commented 'Going well so far!', indicating no failure during the initial days of the challenge.",
-        "The criteria include a clear exception clause for incapacitating chronic nausea (rating 4)."
-      ],
-      "evidence_against": [
-        "Requires 100% strict compliance over 30 days with no make-up days allowed for partial days or non-incapacitating nausea (ratings 1-3).",
-        "Creator failed 3 out of 5 previous long challenges, with chronic nausea sinking past attempts.",
-        "Cumulative failure risk across 15 remaining daily windows remains substantial even if the first half succeeded."
-      ],
-      "reason": "would be a longshot bet against the 60% favourite"
     }
   ]
 }
