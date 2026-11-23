@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1795392282168,
+  "generated_ms": 1795392842340,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 0,
+      "today": 3,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 0,
+      "today": 1,
       "cap": 54
     }
   },
@@ -51,7 +51,7 @@
     "closer": 179,
     "disagree_n": 307,
     "disagree_closer": 160,
-    "open": 106,
+    "open": 107,
     "bets": 181,
     "fav_n": 88,
     "fav_won": 67,
@@ -64,6 +64,26 @@
   "net_worth": 547.06,
   "summary": "Balance M$54. Net worth M$547. 14 open positions, 8 of them closed and awaiting resolution. Spendable cash remains at M$0 after enforcing our M$10 balance reserve, flooring all new trade sizes to zero and forcing us to hold all existing positions to resolution. Over 352 resolved forecasts, our Brier score is 0.170, while the market's is 0.110 (lower is better, 0.25 is a coin flip). We forecast worse than the market price, and our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 179 of 352 forecasts (160 of 307 on big disagreements). Of 181 resolved bets, backing the favourite won 67 of 88, while longshots against the favourite won 21 of 93.\n\nOpen positions span Codeforces IGM, Navier-Stokes solutions before IPO, US midterm turnout, state political races, Mountain View City Council, US Congress races, NASA eclipse livestreams, Nebraska Senate races, OpenAI recursive models, League of Legends Worlds outcomes, OpenAI going public not via an IPO, Magnus Carlsen FIDE rating, One Piece character arcs, Anthropic IPO caps, and Total Chess winner markets. Specific positions continue to move against us with negative P/L.\n\nMistakes worth avoiding include taking low-probability bets against strong favorites (Longshot Leak), allowing compelling stories to mask mathematical expected value (Narrative Trap), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero. Avoid micro-trader meta-markets where time decay turns unfavorable.\n\nCalibration is poor for speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favorites is significantly more reliable, as shown by winning 67 of 88 favourite bets. Retain focus on disciplined favorite backing while managing reserve limits and capital allocation. Spendable cash remains at M$0 due to cash reserve limits, periodically flooring new trade sizes to zero when reserves constrain activity.",
   "journal": [
+    {
+      "ts": 1795392842137,
+      "kind": "score",
+      "text": "Scored 352 resolved forecasts: my Brier 0.170, the market's 0.110. Closer than the market on 179/352."
+    },
+    {
+      "ts": 1795392836506,
+      "kind": "trade",
+      "text": "Limit order M$43 YES on \"Will there be time person of the year shortlist in 2026?\" at 54%, my estimate 94% (high). Because: TIME has consistently published an official Person of the Year shortlist every December for over a decade, typically revealed on NBC's TODAY show and TIME.com. This remains a key PR driver for the annual issue."
+    },
+    {
+      "ts": 1795392475379,
+      "kind": "screen",
+      "text": "Escalated \"Will there be time person of the year shortlist in 2026?\" at 54%: quick estimate 85% backs the favourite at 54%. TIME almost always releases a shortlist or finalists before naming the Person of the Year."
+    },
+    {
+      "ts": 1795392475372,
+      "kind": "screen",
+      "text": "Passed on \"[FREE 10 MANA] Pick a side... GET PAID!\" at 50%: quick estimate 50%, market 50%. This is a gimmicky free mana promotion market dependent on arbitrary user limit order fills, not worth deep analysis."
+    },
     {
       "ts": 1795388745878,
       "kind": "score",
@@ -443,26 +463,6 @@
       "ts": 1795270424790,
       "kind": "screen",
       "text": "Escalated \"Will the WTI Crude Oil Spot Price be above $87.5 on November 23, 2026?\" at 48%: quick estimate 38% backs the favourite at 48%. Oil is currently around $85.3 and needs a quick jump in days with no obvious catalyst to break $87.5."
-    },
-    {
-      "ts": 1795269853671,
-      "kind": "score",
-      "text": "Scored 339 resolved forecasts: my Brier 0.170, the market's 0.108. Closer than the market on 173/339."
-    },
-    {
-      "ts": 1795266651938,
-      "kind": "screen",
-      "text": "Passed on \"What will be the margin in the Florida Senate race in 2026? \u2192 Republic\" at 96%: quick estimate 35%, market 96%. This is a standard statewide election margin prediction with sparse trading volume and no specific catalyst to warrant deeper analysis."
-    },
-    {
-      "ts": 1795262489507,
-      "kind": "score",
-      "text": "Scored 339 resolved forecasts: my Brier 0.170, the market's 0.108. Closer than the market on 173/339."
-    },
-    {
-      "ts": 1795259085427,
-      "kind": "screen",
-      "text": "Passed on \"Will Daniel Lord still be living in a Tesla by the end of October?\" at 62%: quick estimate 50%, market 62%. The target date has passed and the creator has disappeared from social media with ambiguous evidence."
     }
   ],
   "todos": [
@@ -810,6 +810,18 @@
       "days_to_close": 8.0
     },
     {
+      "question": "Will there be time person of the year shortlist in 2026?",
+      "url": "https://manifold.markets/Jack1/will-there-be-time-person-of-the-ye",
+      "side": "YES",
+      "shares": 77.7,
+      "invested": 43.0,
+      "value": 43.7,
+      "profit": 0.7,
+      "prob": 0.563,
+      "closed": false,
+      "days_to_close": 9.0
+    },
+    {
       "question": "Will Geometry Dash 2.21 Update Will Be Released In August 13 2026?",
       "url": "https://manifold.markets/BetBeginner_098/will-geometry-dash-221-update-will",
       "side": "NO",
@@ -919,6 +931,29 @@
     }
   ],
   "trades": [
+    {
+      "kind": "buy",
+      "side": "YES",
+      "amount": 43.0,
+      "limit": 0.7,
+      "market_prob": 0.5439486944138924,
+      "model_prob": 0.94,
+      "confidence": "high",
+      "why": "TIME has consistently published an official Person of the Year shortlist every December for over a decade, typically revealed on NBC's TODAY show and TIME.com. This remains a key PR driver for the annual issue.",
+      "research": "Based on the provided search results, here is what is known regarding the 2026 TIME Person of the Year:\n\n1. **Current state of play:** TIME magazine's editorial calendar lists the 2026 Person of the Year for December 10, 2026, though dates remain subject to change. Betting and prediction markets (such as Kalshi and Versus) are currently active around the 2026 title, featuring figures like James Talarico, Christopher Heyerdahl, and Jack Schmitt. \n\n2. **Developments in the last two weeks:** Articles and prediction commentary from mid-November 2026 mention various figures as nominees or contenders, and betting odds are actively being discussed. However, the provided sources do not contain an official announcement from TIME regarding a finalized shortlist for 2026. \n\n3. **Base rates or precedents:** The provided text notes that TIME's Person of the Year is an annual issue featuring a person, group, idea, or object that influenced the year, and that the website or partner organizations run annual reader polls. The provided sources do not supply historical data on how often an official editorial shortlist is formally released versus winning announcements made directly.\n\n4. **What is still genuinely unknown:** It remains unknown whether TIME editors will officially release or announce an explicit shortlist, finalist list, or top contenders list ahead of or alongside the December 10, 2026 announcement, or if they will simply name the winner directly.",
+      "source": "scan",
+      "evidence_for": [
+        "TIME magazine has officially released a Person of the Year shortlist annually for over a decade, typically via NBC's TODAY show and TIME.com.",
+        "The shortlist rollout is a core component of TIME's promotional strategy for the Person of the Year feature."
+      ],
+      "evidence_against": [
+        "TIME could theoretically alter its media roll-out strategy and skip publishing a formal shortlist prior to the winner announcement."
+      ],
+      "uncertainty": "Whether TIME decides to change its traditional multi-day announcement format for 2026.",
+      "ts": 1795392836499,
+      "question": "Will there be time person of the year shortlist in 2026?",
+      "url": "https://manifold.markets/Jack1/will-there-be-time-person-of-the-ye"
+    },
     {
       "kind": "buy",
       "side": "NO",
@@ -1771,27 +1806,6 @@
       "ts": 1792725450072,
       "question": "Will the US attack Cuba before the 2026 midterm elections?",
       "url": "https://manifold.markets/CommanderKeen/will-the-us-attack-cuba-before-the"
-    },
-    {
-      "kind": "buy",
-      "side": "NO",
-      "amount": 24.0,
-      "limit": 0.03,
-      "market_prob": 0.03885704608978791,
-      "model_prob": 0.01,
-      "confidence": "high",
-      "why": "Python 3.15 was officially released in October 2026 without the proposed `{:}`, `{,}`, or `(,)` literal grammar additions.",
-      "research": "",
-      "source": "scan",
-      "evidence_for": [],
-      "evidence_against": [
-        "Python 3.15.0 was released in early October 2026 without these syntax additions.",
-        "Python core developers have never adopted `{:}`, `{,}`, or `(,)` grammar modifications; empty dict remains `{}` and empty set remains `set()`."
-      ],
-      "uncertainty": "None, as Python 3.15 is already released without these features.",
-      "ts": 1792124615392,
-      "question": "Will Python add `{:}`, `{,}` and maybe `(,)` in or before 3.15 (October 2026)?",
-      "url": "https://manifold.markets/JeremiahEngland/will-python-add-and-maybe-in-or-bef"
     }
   ],
   "progress": [
@@ -2256,6 +2270,24 @@
   ],
   "screens": [
     {
+      "ts": 1795392475372,
+      "question": "Will there be time person of the year shortlist in 2026?",
+      "url": "https://manifold.markets/Jack1/will-there-be-time-person-of-the-ye",
+      "passed": true,
+      "market_prob": 0.5439486944138924,
+      "quick_prob": 0.85,
+      "why": "quick estimate 85% backs the favourite at 54%. TIME almost always releases a shortlist or finalists before naming the Person of the Year."
+    },
+    {
+      "ts": 1795392475364,
+      "question": "[FREE 10 MANA] Pick a side... GET PAID!",
+      "url": "https://manifold.markets/bobalobascrob/free-10-mana-pick-a-side-get-paid",
+      "passed": false,
+      "market_prob": 0.49999950049975006,
+      "quick_prob": 0.5,
+      "why": "quick estimate 50%, market 50%. This is a gimmicky free mana promotion market dependent on arbitrary user limit order fills, not worth deep analysis."
+    },
+    {
       "ts": 1795388739255,
       "question": "What will be the outcome of the 2026 New Zealand General Election? \u2192 Labour coalition",
       "url": "https://manifold.markets/NcyRocks/what-will-be-the-outcome-of-the-202-ZUpIRANOpQ",
@@ -2596,27 +2628,31 @@
       "market_prob": 0.9567959619846145,
       "quick_prob": 0.01,
       "why": "quick estimate 1%, market 96%. Solving a Millennium Prize Problem is a monumental event that would be globally publicized; there are no active announcements."
-    },
-    {
-      "ts": 1795270424781,
-      "question": "Will the WTI Crude Oil Spot Price be above $87.5 on November 23, 2026?",
-      "url": "https://manifold.markets/ShaneBo/will-the-wti-crude-oil-spot-price-b-nucgpg8AuZ",
-      "passed": true,
-      "market_prob": 0.48447711932571746,
-      "quick_prob": 0.38,
-      "why": "quick estimate 38% backs the favourite at 48%. Oil is currently around $85.3 and needs a quick jump in days with no obvious catalyst to break $87.5."
-    },
-    {
-      "ts": 1795266651929,
-      "question": "What will be the margin in the Florida Senate race in 2026? \u2192 Republican by under five points",
-      "url": "https://manifold.markets/EnopoletusHarding/what-will-be-the-margin-in-the-flor",
-      "passed": false,
-      "market_prob": 0.9649355396793501,
-      "quick_prob": 0.35,
-      "why": "quick estimate 35%, market 96%. This is a standard statewide election margin prediction with sparse trading volume and no specific catalyst to warrant deeper analysis."
     }
   ],
   "decisions": [
+    {
+      "ts": 1795392836499,
+      "kind": "bet",
+      "question": "Will there be time person of the year shortlist in 2026?",
+      "url": "https://manifold.markets/Jack1/will-there-be-time-person-of-the-ye",
+      "market_prob": 0.5439486944138924,
+      "model_prob": 0.94,
+      "confidence": "high",
+      "amount": 43.0,
+      "outcome": "YES",
+      "thinking": "TIME has consistently published an official Person of the Year shortlist every December for over a decade, typically revealed on NBC's TODAY show and TIME.com. This remains a key PR driver for the annual issue.",
+      "uncertainty": "Whether TIME decides to change its traditional multi-day announcement format for 2026.",
+      "resolution_risk": "If TIME names a group of nominees on air or online without explicitly framing them as finalists, shortlist, or top contenders as required by criteria.",
+      "evidence_for": [
+        "TIME magazine has officially released a Person of the Year shortlist annually for over a decade, typically via NBC's TODAY show and TIME.com.",
+        "The shortlist rollout is a core component of TIME's promotional strategy for the Person of the Year feature."
+      ],
+      "evidence_against": [
+        "TIME could theoretically alter its media roll-out strategy and skip publishing a formal shortlist prior to the winner announcement."
+      ],
+      "reason": "edge 0.396, kelly 0.87, decay 1.00, bound by balance reserve"
+    },
     {
       "ts": 1795332074555,
       "kind": "no_trade",
@@ -2945,28 +2981,6 @@
       "evidence_against": [
         "Minor incidents may be cleared under Virtual Safety Car (VSC) rather than requiring a physical Safety Car.",
         "Modern F1 races occasionally proceed without any crash or stopped vehicle."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1795241710101,
-      "kind": "no_trade",
-      "question": "Who will break the 5/5 stranglehold on Super Mario 64 speedrunning and collect the world record bounty? \u2192 Weegee",
-      "url": "https://manifold.markets/Tripping/who-will-break-the-55-stranglehold",
-      "market_prob": 0.23233561703010186,
-      "model_prob": 0.1,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With 11 options listed including active contenders like Karin, cjrokokomero, and short-category specialists, Weegee holds roughly a 10% chance of being the specific runner to break Suigi's 5/5 stranglehold.",
-      "uncertainty": "Whether Weegee is currently actively grinding SM64 world record attempts compared to competitors like Karin or cjrokokomero.",
-      "resolution_risk": "Market close date is listed in 7.5 days while breaking a WR may take significantly longer or require market extension.",
-      "evidence_for": [
-        "Weegee is a former SM64 world record holder and top-tier runner in 70-star and 120-star categories."
-      ],
-      "evidence_against": [
-        "Multiple other elite runners (Karin, cjrokokomero, Slipperynip, ikori) actively grind the 5 major categories.",
-        "A crowded field of 11 options spreads probability across many top runners."
       ],
       "reason": "size floored to zero by balance reserve"
     }
