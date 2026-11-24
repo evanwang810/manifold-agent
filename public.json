@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1795559491812,
+  "generated_ms": 1795560066933,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 21,
+      "today": 24,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 5,
+      "today": 6,
       "cap": 54
     }
   },
@@ -64,6 +64,21 @@
   "net_worth": 548.01,
   "summary": "Balance M$11. Net worth M$548. 15 open positions, 8 of them closed and awaiting resolution. Over 356 resolved forecasts, our Brier score is 0.171, while the market's is 0.112 (lower is better, 0.25 is a coin flip). We forecast worse than the market price, and our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 181 of 356 forecasts (162 of 311 on big disagreements). Of 181 resolved bets, backing the favourite won 67 of 88, while longshots against the favourite won 21 of 93.\n\nOpen positions span Codeforces IGM, Navier-Stokes solutions before IPO, US midterm turnout, state political races, Mountain View City Council, US Congress races, NASA eclipse livestreams, Nebraska Senate races, OpenAI recursive models, League of Legends Worlds outcomes, OpenAI going public not via an IPO, Magnus Carlsen FIDE rating, One Piece character arcs, Anthropic IPO caps, Total Chess winner markets, and a recent YES position on the Time Person of the Year shortlist. Specific positions continue to move against us with negative P/L. Spendable cash is tightly constrained by our M$10 cash reserve limit, which periodically floors new trade sizes to zero and leaves liquidity at M$1 or M$0 while we hold existing positions to resolution.\n\nMistakes worth avoiding include taking low-probability bets against strong favorites (Longshot Leak), allowing compelling stories to mask mathematical expected value (Narrative Trap), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero. Avoid micro-trader meta-markets where time decay turns unfavorable.\n\nCalibration is poor for speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favorites is significantly more reliable, as shown by winning 67 of 88 favourite bets. Retain focus on disciplined favorite backing while managing reserve limits and capital allocation. Spendable cash is tightly constrained by our M$10 cash reserve limit, periodically flooring new trade sizes to zero when reserves constrain activity.",
   "journal": [
+    {
+      "ts": 1795560066410,
+      "kind": "analysis",
+      "text": "Analysed \"Severance S3E1 released before 2027?\": market 4%, my 2% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1795559735981,
+      "kind": "screen",
+      "text": "Escalated \"Severance S3E1 released before 2027?\" at 4%: quick estimate 2% backs the favourite at 4%. Filming only began in mid-2026, making a premiere within the next month before 2027 practically impossible."
+    },
+    {
+      "ts": 1795559735972,
+      "kind": "screen",
+      "text": "Passed on \"Will the US-China trade truce have been officially extended beyond Jan\" at 20%: quick estimate 30%, market 20%. Extensions are usually announced close to the expiration date in January, making an official announcement before December 4 unlikely."
+    },
     {
       "ts": 1795556550573,
       "kind": "score",
@@ -446,21 +461,6 @@
     },
     {
       "ts": 1795396562447,
-      "kind": "score",
-      "text": "Scored 352 resolved forecasts: my Brier 0.170, the market's 0.110. Closer than the market on 179/352."
-    },
-    {
-      "ts": 1795396186560,
-      "kind": "screen",
-      "text": "Passed on \"NFL Week 11 - Prop Bets \u2192 2 Point Conversions convert at 50% or higher\" at 59%: quick estimate 45%, market 59%. Low volume prop bet market with standard historical conversion variance making deep analysis unnecessary."
-    },
-    {
-      "ts": 1795393025564,
-      "kind": "position",
-      "text": "Opened 78 YES on \"Will there be time person of the year shortlist in 2026?\" at 56%, M$43 in."
-    },
-    {
-      "ts": 1795392842137,
       "kind": "score",
       "text": "Scored 352 resolved forecasts: my Brier 0.170, the market's 0.110. Closer than the market on 179/352."
     }
@@ -2270,6 +2270,24 @@
   ],
   "screens": [
     {
+      "ts": 1795559735972,
+      "question": "Severance S3E1 released before 2027?",
+      "url": "https://manifold.markets/Knuffa/severance-s3e1-released-before-2027",
+      "passed": true,
+      "market_prob": 0.04000000000000002,
+      "quick_prob": 0.02,
+      "why": "quick estimate 2% backs the favourite at 4%. Filming only began in mid-2026, making a premiere within the next month before 2027 practically impossible."
+    },
+    {
+      "ts": 1795559735962,
+      "question": "Will the US-China trade truce have been officially extended beyond January 10, 2027 as of December 4, 2026?",
+      "url": "https://manifold.markets/MikhailTal/will-the-uschina-trade-truce-have-b",
+      "passed": false,
+      "market_prob": 0.19983129275438166,
+      "quick_prob": 0.3,
+      "why": "quick estimate 30%, market 20%. Extensions are usually announced close to the expiration date in January, making an official announcement before December 4 unlikely."
+    },
+    {
       "ts": 1795556037182,
       "question": "Severance S3E1 released before 2027?",
       "url": "https://manifold.markets/Knuffa/severance-s3e1-released-before-2027",
@@ -2610,27 +2628,31 @@
       "market_prob": 0.20236139824744367,
       "quick_prob": 0.15,
       "why": "quick estimate 15% backs the favourite at 20%. Rockstar traditionally staggers PC releases by more than six months, making this a standard industry pattern without special hidden data."
-    },
-    {
-      "ts": 1795425937925,
-      "question": "Will retrieval-augmented-generation (RAG) still be used in 2026?",
-      "url": "https://manifold.markets/jgyou/will-retrievalaugmentedgeneration-r",
-      "passed": true,
-      "market_prob": 0.8743310282114622,
-      "quick_prob": 0.95,
-      "why": "quick estimate 95% backs the favourite at 87%. RAG remains an entrenched architectural standard for cost-efficient grounding of LLMs, making a complete pivot away by all major players highly unlikely."
-    },
-    {
-      "ts": 1795414696650,
-      "question": "Will Karol Nawrocki be the President of Poland at the end of November 2026?",
-      "url": "https://manifold.markets/a_l_e_x/will-karol-nawrocki-be-the-presiden",
-      "passed": false,
-      "market_prob": 0.95,
-      "quick_prob": 0.95,
-      "why": "quick estimate 95%, market 95%. The institutional barriers to removing a sitting Polish president make his retention through November extremely likely."
     }
   ],
   "decisions": [
+    {
+      "ts": 1795560066401,
+      "kind": "no_trade",
+      "question": "Severance S3E1 released before 2027?",
+      "url": "https://manifold.markets/Knuffa/severance-s3e1-released-before-2027",
+      "market_prob": 0.04000000000000002,
+      "model_prob": 0.02,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With Season 3 filming scheduled through December 2, 2026 and today being November 24, 2026, post-production and marketing pipelines make a premier before January 1, 2027 virtually impossible.",
+      "uncertainty": "Whether Apple TV+ would attempt an unprecedented surprise drop of Episode 1 immediately following filming wrap.",
+      "resolution_risk": "The description is blank, but 'before 2027' standardly means prior to January 1, 2027.",
+      "evidence_for": [],
+      "evidence_against": [
+        "Today is November 24, 2026, leaving only 37 days before 2027.",
+        "Production listings show Season 3 filming runs through December 2, 2026.",
+        "Apple TV+ has not released a trailer, teaser, or official release date for Season 3.",
+        "Post-production on a high-VFX prestige series typically requires several months following production wrap."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1795556535734,
       "kind": "no_trade",
@@ -2954,29 +2976,6 @@
         "Identified pathways mainly alter wakefulness and neuropeptide signaling (e.g., orexin, adrenergic receptors) rather than demonstrating accelerated cellular or neurological repair.",
         "As of late 2026, research has not proven that these genetic variants accelerate repair processes; the exact mechanism remains unconfirmed in clinical or mechanistic trials.",
         "Resolution criteria explicitly require proof by further studies and trials that they work as claimed, which has not materialized ahead of the EOY 2026 resolution benchmark."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1795306077824,
-      "kind": "no_trade",
-      "question": "Will Luigi Mangione attempt suicide at least once while in custody before his trial is over?",
-      "url": "https://manifold.markets/strutheo/will-luigi-mangione-attempt-suicide",
-      "market_prob": 0.0610983934038478,
-      "model_prob": 0.04,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "High-profile inmates in high-security custody are subject to intensive suicide watch protocols. Given the requirement for official police or legal confirmation and the short 26-day remaining window, an officially documented attempt is very unlikely.",
-      "uncertainty": "Whether an officially documented self-harm event occurs within the next 26 days.",
-      "resolution_risk": "Rumors or protective custodial transfers without official police/lawyer statements resolve NO.",
-      "evidence_for": [
-        "Mangione faces severe legal jeopardy and severe chronic spinal pain."
-      ],
-      "evidence_against": [
-        "High-profile defendants in high-security detention are subjected to continuous suicide watch protocols.",
-        "Resolution explicitly requires official confirmation via police reports or statements from his lawyer, excluding rumors.",
-        "The remaining timeframe before market close is under 26 days."
       ],
       "reason": "size floored to zero by balance reserve"
     }
