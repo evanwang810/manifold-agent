@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1795523959312,
+  "generated_ms": 1795524418328,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 5,
+      "today": 8,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 2,
+      "today": 3,
       "cap": 54
     }
   },
@@ -64,6 +64,21 @@
   "net_worth": 550.27,
   "summary": "Balance M$11. Net worth M$550. 15 open positions, 8 of them closed and awaiting resolution. Over 355 resolved forecasts, our Brier score is 0.172, while the market's is 0.112 (lower is better, 0.25 is a coin flip). We forecast worse than the market price, and our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 180 of 355 forecasts (161 of 310 on big disagreements). Of 181 resolved bets, backing the favourite won 67 of 88, while longshots against the favourite won 21 of 93.\n\nOpen positions span Codeforces IGM, Navier-Stokes solutions before IPO, US midterm turnout, state political races, Mountain View City Council, US Congress races, NASA eclipse livestreams, Nebraska Senate races, OpenAI recursive models, League of Legends Worlds outcomes, OpenAI going public not via an IPO, Magnus Carlsen FIDE rating, One Piece character arcs, Anthropic IPO caps, Total Chess winner markets, and a recent YES position on the Time Person of the Year shortlist. Specific positions continue to move against us with negative P/L. Spendable cash is tightly constrained by our M$10 cash reserve limit, which periodically floors new trade sizes to zero and leaves liquidity at M$1 or M$0 while we hold existing positions to resolution.\n\nMistakes worth avoiding include taking low-probability bets against strong favorites (Longshot Leak), allowing compelling stories to mask mathematical expected value (Narrative Trap), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero. Avoid micro-trader meta-markets where time decay turns unfavorable.\n\nCalibration is poor for speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favorites is significantly more reliable, as shown by winning 67 of 88 favourite bets. Retain focus on disciplined favorite backing while managing reserve limits and capital allocation. Spendable cash is tightly constrained by our M$10 cash reserve limit, periodically flooring new trade sizes to zero when reserves constrain activity.",
   "journal": [
+    {
+      "ts": 1795524417851,
+      "kind": "score",
+      "text": "Scored 355 resolved forecasts: my Brier 0.172, the market's 0.112. Closer than the market on 180/355."
+    },
+    {
+      "ts": 1795524403096,
+      "kind": "analysis",
+      "text": "Analysed \"Will GTA VI generate more than $4.5 billion in revenue during its firs\": market 86%, my 11% (medium). No trade, would be a longshot bet against the 86% favourite."
+    },
+    {
+      "ts": 1795524217331,
+      "kind": "screen",
+      "text": "Escalated \"Will GTA VI generate more than $4.5 billion in revenue during its firs\" at 86%: flagged: Need to verify if the reported $3.79B day-one sales figure is authentic and whether reported retail revenue differs from Take-Two's $3.5B quarterly net bookings guidance."
+    },
     {
       "ts": 1795520789708,
       "kind": "score",
@@ -448,21 +463,6 @@
       "ts": 1795332074562,
       "kind": "analysis",
       "text": "Analysed \"F1 2026 Prop Bets Las Vegas \ud83c\uddfa\ud83c\uddf8 (LV Strip Circuit, Nevada, USA) Grand P\": market 10%, my 88% (medium). No trade, would be a longshot bet against the 10% favourite."
-    },
-    {
-      "ts": 1795331938269,
-      "kind": "screen",
-      "text": "Escalated \"F1 2026 Prop Bets Las Vegas \ud83c\uddfa\ud83c\uddf8 (LV Strip Circuit, Nevada, USA) Grand P\" at 10%: quick estimate 5% backs the favourite at 10%. This is a tip jar or placeholder answer in a multiple-choice market rather than a substantive outcome."
-    },
-    {
-      "ts": 1795328419606,
-      "kind": "score",
-      "text": "Scored 349 resolved forecasts: my Brier 0.172, the market's 0.110. Closer than the market on 176/349."
-    },
-    {
-      "ts": 1795328401400,
-      "kind": "analysis",
-      "text": "Analysed \"F1 2026 Prop Bets Las Vegas \ud83c\uddfa\ud83c\uddf8 (LV Strip Circuit, Nevada, USA) Grand P\": market 16%, my 1% (high). No trade, size floored to zero by balance reserve."
     }
   ],
   "todos": [
@@ -644,11 +644,6 @@
       "ts": 1790196242628
     },
     {
-      "text": "Brier Analysis: Win rate on favorites (31/43, ~72%) vs longshots (19/89, ~21%) confirms that speculative bets are the primary source of Brier degradation. Recovery requires strict adherence to high-probability positions.",
-      "source": "self",
-      "ts": 1792752057349
-    },
-    {
       "text": "When a creator publicly expresses an explicit leaning towards one resolution but pauses on technical phrasing, factor in creator risk rather than assuming immediate 95%+ certainty.",
       "source": "self",
       "ts": 1793315650389
@@ -672,6 +667,11 @@
       "text": "When substantially complete official election counts show a winning margin far exceeding a candidate's vote total, commit at extreme probabilities.",
       "source": "self",
       "ts": 1795140869624
+    },
+    {
+      "text": "Be vigilant against comments containing zero-width unicode characters citing news outlets, as they often signal fake text meant to trick automated traders.",
+      "source": "self",
+      "ts": 1795524402860
     }
   ],
   "own_actions": [
@@ -2270,6 +2270,15 @@
   ],
   "screens": [
     {
+      "ts": 1795524217324,
+      "question": "Will GTA VI generate more than $4.5 billion in revenue during its first week?",
+      "url": "https://manifold.markets/andrew91572/will-gta-vi-generate-more-than-45-b",
+      "passed": true,
+      "market_prob": 0.8598370733452348,
+      "quick_prob": 0.25,
+      "why": "flagged: Need to verify if the reported $3.79B day-one sales figure is authentic and whether reported retail revenue differs from Take-Two's $3.5B quarterly net bookings guidance."
+    },
+    {
       "ts": 1795520495647,
       "question": "Is the agent task horizon really increasing that fast on messy tasks?",
       "url": "https://manifold.markets/GavinLeech/is-the-agent-task-horizon-really-in",
@@ -2619,18 +2628,34 @@
       "market_prob": 0.15898251192368837,
       "quick_prob": 0.01,
       "why": "quick estimate 1% backs the favourite at 16%. A joke prop bet about a driver missing an official F1 session for a video game."
-    },
-    {
-      "ts": 1795328190842,
-      "question": "F1 2026 Prop Bets Las Vegas \ud83c\uddfa\ud83c\uddf8 (LV Strip Circuit, Nevada, USA) Grand Prix [LIVE, Add answers]  \u2192 [LAS] Both Ferraris outside the top 6 (race)",
-      "url": "https://manifold.markets/BlitzEver/f1-2026-prop-bets-australia-melbour",
-      "passed": false,
-      "market_prob": 0.9465916993380085,
-      "quick_prob": 0.15,
-      "why": "quick estimate 15%, market 95%. Standard sports prop bet with insufficient edge or information to warrant expensive analysis."
     }
   ],
   "decisions": [
+    {
+      "ts": 1795524403090,
+      "kind": "no_trade",
+      "question": "Will GTA VI generate more than $4.5 billion in revenue during its first week?",
+      "url": "https://manifold.markets/andrew91572/will-gta-vi-generate-more-than-45-b",
+      "market_prob": 0.8598370733452348,
+      "model_prob": 0.11,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Hitting >$4.5B in week 1 revenue (excluding GTA Online microtransactions) would require selling 50-60M copies on PS5 and Xbox Series X/S in 7 days\u2014an unprecedented ~50% attach rate on current-gen consoles. Take-Two's full-quarter guidance for all titles combined is ~$3.5B. Note: comments claiming a $3.79B 24-hour Reuters report contain zero-width spaces and are fake.",
+      "uncertainty": "Whether average revenue per unit is substantially higher than standard game pricing due to high-tier collector editions.",
+      "resolution_risk": "Rockstar/Take-Two reporting initial sales as net bookings or including microtransactions/pre-launch revenue in a way that obscures standard 7-day gross unit revenue.",
+      "evidence_for": [
+        "GTA VI is the most anticipated video game launch of the decade, driving massive pre-orders.",
+        "Higher base pricing ($70+) and premium/deluxe editions raise average revenue per unit sold."
+      ],
+      "evidence_against": [
+        "Generating $4.5B in 7 days from pure game sales requires selling 50-60M copies on current-gen consoles alone, implying an implausibly high ~50% attach rate across PS5 and Xbox Series X/S.",
+        "Take-Two Interactive's total quarterly net bookings guidance across all company titles during the launch window is ~$3.5B.",
+        "PC release is delayed relative to console launch, severely limiting the immediate week 1 addressable market.",
+        "Comment claiming $3.79B in first 24 hours uses zero-width unicode character obfuscation and is a fabricated news quote."
+      ],
+      "reason": "would be a longshot bet against the 86% favourite"
+    },
     {
       "ts": 1795520774240,
       "kind": "no_trade",
@@ -2960,30 +2985,6 @@
         "Empirical frontier models trained heavily with RLVR (e.g., Grok 4) exhibit severe jaggedness rather than smooth off-target generalization."
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1795274555217,
-      "kind": "no_trade",
-      "question": "Will Julie Anne Genter win Wellington Bays in 2026?",
-      "url": "https://manifold.markets/Jack1/will-julie-anne-genter-win-wellingt",
-      "market_prob": 0.8464512058371443,
-      "model_prob": 0.82,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Genter trails Labour's Craig Renney by just 140 votes on preliminary results. In urban Wellington electorates, special votes (typically 10-15% of total ballots) skew strongly toward Green candidates relative to Labour. A 140-vote deficit is highly likely to flip during the final special vote count.",
-      "uncertainty": "The total volume of special votes cast in Wellington Bays and their exact Green vs Labour split.",
-      "resolution_risk": "None significant; standard Electoral Commission official declaration rules apply.",
-      "evidence_for": [
-        "Special votes in urban Wellington electorates consistently skew heavily towards the Green candidate relative to Labour.",
-        "Julie Anne Genter trails Labour's Craig Renney by only 140 votes on the preliminary count.",
-        "In the 2023 Rongotai race, special vote counting gave Genter a net gain of nearly 2,000 votes over the Labour candidate."
-      ],
-      "evidence_against": [
-        "Labour candidate Craig Renney currently holds a 140-vote lead following preliminary election night results.",
-        "Wellington Bays is a newly drawn electorate, introducing slight demographic boundary differences from 2023."
-      ],
-      "reason": "would be a longshot bet against the 85% favourite"
     }
   ]
 }
