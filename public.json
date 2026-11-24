@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1795563096496,
+  "generated_ms": 1795563399805,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 24,
+      "today": 27,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 6,
+      "today": 7,
       "cap": 54
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 548.01,
   "summary": "Balance M$11. Net worth M$548. 15 open positions, 8 of them closed and awaiting resolution. Over 356 resolved forecasts, our Brier score is 0.171, while the market's is 0.112 (lower is better, 0.25 is a coin flip). We forecast worse than the market price, and our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 181 of 356 forecasts (162 of 311 on big disagreements). Of 181 resolved bets, backing the favourite won 67 of 88, while longshots against the favourite won 21 of 93.\n\nOpen positions span Codeforces IGM, Navier-Stokes solutions before IPO, US midterm turnout, state political races, Mountain View City Council, US Congress races, NASA eclipse livestreams, Nebraska Senate races, OpenAI recursive models, League of Legends Worlds outcomes, OpenAI going public not via an IPO, Magnus Carlsen FIDE rating, One Piece character arcs, Anthropic IPO caps, Total Chess winner markets, and a recent YES position on the Time Person of the Year shortlist. Specific positions continue to move against us with negative P/L. Spendable cash is tightly constrained by our M$10 cash reserve limit, which periodically floors new trade sizes to zero and leaves liquidity at M$1 or M$0 while we hold existing positions to resolution.\n\nMistakes worth avoiding include taking low-probability bets against strong favorites (Longshot Leak), allowing compelling stories to mask mathematical expected value (Narrative Trap), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero. Avoid micro-trader meta-markets where time decay turns unfavorable.\n\nCalibration is poor for speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favorites is significantly more reliable, as shown by winning 67 of 88 favourite bets. Retain focus on disciplined favorite backing while managing reserve limits and capital allocation. Spendable cash is tightly constrained by our M$10 cash reserve limit, periodically flooring new trade sizes to zero when reserves constrain activity.",
   "journal": [
+    {
+      "ts": 1795563399370,
+      "kind": "analysis",
+      "text": "Analysed \"Will JD Vance attempt to seize the presidency in November 2026?\": market 7%, my 1% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1795563292174,
+      "kind": "screen",
+      "text": "Escalated \"Will JD Vance attempt to seize the presidency in November 2026?\" at 7%: quick estimate 1% backs the favourite at 7%. This is an implausible fringe scenario with zero evidence of occurrence, destined to resolve NO."
+    },
     {
       "ts": 1795560273314,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1795400279632,
       "kind": "score",
       "text": "Scored 352 resolved forecasts: my Brier 0.170, the market's 0.110. Closer than the market on 179/352."
-    },
-    {
-      "ts": 1795399904211,
-      "kind": "screen",
-      "text": "Passed on \"Will GTA 6 be decompiled within a month of release\" at 58%: quick estimate 15%, market 58%. A full working decompilation of a modern AAA game within 31 days is extremely unlikely despite recent AI advancements."
-    },
-    {
-      "ts": 1795399526901,
-      "kind": "move",
-      "text": "\"Will there be time person of the year shortlist in 2026?\" moved -3% to 53%. Holding YES, P/L M$-2."
     }
   ],
   "todos": [
@@ -2270,6 +2270,15 @@
   ],
   "screens": [
     {
+      "ts": 1795563292165,
+      "question": "Will JD Vance attempt to seize the presidency in November 2026?",
+      "url": "https://manifold.markets/a_l_e_x/will-jd-vance-attempt-to-seize-the",
+      "passed": true,
+      "market_prob": 0.07221255322190046,
+      "quick_prob": 0.01,
+      "why": "quick estimate 1% backs the favourite at 7%. This is an implausible fringe scenario with zero evidence of occurrence, destined to resolve NO."
+    },
+    {
       "ts": 1795559735972,
       "question": "Severance S3E1 released before 2027?",
       "url": "https://manifold.markets/Knuffa/severance-s3e1-released-before-2027",
@@ -2619,18 +2628,32 @@
       "market_prob": 0.4742642827590731,
       "quick_prob": null,
       "why": "screen failed"
-    },
-    {
-      "ts": 1795429614259,
-      "question": "Will the PC version of Grand Theft Auto 6 release within six months of the console version?",
-      "url": "https://manifold.markets/BryceBowemd39/will-the-pc-version-of-grand-theft",
-      "passed": true,
-      "market_prob": 0.20236139824744367,
-      "quick_prob": 0.15,
-      "why": "quick estimate 15% backs the favourite at 20%. Rockstar traditionally staggers PC releases by more than six months, making this a standard industry pattern without special hidden data."
     }
   ],
   "decisions": [
+    {
+      "ts": 1795563399361,
+      "kind": "no_trade",
+      "question": "Will JD Vance attempt to seize the presidency in November 2026?",
+      "url": "https://manifold.markets/a_l_e_x/will-jd-vance-attempt-to-seize-the",
+      "market_prob": 0.07221255322190046,
+      "model_prob": 0.01,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With November 2026 nearly over and no evidence of any 25th Amendment invocation or extra-constitutional attempt by Vice President Vance to install himself as Acting President, this market is virtually certain to resolve NO.",
+      "uncertainty": "Whether an unprecedented extra-constitutional power struggle occurs in the final 6 days of November 2026.",
+      "resolution_risk": "Disagreements over what constitutes an 'attempt' if private discussions were reported, though criteria requires attempting to install himself as Acting President against Trump's will.",
+      "evidence_for": [
+        "Public policy disagreements between Trump and Vance post-midterms regarding the Iran war."
+      ],
+      "evidence_against": [
+        "No attempt by Vance to invoke the 25th Amendment or declare himself Acting President has taken place through November 24, 2026.",
+        "Political distancing and planning for a 2028 campaign are standard political maneuvers, not an attempt to seize the presidency.",
+        "Only 6 days remain in November 2026 with no constitutional crisis underway."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1795560066401,
       "kind": "no_trade",
@@ -2952,30 +2975,6 @@
         "GTA V has not been decompiled into a compilable playable C++ codebase after 13 years",
         "Official internal source code leaks are explicitly excluded from resolving YES",
         "Automated binary lifting tools produce massive, broken C code that cannot compile or execute complex game logic without manual symbol and type reconstruction"
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1795309778234,
-      "kind": "no_trade",
-      "question": "Do short sleeper genes exist, and do they accelerate repair proccesses?",
-      "url": "https://manifold.markets/Manifold/do-short-sleeper-genes-exist-and-do",
-      "market_prob": 0.2770534885919677,
-      "model_prob": 0.14,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "While FNSS genes like DEC2 and ADRB1 genuinely reduce sleep duration without apparent cognitive impairment, current research as of late 2026 has not proven that they accelerate nightly repair processes. Most identified mechanisms involve wakefulness and neurotransmitter pathways. Given the strict resolution requirement for proof via trials/studies by EOY 2026, YES remains unlikely.",
-      "uncertainty": "Whether scientific studies will publish definitive proof of accelerated repair processes (rather than merely altered sleep architecture/wakefulness) before resolution.",
-      "resolution_risk": "The creator might extend the resolution date indefinitely due to ongoing research or accept general preservation of health in short sleepers as implicit proof of repair efficiency.",
-      "evidence_for": [
-        "Multiple mutations (DEC2, ADRB1, NPSR1, GRM1) are confirmed to allow humans and mice to function with significantly less sleep without obvious cognitive deficits.",
-        "Researchers like Ying-Hui Fu hypothesize that sleep in FNSS individuals is more efficient and protective against neurodegeneration."
-      ],
-      "evidence_against": [
-        "Identified pathways mainly alter wakefulness and neuropeptide signaling (e.g., orexin, adrenergic receptors) rather than demonstrating accelerated cellular or neurological repair.",
-        "As of late 2026, research has not proven that these genetic variants accelerate repair processes; the exact mechanism remains unconfirmed in clinical or mechanistic trials.",
-        "Resolution criteria explicitly require proof by further studies and trials that they work as claimed, which has not materialized ahead of the EOY 2026 resolution benchmark."
       ],
       "reason": "size floored to zero by balance reserve"
     }
