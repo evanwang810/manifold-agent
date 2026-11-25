@@ -2,21 +2,6 @@
   "summary": "Balance M$11. Net worth M$548. 15 open positions, 8 of them closed and awaiting resolution. Over 357 resolved forecasts, our Brier score is 0.171, while the market's is 0.112 (lower is better, 0.25 is a coin flip). We forecast worse than the market price, and our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 182 of 357 forecasts (163 of 312 on big disagreements). Of 181 resolved bets, backing the favourite won 67 of 88, while longshots against the favourite won 21 of 93.\n\nOpen positions span Codeforces IGM, Navier-Stokes solutions before IPO, US midterm turnout, state political races, Mountain View City Council, US Congress races, NASA eclipse livestreams, Nebraska Senate races, OpenAI recursive models, League of Legends Worlds outcomes, OpenAI going public not via an IPO, Magnus Carlsen FIDE rating, One Piece character arcs, Anthropic IPO caps, Total Chess winner markets, and a recent YES position on the Time Person of the Year shortlist. Specific positions continue to move against us with negative P/L. Spendable cash is tightly constrained by our M$10 cash reserve limit, which periodically floors new trade sizes to zero and leaves liquidity at M$1 or M$0 while we hold existing positions to resolution.\n\nMistakes worth avoiding include taking low-probability bets against strong favorites (Longshot Leak), allowing compelling stories to mask mathematical expected value (Narrative Trap), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero. Avoid micro-trader meta-markets where time decay turns unfavorable.\n\nCalibration is poor for speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favorites is significantly more reliable, as shown by winning 67 of 88 favourite bets. Retain focus on disciplined favorite backing while managing reserve limits and capital allocation. Spendable cash is tightly constrained by our M$10 cash reserve limit, periodically flooring new trade sizes to zero when reserves constrain activity.",
   "journal": [
     {
-      "ts": 1795136136315,
-      "kind": "score",
-      "text": "Scored 332 resolved forecasts: my Brier 0.166, the market's 0.105. Closer than the market on 170/332."
-    },
-    {
-      "ts": 1795137094602,
-      "kind": "screen",
-      "text": "Passed on \"Will the 2026 FIFA World Cup gross more money than the 2022 FIFA World\" at 90%: quick estimate 85%, market 90%. Massive revenue jump makes YES overwhelmingly likely even with definition and inflation risks."
-    },
-    {
-      "ts": 1795137094607,
-      "kind": "screen",
-      "text": "Escalated \"Will Taylor Swift announce she\u2019s pregnant by Swiftmas (Dec. 13)?\" at 13%: quick estimate 5% backs the favourite at 13%. Standard celebrity pregnancy speculation market with low base rate and no concrete indicators."
-    },
-    {
       "ts": 1795137094612,
       "kind": "screen",
       "text": "Passed on \"Which musicians/ensembles will be featured in the Grand Theft Auto VI \" at 96%: quick estimate 50%, market 96%. Insufficient specific insider data on tracklists makes this a pure guess."
@@ -1500,6 +1485,21 @@
       "ts": 1795581629747,
       "kind": "score",
       "text": "Scored 357 resolved forecasts: my Brier 0.171, the market's 0.112. Closer than the market on 182/357."
+    },
+    {
+      "ts": 1795588610753,
+      "kind": "screen",
+      "text": "Passed on \"Israel's next Prime minister \u2192 Gadi Eisenkot\" at 73%: quick estimate 15%, market 73%. Eisenkot is a dark horse candidate and the Israeli political landscape is too volatile for a high conviction here."
+    },
+    {
+      "ts": 1795588610759,
+      "kind": "screen",
+      "text": "Escalated \"Israel's next Prime minister \u2192 Benjamin Netanyahu\" at 19%: flagged: Netanyahu remains a central figure in Israeli politics post-2026 election, warranting deeper analysis of coalition dynamics."
+    },
+    {
+      "ts": 1795588810311,
+      "kind": "analysis",
+      "text": "Analysed \"Israel's next Prime minister \u2192 Benjamin Netanyahu\": market 19%, my 30% (medium). No trade, would be a longshot bet against the 19% favourite."
     }
   ],
   "lessons": [
@@ -3606,10 +3606,10 @@
       "ts": 1793214706620
     },
     "LlhNIh2zcR::udtEP2N0QR": {
-      "note": "Israel PM Netanyahu: 53 seats in Oct 2026 election, 8 short of majority; caretaker status excluded.",
+      "note": "Netanyahu bloc holds ~53 seats after Oct 2026 election; needs 61 to form government, making opposition coalition or alternative candidate more likely.",
       "question": "Israel's next Prime minister \u2192 Benjamin Netanyahu",
       "url": "https://manifold.markets/dkgsAiogjertg/israels-next-prime-minister",
-      "ts": 1793218328220
+      "ts": 1795588810181
     },
     "tAZZh0zRth": {
       "note": "Mathathon ended Nov 1; Anthropic removed from sponsor list and creator leaning heavily YES pending technical initiation check.",
@@ -5615,8 +5615,8 @@
       "prob": 0.43238225299809174
     },
     "LlhNIh2zcR::LNgdun2q9S": {
-      "ts": 1795324398350,
-      "prob": 0.5907439661538485
+      "ts": 1795588609519,
+      "prob": 0.7343036766085027
     },
     "LlhNIh2zcR::PShyqtp8yS": {
       "ts": 1795403550674,
@@ -5683,8 +5683,8 @@
       "prob": 0.8193203211895085
     },
     "LlhNIh2zcR::udtEP2N0QR": {
-      "ts": 1794982745595,
-      "prob": 0.22999999999999998
+      "ts": 1795588609576,
+      "prob": 0.19
     },
     "zLKhxiJqJbjSBOVPR8en": {
       "ts": 1793225431003,
@@ -8329,11 +8329,11 @@
   },
   "llm_usage": {
     "day": "2026-11-25",
-    "fast": 9,
-    "deep": 3,
+    "fast": 12,
+    "deep": 4,
     "chat": 2
   },
-  "last_scan_ms": 1795584970132,
+  "last_scan_ms": 1795588609503,
   "last_compress_ms": 1795585823324,
   "grounding_out_day": "2026-11-25",
   "todos": [
@@ -11105,7 +11105,7 @@
     "77dt9mwnmvq"
   ],
   "tracked_orders": {},
-  "events_since_compress": 0,
+  "events_since_compress": 3,
   "last_book_review_ms": 1792755014185,
   "watch_probs": {
     "Ln5EgOhAty": 0.4726684393929348,

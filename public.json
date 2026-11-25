@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1795588421579,
+  "generated_ms": 1795588811961,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 9,
+      "today": 12,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 3,
+      "today": 4,
       "cap": 54
     }
   },
@@ -64,6 +64,21 @@
   "net_worth": 548.01,
   "summary": "Balance M$11. Net worth M$548. 15 open positions, 8 of them closed and awaiting resolution. Over 357 resolved forecasts, our Brier score is 0.171, while the market's is 0.112 (lower is better, 0.25 is a coin flip). We forecast worse than the market price, and our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 182 of 357 forecasts (163 of 312 on big disagreements). Of 181 resolved bets, backing the favourite won 67 of 88, while longshots against the favourite won 21 of 93.\n\nOpen positions span Codeforces IGM, Navier-Stokes solutions before IPO, US midterm turnout, state political races, Mountain View City Council, US Congress races, NASA eclipse livestreams, Nebraska Senate races, OpenAI recursive models, League of Legends Worlds outcomes, OpenAI going public not via an IPO, Magnus Carlsen FIDE rating, One Piece character arcs, Anthropic IPO caps, Total Chess winner markets, and a recent YES position on the Time Person of the Year shortlist. Specific positions continue to move against us with negative P/L. Spendable cash is tightly constrained by our M$10 cash reserve limit, which periodically floors new trade sizes to zero and leaves liquidity at M$1 or M$0 while we hold existing positions to resolution.\n\nMistakes worth avoiding include taking low-probability bets against strong favorites (Longshot Leak), allowing compelling stories to mask mathematical expected value (Narrative Trap), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero. Avoid micro-trader meta-markets where time decay turns unfavorable.\n\nCalibration is poor for speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favorites is significantly more reliable, as shown by winning 67 of 88 favourite bets. Retain focus on disciplined favorite backing while managing reserve limits and capital allocation. Spendable cash is tightly constrained by our M$10 cash reserve limit, periodically flooring new trade sizes to zero when reserves constrain activity.",
   "journal": [
+    {
+      "ts": 1795588810311,
+      "kind": "analysis",
+      "text": "Analysed \"Israel's next Prime minister \u2192 Benjamin Netanyahu\": market 19%, my 30% (medium). No trade, would be a longshot bet against the 19% favourite."
+    },
+    {
+      "ts": 1795588610759,
+      "kind": "screen",
+      "text": "Escalated \"Israel's next Prime minister \u2192 Benjamin Netanyahu\" at 19%: flagged: Netanyahu remains a central figure in Israeli politics post-2026 election, warranting deeper analysis of coalition dynamics."
+    },
+    {
+      "ts": 1795588610753,
+      "kind": "screen",
+      "text": "Passed on \"Israel's next Prime minister \u2192 Gadi Eisenkot\" at 73%: quick estimate 15%, market 73%. Eisenkot is a dark horse candidate and the Israeli political landscape is too volatile for a high conviction here."
+    },
     {
       "ts": 1795581629747,
       "kind": "score",
@@ -446,21 +461,6 @@
     },
     {
       "ts": 1795430010512,
-      "kind": "score",
-      "text": "Scored 354 resolved forecasts: my Brier 0.170, the market's 0.110. Closer than the market on 180/354."
-    },
-    {
-      "ts": 1795429806461,
-      "kind": "analysis",
-      "text": "Analysed \"Will the PC version of Grand Theft Auto 6 release within six months of\": market 20%, my 12% (medium). No trade, size floored to zero by balance reserve."
-    },
-    {
-      "ts": 1795429614268,
-      "kind": "screen",
-      "text": "Escalated \"Will the PC version of Grand Theft Auto 6 release within six months of\" at 20%: quick estimate 15% backs the favourite at 20%. Rockstar traditionally staggers PC releases by more than six months, making this a standard industry pattern without special hidden data."
-    },
-    {
-      "ts": 1795426236789,
       "kind": "score",
       "text": "Scored 354 resolved forecasts: my Brier 0.170, the market's 0.110. Closer than the market on 180/354."
     }
@@ -2270,6 +2270,24 @@
   ],
   "screens": [
     {
+      "ts": 1795588610753,
+      "question": "Israel's next Prime minister \u2192 Benjamin Netanyahu",
+      "url": "https://manifold.markets/dkgsAiogjertg/israels-next-prime-minister",
+      "passed": true,
+      "market_prob": 0.19,
+      "quick_prob": 0.55,
+      "why": "flagged: Netanyahu remains a central figure in Israeli politics post-2026 election, warranting deeper analysis of coalition dynamics."
+    },
+    {
+      "ts": 1795588610747,
+      "question": "Israel's next Prime minister \u2192 Gadi Eisenkot",
+      "url": "https://manifold.markets/dkgsAiogjertg/israels-next-prime-minister",
+      "passed": false,
+      "market_prob": 0.7343036766085027,
+      "quick_prob": 0.15,
+      "why": "quick estimate 15%, market 73%. Eisenkot is a dark horse candidate and the Israeli political landscape is too volatile for a high conviction here."
+    },
+    {
       "ts": 1795581230038,
       "question": "Will Jack MA return as a senior executive to Alibaba by 2026 year end?",
       "url": "https://manifold.markets/MP/will-jack-ma-return-as-a-senior-exe",
@@ -2610,27 +2628,32 @@
       "market_prob": 0.09999999999999995,
       "quick_prob": 0.2,
       "why": "quick estimate 20%, market 10%. The comments thoroughly discuss the timeline and low probability of a release within two days based on recent PRs and announcements."
-    },
-    {
-      "ts": 1795451277778,
-      "question": "Will GTA6 be recompiled on a PC build before November 30, 2026?",
-      "url": "https://manifold.markets/apol/will-gta6-be-recompiled-on-a-pc-bui",
-      "passed": true,
-      "market_prob": 0.3539492942290239,
-      "quick_prob": 0.05,
-      "why": "quick estimate 5% backs the favourite at 35%. Only 6 days left and no executable or decompilation exists to make an interactive PC build possible in time."
-    },
-    {
-      "ts": 1795447525840,
-      "question": "Will the WTI Crude Oil Spot Price be above $87.5 on November 23, 2026?",
-      "url": "https://manifold.markets/ShaneBo/will-the-wti-crude-oil-spot-price-b-nucgpg8AuZ",
-      "passed": false,
-      "market_prob": 0.19999999999999996,
-      "quick_prob": 0.38,
-      "why": "quick estimate 38%, market 20%. Oil is volatile and currently around $85.3, making $87.5 plausible but statistically unlikely given current trends."
     }
   ],
   "decisions": [
+    {
+      "ts": 1795588810305,
+      "kind": "no_trade",
+      "question": "Israel's next Prime minister \u2192 Benjamin Netanyahu",
+      "url": "https://manifold.markets/dkgsAiogjertg/israels-next-prime-minister",
+      "market_prob": 0.19,
+      "model_prob": 0.3,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With the pro-Netanyahu coalition reportedly controlling around 53 seats post-October 2026 elections, securing a 61-seat majority presents a steep hurdle for Netanyahu compared to an opposition bloc led by Bennett or Eisenkot.",
+      "uncertainty": "Whether Netanyahu can lure defectors or a key opposition party into a coalition before an opposition coalition under Bennett or another candidate is sworn in.",
+      "resolution_risk": "Netanyahu remaining in office as a caretaker Prime Minister during prolonged post-election deadlock does not count; he must be formally sworn in to head the 38th government.",
+      "evidence_for": [
+        "Netanyahu is the incumbent Prime Minister and a veteran political strategist who has repeatedly assembled unexpected coalitions.",
+        "The opposition alliance is heterogeneous (ranging from Naftali Bennett to Gadi Eisenkot and Yisrael Beiteinu) and may struggle to agree on a single Prime Minister candidate."
+      ],
+      "evidence_against": [
+        "Preliminary seat counts show the pro-Netanyahu bloc at approximately 53 seats, 8 short of the 61-seat Knesset majority needed to form a government.",
+        "Key swing figures like Naftali Bennett and Avigdor Lieberman are strongly aligned against sitting in another Netanyahu-led administration."
+      ],
+      "reason": "would be a longshot bet against the 19% favourite"
+    },
     {
       "ts": 1795581622314,
       "kind": "no_trade",
@@ -2954,29 +2977,6 @@
         "TIME could theoretically alter its media roll-out strategy and skip publishing a formal shortlist prior to the winner announcement."
       ],
       "reason": "edge 0.396, kelly 0.87, decay 1.00, bound by balance reserve"
-    },
-    {
-      "ts": 1795332074555,
-      "kind": "no_trade",
-      "question": "F1 2026 Prop Bets Las Vegas \ud83c\uddfa\ud83c\uddf8 (LV Strip Circuit, Nevada, USA) Grand Prix [LIVE, Add answers]  \u2192 Leave it open for the upcoming GP (tip jar)",
-      "url": "https://manifold.markets/BlitzEver/f1-2026-prop-bets-australia-melbour",
-      "market_prob": 0.10263077578986392,
-      "model_prob": 0.88,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "The creator explicitly designated this answer to keep the multi-choice F1 prop market open for upcoming GPs through the end of the season. Additionally, creator holdings indicate this functions as a tip jar, which generally resolves YES or stays open.",
-      "uncertainty": "Whether the creator resolves tip jar options as YES or N/A at the conclusion of the 2026 F1 season.",
-      "resolution_risk": "If the market resolves N/A upon season conclusion instead of YES, YES bets would be cancelled/refunded.",
-      "evidence_for": [
-        "Market description explicitly instructs traders to leave this specific answer open to keep the overall F1 season prop market active.",
-        "The creator (BlitzEver) holds over 1,000 YES shares in this answer, operating it as a creator tip jar.",
-        "There are remaining 2026 F1 Grand Prix races (Qatar, Abu Dhabi) scheduled after the Las Vegas GP in late November/December 2026."
-      ],
-      "evidence_against": [
-        "If the creator decides to close the overall market at the end of the season, tip jar answers are sometimes resolved N/A rather than YES."
-      ],
-      "reason": "would be a longshot bet against the 10% favourite"
     }
   ]
 }
