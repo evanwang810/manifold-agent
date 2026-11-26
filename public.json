@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1795657194164,
+  "generated_ms": 1795657614191,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 0,
+      "today": 3,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 0,
+      "today": 1,
       "cap": 54
     }
   },
@@ -64,6 +64,26 @@
   "net_worth": 548.58,
   "summary": "Balance M$62. Net worth M$551. 14 open positions, 7 of them closed and awaiting resolution. Over 359 resolved forecasts, our Brier score is 0.170, while the market's is 0.112 (lower is better, 0.25 is a coin flip). We forecast worse than the market price, and our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 184 of 359 forecasts (165 of 314 on big disagreements). Of 184 resolved bets, backing the favourite won 70 of 91, while longshots against the favourite won 21 of 93.\n\nOpen positions span Codeforces IGM, Navier-Stokes solutions before IPO, US midterm turnout, state political races, Mountain View City Council, US Congress races, NASA eclipse livestreams, Nebraska Senate races, OpenAI recursive models, League of Legends Worlds outcomes, OpenAI going public not via an IPO, One Piece character arcs, Anthropic IPO caps, Total Chess winner markets, Time Person of the Year shortlist, GTA 6 decompilation, GTA 6 PC release, and Fortnite trailer character identification. Specific positions continue to move against us with negative P/L, such as the trillion-dollar market cap companies position with a P/L of M$-15. Spendable cash is tightly constrained by our M$10 cash reserve limit, which periodically floors new trade sizes to zero and leaves liquidity at M$1 or M$0 while we hold existing positions to resolution, though recent resolutions temporarily increased spendable cash to M$52, allowing us to deploy M$45 across three new NO positions on GTA 6 and Fortnite speculation.\n\nMistakes worth avoiding include taking low-probability bets against strong favorites (Longshot Leak), allowing compelling stories to mask mathematical expected value (Narrative Trap), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero. Avoid micro-trader meta-markets where time decay turns unfavorable.\n\nCalibration is poor for speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favorites is significantly more reliable, as shown by winning 70 of 91 favourite bets. Retain focus on disciplined favorite backing while managing reserve limits and capital allocation. Spendable cash remains tightly constrained by our M$10 cash reserve limit, periodically flooring new trade sizes to zero when reserves constrain activity and forcing us to hold existing positions to resolution unless freed up by resolutions.",
   "journal": [
+    {
+      "ts": 1795657613904,
+      "kind": "analysis",
+      "text": "Analysed \"Will there be polling about AI voting advice in 2026 midterms?\": market 94%, my 96% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1795657386734,
+      "kind": "screen",
+      "text": "Escalated \"Will there be polling about AI voting advice in 2026 midterms?\" at 94%: quick estimate 99% backs the favourite at 94%. Comment provides direct evidence of Pew research polling meeting the exact YES criteria."
+    },
+    {
+      "ts": 1795657386729,
+      "kind": "screen",
+      "text": "Passed on \"Will Trump's hush money convictions be overturned due to the Supreme C\" at 9%: quick estimate 40%, market 9%. Complex legal prognostication on presidential immunity and state-level hush money convictions without recent comment activity."
+    },
+    {
+      "ts": 1795657386724,
+      "kind": "screen",
+      "text": "Passed on \"If the left/right culture war comes for AI before US elections, will t\" at 70%: quick estimate 65%, market 70%. Vibes-based political alignment question with poorly defined resolution criteria regarding when the culture war 'comes for AI'."
+    },
     {
       "ts": 1795653069991,
       "kind": "score",
@@ -443,26 +463,6 @@
       "ts": 1795556037164,
       "kind": "screen",
       "text": "Passed on \"How many seats will the Spanish Socialist Workers' Party get in the ne\" at 85%: quick estimate 82%, market 85%. Recent polling consistently places PSOE above 105 seats, making this very likely."
-    },
-    {
-      "ts": 1795556037156,
-      "kind": "screen",
-      "text": "Escalated \"Will the US-China trade truce have been officially extended beyond Jan\" at 20%: quick estimate 15% backs the favourite at 20%. Unlikely an extension of a 2027 truce happens before early December 2026 without prior warning."
-    },
-    {
-      "ts": 1795556037147,
-      "kind": "screen",
-      "text": "Passed on \"How many seats will the Spanish Socialist Workers' Party get in the ne\" at 89%: quick estimate 85%, market 89%. Polls consistently place PSOE well above 100 seats, making this outcome heavily favored."
-    },
-    {
-      "ts": 1795556037138,
-      "kind": "screen",
-      "text": "Escalated \"Will WTI crude oil fall to $65 before November 30?\" at 10%: quick estimate 3% backs the favourite at 10%. WTI is around $80 and dropping 19% in a few holiday-shortened days with no catalyst is extremely unlikely."
-    },
-    {
-      "ts": 1795556037129,
-      "kind": "screen",
-      "text": "Passed on \"Will anyone get me to give a wrong answer to a puzzle in the comments?\" at 96%: quick estimate 5%, market 96%. The bot's comment points out an open math problem where giving a wrong answer under current rules is practically impossible."
     }
   ],
   "todos": [
@@ -2336,6 +2336,33 @@
   ],
   "screens": [
     {
+      "ts": 1795657386729,
+      "question": "Will there be polling about AI voting advice in 2026 midterms?",
+      "url": "https://manifold.markets/EvanDaniel/will-there-be-polling-about-ai-voti",
+      "passed": true,
+      "market_prob": 0.94,
+      "quick_prob": 0.99,
+      "why": "quick estimate 99% backs the favourite at 94%. Comment provides direct evidence of Pew research polling meeting the exact YES criteria."
+    },
+    {
+      "ts": 1795657386724,
+      "question": "Will Trump's hush money convictions be overturned due to the Supreme Court's grant of presidential immunity?",
+      "url": "https://manifold.markets/Hyperlincoln/will-trumps-hush-money-convictions",
+      "passed": false,
+      "market_prob": 0.08789279408438985,
+      "quick_prob": 0.4,
+      "why": "quick estimate 40%, market 9%. Complex legal prognostication on presidential immunity and state-level hush money convictions without recent comment activity."
+    },
+    {
+      "ts": 1795657386718,
+      "question": "If the left/right culture war comes for AI before US elections, will the right be the pro-AI side?",
+      "url": "https://manifold.markets/MGG/if-the-leftright-culture-war-comes-1cc8384e933c",
+      "passed": false,
+      "market_prob": 0.6963214828596498,
+      "quick_prob": 0.65,
+      "why": "quick estimate 65%, market 70%. Vibes-based political alignment question with poorly defined resolution criteria regarding when the culture war 'comes for AI'."
+    },
+    {
       "ts": 1795649897173,
       "question": "Will the board composition of NVDA change?",
       "url": "https://manifold.markets/Glz/will-the-board-composition-of-nvda",
@@ -2667,36 +2694,30 @@
       "market_prob": 0.9600000000000001,
       "quick_prob": 0.05,
       "why": "quick estimate 5%, market 96%. The bot's comment points out an open math problem where giving a wrong answer under current rules is practically impossible."
-    },
-    {
-      "ts": 1795556037112,
-      "question": "Will Susan Collins Outperform Maine's Republican Baseline in 2026?",
-      "url": "https://manifold.markets/DavidFWatson/will-susan-collins-outperform-maine",
-      "passed": true,
-      "market_prob": 0.9624252615694576,
-      "quick_prob": 0.99,
-      "why": "quick estimate 99% backs the favourite at 96%. The market creator's comment confirms the outcome using unofficial certified numbers showing Collins beat the baseline."
-    },
-    {
-      "ts": 1795539038245,
-      "question": "What combination of parties will form executive government after the 2026 Victorian state election? \u2192 Liberal + National + One Nation",
-      "url": "https://manifold.markets/a_l_e_x/free-mana-what-combination-of-parti-dctQ0Olz09",
-      "passed": false,
-      "market_prob": 0.03614721469801224,
-      "quick_prob": null,
-      "why": "screen failed"
-    },
-    {
-      "ts": 1795539038239,
-      "question": "Will Fernando Alonso be an Aston Martin Formula 1 driver by the end of the season?",
-      "url": "https://manifold.markets/LukasscIzc/will-fernando-alonso-be-an-aston-ma",
-      "passed": false,
-      "market_prob": 0.96,
-      "quick_prob": null,
-      "why": "screen failed"
     }
   ],
   "decisions": [
+    {
+      "ts": 1795657613898,
+      "kind": "no_trade",
+      "question": "Will there be polling about AI voting advice in 2026 midterms?",
+      "url": "https://manifold.markets/EvanDaniel/will-there-be-polling-about-ai-voti",
+      "market_prob": 0.94,
+      "model_prob": 0.96,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Pew Research Center's October 2026 survey of 5,273 U.S. adults included item AI_MIDTM_INFO / WHOVT asking if respondents used AI chatbots for 'suggestions for how to make your vote choices' for the 2026 midterms. This directly satisfies the resolution criteria.",
+      "uncertainty": "Whether the market creator promptly verifies the Pew Research Center questionnaire.",
+      "resolution_risk": "Creator might delay resolution until after the market official close date or misinterpret Pew's question phrasing.",
+      "evidence_for": [
+        "Pew Research Center surveyed 5,273 U.S. adults in October 2026 with survey item AI_MIDTM_INFO / WHOVT asking if respondents used AI chatbots for suggestions on how to make vote choices in the 2026 midterm elections."
+      ],
+      "evidence_against": [
+        "The market creator has not yet manually resolved the market YES."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1795650261748,
       "kind": "bet",
@@ -2999,28 +3020,6 @@
         "No attempt by Vance to invoke the 25th Amendment or declare himself Acting President has taken place through November 24, 2026.",
         "Political distancing and planning for a 2028 campaign are standard political maneuvers, not an attempt to seize the presidency.",
         "Only 6 days remain in November 2026 with no constitutional crisis underway."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1795560066401,
-      "kind": "no_trade",
-      "question": "Severance S3E1 released before 2027?",
-      "url": "https://manifold.markets/Knuffa/severance-s3e1-released-before-2027",
-      "market_prob": 0.04000000000000002,
-      "model_prob": 0.02,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With Season 3 filming scheduled through December 2, 2026 and today being November 24, 2026, post-production and marketing pipelines make a premier before January 1, 2027 virtually impossible.",
-      "uncertainty": "Whether Apple TV+ would attempt an unprecedented surprise drop of Episode 1 immediately following filming wrap.",
-      "resolution_risk": "The description is blank, but 'before 2027' standardly means prior to January 1, 2027.",
-      "evidence_for": [],
-      "evidence_against": [
-        "Today is November 24, 2026, leaving only 37 days before 2027.",
-        "Production listings show Season 3 filming runs through December 2, 2026.",
-        "Apple TV+ has not released a trailer, teaser, or official release date for Season 3.",
-        "Post-production on a high-VFX prestige series typically requires several months following production wrap."
       ],
       "reason": "size floored to zero by balance reserve"
     }
