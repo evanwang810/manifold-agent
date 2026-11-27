@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1795815357569,
+  "generated_ms": 1795815733977,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 27,
+      "today": 30,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 10,
+      "today": 11,
       "cap": 54
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 534.08,
   "summary": "Balance M$10. Net worth M$535. 18 open positions, 7 of them closed and awaiting resolution. Over 362 resolved forecasts, our Brier score is 0.171, while the market's is 0.112 (lower is better, 0.25 is a coin flip). We forecast worse than the market price, and our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 185 of 362 forecasts (166 of 316 on big disagreements). Of 184 resolved bets, backing the favourite won 70 of 91, while longshots against the favourite won 21 of 93.\n\nOpen positions span Codeforces IGM, Navier-Stokes solutions before IPO, US midterm turnout, state political races, Mountain View City Council, US Congress races, NASA eclipse livestreams, Nebraska Senate races, OpenAI recursive models, League of Legends Worlds outcomes, OpenAI going public not via an IPO, One Piece character arcs, Anthropic IPO caps, Total Chess winner markets, Time Person of the Year shortlist, GTA 6 decompilation, GTA 6 PC release, and Fortnite trailer character identification. Spendable cash remains tightly constrained by our M$10 cash reserve limit, flooring new trade sizes to zero when reserves constrain activity and forcing us to hold existing positions to resolution unless freed up by resolutions. Specific positions continue to move against us with negative P/L, such as GTA 6 decompilation and PC release markets moving upward against our NO positions.\n\nMistakes worth avoiding include taking low-probability bets against strong favorites (Longshot Leak), allowing compelling stories to mask mathematical expected value (Narrative Trap), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero. Avoid micro-trader meta-markets where time decay turns unfavorable.\n\nCalibration is poor for speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favorites is significantly more reliable, as shown by winning 70 of 91 favourite bets. Retain focus on disciplined favorite backing while managing reserve limits and capital allocation. Spendable cash remains tightly constrained by our M$10 cash reserve limit, periodically flooring new trade sizes to zero when reserves constrain activity and forcing us to hold existing positions to resolution unless freed up by resolutions.",
   "journal": [
+    {
+      "ts": 1795815732175,
+      "kind": "analysis",
+      "text": "Analysed \"Which storm names used in the 2026 North Atlantic Hurricane Season? \u2192 \": market 8%, my 14% (medium). No trade, would be a longshot bet against the 8% favourite."
+    },
+    {
+      "ts": 1795815544656,
+      "kind": "screen",
+      "text": "Escalated \"Which storm names used in the 2026 North Atlantic Hurricane Season? \u2192 \" at 8%: quick estimate 5% backs the favourite at 8%. The hurricane season is ending in three days and Kyle has not formed, making it extremely unlikely."
+    },
     {
       "ts": 1795814615043,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1795675842557,
       "kind": "screen",
       "text": "Passed on \"Will OpenAI publicly claim a solution to a SECOND Millennium Prize Pro\" at 4%: quick estimate 11%, market 4%. Creator notes and Polymarket pricing point to a low probability by November 30, and my quick read agrees."
-    },
-    {
-      "ts": 1795675650263,
-      "kind": "score",
-      "text": "Scored 360 resolved forecasts: my Brier 0.170, the market's 0.112. Closer than the market on 185/360."
-    },
-    {
-      "ts": 1795672095230,
-      "kind": "screen",
-      "text": "Passed on \"How many seats will the People's Party get in the next Spanish general\" at 82%: quick estimate 65%, market 82%. With polls centering near 129, crossing 125 is slightly favored but not worth deep resource expenditure."
     }
   ],
   "todos": [
@@ -2336,6 +2336,15 @@
   ],
   "screens": [
     {
+      "ts": 1795815544646,
+      "question": "Which storm names used in the 2026 North Atlantic Hurricane Season? \u2192 Kyle",
+      "url": "https://manifold.markets/PMattW/which-storm-names-used-in-the-2026",
+      "passed": true,
+      "market_prob": 0.08079684212803118,
+      "quick_prob": 0.05,
+      "why": "quick estimate 5% backs the favourite at 8%. The hurricane season is ending in three days and Kyle has not formed, making it extremely unlikely."
+    },
+    {
       "ts": 1795811811855,
       "question": "Copa Libertadores 2026: Winner \u2192 Palmeiras",
       "url": "https://manifold.markets/bbno/copa-libertadores-2026-winner",
@@ -2685,18 +2694,33 @@
       "market_prob": 0.94,
       "quick_prob": 0.99,
       "why": "quick estimate 99% backs the favourite at 94%. Comment provides direct evidence of Pew research polling meeting the exact YES criteria."
-    },
-    {
-      "ts": 1795657386724,
-      "question": "Will Trump's hush money convictions be overturned due to the Supreme Court's grant of presidential immunity?",
-      "url": "https://manifold.markets/Hyperlincoln/will-trumps-hush-money-convictions",
-      "passed": false,
-      "market_prob": 0.08789279408438985,
-      "quick_prob": 0.4,
-      "why": "quick estimate 40%, market 9%. Complex legal prognostication on presidential immunity and state-level hush money convictions without recent comment activity."
     }
   ],
   "decisions": [
+    {
+      "ts": 1795815732166,
+      "kind": "no_trade",
+      "question": "Which storm names used in the 2026 North Atlantic Hurricane Season? \u2192 Kyle",
+      "url": "https://manifold.markets/PMattW/which-storm-names-used-in-the-2026",
+      "market_prob": 0.08079684212803118,
+      "model_prob": 0.14,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "With only 10 named storms recorded through November 24 and just three days remaining in a relatively quiet Atlantic season, the formation of an 11th named storm (Kyle) before November 30 remains unlikely (~14%).",
+      "uncertainty": "Whether the system monitored around November 19-20 reached tropical storm status between November 24 and November 30.",
+      "resolution_risk": "NHC could retroactively designate a storm as Tropical Storm Kyle during post-season re-analysis after November 30.",
+      "evidence_for": [
+        "Forecasters monitored a system along the East Coast around November 19-20 that would be named Kyle if it reached tropical storm strength.",
+        "Tropical storms occasionally form in late November."
+      ],
+      "evidence_against": [
+        "As of November 24, 2026, only 10 named storms (up to Josephine) have formed in the Atlantic season.",
+        "The 2026 season is below average in activity (10 named storms vs 14 long-term average), partly due to El Ni\u00f1o conditions.",
+        "Only 3 days remain before the official end of the season on November 30."
+      ],
+      "reason": "would be a longshot bet against the 8% favourite"
+    },
     {
       "ts": 1795804517599,
       "kind": "no_trade",
@@ -3006,30 +3030,6 @@
         "WTI spot failed to exceed $87.50 on Nov 23, showing baseline spot prices remain well below upper ranges"
       ],
       "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1795618939521,
-      "kind": "no_trade",
-      "question": "Is Lumina probiotics a scam? ",
-      "url": "https://manifold.markets/drcat/will-lumina-probiotics-be-discovere",
-      "market_prob": 0.4717502486240143,
-      "model_prob": 0.78,
-      "confidence": "medium",
-      "amount": null,
-      "outcome": null,
-      "thinking": "With 2.6 days until close and creator @drcat explicitly endorsing critical blog posts as sufficient exposed text for YES, resolution heavily favors YES despite dispute over whether product failure is a scam.",
-      "uncertainty": "Whether the creator resolves YES under their stated interpretation or if mod intervention alters the outcome.",
-      "resolution_risk": "High resolution risk due to conflict between creator's broad criteria interpretation and general definition of a scam.",
-      "evidence_for": [
-        "Creator @drcat explicitly noted in comments that critical Substack writeups satisfy their exposed text YES criteria",
-        "Lantern Bioworks admitted in ACX open thread that their probiotic failed to maintain colonization",
-        "Market closes in 2.6 days, making creator resolution judgment imminent"
-      ],
-      "evidence_against": [
-        "A product failing to colonize is startup failure/lack of efficacy, not intentional fraud or scam",
-        "Moderators may intervene if resolved YES without evidence of actual fraud"
-      ],
-      "reason": "would be a longshot bet against the 47% favourite"
     }
   ]
 }
