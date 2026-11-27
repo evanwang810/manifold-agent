@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1795804101348,
+  "generated_ms": 1795804518676,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.6-flash",
+      "active": "gemini-3.7-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 23,
+      "today": 26,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 9,
+      "today": 10,
       "cap": 54
     }
   },
@@ -64,6 +64,21 @@
   "net_worth": 534.64,
   "summary": "Balance M$10. Net worth M$535. 18 open positions, 7 of them closed and awaiting resolution. Over 362 resolved forecasts, our Brier score is 0.171, while the market's is 0.112 (lower is better, 0.25 is a coin flip). We forecast worse than the market price, and our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 185 of 362 forecasts (166 of 316 on big disagreements). Of 184 resolved bets, backing the favourite won 70 of 91, while longshots against the favourite won 21 of 93.\n\nOpen positions span Codeforces IGM, Navier-Stokes solutions before IPO, US midterm turnout, state political races, Mountain View City Council, US Congress races, NASA eclipse livestreams, Nebraska Senate races, OpenAI recursive models, League of Legends Worlds outcomes, OpenAI going public not via an IPO, One Piece character arcs, Anthropic IPO caps, Total Chess winner markets, Time Person of the Year shortlist, GTA 6 decompilation, GTA 6 PC release, and Fortnite trailer character identification. Spendable cash remains tightly constrained by our M$10 cash reserve limit, flooring new trade sizes to zero when reserves constrain activity and forcing us to hold existing positions to resolution unless freed up by resolutions. Specific positions continue to move against us with negative P/L, such as GTA 6 decompilation and PC release markets moving upward against our NO positions.\n\nMistakes worth avoiding include taking low-probability bets against strong favorites (Longshot Leak), allowing compelling stories to mask mathematical expected value (Narrative Trap), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero. Avoid micro-trader meta-markets where time decay turns unfavorable.\n\nCalibration is poor for speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favorites is significantly more reliable, as shown by winning 70 of 91 favourite bets. Retain focus on disciplined favorite backing while managing reserve limits and capital allocation. Spendable cash remains tightly constrained by our M$10 cash reserve limit, periodically flooring new trade sizes to zero when reserves constrain activity and forcing us to hold existing positions to resolution unless freed up by resolutions.",
   "journal": [
+    {
+      "ts": 1795804517608,
+      "kind": "analysis",
+      "text": "Analysed \"Will GTA6 be recompiled on a PC build before November 30, 2026?\": market 78%, my 88% (medium). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1795804290915,
+      "kind": "screen",
+      "text": "Passed on \"Will the DJIA close below 48,000 by November 30, 2026? (11/30/26)\" at 4%: quick estimate 35%, market 4%. Standard market movement and volatility question with no hidden resolution traps, not worth an expensive deep dive."
+    },
+    {
+      "ts": 1795804290906,
+      "kind": "screen",
+      "text": "Escalated \"Will GTA6 be recompiled on a PC build before November 30, 2026?\" at 78%: flagged: Comments debate whether the recently released compatibility layer/port by modders technically satisfies the strict recompilation and translation criteria."
+    },
     {
       "ts": 1795804101052,
       "kind": "desk",
@@ -448,21 +463,6 @@
       "ts": 1795668189853,
       "kind": "score",
       "text": "Scored 360 resolved forecasts: my Brier 0.170, the market's 0.112. Closer than the market on 185/360."
-    },
-    {
-      "ts": 1795664635518,
-      "kind": "screen",
-      "text": "Passed on \"Dec 1 2023 to Nov 30 2026, will a UK strike price of \u00a365 (2012 prices\" at 11%: quick estimate 50%, market 11%. This is a complex retroactive econometric calculation dependent on wholesale electricity prices over a three-year period that cannot be evaluated reliably in a quick read."
-    },
-    {
-      "ts": 1795664442674,
-      "kind": "score",
-      "text": "Scored 360 resolved forecasts: my Brier 0.170, the market's 0.112. Closer than the market on 185/360."
-    },
-    {
-      "ts": 1795663929653,
-      "kind": "desk",
-      "text": "Desk: Nothing material has changed since my last turn; spendable cash remains at M$0 after the M$10 cash reserve following our recent position deployments, so I am continuing to hold all existing positions until pending resolutions free up liquidity."
     }
   ],
   "todos": [
@@ -2336,6 +2336,24 @@
   ],
   "screens": [
     {
+      "ts": 1795804290906,
+      "question": "Will the DJIA close below 48,000 by November 30, 2026? (11/30/26)",
+      "url": "https://manifold.markets/Web3ICP/will-the-djia-close-below-48000-by",
+      "passed": false,
+      "market_prob": 0.04499606004830375,
+      "quick_prob": 0.35,
+      "why": "quick estimate 35%, market 4%. Standard market movement and volatility question with no hidden resolution traps, not worth an expensive deep dive."
+    },
+    {
+      "ts": 1795804290897,
+      "question": "Will GTA6 be recompiled on a PC build before November 30, 2026?",
+      "url": "https://manifold.markets/apol/will-gta6-be-recompiled-on-a-pc-bui",
+      "passed": true,
+      "market_prob": 0.7816638883570161,
+      "quick_prob": 0.45,
+      "why": "flagged: Comments debate whether the recently released compatibility layer/port by modders technically satisfies the strict recompilation and translation criteria."
+    },
+    {
       "ts": 1795786314554,
       "question": "What will be the outcome of the 2026 New Zealand General Election? \u2192 Labour coalition",
       "url": "https://manifold.markets/NcyRocks/what-will-be-the-outcome-of-the-202-ZUpIRANOpQ",
@@ -2676,27 +2694,34 @@
       "market_prob": 0.6963214828596498,
       "quick_prob": 0.65,
       "why": "quick estimate 65%, market 70%. Vibes-based political alignment question with poorly defined resolution criteria regarding when the culture war 'comes for AI'."
-    },
-    {
-      "ts": 1795649897173,
-      "question": "Will the board composition of NVDA change?",
-      "url": "https://manifold.markets/Glz/will-the-board-composition-of-nvda",
-      "passed": true,
-      "market_prob": 0.14996645718223325,
-      "quick_prob": 0.05,
-      "why": "quick estimate 5% backs the favourite at 15%. Vague resolution criteria and very low volume mean there is no actionable edge."
-    },
-    {
-      "ts": 1795649897167,
-      "question": "Will Ritchie Torres be the next governor of New York?",
-      "url": "https://manifold.markets/LeeBressler/will-ritchie-torres-be-the-next-gov",
-      "passed": true,
-      "market_prob": 0.07999999999999993,
-      "quick_prob": 0.05,
-      "why": "quick estimate 5% backs the favourite at 8%. Low liquidity and unclear resolution criteria make this market a pure noise bet."
     }
   ],
   "decisions": [
+    {
+      "ts": 1795804517599,
+      "kind": "no_trade",
+      "question": "Will GTA6 be recompiled on a PC build before November 30, 2026?",
+      "url": "https://manifold.markets/apol/will-gta6-be-recompiled-on-a-pc-bui",
+      "market_prob": 0.7816638883570161,
+      "model_prob": 0.88,
+      "confidence": "medium",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Multiple outlets named directly in the criteria (DSOGaming, VideoCardz) as well as PC Gamer have now reported on downloadable and functional community PC builds running leaked assets in-engine natively on Windows via shader and API translation, which fits the stated criteria.",
+      "uncertainty": "Whether the market creator rules that compatibility layer approaches (e.g. ScarlettPort/Victory) satisfy the translation/recompilation criteria for an executable.",
+      "resolution_risk": "The creator could strictly interpret 'recompiled PC build' to require static source recompilation rather than GDK/shader translation layers, resolving NO despite working PC builds.",
+      "evidence_for": [
+        "Established outlets specifically cited in the resolution criteria (DSOGaming, VideoCardz, PC Gamer) have reported on functional unofficial PC builds and ports (such as the AvatarManz fork and ScarlettPort) running in-engine gameplay at 16 fps.",
+        "The resolution criteria explicitly permit translating leaked console binaries and assets to run natively on Windows without emulation or streaming.",
+        "Publicly downloadable builds with custom launchers have been released and demonstrated."
+      ],
+      "evidence_against": [
+        "Creator ambiguity over whether a dynamic wrapper/compatibility layer strictly meets 'translating or statically recompiling... into an executable'.",
+        "Take-Two Interactive has issued aggressive DMCA takedowns across thousands of repositories, potentially complicating public reproducibility.",
+        "Some public releases in leaked-game scenes carry risks of being trojans or unverified fakes until verified by technical analysts."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1795803399320,
       "kind": "no_trade",
@@ -3005,29 +3030,6 @@
         "Moderators may intervene if resolved YES without evidence of actual fraud"
       ],
       "reason": "would be a longshot bet against the 47% favourite"
-    },
-    {
-      "ts": 1795618939485,
-      "kind": "no_trade",
-      "question": "Is this either Luffy or Quagmire? (Fortnite trailer speculation)",
-      "url": "https://manifold.markets/strutheo/is-this-either-luffy-or-quagmire-fo",
-      "market_prob": 0.21772844067963662,
-      "model_prob": 0.05,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "The March 2024 teaser asset was tied to the Avatar update, not Luffy or Quagmire. Luffy's eventual late-2026 release did not use the teased design.",
-      "uncertainty": "Whether the market creator resolves based on the specific March 2024 teaser asset or subsequent character additions.",
-      "resolution_risk": "Creator ambiguity between the trailer asset itself versus eventual game additions.",
-      "evidence_for": [
-        "Fortnite introduced a One Piece collaboration featuring Luffy in late 2026"
-      ],
-      "evidence_against": [
-        "The asset in the March 2024 trailer was tied to the Avatar/Chapter 5 update",
-        "Luffy's eventual in-game design did not match the teased asset (long pants, sleeves, no hat)",
-        "Quagmire was never added to Fortnite"
-      ],
-      "reason": "size floored to zero by balance reserve"
     }
   ]
 }
