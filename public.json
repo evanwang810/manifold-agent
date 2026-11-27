@@ -1,5 +1,5 @@
 {
-  "generated_ms": 1795741507103,
+  "generated_ms": 1795741970150,
   "username": "gemini35flash",
   "profile_url": "https://manifold.markets/gemini35flash",
   "model": "gemini/gemini-3.8-flash",
@@ -21,7 +21,7 @@
     },
     "deep": {
       "configured": "gemini-3.8-flash",
-      "active": "gemini-3.8-flash",
+      "active": "gemini-3.6-flash",
       "fallbacks": [
         "gemini-3.7-flash",
         "gemini-3.6-flash",
@@ -31,7 +31,7 @@
   },
   "usage": {
     "fast": {
-      "today": 3,
+      "today": 6,
       "cap": 400
     },
     "chat": {
@@ -39,7 +39,7 @@
       "cap": 400
     },
     "deep": {
-      "today": 1,
+      "today": 2,
       "cap": 54
     }
   },
@@ -64,6 +64,16 @@
   "net_worth": 539.35,
   "summary": "Balance M$10. Net worth M$539. 18 open positions, 7 of them closed and awaiting resolution. Over 360 resolved forecasts, our Brier score is 0.170, while the market's is 0.112 (lower is better, 0.25 is a coin flip). We forecast worse than the market price, and our disagreements have mostly been us being wrong, not the market. We were closer to the outcome than the market on 185 of 360 forecasts (166 of 315 on big disagreements). Of 184 resolved bets, backing the favourite won 70 of 91, while longshots against the favourite won 21 of 93.\n\nOpen positions span Codeforces IGM, Navier-Stokes solutions before IPO, US midterm turnout, state political races, Mountain View City Council, US Congress races, NASA eclipse livestreams, Nebraska Senate races, OpenAI recursive models, League of Legends Worlds outcomes, OpenAI going public not via an IPO, One Piece character arcs, Anthropic IPO caps, Total Chess winner markets, Time Person of the Year shortlist, GTA 6 decompilation, GTA 6 PC release, and Fortnite trailer character identification. Spendable cash remains tightly constrained by our M$10 cash reserve limit, flooring new trade sizes to zero when reserves constrain activity and forcing us to hold existing positions to resolution unless freed up by resolutions. Specific positions continue to move against us with negative P/L, such as GTA 6 decompilation and PC release markets moving upward against our NO positions.\n\nMistakes worth avoiding include taking low-probability bets against strong favorites (Longshot Leak), allowing compelling stories to mask mathematical expected value (Narrative Trap), failing to respond rapidly to upward price moves in YES shares when holding NO positions, over-leveraging on subjective personal judgment markets, and triggering balance reserve bottlenecks that floor trade sizes to zero. Avoid micro-trader meta-markets where time decay turns unfavorable.\n\nCalibration is poor for speculative, narrative-driven longshots and low-probability NO bets. Conversely, backing clear favorites is significantly more reliable, as shown by winning 70 of 91 favourite bets. Retain focus on disciplined favorite backing while managing reserve limits and capital allocation. Spendable cash remains tightly constrained by our M$10 cash reserve limit, periodically flooring new trade sizes to zero when reserves constrain activity and forcing us to hold existing positions to resolution unless freed up by resolutions.",
   "journal": [
+    {
+      "ts": 1795741969833,
+      "kind": "analysis",
+      "text": "Analysed \"Will New Zealand's National-led Coalition Government Be Limited to a S\": market 41%, my 5% (high). No trade, size floored to zero by balance reserve."
+    },
+    {
+      "ts": 1795741699766,
+      "kind": "screen",
+      "text": "Escalated \"Will New Zealand's National-led Coalition Government Be Limited to a S\" at 41%: flagged: Recent comments indicate an election outcome where the coalition might be one seat short, requiring deep verification."
+    },
     {
       "ts": 1795741506736,
       "kind": "score",
@@ -453,16 +463,6 @@
       "ts": 1795625898258,
       "kind": "screen",
       "text": "Escalated \"Will the WTI Crude Oil Spot Price be above $83.50 on November 27, 2026\" at 46%: quick estimate 18% backs the favourite at 46%. Futures sit around $80.62, requiring an unlikely 3.6% surge in two trading sessions over a holiday period."
-    },
-    {
-      "ts": 1795625898247,
-      "kind": "screen",
-      "text": "Passed on \"Will the DJIA close below 48,000 by November 30, 2026? (11/30/26)\" at 28%: quick estimate 55%, market 28%. With the index only 0.3% above the threshold over five trading days, this is a standard market coin-flip driven by random daily fluctuations."
-    },
-    {
-      "ts": 1795625898238,
-      "kind": "screen",
-      "text": "Passed on \"Will there be at least 2 NOTAs at the SSE Riga SA Board elections?\" at 72%: quick estimate 15%, market 72%. This is a niche student council election with no public data available to ground a deeper analysis."
     }
   ],
   "todos": [
@@ -783,7 +783,7 @@
       "profit": 1.4,
       "prob": 0.01,
       "closed": false,
-      "days_to_close": 4.0
+      "days_to_close": 3.9
     },
     {
       "question": "Will 2026 turnout exceed 2022? (US midterms, percentage)",
@@ -795,7 +795,7 @@
       "profit": 8.1,
       "prob": 0.987,
       "closed": false,
-      "days_to_close": 4.0
+      "days_to_close": 3.9
     },
     {
       "question": "Will there be time person of the year shortlist in 2026?",
@@ -807,7 +807,7 @@
       "profit": -1.8,
       "prob": 0.531,
       "closed": false,
-      "days_to_close": 5.0
+      "days_to_close": 4.9
     },
     {
       "question": "Will Geometry Dash 2.21 Update Will Be Released In August 13 2026?",
@@ -879,7 +879,7 @@
       "profit": -6.9,
       "prob": 0.65,
       "closed": false,
-      "days_to_close": 7.0
+      "days_to_close": 6.9
     },
     {
       "question": "Will GTA 6 be decompiled within a month of release",
@@ -891,7 +891,7 @@
       "profit": -4.9,
       "prob": 0.654,
       "closed": false,
-      "days_to_close": 23.0
+      "days_to_close": 22.9
     },
     {
       "question": "Will OpenAI announce a massively recursive model, a new mechinterp system, and non-token based pricing, before December?",
@@ -903,7 +903,7 @@
       "profit": 0.0,
       "prob": 0.043,
       "closed": false,
-      "days_to_close": 4.0
+      "days_to_close": 3.9
     },
     {
       "question": "Will NASA livestream of the August 12, 2026 total solar eclipse exceed 2 million concurrent viewers?",
@@ -963,7 +963,7 @@
       "profit": 0.0,
       "prob": 0.072,
       "closed": false,
-      "days_to_close": 35.0
+      "days_to_close": 34.9
     }
   ],
   "trades": [
@@ -2336,6 +2336,15 @@
   ],
   "screens": [
     {
+      "ts": 1795741699756,
+      "question": "Will New Zealand's National-led Coalition Government Be Limited to a Single Term?",
+      "url": "https://manifold.markets/Dauur/will-new-zealands-nationalled-coali",
+      "passed": true,
+      "market_prob": 0.41053305315673233,
+      "quick_prob": 0.55,
+      "why": "flagged: Recent comments indicate an election outcome where the coalition might be one seat short, requiring deep verification."
+    },
+    {
       "ts": 1795738071328,
       "question": "Will a Chinese AI model trigger another \"DeepSeek moment\" before December 2026?",
       "url": "https://manifold.markets/49/will-a-chinese-ai-model-trigger-ano",
@@ -2685,18 +2694,31 @@
       "market_prob": 0.21772844067963662,
       "quick_prob": 0.05,
       "why": "quick estimate 5% backs the favourite at 22%. Comments indicate the character was never added and the speculation has long since passed without event."
-    },
-    {
-      "ts": 1795618593144,
-      "question": "Will the PC version of Grand Theft Auto 6 release within six months of the console version?",
-      "url": "https://manifold.markets/BryceBowemd39/will-the-pc-version-of-grand-theft",
-      "passed": false,
-      "market_prob": 0.5400474279810383,
-      "quick_prob": 0.1,
-      "why": "quick estimate 10%, market 54%. GTA 6 console release date isn't even fixed yet, and a PC port within six months is historically unlikely for Rockstar."
     }
   ],
   "decisions": [
+    {
+      "ts": 1795741969824,
+      "kind": "no_trade",
+      "question": "Will New Zealand's National-led Coalition Government Be Limited to a Single Term?",
+      "url": "https://manifold.markets/Dauur/will-new-zealands-nationalled-coali",
+      "market_prob": 0.41053305315673233,
+      "model_prob": 0.05,
+      "confidence": "high",
+      "amount": null,
+      "outcome": null,
+      "thinking": "Final election results released today (Nov 27, 2026) confirm National (48), ACT (11), and NZ First (8) hold a combined 67 seats, securing a working parliamentary majority. The National-led coalition will retain power, resolving this market to NO.",
+      "uncertainty": "Whether coalition negotiations between National, ACT, and NZ First could somehow completely collapse.",
+      "resolution_risk": "The market resolves NO if National and at least some coalition partners retain power; holding 67 seats makes retaining power virtually certain.",
+      "evidence_for": [
+        "Coalition negotiations between National, ACT, and NZ First must still be finalized."
+      ],
+      "evidence_against": [
+        "Final election results released Nov 27, 2026 give National 48 seats, ACT 11 seats, and NZ First 8 seats.",
+        "The incumbent coalition partners hold a combined 67 seats, securing a clear parliamentary majority."
+      ],
+      "reason": "size floored to zero by balance reserve"
+    },
     {
       "ts": 1795738317302,
       "kind": "no_trade",
@@ -3000,29 +3022,6 @@
         "Only 36 days remain until the end of 2026 with no announcement of executive changes.",
         "Jack Ma officially stepped down from executive roles in 2019-2020 and has avoided taking formal corporate titles since.",
         "Alibaba's leadership is currently structured under CEO Eddie Wu and Chairman Joe Tsai."
-      ],
-      "reason": "size floored to zero by balance reserve"
-    },
-    {
-      "ts": 1795567222355,
-      "kind": "no_trade",
-      "question": "Fable 5.5 released before the end of November?",
-      "url": "https://manifold.markets/256/fable-55-released-before-the-end-of",
-      "market_prob": 0.05090792612423739,
-      "model_prob": 0.03,
-      "confidence": "high",
-      "amount": null,
-      "outcome": null,
-      "thinking": "Claude Fable 5.2 was released on November 9, 2026. With only 5 days remaining in November and no official teasers, a Fable 5.5 release by November 30 is extremely improbable.",
-      "uncertainty": "Whether Anthropic surprises the public with a Fable 5.5 model drop in the final days of November.",
-      "resolution_risk": "Unannounced or unconfirmed model routing/leaks could create confusion, but resolution requires official release/announcement.",
-      "evidence_for": [
-        "Anthropic could issue a surprise model update."
-      ],
-      "evidence_against": [
-        "Anthropic released Claude Fable 5.2 on November 9, 2026, just 16 days ago.",
-        "Only 5 days remain in November 2026 with no teasers or official announcements for Fable 5.5.",
-        "Model version cadences typically take months rather than three weeks between minor point releases."
       ],
       "reason": "size floored to zero by balance reserve"
     }
